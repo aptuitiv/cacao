@@ -1,0 +1,121 @@
+/*---------------------------------------------------------------------------*\
+  LIST LAYOUTS
+\*---------------------------------------------------------------------------*/
+/**
+ * CONTENTS
+ * List Reset.............
+ * Inline List............
+ * Spaced Inline List.....
+ * Barred Inline List.....
+ * Dotted Inline List.....
+ */
+
+
+
+/**
+ * List Reset
+ *
+ * Barebones list, no margins or styles.
+ */
+
+%list,
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/**
+ * Inline List
+ *
+ * Creates an inline list with inline items.
+ *
+ * Extends the list reset.
+ */
+
+%list-inline,
+.list-inline {
+    @extend %list;
+    display: inline-block;
+    > li {
+        display: inline-block;
+    }
+}
+
+
+
+/**
+ * Spaced List
+ *
+ * Adds spacing between the inline items.
+ * 
+ * Extends the inline list.
+ */
+
+.list-spaced {
+    @extend %list-inline;
+    > li {
+        margin-left: 2em;
+        &:first-child { margin-left: 0; }
+    }
+}
+
+
+
+/**
+ * Barred List
+ *
+ * Adds vertical bars between the inline items.
+ * White space will add extra spacing. Branch CMS navigation 
+ * templates are minified so this isn't accounted for.
+ * 
+ * Extends the inline list.
+ */
+
+.list-barred {
+    @extend %list-inline;
+
+    > li {
+        &:before {
+            content: "|";
+            margin: 0 .25em 0 0;
+        }
+        &:first-child:before {
+            content: "";
+            margin: 0;
+        }
+    }
+}
+
+
+
+/**
+ * Dotted List
+ *
+ * Adds bullets between the inline items.
+ * White space will add extra spacing. Branch CMS navigation
+ * templates are minified so this isn't accounted for.
+ * 
+ * Extends the inline list.
+ */
+
+.list-dotted {
+    @extend %list-inline;
+
+    > li {
+        &:before {
+            content: "•";
+            margin: 0 .4em;
+            line-height: 0;
+        }
+        &:first-child:before {
+            content: "";
+            margin: 0;
+        }
+    }
+}
+
+
+

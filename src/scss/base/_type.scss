@@ -1,0 +1,120 @@
+/*---------------------------------------------------------------------------*\
+  TYPOGRAPHY
+\*---------------------------------------------------------------------------*/
+/**
+ * CONTENTS
+ * Variables..............
+ * Helper Classes.........
+ * Base...................
+ * Links..................
+ * Headings...............
+ */
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  VARIABLES
+\*---------------------------------------------------------------------------*/
+
+$base-font-color: #333 !default;
+$base-font-size: 14px !default;
+$base-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-weight: normal !default;
+
+$base-link-color: inherit !default;
+$base-link-decoration: none !default;
+
+$heading-font-stack: $base-font-stack !default;
+$heading-font-weight: $base-font-weight !default;
+
+$giga: 96px !default;
+$mega: 72px !default;
+$kilo: 48px !default;
+$alpha: 36px !default;
+$beta: 32px !default;
+$gamma: 28px !default;
+$delta: 24px !default;
+$epsilon: 20px !default;
+$zeta: 18px !default;
+$milli: 14px !default;
+$micro: 12px !default;
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  HELPER CLASSES
+\*---------------------------------------------------------------------------*/
+
+.giga { font-size: $giga; }
+.mega { font-size: $mega; }
+.kilo { font-size: $kilo; }
+.alpha { font-size: $alpha; }
+.beta { font-size: $beta; }
+.gamma { font-size: $gamma; }
+.delta { font-size: $delta; }
+.epsilon { font-size: $epsilon; }
+.zeta { font-size: $zeta; }
+.normalis { font-size: $base-font-size; }
+.milli { font-size: $milli; }
+.micro { font-size: $micro; }
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  BASE
+\*---------------------------------------------------------------------------*/
+
+body {
+    color: $base-font-color;
+    font-size: $base-font-size;
+    font-family: $base-font-stack;
+    font-weight: $base-font-weight;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  LINKS
+\*---------------------------------------------------------------------------*/
+
+a {
+    color: $base-link-color;
+    text-decoration: $base-link-decoration;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  HEADINGS
+\*---------------------------------------------------------------------------*/
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: $heading-font-stack;
+    font-weight: $heading-font-weight;
+}
+
+h1 { @extend .alpha; }
+h2 { @extend .beta; }
+h3 { @extend .gamma; }
+h4 { @extend .delta; }
+h5 { @extend .epsilon; }
+h6 { @extend .zeta; }
+
+.h1 { @extend h1; }
+.h2 { @extend h2; }
+.h3 { @extend h3; }
+.h4 { @extend h4; }
+.h5 { @extend h5; }
+.h6 { @extend h6; }
+
