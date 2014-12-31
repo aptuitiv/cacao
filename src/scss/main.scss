@@ -5,28 +5,39 @@
 /**
  * Globals 
  */
-@import "mixins";
-@import "settings";
+@import "global/mixins";
+@import "global/settings";
+
+
 
 /**
  * Base
  */
 @import "../../bower_components/normalize.css/normalize";
-@import "base/type";
 @import "base/base";
+@import "base/type";
+
+
 
 /**
- * Layout
+ * Generic
  */
-@import "layout/scaffolding";
-@import "layout/lists";
-@import "layout/grid";
-@import "layout/helpers";
+@import "generic/clearfix";
+@import "generic/helpers";
+@import "generic/scaffolding";
+
+
 
 /**
  * Modules
+ *
+ * [1] Lists are included first because they are a dependency of other modules.
  */
+@import "modules/lists";
+@import "modules/grid";
 @import "../../bower_components/magnific-popup/src/css/main";
+
+
 
 /**
  * Theme

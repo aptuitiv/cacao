@@ -1,0 +1,142 @@
+/*---------------------------------------------------------------------------*\
+  HELPER CLASSES
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Responsive helpers
+ */
+
+.l-img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/**
+ * Floats
+ */
+
+.l-left {
+    float: left;
+}
+
+.l-right {
+    float: right;
+}
+
+
+
+/**
+ * Margins & padding
+ */
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  TYPOGRAPHY HELPERS
+\*---------------------------------------------------------------------------*/
+
+.t-left {
+    text-align: left;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-upper {
+    text-transform: uppercase;
+}
+
+
+
+.h1 {
+    @extend %h1;
+}
+
+.h2 {
+    @extend %h2;
+}
+
+.h3 {
+    @extend %h3;
+}
+
+.h4 {
+    @extend %h4;
+}
+
+.h5 {
+    @extend %h5;
+}
+
+.h6 {
+    @extend %h6;
+}
+
+
+
+.giga {
+    @extend %giga;
+}
+
+.mega {
+    @extend %mega;
+}
+
+.kilo {
+    @extend %kilo;
+}
+
+.alpha {
+    @extend %alpha;
+}
+
+.beta {
+    @extend %beta;
+}
+
+.gamma {
+    @extend %gamma;
+}
+
+.delta {
+    @extend %delta;
+}
+
+.epsilon {
+    @extend %epsilon;
+}
+
+.zeta {
+    @extend %zeta;
+}
+
+.normalis {
+    @extend %normalis;
+}
+
+.milli {
+    @extend %milli;
+}
+
+.micro {
+    @extend %micro;
+}
+
+
+

@@ -131,20 +131,8 @@ $bp-xl: 1200px !default;
  *    http://purecss.io/ and http://csswizardry.com/csswizardry-grids/
  */
 
-.cf,
-.clearfix {
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
-}
-
 .container {
-    @extend .clearfix;
+    @extend %clearfix;
     @if $responsive {
         max-width: $container-width;
     }

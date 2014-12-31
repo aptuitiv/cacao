@@ -3,11 +3,11 @@
 \*---------------------------------------------------------------------------*/
 /**
  * CONTENTS
- * Variables..............
- * Helper Classes.........
- * Base...................
- * Links..................
- * Headings...............
+ * Variables.............. Typography settings.
+ * Placeholders........... These classes can be extended later.
+ * Base................... Base type.
+ * Links.................. Link base styling.
+ * Headings............... Heading base styling.
  */
 
 
@@ -46,21 +46,56 @@ $micro: 12px !default;
 
 
 /*---------------------------------------------------------------------------*\
-  HELPER CLASSES
+  PLACEHOLDER CLASSES
 \*---------------------------------------------------------------------------*/
 
-.giga { font-size: $giga; }
-.mega { font-size: $mega; }
-.kilo { font-size: $kilo; }
-.alpha { font-size: $alpha; }
-.beta { font-size: $beta; }
-.gamma { font-size: $gamma; }
-.delta { font-size: $delta; }
-.epsilon { font-size: $epsilon; }
-.zeta { font-size: $zeta; }
-.normalis { font-size: $base-font-size; }
-.milli { font-size: $milli; }
-.micro { font-size: $micro; }
+%giga {
+    font-size: $giga;
+}
+
+%mega {
+    font-size: $mega;
+}
+
+%kilo {
+    font-size: $kilo;
+}
+
+%alpha {
+    font-size: $alpha;
+}
+
+%beta {
+    font-size: $beta;
+}
+
+%gamma {
+    font-size: $gamma;
+}
+
+%delta {
+    font-size: $delta;
+}
+
+%epsilon {
+    font-size: $epsilon;
+}
+
+%zeta {
+    font-size: $zeta;
+}
+
+%normalis {
+    font-size: $base-font-size;
+}
+
+%milli {
+    font-size: $milli;
+}
+
+%micro {
+    font-size: $micro;
+}
 
 
 
@@ -98,23 +133,46 @@ a {
   HEADINGS
 \*---------------------------------------------------------------------------*/
 
-h1, h2, h3,
-h4, h5, h6 {
+%heading {
     font-family: $heading-font-stack;
     font-weight: $heading-font-weight;
 }
 
-h1 { @extend .alpha; }
-h2 { @extend .beta; }
-h3 { @extend .gamma; }
-h4 { @extend .delta; }
-h5 { @extend .epsilon; }
-h6 { @extend .zeta; }
+h1,
+%h1 {
+    @extend %heading;
+    @extend %alpha;
+}
 
-.h1 { @extend h1; }
-.h2 { @extend h2; }
-.h3 { @extend h3; }
-.h4 { @extend h4; }
-.h5 { @extend h5; }
-.h6 { @extend h6; }
+h2,
+%h2 {
+    @extend %heading;
+    @extend %beta;
+}
+
+h3,
+%h3 {
+    @extend %heading;
+    @extend %gamma;
+}
+
+h4,
+%h4 {
+    @extend %heading;
+    @extend %delta;
+}
+
+h5,
+%h5 {
+    @extend %heading;
+    @extend %epsilon;
+}
+
+h6,
+%h6 {
+    @extend %heading;
+    @extend %zeta;
+}
+
+
 
