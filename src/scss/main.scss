@@ -5,8 +5,8 @@
 /**
  * Globals 
  */
-@import "global/mixins";
 @import "global/settings";
+@import "global/mixins";
 
 
 
@@ -22,7 +22,6 @@
 /**
  * Generic
  */
-@import "generic/clearfix";
 @import "generic/helpers";
 @import "generic/scaffolding";
 
@@ -30,11 +29,13 @@
 
 /**
  * Modules
- *
- * [1] Lists are included first because they are a dependency of other modules.
  */
 @import "modules/lists";
 @import "modules/grid";
+@import "modules/media";
+@import "modules/header";
+@import "modules/footer";
+@import "modules/logo";
 @import "../../bower_components/magnific-popup/src/css/main";
 
 

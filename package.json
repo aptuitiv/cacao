@@ -1,8 +1,8 @@
 {
-  "name": "ap-base",
+  "name": "Cacao",
   "version": "0.0.0",
   "author": "Aptuitiv",
-  "description": "A boilerplate for building webpages.",
+  "description": "Guidelines and boilerplates for building webpages.",
   "license": "MIT",
   "private": true,
   "devDependencies": {
@@ -18,7 +18,6 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-ftpush": "^0.3.3",
     "grunt-newer": "^0.8.0",
-    "grunt-preen": "^1.1.0",
     "grunt-text-replace": "^0.4.0"
   }
 }

@@ -4,9 +4,6 @@
 /**
  * CONTENT
  * Base Variables...........
- *   Typography.............
- * Layout Settings..........
- *   Grid...................
  * Module Settings..........
  */
 
@@ -21,10 +18,8 @@
 /**
  * Typography
  */
-
-$base-font-color: #333;
+$base-font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $base-font-size: 16px;
-$base-font-stack: sans-serif;
 $base-font-weight: normal;
 
 $heading-font-stack: $base-font-stack;
@@ -47,23 +42,22 @@ $micro: 12px;
 
 
 /*---------------------------------------------------------------------------*\
-  LAYOUT SETTINGS
+  MODULE SETTINGS
 \*---------------------------------------------------------------------------*/
+
+/**
+ * Logo
+ */
+$logo-font-stack: 'Pacifico', $base-font-stack;
+$logo-font-size: $alpha;
+
+
 
 /**
  * Grid
  */
-
 $grid-type: inline-block;
 $container-width: 1024px;
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  MODULE SETTINGS
-\*---------------------------------------------------------------------------*/
 
 
 

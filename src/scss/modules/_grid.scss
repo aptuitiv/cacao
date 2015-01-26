@@ -127,9 +127,12 @@ $bp-xl: 1200px !default;
 /**
  * 1. Fluid container padding behaves oddly with box-sizing: border-box.
  * 2. Apply negative margins to the sides to make columns flush with container.
- * 3. Inline-block grid. Shamelessly based off of:
- *    http://purecss.io/ and http://csswizardry.com/csswizardry-grids/
  */
+
+.clearfix,
+%clearfix {
+    @include clearfix;
+}
 
 .container {
     @extend %clearfix;
@@ -149,23 +152,12 @@ $bp-xl: 1200px !default;
 
 .row,
 .grid {
-    @extend .clearfix;
+    @extend %clearfix;
     list-style: none;
     margin: 0;
     padding: 0;
     margin-left: -($column-gutter/2); /* 2 */
     margin-right: -($column-gutter/2); /* 2 */
-    @if $grid-type == "inline-block" { /* 3 */
-        letter-spacing: -0.31em;
-        text-rendering: optimizespeed;
-    }
-}
-
-@if $grid-type == "inline-block" { /* 3 */
-    .opera:-o-prefocus,
-    .grid {
-        word-spacing: -0.43em;
-    }
 }
 
 
@@ -192,13 +184,9 @@ $bp-xl: 1200px !default;
     @if $grid-type == "float" { /* 1 */
         float: left;
     }
-
     @elseif $grid-type == "inline-block" { /* 2 */
         display: inline-block;
         vertical-align: top;
-        letter-spacing: normal;
-        word-spacing: normal;
-        text-rendering: auto;
     }
 
     @if $use-push or $use-pull {
