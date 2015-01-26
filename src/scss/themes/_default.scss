@@ -2,10 +2,6 @@
   DEFAULT THEME
 \*---------------------------------------------------------------------------*/
 /**
- * CONTENTS
- * Variables..............
- * Content................
- * Modules................
  */
 
 
@@ -35,9 +31,13 @@ body {
     background: $off-white;
 }
 
+
+
 .section-header {
     @include linear-gradient($dark-brown, darken($dark-brown, 5%));
 }
+
+
 
 .container-main {
     background: white;
@@ -53,6 +53,9 @@ body {
   MODULES
 \*---------------------------------------------------------------------------*/
 
+/**
+ * Logo
+ */
 .logo {
     color: white;
     text-shadow: 2px 2px 1px rgba(#000, .75);

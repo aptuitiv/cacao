@@ -2,21 +2,6 @@
   MEDIA OBJECT
 \*---------------------------------------------------------------------------*/
 /**
- * CONTENTS
- * Introduction............... Description and other information.
- * Variables.................. Settings that can be overridden.
- * Base....................... Base module.
- * Sub-modules................ Modules specific to the media object.
- */
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  INTRO
-\*---------------------------------------------------------------------------*/
-/**
  * See: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
  * This media object is used to place a block of content next to some media.
  * It is important to know that the width of the media subject column will be
@@ -44,21 +29,12 @@ $media-overflow: hidden !default;
   BASE
 \*---------------------------------------------------------------------------*/
 
-/**
- * Base wrapper
- */
 .media {
     @include clearfix;
     margin: $media-margins;
 }
 
 
-
-
-
-/*---------------------------------------------------------------------------*\
-  SUB-MODULES
-\*---------------------------------------------------------------------------*/
 
 /**
  * This is the media it self.

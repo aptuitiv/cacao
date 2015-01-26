@@ -1,23 +1,12 @@
 /*---------------------------------------------------------------------------*\
   LIST LAYOUTS
 \*---------------------------------------------------------------------------*/
-/**
- * CONTENTS
- * List Reset.............
- * Inline List............
- * Spaced Inline List.....
- * Barred Inline List.....
- * Dotted Inline List.....
- */
-
-
 
 /**
  * List Reset
  *
  * Barebones list, no margins or styles.
  */
-
 %list,
 .list {
     list-style: none;
@@ -34,7 +23,6 @@
  *
  * Extends the list reset.
  */
-
 %list-inline,
 .list-inline {
     @extend %list;
@@ -53,7 +41,6 @@
  * 
  * Extends the inline list.
  */
-
 .list-spaced {
     @extend %list-inline;
     > li {
@@ -73,7 +60,6 @@
  * 
  * Extends the inline list.
  */
-
 .list-barred {
     @extend %list-inline;
 
@@ -100,7 +86,6 @@
  * 
  * Extends the inline list.
  */
-
 .list-dotted {
     @extend %list-inline;
 

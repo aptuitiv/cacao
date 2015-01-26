@@ -2,20 +2,6 @@
   TYPOGRAPHY
 \*---------------------------------------------------------------------------*/
 /**
- * CONTENTS
- * Introduction........... Intro and other information.
- * Base................... Base type.
- * Headings............... Heading base styling.
- */
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  INTRO
-\*---------------------------------------------------------------------------*/
-/**
  * Set the base typography styles.
  * We use opt-in styles for links and vertical rhythm. These styles can
  * be scoped and set by other modules. This cuts down on the amount of
@@ -64,7 +50,7 @@ $micro: 12px !default;
 
 
 /*---------------------------------------------------------------------------*\
-  BASE
+  GENERAL TYPOGRAPHY
 \*---------------------------------------------------------------------------*/
 
 body {

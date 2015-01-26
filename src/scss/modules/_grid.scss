@@ -2,22 +2,6 @@
   GRID SYSTEM
 \*---------------------------------------------------------------------------*/
 /**
- * CONTENTS
- * INTRODUCTION.........How the grid system works.
- * VARIABLES............Settings.
- * GRID SCAFFOLDING.....Build the grid structure.
- * CLASSES..............Create column and modifier classes.
- * RESPONSIVE CLASSES...Create media queries.
- */
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  INTRODUCTION
-\*---------------------------------------------------------------------------*/
-/**
  * Inline-block or float grid.
  * Capable of being responsive and mobile first.
  *
@@ -30,12 +14,14 @@
  *   Note: The row class can be used instead of the grid class and
  *         divs can be used instead of a list.
  *
-     <ul class="grid">
-       <li class="col-2 col-6--lg col-12--sm">Col 1</li>
-       <li class="col-4 col-6--lg col-12--sm">Col 1</li>
-       <li class="col-4 col-6--lg col-12--sm">Col 1</li>
-       <li class="col-2 col-6--lg col-12--sm">Col 1</li>
-     </ul>
+
+ <ul class="grid">
+   <li class="col-2 col-6--lg col-12--sm">Col 1</li>
+   <li class="col-4 col-6--lg col-12--sm">Col 1</li>
+   <li class="col-4 col-6--lg col-12--sm">Col 1</li>
+   <li class="col-2 col-6--lg col-12--sm">Col 1</li>
+ </ul>
+
  *
  * If you are using a float grid, columns with variable heights
  * do not clear each other properly. This is the advantage of an

@@ -2,19 +2,6 @@
   LOGO
 \*---------------------------------------------------------------------------*/
 /**
- * CONTENTS
- * Introduction............... Description and other information.
- * Base....................... Base module.
- */
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  INTRO
-\*---------------------------------------------------------------------------*/
-/**
  * A simple logo element. Wraps around text or an image tag.
  */
 
@@ -37,9 +24,6 @@ $logo-font-size: $alpha !default;;
   BASE
 \*---------------------------------------------------------------------------*/
 
-/**
- * Base wrapper
- */
 .logo {
     display: inline-block;
     font-family: $logo-font-stack;
