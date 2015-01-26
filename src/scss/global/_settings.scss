@@ -56,8 +56,15 @@ $logo-font-size: $alpha;
 /**
  * Grid
  */
+$container-width: 960px;
 $grid-type: inline-block;
-$container-width: 1024px;
+
+
+
+/**
+ * Breadcrumbs
+ */
+$crumbs-separator-padding: 0 4px;
 
 
 

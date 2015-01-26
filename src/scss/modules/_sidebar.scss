@@ -26,12 +26,8 @@
   BASE
 \*---------------------------------------------------------------------------*/
 
-.header,
-%header {
-}
-
-.header-mid {
-    text-align: center;
+.sidebar {
+    margin-top: 2em;
 }
 
 
@@ -42,11 +38,5 @@
   SUB-MODULES
 \*---------------------------------------------------------------------------*/
 
-.header_logo {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: $alpha;
-}
 
-.header-mid_logo {
-}
+

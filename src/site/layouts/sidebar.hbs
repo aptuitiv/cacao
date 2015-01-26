@@ -8,7 +8,7 @@
       <div class="col-9 push-3">
 
 
-        <div class="content">
+        <div class="content type">
             {{>body}}
         </div>
 
@@ -19,22 +19,29 @@
 
         <div class="sidebar">
           <div class="sidebar_item">
-            <h4>Sidebar</h4>
-            <p>Sidebar content.</p>
-          </div>
-          <div class="sidebar_item sidebar_item-island">
-            <h5>Sidebar</h5>
-            <p>More sidebar content.</p>
+            <h4>Menu</h4>
+            <ul>
+              <li><a href="/grid.html">Grid</a></li>
+              <li><a href="/media.html">Media Object</a></li>
+              <li><a href="/lists.html">Lists</a></li>
+              <li><a href="/breadcrumbs.html">Breadcrumbs</a></li>
+              <li><a href="/pagination.html">Pagination</a></li>
+            </ul>
           </div>
         </div>
 
 
       </div>
     </div>
+    <div class="row">
+      <div class="col-12">
+
+        {{>page-footer}}
+
+      </div>
+    </div>
   </div>
 </div>
-
-{{>page-footer}}
 
 {{>site-footer}}
 

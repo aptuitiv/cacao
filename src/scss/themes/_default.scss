@@ -3,6 +3,7 @@
 \*---------------------------------------------------------------------------*/
 /**
  * CONTENTS
+ * Variables..............
  * Content................
  * Modules................
  */
@@ -10,9 +11,39 @@
 
 
 
+
+/*---------------------------------------------------------------------------*\
+  VARIABLES
+\*---------------------------------------------------------------------------*/
+
+$dark-brown: #604830;
+$light-brown: #c0a878;
+$off-white: #f0f0cf;
+
+$dark-plum: #483030;
+$deep-red: #481818;
+
+
+
+
+
 /*---------------------------------------------------------------------------*\
   CONTENT
 \*---------------------------------------------------------------------------*/
+
+body {
+    background: $off-white;
+}
+
+.section-header {
+    @include linear-gradient($dark-brown, darken($dark-brown, 5%));
+}
+
+.container-main {
+    background: white;
+    border-radius: 0 0 8px 8px;
+}
+
 
 
 
@@ -23,8 +54,44 @@
 \*---------------------------------------------------------------------------*/
 
 .logo {
+    color: white;
+    text-shadow: 2px 2px 1px rgba(#000, .75);
 }
 
+
+
+/**
+ * Breadcrumbs
+ */
+.breadcrumbs {
+    background: $off-white;
+    border-radius: 6px;
+}
+
+.breadcrumbs_crumb,
+.breadcrumbs_separator {
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.breadcrumbs_separator {
+    background: $dark-plum;
+    color: white;
+}
+
+.breadcrumbs_crumb.current,
+.breadcrumbs_crumb:active:not(.disabled):not(.current) {
+    background: $light-brown;
+}
+
+.breadcrumbs_crumb:not(.disabled):not(.current) {
+    background: white;
+}
+
+.breadcrumbs_crumb:hover:not(.disabled):not(.current),
+.breadcrumbs_crumb:active:not(.disabled):not(.current) {
+    border: 1px solid black;
+}
 
 
 

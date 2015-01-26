@@ -39,7 +39,7 @@ $base-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $base-font-size: 14px !default;
 $base-font-weight: normal !default;
 $base-line-height: 1.5 !default;
-$base-letter-spacing: 0px !default;
+$base-letter-spacing: 0 !default;
 
 $heading-font-stack: $base-font-stack !default;
 $heading-font-weight: $base-font-weight !default;
@@ -72,11 +72,27 @@ body {
     font-family: $base-font-stack;
     font-weight: $base-font-weight;
     line-height: $base-line-height;
-    letter-spacing: 0px;
+    letter-spacing: $base-letter-spacing;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
 }
 
 p {
     margin: 0;
+}
+
+code,
+pre {
+    font-size: $micro;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding-left: 1em;
 }
 
 
