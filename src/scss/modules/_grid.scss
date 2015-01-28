@@ -183,93 +183,80 @@ $grid-breakpoints: (
 \*---------------------------------------------------------------------------*/
 
 /**
- * Create column width and modifier classes based on $column-count.
+ * Builder mixin.
  *
- * 1. Extend the base column so the class '.col' doesn't need to be added.
- * 2. Set the width as a simple fraction.
- * 3. Utilize relative positioning and the left property to push/pull columns.
- * 4. Use a margin to offset columns so that no other columns can use that space.
+ * Creates column and modifier classes based on input and grid settings.
  *
- * TODO: refactor this into a mixin
+ * $col: Should be the number of columns to span
+ * $ext: Optional. The extension to use for the breakpoint classes.
+ *       The 'md' in '.col-12-md'
  */
-@for $i from 1 through $grid-column-count {
+@mixin grid-create-width($col, $ext: "") {
 
-    .col-#{$i} {
-        @extend %col; /* 1 */
-        width: percentage($i/$grid-column-count); /* 2 */
+    //  Prepend a seperator onto the extension if there is one.
+    @if $ext != "" {
+        $ext: "-" + $ext;
+    }
+
+    .col-#{$col}#{$ext} {
+        // Extend the base column so the class '.col' doesn't need to be added.
+        // Only do this for base columns instead of breakpoint classes.
+        @if $ext == "" {
+            @extend %col;
+        }
+        // Set the width as a simple fraction.
+        width: percentage($col/$grid-column-count);
     }
     @if $grid-use-push {
-        .push-#{$i} {
-            left: percentage($i/$grid-column-count); /* 3 */
+        .push-#{$col}#{$ext} {
+            // Utilize relative positioning and the left property to push/pull columns.
+            left: percentage($col/$grid-column-count);
         }
     }
     @if $grid-use-pull {
-        .pull-#{$i} {
-            left: -(percentage($i/$grid-column-count)); /* 3 */
+        .pull-#{$col}#{$ext} {
+            left: -(percentage($col/$grid-column-count));
         }
     }
     @if $grid-use-pull {
-        .offset-#{$i} {
-            margin-left: percentage($i/$grid-column-count); /* 4 */
+        .offset-#{$col}#{$ext} {
+            // Use a margin to offset columns so no other columns can use that space.
+            margin-left: percentage($col/$grid-column-count);
         }
     }
-
-} // for
-
+}
 
 
 
+/**
+ * Create column width and modifier classes based on $column-count.
+ */
+@for $i from 1 through $grid-column-count {
+    @include grid-create-width($i);
+}
 
-/*---------------------------------------------------------------------------*\
-  RESPONSIVE COLUMNS
-\*---------------------------------------------------------------------------*/
+
 
 /**
  * Setup responsive media queries with columns, and modifiers.
  */
 @if $grid-responsive {
 
-    /**
-     * Reverse the direction media queries cascade if mobile first.
-     */  
+    // Reverse the direction media queries cascade if mobile first.
     $media: if($grid-mobile-first, min-width, max-width);
 
-    /**
-     * Loop through the breakpoint map and make column classes
-     * using the size extension. Use the size extensions associated
-     * variable for the breakpoint.
-     */
-    @each $size, $bp in $grid-breakpoints {
-
+    // Loop through the breakpoint map and make column classes
+    // using the size extension. Use the size extensions associated
+    // variable for the breakpoint.
+    @each $ext, $bp in $grid-breakpoints {
         @media ($media: $bp) {
-
-            /* TODO: refactor this into a mixin */
             @for $i from 0 through $grid-column-count {
-                @if $i != 0 {
-                  .col-#{$i}-#{$size} {
-                    width: percentage($i/$grid-column-count);
-                  }
-                }
-                @if $grid-use-push {
-                    .push-#{$i}-#{$size} {
-                        left: percentage($i/$grid-column-count);
-                    }
-                }
-                @if $grid-use-pull {
-                    .pull-#{$i}-#{$size} {
-                        left: -(percentage($i/$grid-column-count));
-                    }
-                }
-                @if $grid-use-pull {
-                    .offset-#{$i}-#{$size} {
-                        margin-left: percentage($i/$grid-column-count);
-                    }
-                }
+                @include grid-create-width($i, $ext);
             }
+        }
+    }
 
-        } // media
-    } // each
-} // if
+}
 
 
 
