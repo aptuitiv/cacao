@@ -7,4 +7,90 @@ layout: "sidebar.hbs"
 
 <p>Grid system.</p>
 
+<h2>Container</h2>
+{{#markdown}}
+```html
+    <div class="container">
+        [...]
+    </div>
+```
+{{/markdown}}
+
+<h2>Row</h2>
+{{#markdown}}
+```html
+    <div class="container">
+        <div class="grid">
+            [...]
+        </div>
+    </div>
+```
+{{/markdown}}
+<div class="grid">
+    <div class="example-col col-4">.col-4</div> 
+    <div class="example-col col-4">.col-4</div> 
+    <div class="example-col col-4">.col-4</div> 
+</div>
+
+<h3>Centered</h3>
+{{#markdown}}
+```html
+    <div class="container">
+        <div class="grid-center">
+            [...]
+        </div>
+    </div>
+```
+{{/markdown}}
+<div class="grid grid-center">
+    <div class="example-col col-4">.col-4</div> 
+    <div class="example-col col-4">.col-4</div> 
+</div>
+
+<h3>Right Aligned</h3>
+{{#markdown}}
+```html
+    <div class="container">
+        <div class="grid-right">
+            [...]
+        </div>
+    </div>
+```
+{{/markdown}}
+<div class="grid grid-right">
+    <div class="example-col col-4">.col-4</div> 
+    <div class="example-col col-4">.col-4</div> 
+</div>
+
+<h2>Columns</h2>
+{{#markdown}}
+```html
+    <div class="container">
+        <div class="grid">
+            <div class="col-4">[...]</div>
+        </div>
+    </div>
+```
+{{/markdown}}
+<div class="grid">
+    <div class="example-col col-4 col-12--md">.col-4 .col-12--md</div> 
+    <div class="example-col col-4 col-12--md">.col-4 .col-12--md</div> 
+    <div class="example-col col-4 col-12--md">.col-4 .col-12--md</div> 
+</div>
+
+<h3>Offsets & Column Ordering</h3>
+{{#markdown}}
+```html
+    <div class="container">
+        <div class="grid">
+            <div class="col-3 push-3 offset-2">[...]</div>
+            <div class="col-3 pull-3">[...]</div>
+        </div>
+    </div>
+```
+{{/markdown}}
+<div class="grid">
+    <div class="example-col col-3 push-3 offset-2">.col-3 .push-3 .offset-2</div>
+    <div class="example-col col-3 pull-3">.col-3 .pull-3</div>
+</div>
 

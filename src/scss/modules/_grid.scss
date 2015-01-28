@@ -2,40 +2,26 @@
   GRID SYSTEM
 \*---------------------------------------------------------------------------*/
 /**
- * Inline-block or float grid.
- * Capable of being responsive and mobile first.
+ * Inline-block grid.
  *
  * Example:
- *   4 columns side by side in a 12 column grid that is
- *   not mobile first. When the viewport shrinks the columns
- *   will collapse to two per row, and finally the columns
+ *   4 columns side by side in a 12 column grid. When the viewport shrinks 
+ *   the columns will collapse to two per row, and finally the columns
  *   will span the full width on a small mobile viewport.
  *
- *   Note: The row class can be used instead of the grid class and
- *         divs can be used instead of a list.
- *
 
- <ul class="grid">
-   <li class="col-2 col-6--lg col-12--sm">Col 1</li>
-   <li class="col-4 col-6--lg col-12--sm">Col 1</li>
-   <li class="col-4 col-6--lg col-12--sm">Col 1</li>
-   <li class="col-2 col-6--lg col-12--sm">Col 1</li>
- </ul>
+ <div class="grid">
+   <div class="col-2 col-6--lg col-12--sm">Col 1</div>
+   <div class="col-4 col-6--lg col-12--sm">Col 1</div>
+   <div class="col-4 col-6--lg col-12--sm">Col 1</div>
+   <div class="col-2 col-6--lg col-12--sm">Col 1</div>
+ </div>
 
  *
- * If you are using a float grid, columns with variable heights
- * do not clear each other properly. This is the advantage of an
- * inline-block grid, although that method relies on hacks to
- * remove whitespace that may break as browsers change.
+ * Note: The row class can be used instead of the grid class and
+ *       divs can be used instead of a list.
  *
- * To clear the columns in a float grid you will need to create
- * a clearing li, or div that is only visible at the specified
- * breakpoint.
- *
- * TODO: variable height column clearing example.
- *
- * Note: The inline-block grid is experimental.
- *       The only way to guarantee that the columns behave
+ * Note: The only way to guarantee that the columns behave
  *       as intended is to remove all the white space between them
  *       by minifying the HTML, commenting white space, etc..
  *
@@ -52,46 +38,40 @@
 \*---------------------------------------------------------------------------*/
 
 /**
- * Must be float or inline-block. Also note that
- * inline-block is experimental, see intro for more information.
- */
-$grid-type: float !default;
-
-/**
  * Max container width. Container is fluid below this width.
  */
-$container-width: 1024px !default;
+$grid-container-width: 1024px !default;
 
 /**
  * Gutters on the sides of the page when viewport is below
  * the container max width.
  */
-$container-gutter: 1em !default;
+$grid-container-gutter: 1em !default;
 
 /**
  * The number of columns and the gutter between them.
  */
-$column-count: 12 !default;
-$column-gutter: 2em !default;
+$grid-column-count: 12 !default;
+$grid-column-gutter: 2em !default;
 
 /**
  * Enable mobile first media queries.
  */
 /* TODO: this */
-$mobile-first: false !default;
+$grid-mobile-first: false !default;
 
 /**
  * Set to false to disable media queries.
  * This will of course override $mobile-first.
  */
-$responsive: true !default;
+$grid-responsive: true !default;
 
 /**
  * Enable or disable column modifiers.
  */
-$use-pull: true !default;
-$use-push: true !default;
-$use-offset: true !default;
+$grid-use-pull: true !default;
+$grid-use-push: true !default;
+$grid-use-offset: true !default;
 
 /**
  * Media query breakpoints.
@@ -110,40 +90,88 @@ $bp-xl: 1200px !default;
 /*---------------------------------------------------------------------------*\
   GRID SCAFFOLDING
 \*---------------------------------------------------------------------------*/
-/**
- * 1. Fluid container padding behaves oddly with box-sizing: border-box.
- * 2. Apply negative margins to the sides to make columns flush with container.
- */
 
 .clearfix,
 %clearfix {
-    @include clearfix;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
 }
 
+
+
+/**
+ * Grid container.
+ *
+ * 1. Fluid container padding behaves oddly with box-sizing: border-box.
+ */
 .container {
     @extend %clearfix;
-    @if $responsive {
-        max-width: $container-width;
+    @if $grid-responsive {
+        max-width: $grid-container-width;
     }
     @else {
-        width: $container-width;
+        width: $grid-container-width;
     }
     margin: 0 auto;
-    padding-left: $container-gutter;
-    padding-right: $container-gutter;
+    padding-left: $grid-container-gutter;
+    padding-right: $grid-container-gutter;
     -webkit-box-sizing: content-box; /* 1 */
        -moz-box-sizing: content-box;
             box-sizing: content-box;
 }
 
-.row,
-.grid {
+
+
+/**
+ * Grid wrapper
+ *
+ * 1. Apply negative margins to the sides to make columns flush with container.
+ */
+%grid {
     @extend %clearfix;
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: -($column-gutter/2); /* 2 */
-    margin-right: -($column-gutter/2); /* 2 */
+    margin-left: -($grid-column-gutter/2); /* 1 */
+    margin-right: -($grid-column-gutter/2); /* 1 */
+}
+
+.grid {
+    @extend %grid;
+}
+
+.grid-center {
+    text-align: center;
+}
+
+.grid-right {
+    text-align: right;
+}
+
+
+
+/**
+ * Column base.
+ *
+ * 1. Inline-block grid. Shamelessly based off of:
+ *    http://purecss.io/ and http://csswizardry.com/csswizardry-grids/
+ * 2. Position columns relatively in order to push/pull them.
+ */
+%col {
+    min-height: 1px;
+    padding-left: $grid-column-gutter/2;
+    padding-right: $grid-column-gutter/2;
+    display: inline-block; /* 1 */
+    vertical-align: top;
+    @if $grid-use-push or $grid-use-pull {
+        position: relative; /* 2 */
+    }
 }
 
 
@@ -151,35 +179,8 @@ $bp-xl: 1200px !default;
 
 
 /*---------------------------------------------------------------------------*\
-  CLASSES
+  COLUMNS
 \*---------------------------------------------------------------------------*/
-
-/**
- * Column base.
- *
- * 1. Float grid - Bootstrap style.
- * 2. Inline-block grid. Shamelessly based off of:
- *    http://purecss.io/ and http://csswizardry.com/csswizardry-grids/
- * 3. Position columns relatively in order to push/pull them.
- */
-%col {
-    min-height: 1px;
-    padding-left: $column-gutter/2;
-    padding-right: $column-gutter/2;
-
-    @if $grid-type == "float" { /* 1 */
-        float: left;
-    }
-    @elseif $grid-type == "inline-block" { /* 2 */
-        display: inline-block;
-        vertical-align: top;
-    }
-
-    @if $use-push or $use-pull {
-        position: relative; /* 3 */
-    }
-}
-
 
 /**
  * Create column width and modifier classes based on $column-count.
@@ -188,27 +189,28 @@ $bp-xl: 1200px !default;
  * 2. Set the width as a simple fraction.
  * 3. Utilize relative positioning and the left property to push/pull columns.
  * 4. Use a margin to offset columns so that no other columns can use that space.
+ *
+ * TODO: refactor this into a mixin
  */
-/* TODO: refactor this into a mixin */
-@for $i from 1 through $column-count {
+@for $i from 1 through $grid-column-count {
 
     .col-#{$i} {
         @extend %col; /* 1 */
-        width: percentage($i/$column-count); /* 2 */
+        width: percentage($i/$grid-column-count); /* 2 */
     }
-    @if $use-push {
+    @if $grid-use-push {
         .push-#{$i} {
-            left: percentage($i/$column-count); /* 3 */
+            left: percentage($i/$grid-column-count); /* 3 */
         }
     }
-    @if $use-pull {
+    @if $grid-use-pull {
         .pull-#{$i} {
-            left: -(percentage($i/$column-count)); /* 3 */
+            left: -(percentage($i/$grid-column-count)); /* 3 */
         }
     }
-    @if $use-pull {
+    @if $grid-use-pull {
         .offset-#{$i} {
-            margin-left: percentage($i/$column-count); /* 4 */
+            margin-left: percentage($i/$grid-column-count); /* 4 */
         }
     }
 
@@ -219,8 +221,9 @@ $bp-xl: 1200px !default;
 
 
 /*---------------------------------------------------------------------------*\
-  RESPONSIVE COLUMN CLASSES
+  RESPONSIVE COLUMNS
 \*---------------------------------------------------------------------------*/
+
 /**
  * Setup responsive media queries with columns, and modifiers.
  *
@@ -230,8 +233,7 @@ $bp-xl: 1200px !default;
  *    using the size extension. Use the size extensions associated
  *    variable for the breakpoint.
  */
-
-@if $responsive {
+@if $grid-responsive {
 
     /* TODO: populate this map dynamically */
     $bp-map: ( /* 1 */
@@ -242,7 +244,7 @@ $bp-xl: 1200px !default;
             xs: $bp-xs,
     );
 
-    $media: if($mobile-first, min-width, max-width); /* 2 */
+    $media: if($grid-mobile-first, min-width, max-width); /* 2 */
 
 
     @each $size, $bp in $bp-map { /* 3 */
@@ -251,25 +253,25 @@ $bp-xl: 1200px !default;
         @media ($media: $bp) {
 
             /* TODO: refactor this into a mixin */
-            @for $i from 0 through $column-count {
+            @for $i from 0 through $grid-column-count {
                 @if $i != 0 {
                   .col-#{$i}--#{$size} {
-                    width: percentage($i/$column-count);
+                    width: percentage($i/$grid-column-count);
                   }
                 }
-                @if $use-push {
+                @if $grid-use-push {
                     .push-#{$i}--#{$size} {
-                        left: percentage($i/$column-count);
+                        left: percentage($i/$grid-column-count);
                     }
                 }
-                @if $use-pull {
+                @if $grid-use-pull {
                     .pull-#{$i}--#{$size} {
-                        left: -(percentage($i/$column-count));
+                        left: -(percentage($i/$grid-column-count));
                     }
                 }
-                @if $use-pull {
+                @if $grid-use-pull {
                     .offset-#{$i}--#{$size} {
-                        margin-left: percentage($i/$column-count);
+                        margin-left: percentage($i/$grid-column-count);
                     }
                 }
             }

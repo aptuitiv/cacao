@@ -4,5 +4,6 @@ bower_components
 .sass-cache
 .ftppass
 *~
+*.swp
 TODO
 dist
