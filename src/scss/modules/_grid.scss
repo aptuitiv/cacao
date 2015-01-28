@@ -6,16 +6,16 @@
  * http://purecss.io/ and http://csswizardry.com/csswizardry-grids/
  *
  * Example:
- *   4 columns side by side in a 12 column grid. When the viewport shrinks 
- *   the columns will collapse to two per row, and finally the columns
- *   will span the full width on a small mobile viewport.
+ *   4 columns side by side with the default grid settings. When the viewport 
+ *   shrinks the columns will collapse to two per row, and finally the 
+ *   columns will span the full width on a small mobile viewport.
  *
 
  <div class="grid">
-   <div class="col-2 col-6--lg col-12--sm">Col 1</div>
-   <div class="col-4 col-6--lg col-12--sm">Col 1</div>
-   <div class="col-4 col-6--lg col-12--sm">Col 1</div>
-   <div class="col-2 col-6--lg col-12--sm">Col 1</div>
+   <div class="col-2 col-6-lg col-12-sm">Col 1</div>
+   <div class="col-4 col-6-lg col-12-sm">Col 1</div>
+   <div class="col-4 col-6-lg col-12-sm">Col 1</div>
+   <div class="col-2 col-6-lg col-12-sm">Col 1</div>
  </div>
 
  *
@@ -83,7 +83,7 @@ $grid-breakpoints: (
     md: 800px,
     sm: 600px,
     xs: 400px,
-);
+) !default;
 
 
 
