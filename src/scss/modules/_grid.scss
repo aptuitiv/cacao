@@ -2,7 +2,8 @@
   GRID SYSTEM
 \*---------------------------------------------------------------------------*/
 /**
- * Inline-block grid.
+ * Inline-block grid. Shamelessly based off of:
+ * http://purecss.io/ and http://csswizardry.com/csswizardry-grids/
  *
  * Example:
  *   4 columns side by side in a 12 column grid. When the viewport shrinks 
@@ -18,8 +19,8 @@
  </div>
 
  *
- * Note: The row class can be used instead of the grid class and
- *       divs can be used instead of a list.
+ * Note: An unordered list may be used if you'd like to keep markup 
+ *       somewhat semantic.
  *
  * Note: The only way to guarantee that the columns behave
  *       as intended is to remove all the white space between them
@@ -76,12 +77,13 @@ $grid-use-offset: true !default;
 /**
  * Media query breakpoints.
  */
-/* TODO: make it easy to add/remove breakpoints */
-$bp-xs: 400px !default;
-$bp-sm: 600px !default;
-$bp-md: 800px !default;
-$bp-lg: 1000px !default;
-$bp-xl: 1200px !default;
+$grid-breakpoints: (
+    xl: 1200px,
+    lg: 1000px,
+    md: 800px,
+    sm: 600px,
+    xs: 400px,
+);
 
 
 
@@ -159,18 +161,16 @@ $bp-xl: 1200px !default;
 /**
  * Column base.
  *
- * 1. Inline-block grid. Shamelessly based off of:
- *    http://purecss.io/ and http://csswizardry.com/csswizardry-grids/
- * 2. Position columns relatively in order to push/pull them.
+ * 1. Position columns relatively in order to push/pull them.
  */
 %col {
     min-height: 1px;
     padding-left: $grid-column-gutter/2;
     padding-right: $grid-column-gutter/2;
-    display: inline-block; /* 1 */
+    display: inline-block;
     vertical-align: top;
     @if $grid-use-push or $grid-use-pull {
-        position: relative; /* 2 */
+        position: relative; /* 1 */
     }
 }
 
@@ -226,51 +226,42 @@ $bp-xl: 1200px !default;
 
 /**
  * Setup responsive media queries with columns, and modifiers.
- *
- * 1. Map breakpoint extensions to their variables.
- * 2. Reverse the direction media queries cascade if mobile first.
- * 3. Loop through the breakpoint map and make column classes
- *    using the size extension. Use the size extensions associated
- *    variable for the breakpoint.
  */
 @if $grid-responsive {
 
-    /* TODO: populate this map dynamically */
-    $bp-map: ( /* 1 */
-            xl: $bp-xl,
-            lg: $bp-lg,
-            md: $bp-md,
-            sm: $bp-sm,
-            xs: $bp-xs,
-    );
+    /**
+     * Reverse the direction media queries cascade if mobile first.
+     */  
+    $media: if($grid-mobile-first, min-width, max-width);
 
-    $media: if($grid-mobile-first, min-width, max-width); /* 2 */
+    /**
+     * Loop through the breakpoint map and make column classes
+     * using the size extension. Use the size extensions associated
+     * variable for the breakpoint.
+     */
+    @each $size, $bp in $grid-breakpoints {
 
-
-    @each $size, $bp in $bp-map { /* 3 */
-
-        /* #{$size} #{$bp} display */
         @media ($media: $bp) {
 
             /* TODO: refactor this into a mixin */
             @for $i from 0 through $grid-column-count {
                 @if $i != 0 {
-                  .col-#{$i}--#{$size} {
+                  .col-#{$i}-#{$size} {
                     width: percentage($i/$grid-column-count);
                   }
                 }
                 @if $grid-use-push {
-                    .push-#{$i}--#{$size} {
+                    .push-#{$i}-#{$size} {
                         left: percentage($i/$grid-column-count);
                     }
                 }
                 @if $grid-use-pull {
-                    .pull-#{$i}--#{$size} {
+                    .pull-#{$i}-#{$size} {
                         left: -(percentage($i/$grid-column-count));
                     }
                 }
                 @if $grid-use-pull {
-                    .offset-#{$i}--#{$size} {
+                    .offset-#{$i}-#{$size} {
                         margin-left: percentage($i/$grid-column-count);
                     }
                 }

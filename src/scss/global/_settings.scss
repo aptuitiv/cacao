@@ -37,6 +37,18 @@ $micro: 12px;
 
 
 
+/**
+ * Breakpoints
+ * Used globally and to configure the grid module below.
+ */
+$bp-xl: 1200px;
+$bp-lg: 1000px;
+$bp-md: 850px;
+$bp-sm: 600px;
+$bp-xs: 400px;
+
+
+
 
 
 /*---------------------------------------------------------------------------*\
@@ -55,6 +67,13 @@ $logo-font-size: $alpha;
  * Grid
  */
 $grid-container-width: 960px;
+$grid-breakpoints: (
+    xl: $bp-xl,
+    lg: $bp-lg,
+    md: $bp-md,
+    sm: $bp-sm,
+    xs: $bp-xs,
+);
 
 
 
