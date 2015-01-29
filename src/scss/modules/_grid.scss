@@ -2,6 +2,17 @@
   GRID SYSTEM
 \*---------------------------------------------------------------------------*/
 /**
+ * CONTENTS
+ * - Variables.
+ * - Grid library. Necessary components.
+ * - Base elements.
+ * - Column width, positioning, and responsive classes.
+ * - Modifier classes.
+ */
+
+
+
+/**
  * Inline-block grid. Shamelessly based off of:
  * http://purecss.io/ and http://csswizardry.com/csswizardry-grids/
  *
@@ -88,10 +99,15 @@ $grid-breakpoints: (
 
 
 
+
 /*---------------------------------------------------------------------------*\
-  GRID SCAFFOLDING
+  GRID LIBRARY
 \*---------------------------------------------------------------------------*/
 
+/**
+ * Clearfix applied to the container.
+ * Without this the container will not clear margins as expected.
+ */
 %clearfix,
 .clearfix {
     &:before,
@@ -107,78 +123,26 @@ $grid-breakpoints: (
 
 
 /**
- * Grid container.
- *
- * 1. Fluid container padding behaves oddly with box-sizing: border-box.
+ * Reverse a list or map.
+ * Used to reverse the breakpoint map if mobile first.
+ * source: http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
  */
-.container {
-    @extend %clearfix;
-    @if $grid-responsive {
-        max-width: $grid-container-width;
+@function grid-reverse($list, $recursive: false) {
+    $result: ();
+
+    @for $i from length($list)*-1 through -1 {
+        @if type-of(nth($list, abs($i))) == list and $recursive {
+            $result: append($result, reverse(nth($list, abs($i)), $recursive));      
+        }
+        @else {
+            $result: append($result, nth($list, abs($i)));
+        }
     }
-    @else {
-        width: $grid-container-width;
-    }
-    margin: 0 auto;
-    padding-left: $grid-container-gutter;
-    padding-right: $grid-container-gutter;
-    -webkit-box-sizing: content-box; /* 1 */
-       -moz-box-sizing: content-box;
-            box-sizing: content-box;
+
+    @return $result;
 }
 
 
-
-/**
- * Grid wrapper
- *
- * 1. Apply negative margins to the sides to make columns flush with container.
- */
-.grid,
-%grid {
-    @extend %clearfix;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-left: -($grid-column-gutter/2); /* 1 */
-    margin-right: -($grid-column-gutter/2); /* 1 */
-}
-
-.grid-center {
-    @extend %grid;
-    text-align: center;
-}
-
-.grid-right {
-    @extend %grid;
-    text-align: right;
-}
-
-
-
-/**
- * Column base.
- *
- * 1. Position columns relatively in order to push/pull them.
- */
-%col {
-    min-height: 1px;
-    padding-left: $grid-column-gutter/2;
-    padding-right: $grid-column-gutter/2;
-    display: inline-block;
-    vertical-align: top;
-    @if $grid-use-push or $grid-use-pull {
-        position: relative; /* 1 */
-    }
-}
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  COLUMNS
-\*---------------------------------------------------------------------------*/
 
 /**
  * Builder mixin.
@@ -226,6 +190,76 @@ $grid-breakpoints: (
 
 
 
+
+
+/*---------------------------------------------------------------------------*\
+  GRID BASE
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Grid container base.
+ *
+ * 1. Fluid container padding behaves oddly with box-sizing: border-box.
+ */
+.container {
+    @extend %clearfix;
+    @if $grid-responsive {
+        max-width: $grid-container-width;
+    }
+    @else {
+        width: $grid-container-width;
+    }
+    margin: 0 auto;
+    padding-left: $grid-container-gutter;
+    padding-right: $grid-container-gutter;
+    -webkit-box-sizing: content-box; /* 1 */
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+
+
+/**
+ * Grid wrapper base
+ *
+ * 1. Apply negative margins to the sides to make columns flush with container.
+ */
+.grid,
+%grid {
+    @extend %clearfix;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -($grid-column-gutter/2); /* 1 */
+    margin-right: -($grid-column-gutter/2); /* 1 */
+}
+
+
+
+/**
+ * Column base.
+ *
+ * 1. Position columns relatively in order to push/pull them.
+ */
+%col {
+    min-height: 1px;
+    padding-left: $grid-column-gutter/2;
+    padding-right: $grid-column-gutter/2;
+    display: inline-block;
+    vertical-align: top;
+    @if $grid-use-push or $grid-use-pull {
+        position: relative; /* 1 */
+    }
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  COLUMNS
+\*---------------------------------------------------------------------------*/
+
 /**
  * Create column width and modifier classes based on $column-count.
  */
@@ -245,7 +279,7 @@ $grid-breakpoints: (
     // Reverse the direction media queries cascade if mobile first.
     @if $grid-mobile-first {
         $grid-media: min-width;
-        $grid-breakpoints: reverse($grid-breakpoints);
+        $grid-breakpoints: grid-reverse($grid-breakpoints);
     }
 
     // Loop through the breakpoint map and make column classes
@@ -259,6 +293,24 @@ $grid-breakpoints: (
         }
     }
 
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  MODIFIERS
+\*---------------------------------------------------------------------------*/
+
+.grid-center {
+    @extend %grid;
+    text-align: center;
+}
+
+.grid-right {
+    @extend %grid;
+    text-align: right;
 }
 
 
