@@ -200,6 +200,7 @@ $grid-breakpoints: (
  * Grid container base.
  *
  * 1. Fluid container padding behaves oddly with box-sizing: border-box.
+ *    Set this in case content-box is not the global box-sizing.
  */
 .container {
     @extend %clearfix;
@@ -240,6 +241,7 @@ $grid-breakpoints: (
  * Column base.
  *
  * 1. Position columns relatively in order to push/pull them.
+ * 2. Apply box-sizing instead of relying on it to be set globally.
  */
 %col {
     min-height: 1px;
@@ -250,6 +252,9 @@ $grid-breakpoints: (
     @if $grid-use-push or $grid-use-pull {
         position: relative; /* 1 */
     }
+    -webkit-box-sizing: border-box; /* 2 */
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 
