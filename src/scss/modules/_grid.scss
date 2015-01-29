@@ -58,7 +58,6 @@ $grid-column-gutter: 2em !default;
 /**
  * Enable mobile first media queries.
  */
-/* TODO: this */
 $grid-mobile-first: false !default;
 
 /**
@@ -242,14 +241,19 @@ $grid-breakpoints: (
  */
 @if $grid-responsive {
 
+    $grid-media: max-width;
+
     // Reverse the direction media queries cascade if mobile first.
-    $media: if($grid-mobile-first, min-width, max-width);
+    @if $grid-mobile-first {
+        $grid-media: min-width;
+        $grid-breakpoints: reverse($grid-breakpoints);
+    }
 
     // Loop through the breakpoint map and make column classes
     // using the size extension. Use the size extensions associated
     // variable for the breakpoint.
     @each $ext, $bp in $grid-breakpoints {
-        @media ($media: $bp) {
+        @media ($grid-media: $bp) {
             @for $i from 0 through $grid-column-count {
                 @include grid-create-width($i, $ext);
             }
