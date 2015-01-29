@@ -92,12 +92,27 @@ $grid-breakpoints: (
   GRID SCAFFOLDING
 \*---------------------------------------------------------------------------*/
 
+%clearfix,
+.clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+
 /**
  * Grid container.
  *
  * 1. Fluid container padding behaves oddly with box-sizing: border-box.
  */
 .container {
+    @extend %clearfix;
     @if $grid-responsive {
         max-width: $grid-container-width;
     }
@@ -121,6 +136,7 @@ $grid-breakpoints: (
  */
 .grid,
 %grid {
+    @extend %clearfix;
     list-style: none;
     margin: 0;
     padding: 0;
