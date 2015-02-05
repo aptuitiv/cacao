@@ -16,7 +16,11 @@
  * Inline-block grid. Shamelessly based off of:
  * http://purecss.io/ and http://csswizardry.com/csswizardry-grids/
  *
- * Example:
+ * Note: The only way to guarantee that the columns behave
+ *       as intended is to remove all the white space between them
+ *       by minifying the HTML, commenting white space, etc..
+ *
+ * Basic Example:
  *   4 columns side by side with the default grid settings. When the viewport 
  *   shrinks the columns will collapse to two per row, and finally the 
  *   columns will span the full width on a small mobile viewport.
@@ -30,15 +34,8 @@
  </div>
 
  *
- * Note: An unordered list may be used if you'd like to keep markup 
- *       somewhat semantic.
+ * Note: An unordered list may be used in place of <div>s.
  *
- * Note: The only way to guarantee that the columns behave
- *       as intended is to remove all the white space between them
- *       by minifying the HTML, commenting white space, etc..
- *
- * Note: This is a prototype module. There are some configuration
- *       options that havent been implemented yet. Expect updates.
  */
 
 
@@ -55,8 +52,7 @@
 $grid-container-width: 1024px !default;
 
 /**
- * Gutters on the sides of the page when viewport is below
- * the container max width.
+ * Gutters on the container sides when viewport is below the container width.
  */
 $grid-container-gutter: 1em !default;
 
@@ -67,18 +63,22 @@ $grid-column-count: 12 !default;
 $grid-column-gutter: 2em !default;
 
 /**
+ * Set to false to disable media queries.
+ */
+$grid-responsive: true !default;
+
+/**
  * Enable mobile first media queries.
  */
 $grid-mobile-first: false !default;
 
 /**
- * Set to false to disable media queries.
- * This will of course override $mobile-first.
+ * Enable or disable .grid-* modifiers.
  */
-$grid-responsive: true !default;
+$grid-modifiers: true !default;
 
 /**
- * Enable or disable column modifiers.
+ * Enable or disable column position modifiers.
  */
 $grid-use-pull: true !default;
 $grid-use-push: true !default;
@@ -86,6 +86,10 @@ $grid-use-offset: true !default;
 
 /**
  * Media query breakpoints.
+ * This map can be overridden with your own extentions and breakpoints to be
+ * used in the responsive classes.
+ *
+ * Sorted largest to smallest for the media queries to cascade correctly.
  */
 $grid-breakpoints: (
     xl: 1200px,
@@ -106,7 +110,8 @@ $grid-breakpoints: (
 
 /**
  * Clearfix applied to the container.
- * Without this the container will not clear margins as expected.
+ * This is only needed for the container, which is no longer needed in this
+ * grid implementation. It will likely be removed from this module soon.
  */
 %clearfix,
 .clearfix {
@@ -125,7 +130,7 @@ $grid-breakpoints: (
 /**
  * Reverse a list or map.
  * Used to reverse the breakpoint map if mobile first.
- * source: http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
+ * Source: http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
  */
 @function grid-reverse($list, $recursive: false) {
     $result: ();
@@ -149,29 +154,35 @@ $grid-breakpoints: (
  *
  * Creates column and modifier classes based on input and grid settings.
  *
- * $col: Should be the number of columns to span
+ * $col: Should be the number of columns to span.
  * $ext: Optional. The extension to use for the breakpoint classes.
  *       The 'md' in '.col-12-md'
  */
 @mixin grid-create-width($col, $ext: "") {
 
-    //  Prepend a seperator onto the extension if there is one.
+    /**
+     * Prepend a seperator onto the extension if there is one.
+     */
     @if $ext != "" {
         $ext: "-" + $ext;
     }
 
+    /**
+     * Column width class.
+     * Sets the width as a simple fraction.
+     * Extend the base column if the class is outside of a media query.
+     */
     .col-#{$col}#{$ext} {
-        // Extend the base column so the class '.col' doesn't need to be added.
-        // Only do this for base columns instead of breakpoint classes.
         @if $ext == "" {
             @extend %col;
         }
-        // Set the width as a simple fraction.
         width: percentage($col/$grid-column-count);
     }
+    /**
+     * Utilize relative positioning and the left property to push/pull columns.
+     */
     @if $grid-use-push {
         .push-#{$col}#{$ext} {
-            // Utilize relative positioning and the left property to push/pull columns.
             left: percentage($col/$grid-column-count);
         }
     }
@@ -180,9 +191,11 @@ $grid-breakpoints: (
             left: -(percentage($col/$grid-column-count));
         }
     }
+    /**
+     * Use a margin to offset columns so no other columns can use that space.
+     */
     @if $grid-use-pull {
         .offset-#{$col}#{$ext} {
-            // Use a margin to offset columns so no other columns can use that space.
             margin-left: percentage($col/$grid-column-count);
         }
     }
@@ -197,7 +210,9 @@ $grid-breakpoints: (
 \*---------------------------------------------------------------------------*/
 
 /**
- * Grid container base.
+ * Grid page container.
+ * The container is no longer needed in this grid implementation. 
+ * It will likely be removed from this module soon.
  *
  * 1. Fluid container padding behaves oddly with box-sizing: border-box.
  *    Set this in case content-box is not the global box-sizing.
@@ -221,36 +236,37 @@ $grid-breakpoints: (
 
 
 /**
- * Grid wrapper base
- *
- * 1. Apply negative margins to the sides to make columns flush with container.
+ * Grid wrapper.
+ * Resets list styles so an unordered list may be used.
+ * Also applies a negative margin to the left to make the columns nestable 
+ * and flush.
  */
-.grid,
-%grid {
-    @extend %clearfix;
+.grid {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: -$grid-column-gutter; /* 1 */
+    margin-left: -$grid-column-gutter;
 }
 
 
 
 /**
  * Column base.
+ * Aligned to the top by default.
  *
- * 1. Position columns relatively in order to push/pull them.
- * 2. Apply box-sizing instead of relying on it to be set globally.
+ * 1. Set a min-height so columns have a width even if they are empty.
+ * 2. Position columns relatively in order to push/pull them.
+ * 3. Apply box-sizing instead of relying on it to be set globally.
  */
 %col {
-    min-height: 1px;
-    padding-left: $grid-column-gutter;
     display: inline-block;
+    min-height: 1px; /* 1 */
+    padding-left: $grid-column-gutter;
     vertical-align: top;
     @if $grid-use-push or $grid-use-pull {
-        position: relative; /* 1 */
+        position: relative; /* 2 */
     }
-    -webkit-box-sizing: border-box; /* 2 */
+    -webkit-box-sizing: border-box; /* 3 */
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
@@ -265,6 +281,8 @@ $grid-breakpoints: (
 
 /**
  * Create column width and modifier classes based on $column-count.
+ * Start $i at 1 because there is no need for 0 width columns or modifiers
+ * outside of media queries.
  */
 @for $i from 1 through $grid-column-count {
     @include grid-create-width($i);
@@ -279,15 +297,18 @@ $grid-breakpoints: (
 
     $grid-media: max-width;
 
-    // Reverse the direction media queries cascade if mobile first.
+    /**
+     * Reverse the direction media queries cascade if mobile first.
+     */
     @if $grid-mobile-first {
         $grid-media: min-width;
         $grid-breakpoints: grid-reverse($grid-breakpoints);
     }
 
-    // Loop through the breakpoint map and make column classes
-    // using the size extension. Use the size extensions associated
-    // variable for the breakpoint.
+    /**
+     * Loop through the breakpoint map and make responsive column/modifier 
+     * classes using the breakpoint extension.
+     */
     @each $ext, $bp in $grid-breakpoints {
         @media ($grid-media: $bp) {
             @for $i from 0 through $grid-column-count {
@@ -305,71 +326,73 @@ $grid-breakpoints: (
 /*---------------------------------------------------------------------------*\
   MODIFIERS
 \*---------------------------------------------------------------------------*/
+
 /**
  * The modifiers below are experimental and use some ugly selectors.
  */
+@if $grid-modifiers {
 
-
-
-/**
- * Modifies horizontal alignment of columns.
- * When using these be aware that they reset columns to text-align: left;
- */
-.grid-center {
-    text-align: center;
-    > [class*="col-"] {
-        text-align: left;
+    /**
+     * Modifies horizontal alignment of columns.
+     * When using these be aware that they reset columns to text-align: left;
+     */
+    .grid-center {
+        text-align: center;
+        > [class*="col-"] {
+            text-align: left;
+        }
     }
-}
 
-.grid-right {
-    text-align: right;
-    > [class*="col-"] {
-        text-align: left;
+    .grid-right {
+        text-align: right;
+        > [class*="col-"] {
+            text-align: left;
+        }
     }
-}
 
 
 
-/**
- * Modifies vertical alignment of columns.
- */
-.grid-middle {
-    > [class*="col-"] {
-        vertical-align: middle;
+    /**
+     * Modifies vertical alignment of columns.
+     */
+    .grid-middle {
+        > [class*="col-"] {
+            vertical-align: middle;
+        }
     }
-}
 
-.grid-bottom {
-    > [class*="col-"] {
-        vertical-align: bottom;
+    .grid-bottom {
+        > [class*="col-"] {
+            vertical-align: bottom;
+        }
     }
-}
 
 
 
-/**
- * Modifies grid gutters.
- */
-.grid-full {
-    margin: 0;
-    > [class*="col-"] {
-        padding-left: 0;
+    /**
+     * Modifies grid gutters.
+     */
+    .grid-full {
+        margin: 0;
+        > [class*="col-"] {
+            padding-left: 0;
+        }
     }
-}
 
-.grid-narrow {
-    margin-left: -($grid-column-gutter/2);
-    > [class*="col-"] {
-        padding-left: $grid-column-gutter/2;
+    .grid-narrow {
+        margin-left: -($grid-column-gutter/2);
+        > [class*="col-"] {
+            padding-left: $grid-column-gutter/2;
+        }
     }
-}
 
-.grid-wide {
-    margin-left: -($grid-column-gutter*2);
-    > [class*="col-"] {
-        padding-left: $grid-column-gutter*2;
+    .grid-wide {
+        margin-left: -($grid-column-gutter*2);
+        > [class*="col-"] {
+            padding-left: $grid-column-gutter*2;
+        }
     }
+
 }
 
 
