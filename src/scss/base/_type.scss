@@ -2,10 +2,10 @@
   TYPOGRAPHY
 \*---------------------------------------------------------------------------*/
 /**
- * Set the base typography styles.
- * We use opt-in styles for links and vertical rhythm. These styles can
- * be scoped and set by other modules. This cuts down on the amount of
- * overrides and repeated resets needed in modules.
+ * Set the base typography styles and vertical rhythm.
+ * We use opt-in styles for links. These styles can be scoped or
+ * set by other modules. This cuts down on the amount of overrides and
+ * repeated resets needed in modules.
  * All colors and visual styles are defined in the theme file.
  */
 
@@ -23,12 +23,15 @@
  */
 $base-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $base-font-size: 14px !default;
+$base-line-height: 21px !default;
 $base-font-weight: normal !default;
-$base-line-height: 1.5 !default;
 $base-letter-spacing: 0 !default;
 
 $heading-font-stack: $base-font-stack !default;
 $heading-font-weight: $base-font-weight !default;
+$heading-letter-spacing: $base-letter-spacing !default;
+
+
 
 /**
  * Font scale
@@ -50,6 +53,27 @@ $micro: 12px !default;
 
 
 /*---------------------------------------------------------------------------*\
+  LIBRARY
+\*---------------------------------------------------------------------------*/
+
+@mixin font-size($font-size, $context: $base-font-size, $line-height: false){
+    // remove units
+    $font-size: $font-size / ($font-size * 0 + 1);
+    $context: $context / ($context * 0 + 1);
+
+    font-size: ($font-size)*1px;
+    font-size: ($font-size / $context)*1em;
+
+    @if $line-height == true {
+        line-height: ceil($font-size / ($base-line-height/2)) * (($base-line-height/2) / $font-size);
+    }
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
   GENERAL TYPOGRAPHY
 \*---------------------------------------------------------------------------*/
 
@@ -57,8 +81,13 @@ body {
     font-size: $base-font-size;
     font-family: $base-font-stack;
     font-weight: $base-font-weight;
-    line-height: $base-line-height;
     letter-spacing: $base-letter-spacing;
+    line-height: ceil($base-font-size / ($base-line-height/2)) * (($base-line-height/2) / $base-font-size);
+}
+
+p {
+    @include font-size($base-font-size, $line-height: true);
+    margin: 0 0 $base-line-height;
 }
 
 a {
@@ -66,18 +95,15 @@ a {
     text-decoration: inherit;
 }
 
-p {
-    margin: 0;
-}
-
 code,
 pre {
-    font-size: $micro;
+    @include font-size($milli, $line-height: true);
+    margin: 0 0 $base-line-height;
 }
 
 ul,
 ol {
-    margin: 0;
+    margin: 0 0 $base-line-height;
     padding-left: 1em;
 }
 
@@ -90,39 +116,40 @@ ol {
 \*---------------------------------------------------------------------------*/
 
 %heading {
-    margin: 0;
+    margin: 0 0 $base-line-height;
     font-family: $heading-font-stack;
     font-weight: $heading-font-weight;
+    letter-spacing: $heading-letter-spacing;
 }
 
 h1 {
     @extend %heading;
-    font-size: $alpha;
+    @include font-size($alpha, $line-height: true);
 }
 
 h2 {
     @extend %heading;
-    font-size: $beta;
+    @include font-size($beta, $line-height: true);
 }
 
 h3 {
     @extend %heading;
-    font-size: $gamma;
+    @include font-size($gamma, $line-height: true);
 }
 
 h4 {
     @extend %heading;
-    font-size: $delta;
+    @include font-size($delta, $line-height: true);
 }
 
 h5 {
     @extend %heading;
-    font-size: $epsilon;
+    @include font-size($epsilon, $line-height: true);
 }
 
 h6 {
     @extend %heading;
-    font-size: $zeta;
+    @include font-size($zeta, $line-height: true);
 }
 
 
