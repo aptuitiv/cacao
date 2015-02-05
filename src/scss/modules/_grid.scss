@@ -231,8 +231,7 @@ $grid-breakpoints: (
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: -($grid-column-gutter/2); /* 1 */
-    margin-right: -($grid-column-gutter/2); /* 1 */
+    margin-left: -$grid-column-gutter; /* 1 */
 }
 
 
@@ -245,8 +244,7 @@ $grid-breakpoints: (
  */
 %col {
     min-height: 1px;
-    padding-left: $grid-column-gutter/2;
-    padding-right: $grid-column-gutter/2;
+    padding-left: $grid-column-gutter;
     display: inline-block;
     vertical-align: top;
     @if $grid-use-push or $grid-use-pull {
@@ -307,15 +305,71 @@ $grid-breakpoints: (
 /*---------------------------------------------------------------------------*\
   MODIFIERS
 \*---------------------------------------------------------------------------*/
+/**
+ * The modifiers below are experimental and use some ugly selectors.
+ */
 
+
+
+/**
+ * Modifies horizontal alignment of columns.
+ * When using these be aware that they reset columns to text-align: left;
+ */
 .grid-center {
-    @extend %grid;
     text-align: center;
+    > [class*="col-"] {
+        text-align: left;
+    }
 }
 
 .grid-right {
-    @extend %grid;
     text-align: right;
+    > [class*="col-"] {
+        text-align: left;
+    }
+}
+
+
+
+/**
+ * Modifies vertical alignment of columns.
+ */
+.grid-middle {
+    > [class*="col-"] {
+        vertical-align: middle;
+    }
+}
+
+.grid-bottom {
+    > [class*="col-"] {
+        vertical-align: bottom;
+    }
+}
+
+
+
+/**
+ * Modifies grid gutters.
+ */
+.grid-full {
+    margin: 0;
+    > [class*="col-"] {
+        padding-left: 0;
+    }
+}
+
+.grid-narrow {
+    margin-left: -($grid-column-gutter/2);
+    > [class*="col-"] {
+        padding-left: $grid-column-gutter/2;
+    }
+}
+
+.grid-wide {
+    margin-left: -($grid-column-gutter*2);
+    > [class*="col-"] {
+        padding-left: $grid-column-gutter*2;
+    }
 }
 
 
