@@ -28,15 +28,20 @@
 
 
 /**
+ * Layouts
+ */
+@import "layouts/lists";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/sidebar";
+
+
+/**
  * Modules
  */
-@import "modules/lists";
 @import "modules/grid";
 @import "modules/media";
 @import "modules/breadcrumbs";
-@import "modules/header";
-@import "modules/footer";
-@import "modules/sidebar";
 @import "../../bower_components/magnific-popup/src/css/main";
 
 
