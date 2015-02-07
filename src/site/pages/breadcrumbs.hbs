@@ -13,8 +13,8 @@ layout: "sidebar.hbs"
 <h2>Usage:</h2>
 
 {{#markdown}}
-  ```html
-  <div class="breadcrumbs">
+```html
+<div class="breadcrumbs">
     <a class="breadcrumbs_crumb" href="#">Home</a>
     <span class="breadcrumbs_separator"></span>
     <span class="breadcrumbs_crumb disabled">Disabled</span>
@@ -22,60 +22,61 @@ layout: "sidebar.hbs"
     <a class="breadcrumbs_crumb" href="#">Page</a>
     <span class="breadcrumbs_separator"></span>
     <a class="breadcrumbs_crumb current" href="#">Current Page</a>
-  </div>
-  ```
+</div>
+```
 {{/markdown}}
 
 
 
 <h3>Example:</h3>
 
-<div class="breadcrumbs">
-  <a class="breadcrumbs_crumb" href="#">Home</a>
-  <span class="breadcrumbs_separator"></span>
-  <span class="breadcrumbs_crumb disabled">Disabled</span>
-  <span class="breadcrumbs_separator"></span>
-  <a class="breadcrumbs_crumb" href="#">Page</a>
-  <span class="breadcrumbs_separator"></span>
-  <a class="breadcrumbs_crumb current" href="#">Current Page</a>
+<div class="spaced-md">
+    <div class="breadcrumbs">
+        <a class="breadcrumbs_crumb" href="#">Home</a>
+        <span class="breadcrumbs_separator"></span>
+        <span class="breadcrumbs_crumb disabled">Disabled</span>
+        <span class="breadcrumbs_separator"></span>
+        <a class="breadcrumbs_crumb" href="#">Page</a>
+        <span class="breadcrumbs_separator"></span>
+        <a class="breadcrumbs_crumb current" href="#">Current Page</a>
+    </div>
 </div>
-<p></p>
 
 
 
 <h3>Example Theme:</h3>
 
 {{#markdown}}
-  ```scss
-  .breadcrumbs {
-      background: $off-white;
-      border-radius: 6px;
-  }
+```scss
+.breadcrumbs {
+    background: $off-white;
+    border-radius: 6px;
+}
 
-  .breadcrumbs_crumb,
-  .breadcrumbs_separator {
-      border-radius: 4px;
-  }
+.breadcrumbs_crumb,
+.breadcrumbs_separator {
+    border-radius: 4px;
+}
 
-  .breadcrumbs_separator {
-      background: $dark-plum;
-      color: white;
-  }
+.breadcrumbs_separator {
+    background: $dark-plum;
+    color: white;
+}
 
-  .breadcrumbs_crumb.current,
-  .breadcrumbs_crumb:active:not(.disabled):not(.current) {
-      background: $light-brown;
-  }
+.breadcrumbs_crumb.current,
+.breadcrumbs_crumb:active:not(.disabled):not(.current) {
+    background: $light-brown;
+}
 
-  .breadcrumbs_crumb:not(.disabled):not(.current) {
-      background: white;
-  }
+.breadcrumbs_crumb:not(.disabled):not(.current) {
+    background: white;
+}
 
-  .breadcrumbs_crumb:hover:not(.disabled):not(.current),
-  .breadcrumbs_crumb:active:not(.disabled):not(.current) {
-      border: 1px solid black;
-  }
-  ```
+.breadcrumbs_crumb:hover:not(.disabled):not(.current),
+.breadcrumbs_crumb:active:not(.disabled):not(.current) {
+    border: 1px solid black;
+}
+```
 {{/markdown}}
 
 

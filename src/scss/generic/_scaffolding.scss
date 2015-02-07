@@ -1,7 +1,16 @@
 /*---------------------------------------------------------------------------*\
-  GENERIC LAYOUT SCAFFOLDING
+  GENERIC LAYOUT CLASSES
 \*---------------------------------------------------------------------------*/
+/**
+ * These are general element layout classes that are used throughout the site.
+ * Not to be confused with page/section layouts in the layouts directory.
+ */
 
+
+
+/**
+ * Main content section. This is usually placed inside the main column.
+ */
 .content {
     min-height: 400px;
     margin: $base-rhythm*3 0;
@@ -9,6 +18,10 @@
 
 
 
+/**
+ * Used to modify an elements bottom margin.
+ * The various size modifiers follow the sites vertical rhythm. 
+ */
 .spaced-xs {
     margin-bottom: $base-rhythm;
 }
