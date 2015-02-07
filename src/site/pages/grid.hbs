@@ -14,32 +14,34 @@ layout: "sidebar.hbs"
 <h3>Wrapper</h3>
 {{#markdown}}
 ```html
-    <div class="grid">
-        [...]
-    </div>
+<div class="grid">
+    [...]
+</div>
 ```
 {{/markdown}}
-<div class="grid">
-    <div class="col-4"><div class="example-col">.col-4</div></div> 
-    <div class="col-4"><div class="example-col">.col-4</div></div> 
-    <div class="col-4"><div class="example-col">.col-4</div></div> 
+<div class="spaced-md">
+    <div class="grid">
+        <div class="col-4"><div class="example-col">.col-4</div></div> 
+        <div class="col-4"><div class="example-col">.col-4</div></div> 
+        <div class="col-4"><div class="example-col">.col-4</div></div> 
+    </div>
 </div>
-<p></p>
 
 <h3>Columns</h3>
 {{#markdown}}
 ```html
-    <div class="grid">
-        <div class="col-4">[...]</div>
-    </div>
+<div class="grid">
+    <div class="col-4">[...]</div>
+</div>
 ```
 {{/markdown}}
-<div class="grid">
-    <div class="col-4"><div class="example-col">.col-4</div></div>
-    <div class="col-4"><div class="example-col">.col-4</div></div>
-    <div class="col-4"><div class="example-col">.col-4</div></div>
+<div class="spaced-xl">
+    <div class="grid">
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+    </div>
 </div>
-<p></p>
 
 
 
@@ -49,21 +51,22 @@ layout: "sidebar.hbs"
 <h3>Offsets & Column Ordering</h3>
 {{#markdown}}
 ```html
-    <div class="grid">
-        <div class="col-3 push-3 offset-2 col-12-md push-0-md offset-0-md">[...]</div>
-        <div class="col-3 pull-3 col-12-md pull-0-md">[...]</div>
-    </div>
+<div class="grid">
+    <div class="col-3 push-3 offset-2 col-12-md push-0-md offset-0-md">[...]</div>
+    <div class="col-3 pull-3 col-12-md pull-0-md">[...]</div>
+</div>
 ```
 {{/markdown}}
-<div class="grid">
-    <div class="col-3 push-3 offset-2 col-12-md push-0-md offset-0-md">
-        <div class="example-col">.col-3 .push-3 .offset-2 .col-12-md .push-0-md .offset-0-md</div>
-    </div>
-    <div class="col-3 pull-3 col-12-md pull-0-md">
-        <div class="example-col">.col-3 .pull-3 .col-12-md .pull-0-md</div>
+<div class="spaced-xl">
+    <div class="grid">
+        <div class="col-3 push-3 offset-2 col-12-md push-0-md offset-0-md">
+            <div class="example-col">.col-3 .push-3 .offset-2 .col-12-md .push-0-md .offset-0-md</div>
+        </div>
+        <div class="col-3 pull-3 col-12-md pull-0-md">
+            <div class="example-col">.col-3 .pull-3 .col-12-md .pull-0-md</div>
+        </div>
     </div>
 </div>
-<p></p>
 
 
 
@@ -73,103 +76,110 @@ layout: "sidebar.hbs"
 <h3>Centered</h3>
 {{#markdown}}
 ```html
-    <div class="grid grid-center">
-        [...]
-    </div>
+<div class="grid grid-center">
+    [...]
+</div>
 ```
 {{/markdown}}
-<div class="grid grid-center">
-    <div class="col-4"><div class="example-col">.col-4</div></div> 
-    <div class="col-4"><div class="example-col">.col-4</div></div> 
+<div class="spaced-md">
+    <div class="grid grid-center">
+        <div class="col-4"><div class="example-col">.col-4</div></div> 
+        <div class="col-4"><div class="example-col">.col-4</div></div> 
+    </div>
 </div>
-<p></p>
 
 <h3>Right Aligned</h3>
 {{#markdown}}
 ```html
-    <div class="grid grid-right">
-        [...]
-    </div>
+<div class="grid grid-right">
+    [...]
+</div>
 ```
 {{/markdown}}
-<div class="grid grid-right">
-    <div class="col-4"><div class="example-col">.col-4</div></div>
-    <div class="col-4"><div class="example-col">.col-4</div></div>
+<div class="spaced-md">
+    <div class="grid grid-right">
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+    </div>
 </div>
-<p></p>
 
 <h3>Align Middle</h3>
 {{#markdown}}
 ```html
-    <div class="grid grid-middle">
-        [...]
-    </div>
+<div class="grid grid-middle">
+    [...]
+</div>
 ```
 {{/markdown}}
-<div class="grid grid-middle">
-    <div class="col-4"><div class="example-col">.col-4</div></div>
-    <div class="col-4"><div class="example-col">.col-4<br>Tall<br>Column</div></div>
-    <div class="col-4"><div class="example-col">.col-4</div></div>
+<div class="spaced-md">
+    <div class="grid grid-middle">
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+        <div class="col-4"><div class="example-col">.col-4<br>Tall<br>Column</div></div>
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+    </div>
 </div>
-<p></p>
 
 <h3>Align Bottom</h3>
 {{#markdown}}
 ```html
-    <div class="grid grid-bottom">
-        [...]
-    </div>
+<div class="grid grid-bottom">
+    [...]
+</div>
 ```
 {{/markdown}}
-<div class="grid grid-bottom">
-    <div class="col-4"><div class="example-col">.col-4</div></div>
-    <div class="col-4"><div class="example-col">.col-4<br>Tall<br>Column</div></div>
-    <div class="col-4"><div class="example-col">.col-4</div></div>
+<div class="spaced-md">
+    <div class="grid grid-bottom">
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+        <div class="col-4"><div class="example-col">.col-4<br>Tall<br>Column</div></div>
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+    </div>
 </div>
-<p></p>
 
 <h3>No Gutters</h3>
 {{#markdown}}
 ```html
-    <div class="grid grid-full">
-        [...]
-    </div>
+<div class="grid grid-full">
+    [...]
+</div>
 ```
 {{/markdown}}
-<div class="grid grid-full">
-    <div class="col-4"><div class="example-col">.col-4</div></div>
-    <div class="col-4"><div class="example-col">.col-4</div></div>
-    <div class="col-4"><div class="example-col">.col-4</div></div>
+<div class="spaced-md">
+    <div class="grid grid-full">
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+    </div>
 </div>
-<p></p>
 
 <h3>Narrow Gutters</h3>
 {{#markdown}}
 ```html
-    <div class="grid grid-narrow">
-        [...]
-    </div>
+<div class="grid grid-narrow">
+    [...]
+</div>
 ```
 {{/markdown}}
-<div class="grid grid-narrow">
-    <div class="col-4"><div class="example-col">.col-4</div></div>
-    <div class="col-4"><div class="example-col">.col-4</div></div>
-    <div class="col-4"><div class="example-col">.col-4</div></div>
+<div class="spaced-md">
+    <div class="grid grid-narrow">
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+    </div>
 </div>
-<p></p>
 
 <h3>Wide Gutters</h3>
 {{#markdown}}
 ```html
-    <div class="grid grid-wide">
-        [...]
-    </div>
+<div class="grid grid-wide">
+    [...]
+</div>
 ```
 {{/markdown}}
-<div class="grid grid-wide">
-    <div class="col-4"><div class="example-col">.col-4</div></div>
-    <div class="col-4"><div class="example-col">.col-4</div></div>
-    <div class="col-4"><div class="example-col">.col-4</div></div>
+<div class="spaced-xl">
+    <div class="grid grid-wide">
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+        <div class="col-4"><div class="example-col">.col-4</div></div>
+    </div>
 </div>
-<p></p>
 

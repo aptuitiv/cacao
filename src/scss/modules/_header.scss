@@ -13,19 +13,9 @@
 \*---------------------------------------------------------------------------*/
 
 .header {
+    padding-top: $base-rhythm;
 }
-
-.header-mid {
-    text-align: center;
-}
-
-
 
 .header_logo {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: $alpha;
-}
-
-.header-mid_logo {
+    margin-bottom: $base-rhythm;
 }

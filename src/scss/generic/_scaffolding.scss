@@ -4,7 +4,29 @@
 
 .content {
     min-height: 400px;
-    margin: 2em 0;
+    margin: $base-rhythm*3 0;
+}
+
+
+
+.spaced-xs {
+    margin-bottom: $base-rhythm;
+}
+
+.spaced-sm {
+    margin-bottom: $base-rhythm*2;
+}
+
+.spaced-md {
+    margin-bottom: $base-rhythm*3;
+}
+
+.spaced-lg {
+    margin-bottom: $base-rhythm*4;
+}
+
+.spaced-xl {
+    margin-bottom: $base-rhythm*5;
 }
 
 
