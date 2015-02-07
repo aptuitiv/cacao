@@ -26,6 +26,7 @@ $base-font-size: 14px !default;
 $base-line-height: 21px !default;
 $base-font-weight: normal !default;
 $base-letter-spacing: 0 !default;
+$base-rhythm: $base-line-height/2 !default;
 
 $heading-font-stack: $base-font-stack !default;
 $heading-font-weight: $base-font-weight !default;
@@ -65,7 +66,7 @@ $micro: 12px !default;
     font-size: ($font-size / $context)*1em;
 
     @if $line-height == true {
-        line-height: ceil($font-size / ($base-line-height/2)) * (($base-line-height/2) / $font-size);
+        line-height: ceil($font-size / $base-rhythm) * ($base-rhythm / $font-size);
     }
 }
 
@@ -78,11 +79,10 @@ $micro: 12px !default;
 \*---------------------------------------------------------------------------*/
 
 body {
+    @extend %t-body;
     font-size: $base-font-size;
-    font-family: $base-font-stack;
     font-weight: $base-font-weight;
-    letter-spacing: $base-letter-spacing;
-    line-height: ceil($base-font-size / ($base-line-height/2)) * (($base-line-height/2) / $base-font-size);
+    line-height: ceil($base-font-size / $base-rhythm) * ($base-rhythm / $base-font-size);
 }
 
 p {
@@ -116,40 +116,171 @@ ol {
 \*---------------------------------------------------------------------------*/
 
 %heading {
+    @extend %t-heading;
     margin: 0 0 $base-line-height;
-    font-family: $heading-font-stack;
     font-weight: $heading-font-weight;
-    letter-spacing: $heading-letter-spacing;
 }
 
-h1 {
+h1,
+.h1 {
     @extend %heading;
+    @extend %alpha;
+}
+
+h2,
+.h2 {
+    @extend %heading;
+    @extend %beta;
+}
+
+h3,
+.h3 {
+    @extend %heading;
+    @extend %gamma;
+}
+
+h4,
+.h4 {
+    @extend %heading;
+    @extend %delta;
+}
+
+h5,
+.h5 {
+    @extend %heading;
+    @extend %epsilon;
+}
+
+h6,
+.h6 {
+    @extend %heading;
+    @extend %zeta;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  FONT SCALE
+\*---------------------------------------------------------------------------*/
+
+.giga {
+    @include font-size($giga, $line-height: true);
+}
+
+.mega {
+    @include font-size($mega, $line-height: true);
+}
+
+.kilo {
+    @include font-size($kilo, $line-height: true);
+}
+
+.alpha,
+%alpha {
     @include font-size($alpha, $line-height: true);
 }
 
-h2 {
-    @extend %heading;
+.beta,
+%beta {
     @include font-size($beta, $line-height: true);
 }
 
-h3 {
-    @extend %heading;
+.gamma,
+%gamma {
     @include font-size($gamma, $line-height: true);
 }
 
-h4 {
-    @extend %heading;
+.delta,
+%delta {
     @include font-size($delta, $line-height: true);
 }
 
-h5 {
-    @extend %heading;
+.epsilon,
+%epsilon {
     @include font-size($epsilon, $line-height: true);
 }
 
-h6 {
-    @extend %heading;
+.zeta,
+%zeta {
     @include font-size($zeta, $line-height: true);
+}
+
+.milli {
+    @include font-size($milli, $line-height: true);
+}
+
+.micro {
+    @include font-size($micro, $line-height: true);
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  FONT STACKS
+\*---------------------------------------------------------------------------*/
+
+.t-body,
+%t-body {
+    font-family: $base-font-stack;
+    letter-spacing: $base-letter-spacing;
+}
+
+.t-heading,
+%t-heading {
+    font-family: $heading-font-stack;
+    letter-spacing: $heading-letter-spacing;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  TYPOGRAPHY HELPERS
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Horizonal Alignment
+ */
+.t-left {
+    text-align: left;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-upper {
+    text-transform: uppercase;
+}
+
+
+
+/**
+ * Weight and Style
+ */
+.t-normal {
+    font-weight: normal;
+}
+
+.t-strong {
+    font-weight: bold;
+}
+
+.t-unstyled {
+    font-style: none;
+}
+
+.t-em {
+    font-style: italics;
 }
 
 
