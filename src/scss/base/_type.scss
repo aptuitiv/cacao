@@ -125,21 +125,18 @@ h1,
 .h1 {
     @extend %heading;
     @extend %alpha;
-    padding-top: $base-rhythm*2;
 }
 
 h2,
 .h2 {
     @extend %heading;
     @extend %beta;
-    padding-top: $base-rhythm*2;
 }
 
 h3,
 .h3 {
     @extend %heading;
     @extend %gamma;
-    padding-top: $base-rhythm*2;
 }
 
 h4,
