@@ -1,20 +1,10 @@
 /*---------------------------------------------------------------------------*\
-  BREADCRUMBS
+  PAGINATION
 \*---------------------------------------------------------------------------*/
 /**
- * A breadcrumb trail that can be configured with separators.
+ * Pagination.
  *
  * Usage:
-
- <div class="breadcrumbs">
-   <a class="breadcrumbs_crumb" href="#">Home</a>
-   <span class="breadcrumbs_separator"></span>
-   <span class="breadcrumbs_crumb disabled">Disabled</span>
-   <span class="breadcrumbs_separator"></span>
-   <a class="breadcrumbs_crumb" href="#">Page</a>
-   <span class="breadcrumbs_separator"></span>
-   <a class="breadcrumbs_crumb current" href="#">Current Page</a>
- </div>
 
  *
  */
@@ -27,29 +17,6 @@
   VARIABLES
 \*---------------------------------------------------------------------------*/
 
-/**
- * Base settings applied to the wrapper.
- */
-$crumbs-font-size: $milli !default;
-$crumbs-wrapper-padding: .25em !default;
-
-/**
- * Margin between each breadcrumb_item (crumbs and separators)
- */
-$crumbs-item-spacing: .5em !default;
-
-/**
- * Padding on each crumb
- */
-$crumbs-crumb-padding: .25em .5em !default;
-
-/**
- * Separator settings.
- */
-$crumbs-separator: ">>" !default;
-$crumbs-separator-size: $micro !default;
-$crumbs-separator-padding: 0 !default;
-
 
 
 
@@ -57,54 +24,6 @@ $crumbs-separator-padding: 0 !default;
 /*---------------------------------------------------------------------------*\
   MODULE
 \*---------------------------------------------------------------------------*/
-
-/**
- * Base wrapper.
- */
-.breadcrumbs {
-    display: block;
-    padding: $crumbs-wrapper-padding;
-    font-size: $crumbs-font-size;
-}
-
-
-
-/**
- * Generic item styles shared by the sub classed elements below.
- */
-%breadcrumbs_item {
-    display: inline-block;
-    margin-right: $crumbs-item-spacing;
-    vertical-align: middle;
-}
-
-
-
-/**
- * The "crumb" or "page".
- *
- * inherits breadcrumbs_item
- */
-.breadcrumbs_crumb {
-    @extend %breadcrumbs_item;
-    padding: $crumbs-crumb-padding;
-}
-
-
-
-/**
- * The crumb separator.
- *
- * inherits breadcrumbs_item
- */
-.breadcrumbs_separator {
-    @extend %breadcrumbs_item;
-    padding: $crumbs-separator-padding;
-    font-size: $crumbs-separator-size;
-    &:after {
-        content: $crumbs-separator;
-    }
-}
 
 
 
