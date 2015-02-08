@@ -12,3 +12,19 @@
 
 
 
+/**
+ * Large headings in the content section.
+ * These are bad selectors, but since we have no control over the classes of
+ * headings inside rich text editor blocks this will have to do.
+ */
+.content h1,
+.content .h1,
+.content h2,
+.content .h2,
+.content h3,
+.content .h3 {
+    padding-top: $base-rhythm;
+}
+
+
+
