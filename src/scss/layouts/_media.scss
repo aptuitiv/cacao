@@ -17,9 +17,7 @@
   VARIABLES
 \*---------------------------------------------------------------------------*/
 
-$media-margins: 1.25em 0 !default;
-$media-innermargin: 1em !default;
-$media-overflow: hidden !default;
+$media-gutter: 1em !default;
 
 
 
@@ -30,8 +28,6 @@ $media-overflow: hidden !default;
 \*---------------------------------------------------------------------------*/
 
 .media {
-    @include clearfix;
-    margin: $media-margins;
 }
 
 
@@ -42,7 +38,7 @@ $media-overflow: hidden !default;
  */
 .media_subject {
     float: left;
-    margin-right: $media-innermargin;
+    margin-right: $media-gutter;
 }
 
 
@@ -54,8 +50,7 @@ $media-overflow: hidden !default;
  * [1] http://www.stubbornella.org/content/2009/07/23/overflow-a-secret-benefit/
  */
 .media_content {
-    @extend %clearfix;
-    overflow: $media-overflow; /* 1 */
+    overflow: hidden; /* 1 */
 }
 
 

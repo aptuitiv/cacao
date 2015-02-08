@@ -9,18 +9,8 @@
 
 
 /**
- * Main content section. This is usually placed inside the main column.
- */
-.content {
-    min-height: 400px;
-    margin: $base-rhythm*3 0;
-}
-
-
-
-/**
  * Used to modify an elements bottom margin.
- * The various size modifiers follow the sites vertical rhythm. 
+ * The various size modifiers follow the site's vertical rhythm. 
  */
 .spaced-xs {
     margin-bottom: $base-rhythm;
@@ -40,6 +30,32 @@
 
 .spaced-xl {
     margin-bottom: $base-rhythm*5;
+}
+
+
+
+/**
+ * Used to add spacing to the inside of an element via padding.
+ * This padding follows the site's vertical rhythm.
+ */
+.padded-xs {
+    padding-top: $base-rhythm;
+}
+
+.padded-sm {
+    padding-top: $base-rhythm*2;
+}
+
+.padded-md {
+    padding-top: $base-rhythm*3;
+}
+
+.padded-lg {
+    padding-top: $base-rhythm*4;
+}
+
+.padded-xl {
+    padding-top: $base-rhythm*5;
 }
 
 

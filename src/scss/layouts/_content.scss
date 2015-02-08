@@ -1,14 +1,13 @@
 /*---------------------------------------------------------------------------*\
-  HEADER
+  CONTENT
 \*---------------------------------------------------------------------------*/
 
-.header {
-    padding-top: $base-rhythm;
-    padding-bottom: $base-rhythm/2;
-}
-
-.header_logo {
-    margin-bottom: $base-rhythm;
+/**
+ * Main content section. This is usually placed inside the main column.
+ */
+.content {
+    min-height: 400px;
+    margin: $base-rhythm*3 0;
 }
 
 

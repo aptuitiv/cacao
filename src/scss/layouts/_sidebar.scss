@@ -3,7 +3,13 @@
 \*---------------------------------------------------------------------------*/
 
 .sidebar {
-    margin-top: $base-rhythm*3;
+    padding-top: $base-rhythm*4;
+}
+
+
+
+.sidebar_item {
+    margin-bottom: $base-rhythm*3;
 }
 
 

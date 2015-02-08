@@ -23,6 +23,7 @@
  * Generic
  */
 @import "generic/helpers";
+@import "generic/clearfix";
 @import "generic/scaffolding";
 
 
@@ -30,19 +31,21 @@
 /**
  * Layouts
  */
+@import "layouts/grid";
+@import "layouts/media";
 @import "layouts/lists";
+@import "layouts/container";
+@import "layouts/content";
+@import "layouts/sidebar";
 @import "layouts/header";
 @import "layouts/footer";
-@import "layouts/sidebar";
 
 
 /**
  * Modules
  */
-@import "modules/grid";
-@import "modules/media";
-@import "modules/breadcrumbs";
 @import "../../bower_components/magnific-popup/src/css/main";
+@import "modules/breadcrumbs";
 
 
 

@@ -21,13 +21,16 @@
 /**
  * Typography
  */
-$base-font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$base-font-size: 16px;
+$base-font-stack: "Merriweather", serif;
+$base-font-size: 15px;
 $base-font-weight: normal;
-$base-line-height: 21px;
+$base-line-height: 22px;
+$base-letter-spacing: 0px;
+$base-rhythm: $base-line-height/2;
 
 $heading-font-stack: $base-font-stack;
-$heading-font-weight: bold;
+$heading-font-weight: 900;
+$heading-letter-spacing: -.5px;
 
 $giga: 74px;
 $mega: 62px;
@@ -37,9 +40,9 @@ $beta: 28px; // h2
 $gamma: 24px; // h3
 $delta: 20px; // h4
 $epsilon: 18px; // h5
-$zeta: 16px; // h6
-$milli: 14px;
-$micro: 12px;
+$zeta: 15px; // h6
+$milli: 13px;
+$micro: 11px;
 
 
 
@@ -58,13 +61,31 @@ $bp-xs: 400px;
 
 
 /*---------------------------------------------------------------------------*\
+  LAYOUT SETTINGS
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Page container
+ */
+$container-width: 960px;
+$container-gutter: 1.5em;
+
+/**
+ * Media layout
+ */
+$media-gutter: $base-rhythm*2;
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
   MODULE SETTINGS
 \*---------------------------------------------------------------------------*/
 
 /**
  * Grid
  */
-$grid-container-width: 960px;
 $grid-breakpoints: (
     xl: $bp-xl,
     lg: $bp-lg,
@@ -78,7 +99,9 @@ $grid-breakpoints: (
 /**
  * Breadcrumbs
  */
-$crumbs-separator-padding: 0 4px;
+$crumbs-wrapper-padding: $base-rhythm/2 .5em;
+$crumbs-crumb-padding: 0 .5em;
+$crumbs-separator-padding: $base-rhythm/2 .5em;
 
 
 

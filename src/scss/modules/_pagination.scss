@@ -30,6 +30,7 @@
 /**
  * Base settings applied to the wrapper.
  */
+$crumbs-font-size: $milli !default;
 $crumbs-wrapper-padding: .25em !default;
 
 /**
@@ -46,6 +47,7 @@ $crumbs-crumb-padding: .25em .5em !default;
  * Separator settings.
  */
 $crumbs-separator: ">>" !default;
+$crumbs-separator-size: $micro !default;
 $crumbs-separator-padding: 0 !default;
 
 
@@ -62,6 +64,7 @@ $crumbs-separator-padding: 0 !default;
 .breadcrumbs {
     display: block;
     padding: $crumbs-wrapper-padding;
+    font-size: $crumbs-font-size;
 }
 
 
@@ -97,6 +100,7 @@ $crumbs-separator-padding: 0 !default;
 .breadcrumbs_separator {
     @extend %breadcrumbs_item;
     padding: $crumbs-separator-padding;
+    font-size: $crumbs-separator-size;
     &:after {
         content: $crumbs-separator;
     }

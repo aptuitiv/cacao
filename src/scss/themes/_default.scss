@@ -35,13 +35,15 @@ body {
 
 #header {
     @include linear-gradient($dark-brown, darken($dark-brown, 5%));
+    border-bottom: 1px solid #333;
 }
 
 
 
 #main > .container {
     background: white;
-    border-radius: 0 0 8px 8px;
+    border: 1px solid #dfdfdf;
+    border-top: 0;
 }
 
 
