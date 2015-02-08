@@ -43,9 +43,9 @@
  */
 .list-spaced {
     @extend %list-inline;
+    margin-left: -1.5em;
     > li {
         margin-left: 1.5em;
-        &:first-child { margin-left: 0; }
     }
 }
 
