@@ -13,39 +13,25 @@
   VARIABLES
 \*---------------------------------------------------------------------------*/
 
-/**
- * Max container width. Container is fluid below this width.
- */
 $container-width: 1024px !default;
-
-/**
- * Gutters on the container sides when viewport is below the container width.
- */
-$container-gutter: 1em !default;
+$container-gutter: 20px !default;
 
 
 
 
 
 /*---------------------------------------------------------------------------*\
-  BASE
+  LAYOUT
 \*---------------------------------------------------------------------------*/
 
-/**
- * Page container.
- *
- * 1. Fluid container padding behaves oddly with box-sizing: border-box.
- *    Set this in case content-box is not the global box-sizing.
- */
 .container {
     max-width: $container-width;
     margin: 0 auto;
     padding-left: $container-gutter;
     padding-right: $container-gutter;
-    -webkit-box-sizing: content-box; /* 1 */
-       -moz-box-sizing: content-box;
-            box-sizing: content-box;
 }
+
+
 
 /**
  * Non-fluid, fixed container.
@@ -55,8 +41,23 @@ $container-gutter: 1em !default;
 }
 
 
+
+/**
+ * Remove gutters from container.
+ */
+.container-gutterless {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+/**
+ * Position container to the left.
+ */
 .container-left {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 

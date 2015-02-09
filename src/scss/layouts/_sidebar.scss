@@ -1,15 +1,40 @@
 /*---------------------------------------------------------------------------*\
   SIDEBAR
 \*---------------------------------------------------------------------------*/
+/**
+ * Sidebar layout.
+ */
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  VARIABLES
+\*---------------------------------------------------------------------------*/
+
+$sidebar-gutter: 20px !default;
+$sidebar-padding-top: 40px !default;
+$sidebar-padding-bottom: 20px !default;
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  LAYOUT
+\*---------------------------------------------------------------------------*/
 
 .sidebar {
-    padding-top: $base-rhythm*4;
+    padding-top: $sidebar-padding-top;
+    padding-bottom: $sidebar-padding-bottom;
 }
 
 
 
 .sidebar_item {
-    margin-bottom: $base-rhythm*3;
+    padding-left: $sidebar-gutter;
+    padding-right: $sidebar-gutter;
 }
 
 

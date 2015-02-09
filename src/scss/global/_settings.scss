@@ -2,7 +2,7 @@
   SETTINGS
 \*---------------------------------------------------------------------------*/
 /**
- * Global and module settings go here.
+ * Global variables, layout settings, and module settings go here.
  */
 
 
@@ -12,11 +12,6 @@
 /*---------------------------------------------------------------------------*\
   GLOBAL VARIABLES
 \*---------------------------------------------------------------------------*/
-/**
- * The variables below may be used throughout the site the same way mixins are.
- */
-
-
 
 /**
  * Typography
@@ -58,6 +53,14 @@ $bp-xs: 400px;
 
 
 
+/**
+ * Page variables (used below to configure layouts and modules)
+ */
+$page-width: 960px;
+$page-gutter: $base-rhythm*2;
+
+
+
 
 
 /*---------------------------------------------------------------------------*\
@@ -65,27 +68,27 @@ $bp-xs: 400px;
 \*---------------------------------------------------------------------------*/
 
 /**
- * Page container
+ * Container
  */
-$container-width: 960px;
-$container-gutter: 1.5em;
+$container-width: $page-width;
+$container-gutter: $page-gutter;
+
+
 
 /**
- * Media layout
+ * Content
  */
-$media-gutter: $base-rhythm*2;
+$content-gutter: $page-gutter;
+$content-padding-top: $base-rhythm*3;
+$content-padding-bottom: $base-rhythm;
+$content-heading-space: $base-rhythm;
 
 
-
-
-
-/*---------------------------------------------------------------------------*\
-  MODULE SETTINGS
-\*---------------------------------------------------------------------------*/
 
 /**
  * Grid
  */
+$grid-column-gutter: $base-rhythm*3;
 $grid-breakpoints: (
     xl: $bp-xl,
     lg: $bp-lg,
@@ -97,9 +100,40 @@ $grid-breakpoints: (
 
 
 /**
+ * Header
+ */
+$header-padding-top: $base-rhythm;
+$header-padding-bottom: $base-rhythm/2;
+$header-logo-margin: $base-rhythm;
+
+
+
+/**
+ * Media layout
+ */
+$media-gutter: $base-rhythm*2;
+
+
+
+/**
+ * Sidebar
+ */
+$sidebar-gutter: $page-gutter;
+$sidebar-padding-top: $base-rhythm*4;
+$sidebar-padding-bottom: $base-rhythm*2;
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  MODULE SETTINGS
+\*---------------------------------------------------------------------------*/
+
+/**
  * Breadcrumbs
  */
-$crumbs-wrapper-padding: $base-rhythm/2 .5em;
+$crumbs-wrapper-padding: ($base-rhythm/2)-1px .5em;
 $crumbs-crumb-padding: 0 .5em;
 $crumbs-separator-padding: $base-rhythm/2 .5em;
 

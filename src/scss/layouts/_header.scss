@@ -1,14 +1,44 @@
 /*---------------------------------------------------------------------------*\
   HEADER
 \*---------------------------------------------------------------------------*/
+/**
+ * Header layout.
+ */
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  VARIABLES
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Base header padding
+ */
+$header-padding-top: 10px !default;
+$header-padding-bottom: 5px !default;
+
+/**
+ * Bottom margin of the header logo section
+ */
+$header-logo-margin: 10px !default;
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  LAYOUT
+\*---------------------------------------------------------------------------*/
 
 .header {
-    padding-top: $base-rhythm;
-    padding-bottom: $base-rhythm/2;
+    padding-top: $header-padding-top;
+    padding-bottom: $header-padding-bottom;
 }
 
 .header_logo {
-    margin-bottom: $base-rhythm;
+    margin-bottom: $header-logo-margin;
 }
 
 

@@ -3,48 +3,37 @@
 {{>page-header}}
 
 <div id="main">
-  <div class="container clearfix">
-    <div class="grid">
-      <div class="col-9 push-3 col-12-md push-0-md">
+  <div class="container container-gutterless clearfix">
 
+    <div class="grid grid-full">
+        <div class="col-8 push-3 col-9-md col-12-sm push-0-sm">
 
-        <div class="content">
-            {{>body}}
+            <div class="content">
+                <div class="content_section">
+                  {{>body}}
+                </div>
+            </div>
+
         </div>
+        <div class="col-3 pull-8 pull-9-md col-12-sm pull-0-sm">
 
+            <div class="sidebar padded-lg">
+              {{>sidebar}}
+            </div>
 
-      </div>
-      <div class="col-3 pull-9 col-12-md push-0-md">
-
-
-        <div class="sidebar">
-          <div class="sidebar_item">
-            <div class="h5 spaced-xs">Layouts</div>
-            <ul class="milli">
-              <li><a href="/grid.html">Grid</a></li>
-              <li><a href="/media.html">Media Object</a></li>
-              <li><a href="/lists.html">Lists</a></li>
-            </ul>
-          </div>
-          <div class="sidebar_item">
-            <div class="h5 spaced-xs">Modules</div>
-            <ul class="milli">
-              <li><a href="/breadcrumbs.html">Breadcrumbs</a></li>
-              <li><a href="/pagination.html">Pagination</a></li>
-            </ul>
-          </div>
         </div>
-
-
-      </div>
     </div>
+
     <div class="grid">
       <div class="col-12">
 
-        {{>page-footer}}
+        <div class="footer padded-sm clearfix">
+          {{>page-footer}}
+        </div>
 
       </div>
     </div>
+
   </div>
 </div>
 

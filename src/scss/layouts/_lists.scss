@@ -1,5 +1,39 @@
 /*---------------------------------------------------------------------------*\
-  LIST LAYOUTS
+  LISTS
+\*---------------------------------------------------------------------------*/
+/**
+ * List layouts.
+ */
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  VARIABLES
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Margin between spaced list items.
+ */
+$list-spaced-margin: 1.5em !default;
+
+/**
+ * Margin between list items and the bar separator.
+ */
+$list-barred-margin: .65em !default;
+
+/**
+ * Margin between list items and the dot separator.
+ */
+$list-dotted-margin: .55em !default;
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  LAYOUT
 \*---------------------------------------------------------------------------*/
 
 /**
@@ -43,9 +77,9 @@
  */
 .list-spaced {
     @extend %list-inline;
-    margin-left: -1.5em;
+    margin-left: -$list-spaced-margin;
     > li {
-        margin-left: 1.5em;
+        margin-left: $list-spaced-margin;
     }
 }
 
@@ -66,11 +100,13 @@
     > li {
         &:before {
             content: "|";
-            margin: 0 .65em;
+            margin-left: $list-barred-margin;
+            margin-right: $list-barred-margin;
         }
         &:first-child:before {
             content: "";
-            margin: 0;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 }
@@ -92,12 +128,13 @@
     > li {
         &:before {
             content: "•";
-            margin: 0 .55em;
-            line-height: 0;
+            margin-left: $list-dotted-margin;
+            margin-right: $list-dotted-margin;
         }
         &:first-child:before {
             content: "";
-            margin: 0;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
 }

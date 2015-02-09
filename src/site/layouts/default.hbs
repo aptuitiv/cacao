@@ -3,15 +3,29 @@
 {{>page-header}}
 
 <div id="main">
-  <div class="container clearfix">
+  <div class="container container-gutterless clearfix">
 
-    <div class="content">
-      
-      {{>body}}
+    <div class="grid grid-full">
+      <div class="col-12">
 
+        <div class="content">
+          <div class="content_section">
+            {{>body}}
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    {{>page-footer}}
+    <div class="grid grid-full">
+      <div class="col-12">
+
+        <div class="footer padded-sm clearfix">
+          {{>page-footer}}
+        </div>
+
+      </div>
+    </div>
 
   </div>
 </div>
