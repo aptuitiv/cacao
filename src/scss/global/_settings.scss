@@ -16,14 +16,14 @@
 /**
  * Typography
  */
-$base-font-stack: "Merriweather", serif;
+$base-font-stack: "Open Sans", sans-serif;
 $base-font-size: 15px;
 $base-font-weight: normal;
 $base-line-height: 22px;
-$base-letter-spacing: 0px;
+$base-letter-spacing: .15px;
 $base-rhythm: $base-line-height/2;
 
-$heading-font-stack: $base-font-stack;
+$heading-font-stack: "Merriweather", serif;
 $heading-font-weight: 900;
 $heading-letter-spacing: -.5px;
 
