@@ -3,10 +3,10 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
         global: {
-            // Source files 
-            src: 'src',
+            // Source files
+            src: '',
             // Destination path
-            dest: 'dist',
+            dest: '../',
             // Global exclusions
             exclusions: ['.ftppass', '.grunt', '.sass-cache', 'node_modules', '.idea', '.git', '.DS_Store', 'Thumbs.db', '.*.*.un~', '.*.*.swp']
         },
