@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    '<%= global.dest %>/layout/css/main.css': '<%= global.src %>/scss/main.scss'
+                    '<%= global.dest %>/layout/css/main.css': '<%= global.src %>scss/main.scss'
                 }
             }
         },
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
             main: {
                 files: [{
                     expand: true,
-                    cwd: '<%= global.src %>/js',
+                    cwd: '<%= global.src %>js',
                     src: ['**/*.js', '!**/*.min.js'],
                     dest: '<%= global.dest %>/layout/js'
                 },{
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
             main: {
                 files: [{
                     expand: true,
-                    cwd: '<%= global.src %>/images',
+                    cwd: '<%= global.src %>images',
                     src: ['**/*.{png,jpg,gif}'],
                     dest: '<%= global.dest %>/layout/images'
                 }]
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
             main: {
                 files: [{
                     expand: true,
-                    cwd: '<%= global.src %>/assets',
+                    cwd: '<%= global.src %>assets',
                     src: ['**'],
                     dest: '<%= global.dest %>'
                 }]
@@ -109,15 +109,15 @@ module.exports = function(grunt) {
         assemble: {
             options: {
                 assets: '<%= global.dest %>',
-                partials: ['<%= global.src %>/site/partials/**/*.hbs'],
-                data: ['<%= global.src %>/site/data/**/*.{json,yml}'],
-                layoutdir: '<%= global.src %>/site/layouts',
+                partials: ['<%= global.src %>site/partials/**/*.hbs'],
+                data: ['<%= global.src %>site/data/**/*.{json,yml}'],
+                layoutdir: '<%= global.src %>site/layouts',
                 layout: 'default.hbs'
             },
             site: {
                 files: [{
                     expand: true,
-                    cwd: '<%= global.src %>/site/pages',
+                    cwd: '<%= global.src %>site/pages',
                     src: ['**/*.hbs'],
                     dest: '<%= global.dest %>'
                 }]
@@ -132,11 +132,11 @@ module.exports = function(grunt) {
                 }
             },
             assets: {
-                files: ['<%= global.src %>/assets/**'],
+                files: ['<%= global.src %>assets/**'],
                 tasks: ['newer:copy']
             },
             sass: {
-                files: ['<%= global.src %>/scss/**/*.scss'],
+                files: ['<%= global.src %>scss/**/*.scss'],
                 tasks: ['sass']
             },
             css: {
@@ -148,7 +148,7 @@ module.exports = function(grunt) {
                 tasks: ['newer:htmlmin:main']
             },
             js: {
-                files: ['<%= global.src %>/js/**/*.js', '!<%= global.src %>/js/**/*.min.js', 'bower_components/**/*.js', '!bower_components/**/*.min.js'],
+                files: ['<%= global.src %>js/**/*.js', '!<%= global.src %>js/**/*.min.js', 'bower_components/**/*.js', '!bower_components/**/*.min.js'],
                 tasks: ['newer:uglify']
             },
             site: {
