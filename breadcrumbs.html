@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head><title>Cacao</title><meta charset="UTF-8"><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="apple-touch-icon" href="/layout/images/favicon-144.png"><link rel="shortcut icon" href="/layout/images/favicon-64.png"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700|Pacifico|Merriweather:400,700,900" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/layout/css/main.css"></head><body><div id="header"><div class="container clearfix"><div class="header"><div class="header_logo t-center"><a class="logo alpha" href="/">Cacao</a></div></div></div></div><div id="main"><div class="container container-gutterless clearfix"><div class="grid grid-full"><div class="col-8 push-3 col-9-md col-12-sm push-0-sm"><div class="content"><div class="content_section"><h1>Breadcrumbs</h1><p>A breadcrumbs module. Styles breadcrumbs.</p><p>States: .disabled, .current, link states.</p><h2>Usage:</h2><pre><code class="language-html">&lt;div class=&quot;breadcrumbs&quot;&gt;
+    &lt;a class=&quot;breadcrumbs_crumb&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;
+    &lt;span class=&quot;breadcrumbs_separator&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;breadcrumbs_crumb disabled&quot;&gt;Disabled&lt;/span&gt;
+    &lt;span class=&quot;breadcrumbs_separator&quot;&gt;&lt;/span&gt;
+    &lt;a class=&quot;breadcrumbs_crumb&quot; href=&quot;#&quot;&gt;Page&lt;/a&gt;
+    &lt;span class=&quot;breadcrumbs_separator&quot;&gt;&lt;/span&gt;
+    &lt;a class=&quot;breadcrumbs_crumb current&quot; href=&quot;#&quot;&gt;Current Page&lt;/a&gt;
+&lt;/div&gt;</code></pre><h3>Example:</h3><div class="spaced-md milli"><div class="breadcrumbs"><a class="breadcrumbs_crumb" href="#">Home</a> <span class="breadcrumbs_separator micro"></span> <span class="breadcrumbs_crumb disabled">Disabled</span> <span class="breadcrumbs_separator micro"></span> <a class="breadcrumbs_crumb" href="#">Page</a> <span class="breadcrumbs_separator micro"></span> <a class="breadcrumbs_crumb current" href="#">Current Page</a></div></div><h3>Example Theme:</h3><pre><code class="language-scss"><span class="class">.breadcrumbs</span> {
+    <span class="attribute">background</span><span class="value">: $off-white;</span>
+    <span class="attribute">border-radius</span><span class="value">: <span class="number">6</span>px;</span>
+}
+
+<span class="class">.breadcrumbs_crumb</span>,
+<span class="class">.breadcrumbs_separator</span> {
+    <span class="attribute">border-radius</span><span class="value">: <span class="number">4</span>px;</span>
+}
+
+<span class="class">.breadcrumbs_separator</span> {
+    <span class="attribute">background</span><span class="value">: $dark-plum;</span>
+    <span class="attribute">color</span><span class="value">: white;</span>
+}
+
+<span class="class">.breadcrumbs_crumb</span><span class="class">.current</span>,
+<span class="class">.breadcrumbs_crumb</span><span class="pseudo">:active</span><span class="pseudo">:not</span>(<span class="class">.disabled</span>)<span class="pseudo">:not</span>(<span class="class">.current</span>) {
+    <span class="attribute">background</span><span class="value">: $light-brown;</span>
+}
+
+<span class="class">.breadcrumbs_crumb</span><span class="pseudo">:not</span>(<span class="class">.disabled</span>)<span class="pseudo">:not</span>(<span class="class">.current</span>) {
+    <span class="attribute">background</span><span class="value">: white;</span>
+}
+
+<span class="class">.breadcrumbs_crumb</span><span class="pseudo">:hover</span><span class="pseudo">:not</span>(<span class="class">.disabled</span>)<span class="pseudo">:not</span>(<span class="class">.current</span>),
+<span class="class">.breadcrumbs_crumb</span><span class="pseudo">:active</span><span class="pseudo">:not</span>(<span class="class">.disabled</span>)<span class="pseudo">:not</span>(<span class="class">.current</span>) {
+    <span class="attribute">border</span><span class="value">: <span class="number">1</span>px solid black;</span>
+}</code></pre></div></div></div><div class="col-3 pull-8 pull-9-md col-12-sm pull-0-sm"><div class="sidebar padded-lg"><div class="sidebar_item"><div class="h5 spaced-xs">Layouts</div><ul class="milli t-heading"><li><a href="/grid.html">Grid</a></li><li><a href="/media.html">Media Object</a></li><li><a href="/lists.html">Lists</a></li></ul></div><div class="sidebar_item"><div class="h5 spaced-xs">Modules</div><ul class="milli t-heading"><li><a href="/breadcrumbs.html">Breadcrumbs</a></li><li><a href="/pagination.html">Pagination</a></li></ul></div></div></div></div><div class="grid"><div class="col-12"><div class="footer padded-sm clearfix"><p class="micro t-center">Copyright &copy; 2015</p></div></div></div></div></div><script src="/layout/js/main.js" type="text/javascript"></script></body></html>
