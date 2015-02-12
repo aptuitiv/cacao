@@ -1,0 +1,62 @@
+/*---------------------------------------------------------------------------*\
+  GENERIC LAYOUT CLASSES
+\*---------------------------------------------------------------------------*/
+/**
+ * These are general element layout classes that are used throughout the site.
+ * Not to be confused with page/section layouts in the layouts directory.
+ */
+
+
+
+/**
+ * Used to modify an elements bottom margin.
+ * The various size modifiers follow the site's vertical rhythm. 
+ */
+.spaced-xs {
+    margin-bottom: $base-rhythm;
+}
+
+.spaced-sm {
+    margin-bottom: $base-rhythm*2;
+}
+
+.spaced-md {
+    margin-bottom: $base-rhythm*3;
+}
+
+.spaced-lg {
+    margin-bottom: $base-rhythm*4;
+}
+
+.spaced-xl {
+    margin-bottom: $base-rhythm*5;
+}
+
+
+
+/**
+ * Used to add spacing to the inside of an element via padding.
+ * This padding follows the site's vertical rhythm.
+ */
+.padded-xs {
+    padding-top: $base-rhythm;
+}
+
+.padded-sm {
+    padding-top: $base-rhythm*2;
+}
+
+.padded-md {
+    padding-top: $base-rhythm*3;
+}
+
+.padded-lg {
+    padding-top: $base-rhythm*4;
+}
+
+.padded-xl {
+    padding-top: $base-rhythm*5;
+}
+
+
+

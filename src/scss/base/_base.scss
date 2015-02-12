@@ -1,0 +1,24 @@
+/*---------------------------------------------------------------------------*\
+  BASE ELEMENT STYLES
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Global box-sizing
+ */
+*,
+*:after,
+*:before {
+    @include box-sizing(border-box);
+}
+
+
+
+/**
+ * Render alt text as italics
+ */
+img {
+    font-style: italic;
+}
+
+
+

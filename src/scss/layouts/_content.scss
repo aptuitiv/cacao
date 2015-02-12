@@ -1,0 +1,67 @@
+/*---------------------------------------------------------------------------*\
+  CONTENT
+\*---------------------------------------------------------------------------*/
+/**
+ * Content layout. This is usually placed inside the main column.
+ */
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  VARIABLES
+\*---------------------------------------------------------------------------*/
+
+$content-gutter: 20px !default;
+$content-padding-top: 30px !default;
+$content-padding-bottom: 10px !default;
+
+/**
+ * Extra spacing to add to large headings in a content_section.
+ */
+$content-heading-space: 10px !default;
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  LAYOUT
+\*---------------------------------------------------------------------------*/
+
+.content {
+    padding-top: $content-padding-top;
+    padding-bottom: $content-padding-bottom;
+}
+
+
+
+/**
+ * Section of the content area. Provides gutters.
+ * Allows other elements to be used between sections that will span the full
+ * width.
+ */
+.content_section {
+    padding-left: $content-gutter;
+    padding-right: $content-gutter;
+}
+
+
+
+/**
+ * Large headings in the content section.
+ * These are bad selectors, but since we have no control over the classes of
+ * headings inside rich text editor blocks this will have to do.
+ */
+.content_section h1,
+.content_section .h1,
+.content_section h2,
+.content_section .h2,
+.content_section h3,
+.content_section .h3 {
+    padding-top: $content-heading-space;
+}
+
+
+

@@ -1,0 +1,19 @@
+/*---------------------------------------------------------------------------*\
+  CLEARFIX
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Applied to elements to allow their heights to 'clear' or contain floats.
+ */
+.clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+

@@ -1,0 +1,41 @@
+{{>site-header}}
+
+{{>page-header}}
+
+<div id="main">
+  <div class="container container-gutterless clearfix">
+
+    <div class="grid grid-full">
+        <div class="col-8 push-3 col-9-md col-12-sm push-0-sm">
+
+            <div class="content">
+                <div class="content_section">
+                  {{>body}}
+                </div>
+            </div>
+
+        </div>
+        <div class="col-3 pull-8 pull-9-md col-12-sm pull-0-sm">
+
+            <div class="sidebar padded-lg">
+              {{>sidebar}}
+            </div>
+
+        </div>
+    </div>
+
+    <div class="grid">
+      <div class="col-12">
+
+        <div class="footer padded-sm clearfix">
+          {{>page-footer}}
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{{>site-footer}}
+

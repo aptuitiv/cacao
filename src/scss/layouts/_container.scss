@@ -1,0 +1,64 @@
+/*---------------------------------------------------------------------------*\
+  CONTAINER
+\*---------------------------------------------------------------------------*/
+/**
+ *
+ */
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  VARIABLES
+\*---------------------------------------------------------------------------*/
+
+$container-width: 1024px !default;
+$container-gutter: 20px !default;
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  LAYOUT
+\*---------------------------------------------------------------------------*/
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding-left: $container-gutter;
+    padding-right: $container-gutter;
+}
+
+
+
+/**
+ * Non-fluid, fixed container.
+ */
+.container-fixed {
+    width: $container-width;
+}
+
+
+
+/**
+ * Remove gutters from container.
+ */
+.container-gutterless {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+/**
+ * Position container to the left.
+ */
+.container-left {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+

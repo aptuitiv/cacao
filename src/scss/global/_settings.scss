@@ -1,0 +1,141 @@
+/*---------------------------------------------------------------------------*\
+  SETTINGS
+\*---------------------------------------------------------------------------*/
+/**
+ * Global variables, layout settings, and module settings go here.
+ */
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  GLOBAL VARIABLES
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Typography
+ */
+$base-font-stack: "Open Sans", sans-serif;
+$base-font-size: 15px;
+$base-font-weight: normal;
+$base-line-height: 22px;
+$base-letter-spacing: .15px;
+$base-rhythm: $base-line-height/2;
+
+$heading-font-stack: "Merriweather", serif;
+$heading-font-weight: 900;
+$heading-letter-spacing: -.5px;
+
+$giga: 74px;
+$mega: 62px;
+$kilo: 48px;
+$alpha: 36px; // h1
+$beta: 28px; // h2
+$gamma: 24px; // h3
+$delta: 20px; // h4
+$epsilon: 18px; // h5
+$zeta: 15px; // h6
+$milli: 13px;
+$micro: 11px;
+
+
+
+/**
+ * Breakpoints
+ * Used globally and to configure the grid module below.
+ */
+$bp-xl: 1200px;
+$bp-lg: 1000px;
+$bp-md: 850px;
+$bp-sm: 600px;
+$bp-xs: 400px;
+
+
+
+/**
+ * Page variables (used below to configure layouts and modules)
+ */
+$page-width: 960px;
+$page-gutter: $base-rhythm*2;
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  LAYOUT SETTINGS
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Container
+ */
+$container-width: $page-width;
+$container-gutter: $page-gutter;
+
+
+
+/**
+ * Content
+ */
+$content-gutter: $page-gutter;
+$content-padding-top: $base-rhythm*3;
+$content-padding-bottom: $base-rhythm;
+$content-heading-space: $base-rhythm;
+
+
+
+/**
+ * Grid
+ */
+$grid-column-gutter: $base-rhythm*3;
+$grid-breakpoints: (
+    xl: $bp-xl,
+    lg: $bp-lg,
+    md: $bp-md,
+    sm: $bp-sm,
+    xs: $bp-xs,
+);
+
+
+
+/**
+ * Header
+ */
+$header-padding-top: $base-rhythm;
+$header-padding-bottom: $base-rhythm/2;
+$header-logo-margin: $base-rhythm;
+
+
+
+/**
+ * Media layout
+ */
+$media-gutter: $base-rhythm*2;
+
+
+
+/**
+ * Sidebar
+ */
+$sidebar-gutter: $page-gutter;
+$sidebar-padding-top: $base-rhythm*4;
+$sidebar-padding-bottom: $base-rhythm*2;
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  MODULE SETTINGS
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Breadcrumbs
+ */
+$crumbs-wrapper-padding: ($base-rhythm/2)-1px .5em;
+$crumbs-crumb-padding: 0 .5em;
+$crumbs-separator-padding: $base-rhythm/2 .5em;
+
+
+
