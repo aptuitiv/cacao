@@ -2,9 +2,16 @@
   PAGINATION
 \*---------------------------------------------------------------------------*/
 /**
- * Pagination.
- *
  * Usage:
+
+   <div class="pagination">
+     <a href="#" class="pagination_nav">Prev</a>
+     <a href="#" class="pagination_page">1</a>
+     <span class="pagination_page current">2</span>
+     <a href="#" class="pagination_page">3</a>
+     <a href="#" class="pagination_page">4</a>
+     <a href="#" class="pagination_nav">Next</a>
+   </div>
 
  *
  */
@@ -17,6 +24,26 @@
   VARIABLES
 \*---------------------------------------------------------------------------*/
 
+/**
+ * Base settings applied to the wrapper.
+ */
+$pagination-wrapper-padding: .25em !default;
+
+/**
+ * Margin between each pagination_item (page links and navigation items)
+ */
+$pagination-item-spacing: .5em !default;
+
+/**
+ * Padding on each page link
+ */
+$pagination-page-padding: .25em .5em !default;
+
+/**
+ * Padding on each navigation link
+ */
+$pagination-nav-padding: $pagination-page-padding !default;
+
 
 
 
@@ -24,6 +51,49 @@
 /*---------------------------------------------------------------------------*\
   MODULE
 \*---------------------------------------------------------------------------*/
+
+/**
+ * Base wrapper.
+ */
+.pagination {
+    display: block;
+    padding: $pagination-wrapper-padding;
+}
+
+
+
+/**
+ * Generic item styles shared by the sub classed elements below.
+ */
+%pagination_item {
+    display: inline-block;
+    margin-right: $pagination-item-spacing;
+    vertical-align: middle;
+}
+
+
+
+/**
+ * The page links.
+ *
+ * inherits breadcrumbs_item
+ */
+.pagination_page {
+    @extend %pagination_item;
+    padding: $pagination-page-padding;
+}
+
+
+
+/**
+ * The navigation links.
+ *
+ * inherits breadcrumbs_item
+ */
+.pagination_nav {
+    @extend %pagination_item;
+    padding: $pagination-nav-padding;
+}
 
 
 
