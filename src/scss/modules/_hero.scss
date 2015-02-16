@@ -1,0 +1,270 @@
+/*---------------------------------------------------------------------------*\
+  HERO
+\*---------------------------------------------------------------------------*/
+/**
+ */
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  VARIABLES
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Base settings
+ */
+$hero-container-gutter: 75px !default;
+
+$hero-nav-gutter: 75px !default;
+
+$hero-title-size: 62px !default;
+$hero-title-margin: 64px !default;
+
+$hero-subtitle-size: 28px !default;
+$hero-subtitle-margin: 74px !default;
+
+$hero-button-size: $hero-subtitle-size !default;
+$hero-button-padding: .5em 1em !default;
+
+
+
+/**
+ * First breakpoint
+ */
+$hero-bp-md: 1200px !default;
+
+$hero-nav-gutter-md: 1em !default;
+
+$hero-title-size-md: 48px !default;
+$hero-title-margin-md: 32px !default;
+$hero-subtitle-size-md: 24px !default;
+$hero-subtitle-margin-md: 64px !default;
+$hero-button-size-md: $hero-subtitle-size-md !default;
+$hero-button-padding-md: $hero-button-padding !default;
+
+
+
+/**
+ * Second breakpoint
+ */
+$hero-bp-sm: 1000px !default;
+
+$hero-title-size-sm: 36px !default;
+$hero-title-margin-sm: 32px !default;
+$hero-subtitle-size-sm: 18px !default;
+$hero-subtitle-margin-sm: 48px !default;
+$hero-button-size-sm: $hero-subtitle-size-sm !default;
+$hero-button-padding-sm: $hero-button-padding !default;
+
+
+
+/**
+ * When to hide the hero
+ */
+$hero-bp-hidden: 750px !default;
+
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  MODULE
+\*---------------------------------------------------------------------------*/
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.hero_img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.hero_container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding-left: $hero-container-gutter;
+    padding-right: $hero-container-gutter;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+.hero_title {
+    @if mixin-exists(font-size) {
+        @include font-size($hero-title-size, $line-height: true);
+    }
+    @else {
+        font-size: $hero-title-size;
+        line-height: 1.1;
+    }
+    margin-bottom: $hero-title-margin;
+}
+
+
+
+.hero_subtitle {
+    @if mixin-exists(font-size) {
+        @include font-size($hero-subtitle-size, $line-height: true);
+    }
+    @else {
+        font-size: $hero-subtitle-size;
+        line-height: 1.1;
+    }
+    margin-bottom: $hero-subtitle-margin;
+}
+
+
+
+.hero_button {
+    @if mixin-exists(font-size) {
+        @include font-size($hero-button-size, $line-height: true);
+    }
+    @else {
+        font-size: $hero-button-size;
+        line-height: 1.1;
+    }
+    padding: $hero-button-padding;
+}
+
+
+
+.hero_slide {
+    position: relative;
+}
+
+
+
+.hero-slider_nav {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    left: $hero-nav-gutter;
+    right: $hero-nav-gutter;
+    margin-left: auto;
+    margin-right: auto;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.hero-slider_nav_prev {
+    float: left;
+}
+
+.hero-slider_nav_next {
+    float: right;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  STATE
+\*---------------------------------------------------------------------------*/
+
+@media (max-width: $hero-bp-md) {
+
+    .hero-slider_nav {
+        left: $hero-nav-gutter-md;
+        right: $hero-nav-gutter-md;
+    }
+
+    .hero_title {
+        @if mixin-exists(font-size) {
+            @include font-size($hero-title-size-md, $line-height: true);
+        }
+        @else {
+            font-size: $hero-title-size-md;
+        }
+        margin-bottom: $hero-title-margin-md;
+    }
+
+    .hero_subtitle {
+        @if mixin-exists(font-size) {
+            @include font-size($hero-subtitle-size-md, $line-height: true);
+        }
+        @else {
+            font-size: $hero-subtitle-size-md;
+        }
+        margin-bottom: $hero-subtitle-margin-md;
+    }
+
+    .hero_button {
+        @if mixin-exists(font-size) {
+            @include font-size($hero-button-size-md, $line-height: true);
+        }
+        @else {
+            font-size: $hero-button-size-md;
+        }
+        padding: $hero-button-padding-md;
+    }
+
+}
+
+
+
+@media (max-width: $hero-bp-sm) {
+
+    .hero_title {
+        @if mixin-exists(font-size) {
+            @include font-size($hero-title-size-sm, $line-height: true);
+        }
+        @else {
+            font-size: $hero-title-size-sm;
+        }
+        margin-bottom: $hero-title-margin-sm;
+    }
+
+    .hero_subtitle {
+        @if mixin-exists(font-size) {
+            @include font-size($hero-subtitle-size-sm, $line-height: true);
+        }
+        @else {
+            font-size: $hero-subtitle-size-sm;
+        }
+        margin-bottom: $hero-subtitle-margin-sm;
+    }
+
+    .hero_button {
+        @if mixin-exists(font-size) {
+            @include font-size($hero-button-size-sm, $line-height: true);
+        }
+        @else {
+            font-size: $hero-button-size-sm;
+        }
+        padding: $hero-button-padding-sm;
+    }
+
+}
+
+
+
+@media (max-width: $hero-bp-hidden) {
+
+    .hero {
+        display: none;
+    }
+
+}
+
+
+
