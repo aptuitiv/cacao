@@ -108,3 +108,45 @@ body {
 
 
 
+/**
+ * Hero
+ */
+.hero {
+    color: white;
+}
+
+.hero_title,
+.hero_subtitle,
+.hero_button {
+    text-shadow: 1px 1px 3px rgba(#000, .8);
+}
+
+.hero_pager_item {
+    @include box-shadow(0, 0, 6px, 2px, rgba(#000, .8));
+    border: 3px solid white;
+    border-radius: 100%;
+}
+
+.hero_pager_item.current {
+    background: white;
+}
+
+.hero_pager_item:hover {
+    border-width: 2px;
+    background: none;
+}
+
+.hero_button {
+    @include box-shadow(0, 0, 3px, 1px, rgba(#000, .8));
+    border: 2px solid white;
+    border-radius: .35em;
+
+    &:hover {
+        background: white;
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+
+
