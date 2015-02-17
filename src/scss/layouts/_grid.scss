@@ -186,6 +186,7 @@ $grid-breakpoints: (
  * Also applies a negative margin to the left to make the columns nestable 
  * and flush.
  */
+%grid,
 .grid {
     list-style: none;
     margin: 0;
@@ -281,14 +282,14 @@ $grid-breakpoints: (
      * Modifies horizontal alignment of columns.
      * When using these be aware that they reset columns to text-align: left;
      */
-    .grid-center {
+    .grid.-align-center {
         text-align: center;
         > [class*="col-"] {
             text-align: left;
         }
     }
 
-    .grid-right {
+    .grid.-align-right {
         text-align: right;
         > [class*="col-"] {
             text-align: left;
@@ -300,13 +301,13 @@ $grid-breakpoints: (
     /**
      * Modifies vertical alignment of columns.
      */
-    .grid-middle {
+    .grid.-valign-middle {
         > [class*="col-"] {
             vertical-align: middle;
         }
     }
 
-    .grid-bottom {
+    .grid.-valign-bottom {
         > [class*="col-"] {
             vertical-align: bottom;
         }
@@ -317,21 +318,21 @@ $grid-breakpoints: (
     /**
      * Modifies grid gutters.
      */
-    .grid-full {
+    .grid.-gutter-none {
         margin: 0;
         > [class*="col-"] {
             padding-left: 0;
         }
     }
 
-    .grid-narrow {
+    .grid.-gutter-narrow {
         margin-left: -($grid-column-gutter/2);
         > [class*="col-"] {
             padding-left: $grid-column-gutter/2;
         }
     }
 
-    .grid-wide {
+    .grid.-gutter-wide {
         margin-left: -($grid-column-gutter*2);
         > [class*="col-"] {
             padding-left: $grid-column-gutter*2;

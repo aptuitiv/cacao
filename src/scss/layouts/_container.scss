@@ -36,7 +36,7 @@ $container-gutter: 20px !default;
 /**
  * Non-fluid, fixed container.
  */
-.container-fixed {
+.container.-fixed {
     width: $container-width;
 }
 
@@ -45,7 +45,7 @@ $container-gutter: 20px !default;
 /**
  * Remove gutters from container.
  */
-.container-gutterless {
+.container.-gutter-none {
     padding-left: 0;
     padding-right: 0;
 }
@@ -55,7 +55,7 @@ $container-gutter: 20px !default;
 /**
  * Position container to the left.
  */
-.container-left {
+.container.-align-left {
     margin-left: 0;
     margin-right: 0;
 }
