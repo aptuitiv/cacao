@@ -140,10 +140,25 @@ $crumbs-separator-padding: $base-rhythm/2 .5em;
 
 
 /**
+ * Slider
+ */
+$slider-nav-gutter: 12px;
+
+$slider-pager-item-width: $base-rhythm;
+$slider-pager-item-height: $base-rhythm;
+$slider-pager-item-margin: 0 4px;
+
+$slider-bp: $bp-lg;
+$slider-nav-gutter-alt: 12px;
+
+$slider-bp-hidden: $bp-md;
+
+
+
+/**
  * Hero
  */
-$hero-container-gutter: 64px;
-$hero-nav-gutter: 12px;
+$hero-content-gutter: 64px;
 $hero-title-size: $mega;
 $hero-title-margin: 0;
 $hero-subtitle-size: $beta;
@@ -152,7 +167,6 @@ $hero-button-size: $gamma;
 $hero-button-padding: .2em .65em;
 
 $hero-bp-md: $bp-lg;
-$hero-nav-gutter-md: 1em;
 $hero-title-size-md: $kilo;
 $hero-title-margin-md: 0;
 $hero-subtitle-size-md: $gamma; 
@@ -169,12 +183,6 @@ $hero-button-size-sm: $hero-subtitle-size-sm;
 $hero-button-padding-sm: $hero-button-padding;
 
 $hero-bp-hidden: $bp-md;
-
-$hero-pager-item-width: $base-rhythm;
-$hero-pager-item-height: $base-rhythm;
-$hero-pager-item-margin: 0 4px;
-
-
 
 
 

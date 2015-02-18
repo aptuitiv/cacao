@@ -15,9 +15,7 @@
 /**
  * Base settings
  */
-$hero-container-gutter: 75px !default;
-
-$hero-nav-gutter: 75px !default;
+$hero-content-gutter: 75px !default;
 
 $hero-title-size: 62px !default;
 $hero-title-margin: 64px !default;
@@ -34,8 +32,6 @@ $hero-button-padding: .5em 1em !default;
  * First breakpoint
  */
 $hero-bp-md: 1200px !default;
-
-$hero-nav-gutter-md: 1em !default;
 
 $hero-title-size-md: 48px !default;
 $hero-title-margin-md: 32px !default;
@@ -67,18 +63,6 @@ $hero-bp-hidden: 750px !default;
 
 
 
-/**
- * Slide pager
- */
-$hero-pager-bottom-margin: 8px !default;
-$hero-pager-item-width: auto !default;
-$hero-pager-item-height: auto !default;
-$hero-pager-item-margin: 0 !default;
-$hero-pager-item-padding: 0 !default;
-
-
-
-
 
 
 /*---------------------------------------------------------------------------*\
@@ -101,14 +85,13 @@ $hero-pager-item-padding: 0 !default;
 
 
 
-.hero_container {
+.hero_content {
     position: absolute;
     top: 50%;
     left: 0;
     right: 0;
-    z-index: 3;
-    padding-left: $hero-container-gutter;
-    padding-right: $hero-container-gutter;
+    padding-left: $hero-content-gutter;
+    padding-right: $hero-content-gutter;
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -156,54 +139,6 @@ $hero-pager-item-padding: 0 !default;
 
 
 
-.hero_slide {
-    position: relative;
-}
-
-
-
-.hero_nav {
-    position: absolute;
-    top: 50%;
-    z-index: 4;
-    left: $hero-nav-gutter;
-    right: $hero-nav-gutter;
-    margin-left: auto;
-    margin-right: auto;
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.hero_nav_prev {
-    float: left;
-}
-
-.hero_nav_next {
-    float: right;
-}
-
-
-
-.hero_pager {
-    position: absolute;
-    bottom: $hero-pager-bottom-margin;
-    left: 0;
-    right: 0;
-    z-index: 4;
-}
-
-.hero_pager_item {
-    display: inline-block;
-    width: $hero-pager-item-width;
-    height: $hero-pager-item-height;
-    margin: $hero-pager-item-margin;
-    padding: $hero-pager-item-padding;
-}
-
-
-
 
 
 /*---------------------------------------------------------------------------*\
@@ -211,11 +146,6 @@ $hero-pager-item-padding: 0 !default;
 \*---------------------------------------------------------------------------*/
 
 @media (max-width: $hero-bp-md) {
-
-    .hero-slider_nav {
-        left: $hero-nav-gutter-md;
-        right: $hero-nav-gutter-md;
-    }
 
     .hero_title {
         @if mixin-exists(font-size) {
