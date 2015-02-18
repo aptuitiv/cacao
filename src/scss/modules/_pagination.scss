@@ -2,17 +2,6 @@
   PAGINATION
 \*---------------------------------------------------------------------------*/
 /**
- * Usage:
-
-   <div class="pagination">
-     <a href="#" class="pagination_nav">Prev</a>
-     <a href="#" class="pagination_page">1</a>
-     <span class="pagination_page current">2</span>
-     <a href="#" class="pagination_page">3</a>
-     <a href="#" class="pagination_page">4</a>
-     <a href="#" class="pagination_nav">Next</a>
-   </div>
-
  *
  */
 
@@ -65,7 +54,7 @@ $pagination-nav-padding: $pagination-page-padding !default;
 /**
  * Generic item styles shared by the sub classed elements below.
  */
-%pagination_item {
+.pagination_item {
     display: inline-block;
     margin-right: $pagination-item-spacing;
     vertical-align: middle;
@@ -78,8 +67,7 @@ $pagination-nav-padding: $pagination-page-padding !default;
  *
  * inherits breadcrumbs_item
  */
-.pagination_page {
-    @extend %pagination_item;
+.pagination_item.-page {
     padding: $pagination-page-padding;
 }
 
@@ -90,8 +78,7 @@ $pagination-nav-padding: $pagination-page-padding !default;
  *
  * inherits breadcrumbs_item
  */
-.pagination_nav {
-    @extend %pagination_item;
+.pagination_item.-nav {
     padding: $pagination-nav-padding;
 }
 
