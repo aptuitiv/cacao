@@ -6,7 +6,7 @@ layout: "sidebar.hbs"
 <h1>Breadcrumbs</h1>
 
 <p>A breadcrumbs module. Styles breadcrumbs.</p>
-<p>States: .disabled, .current, link states.</p>
+<p>States: -is-disabled, -is-current, :link states.</p>
 
 
 
@@ -15,13 +15,13 @@ layout: "sidebar.hbs"
 {{#markdown}}
 ```html
 <div class="breadcrumbs">
-    <a class="breadcrumbs_crumb" href="#">Home</a>
-    <span class="breadcrumbs_separator"></span>
-    <span class="breadcrumbs_crumb disabled">Disabled</span>
-    <span class="breadcrumbs_separator"></span>
-    <a class="breadcrumbs_crumb" href="#">Page</a>
-    <span class="breadcrumbs_separator"></span>
-    <a class="breadcrumbs_crumb current" href="#">Current Page</a>
+    <a class="breadcrumbs_item -crumb" href="#">Home</a>
+    <span class="breadcrumbs_item -separator micro"></span>
+    <span class="breadcrumbs_item -crumb -is-disabled">Disabled</span>
+    <span class="breadcrumbs_item -separator micro"></span>
+    <a class="breadcrumbs_item -crumb" href="#">Page</a>
+    <span class="breadcrumbs_item -separator micro"></span>
+    <a class="breadcrumbs_item -crumb -is-current" href="#">Current Page</a>
 </div>
 ```
 {{/markdown}}
@@ -32,52 +32,15 @@ layout: "sidebar.hbs"
 
 <div class="spaced-md milli">
     <div class="breadcrumbs">
-        <a class="breadcrumbs_crumb" href="#">Home</a>
-        <span class="breadcrumbs_separator micro"></span>
-        <span class="breadcrumbs_crumb disabled">Disabled</span>
-        <span class="breadcrumbs_separator micro"></span>
-        <a class="breadcrumbs_crumb" href="#">Page</a>
-        <span class="breadcrumbs_separator micro"></span>
-        <a class="breadcrumbs_crumb current" href="#">Current Page</a>
+        <a class="breadcrumbs_item -crumb" href="#">Home</a>
+        <span class="breadcrumbs_item -separator micro"></span>
+        <span class="breadcrumbs_item -crumb -is-disabled">Disabled</span>
+        <span class="breadcrumbs_item -separator micro"></span>
+        <a class="breadcrumbs_item -crumb" href="#">Page</a>
+        <span class="breadcrumbs_item -separator micro"></span>
+        <a class="breadcrumbs_item -crumb -is-current" href="#">Current Page</a>
     </div>
 </div>
-
-
-
-<h3>Example Theme:</h3>
-
-{{#markdown}}
-```scss
-.breadcrumbs {
-    background: $off-white;
-    border-radius: 6px;
-}
-
-.breadcrumbs_crumb,
-.breadcrumbs_separator {
-    border-radius: 4px;
-}
-
-.breadcrumbs_separator {
-    background: $dark-plum;
-    color: white;
-}
-
-.breadcrumbs_crumb.current,
-.breadcrumbs_crumb:active:not(.disabled):not(.current) {
-    background: $light-brown;
-}
-
-.breadcrumbs_crumb:not(.disabled):not(.current) {
-    background: white;
-}
-
-.breadcrumbs_crumb:hover:not(.disabled):not(.current),
-.breadcrumbs_crumb:active:not(.disabled):not(.current) {
-    border: 1px solid black;
-}
-```
-{{/markdown}}
 
 
 

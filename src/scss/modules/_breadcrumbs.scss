@@ -3,20 +3,6 @@
 \*---------------------------------------------------------------------------*/
 /**
  * A breadcrumb trail that can be configured with separators.
- *
- * Usage:
-
- <div class="breadcrumbs">
-   <a class="breadcrumbs_crumb" href="#">Home</a>
-   <span class="breadcrumbs_separator"></span>
-   <span class="breadcrumbs_crumb disabled">Disabled</span>
-   <span class="breadcrumbs_separator"></span>
-   <a class="breadcrumbs_crumb" href="#">Page</a>
-   <span class="breadcrumbs_separator"></span>
-   <a class="breadcrumbs_crumb current" href="#">Current Page</a>
- </div>
-
- *
  */
 
 
@@ -69,7 +55,7 @@ $crumbs-separator-padding: 0 !default;
 /**
  * Generic item styles shared by the sub classed elements below.
  */
-%breadcrumbs_item {
+.breadcrumbs_item {
     display: inline-block;
     margin-right: $crumbs-item-spacing;
     vertical-align: middle;
@@ -82,8 +68,7 @@ $crumbs-separator-padding: 0 !default;
  *
  * inherits breadcrumbs_item
  */
-.breadcrumbs_crumb {
-    @extend %breadcrumbs_item;
+.breadcrumbs_item.-crumb {
     padding: $crumbs-crumb-padding;
 }
 
@@ -94,8 +79,7 @@ $crumbs-separator-padding: 0 !default;
  *
  * inherits breadcrumbs_item
  */
-.breadcrumbs_separator {
-    @extend %breadcrumbs_item;
+.breadcrumbs_item.-separator {
     padding: $crumbs-separator-padding;
     &:after {
         content: $crumbs-separator;
