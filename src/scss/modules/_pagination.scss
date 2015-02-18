@@ -52,8 +52,9 @@ $pagination-nav-padding: $pagination-page-padding !default;
 
 
 /**
- * Generic item styles shared by the sub classed elements below.
+ * Generic item styles.
  */
+%pagination_item,
 .pagination_item {
     display: inline-block;
     margin-right: $pagination-item-spacing;
@@ -65,9 +66,10 @@ $pagination-nav-padding: $pagination-page-padding !default;
 /**
  * The page links.
  *
- * inherits breadcrumbs_item
+ * inherits pagination_item
  */
-.pagination_item.-page {
+.pagination_item-page {
+    @extend %pagination_item;
     padding: $pagination-page-padding;
 }
 
@@ -76,9 +78,10 @@ $pagination-nav-padding: $pagination-page-padding !default;
 /**
  * The navigation links.
  *
- * inherits breadcrumbs_item
+ * inherits pagination_item
  */
-.pagination_item.-nav {
+.pagination_item-nav {
+    @extend %pagination_item;
     padding: $pagination-nav-padding;
 }
 

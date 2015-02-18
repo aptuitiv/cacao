@@ -81,27 +81,29 @@ body {
     border-radius: 6px;
 }
 
-.breadcrumbs_item {
+.breadcrumbs_item,
+.breadcrumbs_item-crumb,
+.breadcrumbs_item-separator {
     border: 1px solid transparent;
     border-radius: 4px;
 }
 
-.breadcrumbs_item.-separator {
+.breadcrumbs_item-separator {
     background: $dark-plum;
     color: white;
 }
 
-.breadcrumbs_item.-crumb.-is-current,
-.breadcrumbs_item.-crumb:active:not(.-is-disabled):not(.-is-current) {
+.breadcrumbs_item-crumb.-is-current,
+.breadcrumbs_item-crumb:active:not(.-is-disabled):not(.-is-current) {
     background: $light-brown;
 }
 
-.breadcrumbs_item.-crumb:not(.-is-disabled):not(.-is-current) {
+.breadcrumbs_item-crumb:not(.-is-disabled):not(.-is-current) {
     background: white;
 }
 
-.breadcrumbs_item.-crumb:hover:not(.-is-disabled):not(.-is-current),
-.breadcrumbs_item.-crumb:active:not(.-is-disabled):not(.-is-current) {
+.breadcrumbs_item-crumb:hover:not(.-is-disabled):not(.-is-current),
+.breadcrumbs_item-crumb:active:not(.-is-disabled):not(.-is-current) {
     border: 1px solid black;
 }
 

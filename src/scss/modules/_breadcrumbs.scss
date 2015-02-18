@@ -55,6 +55,7 @@ $crumbs-separator-padding: 0 !default;
 /**
  * Generic item styles shared by the sub classed elements below.
  */
+%breadcrumbs_item,
 .breadcrumbs_item {
     display: inline-block;
     margin-right: $crumbs-item-spacing;
@@ -68,7 +69,8 @@ $crumbs-separator-padding: 0 !default;
  *
  * inherits breadcrumbs_item
  */
-.breadcrumbs_item.-crumb {
+.breadcrumbs_item-crumb {
+    @extend %breadcrumbs_item;
     padding: $crumbs-crumb-padding;
 }
 
@@ -79,7 +81,8 @@ $crumbs-separator-padding: 0 !default;
  *
  * inherits breadcrumbs_item
  */
-.breadcrumbs_item.-separator {
+.breadcrumbs_item-separator {
+    @extend %breadcrumbs_item;
     padding: $crumbs-separator-padding;
     &:after {
         content: $crumbs-separator;
