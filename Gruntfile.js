@@ -106,24 +106,6 @@ module.exports = function(grunt) {
             }
         },
 
-        assemble: {
-            options: {
-                assets: '<%= global.dest %>',
-                partials: ['<%= global.src %>/site/partials/**/*.hbs'],
-                data: ['<%= global.src %>/site/data/**/*.{json,yml}'],
-                layoutdir: '<%= global.src %>/site/layouts',
-                layout: 'default.hbs'
-            },
-            site: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= global.src %>/site/pages',
-                    src: ['**/*.hbs'],
-                    dest: '<%= global.dest %>'
-                }]
-            }
-        },
-
         watch: {
             config: {
                 files: ['Gruntfile.js'],
@@ -150,10 +132,6 @@ module.exports = function(grunt) {
             js: {
                 files: ['<%= global.src %>/js/**/*.js', '!<%= global.src %>/js/**/*.min.js', 'bower_components/**/*.js', '!bower_components/**/*.min.js'],
                 tasks: ['newer:uglify']
-            },
-            site: {
-                files: ['src/site/**/*.{hbs,json,yml}'],
-                tasks: ['assemble', 'newer:htmlmin:main']
             }
         },
 
@@ -165,20 +143,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-
-        ftpush: {
-            main: {
-                auth: {
-                    host: 'ftp.aptuitiv.com',
-                    port: 21,
-                    authKey: 'server1'
-                },
-                src: '<%= global.dest %>',
-                dest: '/ap/ap-base',
-                exclusions: '<%= global.exclusions %>',
-                keep: ['']
-            }
-        }
 
     });
 
@@ -194,15 +158,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-text-replace');
-    grunt.loadNpmTasks('grunt-ftpush');
     grunt.loadNpmTasks('grunt-newer');
-    grunt.loadNpmTasks('assemble');
 
     // custom tasks
     grunt.registerTask('serve', ['connect', 'watch']);
     grunt.registerTask('bower', ['copy:bower', 'replace:bower']);
-    grunt.registerTask('build', ['sass', 'uglify', 'assemble', 'copy:main', 'imagemin', 'htmlmin']);
-    grunt.registerTask('build-new', ['sass', 'newer:uglify', 'assemble','newer:copy:main', 'newer:imagemin', 'newer:htmlmin']);
+    grunt.registerTask('build', ['sass', 'uglify', 'copy:main', 'imagemin', 'htmlmin']);
+    grunt.registerTask('build-new', ['sass', 'newer:uglify', 'newer:copy:main', 'newer:imagemin', 'newer:htmlmin']);
 
     // default task
     grunt.registerTask('default', ['build']);
