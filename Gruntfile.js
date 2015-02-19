@@ -61,7 +61,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= global.dest %>',
-                    src: ['**/*.html'],
+                    src: ['*.html'],
                     dest: '<%= global.dest %>'
                 }]
             }
