@@ -45,9 +45,9 @@ $micro: 11px;
  * Breakpoints
  * Used globally and to configure the grid module below.
  */
-$bp-xl: 1200px;
-$bp-lg: 1000px;
-$bp-md: 850px;
+$bp-xl: 1075px;
+$bp-lg: 960px;
+$bp-md: 780px;
 $bp-sm: 600px;
 $bp-xs: 400px;
 
@@ -79,7 +79,7 @@ $container-gutter: $page-gutter;
  * Content
  */
 $content-gutter: $page-gutter;
-$content-padding-top: $base-rhythm*3;
+$content-padding-top: 0;
 $content-padding-bottom: $base-rhythm;
 $content-heading-space: $base-rhythm;
 
@@ -136,6 +136,53 @@ $sidebar-padding-bottom: $base-rhythm*2;
 $crumbs-wrapper-padding: ($base-rhythm/2)-1px .5em;
 $crumbs-crumb-padding: 0 .5em;
 $crumbs-separator-padding: $base-rhythm/2 .5em;
+
+
+
+/**
+ * Slider
+ */
+$slider-nav-gutter: 12px;
+
+$slider-pager-item-width: $base-rhythm;
+$slider-pager-item-height: $base-rhythm;
+$slider-pager-item-margin: 0 4px;
+
+$slider-bp: $bp-lg;
+$slider-nav-gutter-alt: 12px;
+
+$slider-bp-hidden: $bp-md;
+
+
+
+/**
+ * Hero
+ */
+$hero-content-gutter: 64px;
+$hero-title-size: $mega;
+$hero-title-margin: 0;
+$hero-subtitle-size: $beta;
+$hero-subtitle-margin: 0;
+$hero-button-size: $gamma;
+$hero-button-padding: .2em .65em;
+
+$hero-bp-md: $bp-lg;
+$hero-title-size-md: $kilo;
+$hero-title-margin-md: 0;
+$hero-subtitle-size-md: $gamma; 
+$hero-subtitle-margin-md: 0;
+$hero-button-size-md: $hero-subtitle-size-md;
+$hero-button-padding-md: $hero-button-padding;
+
+$hero-bp-sm: $bp-sm;
+$hero-title-size-sm: 36px;
+$hero-title-margin-sm: 32px;
+$hero-subtitle-size-sm: 18px;
+$hero-subtitle-margin-sm: 48px;
+$hero-button-size-sm: $hero-subtitle-size-sm;
+$hero-button-padding-sm: $hero-button-padding;
+
+$hero-bp-hidden: $bp-md;
 
 
 

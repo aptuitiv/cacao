@@ -1,114 +1,25 @@
 /*---------------------------------------------------------------------------*\
   GLOBAL MIXINS
 \*---------------------------------------------------------------------------*/
-
-/* http://stackoverflow.com/questions/12228548/findinq-equivalent-color-with-opacity */
-@mixin bg_alpha_calc ($desired_colour, $desired_alpha, $background_colour: white) {
-    $r3: red($desired_colour);
-    $g3: green($desired_colour);
-    $b3: blue($desired_colour);
-
-    $r2: red($background_colour);
-    $g2: green($background_colour);
-    $b2: blue($background_colour);
-
-    // x1 = (x3 - x2 + x2 * a1) / a1
-    $r1: ( $r3 - $r2 + ($r2 * $desired_alpha) ) / $desired_alpha;
-    $g1: ( $g3 - $g2 + ($g2 * $desired_alpha) ) / $desired_alpha;
-    $b1: ( $b3 - $b2 + ($b2 * $desired_alpha) ) / $desired_alpha;
-
-    background-color: $desired_colour;
-    background-color: rgba($r1, $g1, $b1, $desired_alpha);
-
-}
+/**
+ *
+ */
 
 
 
-@mixin clearfix {
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
-}
 
 
+/*---------------------------------------------------------------------------*\
+  VENDOR PREFIXERS
+\*---------------------------------------------------------------------------*/
+/**
+ * These may soon deprecate in favor of auto-prefixer.
+ */
 
-@mixin box-sizing($type:border-box) {
-    -webkit-box-sizing: $type; // Android < 2.3, iOS < 4
-    -moz-box-sizing: $type; // Firefox < 29
-    box-sizing: $type; // Chrome, IE 8+, Opera, Safari 5.1
-}
-
-
-
-@mixin user-select($select: text) {
-    -webkit-touch-callout: $select;
-    -webkit-user-select: $select;
-    -khtml-user-select: $select;
-    -moz-user-select: $select;
-    -ms-user-select: $select;
-    user-select: $select;
-}
-
-
-
-@mixin greyscale($value: on) {
-    @if $value == on {
-        /* Current draft standard */
-        filter: grayscale(100%);
-        /* New WebKit */
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-        /* Not yet supported in Gecko, Opera or IE */
-        -o-filter: grayscale(100%);
-        /* Firefox 3.5+ */
-        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-        /* IE 6-9 */
-        filter: gray;
-        /* Old WebKit */
-        -webkit-filter: grayscale(1);
-    }
-    @else {
-        -webkit-filter: none;
-        -moz-filter: none;
-        -ms-filter: none;
-        -o-filter: none;
-        filter: none;
-    }
-}
-
-
-
-@mixin placeholder($color) {
-    &::-moz-placeholder { // Firefox
-        color: $color;
-        opacity: 1; // See https://github.com/twbs/bootstrap/pull/11526 
-    }
-    &:-ms-input-placeholder { // Internet Explorer 10+
-        color: $color; 
-    }
-    &::-webkit-input-placeholder { // Safari and Chrome
-        color: $color; 
-    }
-}
-
-
-
-@mixin font-smoothing($value: on) {
-    @if $value == on {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    @else {
-        -webkit-font-smoothing: none;
-        -moz-osx-font-smoothing: none;
-        font-smooth: never;
-    }
+@mixin box-sizing($type: border-box) {
+    -webkit-box-sizing: $type; /* Android < 2.3, iOS < 4 */
+       -moz-box-sizing: $type; /* Firefox < 29 */
+            box-sizing: $type; /* Chrome, IE 8+, Opera, Safari 5.1 */
 }
 
 
@@ -128,9 +39,9 @@
 
 @mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
     @if $inset {
-        -webkit-box-shadow:inset $top $left $blur $spread $color;
-        -moz-box-shadow:inset $top $left $blur $spread $color;
-        box-shadow:inset $top $left $blur $spread $color;
+        -webkit-box-shadow: inset $top $left $blur $spread $color;
+        -moz-box-shadow: inset $top $left $blur $spread $color;
+        box-shadow: inset $top $left $blur $spread $color;
     } @else {
         -webkit-box-shadow: $top $left $blur $spread $color;
         -moz-box-shadow: $top $left $blur $spread $color;
@@ -140,18 +51,135 @@
 
 
 
-@mixin rounded($radius: 0.5em) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); /* IE 8 */
 }
 
 
 
-@mixin opacity($opacity) {
-    opacity: $opacity;
-    $opacity-ie: $opacity * 100;
-    filter: alpha(opacity=$opacity-ie); //IE8
+@mixin transition($property: all, $duration: 100ms, $function: linear, $delay: 0s) {
+    -webkit-transition: $property $duration $function $delay;
+    -moz-transition: $property $duration $function $delay;
+    -o-transition: $property $duration $function $delay;
+    transition: $property $duration $function $delay;
+}
+
+
+
+@mixin user-select($select: text) {
+    -webkit-touch-callout: $select;
+      -webkit-user-select: $select;
+       -khtml-user-select: $select;
+         -moz-user-select: $select;
+          -ms-user-select: $select;
+              user-select: $select;
+}
+
+
+
+@mixin greyscale($value: on) {
+    @if $value == on {
+        -webkit-filter: grayscale(100%); /* New WebKit */
+           -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+             -o-filter: grayscale(100%); /* Not yet supported in Gecko, Opera or IE */
+                filter: grayscale(100%); /* Current draft standard */
+        /* Firefox 3.5+ */
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+        /* IE 6-9 */
+        filter: gray;
+        /* Old WebKit */
+        -webkit-filter: grayscale(1);
+    } @else {
+        -webkit-filter: none;
+           -moz-filter: none;
+            -ms-filter: none;
+             -o-filter: none;
+                filter: none;
+    }
+}
+
+
+
+@mixin placeholder($color) {
+    &::-moz-placeholder { /* Firefox */
+        color: $color;
+        opacity: 1; /* See https://github.com/twbs/bootstrap/pull/11526 */
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: $color;
+    }
+    &::-webkit-input-placeholder { /* Safari and Chrome */
+        color: $color;
+    }
+}
+
+
+
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    } @else {
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: none;
+        font-smooth: never;
+    }
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  HELPERS
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Micro clearfix for modern browsers
+ *
+ * See: http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+
+/* http://stackoverflow.com/questions/12228548/findinq-equivalent-color-with-opacity */
+@mixin bg_alpha_calc ($desired_colour, $desired_alpha, $background_colour: white) {
+    $r3: red($desired_colour);
+    $g3: green($desired_colour);
+    $b3: blue($desired_colour);
+
+    $r2: red($background_colour);
+    $g2: green($background_colour);
+    $b2: blue($background_colour);
+
+    // x1 = (x3 - x2 + x2 * a1) / a1
+    $r1: ( $r3 - $r2 + ($r2 * $desired_alpha) ) / $desired_alpha;
+    $g1: ( $g3 - $g2 + ($g2 * $desired_alpha) ) / $desired_alpha;
+    $b1: ( $b3 - $b2 + ($b2 * $desired_alpha) ) / $desired_alpha;
+
+    background-color: $desired_colour;
+    background-color: rgba($r1, $g1, $b1, $desired_alpha);
+
 }
 
 
@@ -191,34 +219,20 @@
 }
 
 
-@mixin hamburger($width, $left, $top, $thickness, $gap, $color, $hover-color, $offcanvas) {
+
+@mixin hamburger($width, $left, $top, $thickness, $gap, $color, $hover-color) {
     span:after {
         content: '';
         position: absolute;
         display: block;
         width: $width;
         height: 0;
-        @if $offcanvas {
-            @if $top {
-                top: $top;
-            }
-            @else {
-                top: 50%;
-                margin-top: -$width/2;
-            }
-            @if $left {
-                left: $left;
-            }
-            @else {
-                left: ($tabbar-menu-icon-width - $width)/2;
-            }
-        }
-        box-shadow: 0 0px 0 $thickness $color,
+        box-shadow: 0 0 0 $thickness $color,
             0 $gap + $thickness 0 $thickness $color,
             0 (2 * $gap + 2*$thickness) 0 $thickness $color;
     }
     span:hover:after {
-        box-shadow: 0 0px 0 $thickness $hover-color,
+        box-shadow: 0 0 0 $thickness $hover-color,
             0 $gap + $thickness 0 $thickness $hover-color,
             0 (2 * $gap + 2*$thickness) 0 $thickness $hover-color;
     }
@@ -226,9 +240,3 @@
 
 
 
-@mixin transition($property: all, $duration: 100ms, $function: linear, $delay: 0s) {
-    -webkit-transition: $property $duration $function $delay;
-    -moz-transition: $property $duration $function $delay;
-    -o-transition: $property $duration $function $delay;
-    transition: $property $duration $function $delay;
-}

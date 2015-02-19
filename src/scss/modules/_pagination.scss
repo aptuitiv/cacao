@@ -2,10 +2,6 @@
   PAGINATION
 \*---------------------------------------------------------------------------*/
 /**
- * Pagination.
- *
- * Usage:
-
  *
  */
 
@@ -17,6 +13,26 @@
   VARIABLES
 \*---------------------------------------------------------------------------*/
 
+/**
+ * Base settings applied to the wrapper.
+ */
+$pagination-wrapper-padding: .25em !default;
+
+/**
+ * Margin between each pagination_item (page links and navigation items)
+ */
+$pagination-item-spacing: .5em !default;
+
+/**
+ * Padding on each page link
+ */
+$pagination-page-padding: .25em .5em !default;
+
+/**
+ * Padding on each navigation link
+ */
+$pagination-nav-padding: $pagination-page-padding !default;
+
 
 
 
@@ -24,6 +40,50 @@
 /*---------------------------------------------------------------------------*\
   MODULE
 \*---------------------------------------------------------------------------*/
+
+/**
+ * Base wrapper.
+ */
+.pagination {
+    display: block;
+    padding: $pagination-wrapper-padding;
+}
+
+
+
+/**
+ * Generic item styles.
+ */
+%pagination_item,
+.pagination_item {
+    display: inline-block;
+    margin-right: $pagination-item-spacing;
+    vertical-align: middle;
+}
+
+
+
+/**
+ * The page links.
+ *
+ * inherits pagination_item
+ */
+.pagination_item-page {
+    @extend %pagination_item;
+    padding: $pagination-page-padding;
+}
+
+
+
+/**
+ * The navigation links.
+ *
+ * inherits pagination_item
+ */
+.pagination_item-nav {
+    @extend %pagination_item;
+    padding: $pagination-nav-padding;
+}
 
 
 
