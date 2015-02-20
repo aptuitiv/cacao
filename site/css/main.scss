@@ -5,8 +5,8 @@
 /**
  * Globals 
  */
-@import "global/settings";
-@import "global/mixins";
+@import "settings";
+@import "mixins";
 
 
 
@@ -15,40 +15,34 @@
  */
 @import "../../bower_components/normalize.css/normalize";
 @import "base/base";
-@import "base/type";
+@import "../../modules/type/css/base/type";
 
 
 
 /**
  * Generic
  */
+@import "../../modules/clearfix/css/generic/clearfix";
 @import "generic/helpers";
-@import "generic/clearfix";
 @import "generic/scaffolding";
 
 
 
 /**
- * Layouts
- */
-@import "layouts/grid";
-@import "layouts/media";
-@import "layouts/lists";
-@import "layouts/container";
-@import "layouts/content";
-@import "layouts/sidebar";
-@import "layouts/header";
-
-
-
-/**
- * Modules
+ * Components
  */
 @import "../../bower_components/magnific-popup/src/css/main";
-@import "modules/breadcrumbs";
-@import "modules/pagination";
-@import "modules/slider";
-@import "modules/hero";
+@import "../../modules/hero/css/components/hero";
+@import "../../modules/breadcrumbs/css/components/breadcrumbs";
+@import "../../modules/pagination/css/components/pagination";
+@import "../../modules/slider/css/components/slider";
+@import "../../modules/grid/css/components/grid";
+@import "../../modules/media/css/components/media";
+@import "../../modules/lists/css/components/lists";
+@import "../../modules/container/css/components/container";
+@import "components/content";
+@import "components/sidebar";
+@import "components/header";
 
 
 

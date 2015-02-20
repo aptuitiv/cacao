@@ -85,6 +85,10 @@ module.exports = function(grunt) {
             js: {
                 files: ['<%= global.src %>/js/**/*.js'],
                 tasks: ['uglify']
+            },
+            assets: {
+                files: ['<%= global.src %>/assets/**/*'],
+                tasks: ['copy:site', 'htmlmin:dist']
             }
         },
 
