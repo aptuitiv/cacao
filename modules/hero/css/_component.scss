@@ -46,39 +46,21 @@
 
 
 .hero_title {
-    @if mixin-exists(font-size) {
-        @include font-size($hero-title-size, $line-height: true);
-    }
-    @else {
-        font-size: $hero-title-size;
-        line-height: 1.1;
-    }
+    @include font-size($hero-title-size, $line-height: true);
     margin-bottom: $hero-title-margin;
 }
 
 
 
 .hero_subtitle {
-    @if mixin-exists(font-size) {
-        @include font-size($hero-subtitle-size, $line-height: true);
-    }
-    @else {
-        font-size: $hero-subtitle-size;
-        line-height: 1.1;
-    }
+    @include font-size($hero-subtitle-size, $line-height: true);
     margin-bottom: $hero-subtitle-margin;
 }
 
 
 
 .hero_button {
-    @if mixin-exists(font-size) {
-        @include font-size($hero-button-size, $line-height: true);
-    }
-    @else {
-        font-size: $hero-button-size;
-        line-height: 1.1;
-    }
+    @include font-size($hero-button-size, $line-height: true);
     padding: $hero-button-padding;
 }
 
@@ -93,32 +75,17 @@
 @media (max-width: $hero-bp-md) {
 
     .hero_title {
-        @if mixin-exists(font-size) {
-            @include font-size($hero-title-size-md, $line-height: true);
-        }
-        @else {
-            font-size: $hero-title-size-md;
-        }
+        @include font-size($hero-title-size-md, $line-height: true);
         margin-bottom: $hero-title-margin-md;
     }
 
     .hero_subtitle {
-        @if mixin-exists(font-size) {
-            @include font-size($hero-subtitle-size-md, $line-height: true);
-        }
-        @else {
-            font-size: $hero-subtitle-size-md;
-        }
+        @include font-size($hero-subtitle-size-md, $line-height: true);
         margin-bottom: $hero-subtitle-margin-md;
     }
 
     .hero_button {
-        @if mixin-exists(font-size) {
-            @include font-size($hero-button-size-md, $line-height: true);
-        }
-        @else {
-            font-size: $hero-button-size-md;
-        }
+        @include font-size($hero-button-size-md, $line-height: true);
         padding: $hero-button-padding-md;
     }
 
@@ -129,32 +96,17 @@
 @media (max-width: $hero-bp-sm) {
 
     .hero_title {
-        @if mixin-exists(font-size) {
-            @include font-size($hero-title-size-sm, $line-height: true);
-        }
-        @else {
-            font-size: $hero-title-size-sm;
-        }
+        @include font-size($hero-title-size-sm, $line-height: true);
         margin-bottom: $hero-title-margin-sm;
     }
 
     .hero_subtitle {
-        @if mixin-exists(font-size) {
-            @include font-size($hero-subtitle-size-sm, $line-height: true);
-        }
-        @else {
-            font-size: $hero-subtitle-size-sm;
-        }
+        @include font-size($hero-subtitle-size-sm, $line-height: true);
         margin-bottom: $hero-subtitle-margin-sm;
     }
 
     .hero_button {
-        @if mixin-exists(font-size) {
-            @include font-size($hero-button-size-sm, $line-height: true);
-        }
-        @else {
-            font-size: $hero-button-size-sm;
-        }
+        @include font-size($hero-button-size-sm, $line-height: true);
         padding: $hero-button-padding-sm;
     }
 

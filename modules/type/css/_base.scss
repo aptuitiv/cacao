@@ -9,29 +9,6 @@
  * All colors and visual styles are defined in the theme file.
  */
 
-@import "settings";
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  LIBRARY
-\*---------------------------------------------------------------------------*/
-
-@mixin font-size($font-size, $context: $base-font-size, $line-height: false){
-    // remove units
-    $font-size: $font-size / ($font-size * 0 + 1);
-    $context: $context / ($context * 0 + 1);
-
-    font-size: ($font-size)*1px;
-    font-size: ($font-size / $context)*1em;
-
-    @if $line-height == true {
-        line-height: ceil($font-size / $base-rhythm) * ($base-rhythm / $font-size);
-    }
-}
-
 
 
 
@@ -42,14 +19,14 @@
 
 body {
     @extend %t-body;
-    font-size: $base-font-size;
-    font-weight: $base-font-weight;
-    line-height: ceil($base-font-size / $base-rhythm) * ($base-rhythm / $base-font-size);
+    font-size: $g-font-size;
+    font-weight: $g-font-weight;
+    line-height: ceil($g-font-size / $g-rhythm) * ($g-rhythm / $g-font-size);
 }
 
 p {
-    @include font-size($base-font-size, $line-height: true);
-    margin: 0 0 $base-line-height;
+    @include font-size($g-font-size, $line-height: true);
+    margin: 0 0 $g-line-height;
 }
 
 a {
@@ -59,13 +36,13 @@ a {
 
 code,
 pre {
-    @include font-size($milli, $line-height: true);
-    margin: 0 0 $base-line-height;
+    @include font-size($g-milli, $line-height: true);
+    margin: 0 0 $g-line-height;
 }
 
 ul,
 ol {
-    margin: 0 0 $base-line-height;
+    margin: 0 0 $g-line-height;
     padding-left: 1em;
 }
 
@@ -79,8 +56,8 @@ ol {
 
 %heading {
     @extend %t-heading;
-    margin: 0 0 $base-line-height;
-    font-weight: $heading-font-weight;
+    margin: 0 0 $g-line-height;
+    font-weight: $g-heading-font-weight;
 }
 
 h1,
@@ -128,53 +105,53 @@ h6,
 \*---------------------------------------------------------------------------*/
 
 .giga {
-    @include font-size($giga, $line-height: true);
+    @include font-size($g-giga, $line-height: true);
 }
 
 .mega {
-    @include font-size($mega, $line-height: true);
+    @include font-size($g-mega, $line-height: true);
 }
 
 .kilo {
-    @include font-size($kilo, $line-height: true);
+    @include font-size($g-kilo, $line-height: true);
 }
 
 .alpha,
 %alpha {
-    @include font-size($alpha, $line-height: true);
+    @include font-size($g-alpha, $line-height: true);
 }
 
 .beta,
 %beta {
-    @include font-size($beta, $line-height: true);
+    @include font-size($g-beta, $line-height: true);
 }
 
 .gamma,
 %gamma {
-    @include font-size($gamma, $line-height: true);
+    @include font-size($g-gamma, $line-height: true);
 }
 
 .delta,
 %delta {
-    @include font-size($delta, $line-height: true);
+    @include font-size($g-delta, $line-height: true);
 }
 
 .epsilon,
 %epsilon {
-    @include font-size($epsilon, $line-height: true);
+    @include font-size($g-epsilon, $line-height: true);
 }
 
 .zeta,
 %zeta {
-    @include font-size($zeta, $line-height: true);
+    @include font-size($g-zeta, $line-height: true);
 }
 
 .milli {
-    @include font-size($milli, $line-height: true);
+    @include font-size($g-milli, $line-height: true);
 }
 
 .micro {
-    @include font-size($micro, $line-height: true);
+    @include font-size($g-micro, $line-height: true);
 }
 
 
@@ -187,14 +164,14 @@ h6,
 
 .t-body,
 %t-body {
-    font-family: $base-font-stack;
-    letter-spacing: $base-letter-spacing;
+    font-family: $g-font-stack;
+    letter-spacing: $g-letter-spacing;
 }
 
 .t-heading,
 %t-heading {
-    font-family: $heading-font-stack;
-    letter-spacing: $heading-letter-spacing;
+    font-family: $g-heading-font-stack;
+    letter-spacing: $g-heading-letter-spacing;
 }
 
 
