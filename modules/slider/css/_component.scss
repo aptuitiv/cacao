@@ -1,0 +1,110 @@
+/*---------------------------------------------------------------------------*\
+  SLIDER
+\*---------------------------------------------------------------------------*/
+/**
+ */
+
+@import "settings";
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  COMPONENT
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Wrapper
+ */
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/**
+ * Slide
+ */
+.sider_slide {
+    position: relative;
+}
+
+
+
+/**
+ * Navigation arrows
+ */
+.slider_nav {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    left: $slider-nav-gutter;
+    right: $slider-nav-gutter;
+    margin-left: auto;
+    margin-right: auto;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.slider_nav_prev {
+    float: left;
+}
+
+.slider_nav_next {
+    float: right;
+}
+
+
+
+/**
+ * Pager
+ */
+.slider_pager {
+    position: absolute;
+    bottom: $slider-pager-bottom-margin;
+    left: 0;
+    right: 0;
+    z-index: 4;
+}
+
+.slider_pager_item {
+    display: inline-block;
+    width: $slider-pager-item-width;
+    height: $slider-pager-item-height;
+    margin: $slider-pager-item-margin;
+    padding: $slider-pager-item-padding;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  STATE
+\*---------------------------------------------------------------------------*/
+
+@media (max-width: $slider-bp) {
+
+    .slider_nav {
+        left: $slider-nav-gutter-alt;
+        right: $slider-nav-gutter-alt;
+    }
+
+}
+
+
+
+@media (max-width: $slider-bp-hidden) {
+
+    .slider {
+        display: none;
+    }
+
+}
+
+
+

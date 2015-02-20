@@ -1,0 +1,174 @@
+/*---------------------------------------------------------------------------*\
+  HERO
+\*---------------------------------------------------------------------------*/
+/**
+ */
+
+@import "settings";
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  COMPONENT
+\*---------------------------------------------------------------------------*/
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.hero_img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.hero_content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    padding-left: $hero-content-gutter;
+    padding-right: $hero-content-gutter;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+.hero_title {
+    @if mixin-exists(font-size) {
+        @include font-size($hero-title-size, $line-height: true);
+    }
+    @else {
+        font-size: $hero-title-size;
+        line-height: 1.1;
+    }
+    margin-bottom: $hero-title-margin;
+}
+
+
+
+.hero_subtitle {
+    @if mixin-exists(font-size) {
+        @include font-size($hero-subtitle-size, $line-height: true);
+    }
+    @else {
+        font-size: $hero-subtitle-size;
+        line-height: 1.1;
+    }
+    margin-bottom: $hero-subtitle-margin;
+}
+
+
+
+.hero_button {
+    @if mixin-exists(font-size) {
+        @include font-size($hero-button-size, $line-height: true);
+    }
+    @else {
+        font-size: $hero-button-size;
+        line-height: 1.1;
+    }
+    padding: $hero-button-padding;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  STATE
+\*---------------------------------------------------------------------------*/
+
+@media (max-width: $hero-bp-md) {
+
+    .hero_title {
+        @if mixin-exists(font-size) {
+            @include font-size($hero-title-size-md, $line-height: true);
+        }
+        @else {
+            font-size: $hero-title-size-md;
+        }
+        margin-bottom: $hero-title-margin-md;
+    }
+
+    .hero_subtitle {
+        @if mixin-exists(font-size) {
+            @include font-size($hero-subtitle-size-md, $line-height: true);
+        }
+        @else {
+            font-size: $hero-subtitle-size-md;
+        }
+        margin-bottom: $hero-subtitle-margin-md;
+    }
+
+    .hero_button {
+        @if mixin-exists(font-size) {
+            @include font-size($hero-button-size-md, $line-height: true);
+        }
+        @else {
+            font-size: $hero-button-size-md;
+        }
+        padding: $hero-button-padding-md;
+    }
+
+}
+
+
+
+@media (max-width: $hero-bp-sm) {
+
+    .hero_title {
+        @if mixin-exists(font-size) {
+            @include font-size($hero-title-size-sm, $line-height: true);
+        }
+        @else {
+            font-size: $hero-title-size-sm;
+        }
+        margin-bottom: $hero-title-margin-sm;
+    }
+
+    .hero_subtitle {
+        @if mixin-exists(font-size) {
+            @include font-size($hero-subtitle-size-sm, $line-height: true);
+        }
+        @else {
+            font-size: $hero-subtitle-size-sm;
+        }
+        margin-bottom: $hero-subtitle-margin-sm;
+    }
+
+    .hero_button {
+        @if mixin-exists(font-size) {
+            @include font-size($hero-button-size-sm, $line-height: true);
+        }
+        @else {
+            font-size: $hero-button-size-sm;
+        }
+        padding: $hero-button-padding-sm;
+    }
+
+}
+
+
+
+@media (max-width: $hero-bp-hidden) {
+
+    .hero {
+        display: none;
+    }
+
+}
+
+
+

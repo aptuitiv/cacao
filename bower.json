@@ -17,6 +17,7 @@
     "jquery": "1.11.1",
     "magnific-popup": "~0.9.9",
     "ap-drilldown-menu": "https://github.com/aptuitiv/ap-drilldown-menu.git",
-    "normalize.css": "~3.0.2"
+    "normalize.css": "~3.0.2",
+    "slick.js": "~1.4.1"
   }
 }
