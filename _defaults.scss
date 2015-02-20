@@ -1,0 +1,62 @@
+/*---------------------------------------------------------------------------*\
+  SETTINGS
+\*---------------------------------------------------------------------------*/
+/**
+ * Global variables, layout settings, and module settings go here.
+ */
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  GLOBAL VARIABLES
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Typography
+ */
+$base-font-stack: "Open Sans", sans-serif;
+$base-font-size: 15px;
+$base-font-weight: normal;
+$base-line-height: 22px;
+$base-letter-spacing: .15px;
+$base-rhythm: $base-line-height/2;
+
+$heading-font-stack: "Merriweather", serif;
+$heading-font-weight: 900;
+$heading-letter-spacing: -.5px;
+
+$giga: 74px;
+$mega: 62px;
+$kilo: 48px;
+$alpha: 36px; // h1
+$beta: 28px; // h2
+$gamma: 24px; // h3
+$delta: 20px; // h4
+$epsilon: 18px; // h5
+$zeta: 15px; // h6
+$milli: 13px;
+$micro: 11px;
+
+
+
+/**
+ * Breakpoints
+ * Used globally and to configure the grid module below.
+ */
+$bp-xl: 1075px;
+$bp-lg: 960px;
+$bp-md: 780px;
+$bp-sm: 600px;
+$bp-xs: 400px;
+
+
+
+/**
+ * Page variables (used below to configure layouts and modules)
+ */
+$page-width: 960px;
+$page-gutter: $base-rhythm*2;
+
+
