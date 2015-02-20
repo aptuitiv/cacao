@@ -99,7 +99,7 @@ module.exports = function(grunt) {
                     base: 'dist'
                 }
             }
-        },
+        }
 
     });
 
@@ -116,6 +116,7 @@ module.exports = function(grunt) {
     // npm tasks
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-uglify');
