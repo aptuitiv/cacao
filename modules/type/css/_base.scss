@@ -16,27 +16,6 @@
 
 
 /*---------------------------------------------------------------------------*\
-  LIBRARY
-\*---------------------------------------------------------------------------*/
-
-@mixin font-size($font-size, $context: $base-font-size, $line-height: false){
-    // remove units
-    $font-size: $font-size / ($font-size * 0 + 1);
-    $context: $context / ($context * 0 + 1);
-
-    font-size: ($font-size)*1px;
-    font-size: ($font-size / $context)*1em;
-
-    @if $line-height == true {
-        line-height: ceil($font-size / $base-rhythm) * ($base-rhythm / $font-size);
-    }
-}
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
   GENERAL TYPOGRAPHY
 \*---------------------------------------------------------------------------*/
 

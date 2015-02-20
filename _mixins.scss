@@ -2,8 +2,113 @@
   GLOBAL MIXINS
 \*---------------------------------------------------------------------------*/
 /**
- *
+ * These could use an (optional) namespace to avoid clashes.
  */
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  HELPERS
+\*---------------------------------------------------------------------------*/
+
+
+/**
+ * Used to set a font size in ems with a px fallback.
+ * Optionally include a line-height that snaps to the sites global rhythm.
+ * Uses the global font size as the default context to calculate the em unit.
+ */
+@mixin font-size($font-size, $context: $g-font-size, $line-height: false){
+    // remove units
+    $font-size: $font-size / ($font-size * 0 + 1);
+    $context: $context / ($context * 0 + 1);
+
+    font-size: ($font-size)*1px;
+    font-size: ($font-size / $context)*1em;
+
+    @if $line-height == true {
+        line-height: ceil($font-size / $g-rhythm) * ($g-rhythm / $font-size);
+    }
+}
+
+
+
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}
+
+
+
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow: white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+
+
+@mixin triangle($triangle-size, $triangle-color, $triangle-direction) {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: $triangle-size;
+    border-style: solid;
+    @if ($triangle-direction == up) {
+        border-color: transparent transparent $triangle-color transparent;
+    }
+    @if ($triangle-direction == down) {
+        border-color: transparent $triangle-color transparent transparent;
+        border-bottom-style: solid;
+    }
+    @if ($triangle-direction == left) {
+        border-color: transparent $triangle-color transparent transparent ;
+    }
+    @if ($triangle-direction == right) {
+        border-color: transparent transparent transparent $triangle-color;
+    }
+}
+
+
+
+@mixin hamburger($width, $left, $top, $thickness, $gap, $color, $hover-color) {
+    span:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: $width;
+        height: 0;
+        box-shadow: 0 0 0 $thickness $color,
+        0 $gap + $thickness 0 $thickness $color,
+        0 (2 * $gap + 2*$thickness) 0 $thickness $color;
+    }
+    span:hover:after {
+        box-shadow: 0 0 0 $thickness $hover-color,
+        0 $gap + $thickness 0 $thickness $hover-color,
+        0 (2 * $gap + 2*$thickness) 0 $thickness $hover-color;
+    }
+}
+
+
+
+/* http://stackoverflow.com/questions/12228548/findinq-equivalent-color-with-opacity */
+@mixin bg_alpha_calc ($desired_colour, $desired_alpha, $background_colour: white) {
+    $r3: red($desired_colour);
+    $g3: green($desired_colour);
+    $b3: blue($desired_colour);
+
+    $r2: red($background_colour);
+    $g2: green($background_colour);
+    $b2: blue($background_colour);
+
+    // x1 = (x3 - x2 + x2 * a1) / a1
+    $r1: ( $r3 - $r2 + ($r2 * $desired_alpha) ) / $desired_alpha;
+    $g1: ( $g3 - $g2 + ($g2 * $desired_alpha) ) / $desired_alpha;
+    $b1: ( $b3 - $b2 + ($b2 * $desired_alpha) ) / $desired_alpha;
+
+    background-color: $desired_colour;
+    background-color: rgba($r1, $g1, $b1, $desired_alpha);
+
+}
 
 
 
@@ -12,9 +117,6 @@
 /*---------------------------------------------------------------------------*\
   VENDOR PREFIXERS
 \*---------------------------------------------------------------------------*/
-/**
- * These may soon deprecate in favor of auto-prefixer.
- */
 
 @mixin box-sizing($type: border-box) {
     -webkit-box-sizing: $type; /* Android < 2.3, iOS < 4 */
@@ -126,115 +228,6 @@
         -webkit-font-smoothing: none;
         -moz-osx-font-smoothing: none;
         font-smooth: never;
-    }
-}
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  HELPERS
-\*---------------------------------------------------------------------------*/
-
-/**
- * Micro clearfix for modern browsers
- *
- * See: http://nicolasgallagher.com/micro-clearfix-hack/
- *
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-@mixin clearfix {
-    &:before,
-    &:after {
-        content: " "; /* 1 */
-        display: table; /* 2 */
-    }
-    &:after {
-        clear: both;
-    }
-}
-
-
-
-/* http://stackoverflow.com/questions/12228548/findinq-equivalent-color-with-opacity */
-@mixin bg_alpha_calc ($desired_colour, $desired_alpha, $background_colour: white) {
-    $r3: red($desired_colour);
-    $g3: green($desired_colour);
-    $b3: blue($desired_colour);
-
-    $r2: red($background_colour);
-    $g2: green($background_colour);
-    $b2: blue($background_colour);
-
-    // x1 = (x3 - x2 + x2 * a1) / a1
-    $r1: ( $r3 - $r2 + ($r2 * $desired_alpha) ) / $desired_alpha;
-    $g1: ( $g3 - $g2 + ($g2 * $desired_alpha) ) / $desired_alpha;
-    $b1: ( $b3 - $b2 + ($b2 * $desired_alpha) ) / $desired_alpha;
-
-    background-color: $desired_colour;
-    background-color: rgba($r1, $g1, $b1, $desired_alpha);
-
-}
-
-
-
-@mixin letterpress($opacity){
-    text-shadow:white($opacity) 0 1px 0;
-}
-
-
-
-@mixin box-emboss($opacity, $opacity2){
-    box-shadow: white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
-}
-
-
-
-@mixin triangle($triangle-size, $triangle-color, $triangle-direction) {
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-width: $triangle-size;
-    border-style: solid;
-    @if ($triangle-direction == up) {
-        border-color: transparent transparent $triangle-color transparent;
-    }
-    @if ($triangle-direction == down) {
-        border-color: transparent $triangle-color transparent transparent;
-        border-bottom-style: solid;
-    }
-    @if ($triangle-direction == left) {
-        border-color: transparent $triangle-color transparent transparent ;
-    }
-    @if ($triangle-direction == right) {
-        border-color: transparent transparent transparent $triangle-color;
-    }
-}
-
-
-
-@mixin hamburger($width, $left, $top, $thickness, $gap, $color, $hover-color) {
-    span:after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: $width;
-        height: 0;
-        box-shadow: 0 0 0 $thickness $color,
-            0 $gap + $thickness 0 $thickness $color,
-            0 (2 * $gap + 2*$thickness) 0 $thickness $color;
-    }
-    span:hover:after {
-        box-shadow: 0 0 0 $thickness $hover-color,
-            0 $gap + $thickness 0 $thickness $hover-color,
-            0 (2 * $gap + 2*$thickness) 0 $thickness $hover-color;
     }
 }
 
