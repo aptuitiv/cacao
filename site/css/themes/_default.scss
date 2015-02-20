@@ -47,13 +47,6 @@ body {
 }
 
 
-.example-col {
-    background: #9f9f9f;
-    border: 1px solid #333;
-}
-
-
-
 
 
 
@@ -67,44 +60,8 @@ body {
 .logo {
     color: white;
     font-family: 'Pacifico', $heading-font-stack;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-shadow: 2px 2px 1px rgba(#000, .75);
-}
-
-
-
-/**
- * Breadcrumbs
- */
-.breadcrumbs {
-    background: $off-white;
-    border-radius: 6px;
-}
-
-.breadcrumbs_item,
-.breadcrumbs_item-crumb,
-.breadcrumbs_item-separator {
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-
-.breadcrumbs_item-separator {
-    background: $dark-plum;
-    color: white;
-}
-
-.breadcrumbs_item-crumb.-is-current,
-.breadcrumbs_item-crumb:active:not(.-is-disabled):not(.-is-current) {
-    background: $light-brown;
-}
-
-.breadcrumbs_item-crumb:not(.-is-disabled):not(.-is-current) {
-    background: white;
-}
-
-.breadcrumbs_item-crumb:hover:not(.-is-disabled):not(.-is-current),
-.breadcrumbs_item-crumb:active:not(.-is-disabled):not(.-is-current) {
-    border: 1px solid black;
 }
 
 
