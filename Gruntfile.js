@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             // Project source files 
             src: 'site',
             // Build destination
-            dest: 'dist',
+            dest: 'dist'
         },
 
         sass: {
@@ -21,6 +21,17 @@ module.exports = function(grunt) {
             }
         },
 
+        copy: {
+            site: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= global.src %>/assets',
+                    src: ['**/*'],
+                    dest: '<%= global.dest %>'
+                }]
+            }
+        },
+
         uglify: {
             options: {
                 mangle: false
@@ -29,14 +40,8 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= global.src %>/js',
-                    src: ['**/*.js', '!**/*.min.js'],
+                    src: ['**/*.js'],
                     dest: '<%= global.dest %>/layout/js'
-                },{
-                    expand: true,
-                    cwd: 'bower_components',
-                    src: ['**/ap-drilldown-menu.js', '**/jquery.js', '**/jquery.magnific-popup.js'],
-                    dest: '<%= global.dest %>/layout/js',
-                    flatten: true
                 }]
             }
         },
@@ -56,39 +61,12 @@ module.exports = function(grunt) {
             options: {
                 collapseWhitespace: true
             },
-            site: {
+            dist: {
                 files: [{
                     expand: true,
                     cwd: '<%= global.dest %>',
                     src: ['**/*.html'],
                     dest: '<%= global.dest %>'
-                }]
-            }
-        },
-
-        copy: {
-            site: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= global.src %>/assets',
-                    src: ['**'],
-                    dest: '<%= global.dest %>'
-                }]
-            },
-            bower: {
-                src: 'bower_components/normalize.css/normalize.css',
-                dest: 'bower_components/normalize.css/_normalize.scss'
-            }
-        },
-
-        replace: {
-            /* our own settings file is already imported in main.scss */
-            bower: {
-                src: ['bower_components/magnific-popup/**/*.scss'],
-                overwrite: true,
-                replacements: [{
-                    from: /@import "settings";/g,
-                    to: ""
                 }]
             }
         },
@@ -100,21 +78,13 @@ module.exports = function(grunt) {
                     reload: true
                 }
             },
-            assets: {
-                files: ['<%= global.src %>/assets/**'],
-                tasks: ['newer:copy']
-            },
             sass: {
-                files: ['<%= global.src %>/scss/**/*.scss'],
+                files: ['<%= global.src %>/css/**/*.scss'],
                 tasks: ['sass']
             },
-            html: {
-                files: ['src/assets/**/*.html'],
-                tasks: ['newer:htmlmin:main']
-            },
             js: {
-                files: ['<%= global.src %>/js/**/*.js', '!<%= global.src %>/js/**/*.min.js', 'bower_components/**/*.js', '!bower_components/**/*.min.js'],
-                tasks: ['newer:uglify']
+                files: ['<%= global.src %>/js/**/*.js'],
+                tasks: ['uglify']
             }
         },
 
@@ -130,6 +100,14 @@ module.exports = function(grunt) {
     });
 
 
+    // cacao modules
+    require('./modules/jquery/Gruntfile.js')(grunt);
+    require('./modules/ddmenu/Gruntfile.js')(grunt);
+    require('./modules/magnific/Gruntfile.js')(grunt);
+    require('./modules/normalize/Gruntfile.js')(grunt);
+    require('./modules/slick/Gruntfile.js')(grunt);
+    require('./modules/slider/Gruntfile.js')(grunt);
+
 
     // npm tasks
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -140,13 +118,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-text-replace');
-    grunt.loadNpmTasks('grunt-newer');
 
     // custom tasks
     grunt.registerTask('serve', ['connect', 'watch']);
-    grunt.registerTask('bower', ['copy:bower', 'replace:bower']);
-    grunt.registerTask('build', ['sass', 'uglify', 'copy:site', 'imagemin', 'htmlmin']);
-    grunt.registerTask('build-new', ['sass', 'newer:uglify', 'newer:copy:site', 'newer:imagemin', 'newer:htmlmin']);
+    grunt.registerTask('build', ['copy', 'replace', 'sass', 'uglify', 'imagemin', 'htmlmin']);
 
     // default task
     grunt.registerTask('default', ['build']);
