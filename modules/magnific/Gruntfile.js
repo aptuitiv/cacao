@@ -23,5 +23,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build-magnific', ['replace:magnific', 'uglify:magnific']);
 
-}
+};
 

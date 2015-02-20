@@ -11,5 +11,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build-normalize', ['copy:normalize']);
 
-}
+};
 

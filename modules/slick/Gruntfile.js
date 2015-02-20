@@ -12,5 +12,5 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build-slick', ['uglify:slick']);
 
-}
+};
 
