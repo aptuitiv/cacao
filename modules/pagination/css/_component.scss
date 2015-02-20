@@ -5,40 +5,14 @@
  *
  */
 
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  VARIABLES
-\*---------------------------------------------------------------------------*/
-
-/**
- * Base settings applied to the wrapper.
- */
-$pagination-wrapper-padding: .25em !default;
-
-/**
- * Margin between each pagination_item (page links and navigation items)
- */
-$pagination-item-spacing: .5em !default;
-
-/**
- * Padding on each page link
- */
-$pagination-page-padding: .25em .5em !default;
-
-/**
- * Padding on each navigation link
- */
-$pagination-nav-padding: $pagination-page-padding !default;
+@import "settings";
 
 
 
 
 
 /*---------------------------------------------------------------------------*\
-  MODULE
+  COMPONENT
 \*---------------------------------------------------------------------------*/
 
 /**

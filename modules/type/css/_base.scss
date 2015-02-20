@@ -14,46 +14,6 @@
 
 
 /*---------------------------------------------------------------------------*\
-  VARIABLES
-\*---------------------------------------------------------------------------*/
-
-/** 
- * Font stack.
- * Use the same syntax as css font-family property.
- */
-$base-font-stack: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$base-font-size: 14px !default;
-$base-line-height: 21px !default;
-$base-font-weight: normal !default;
-$base-letter-spacing: 0 !default;
-$base-rhythm: $base-line-height/2 !default;
-
-$heading-font-stack: $base-font-stack !default;
-$heading-font-weight: $base-font-weight !default;
-$heading-letter-spacing: $base-letter-spacing !default;
-
-
-
-/**
- * Font scale
- */
-$giga: 96px !default;
-$mega: 72px !default;
-$kilo: 48px !default;
-$alpha: 36px !default; // h1
-$beta: 32px !default; // h2
-$gamma: 28px !default; // h3
-$delta: 24px !default; // h4
-$epsilon: 20px !default; // h5
-$zeta: 18px !default; // h6
-$milli: 14px !default;
-$micro: 12px !default;
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
   LIBRARY
 \*---------------------------------------------------------------------------*/
 

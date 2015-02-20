@@ -10,6 +10,8 @@
  * - Modifier classes.
  */
 
+@import "settings";
+
 
 
 /**
@@ -37,58 +39,6 @@
  * Note: An unordered list may be used in place of <div>s.
  *
  */
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  VARIABLES
-\*---------------------------------------------------------------------------*/
-
-/**
- * The number of columns and the gutter between them.
- */
-$grid-column-count: 12 !default;
-$grid-column-gutter: 2em !default;
-
-/**
- * Set to false to disable media queries.
- */
-$grid-responsive: true !default;
-
-/**
- * Enable mobile first media queries.
- */
-$grid-mobile-first: false !default;
-
-/**
- * Enable or disable .grid-* modifiers.
- */
-$grid-modifiers: true !default;
-
-/**
- * Enable or disable column position modifiers.
- */
-$grid-use-pull: true !default;
-$grid-use-push: true !default;
-$grid-use-offset: true !default;
-
-/**
- * Media query breakpoints.
- * This map can be overridden with your own extentions and breakpoints to be
- * used in the responsive classes.
- *
- * Sorted largest to smallest for the media queries to cascade correctly.
- */
-$grid-breakpoints: (
-    xl: 1200px,
-    lg: 1000px,
-    md: 800px,
-    sm: 600px,
-    xs: 400px,
-) !default;
-
 
 
 
