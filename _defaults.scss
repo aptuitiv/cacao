@@ -1,62 +1,45 @@
 /*---------------------------------------------------------------------------*\
-  SETTINGS
+  DEFAULT GLOBAL VARIABLES
 \*---------------------------------------------------------------------------*/
+
 /**
- * Global variables, layout settings, and module settings go here.
+ * Breakpoints
  */
+$g-bp-xl: 1075px !default;
+$g-bp-lg: 960px !default;
+$g-bp-md: 780px !default;
+$g-bp-sm: 600px !default;
+$g-bp-xs: 400px !default;
 
 
-
-
-
-/*---------------------------------------------------------------------------*\
-  GLOBAL VARIABLES
-\*---------------------------------------------------------------------------*/
 
 /**
  * Typography
  */
-$base-font-stack: "Open Sans", sans-serif;
-$base-font-size: 15px;
-$base-font-weight: normal;
-$base-line-height: 22px;
-$base-letter-spacing: .15px;
-$base-rhythm: $base-line-height/2;
+$g-font-stack: Arial, Helvetica Neue, Helvetica, sans-serif; !default;
+$g-font-size: 15px !default;
+$g-font-weight: normal !default;
+$g-line-height: 22px !default;
+$g-letter-spacing: .15px !default;
+$g-rhythm: $g-line-height/2 !default;
 
-$heading-font-stack: "Merriweather", serif;
-$heading-font-weight: 900;
-$heading-letter-spacing: -.5px;
+$g-heading-font-stack: $g-font-stack !default;
+$g-heading-font-weight: bold !default;
+$g-heading-letter-spacing: $g-letter-spacing !default;
 
-$giga: 74px;
-$mega: 62px;
-$kilo: 48px;
-$alpha: 36px; // h1
-$beta: 28px; // h2
-$gamma: 24px; // h3
-$delta: 20px; // h4
-$epsilon: 18px; // h5
-$zeta: 15px; // h6
-$milli: 13px;
-$micro: 11px;
+// font scale
+// (these names are likely to change)
+$g-giga: 74px !default;
+$g-mega: 62px !default;
+$g-kilo: 48px !default;
+$g-alpha: 36px !default; // h1
+$g-beta: 28px !default; // h2
+$g-gamma: 24px !default; // h3
+$g-delta: 20px !default; // h4
+$g-epsilon: 18px !default; // h5
+$g-zeta: 15px !default; // h6
+$g-milli: 13px !default;
+$g-micro: 11px !default;
 
-
-
-/**
- * Breakpoints
- * Used globally and to configure the grid module below.
- */
-$bp-xl: 1075px;
-$bp-lg: 960px;
-$bp-md: 780px;
-$bp-sm: 600px;
-$bp-xs: 400px;
-
-
-
-/**
- * Page variables (used below to configure layouts and modules)
- */
-$page-width: 960px;
-$page-gutter: $base-rhythm*2;
 
 
