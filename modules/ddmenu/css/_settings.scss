@@ -12,8 +12,15 @@ $ddmenu-classname: "ddmenu" !default;
  */
 $ddmenu-bp: $g-bp-md !default;
 
-$ddmenu-item-padding: 8px 16px !default;
 $ddmenu-fontsize: $g-epsilon !default;
 
+$ddmenu-menu-padding: $g-rhythm 0 0 !default;
+
+$ddmenu-item-padding: $g-rhythm 16px !default;
+$ddmenu-item-spacing: $g-rhythm !default;
+
+$ddmenu-header-padding: $ddmenu-item-padding !default;
+$ddmenu-header-height: $g-rhythm*4 !default;
+$ddmenu-header-fontsize: $g-zeta !default;
 
 

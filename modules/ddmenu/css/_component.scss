@@ -18,10 +18,10 @@
 }
 
 .ap-ddmenu-header {
+    @include font-size($ddmenu-header-fontsize, $line-height: true);
     position: relative;
-    height: $g-rhythm*2;
-    padding-left: nth($ddmenu-item-padding, 2);
-    padding-right: nth($ddmenu-item-padding, 2);
+    height: $ddmenu-header-height;
+    padding: $ddmenu-header-padding;
 }
 
 .ddmenu_current {
@@ -49,7 +49,7 @@
     .#{$ddmenu-classname}.-root,
     .#{$ddmenu-classname}.-sub {
         display: block;
-        padding: 0;
+        padding: $ddmenu-menu-padding;
         margin: 0;
     }
     .#{$ddmenu-classname}.-sub,
@@ -71,7 +71,7 @@
         display: block;
         position: static;
         width: 100%;
-        margin: 0;
+        margin: 0 0 $ddmenu-item-spacing;
     }
     .#{$ddmenu-classname}_link,
     .#{$ddmenu-classname}_link.-root,
