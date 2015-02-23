@@ -1,0 +1,146 @@
+/*---------------------------------------------------------------------------*\
+  MAIN NAVIGATION & MOBILE DRILLDOWN
+\*---------------------------------------------------------------------------*/
+
+@import "settings";
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  PLACEHOLDERS
+\*---------------------------------------------------------------------------*/
+
+/**
+ * Base menu
+ */
+%mainnav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+// root menu
+%mainnav--root {
+    display: $ddmenu-root-display;
+    font-size: $ddmenu-root-fontsize;
+    margin-left: -$ddmenu-root-item-spacing;
+}
+
+// sub menus
+%mainnav--sub {
+    display: none;
+    min-width: 100%;
+    padding: $ddmenu-sub-padding;
+    font-size: $ddmenu-sub-fontsize;
+}
+
+
+
+/**
+ * Menu items
+ */
+%mainnav_item {
+    position: relative;
+
+    &:hover > %mainnav--sub {
+        display: block;
+        position: absolute;
+        z-index: $ddmenu-sub-zindex;
+    }
+}
+
+// the root level items
+%mainnav_item--root {
+    display: inline-block;
+    width: $ddmenu-root-item-width;
+    margin-left: $ddmenu-root-item-spacing;
+
+    &:hover > %mainnav--sub {
+        top: 100%;
+        left: 0;
+    }
+}
+
+// the sub menu items
+%mainnav_item--sub {
+    width: 100%;
+    margin-bottom: $ddmenu-sub-item-spacing;
+
+    &:hover > %mainnav--sub {
+        top: $ddmenu-sub-sub-offset;
+        left: 100%;
+    }
+}
+
+
+
+/**
+ * Menu links
+ */
+%mainnav_link {
+    display: block;
+}
+
+// the root level links
+%mainnav_link--root {
+    padding: $ddmenu-root-item-padding;
+}
+
+// the sub menu links
+%mainnav_link--sub {
+    padding: $ddmenu-sub-item-padding;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  MODULE
+\*---------------------------------------------------------------------------*/
+
+.mainnav {
+    @extend %mainnav;
+}
+
+.mainnav.-root {
+    @extend %mainnav--root;
+}
+
+.mainnav.-sub {
+    @extend %mainnav--sub;
+}
+
+
+
+.mainnav_item {
+    @extend %mainnav_item;
+}
+
+.mainnav_item.-root {
+    @extend %mainnav_item--root;
+}
+
+.mainnav_item.-sub {
+    @extend %mainnav_item--sub;
+}
+
+
+
+.mainnav_link {
+    @extend %mainnav_link;
+}
+
+.mainnav_link.-root {
+    @extend %mainnav_link--root;
+}
+
+.mainnav_link.-sub {
+    @extend %mainnav_link--sub;
+}
+
+
+
