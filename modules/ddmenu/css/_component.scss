@@ -9,89 +9,27 @@
 
 
 /*---------------------------------------------------------------------------*\
-  PLACEHOLDERS
+  COMPONENTS
 \*---------------------------------------------------------------------------*/
 
-/**
- * Base menu
- */
-%mainnav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-}
-
-// root menu
-%mainnav--root {
-    display: $ddmenu-root-display;
-    font-size: $ddmenu-root-fontsize;
-    margin-left: -$ddmenu-root-item-spacing;
-}
-
-// sub menus
-%mainnav--sub {
+.ap-ddmenu-header,
+.mainnav_item.-clone {
     display: none;
-    min-width: 100%;
-    padding: $ddmenu-sub-padding;
-    font-size: $ddmenu-sub-fontsize;
 }
 
-
-
-/**
- * Menu items
- */
-%mainnav_item {
+.ap-ddmenu-header {
     position: relative;
-
-    &:hover > %mainnav--sub {
-        display: block;
-        position: absolute;
-        z-index: $ddmenu-sub-zindex;
-    }
+    height: $g-rhythm*2;
+    padding-left: nth($ddmenu-item-padding, 2);
+    padding-right: nth($ddmenu-item-padding, 2);
 }
 
-// the root level items
-%mainnav_item--root {
-    display: inline-block;
-    width: $ddmenu-root-item-width;
-    margin-left: $ddmenu-root-item-spacing;
-
-    &:hover > %mainnav--sub {
-        top: 100%;
-        left: 0;
-    }
+.ddmenu_current {
+    text-align: center;
 }
 
-// the sub menu items
-%mainnav_item--sub {
-    width: 100%;
-    margin-bottom: $ddmenu-sub-item-spacing;
-
-    &:hover > %mainnav--sub {
-        top: $ddmenu-sub-sub-offset;
-        left: 100%;
-    }
-}
-
-
-
-/**
- * Menu links
- */
-%mainnav_link {
-    display: block;
-}
-
-// the root level links
-%mainnav_link--root {
-    padding: $ddmenu-root-item-padding;
-}
-
-// the sub menu links
-%mainnav_link--sub {
-    padding: $ddmenu-sub-item-padding;
+.ddmenu_back {
+    position: absolute;
 }
 
 
@@ -99,47 +37,48 @@
 
 
 /*---------------------------------------------------------------------------*\
-  MODULE
+  STATE
 \*---------------------------------------------------------------------------*/
 
-.mainnav {
-    @extend %mainnav;
-}
-
-.mainnav.-root {
-    @extend %mainnav--root;
-}
-
-.mainnav.-sub {
-    @extend %mainnav--sub;
-}
-
-
-
-.mainnav_item {
-    @extend %mainnav_item;
-}
-
-.mainnav_item.-root {
-    @extend %mainnav_item--root;
-}
-
-.mainnav_item.-sub {
-    @extend %mainnav_item--sub;
-}
-
-
-
-.mainnav_link {
-    @extend %mainnav_link;
-}
-
-.mainnav_link.-root {
-    @extend %mainnav_link--root;
-}
-
-.mainnav_link.-sub {
-    @extend %mainnav_link--sub;
+@media (max-width: $ddmenu-bp) {
+    .ap-ddmenu-header,
+    .mainnav_item.-clone {
+        display: block;
+    }
+    .mainnav,
+    .mainnav.-root,
+    .mainnav.-sub {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    .mainnav.-sub,
+    .mainnav_item.-root:hover > .mainnav.-sub,
+    .mainnav_item.-sub:hover > .mainnav.-sub {
+        display: none;
+        top: 0;
+        left: 100%;
+    }
+    .mainnav.-root {
+        position: relative;
+    }
+    .mainnav.-sub {
+    }
+    .mainnav_item,
+    .mainnav_item.-root,
+    .mainnav_item.-sub {
+        @include box-sizing(border-box);
+        display: block;
+        position: static;
+        width: 100%;
+        margin: 0;
+    }
+    .mainnav_link,
+    .mainnav_link.-root,
+    .mainnav_link.-sub {
+        @include font-size($ddmenu-fontsize, $line-height: true);
+        padding: $ddmenu-item-padding;
+    }
 }
 
 

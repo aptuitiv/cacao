@@ -1,48 +1,15 @@
 /*---------------------------------------------------------------------------*\
-  VARIABLES
+  DDMENU
 \*---------------------------------------------------------------------------*/
 
 /**
- * Root menu display value
- * Set to inline-block if needed (text-align: center; the menu, etc...)
+ * Breakpoint that the ddmenu becomes active.
  */
-$ddmenu-root-display: block !default;
+$ddmenu-bp: $g-bp-md !default;
 
+$ddmenu-item-padding: 8px 16px !default;
 
-
-/**
- * Font sizes
- */
-$ddmenu-root-fontsize: $g-epsilon !default;
-$ddmenu-sub-fontsize: $g-zeta !default;
-
-
-
-/**
- * Root menu defaults
- */
-$ddmenu-root-item-width: auto !default;
-$ddmenu-root-item-spacing: 16px !default;
-$ddmenu-root-item-padding: 4px 8px !default;
-
-
-
-/**
- * Sub menu defaults
- */
-$ddmenu-sub-padding: 4px 0 0 !default;
-$ddmenu-sub-item-spacing: 4px !default;
-$ddmenu-sub-item-padding: 4px 8px !default;
-$ddmenu-sub-zindex: 10 !default;
-
-
-
-/**
- * Sub-sub Menu defaults
- */
-// Vertically align the sub-sub-menu with its parent item.
-// Apply a negative top value equal to the sub-menus top padding.
-$ddmenu-sub-sub-offset: -(nth($ddmenu-sub-padding, 1)) - 1 !default;
+$ddmenu-fontsize: $g-epsilon !default;
 
 
 
