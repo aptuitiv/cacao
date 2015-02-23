@@ -39,10 +39,10 @@ $mainnav-sub-zindex: 10 !default;
 
 /**
  * Sub-sub Menu defaults
+ * 1. Vertically align the sub-sub-menu with its parent item.
+ *    Apply a negative top value equal to the sub-menus top padding.
  */
-// Vertically align the sub-sub-menu with its parent item.
-// Apply a negative top value equal to the sub-menus top padding.
-$mainnav-sub-sub-offset: -(nth($mainnav-sub-padding, 1)) - 1 !default;
+$mainnav-sub-sub-offset: -(nth($mainnav-sub-padding, 1)) - 1 !default; /* 1 */
 
 
 
