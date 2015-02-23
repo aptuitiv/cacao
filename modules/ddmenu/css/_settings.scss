@@ -3,12 +3,16 @@
 \*---------------------------------------------------------------------------*/
 
 /**
+ * Class name of the navigation menu to activate
+ */
+$ddmenu-classname: "ddmenu" !default;
+
+/**
  * Breakpoint that the ddmenu becomes active.
  */
 $ddmenu-bp: $g-bp-md !default;
 
 $ddmenu-item-padding: 8px 16px !default;
-
 $ddmenu-fontsize: $g-epsilon !default;
 
 
