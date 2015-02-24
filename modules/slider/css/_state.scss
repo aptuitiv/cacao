@@ -1,0 +1,30 @@
+/*---------------------------------------------------------------------------*\
+  SLIDER STATE
+\*---------------------------------------------------------------------------*/
+
+@import "settings";
+
+
+
+@media (max-width: $slider-bp) {
+
+    .slider_nav {
+        left: $slider-nav-gutter-alt;
+        right: $slider-nav-gutter-alt;
+    }
+
+}
+
+
+
+@media (max-width: $slider-bp-hidden) {
+
+    .slider {
+        display: none;
+    }
+
+}
+
+
+
+
