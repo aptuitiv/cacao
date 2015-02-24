@@ -1,15 +1,8 @@
 /*---------------------------------------------------------------------------*\
   GRID SYSTEM
 \*---------------------------------------------------------------------------*/
-/**
- * CONTENTS
- * - Variables.
- * - Grid library. Necessary components.
- * - Base elements.
- * - Column width, positioning, and responsive classes.
- * - Modifier classes.
- */
 
+@import "globals";
 @import "settings";
 
 
@@ -39,88 +32,6 @@
  * Note: An unordered list may be used in place of <div>s.
  *
  */
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  GRID LIBRARY
-\*---------------------------------------------------------------------------*/
-
-/**
- * Reverse a list or map.
- * Used to reverse the breakpoint map if mobile first.
- * Source: http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
- */
-@function grid-reverse($list, $recursive: false) {
-    $result: ();
-
-    @for $i from length($list)*-1 through -1 {
-        @if type-of(nth($list, abs($i))) == list and $recursive {
-            $result: append($result, reverse(nth($list, abs($i)), $recursive));      
-        }
-        @else {
-            $result: append($result, nth($list, abs($i)));
-        }
-    }
-
-    @return $result;
-}
-
-
-
-/**
- * Builder mixin.
- *
- * Creates column and modifier classes based on input and grid settings.
- *
- * $col: Should be the number of columns to span.
- * $ext: Optional. The extension to use for the breakpoint classes.
- *       The 'md' in '.col-12-md'
- */
-@mixin grid-create-width($col, $ext: "") {
-
-    /**
-     * Prepend a seperator onto the extension if there is one.
-     */
-    @if $ext != "" {
-        $ext: "-" + $ext;
-    }
-
-    /**
-     * Column width class.
-     * Sets the width as a simple fraction.
-     * Extend the base column if the class is outside of a media query.
-     */
-    .col-#{$col}#{$ext} {
-        @if $ext == "" {
-            @extend %col;
-        }
-        width: percentage($col/$grid-column-count);
-    }
-    /**
-     * Utilize relative positioning and the left property to push/pull columns.
-     */
-    @if $grid-use-push {
-        .push-#{$col}#{$ext} {
-            left: percentage($col/$grid-column-count);
-        }
-    }
-    @if $grid-use-pull {
-        .pull-#{$col}#{$ext} {
-            left: -(percentage($col/$grid-column-count));
-        }
-    }
-    /**
-     * Use a margin to offset columns so no other columns can use that space.
-     */
-    @if $grid-use-pull {
-        .offset-#{$col}#{$ext} {
-            margin-left: percentage($col/$grid-column-count);
-        }
-    }
-}
 
 
 
@@ -169,12 +80,6 @@
 
 
 
-
-
-/*---------------------------------------------------------------------------*\
-  COLUMNS
-\*---------------------------------------------------------------------------*/
-
 /**
  * Create column width and modifier classes based on $column-count.
  * Start $i at 1 because there is no need for 0 width columns or modifiers
@@ -182,37 +87,6 @@
  */
 @for $i from 1 through $grid-column-count {
     @include grid-create-width($i);
-}
-
-
-
-/**
- * Setup responsive media queries with columns, and modifiers.
- */
-@if $grid-responsive {
-
-    $grid-media: max-width;
-
-    /**
-     * Reverse the direction media queries cascade if mobile first.
-     */
-    @if $grid-mobile-first {
-        $grid-media: min-width;
-        $grid-breakpoints: grid-reverse($grid-breakpoints);
-    }
-
-    /**
-     * Loop through the breakpoint map and make responsive column/modifier 
-     * classes using the breakpoint extension.
-     */
-    @each $ext, $bp in $grid-breakpoints {
-        @media ($grid-media: $bp) {
-            @for $i from 0 through $grid-column-count {
-                @include grid-create-width($i, $ext);
-            }
-        }
-    }
-
 }
 
 

@@ -9,11 +9,6 @@ $grid-column-count: 12 !default;
 $grid-column-gutter: 2em !default;
 
 /**
- * Set to false to disable media queries.
- */
-$grid-responsive: true !default;
-
-/**
  * Enable mobile first media queries.
  */
 $grid-mobile-first: false !default;
