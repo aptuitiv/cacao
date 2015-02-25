@@ -6,6 +6,7 @@
   "description": "A collection of frontend modules.",
   "license": "MIT",
   "private": true,
+  "main": "_cacao.scss",
   "ignore": [
     "**/.*",
     "node_modules",
