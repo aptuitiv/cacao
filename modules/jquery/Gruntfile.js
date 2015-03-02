@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         uglify: {
             jquery: {
                 files: {
-                    '<%= global.dest %>/layout/js/jquery.js': ['bower_components/jquery/dist/jquery.js']
+                    '<%= global.dest %>/layout/js/jquery.js': ['<%= global.bower %>/jquery/dist/jquery.js']
                 }
             }
         }

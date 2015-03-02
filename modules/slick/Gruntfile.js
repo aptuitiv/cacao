@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         uglify: {
             slick: {
                 files: {
-                    '<%= global.dest %>/layout/js/slick.js': ['bower_components/slick.js/slick/slick.js']
+                    '<%= global.dest %>/layout/js/slick.js': ['<%= global.bower %>/slick.js/slick/slick.js']
                 }
             }
         }

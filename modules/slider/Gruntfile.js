@@ -5,7 +5,7 @@ module.exports = function(grunt) {
             slider: {
                 files: [{
                     expand: true,
-                    cwd: 'bower_components/cacao/modules/slider/images',
+                    cwd: '<%= global.cacao %>/modules/slider/images',
                     src: ['**/*.{png,jpg,gif}'],
                     dest: '<%= global.dest %>/layout/images'
                 }]

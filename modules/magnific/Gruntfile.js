@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         replace: {
             /* our own settings file is already imported in main.scss */
             magnific: {
-                src: ['bower_components/magnific-popup/**/*.scss'],
+                src: ['<%= global.bower %>/magnific-popup/**/*.scss'],
                 overwrite: true,
                 replacements: [{
                     from: /@import "settings";/g,
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         uglify: {
             magnific: {
                 files: {
-                    '<%= global.dest %>/layout/js/jquery.magnific-popup.js': ['bower_components/magnific-popup/dist/jquery.magnific-popup.js']
+                    '<%= global.dest %>/layout/js/jquery.magnific-popup.js': ['<%= global.bower %>/magnific-popup/dist/jquery.magnific-popup.js']
                 }
             }
         }
