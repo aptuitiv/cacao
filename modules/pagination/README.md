@@ -3,11 +3,14 @@ Pagination
 
 A pagination module. Styles pagination.
 
-States: `-is-current`, `:link` states.
+### States
+
+- `-is-current`
+- `:link` states
 
 
-Usage:
-------
+Usage
+-----
 
     <div class="pagination">
         <a class="pagination_item-nav" href="#">&lt;&lt; Prev</a>

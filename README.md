@@ -14,7 +14,7 @@ The easiest way to get started using Cacao is to install it with bower:
 
 `bower install 'https://github.com/aptuitiv/cacao.git' --save`
 
-At the bare minimum the main Cacao file, `_cacao.scss`, must be imported at the top of your projects stylesheet.
+At the bare minimum the main Cacao file, `_cacao.scss`, must be imported at the top of your project's stylesheet.
 
     /* main.scss */
 
@@ -31,7 +31,7 @@ This creates a lot of imports but modules are structured this way to increase fl
 Globals
 =======
 
-Cacao consists of a small set of mixins and globals that are used throughout the modules, but can also be used throughout your site to keep things consistent.
+Cacao consists of a small set of mixins and globals that are used throughout the modules, and can also be used throughout your site to keep things consistent.
 
 Take a peek in `_defaults.scss` and `_mixins.scss` to see what is available.
 
@@ -47,10 +47,10 @@ Here is a mock-up of what you might see in a module's directory:
     _myModule
     |
     |__css
-    | |___base.scss           // base element styles
-    | |___component.scss      // layout and component styles
-    | |___generic.scss        // generic and helper styles
     | |___settings.scss       // module defaults
+    | |___base.scss           // base element styles
+    | |___generic.scss        // generic and helper styles
+    | |___component.scss      // layout and component styles
     | |___state.scss          // state styles
     |
     |__images
@@ -68,7 +68,7 @@ Stylesheets
 -----------
 
 The module styles are separated into several layers.
-Each of these layers can use the modules default style settings.
+Each of these layers can use the module's default style settings.
 Between overriding these settings and leveraging the style layers the user can create predictable and flexible stylesheets.
 
 * base
@@ -125,15 +125,13 @@ Build Tasks
 
 Some modules may contain a `Gruntfile.js` containing specific build tasks.
 
-These can be imported into your project's Gruntfile. They make use of two global variables as shown below.
+These can be imported into your project's Gruntfile. They make use of global variables as shown below.
 
     module.exports = function(grunt) {
 
         grunt.initConfig({
             // Global build settings
             global: {
-                // Project source files
-                src: 'site',
                 // Build destination
                 dest: 'dist'
             }
@@ -151,7 +149,7 @@ These can be imported into your project's Gruntfile. They make use of two global
 Dependencies
 ------------
 
-Currently there is no dependency resolution. Dependencies are put into `bower.json` and left for the user to process either manually or via a build process.
+Currently there is no dependency resolution. Dependencies are put into `bower.json` and left for the user to process either manually or via a build system.
 
 
 

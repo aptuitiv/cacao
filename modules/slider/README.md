@@ -1,11 +1,11 @@
 Slider
 ======
 
-Contains styles for a slider component that can be used with a slider plugin such as Slick.
+Slider component that can be used with a slider plugin such as Slick.
 
 
-Usage:
-------
+Usage
+-----
 
     <div class="slider">
         <div class="slider_nav">
@@ -13,7 +13,7 @@ Usage:
             <div class="slider_nav_next"><a href="#"><img src="/layout/images/slider-arrow-next.png"></a></div>
         </div>
         <div class="slider_pager t-center">
-            <a href="#" class="slider_pager_item current"></a>
+            <a href="#" class="slider_pager_item -is-current"></a>
             <a href="#" class="slider_pager_item"></a>
             <a href="#" class="slider_pager_item"></a>
         </div>

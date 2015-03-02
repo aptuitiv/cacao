@@ -3,11 +3,23 @@ Breadcrumbs
 
 A breadcrumbs module. Styles breadcrumbs.
 
-States: `-is-disabled`, `-is-current`, `:link` states.
+### Settings
+
+* `$crumbs-wrapper-padding`
+* `$crumbs-item-spacing`
+* `$crumbs-crumb-padding`
+* `$crumbs-separator`
+* `$crumbs-separator-padding`
+
+### States
+
+* `-is-disabled`
+* `-is-current`
+* `:link` states
 
 
-Usage:
-------
+Usage
+-----
 
     <div class="breadcrumbs">
         <a class="breadcrumbs_item-crumb" href="#">Home</a>

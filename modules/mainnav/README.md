@@ -3,8 +3,23 @@ mainnav
 
 Generic main navigation with dropdown menus.
 
-Usage:
-------
+### Settings
+
+- `$mainnav-root-display`
+- `$mainnav-root-fontsize`
+- `$mainnav-sub-fontsize`
+- `$mainnav-root-item-width`
+- `$mainnav-root-item-spacing`
+- `$mainnav-root-item-padding`
+- `$mainnav-sub-padding`
+- `$mainnav-sub-item-spacing`
+- `$mainnav-sub-item-padding`
+- `$mainnav-sub-zindex`
+- `$mainnav-sub-sub-offset`
+
+
+Usage
+-----
 
     <ul class="mainnav -root">
 

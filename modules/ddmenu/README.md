@@ -9,8 +9,21 @@ By default these styles are scoped to navigation menus prefixed with `ddmenu` cl
 
 This can optionally be set to your menu of choice, for example the classname can be set to the mainnav module's class. This allows you to create a generic dropdown menu that becomes a drilldown menu at the specified breakpoint.
 
-Usage:
-------
+### Settings
+
+- `$ddmenu-classname`
+- `$ddmenu-bp`
+- `$ddmenu-fontsize`
+- `$ddmenu-menu-padding`
+- `$ddmenu-item-padding`
+- `$ddmenu-item-spacing`
+- `$ddmenu-header-padding`
+- `$ddmenu-header-height`
+- `$ddmenu-header-fontsize`
+
+
+Usage
+-----
 
     <ul class="ddmenu -root">
 
