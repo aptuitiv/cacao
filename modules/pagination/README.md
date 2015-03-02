@@ -3,6 +3,13 @@ Pagination
 
 A pagination module. Styles pagination.
 
+### Settings
+
+- `$pagination-wrapper-padding`
+- `$pagination-item-spacing`
+- `$pagination-page-padding`
+- `$pagination-nav-padding`
+
 ### States
 
 - `-is-current`
@@ -20,4 +27,6 @@ Usage
         <a class="pagination_item-page" href="#">4</a>
         <a class="pagination_item-nav" href="#">Next &gt;&gt;</a>
     </div>
+
+
 

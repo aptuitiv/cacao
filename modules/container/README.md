@@ -19,7 +19,7 @@ Usage
 -----
 
     <div class="header">
-        <div class="container">
+        <div class="container -gutter-none">
             [ ... ]
         </div>
     </div>

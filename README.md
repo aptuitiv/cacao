@@ -1,10 +1,10 @@
 Cacao
 =====
 
-Cacao is a light framework that includes flexible, reusable front-end modules and also a small set of global settings and mixins.
+Cacao is a light framework that includes flexible, reusable front-end modules and also a small set of global settings
+and mixins.
 
 [How to pronounce Cacao.](https://www.youtube.com/watch?v=kVSIkXL_Nmo)
-
 
 
 Getting Started
@@ -23,15 +23,17 @@ At the bare minimum the main Cacao file, `_cacao.scss`, must be imported at the 
 
     // the rest of your project
 
-This main file only imports the framework part of Cacao. In order to use the modules you must individually import its "layers" (see below).
-This creates a lot of imports but modules are structured this way to increase flexibility and modularity.
+This main file only imports the framework part of Cacao. In order to use the modules you must individually import its
+"layers" (see below). This creates a lot of imports but modules are structured this way to increase flexibility and
+modularity.
 
 
 
 Globals
 =======
 
-Cacao consists of a small set of mixins and globals that are used throughout the modules, and can also be used throughout your site to keep things consistent.
+Cacao consists of a small set of mixins and globals that are used throughout the modules, and can also be used
+throughout your site to keep things consistent.
 
 Take a peek in `_defaults.scss` and `_mixins.scss` to see what is available.
 
@@ -40,7 +42,8 @@ Take a peek in `_defaults.scss` and `_mixins.scss` to see what is available.
 Modules
 =======
 
-Modules follow a strict directory structure. They may contain javascript, images, stylesheets, whatever the module needs to get it's job done.
+Modules follow a strict directory structure. They may contain javascript, images, stylesheets, whatever the module
+needs to get it's job done.
 
 Here is a mock-up of what you might see in a module's directory:
 
@@ -67,14 +70,14 @@ Here is a mock-up of what you might see in a module's directory:
 Stylesheets
 -----------
 
-The module styles are separated into several layers.
-Each of these layers can use the module's default style settings.
-Between overriding these settings and leveraging the style layers the user can create predictable and flexible stylesheets.
+The module styles are separated into several layers. Each of these layers can use the module's default style settings.
+Between overriding these settings and leveraging the style layers the user can create predictable and flexible
+stylesheets.
 
-* base
-* generic
-* component
-* state
+- base
+- generic
+- component
+- state
 
 An example of a site's `main.scss` that makes use of these layers:
 
@@ -153,7 +156,8 @@ These can be imported into your project's Gruntfile. They make use of global var
 Dependencies
 ------------
 
-Currently there is no dependency resolution. Dependencies are put into `bower.json` and left for the user to process either manually or via a build system.
+Currently there is no dependency resolution. Dependencies are put into `bower.json` and left for the user to process
+either manually or via a build system.
 
 
 

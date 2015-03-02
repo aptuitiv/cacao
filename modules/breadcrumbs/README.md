@@ -5,17 +5,17 @@ A breadcrumbs module. Styles breadcrumbs.
 
 ### Settings
 
-* `$crumbs-wrapper-padding`
-* `$crumbs-item-spacing`
-* `$crumbs-crumb-padding`
-* `$crumbs-separator`
-* `$crumbs-separator-padding`
+- `$crumbs-wrapper-padding`
+- `$crumbs-item-spacing`
+- `$crumbs-crumb-padding`
+- `$crumbs-separator`
+- `$crumbs-separator-padding`
 
 ### States
 
-* `-is-disabled`
-* `-is-current`
-* `:link` states
+- `-is-disabled`
+- `-is-current`
+- `:link` states
 
 
 Usage
@@ -30,5 +30,6 @@ Usage
         <span class="breadcrumbs_item-separator"></span>
         <a class="breadcrumbs_item-crumb -is-current" href="#">Current Page</a>
     </div>
+
 
 
