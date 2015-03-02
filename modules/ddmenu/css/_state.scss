@@ -5,6 +5,7 @@
 
 
 @media (max-width: $ddmenu-bp) {
+    .ddmenu_toggle,
     .ap-ddmenu-header,
     .#{$ddmenu-classname}_item.-clone {
         display: block;

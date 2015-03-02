@@ -17,7 +17,7 @@
         prependCurrentOnChild: true,
         prependCurrentOnChildCallback: function() {},
         parentIconText: '',
-        toggleSwitch: '.ddmenu',
+        toggleSwitch: '.ddmenu_toggle',
         toggleSpeed: 200
     });
 

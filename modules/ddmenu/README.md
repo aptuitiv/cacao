@@ -25,6 +25,8 @@ This can optionally be set to your menu of choice, for example the classname can
 Usage
 -----
 
+    <a class="ddmenu_toggle">Menu</a>
+
     <ul class="ddmenu -root">
 
         <li class="ddmenu_item -root">
