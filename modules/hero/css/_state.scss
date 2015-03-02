@@ -2,50 +2,6 @@
   HERO STATE
 \*---------------------------------------------------------------------------*/
 
-
-
-@media (max-width: $hero-bp-md) {
-
-    .hero_title {
-        @include font-size($hero-title-size-md, $line-height: true);
-        margin-bottom: $hero-title-margin-md;
-    }
-
-    .hero_subtitle {
-        @include font-size($hero-subtitle-size-md, $line-height: true);
-        margin-bottom: $hero-subtitle-margin-md;
-    }
-
-    .hero_button {
-        @include font-size($hero-button-size-md, $line-height: true);
-        padding: $hero-button-padding-md;
-    }
-
-}
-
-
-
-@media (max-width: $hero-bp-sm) {
-
-    .hero_title {
-        @include font-size($hero-title-size-sm, $line-height: true);
-        margin-bottom: $hero-title-margin-sm;
-    }
-
-    .hero_subtitle {
-        @include font-size($hero-subtitle-size-sm, $line-height: true);
-        margin-bottom: $hero-subtitle-margin-sm;
-    }
-
-    .hero_button {
-        @include font-size($hero-button-size-sm, $line-height: true);
-        padding: $hero-button-padding-sm;
-    }
-
-}
-
-
-
 @media (max-width: $hero-bp-hidden) {
 
     .hero {
