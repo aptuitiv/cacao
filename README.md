@@ -133,7 +133,11 @@ These can be imported into your project's Gruntfile. They make use of global var
             // Global build settings
             global: {
                 // Build destination
-                dest: 'dist'
+                dest: 'dist',
+                // bower components directory
+                bower: 'bower_components',
+                // cacao directory
+                cacao: '<%= global.bower %>/cacao'
             }
         });
 
