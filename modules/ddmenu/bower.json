@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "jquery": "1.11.2",
+    "jquery": "~1.11.2",
     "ap-drilldown-menu": "https://github.com/aptuitiv/ap-drilldown-menu.git"
   }
 }

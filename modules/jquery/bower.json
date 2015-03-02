@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "jquery": "1.11.2"
+    "jquery": "~1.11.2"
   }
 }
