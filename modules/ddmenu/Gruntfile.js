@@ -4,7 +4,8 @@ module.exports = function(grunt) {
         uglify: {
             ddmenu: {
                 files: {
-                    '<%= global.dest %>/layout/js/ap-drilldown-menu.js': ['<%= global.bower %>/ap-drilldown-menu/ap-drilldown-menu.js']
+                    '<%= global.dest %>/layout/js/ap-drilldown-menu.js': ['<%= global.bower %>/ap-drilldown-menu/ap-drilldown-menu.js'],
+                    '.build/ddmenu-init.js': ['<%= global.cacao %>/modules/ddmenu/js/init.js']
                 }
             }
         }

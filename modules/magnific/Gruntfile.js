@@ -15,7 +15,8 @@ module.exports = function(grunt) {
         uglify: {
             magnific: {
                 files: {
-                    '<%= global.dest %>/layout/js/jquery.magnific-popup.js': ['<%= global.bower %>/magnific-popup/dist/jquery.magnific-popup.js']
+                    '<%= global.dest %>/layout/js/jquery.magnific-popup.js': ['<%= global.bower %>/magnific-popup/dist/jquery.magnific-popup.js'],
+                    '.build/magnific-init.js': ['<%= global.cacao %>/modules/magnific/js/init.js']
                 }
             }
         }
