@@ -10,13 +10,12 @@
 
 
 /*---------------------------------------------------------------------------*\
-  HELPERS
+  HELPERS & UTILITIES
 \*---------------------------------------------------------------------------*/
-
 
 /**
  * Used to set a font size in ems with a px fallback.
- * Optionally include a line-height that snaps to the sites global rhythm.
+ * Optionally include a line-height that snaps to the site's global rhythm.
  * Uses the global font size as the default context to calculate the em unit.
  */
 @mixin font-size($font-size, $context: $g-font-size, $line-height: false){
@@ -60,13 +59,13 @@
 
 
 
-@mixin letterpress($opacity){
-    text-shadow:white($opacity) 0 1px 0;
+@mixin letterpress($opacity) {
+    text-shadow: white($opacity) 0 1px 0;
 }
 
 
 
-@mixin box-emboss($opacity, $opacity2){
+@mixin box-emboss($opacity, $opacity2) {
     box-shadow: white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
 }
 
@@ -84,7 +83,6 @@
     }
     @if ($triangle-direction == down) {
         border-color: transparent $triangle-color transparent transparent;
-        border-bottom-style: solid;
     }
     @if ($triangle-direction == left) {
         border-color: transparent $triangle-color transparent transparent ;
@@ -116,8 +114,10 @@
 
 
 
-/* http://stackoverflow.com/questions/12228548/findinq-equivalent-color-with-opacity */
-@mixin bg_alpha_calc ($desired_colour, $desired_alpha, $background_colour: white) {
+/**
+ * http://stackoverflow.com/questions/12228548/findinq-equivalent-color-with-opacity
+ */
+@mixin bg-alpha-calc ($desired_colour, $desired_alpha, $background_colour: white) {
     $r3: red($desired_colour);
     $g3: green($desired_colour);
     $b3: blue($desired_colour);
@@ -168,12 +168,12 @@
 @mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
     @if $inset {
         -webkit-box-shadow: inset $top $left $blur $spread $color;
-        -moz-box-shadow: inset $top $left $blur $spread $color;
-        box-shadow: inset $top $left $blur $spread $color;
+           -moz-box-shadow: inset $top $left $blur $spread $color;
+                box-shadow: inset $top $left $blur $spread $color;
     } @else {
         -webkit-box-shadow: $top $left $blur $spread $color;
-        -moz-box-shadow: $top $left $blur $spread $color;
-        box-shadow: $top $left $blur $spread $color;
+           -moz-box-shadow: $top $left $blur $spread $color;
+                box-shadow: $top $left $blur $spread $color;
     }
 }
 
@@ -197,9 +197,9 @@
 
 @mixin transition($property: all, $duration: 100ms, $function: linear, $delay: 0s) {
     -webkit-transition: $property $duration $function $delay;
-    -moz-transition: $property $duration $function $delay;
-    -o-transition: $property $duration $function $delay;
-    transition: $property $duration $function $delay;
+       -moz-transition: $property $duration $function $delay;
+         -o-transition: $property $duration $function $delay;
+            transition: $property $duration $function $delay;
 }
 
 
