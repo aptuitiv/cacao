@@ -1,0 +1,64 @@
+/*---------------------------------------------------------------------------*\
+  HERO
+\*---------------------------------------------------------------------------*/
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  COMPONENT
+\*---------------------------------------------------------------------------*/
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.hero_img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.hero_content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    padding-left: $hero-content-gutter;
+    padding-right: $hero-content-gutter;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+
+.hero_title {
+    @include font-size($hero-title-size, $line-height: true);
+    margin-bottom: $hero-title-margin;
+}
+
+
+
+.hero_subtitle {
+    @include font-size($hero-subtitle-size, $line-height: true);
+    margin-bottom: $hero-subtitle-margin;
+}
+
+
+
+.hero_button {
+    @include font-size($hero-button-size, $line-height: true);
+    padding: $hero-button-padding;
+}
+
+
+

@@ -1,22 +1,17 @@
 {
-  "name": "ap-base",
-  "version": "0.0.0",
-  "homepage": "http://www.aptuitiv.com",
+  "name": "cacao",
+  "version": "0.2a",
+  "homepage": "http://aptuitiv.github.io/cacao",
   "authors": "Aptuitiv",
-  "description": "A boilerplate for building webpages.",
+  "description": "A collection of frontend modules.",
   "license": "MIT",
   "private": true,
+  "main": "_cacao.scss",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "jquery": "1.11.1",
-    "magnific-popup": "~0.9.9",
-    "ap-drilldown-menu": "https://github.com/aptuitiv/ap-drilldown-menu.git",
-    "normalize.css": "~3.0.2"
-  }
+  ]
 }

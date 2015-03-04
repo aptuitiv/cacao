@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jquery": "~1.11.2",
+    "slick.js": "~1.4.1"
+  }
+}

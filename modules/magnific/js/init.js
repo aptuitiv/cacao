@@ -1,0 +1,4 @@
+/**
+ * Magnific init
+ */
+

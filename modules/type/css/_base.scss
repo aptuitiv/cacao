@@ -1,0 +1,178 @@
+/*---------------------------------------------------------------------------*\
+  TYPOGRAPHY
+\*---------------------------------------------------------------------------*/
+/**
+ * Set the base typography styles and vertical rhythm.
+ * We use opt-in styles for links. These styles can be scoped or
+ * set by other modules. This cuts down on the amount of overrides and
+ * repeated resets needed in modules.
+ * All colors and visual styles are defined in the theme file.
+ */
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  GENERAL TYPOGRAPHY
+\*---------------------------------------------------------------------------*/
+
+body {
+    @extend %t-body;
+    font-size: $g-font-size;
+    font-weight: $g-font-weight;
+    line-height: ceil($g-font-size / $g-rhythm) * ($g-rhythm / $g-font-size);
+}
+
+p {
+    @include font-size($g-font-size, $line-height: true);
+    margin: 0 0 $g-line-height;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+code,
+pre {
+    @include font-size($g-milli, $line-height: true);
+    margin: 0 0 $g-line-height;
+}
+
+ul,
+ol {
+    margin: 0 0 $g-line-height;
+    padding-left: 1em;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  HEADINGS
+\*---------------------------------------------------------------------------*/
+
+%heading {
+    @extend %t-heading;
+    margin: 0 0 $g-line-height;
+    font-weight: $g-heading-font-weight;
+}
+
+h1,
+.h1 {
+    @extend %heading;
+    @extend %alpha;
+}
+
+h2,
+.h2 {
+    @extend %heading;
+    @extend %beta;
+}
+
+h3,
+.h3 {
+    @extend %heading;
+    @extend %gamma;
+}
+
+h4,
+.h4 {
+    @extend %heading;
+    @extend %delta;
+}
+
+h5,
+.h5 {
+    @extend %heading;
+    @extend %epsilon;
+}
+
+h6,
+.h6 {
+    @extend %heading;
+    @extend %zeta;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  FONT SCALE
+\*---------------------------------------------------------------------------*/
+
+.giga {
+    @include font-size($g-giga, $line-height: true);
+}
+
+.mega {
+    @include font-size($g-mega, $line-height: true);
+}
+
+.kilo {
+    @include font-size($g-kilo, $line-height: true);
+}
+
+.alpha,
+%alpha {
+    @include font-size($g-alpha, $line-height: true);
+}
+
+.beta,
+%beta {
+    @include font-size($g-beta, $line-height: true);
+}
+
+.gamma,
+%gamma {
+    @include font-size($g-gamma, $line-height: true);
+}
+
+.delta,
+%delta {
+    @include font-size($g-delta, $line-height: true);
+}
+
+.epsilon,
+%epsilon {
+    @include font-size($g-epsilon, $line-height: true);
+}
+
+.zeta,
+%zeta {
+    @include font-size($g-zeta, $line-height: true);
+}
+
+.milli {
+    @include font-size($g-milli, $line-height: true);
+}
+
+.micro {
+    @include font-size($g-micro, $line-height: true);
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------*\
+  FONT STACKS
+\*---------------------------------------------------------------------------*/
+
+.t-body,
+%t-body {
+    font-family: $g-font-stack;
+    letter-spacing: $g-letter-spacing;
+}
+
+.t-heading,
+%t-heading {
+    font-family: $g-heading-font-stack;
+    letter-spacing: $g-heading-letter-spacing;
+}
+
+
+
