@@ -4,8 +4,7 @@ module.exports = function(grunt) {
         uglify: {
             slick: {
                 files: {
-                    '<%= global.dest %>/layout/js/slick.js': ['<%= global.bower %>/slick.js/slick/slick.js'],
-                    '.build/slick-init.js': ['<%= global.cacao %>/modules/slick/js/init.js']
+                    '<%= global.dest %>/layout/js/slick.js': ['<%= global.bower %>/slick.js/slick/slick.js']
                 }
             }
         }
