@@ -9,22 +9,46 @@ by minifying the HTML, commenting white space, etc..
 
 ### Settings
 
+The number of columns and the gutter between them.
+
 - `$grid-column-count`
 - `$grid-column-gutter`
+
+Enable mobile first media queries.
+
 - `$grid-mobile-first`
+
+Enable or disable .grid-* modifiers.
+
 - `$grid-modifiers`
+
+Enable or disable column position modifiers.
+
 - `$grid-use-pull`
 - `$grid-use-push`
 - `$grid-use-offset`
+
+Media query breakpoint map. This map can be overridden with your own extentions and breakpoints to be used in the
+responsive classes. Sorted largest to smallest for the media queries to cascade correctly.
+
 - `$grid-breakpoints`
 
+
 ### Grid Modifiers
+
+Modifies grid gutters.
 
 - `-gutter-none`
 - `-gutter-narrow`
 - `-gutter-wide`
+
+Modifies horizontal alignment of columns.
+
 - `-align-center`
 - `-align-right`
+
+Modifies vertical alignment of columns.
+
 - `-valign-middle`
 - `-valign-bottom`
 
