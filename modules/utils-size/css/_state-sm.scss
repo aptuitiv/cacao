@@ -15,6 +15,18 @@
 
 @media (max-width: $suitSize-sm) {
 
+
+    /**
+     * Make an element the width of its parent.
+     */
+
+    .u-sm-sizeFull {
+        box-sizing: border-box !important;
+        display: block !important;
+        width: 100% !important;
+    }
+
+
     /* Proportional widths: breakpoint 1 (small)
        ========================================================================== */
 
