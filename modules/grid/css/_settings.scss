@@ -3,6 +3,11 @@
 \*---------------------------------------------------------------------------*/
 
 /**
+ * The font size to use when resetting the font size in the grid
+ */
+$grid-font-size: 1rem;
+
+/**
  * The number of columns and the gutter between them.
  */
 $grid-column-count: 12 !default;
