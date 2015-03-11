@@ -16,7 +16,7 @@
 /**
  * Base wrapper.
  */
-.breadcrumbs {
+.Crumbs {
     display: block;
     padding: $crumbs-wrapper-padding;
 }
@@ -26,8 +26,7 @@
 /**
  * Generic item styles shared by the sub classed elements below.
  */
-%breadcrumbs_item,
-.breadcrumbs_item {
+.Crumbs-item {
     display: inline-block;
     margin-right: $crumbs-item-spacing;
     vertical-align: middle;
@@ -40,9 +39,8 @@
  *
  * inherits breadcrumbs_item
  */
-.breadcrumbs_item-crumb {
-    @extend %breadcrumbs_item;
-    padding: $crumbs-crumb-padding;
+.Crumbs-item--page {
+    padding: $crumbs-page-padding;
 }
 
 
@@ -52,8 +50,7 @@
  *
  * inherits breadcrumbs_item
  */
-.breadcrumbs_item-separator {
-    @extend %breadcrumbs_item;
+.Crumbs-item--separator {
     padding: $crumbs-separator-padding;
     &:after {
         content: $crumbs-separator;

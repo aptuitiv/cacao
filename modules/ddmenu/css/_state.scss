@@ -5,42 +5,33 @@
 
 
 @media (max-width: $ddmenu-bp) {
-    .ddmenu_toggle,
+    .DDMenu-toggle,
     .ap-ddmenu-header,
-    .#{$ddmenu-classname}_item.-clone {
+    .#{$ddmenu-classname}-item.clone {
         display: block;
     }
-    .#{$ddmenu-classname},
-    .#{$ddmenu-classname}.-root,
-    .#{$ddmenu-classname}.-sub {
+    .#{$ddmenu-classname} {
         display: block;
         padding: $ddmenu-menu-padding;
         margin: 0;
     }
-    .#{$ddmenu-classname}.-sub,
-    .#{$ddmenu-classname}_item.-root:hover > .#{$ddmenu-classname}.-sub,
-    .#{$ddmenu-classname}_item.-sub:hover > .#{$ddmenu-classname}.-sub {
+    .#{$ddmenu-classname}--sub,
+    .#{$ddmenu-classname}-item:hover > .#{$ddmenu-classname}--sub {
         display: none;
         top: 0;
         left: 100%;
     }
-    .#{$ddmenu-classname}.-root {
+    .#{$ddmenu-classname}--root {
         position: relative;
     }
-    .#{$ddmenu-classname}.-sub {
-    }
-    .#{$ddmenu-classname}_item,
-    .#{$ddmenu-classname}_item.-root,
-    .#{$ddmenu-classname}_item.-sub {
+    .#{$ddmenu-classname}-item {
         @include box-sizing(border-box);
         display: block;
         position: static;
         width: 100%;
         margin: 0 0 $ddmenu-item-spacing;
     }
-    .#{$ddmenu-classname}_link,
-    .#{$ddmenu-classname}_link.-root,
-    .#{$ddmenu-classname}_link.-sub {
+    .#{$ddmenu-classname}-link {
         @include font-size($ddmenu-fontsize, $line-height: true);
         padding: $ddmenu-item-padding;
     }

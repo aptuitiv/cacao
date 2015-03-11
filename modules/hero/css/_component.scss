@@ -10,14 +10,14 @@
   COMPONENT
 \*---------------------------------------------------------------------------*/
 
-.hero {
+.Hero {
     position: relative;
     overflow: hidden;
 }
 
 
 
-.hero_img {
+.Hero-img {
     display: block;
     width: 100%;
     max-width: 100%;
@@ -26,7 +26,7 @@
 
 
 
-.hero_content {
+.Hero-content {
     position: absolute;
     top: 50%;
     left: 0;
@@ -41,21 +41,21 @@
 
 
 
-.hero_title {
+.Hero-title {
     @include font-size($hero-title-size, $line-height: true);
     margin-bottom: $hero-title-margin;
 }
 
 
 
-.hero_subtitle {
+.Hero-subtitle {
     @include font-size($hero-subtitle-size, $line-height: true);
     margin-bottom: $hero-subtitle-margin;
 }
 
 
 
-.hero_button {
+.Hero-button {
     @include font-size($hero-button-size, $line-height: true);
     padding: $hero-button-padding;
 }

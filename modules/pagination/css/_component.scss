@@ -16,7 +16,7 @@
 /**
  * Base wrapper.
  */
-.pagination {
+.Pagination {
     display: block;
     padding: $pagination-wrapper-padding;
 }
@@ -26,8 +26,7 @@
 /**
  * Generic item styles.
  */
-%pagination_item,
-.pagination_item {
+.Pagination-item {
     display: inline-block;
     margin-right: $pagination-item-spacing;
     vertical-align: middle;
@@ -40,8 +39,7 @@
  *
  * inherits pagination_item
  */
-.pagination_item-page {
-    @extend %pagination_item;
+.Pagination-item--page {
     padding: $pagination-page-padding;
 }
 
@@ -52,8 +50,7 @@
  *
  * inherits pagination_item
  */
-.pagination_item-nav {
-    @extend %pagination_item;
+.Pagination-item--nav {
     padding: $pagination-nav-padding;
 }
 

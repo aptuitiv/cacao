@@ -15,31 +15,31 @@ Usage
 
 ### List Reset
 
-    <ul class="list">
+    <ul class="List">
         [...]
     </ul>
 
 ### Inline List
 
-    <ul class="list-inline">
+    <ul class="List List--inline">
         [...]
     </ul>
 
 ### Spaced Inline List
 
-    <ul class="list-spaced">
+    <ul class="List List--inline List--inline--spaced">
         [...]
     </ul>
 
 ### Barred Inline List
 
-    <ul class="list-barred">
+    <ul class="List List--inline List--inline--barred">
         [...]
     </ul>
 
 ### Dotted Inline List
 
-    <ul class="list-dotted">
+    <ul class="List List--inline List--inline--dotted">
         [...]
     </ul>
 

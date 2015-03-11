@@ -1,4 +1,4 @@
-mainnav
+MainNav
 =======
 
 Generic main navigation with dropdown menus.
@@ -21,25 +21,25 @@ Generic main navigation with dropdown menus.
 Usage
 -----
 
-    <ul class="mainnav -root">
+    <ul class="MainNav MainNav--root">
 
-        <li class="mainnav_item -root">
-            <a class="mainnav_link -root" href="#">Link 1</a>
+        <li class="MainNav-item MainNav-item--root">
+            <a class="MainNav-link MainNav-link--root" href="#">Link 1</a>
         </li>
 
-        <li class="mainnav_item -root">
-            <a class="mainnav_link -root" href="#">Link 2</a>
+        <li class="MainNav-item MainNav-item--root">
+            <a class="MainNav-link MainNav-link--root" href="#">Link 2</a>
         </li>
 
-        <li class="mainnav_item -root">
-            <a class="mainnav_link -root" href="#">Link 3</a>
+        <li class="MainNav-item MainNav-item--root">
+            <a class="MainNav-link MainNav-link--root" href="#">Link 3</a>
 
-            <ul class="mainnav -sub">
-                <li class="mainnav_item -sub">
-                    <a class="mainnav_link -sub" href="#">Sub Link 1</a>
+            <ul class="MainNav MainNav--sub">
+                <li class="MainNav-item MainNav-item--sub">
+                    <a class="MainNav-link MainNav-link--sub" href="#">Sub Link 1</a>
                 </li>
-                <li class="mainnav_item -sub">
-                    <a class="mainnav_link -sub" href="#">Sub Link 2</a>
+                <li class="MainNav-item MainNav-item--sub">
+                    <a class="MainNav-link MainNav-link--sub" href="#">Sub Link 2</a>
                 </li>
             </ul>
 

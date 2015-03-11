@@ -11,8 +11,8 @@
 \*---------------------------------------------------------------------------*/
 
 .ap-ddmenu-header,
-.ddmenu_toggle,
-.#{$ddmenu-classname}_item.-clone {
+.DDMenu-toggle,
+.#{$ddmenu-classname}-item.clone {
     display: none;
 }
 
@@ -23,11 +23,11 @@
     padding: $ddmenu-header-padding;
 }
 
-.ddmenu_current {
+.DDMenu-current {
     text-align: center;
 }
 
-.ddmenu_back {
+.DDMenu-back {
     position: absolute;
 }
 

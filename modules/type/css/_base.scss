@@ -61,37 +61,37 @@ ol {
 }
 
 h1,
-.h1 {
+.t-h1 {
     @extend %heading;
     @extend %alpha;
 }
 
 h2,
-.h2 {
+.t-h2 {
     @extend %heading;
     @extend %beta;
 }
 
 h3,
-.h3 {
+.t-h3 {
     @extend %heading;
     @extend %gamma;
 }
 
 h4,
-.h4 {
+.t-h4 {
     @extend %heading;
     @extend %delta;
 }
 
 h5,
-.h5 {
+.t-h5 {
     @extend %heading;
     @extend %epsilon;
 }
 
 h6,
-.h6 {
+.t-h6 {
     @extend %heading;
     @extend %zeta;
 }
@@ -104,53 +104,53 @@ h6,
   FONT SCALE
 \*---------------------------------------------------------------------------*/
 
-.giga {
+.t-giga {
     @include font-size($g-giga, $line-height: true);
 }
 
-.mega {
+.t-mega {
     @include font-size($g-mega, $line-height: true);
 }
 
-.kilo {
+.t-kilo {
     @include font-size($g-kilo, $line-height: true);
 }
 
-.alpha,
+.t-alpha,
 %alpha {
     @include font-size($g-alpha, $line-height: true);
 }
 
-.beta,
+.t-beta,
 %beta {
     @include font-size($g-beta, $line-height: true);
 }
 
-.gamma,
+.t-gamma,
 %gamma {
     @include font-size($g-gamma, $line-height: true);
 }
 
-.delta,
+.t-delta,
 %delta {
     @include font-size($g-delta, $line-height: true);
 }
 
-.epsilon,
+.t-epsilon,
 %epsilon {
     @include font-size($g-epsilon, $line-height: true);
 }
 
-.zeta,
+.t-zeta,
 %zeta {
     @include font-size($g-zeta, $line-height: true);
 }
 
-.milli {
+.t-milli {
     @include font-size($g-milli, $line-height: true);
 }
 
-.micro {
+.t-micro {
     @include font-size($g-micro, $line-height: true);
 }
 

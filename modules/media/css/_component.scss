@@ -2,7 +2,7 @@
   MEDIA OBJECT
 \*---------------------------------------------------------------------------*/
 
-.media {
+.Media {
 }
 
 
@@ -11,7 +11,7 @@
  * This is the media it self.
  * This generally contains an image but can be a wrapper for anything.
  */
-.media_subject {
+.Media-subject {
     float: left;
     margin-right: $media-gutter;
 }
@@ -24,7 +24,7 @@
  *
  * [1] http://www.stubbornella.org/content/2009/07/23/overflow-a-secret-benefit/
  */
-.media_content {
+.Media-content {
     overflow: hidden; /* 1 */
 }
 

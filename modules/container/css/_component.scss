@@ -2,7 +2,7 @@
   CONTAINER
 \*---------------------------------------------------------------------------*/
 /**
- * 
+ * Page container.
  */
 
 
@@ -10,16 +10,12 @@
 
 
 /*---------------------------------------------------------------------------*\
-  PLACEHOLDERS
+  COMPONENT
 \*---------------------------------------------------------------------------*/
-/**
- * Experimental.
- * See: http://viget.com/extend/bem-sass-modifiers
- */
 
 
 
-%container {
+.Container {
     max-width: $container-width;
     margin: 0 auto;
     padding-left: $container-gutter;
@@ -31,7 +27,8 @@
 /**
  * Non-fluid, fixed container.
  */
-%container--fixed {
+
+.Container--widthFixed {
     width: $container-width;
 }
 
@@ -40,7 +37,8 @@
 /**
  * Remove gutters from container.
  */
-%container--gutter-none {
+
+.Container--gutterNone {
     padding-left: 0;
     padding-right: 0;
 }
@@ -50,33 +48,10 @@
 /**
  * Position container to the left.
  */
-%container--align-left {
+
+.Container--alignLeft {
     margin-left: 0;
     margin-right: 0;
-}
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  COMPONENT
-\*---------------------------------------------------------------------------*/
-
-.container {
-    @extend %container;
-}
-
-.container.-fixed {
-    @extend %container--fixed;
-}
-
-.container.-gutter-none {
-    @extend %container--gutter-none;
-}
-
-.container.-align-left {
-    @extend %container--align-left;
 }
 
 

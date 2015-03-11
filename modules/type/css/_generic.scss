@@ -7,19 +7,19 @@
 /**
  * Horizonal Alignment
  */
-.t-left {
+.t-alignLeft {
     text-align: left;
 }
 
-.t-right {
+.t-alignRight {
     text-align: right;
 }
 
-.t-center {
+.t-alignCenter {
     text-align: center;
 }
 
-.t-upper {
+.t-uppercase {
     text-transform: uppercase;
 }
 
@@ -28,19 +28,19 @@
 /**
  * Weight and Style
  */
-.t-normal {
+.t-weightNormal {
     font-weight: normal;
 }
 
-.t-strong {
+.t-weightStrong {
     font-weight: bold;
 }
 
-.t-unstyled {
+.t-styleNone {
     font-style: none;
 }
 
-.t-em {
+.t-styleEm {
     font-style: italics;
 }
 

@@ -18,8 +18,7 @@
  *
  * Barebones list, no margins or styles.
  */
-%list,
-.list {
+.List {
     list-style: none;
     padding-left: 0;
     padding-right: 0;
@@ -34,9 +33,7 @@
  *
  * Extends the list reset.
  */
-%list-inline,
-.list-inline {
-    @extend %list;
+.List--inline {
     display: inline-block;
     > li {
         display: inline-block;
@@ -52,8 +49,7 @@
  * 
  * Extends the inline list.
  */
-.list-spaced {
-    @extend %list-inline;
+.List--inline--spaced {
     margin-left: -$list-spaced-margin;
     > li {
         margin-left: $list-spaced-margin;
@@ -71,9 +67,7 @@
  * 
  * Extends the inline list.
  */
-.list-barred {
-    @extend %list-inline;
-
+.List--inline--barred {
     > li {
         &:before {
             content: "|";
@@ -99,9 +93,7 @@
  * 
  * Extends the inline list.
  */
-.list-dotted {
-    @extend %list-inline;
-
+.List--inline--dotted {
     > li {
         &:before {
             content: "•";
