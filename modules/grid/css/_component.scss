@@ -15,8 +15,8 @@
  *       by minifying the HTML, commenting white space, etc..
  *
  * Basic Example:
- *   4 columns side by side with the default grid settings. When the viewport 
- *   shrinks the columns will collapse to two per row, and finally the 
+ *   4 columns side by side with the default grid settings. When the viewport
+ *   shrinks the columns will collapse to two per row, and finally the
  *   columns will span the full width on a small mobile viewport.
  *
 
@@ -42,16 +42,26 @@
 
 /**
  * Grid wrapper.
- * Resets list styles so an unordered list may be used.
- * Also applies a negative margin to the left to make the columns nestable 
- * and flush.
+ *
+ *
+ *
+ * 1. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ * 2. Remove inter-cell whitespace that appears between `inline-block` child
+ *     elements.
+ * 3. Ensure consistent default alignment.
+ * 4. Resets list styles so an unordered list may be used.
+ * 5. Also applies a negative margin to the left to make the columns nestable
+ *     and flush.
  */
 %grid,
 .grid {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style: none; /* 4 */
+    font-size: 0; /* 2 */
+    margin: 0; /* 1 */
     margin-left: -$grid-column-gutter;
+    padding: 0; /* 1 */
+    text-align: left; /* 3 */
 }
 
 
@@ -63,9 +73,11 @@
  * 1. Set a min-height so columns have a width even if they are empty.
  * 2. Position columns relatively in order to push/pull them.
  * 3. Apply box-sizing instead of relying on it to be set globally.
+ * 4. Reset font size change made in `grid`.
  */
 %col {
     display: inline-block;
+    font-size: $grid-font-size;  /* 4 */
     min-height: 1px; /* 1 */
     padding-left: $grid-column-gutter;
     vertical-align: top;
