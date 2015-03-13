@@ -44,6 +44,8 @@
 .Grid {
     display: block; /* 1 */
     font-size: 0; /* 2 */
+    letter-spacing: 0; /* 2 */
+    list-style: none; /* 1 */
     margin: 0; /* 1 */
     padding: 0; /* 1 */
     text-align: left; /* 3 */
@@ -113,7 +115,7 @@
  * utility or a component class that extends 'grid'.
  *
  * 1. Fundamentals of the non-float grid layout.
- * 2. Reset font size change made in `Grid`.
+ * 2. Reset font changes made in `Grid`.
  * 3. Keeps content correctly aligned with the grid direction.
  * 4. Controls vertical positioning of units.
  * 5. Make cells full-width by default.
@@ -124,6 +126,7 @@
     box-sizing: border-box;
     display: inline-block; /* 1 */
     font-size: $suitGrid-font-size; /* 2 */
+    letter-spacing: $suitGrid-letter-spacing; /* 2 */
     margin: 0;
     padding: 0;
     position: relative; /* 6 */
