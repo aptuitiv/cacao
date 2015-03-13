@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
     grunt.config.merge({
-        imagemin: {
+        copy: {
             slider: {
                 files: [{
                     expand: true,
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('build-slider', ['imagemin:slider']);
+    grunt.registerTask('build-slider', ['copy:slider']);
 
 };
 
