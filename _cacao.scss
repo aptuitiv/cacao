@@ -1,40 +1,12 @@
 /*---------------------------------------------------------------------------*\
   CACAO
 \*---------------------------------------------------------------------------*/
+
 /**
  * Import this file once at the top of your project to start using
  * Cacao's modules.
  */
 
-
-
-/**
- * Globals
- */
-@import "mixins";
 @import "defaults";
-
-
-
-/**
- * Module defaults
- */
-@import "modules/breadcrumbs/styles/settings";
-@import "modules/container/styles/settings";
-@import "modules/ddmenu/styles/settings";
-@import "modules/grid/styles/settings";
-@import "modules/hero/styles/settings";
-@import "modules/lists/styles/settings";
-@import "modules/mainnav/styles/settings";
-@import "modules/media/styles/settings";
-@import "modules/pagination/styles/settings";
-@import "modules/slider/styles/settings";
-@import "modules/grid-suitcss/styles/settings";
-@import "modules/utils-size/styles/settings";
-@import "modules/utils-offset-after/styles/settings";
-@import "modules/utils-offset-before/styles/settings";
-@import "modules/utils-order-push/styles/settings";
-@import "modules/utils-order-pull/styles/settings";
-
-
+@import "mixins";
 
