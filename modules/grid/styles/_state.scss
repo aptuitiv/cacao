@@ -5,7 +5,7 @@
  * Setup responsive media queries with columns, and modifiers.
  */
 
-@import "settings";
+@import "defaults";
 @import "globals";
 
 
@@ -21,7 +21,7 @@ $grid-media: max-width;
 }
 
 /**
- * Loop through the breakpoint map and make responsive column/modifier 
+ * Loop through the breakpoint map and make responsive column/modifier
  * classes using the breakpoint extension.
  */
 @each $ext, $bp in $grid-breakpoints {
