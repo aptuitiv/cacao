@@ -37,7 +37,7 @@
         margin: 0 0 $ddmenu-item-spacing;
     }
     .#{$ddmenu-classname}-link {
-        @include font-size($ddmenu-fontsize, $line-height: true);
+        @include cacao-font-size($ddmenu-fontsize, $line-height: true);
         padding: $ddmenu-item-padding;
     }
 }

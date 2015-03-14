@@ -20,7 +20,7 @@
 }
 
 .ap-ddmenu-header {
-    @include font-size($ddmenu-header-fontsize, $line-height: true);
+    @include cacao-font-size($ddmenu-header-fontsize, $line-height: true);
     position: relative;
     height: $ddmenu-header-height;
     padding: $ddmenu-header-padding;

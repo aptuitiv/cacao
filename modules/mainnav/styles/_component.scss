@@ -116,7 +116,7 @@
  */
 
 .MainNav-link--root {
-    @include font-size($mainnav-root-fontsize, $line-height: true);
+    @include cacao-font-size($mainnav-root-fontsize, $line-height: true);
     padding: $mainnav-root-item-padding;
 }
 
@@ -125,7 +125,7 @@
  */
 
 .MainNav-link--sub {
-    @include font-size($mainnav-sub-fontsize, $line-height: true);
+    @include cacao-font-size($mainnav-sub-fontsize, $line-height: true);
     padding: $mainnav-sub-item-padding;
 }
 

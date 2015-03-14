@@ -28,7 +28,7 @@ body {
 }
 
 p {
-    @include font-size($g-textSize-base, $line-height: true);
+    @include cacao-font-size($g-textSize-base, $line-height: true);
     margin: 0 0 $g-line-height;
 }
 
@@ -39,7 +39,7 @@ a {
 
 code,
 pre {
-    @include font-size($g-textSize2, $line-height: true);
+    @include cacao-font-size($g-textSize2, $line-height: true);
     margin: 0 0 $g-line-height;
 }
 
@@ -67,26 +67,26 @@ ol {
 }
 
 h1 {
-    @include font-size($g-textSize8, $line-height: true);
+    @include cacao-font-size($g-textSize8, $line-height: true);
 }
 
 h2 {
-    @include font-size($g-textSize7, $line-height: true);
+    @include cacao-font-size($g-textSize7, $line-height: true);
 }
 
 h3 {
-    @include font-size($g-textSize6, $line-height: true);
+    @include cacao-font-size($g-textSize6, $line-height: true);
 }
 
 h4 {
-    @include font-size($g-textSize5, $line-height: true);
+    @include cacao-font-size($g-textSize5, $line-height: true);
 }
 
 h5 {
-    @include font-size($g-textSize4, $line-height: true);
+    @include cacao-font-size($g-textSize4, $line-height: true);
 }
 
 h6 {
-    @include font-size($g-textSize3, $line-height: true);
+    @include cacao-font-size($g-textSize3, $line-height: true);
 }
 

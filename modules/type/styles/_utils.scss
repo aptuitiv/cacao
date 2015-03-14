@@ -74,27 +74,27 @@
   -------------------------------------------------------------------------- */
 
 .u-textH1 {
-    @include font-size($g-textSize8, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize8, $line-height: true, $important: true);
 }
 
 .u-textH2 {
-    @include font-size($g-textSize7, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize7, $line-height: true, $important: true);
 }
 
 .u-textH3 {
-    @include font-size($g-textSize6, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize6, $line-height: true, $important: true);
 }
 
 .u-textH4 {
-    @include font-size($g-textSize5, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize5, $line-height: true, $important: true);
 }
 
 .u-textH5 {
-    @include font-size($g-textSize4, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize4, $line-height: true, $important: true);
 }
 
 .u-textH6 {
-    @include font-size($g-textSize3, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize3, $line-height: true, $important: true);
 }
 
 
@@ -103,38 +103,38 @@
   -------------------------------------------------------------------------- */
 
 .u-textSize9 {
-    @include font-size($g-textSize9, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize9, $line-height: true, $important: true);
 }
 
 .u-textSize8 {
-    @include font-size($g-textSize8, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize8, $line-height: true, $important: true);
 }
 
 .u-textSize7 {
-    @include font-size($g-textSize7, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize7, $line-height: true, $important: true);
 }
 
 .u-textSize6 {
-    @include font-size($g-textSize6, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize6, $line-height: true, $important: true);
 }
 
 .u-textSize5 {
-    @include font-size($g-textSize5, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize5, $line-height: true, $important: true);
 }
 
 .u-textSize4 {
-    @include font-size($g-textSize4, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize4, $line-height: true, $important: true);
 }
 
 .u-textSize3 {
-    @include font-size($g-textSize3, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize3, $line-height: true, $important: true);
 }
 
 .u-textSize2 {
-    @include font-size($g-textSize2, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize2, $line-height: true, $important: true);
 }
 
 .u-textSize1 {
-    @include font-size($g-textSize1, $line-height: true, $important: true);
+    @include cacao-font-size($g-textSize1, $line-height: true, $important: true);
 }
 
