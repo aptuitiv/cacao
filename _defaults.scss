@@ -1,10 +1,12 @@
-/*---------------------------------------------------------------------------*\
-  DEFAULT GLOBAL VARIABLES
-\*---------------------------------------------------------------------------*/
+/*===========================================================================*\
+  CACAO DEFAULT GLOBALS
+\*===========================================================================*/
 
-/**
- * Breakpoints
- */
+
+
+/* Breakpoints
+  -------------------------------------------------------------------------- */
+
 $g-bp-xl: 1075px !default;
 $g-bp-lg: 960px !default;
 $g-bp-md: 780px !default;
@@ -13,20 +15,36 @@ $g-bp-xs: 400px !default;
 
 
 
+/* Typography
+  -------------------------------------------------------------------------- */
+
 /**
- * Typography
+ * Base.
  */
+
 $g-font-stack: Arial, Helvetica Neue, Helvetica, sans-serif !default;
 $g-font-weight: normal !default;
-$g-line-height: 22px !default;
 $g-letter-spacing: .15px !default;
+
+/**
+ * Used for vertical rhythm.
+ */
+
+$g-line-height: 22px !default;
 $g-rhythm: $g-line-height/2 !default;
+
+/**
+ * Headings
+ */
 
 $g-heading-font-stack: $g-font-stack !default;
 $g-heading-font-weight: bold !default;
 $g-heading-letter-spacing: $g-letter-spacing !default;
 
-// font scale
+/**
+ * Font size scale.
+ */
+
 $g-textSize-base: 15px !default;
 $g-textSize9: 48px !default;
 $g-textSize8: 36px !default; // h1

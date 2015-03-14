@@ -1,8 +1,9 @@
-/*---------------------------------------------------------------------------*\
-  GLOBAL MIXINS
-\*---------------------------------------------------------------------------*/
+/*===========================================================================*\
+  CACAO GLOBAL MIXINS
+\*===========================================================================*/
+
 /**
- * These could use an (optional) namespace to avoid clashes.
+ * These could use a namespace to avoid clashes.
  */
 
 @import "defaults";
@@ -10,10 +11,8 @@
 
 
 
-
-/*---------------------------------------------------------------------------*\
-  HELPERS & UTILITIES
-\*---------------------------------------------------------------------------*/
+/* Helpers & Utilities
+  -------------------------------------------------------------------------- */
 
 /**
  * Used to set a font size in ems with a px fallback.
@@ -21,6 +20,7 @@
  * Optionally include a line-height that snaps to the site's global rhythm.
  * Optionally add !important for use in utilites.
  */
+
 @mixin font-size($font-size, $context: $g-textSize-base, $line-height: false, $important: false){
     // remove units
     $font-size: $font-size / ($font-size * 0 + 1);
@@ -41,8 +41,6 @@
     }
 }
 
-
-
 /**
  * Micro clearfix for modern browsers
  * See: http://nicolasgallagher.com/micro-clearfix-hack/
@@ -56,6 +54,7 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
+
 @mixin clearfix() {
     &:before,
     &:after {
@@ -67,19 +66,9 @@
     }
 }
 
-
-
-@mixin letterpress($opacity) {
-    text-shadow: white($opacity) 0 1px 0;
-}
-
-
-
-@mixin box-emboss($opacity, $opacity2) {
-    box-shadow: white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
-}
-
-
+/**
+ * Create a CSS triangle (using borders).
+ */
 
 @mixin triangle($triangle-size, $triangle-color, $triangle-direction) {
     content: "";
@@ -102,7 +91,9 @@
     }
 }
 
-
+/**
+ * Create a hamburger menu icon with box shadow.
+ */
 
 @mixin hamburger($width, $left, $top, $thickness, $gap, $color, $hover-color) {
     span:after {
@@ -122,11 +113,10 @@
     }
 }
 
-
-
 /**
  * http://stackoverflow.com/questions/12228548/findinq-equivalent-color-with-opacity
  */
+
 @mixin bg-alpha-calc ($desired_colour, $desired_alpha, $background_colour: white) {
     $r3: red($desired_colour);
     $g3: green($desired_colour);
@@ -150,17 +140,14 @@
 
 
 
-/*---------------------------------------------------------------------------*\
-  VENDOR PREFIXERS
-\*---------------------------------------------------------------------------*/
+/* Vendor Prefixers
+  -------------------------------------------------------------------------- */
 
 @mixin box-sizing($type: border-box) {
     -webkit-box-sizing: $type; /* Android < 2.3, iOS < 4 */
        -moz-box-sizing: $type; /* Firefox < 29 */
             box-sizing: $type; /* Chrome, IE 8+, Opera, Safari 5.1 */
 }
-
-
 
 @mixin linear-gradient($fromColor, $toColor) {
     background-color: $toColor; /* Fallback Color */
@@ -172,8 +159,6 @@
     background-image:         linear-gradient(top, $fromColor, $toColor);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }
-
-
 
 @mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
     @if $inset {
@@ -187,15 +172,11 @@
     }
 }
 
-
-
 @mixin opacity($opacity) {
     opacity: $opacity;
     $opacity-ie: $opacity * 100;
     filter: alpha(opacity=$opacity-ie); /* IE 8 */
 }
-
-
 
 @mixin transform($transform) {
     -webkit-transform: $transform;
@@ -203,16 +184,12 @@
             transform: $transform;
 }
 
-
-
 @mixin transition($property: all, $duration: 100ms, $function: linear, $delay: 0s) {
     -webkit-transition: $property $duration $function $delay;
        -moz-transition: $property $duration $function $delay;
          -o-transition: $property $duration $function $delay;
             transition: $property $duration $function $delay;
 }
-
-
 
 @mixin user-select($select: text) {
     -webkit-touch-callout: $select;
@@ -222,8 +199,6 @@
           -ms-user-select: $select;
               user-select: $select;
 }
-
-
 
 @mixin greyscale($value: on) {
     @if $value == on {
@@ -247,8 +222,6 @@
     }
 }
 
-
-
 @mixin placeholder($color) {
     &::-moz-placeholder { /* Firefox */
         color: $color;
@@ -262,8 +235,6 @@
     }
 }
 
-
-
 @mixin font-smoothing($value: on) {
     @if $value == on {
         -webkit-font-smoothing: antialiased;
@@ -274,6 +245,4 @@
         font-smooth: never;
     }
 }
-
-
 
