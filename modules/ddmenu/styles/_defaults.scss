@@ -22,7 +22,7 @@ $ddmenu-bp: $g-bp-md !default;
  * Font size of the menu items
  */
 
-$ddmenu-fontsize: $g-epsilon !default;
+$ddmenu-fontsize: $g-textSize4 !default;
 
 /**
  * Menu paddings
@@ -43,5 +43,5 @@ $ddmenu-item-spacing: $g-rhythm !default;
 
 $ddmenu-header-padding: $ddmenu-item-padding !default;
 $ddmenu-header-height: $g-rhythm*4 !default;
-$ddmenu-header-fontsize: $g-zeta !default;
+$ddmenu-header-fontsize: $g-textSize3 !default;
 

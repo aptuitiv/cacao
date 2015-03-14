@@ -17,19 +17,27 @@
 
 /**
  * Used to set a font size in ems with a px fallback.
+ * When on context is specified the global font size will be used.
  * Optionally include a line-height that snaps to the site's global rhythm.
- * Uses the global font size as the default context to calculate the em unit.
+ * Optionally add !important for use in utilites.
  */
-@mixin font-size($font-size, $context: $g-font-size, $line-height: false){
+@mixin font-size($font-size, $context: $g-textSize-base, $line-height: false, $important: false){
     // remove units
     $font-size: $font-size / ($font-size * 0 + 1);
     $context: $context / ($context * 0 + 1);
 
-    font-size: ($font-size)*1px;
-    font-size: ($font-size / $context)*1em;
+    // important switch
+    @if $important == true {
+        $important: " !important";
+    } @else {
+        $important: "";
+    }
 
+    // output
+    font-size: ($font-size * 1px)#{$important};
+    font-size: (($font-size / $context)*1em)#{$important};
     @if $line-height == true {
-        line-height: ceil($font-size / $g-rhythm) * ($g-rhythm / $font-size);
+        line-height: (ceil($font-size / $g-rhythm) * ($g-rhythm / $font-size))#{$important};
     }
 }
 

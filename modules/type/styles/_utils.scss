@@ -1,26 +1,37 @@
 /*===========================================================================*\
-  UTILITIES
+  TYPOGRAPHY UTILITIES
 \*===========================================================================*/
+
+/**
+ * CONTENTS:
+ * - Alignment
+ * - Weight & Style
+ * - Heading Styles
+ * - Font Families
+ * - Font Sizes
+ */
+
+@import "../../../cacao";
 
 
 
 /* Horizontal Alignment
   -------------------------------------------------------------------------- */
 
-.t-alignLeft {
-    text-align: left;
+.u-textLeft {
+    text-align: left !important;
 }
 
-.t-alignRight {
-    text-align: right;
+.u-textRight {
+    text-align: right !important;
 }
 
-.t-alignCenter {
-    text-align: center;
+.u-textCenter {
+    text-align: center !important;
 }
 
-.t-uppercase {
-    text-transform: uppercase;
+.u-textUpper {
+    text-transform: uppercase !important;
 }
 
 
@@ -28,19 +39,102 @@
 /* Weight & Style
   -------------------------------------------------------------------------- */
 
-.t-weightNormal {
-    font-weight: normal;
+.u-textNormal {
+    font-weight: normal !important;
 }
 
-.t-weightStrong {
-    font-weight: bold;
+.u-textStrong {
+    font-weight: bold !important;
 }
 
-.t-styleNone {
-    font-style: none;
+.u-textUnstyled {
+    font-style: none !important;
 }
 
-.t-styleEm {
-    font-style: italics;
+.u-textEm {
+    font-style: italics !important;
+}
+
+
+
+/* Font Stacks
+  -------------------------------------------------------------------------- */
+
+.u-textBody {
+    font-family: $g-font-stack !important;
+}
+
+.u-textHeading {
+    font-family: $g-heading-font-stack !important;
+}
+
+
+
+/* Heading Styles
+  -------------------------------------------------------------------------- */
+
+.u-textH1 {
+    @include font-size($g-textSize8, $line-height: true, $important: true);
+}
+
+.u-textH2 {
+    @include font-size($g-textSize7, $line-height: true, $important: true);
+}
+
+.u-textH3 {
+    @include font-size($g-textSize6, $line-height: true, $important: true);
+}
+
+.u-textH4 {
+    @include font-size($g-textSize5, $line-height: true, $important: true);
+}
+
+.u-textH5 {
+    @include font-size($g-textSize4, $line-height: true, $important: true);
+}
+
+.u-textH6 {
+    @include font-size($g-textSize3, $line-height: true, $important: true);
+}
+
+
+
+/* Font Scale
+  -------------------------------------------------------------------------- */
+
+.u-textSize9 {
+    @include font-size($g-textSize9, $line-height: true, $important: true);
+}
+
+.u-textSize8 {
+    @include font-size($g-textSize8, $line-height: true, $important: true);
+}
+
+.u-textSize7 {
+    @include font-size($g-textSize7, $line-height: true, $important: true);
+}
+
+.u-textSize6 {
+    @include font-size($g-textSize6, $line-height: true, $important: true);
+}
+
+.u-textSize5 {
+    @include font-size($g-textSize5, $line-height: true, $important: true);
+}
+
+.u-textSize4 {
+    @include font-size($g-textSize4, $line-height: true, $important: true);
+}
+
+.u-textSize3 {
+    @include font-size($g-textSize3, $line-height: true, $important: true);
+}
+
+.u-textSize2 {
+    @include font-size($g-textSize2, $line-height: true, $important: true);
+}
+
+.u-textSize1 {
+    @include font-size($g-textSize1, $line-height: true, $important: true);
 }
 
