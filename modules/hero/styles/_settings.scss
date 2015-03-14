@@ -1,10 +1,7 @@
-/*---------------------------------------------------------------------------*\
-  VARIABLES
-\*---------------------------------------------------------------------------*/
+/*===========================================================================*\
+  DEFAULTS
+\*===========================================================================*/
 
-/**
- * Base settings
- */
 $hero-content-gutter: 75px !default;
 
 $hero-title-size: 62px !default;
@@ -15,15 +12,4 @@ $hero-subtitle-margin: 74px !default;
 
 $hero-button-size: $hero-subtitle-size !default;
 $hero-button-padding: .5em 1em !default;
-
-
-
-/**
- * When to hide the hero
- */
-$hero-bp-hidden: 750px !default;
-
-
-
-
 

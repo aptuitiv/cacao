@@ -1,9 +1,9 @@
-/*---------------------------------------------------------------------------*\
+/*===========================================================================*\
   LISTS
-\*---------------------------------------------------------------------------*/
+\*===========================================================================*/
 
 /**
- * List layouts.
+ * Generic list layouts and styles.
  */
 
 @import "settings";
@@ -12,22 +12,21 @@
 
 
 
-/*---------------------------------------------------------------------------*\
+/*===========================================================================*\
   COMPONENT
-\*---------------------------------------------------------------------------*/
+\*===========================================================================*/
 
 /**
  * List Reset
  *
  * Barebones list, no margins or styles.
  */
+
 .List {
     list-style: none;
     padding-left: 0;
     padding-right: 0;
 }
-
-
 
 /**
  * Inline List
@@ -36,6 +35,7 @@
  *
  * Extends the list reset.
  */
+
 .List--inline {
     display: inline-block;
     > li {
@@ -43,15 +43,14 @@
     }
 }
 
-
-
 /**
  * Spaced List
  *
  * Adds spacing between the inline items.
- * 
+ *
  * Extends the inline list.
  */
+
 .List--inline--spaced {
     margin-left: -$list-spaced-margin;
     > li {
@@ -59,17 +58,16 @@
     }
 }
 
-
-
 /**
  * Barred List
  *
  * Adds vertical bars between the inline items.
- * White space will add extra spacing. Branch CMS navigation 
+ * White space will add extra spacing. Branch CMS navigation
  * templates are minified so this isn't accounted for.
- * 
+ *
  * Extends the inline list.
  */
+
 .List--inline--barred {
     > li {
         &:before {
@@ -85,17 +83,16 @@
     }
 }
 
-
-
 /**
  * Dotted List
  *
  * Adds bullets between the inline items.
  * White space will add extra spacing. Branch CMS navigation
  * templates are minified so this isn't accounted for.
- * 
+ *
  * Extends the inline list.
  */
+
 .List--inline--dotted {
     > li {
         &:before {
@@ -110,6 +107,4 @@
         }
     }
 }
-
-
 

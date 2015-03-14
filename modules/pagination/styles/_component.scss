@@ -1,6 +1,6 @@
-/*---------------------------------------------------------------------------*\
+/*===========================================================================*\
   PAGINATION
-\*---------------------------------------------------------------------------*/
+\*===========================================================================*/
 
 @import "settings";
 
@@ -8,50 +8,42 @@
 
 
 
-/*---------------------------------------------------------------------------*\
+/*===========================================================================*\
   COMPONENT
-\*---------------------------------------------------------------------------*/
+\*===========================================================================*/
 
 /**
  * Base wrapper.
  */
+
 .Pagination {
     display: block;
     padding: $pagination-wrapper-padding;
 }
 
-
-
 /**
  * Generic item styles.
  */
+
 .Pagination-item {
     display: inline-block;
     margin-right: $pagination-item-spacing;
     vertical-align: middle;
 }
 
-
-
 /**
  * The page links.
- *
- * inherits pagination_item
  */
+
 .Pagination-item--page {
     padding: $pagination-page-padding;
 }
 
-
-
 /**
  * The navigation links.
- *
- * inherits pagination_item
  */
+
 .Pagination-item--nav {
     padding: $pagination-nav-padding;
 }
-
-
 

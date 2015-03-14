@@ -1,6 +1,7 @@
 /*===========================================================================*\
   UTILS ORDER PUSH
 \*===========================================================================*/
+
 /**
  * Similar to utils-offset-push but applies a left positioning value
  * in order to re-order columns.
@@ -130,6 +131,4 @@
 .u-push11of12 {
     left: (100% * 11 / 12) !important;
 }
-
-
 

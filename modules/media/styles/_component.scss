@@ -1,21 +1,30 @@
-/*---------------------------------------------------------------------------*\
+/*===========================================================================*\
   MEDIA OBJECT
-\*---------------------------------------------------------------------------*/
+\*===========================================================================*/
+
+/**
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ */
 
 @import "settings";
 
 
 
+
+
+/*===========================================================================*\
+  COMPONENT
+\*===========================================================================*/
+
 /**
- * This is the media it self.
+ * This is the media itself.
  * This generally contains an image but can be a wrapper for anything.
  */
+
 .Media-subject {
     float: left;
     margin-right: $media-gutter;
 }
-
-
 
 /**
  * The main section of the media element.
@@ -23,9 +32,8 @@
  *
  * [1] http://www.stubbornella.org/content/2009/07/23/overflow-a-secret-benefit/
  */
+
 .Media-content {
     overflow: hidden; /* 1 */
 }
-
-
 

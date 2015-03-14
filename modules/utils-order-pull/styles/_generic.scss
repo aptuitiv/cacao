@@ -1,6 +1,7 @@
 /*===========================================================================*\
   UTILS ORDER PULL
 \*===========================================================================*/
+
 /**
  * Similar to utils-offset-pull but applies a left positioning value
  * in order to re-order columns.
@@ -130,6 +131,4 @@
 .u-pull11of12 {
     left: -(100% * 11 / 12) !important;
 }
-
-
 

@@ -1,10 +1,7 @@
-/*---------------------------------------------------------------------------*\
-  VARIABLES
-\*---------------------------------------------------------------------------*/
+/*===========================================================================*\
+  DEFAULTS
+\*===========================================================================*/
 
-/**
- * Base settings
- */
 $slider-nav-gutter: 75px !default;
 
 $slider-pager-bottom-margin: 8px !default;
@@ -12,15 +9,4 @@ $slider-pager-item-width: auto !default;
 $slider-pager-item-height: auto !default;
 $slider-pager-item-margin: 0 !default;
 $slider-pager-item-padding: 0 !default;
-
-
-
-/**
- * When to hide the slider
- */
-$slider-bp-hidden: 750px !default;
-
-
-
-
 
