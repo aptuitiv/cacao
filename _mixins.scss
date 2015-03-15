@@ -152,7 +152,7 @@
 
 @mixin cacao-linear-gradient($fromColor, $toColor) {
     background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* 1 */
-    background-image:         linear-gradient(top, $fromColor, $toColor);
+    background-image:         linear-gradient(to bottom, $fromColor, $toColor);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}'); /* 2 */
 }
 
