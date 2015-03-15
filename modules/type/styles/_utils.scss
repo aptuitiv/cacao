@@ -73,6 +73,18 @@
 /* Heading Styles
   -------------------------------------------------------------------------- */
 
+.u-textH1,
+.u-textH2,
+.u-textH3,
+.u-textH4,
+.u-textH5,
+.u-textH6 {
+    font-family: $g-heading-font-stack;
+    font-weight: $g-heading-font-weight;
+    letter-spacing: $g-heading-letter-spacing;
+    margin: 0 0 $g-line-height;
+}
+
 .u-textH1 {
     @include cacao-font-size($g-textSize8, $line-height: true, $important: true);
 }
