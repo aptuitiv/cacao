@@ -1,49 +1,28 @@
-/*---------------------------------------------------------------------------*\
-  VARIABLES
-\*---------------------------------------------------------------------------*/
+/*===========================================================================*\
+  DEFAULTS
+\*===========================================================================*/
+
+@import "../../../cacao";
+
+
 
 /**
- * The font size to use when resetting the font size in the grid
+ * Size between columns when a gutter modifier is used.
  */
-$grid-font-size: 1rem;
+
+$grid-gutter-size: 20px !default;
 
 /**
- * The number of columns and the gutter between them.
+ * The grid sets font-size to 0 in order to negate whitespace between columns.
+ * Set this variable to the font-size you wish each column to be reset to.
+ * Typically this is the base font size.
  */
-$grid-column-count: 12 !default;
-$grid-column-gutter: 2em !default;
+
+$grid-font-size: $g-textSize-base !default;
 
 /**
- * Enable mobile first media queries.
+ * Letter Spacing also gets set to 0, so provide a default for it.
  */
-$grid-mobile-first: false !default;
 
-/**
- * Enable or disable .grid-* modifiers.
- */
-$grid-modifiers: true !default;
-
-/**
- * Enable or disable column position modifiers.
- */
-$grid-use-pull: true !default;
-$grid-use-push: true !default;
-$grid-use-offset: true !default;
-
-/**
- * Media query breakpoints.
- * This map can be overridden with your own extentions and breakpoints to be
- * used in the responsive classes.
- *
- * Sorted largest to smallest for the media queries to cascade correctly.
- */
-$grid-breakpoints: (
-    xl: 1200px,
-    lg: 1000px,
-    md: 800px,
-    sm: 600px,
-    xs: 400px,
-) !default;
-
-
+$grid-letter-spacing: $g-letter-spacing !default;
 

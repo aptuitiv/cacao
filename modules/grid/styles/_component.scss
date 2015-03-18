@@ -1,177 +1,138 @@
-/*---------------------------------------------------------------------------*\
+/*===========================================================================*\
   GRID SYSTEM
-\*---------------------------------------------------------------------------*/
+\*===========================================================================*/
+
+/**
+ * Based on: https://github.com/suitcss/components-grid/
+ *
+ * Modifications:
+ * - SASS.
+ * - Apply relative positioning to columns in order to push/pull them.
+ * - Only apply gutters to the left side to fix an issue where the negative
+ *   margins can trigger a horizontal scrollbar if the component is as wide as
+ *   the viewport.
+ */
 
 @import "defaults";
-@import "globals";
+
+
+
+
+
+/*===========================================================================*\
+  COMPONENT
+\*===========================================================================*/
+
+
+
+/* Grid container
+ --------------------------------------------------------------------------- */
 
 /**
- * Inline-block grid. Shamelessly based off of:
- * http://purecss.io/ and http://csswizardry.com/csswizardry-grids/
+ * All content must be contained within child `Grid-cell` elements.
  *
- * Note: The only way to guarantee that the columns behave
- *       as intended is to remove all the white space between them
- *       by minifying the HTML, commenting white space, etc..
- *
- * Basic Example:
- *   4 columns side by side with the default grid settings. When the viewport
- *   shrinks the columns will collapse to two per row, and finally the
- *   columns will span the full width on a small mobile viewport.
- *
-
- <div class="grid">
-   <div class="col-2 col-6-lg col-12-sm">Col 1</div>
-   <div class="col-4 col-6-lg col-12-sm">Col 1</div>
-   <div class="col-4 col-6-lg col-12-sm">Col 1</div>
-   <div class="col-2 col-6-lg col-12-sm">Col 1</div>
- </div>
-
- *
- * Note: An unordered list may be used in place of <div>s.
- *
- */
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  GRID BASE
-\*---------------------------------------------------------------------------*/
-
-/**
- * Grid wrapper.
- *
- *
+ * DO NOT apply dimension or offset utilities to the `Grid` element. All cell
+ * widths and offsets should be applied to child grid cells.
  *
  * 1. Account for browser defaults of elements that might be the root node of
- *    the component.
+ * the component.
  * 2. Remove inter-cell whitespace that appears between `inline-block` child
- *     elements.
+ * elements.
  * 3. Ensure consistent default alignment.
- * 4. Resets list styles so an unordered list may be used.
- * 5. Also applies a negative margin to the left to make the columns nestable
- *     and flush.
  */
-%grid,
-.grid {
-    list-style: none; /* 4 */
+
+.Grid {
+    display: block; /* 1 */
     font-size: 0; /* 2 */
+    letter-spacing: 0; /* 2 */
+    list-style: none; /* 1 */
     margin: 0; /* 1 */
-    margin-left: -$grid-column-gutter;
     padding: 0; /* 1 */
     text-align: left; /* 3 */
 }
 
+/**
+ * Modifier: center align all grid cells
+ */
 
+.Grid--alignCenter {
+    text-align: center;
+}
 
 /**
- * Column base.
- * Aligned to the top by default.
+ * Modifier: right align all grid cells
+ */
+
+.Grid--alignRight {
+    text-align: right;
+}
+
+/**
+ * Modifier: middle-align grid cells
+ */
+
+.Grid--alignMiddle > .Grid-cell {
+    vertical-align: middle;
+}
+
+/**
+ * Modifier: bottom-align grid cells
+ */
+
+.Grid--alignBottom > .Grid-cell {
+    vertical-align: bottom;
+}
+
+/**
+ * Modifier: gutters
+*/
+
+.Grid--withGutter {
+    margin-left: -$grid-gutter-size;
+}
+
+.Grid--withGutter > .Grid-cell {
+    padding-left: $grid-gutter-size;
+}
+
+
+
+/* Grid cell
+ --------------------------------------------------------------------------- */
+
+/**
+ * No explicit width by default. Rely on combining `Grid-cell` with a dimension
+ * utility or a component class that extends 'grid'.
  *
- * 1. Set a min-height so columns have a width even if they are empty.
- * 2. Position columns relatively in order to push/pull them.
- * 3. Apply box-sizing instead of relying on it to be set globally.
- * 4. Reset font size change made in `grid`.
+ * 1. Fundamentals of the non-float grid layout.
+ * 2. Reset font changes made in `Grid`.
+ * 3. Keeps content correctly aligned with the grid direction.
+ * 4. Controls vertical positioning of units.
+ * 5. Make cells full-width by default.
+ * 6. Position cells relatively in order to push/pull them.
  */
-%col {
-    display: inline-block;
-    font-size: $grid-font-size;  /* 4 */
-    min-height: 1px; /* 1 */
-    padding-left: $grid-column-gutter;
-    vertical-align: top;
-    @if $grid-use-push or $grid-use-pull {
-        position: relative; /* 2 */
-    }
-    box-sizing: border-box; /* 3 */
+
+.Grid-cell {
+    box-sizing: border-box;
+    display: inline-block; /* 1 */
+    font-size: $grid-font-size; /* 2 */
+    letter-spacing: $grid-letter-spacing; /* 2 */
+    margin: 0;
+    padding: 0;
+    position: relative; /* 6 */
+    text-align: left; /* 3 */
+    vertical-align: top; /* 4 */
+    width: 100%; /* 5 */
 }
-
-
 
 /**
- * Create column width and modifier classes based on $column-count.
- * Start $i at 1 because there is no need for 0 width columns or modifiers
- * outside of media queries.
+ * Modifier: horizontally center one unit
+ * Set a specific unit to be horizontally centered. Doesn't affect
+ * any other units. Can still contain a child `Grid` object.
  */
-@for $i from 1 through $grid-column-count {
-    @include grid-create-width($i);
+
+.Grid-cell--center {
+    display: block;
+    margin: 0 auto;
 }
-
-
-
-
-
-/*---------------------------------------------------------------------------*\
-  MODIFIERS
-\*---------------------------------------------------------------------------*/
-
-/**
- * The modifiers below are experimental and use some ugly selectors.
- */
-@if $grid-modifiers {
-
-    /**
-     * Modifies horizontal alignment of columns.
-     * When using these be aware that they reset columns to text-align: left;
-     */
-    .grid.-align-center {
-        text-align: center;
-        > [class*="col-"] {
-            text-align: left;
-        }
-    }
-
-    .grid.-align-right {
-        text-align: right;
-        > [class*="col-"] {
-            text-align: left;
-        }
-    }
-
-
-
-    /**
-     * Modifies vertical alignment of columns.
-     */
-    .grid.-valign-middle {
-        > [class*="col-"] {
-            vertical-align: middle;
-        }
-    }
-
-    .grid.-valign-bottom {
-        > [class*="col-"] {
-            vertical-align: bottom;
-        }
-    }
-
-
-
-    /**
-     * Modifies grid gutters.
-     */
-    .grid.-gutter-none {
-        margin: 0;
-        > [class*="col-"] {
-            padding-left: 0;
-        }
-    }
-
-    .grid.-gutter-narrow {
-        margin-left: -($grid-column-gutter/2);
-        > [class*="col-"] {
-            padding-left: $grid-column-gutter/2;
-        }
-    }
-
-    .grid.-gutter-wide {
-        margin-left: -($grid-column-gutter*2);
-        > [class*="col-"] {
-            padding-left: $grid-column-gutter*2;
-        }
-    }
-
-}
-
-
 
