@@ -1,0 +1,131 @@
+/*===========================================================================*\
+  MAIN NAVIGATION
+\*===========================================================================*/
+
+@import "../../../cacao";
+@import "defaults";
+
+
+
+
+
+/*===========================================================================*\
+  COMPONENT
+\*===========================================================================*/
+
+
+
+/* Base Menu
+  -------------------------------------------------------------------------- */
+
+.MainNav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+/**
+ * Root level menu.
+ */
+.MainNav--root {
+    display: $mainnav-root-display;
+    margin-left: -$mainnav-root-item-spacing;
+}
+
+/**
+ * Sub menus.
+ */
+
+.MainNav--sub {
+    display: none;
+    position: absolute;
+    z-index: $mainnav-sub-zindex;
+    min-width: 100%;
+    padding: $mainnav-sub-padding;
+}
+
+
+
+/* Menu Items
+  -------------------------------------------------------------------------- */
+
+/**
+ * Base menu item.
+ *
+ * 1. Display the submenu when it's parent is hovered.
+ */
+
+.MainNav-item {
+    position: relative;
+
+    &:hover > .MainNav--sub { /* 1 */
+        display: block;
+    }
+}
+
+/**
+ * Root level menu items.
+ *
+ * 1. Position sub-menus to the bottom of their parent
+ */
+
+.MainNav-item--root {
+    display: inline-block;
+    width: $mainnav-root-item-width;
+    margin-left: $mainnav-root-item-spacing;
+
+    &:hover > .MainNav--sub { /* 1 */
+        top: 100%;
+        left: 0;
+    }
+}
+
+/**
+ * Sub menu items.
+ *
+ * 1. Position sub-sub-menus to the right side of the parent
+ * 2. Apply an optional vertical offset to negate borders, padding, etc.
+ */
+
+.MainNav-item--sub {
+    width: 100%;
+    margin-bottom: $mainnav-sub-item-spacing;
+
+    &:hover > .MainNav--sub { /* 1 */
+        top: $mainnav-sub-sub-offset; /* 2 */
+        left: 100%;
+    }
+}
+
+
+
+/* Menu Links
+  -------------------------------------------------------------------------- */
+
+/**
+ * Base menu links.
+ */
+
+.MainNav-link {
+    display: block;
+}
+
+/**
+ * Root level menu links.
+ */
+
+.MainNav-link--root {
+    @include cacao-font-size($mainnav-root-fontsize, $line-height: true);
+    padding: $mainnav-root-item-padding;
+}
+
+/**
+ * Sub menu links.
+ */
+
+.MainNav-link--sub {
+    @include cacao-font-size($mainnav-sub-fontsize, $line-height: true);
+    padding: $mainnav-sub-item-padding;
+}
+

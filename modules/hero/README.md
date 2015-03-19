@@ -18,12 +18,12 @@ Hero splash image with text overlay.
 Usage
 -----
 
-    <div class="hero">
-        <img class="hero_img" src="https://unsplash.it/1200/600/?blur">
-        <div class="hero_content">
-            <div class="hero_title">Slide Title</div>
-            <div class="hero_subtitle">Some text underneath it</div>
-            <div><a href="#" class="hero_button">More</a></div>
+    <div class="Hero">
+        <img class="Hero-img" src="https://unsplash.it/1200/600/?blur">
+        <div class="Hero-content">
+            <div class="Hero-title">Slide Title</div>
+            <div class="Hero-subtitle">Some text underneath it</div>
+            <div><a href="#" class="Hero-button">More</a></div>
         </div>
     </div>
 

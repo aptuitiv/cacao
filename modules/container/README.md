@@ -10,21 +10,21 @@ A page container.
 
 ### Modifiers
 
-- `-fixed`
-- `-gutter-none`
-- `-align-left`
+- `--widthFixed`
+- `--gutterNone`
+- `--alignLeft`
 
 
 Usage
 -----
 
-    <div class="header">
-        <div class="container -gutter-none">
+    <div id="Header">
+        <div class="Container Container--gutterNone">
             [ ... ]
         </div>
     </div>
 
-    <div class="container">
+    <div class="Container">
         [ ... ]
     </div>
 

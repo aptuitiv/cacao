@@ -1,0 +1,56 @@
+/*===========================================================================*\
+  BREADCRUMBS
+\*===========================================================================*/
+
+/**
+ * A breadcrumb trail that can be configured with separators.
+ */
+
+@import "defaults";
+
+
+
+
+
+/*===========================================================================*\
+  COMPONENT
+\*===========================================================================*/
+
+/**
+ * Base wrapper.
+ */
+
+.Crumbs {
+    display: block;
+    padding: $crumbs-wrapper-padding;
+}
+
+/**
+ * Generic breadcrumbs items.
+ */
+
+.Crumbs-item {
+    display: inline-block;
+    margin-right: $crumbs-item-spacing;
+    vertical-align: middle;
+}
+
+/**
+ * The "crumb" or "page".
+ */
+
+.Crumbs-item--page {
+    padding: $crumbs-page-padding;
+}
+
+/**
+ * The crumb separator.
+ */
+
+.Crumbs-item--separator {
+    padding: $crumbs-separator-padding;
+    &:after {
+        content: $crumbs-separator;
+    }
+}
+

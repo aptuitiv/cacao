@@ -1,0 +1,47 @@
+/*===========================================================================*\
+  DEFAULTS
+\*===========================================================================*/
+
+@import "../../../cacao";
+
+
+
+/**
+ * Root menu display value
+ * Set to inline-block if needed (text-align: center; the menu, etc...)
+ */
+
+$mainnav-root-display: block !default;
+
+/**
+ * Font sizes
+ */
+
+$mainnav-root-fontsize: $g-textSize4 !default;
+$mainnav-sub-fontsize: $g-textSize3 !default;
+
+/**
+ * Root menu defaults
+ */
+
+$mainnav-root-item-width: auto !default;
+$mainnav-root-item-spacing: 16px !default;
+$mainnav-root-item-padding: 4px 8px !default;
+
+/**
+ * Sub menu defaults
+ */
+
+$mainnav-sub-padding: 4px 0 0 !default;
+$mainnav-sub-item-spacing: 4px !default;
+$mainnav-sub-item-padding: $mainnav-root-item-padding !default;
+$mainnav-sub-zindex: 10 !default;
+
+/**
+ * Sub-sub Menu defaults
+ * 1. Vertically align the sub-sub-menu with its parent item.
+ *    Apply a negative top value equal to the sub-menus top padding.
+ */
+
+$mainnav-sub-sub-offset: -(nth($mainnav-sub-padding, 1)) !default; /* 1 */
+

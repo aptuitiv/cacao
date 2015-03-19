@@ -1,0 +1,47 @@
+/*===========================================================================*\
+  DEFAULTS
+\*===========================================================================*/
+
+@import "../../../cacao";
+
+
+
+/**
+ * Class name of the navigation menu to activate
+ */
+
+$ddmenu-classname: "ddmenu" !default;
+
+/**
+ * Breakpoint that the ddmenu becomes active.
+ */
+
+$ddmenu-bp: $g-bp-md !default;
+
+/**
+ * Font size of the menu items
+ */
+
+$ddmenu-fontsize: $g-textSize4 !default;
+
+/**
+ * Menu paddings
+ */
+
+$ddmenu-menu-padding: $g-rhythm 0 0 !default;
+
+/**
+ * Menu items
+ */
+
+$ddmenu-item-padding: $g-rhythm 16px !default;
+$ddmenu-item-spacing: $g-rhythm !default;
+
+/**
+ * Header
+ */
+
+$ddmenu-header-padding: $ddmenu-item-padding !default;
+$ddmenu-header-height: $g-rhythm*4 !default;
+$ddmenu-header-fontsize: $g-textSize3 !default;
+

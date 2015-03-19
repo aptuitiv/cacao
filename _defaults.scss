@@ -1,10 +1,12 @@
-/*---------------------------------------------------------------------------*\
-  DEFAULT GLOBAL VARIABLES
-\*---------------------------------------------------------------------------*/
+/*===========================================================================*\
+  CACAO DEFAULT GLOBALS
+\*===========================================================================*/
 
-/**
- * Breakpoints
- */
+
+
+/* Breakpoints
+  -------------------------------------------------------------------------- */
+
 $g-bp-xl: 1075px !default;
 $g-bp-lg: 960px !default;
 $g-bp-md: 780px !default;
@@ -13,33 +15,44 @@ $g-bp-xs: 400px !default;
 
 
 
+/* Typography
+  -------------------------------------------------------------------------- */
+
 /**
- * Typography
+ * Base.
  */
+
 $g-font-stack: Arial, Helvetica Neue, Helvetica, sans-serif !default;
-$g-font-size: 15px !default;
 $g-font-weight: normal !default;
-$g-line-height: 22px !default;
 $g-letter-spacing: .15px !default;
+
+/**
+ * Used for vertical rhythm.
+ */
+
+$g-line-height: 22px !default;
 $g-rhythm: $g-line-height/2 !default;
+
+/**
+ * Headings
+ */
 
 $g-heading-font-stack: $g-font-stack !default;
 $g-heading-font-weight: bold !default;
 $g-heading-letter-spacing: $g-letter-spacing !default;
 
-// font scale
-// (these names are likely to change)
-$g-giga: 74px !default;
-$g-mega: 62px !default;
-$g-kilo: 48px !default;
-$g-alpha: 36px !default; // h1
-$g-beta: 28px !default; // h2
-$g-gamma: 24px !default; // h3
-$g-delta: 20px !default; // h4
-$g-epsilon: 18px !default; // h5
-$g-zeta: 15px !default; // h6
-$g-milli: 13px !default;
-$g-micro: 11px !default;
+/**
+ * Font size scale.
+ */
 
-
+$g-textSize-base: 15px !default;
+$g-textSize9: 48px !default;
+$g-textSize8: 36px !default; // h1
+$g-textSize7: 28px !default; // h2
+$g-textSize6: 24px !default; // h3
+$g-textSize5: 20px !default; // h4
+$g-textSize4: 18px !default; // h5
+$g-textSize3: 15px !default; // h6
+$g-textSize2: 13px !default;
+$g-textSize1: 11px !default;
 

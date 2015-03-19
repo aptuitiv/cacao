@@ -1,0 +1,74 @@
+/*===========================================================================*\
+  SLIDER
+\*===========================================================================*/
+
+@import "defaults";
+
+
+
+
+
+/*===========================================================================*\
+  COMPONENT
+\*===========================================================================*/
+
+/**
+ * Base wrapper.
+ */
+
+.Slider {
+    position: relative;
+    overflow: hidden;
+}
+
+/**
+ * Slide
+ */
+
+.Slider-slide {
+    position: relative;
+}
+
+/**
+ * Navigation arrows
+ */
+
+.Slider-nav {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    left: $slider-nav-gutter;
+    right: $slider-nav-gutter;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+}
+
+.Slider-nav-prev {
+    float: left;
+}
+
+.Slider-nav-next {
+    float: right;
+}
+
+/**
+ * Pager
+ */
+
+.Slider-pager {
+    position: absolute;
+    bottom: $slider-pager-bottom-margin;
+    left: 0;
+    right: 0;
+    z-index: 4;
+}
+
+.Slider-pager-item {
+    display: inline-block;
+    width: $slider-pager-item-width;
+    height: $slider-pager-item-height;
+    margin: $slider-pager-item-margin;
+    padding: $slider-pager-item-padding;
+}
+

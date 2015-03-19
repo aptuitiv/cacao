@@ -1,7 +1,0 @@
-{
-  "name": "Normalize",
-  "description": "Normalize CSS",
-  "dependencies": {
-    "normalize.css": "~3.0.2"
-  }
-}

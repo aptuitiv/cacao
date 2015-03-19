@@ -1,0 +1,55 @@
+/*===========================================================================*\
+  CONTAINER
+\*===========================================================================*/
+
+/**
+ * Page container.
+ */
+
+@import "defaults";
+
+
+
+
+
+/*===========================================================================*\
+  COMPONENT
+\*===========================================================================*/
+
+/**
+ * Base
+ */
+
+.Container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding-left: $container-gutter;
+    padding-right: $container-gutter;
+}
+
+/**
+ * Non-fluid, fixed container.
+ */
+
+.Container--widthFixed {
+    width: $container-width;
+}
+
+/**
+ * Remove gutters from container.
+ */
+
+.Container--gutterNone {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/**
+ * Position container to the left.
+ */
+
+.Container--alignLeft {
+    margin-left: 0;
+    margin-right: 0;
+}
+

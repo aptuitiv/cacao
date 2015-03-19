@@ -4,7 +4,7 @@ Media
 See: [http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)
 
 This media object is used to place a block of content next to some media. It is important to know that the width of the media subject column will be determined by it's contents.
-If an image 80px wide is placed inside the `.media_subject` element, the column will be 80px wide.
+If an image 80px wide is placed inside the `.Media-subject` element, the column will be 80px wide.
 
 ### Settings
 
@@ -14,11 +14,11 @@ If an image 80px wide is placed inside the `.media_subject` element, the column 
 Usage
 -----
 
-    <div class="media">
-        <div class="media_subject">
+    <div class="Media">
+        <div class="Media-subject">
             [...]
         </div>
-        <div class="media_content">
+        <div class="Media-content">
             [...]
         </div>
     </div>

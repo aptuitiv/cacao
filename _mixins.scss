@@ -1,37 +1,47 @@
-/*---------------------------------------------------------------------------*\
-  GLOBAL MIXINS
-\*---------------------------------------------------------------------------*/
+/*===========================================================================*\
+  CACAO GLOBAL MIXINS
+\*===========================================================================*/
+
 /**
- * These could use an (optional) namespace to avoid clashes.
+ * CONTENTS:
+ * - Helpers & Utilities
+ * - Cross-browser Fallbacks
  */
 
+@import "defaults";
 
 
 
 
-/*---------------------------------------------------------------------------*\
-  HELPERS & UTILITIES
-\*---------------------------------------------------------------------------*/
+/* Helpers & Utilities
+  -------------------------------------------------------------------------- */
 
 /**
  * Used to set a font size in ems with a px fallback.
+ * When on context is specified the global font size will be used.
  * Optionally include a line-height that snaps to the site's global rhythm.
- * Uses the global font size as the default context to calculate the em unit.
+ * Optionally add !important for use in utilites.
  */
-@mixin font-size($font-size, $context: $g-font-size, $line-height: false){
+
+@mixin cacao-font-size($font-size, $context: $g-textSize-base, $line-height: false, $important: false){
     // remove units
     $font-size: $font-size / ($font-size * 0 + 1);
     $context: $context / ($context * 0 + 1);
 
-    font-size: ($font-size)*1px;
-    font-size: ($font-size / $context)*1em;
+    // important switch
+    @if $important == true {
+        $important: " !important";
+    } @else {
+        $important: "";
+    }
 
+    // output
+    font-size: ($font-size * 1px)#{$important};
+    font-size: (($font-size / $context)*1em)#{$important};
     @if $line-height == true {
-        line-height: ceil($font-size / $g-rhythm) * ($g-rhythm / $font-size);
+        line-height: (ceil($font-size / $g-rhythm) * ($g-rhythm / $font-size))#{$important};
     }
 }
-
-
 
 /**
  * Micro clearfix for modern browsers
@@ -46,7 +56,8 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-@mixin clearfix() {
+
+@mixin cacao-clearfix() {
     &:before,
     &:after {
         content: " ";
@@ -57,21 +68,11 @@
     }
 }
 
+/**
+ * Create a CSS triangle (using borders).
+ */
 
-
-@mixin letterpress($opacity) {
-    text-shadow: white($opacity) 0 1px 0;
-}
-
-
-
-@mixin box-emboss($opacity, $opacity2) {
-    box-shadow: white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
-}
-
-
-
-@mixin triangle($triangle-size, $triangle-color, $triangle-direction) {
+@mixin cacao-triangle($triangle-size, $triangle-color, $triangle-direction) {
     content: "";
     display: inline-block;
     width: 0;
@@ -92,9 +93,11 @@
     }
 }
 
+/**
+ * Create a hamburger menu icon with box shadow.
+ */
 
-
-@mixin hamburger($width, $left, $top, $thickness, $gap, $color, $hover-color) {
+@mixin cacao-hamburger($width, $left, $top, $thickness, $gap, $color, $hover-color) {
     span:after {
         content: '';
         position: absolute;
@@ -112,12 +115,11 @@
     }
 }
 
-
-
 /**
  * http://stackoverflow.com/questions/12228548/findinq-equivalent-color-with-opacity
  */
-@mixin bg-alpha-calc ($desired_colour, $desired_alpha, $background_colour: white) {
+
+@mixin cacao-bg-alpha-calc($desired_colour, $desired_alpha, $background_colour: white) {
     $r3: red($desired_colour);
     $g3: green($desired_colour);
     $b3: blue($desired_colour);
@@ -138,132 +140,75 @@
 
 
 
+/* Cross-browser Fallbacks
+  -------------------------------------------------------------------------- */
 
+/**
+ * Linear gradient with filter fallback.
+ *
+ * 1. Chrome 10+, Safari 5.1+, iOS 5+.
+ * 2. IE 6-9.
+ */
 
-/*---------------------------------------------------------------------------*\
-  VENDOR PREFIXERS
-\*---------------------------------------------------------------------------*/
-
-@mixin box-sizing($type: border-box) {
-    -webkit-box-sizing: $type; /* Android < 2.3, iOS < 4 */
-       -moz-box-sizing: $type; /* Firefox < 29 */
-            box-sizing: $type; /* Chrome, IE 8+, Opera, Safari 5.1 */
+@mixin cacao-linear-gradient($fromColor, $toColor) {
+    background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* 1 */
+    background-image:         linear-gradient(to bottom, $fromColor, $toColor);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}'); /* 2 */
 }
 
+/**
+ * Opacity with fallback.
+ *
+ * 1. IE 8.
+ */
 
-
-@mixin linear-gradient($fromColor, $toColor) {
-    background-color: $toColor; /* Fallback Color */
-    background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
-    background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
-    background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
-    background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
-    background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
-    background-image:         linear-gradient(top, $fromColor, $toColor);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
-}
-
-
-
-@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
-    @if $inset {
-        -webkit-box-shadow: inset $top $left $blur $spread $color;
-           -moz-box-shadow: inset $top $left $blur $spread $color;
-                box-shadow: inset $top $left $blur $spread $color;
-    } @else {
-        -webkit-box-shadow: $top $left $blur $spread $color;
-           -moz-box-shadow: $top $left $blur $spread $color;
-                box-shadow: $top $left $blur $spread $color;
-    }
-}
-
-
-
-@mixin opacity($opacity) {
+@mixin cacao-opacity($opacity) {
     opacity: $opacity;
     $opacity-ie: $opacity * 100;
-    filter: alpha(opacity=$opacity-ie); /* IE 8 */
+    filter: alpha(opacity=$opacity-ie); /* 1 */
 }
 
+/**
+ * Grayscale filter.
+ *
+ * 1. New Webkit.
+ * 2. Firefox 3.5+, IE 10+.
+ * 3. IE 6-9.
+ */
 
-
-@mixin transform($transform) {
-    -webkit-transform: $transform;
-        -ms-transform: $transform;
-            transform: $transform;
-}
-
-
-
-@mixin transition($property: all, $duration: 100ms, $function: linear, $delay: 0s) {
-    -webkit-transition: $property $duration $function $delay;
-       -moz-transition: $property $duration $function $delay;
-         -o-transition: $property $duration $function $delay;
-            transition: $property $duration $function $delay;
-}
-
-
-
-@mixin user-select($select: text) {
-    -webkit-touch-callout: $select;
-      -webkit-user-select: $select;
-       -khtml-user-select: $select;
-         -moz-user-select: $select;
-          -ms-user-select: $select;
-              user-select: $select;
-}
-
-
-
-@mixin greyscale($value: on) {
+@mixin cacao-greyscale($value: on) {
     @if $value == on {
-        -webkit-filter: grayscale(100%); /* New WebKit */
-           -moz-filter: grayscale(100%);
-            -ms-filter: grayscale(100%);
-             -o-filter: grayscale(100%); /* Not yet supported in Gecko, Opera or IE */
-                filter: grayscale(100%); /* Current draft standard */
-        /* Firefox 3.5+ */
-        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-        /* IE 6-9 */
-        filter: gray;
-        /* Old WebKit */
-        -webkit-filter: grayscale(1);
+        -webkit-filter: grayscale(100%); /* 1 */
+        -ms-filter: grayscale(100%);
+        filter: grayscale(100%);
+        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* 2 */
+        filter: gray; /* 3 */
     } @else {
         -webkit-filter: none;
-           -moz-filter: none;
-            -ms-filter: none;
-             -o-filter: none;
-                filter: none;
+        -ms-filter: none;
+        filter: none;
     }
 }
 
+/**
+ * Input placeholder colors.
+ *
+ * 1. Firefox.
+ * 2. https://github.com/twbs/bootstrap/pull/11526
+ * 3. Internet Explorer 10+.
+ * 4. Safari and Chrome.
+ */
 
-
-@mixin placeholder($color) {
-    &::-moz-placeholder { /* Firefox */
+@mixin cacao-placeholder($color) {
+    &::-moz-placeholder { /* 1 */
         color: $color;
-        opacity: 1; /* See https://github.com/twbs/bootstrap/pull/11526 */
+        opacity: 1; /* 2 */
     }
-    &:-ms-input-placeholder { /* Internet Explorer 10+ */
+    &:-ms-input-placeholder { /* 3 */
         color: $color;
     }
-    &::-webkit-input-placeholder { /* Safari and Chrome */
+    &::-webkit-input-placeholder { /* 4 */
         color: $color;
     }
 }
-
-
-
-@mixin font-smoothing($value: on) {
-    @if $value == on {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    } @else {
-        -webkit-font-smoothing: none;
-        -moz-osx-font-smoothing: none;
-        font-smooth: never;
-    }
-}
-
-
 

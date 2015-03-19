@@ -1,4 +1,4 @@
-ddmenu
+DDMenu
 ======
 
 Mobile drilldown navigation.
@@ -25,27 +25,27 @@ This can optionally be set to your menu of choice, for example the classname can
 Usage
 -----
 
-    <a class="ddmenu_toggle">Menu</a>
+    <a class="DDMenu-toggle">Menu</a>
 
-    <ul class="ddmenu -root">
+    <ul class="DDMenu DDMenu--root">
 
-        <li class="ddmenu_item -root">
-            <a class="ddmenu_link -root" href="#">Link 1</a>
+        <li class="DDMenu-item DDMenu-item--root">
+            <a class="DDMenu-link DDMenu-link--root" href="#">Link 1</a>
         </li>
 
-        <li class="ddmenu_item -root">
-            <a class="ddmenu_link -root" href="#">Link 2</a>
+        <li class="DDMenu-item DDMenu-item--root">
+            <a class="DDMenu-link DDMenu-link--root" href="#">Link 2</a>
         </li>
 
-        <li class="ddmenu_item -root">
-            <a class="ddmenu_link -root" href="#">Link 3</a>
+        <li class="DDMenu-item DDMenu-item--root">
+            <a class="DDMenu-link DDMenu-link--root" href="#">Link 4</a>
 
-            <ul class="ddmenu -sub">
-                <li class="ddmenu_item -sub">
-                    <a class="ddmenu_link -sub" href="#">Sub Link 1</a>
+            <ul class="DDMenu DDMenu--sub">
+                <li class="DDMenu-item DDMenu-item--sub">
+                    <a class="DDMenu-link DDMenu-link--sub" href="#">Sub Link 1</a>
                 </li>
-                <li class="ddmenu_item -sub">
-                    <a class="ddmenu_link -sub" href="#">Sub Link 2</a>
+                <li class="DDMenu-item DDMenu-item--sub">
+                    <a class="DDMenu-link DDMenu-link--sub" href="#">Sub Link 2</a>
                 </li>
             </ul>
 

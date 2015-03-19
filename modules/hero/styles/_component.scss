@@ -1,0 +1,62 @@
+/*===========================================================================*\
+  HERO
+\*===========================================================================*/
+
+@import "../../../cacao";
+@import "defaults";
+
+
+
+
+
+/*===========================================================================*\
+  COMPONENT
+\*===========================================================================*/
+
+.Hero {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.Hero-img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.Hero-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    padding-left: $hero-content-gutter;
+    padding-right: $hero-content-gutter;
+    transform: translateY(-50%);
+}
+
+
+
+.Hero-title {
+    @include cacao-font-size($hero-title-size, $line-height: true);
+    margin-bottom: $hero-title-margin;
+}
+
+
+
+.Hero-subtitle {
+    @include cacao-font-size($hero-subtitle-size, $line-height: true);
+    margin-bottom: $hero-subtitle-margin;
+}
+
+
+
+.Hero-button {
+    @include cacao-font-size($hero-button-size, $line-height: true);
+    padding: $hero-button-padding;
+}
+
