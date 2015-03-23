@@ -3,11 +3,10 @@
 \*===========================================================================*/
 
 @import "../../../cacao";
-@import "defaults";
 
 
 
-@media (max-width: $margin-bottom-md) {
+@media (max-width: $g-bp-md) {
 
     .u-md-margBottom0 {
         margin-bottom: 0 !important;

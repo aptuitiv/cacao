@@ -1,42 +1,18 @@
 /*===========================================================================*\
-  SUITCSS SIZE UTILS
-\*===========================================================================*/
-/**
- * https://github.com/suitcss/utils-size/
- */
-
-@import "defaults";
-
-
-
-
-
-/*===========================================================================*\
-  UTILITIES
+  STATE LG
 \*===========================================================================*/
 
-@media (max-width: $suitSize-lg) {
+@import "../../../cacao";
 
-    /**
-     * Make an element the width of its parent.
-     */
+
+
+@media (max-width: $g-bp-lg) {
 
     .u-lg-sizeFull {
         box-sizing: border-box !important;
         display: block !important;
         width: 100% !important;
     }
-
-
-
-    /* Proportional widths: breakpoint 1 (large)
-      ---------------------------------------------------------------------- */
-
-    /**
-     * Specify the proportional width of an object.
-     * Intentional redundancy build into each set of unit classes.
-     * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
-     */
 
     .u-lg-size1of12 {
         width: (100% * 1 / 12) !important;

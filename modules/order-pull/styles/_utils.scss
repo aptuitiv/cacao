@@ -1,25 +1,6 @@
 /*===========================================================================*\
-  UTILS ORDER PULL
-\*===========================================================================*/
-
-/**
- * Similar to utils-offset-pull but applies a left positioning value
- * in order to re-order columns.
- */
-
-
-
-
-
-/*===========================================================================*\
   UTILITIES
 \*===========================================================================*/
-
-/**
- * Specify the proportional pull of an element.
- * Intentional redundancy build into each set of unit classes.
- * Supports: 2, 4, 5, 6, 8, 10, 12 section
- */
 
 .u-pull1of12 {
     left: -(100% * 1 / 12) !important;

@@ -1,24 +1,6 @@
 /*===========================================================================*\
-  UTILS OFFSET AFTER
-\*===========================================================================*/
-
-/**
- * https://github.com/suitcss/utils-after
- */
-
-
-
-
-
-/*===========================================================================*\
   UTILITIES
 \*===========================================================================*/
-
-/**
- * Specify the proportional offset after an element.
- * Intentional redundancy build into each set of unit classes.
- * Supports: 2, 4, 5, 6, 8, 10, 12 section
- */
 
 .u-after1of12 {
     margin-right: (100% * 1 / 12) !important;

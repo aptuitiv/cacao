@@ -1,24 +1,6 @@
 /*===========================================================================*\
-  UTILS OFFSET BEFORE
-\*===========================================================================*/
-
-/**
- * https://github.com/suitcss/utils-before
- */
-
-
-
-
-
-/*===========================================================================*\
   UTILITIES
 \*===========================================================================*/
-
-/**
- * Specify the proportional offset before an element.
- * Intentional redundancy build into each set of unit classes.
- * Supports: 2, 4, 5, 6, 8, 10, 12 section
- */
 
 .u-before1of12 {
     margin-left: (100% * 1 / 12) !important;

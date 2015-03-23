@@ -1,30 +1,12 @@
 /*===========================================================================*\
-  UTILS OFFSET AFTER
+  STATE MD
 \*===========================================================================*/
 
-/**
- * https://github.com/suitcss/utils-after
- */
-
-@import "defaults";
+@import "../../../cacao";
 
 
 
-
-
-/*===========================================================================*\
-  UTILITIES
-\*===========================================================================*/
-
-/**
- * Offset: breakpoint 3 (medium)
- *
- * Specify the proportional offset after an element.
- * Intentional redundancy build into each set of unit classes.
- * Supports: 2, 4, 5, 6, 8, 10, 12 section
- */
-
-@media (max-width: $utils-after-md) {
+@media (max-width: $g-bp-md) {
 
     .u-md-afterNone {
         margin-left: 0 !important;

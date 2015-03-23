@@ -1,38 +1,12 @@
 /*===========================================================================*\
-  SIZE UTILS
-\*===========================================================================*/
-/**
- * https://github.com/suitcss/utils-size/
- */
-
-
-
-
-
-/*===========================================================================*\
   UTILITIES
 \*===========================================================================*/
-
-/**
- * Make an element the width of its parent.
- */
 
 .u-sizeFull {
     box-sizing: border-box !important;
     display: block !important;
     width: 100% !important;
 }
-
-
-
-/* Proportional widths
-  -------------------------------------------------------------------------- */
-
-/**
- * Specify the proportional width of an object.
- * Intentional redundancy build into each set of unit classes.
- * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
- */
 
 .u-size1of12 {
     width: (100% * 1 / 12) !important;

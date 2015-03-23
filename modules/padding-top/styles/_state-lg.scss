@@ -3,11 +3,10 @@
 \*===========================================================================*/
 
 @import "../../../cacao";
-@import "defaults";
 
 
 
-@media (max-width: $padding-top-lg) {
+@media (max-width: $g-bp-lg) {
 
     .u-lg-padTop0 {
         padding-top: 0 !important;

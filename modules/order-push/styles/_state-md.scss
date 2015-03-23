@@ -1,26 +1,12 @@
 /*===========================================================================*\
-  UTILS ORDER PUSH
+  STATE MD
 \*===========================================================================*/
 
-@import "defaults";
+@import "../../../cacao";
 
 
 
-
-
-/*===========================================================================*\
-  UTILITIES
-\*===========================================================================*/
-
-/**
- * Offset: breakpoint 3 (medium)
- *
- * Specify the proportional push of an element.
- * Intentional redundancy build into each set of unit classes.
- * Supports: 2, 4, 5, 6, 8, 10, 12 section
- */
-
-@media (max-width: $utils-push-md) {
+@media (max-width: $g-bp-md) {
 
     .u-md-pushNone {
         left: 0 !important;
