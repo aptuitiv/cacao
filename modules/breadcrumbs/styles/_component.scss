@@ -1,20 +1,10 @@
 /*===========================================================================*\
-  BREADCRUMBS
+  COMPONENT
 \*===========================================================================*/
-
-/**
- * A breadcrumb trail that can be configured with separators.
- */
 
 @import "defaults";
 
 
-
-
-
-/*===========================================================================*\
-  COMPONENT
-\*===========================================================================*/
 
 /**
  * Base wrapper.
@@ -49,8 +39,5 @@
 
 .Crumbs-item--separator {
     padding: $crumbs-separator-padding;
-    &:after {
-        content: $crumbs-separator;
-    }
 }
 
