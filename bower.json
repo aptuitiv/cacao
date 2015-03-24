@@ -1,17 +1,15 @@
 {
   "name": "cacao",
-  "version": "0.2a",
   "homepage": "http://aptuitiv.github.io/cacao",
   "authors": "Aptuitiv",
-  "description": "A collection of frontend modules.",
+  "description": "A collection of frontend modules and globals.",
   "license": "MIT",
-  "private": true,
   "main": "_cacao.scss",
   "ignore": [
     "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "node_modules/",
+    "bower_components/",
+    "test/",
+    "tests/"
   ]
 }
