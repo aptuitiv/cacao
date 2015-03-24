@@ -1,28 +1,18 @@
 /*===========================================================================*\
-  CONTAINER
+  COMPONENT
 \*===========================================================================*/
-
-/**
- * Page container.
- */
 
 @import "defaults";
 
 
-
-
-
-/*===========================================================================*\
-  COMPONENT
-\*===========================================================================*/
 
 /**
  * Base
  */
 
 .Container {
-    max-width: $container-width;
     margin: 0 auto;
+    max-width: $container-width;
     padding-left: $container-gutter;
     padding-right: $container-gutter;
 }

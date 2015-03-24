@@ -7,38 +7,43 @@
 
 
 
-
-
 @media (max-width: $ddmenu-bp) {
+
     .DDMenu-toggle,
     .ap-ddmenu-header,
     .#{$ddmenu-classname}-item.clone {
         display: block;
     }
+
     .#{$ddmenu-classname} {
         display: block;
-        padding: $ddmenu-menu-padding;
         margin: 0;
+        padding: $ddmenu-menu-padding;
     }
+
     .#{$ddmenu-classname}--sub,
     .#{$ddmenu-classname}-item:hover > .#{$ddmenu-classname}--sub {
         display: none;
-        top: 0;
         left: 100%;
+        top: 0;
     }
+
     .#{$ddmenu-classname}--root {
         position: relative;
     }
+
     .#{$ddmenu-classname}-item {
         box-sizing: border-box;
         display: block;
+        margin: 0 0 $ddmenu-item-spacing;
         position: static;
         width: 100%;
-        margin: 0 0 $ddmenu-item-spacing;
     }
+
     .#{$ddmenu-classname}-link {
         @include cacao-font-size($ddmenu-fontsize, $line-height: true);
         padding: $ddmenu-item-padding;
     }
+
 }
 

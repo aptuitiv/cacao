@@ -1,17 +1,11 @@
 /*===========================================================================*\
-  MOBILE DRILLDOWN MENU
+  COMPONENT
 \*===========================================================================*/
 
 @import "../../../cacao";
 @import "defaults";
 
 
-
-
-
-/*===========================================================================*\
-  COMPONENT
-\*===========================================================================*/
 
 .ap-ddmenu-header,
 .DDMenu-toggle,
@@ -21,9 +15,9 @@
 
 .ap-ddmenu-header {
     @include cacao-font-size($ddmenu-header-fontsize, $line-height: true);
-    position: relative;
     height: $ddmenu-header-height;
     padding: $ddmenu-header-padding;
+    position: relative;
 }
 
 .DDMenu-current {

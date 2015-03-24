@@ -18,15 +18,14 @@ A page container.
 Usage
 -----
 
+    <div class="Container">
+        [ ... ]
+    </div>
+
+    <!-- within another element -->
     <div id="Header">
         <div class="Container Container--gutterNone">
             [ ... ]
         </div>
     </div>
-
-    <div class="Container">
-        [ ... ]
-    </div>
-
-
 

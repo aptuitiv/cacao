@@ -1,20 +1,10 @@
 /*===========================================================================*\
-  LISTS
+  COMPONENT
 \*===========================================================================*/
-
-/**
- * Generic list layouts and styles.
- */
 
 @import "defaults";
 
 
-
-
-
-/*===========================================================================*\
-  COMPONENT
-\*===========================================================================*/
 
 /**
  * List Reset
@@ -38,6 +28,7 @@
 
 .List--inline {
     display: inline-block;
+
     > li {
         display: inline-block;
     }
@@ -53,6 +44,7 @@
 
 .List--inline--spaced {
     margin-left: -$list-spaced-margin;
+
     > li {
         margin-left: $list-spaced-margin;
     }
@@ -75,6 +67,7 @@
             margin-left: $list-barred-margin;
             margin-right: $list-barred-margin;
         }
+
         &:first-child:before {
             content: "";
             margin-left: 0;
@@ -100,6 +93,7 @@
             margin-left: $list-dotted-margin;
             margin-right: $list-dotted-margin;
         }
+
         &:first-child:before {
             content: "";
             margin-left: 0;
