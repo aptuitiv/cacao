@@ -7,8 +7,12 @@
 
 
 
-/* Base Menu
+/* Menus
   -------------------------------------------------------------------------- */
+
+/**
+ * Base
+ */
 
 .MainNav {
     list-style: none;
@@ -38,6 +42,53 @@
     z-index: $mainnav-sub-zindex;
 }
 
+/**
+ * Display the submenu when it's parent is hovered.
+ */
+
+.MainNav-item:hover > .MainNav--sub {
+        display: block;
+}
+
+/**
+ * Position sub-sub-menus to the right side of the parent
+ *
+ * 1. Apply an optional vertical offset to negate borders, padding, etc.
+ */
+
+.MainNav-item--sub:hover > .MainNav--sub {
+    left: 100%;
+    top: $mainnav-sub-sub-offset; /* 1 */
+}
+
+/**
+ * Position sub-menus to the bottom of their parent
+ */
+
+.MainNav-item--root:hover > .MainNav--sub {
+    left: 0;
+    top: 100%;
+}
+
+/**
+ * Sub-sub navs anywhere under the last root menu item. Aligned to the outer
+ * right side of the item instead of the left.
+ */
+
+.MainNav-item--root.last .MainNav--sub {
+    left: auto;
+    right: 100%;
+}
+
+/**
+ * Sub nav directly under the last root menu item. Aligned to the right side
+ * of the item instead of the left.
+ */
+
+.MainNav-item--root.last > .MainNav--sub {
+    right: 0;
+}
+
 
 
 /* Menu Items
@@ -45,50 +96,29 @@
 
 /**
  * Base menu item.
- *
- * 1. Display the submenu when it's parent is hovered.
  */
 
 .MainNav-item {
     position: relative;
-
-    &:hover > .MainNav--sub { /* 1 */
-        display: block;
-    }
 }
 
 /**
  * Root level menu items.
- *
- * 1. Position sub-menus to the bottom of their parent
  */
 
 .MainNav-item--root {
     display: inline-block;
     margin-left: $mainnav-root-item-spacing;
     width: $mainnav-root-item-width;
-
-    &:hover > .MainNav--sub { /* 1 */
-        left: 0;
-        top: 100%;
-    }
 }
 
 /**
  * Sub menu items.
- *
- * 1. Position sub-sub-menus to the right side of the parent
- * 2. Apply an optional vertical offset to negate borders, padding, etc.
  */
 
 .MainNav-item--sub {
     margin-bottom: $mainnav-sub-item-spacing;
     width: 100%;
-
-    &:hover > .MainNav--sub { /* 1 */
-        left: 100%;
-        top: $mainnav-sub-sub-offset; /* 2 */
-    }
 }
 
 
