@@ -1,8 +1,8 @@
 Cacao
 =====
 
-Cacao is a light framework that includes flexible, reusable front-end modules and also a small set of global settings
-and mixins.
+Cacao is a light Sass framework that includes flexible, reusable 
+front-end modules and also a small set of global settings and mixins.
 
 [How to pronounce Cacao.](https://www.youtube.com/watch?v=kVSIkXL_Nmo)
 
@@ -12,152 +12,134 @@ Getting Started
 
 The easiest way to get started using Cacao is to install it with bower:
 
-`bower install 'https://github.com/aptuitiv/cacao.git' --save`
+`bower install cacao --save`
 
-At the bare minimum the main Cacao file, `_cacao.scss`, must be imported at the top of your project's stylesheet.
+At the bare minimum the main Cacao file, `_cacao.scss`, must be imported at 
+the top of any file making use of the globals.
 
-    /* main.scss */
+    /* index.scss */
 
     // cacao globals, defaults, and mixins.
     @import "bower_components/cacao/cacao";
 
-    // the rest of your project
+    // the project
+    .MyComponent {
+        font-size: $g-textSize6; // using a cacao global
+    }
 
-This main file only imports the framework part of Cacao. In order to use the modules you must individually import its
-"layers" (see below). This creates a lot of imports but modules are structured this way to increase flexibility and
-modularity.
+This main file only imports the framework part of Cacao. To include a module 
+you must import it individually.
+
+    /* index.scss */
+
+    // cacao globals, defaults, and mixins.
+    @import "bower_components/cacao/cacao";
+
+    // cacao modules
+    @import "bower_components/cacao/modules/breadcrumbs/index";
+    @import "bower_components/cacao/modules/container/index";
+
+    // the project
+    .MyComponent {
+        font-size: $g-textSize6; // using a cacao global
+    }
 
 
 
 Globals
 =======
 
-Cacao consists of a small set of mixins and globals that are used throughout the modules, and can also be used
-throughout your site to keep things consistent.
+Cacao consists of a small set of mixins and globals that are used throughout 
+the modules and the project to keep things consistent.
 
-Take a peek in `_defaults.scss` and `_mixins.scss` to see what is available.
+Variable and mixin usage docs are kept up to date in `_defaults.scss` and 
+`_mixins.scss`.
 
 
 
 Modules
 =======
 
-Modules follow a strict directory structure. They may contain javascript, images, stylesheets, whatever the module
-needs to get it's job done.
+Modules follow a strict directory structure. They may contain javascript, 
+images, stylesheets, whatever assets the module needs to get it's job done.
 
 Here is a mock-up of what you might see in a module's directory:
 
-    _myModule
+    _my-module
     |
-    |__css
-    | |___settings.scss       // module defaults
+    |__styles
+    | |___defaults.scss       // module defaults
     | |___base.scss           // base element styles
-    | |___generic.scss        // generic and helper styles
+    | |___utils.scss          // utility and helper styles
     | |___component.scss      // layout and component styles
     | |___state.scss          // state styles
+    | |__index.scss           // main module stylesheet
     |
-    |__images
-    | |__module-image.png
+    |__scripts
+    | |__myModule.js          // javascript
     |
-    |__js
-    | |__init.js              // initialization
+    |__assets
+    | |__module-image.png     // required assets
     |
-    |__Gruntfile.js           // build tasks
-    |__bower.json             // front-end dependencies
     |__README.md              // documentation
 
 
 Stylesheets
 -----------
 
-The module styles are separated into several layers. Each of these layers can use the module's default style settings.
-Between overriding these settings and leveraging the style layers the user can create predictable and flexible
-stylesheets.
+The module styles are separated into several layers. Each of these layers can 
+be used in your project by importing them individually or as a whole component 
+by importing `index.scss`.
+
+The layers can use the module's default style settings. Between 
+overriding these settings and leveraging the style layers the user can 
+create predictable and flexible stylesheets.
 
 - base
-- generic
+- utils
 - component
 - state
 
-An example of a site's `main.scss` that makes use of these layers:
+An example of a project's `main.scss` that makes use of these layers:
 
     /**
-     * main.scss
+     * src/site/styles/main.scss
      */
 
     /* Globals */
-    @import "../../bower_components/cacao/cacao"; // cacao globals, defaults, and mixins
-    @import "settings"; // site settings
+    @import "../../../bower_components/cacao/cacao"; // cacao globals
+    @import "settings"; // site settings, default global overrides
 
-    /* Base */
-    @import "../../bower_components/normalize.css/normalize"; // cacao/modules/normalize
-    @import "base/base";
-    @import "../../bower_components/cacao/modules/type/css/base";
+    /* Bower Modules */
+    @import "../../../bower_components/normalize.css/normalize";
 
-    /* Generic */
-    @import "../../bower_components/cacao/modules/type/css/generic";
-    @import "generic/helpers";
+    /* Cacao Modules */
+    @import "../../../bower_components/cacao/modules/grid/styles/index";
+    @import "../../../bower_components/cacao/modules/size/styles/index";
+    @import "../../../bower_components/cacao/modules/type/styles/index";
+    // example of using a module's utilites separate of its other layers.
+    // (this project does not need the responsive padding/margins)
+    @import "../../../bower_components/cacao/modules/padding-top/styles/utils";
+    @import "../../../bower_components/cacao/modules/margin-bottom/styles/utils";
 
-    /* Components */
-    @import "../../bower_components/cacao/modules/hero/css/component";
-    @import "../../bower_components/cacao/modules/grid/css/component";
-    @import "../../bower_components/cacao/modules/container/css/component";
-    @import "components/sidebar";
+    /* Local Project Modules */
+    @import "../../header/styles/index";
+    @import "../../sidebar/styles/index";
 
-    /* State */
-    @import "../../bower_components/cacao/modules/hero/css/state";
-    @import "../../bower_components/cacao/modules/grid/css/state";
-
-
-Javascript
-----------
-
-A module may contain all sorts of JS. You may tie these into your build system whichever way you see fit.
-
-Any plugin/module initialization should be named `init.js`.
+    /* Site module */
+    @import "base";
+    @import "utils";
 
 
-Images & Other Assets
----------------------
+Javascript, Images & Other Assets
+---------------------------------
 
-These resources should be tied into your build system whichever way you please.
-
-
-Build Tasks
------------
-
-Some modules may contain a `Gruntfile.js` containing specific build tasks.
-
-These can be imported into your project's Gruntfile. They make use of global variables as shown below.
-
-    module.exports = function(grunt) {
-
-        grunt.initConfig({
-            // Global build settings
-            global: {
-                // Build destination
-                dest: 'dist',
-                // bower components directory
-                bower: 'bower_components',
-                // cacao directory
-                cacao: '<%= global.bower %>/cacao'
-            }
-        });
-
-        // cacao modules
-        require('./bower_components/cacao/modules/normalize/Gruntfile.js')(grunt);
-
-        // tasks
-        grunt.loadNpmTasks('grunt-contrib-copy');
-
-    };
+These resources can be tied into your build system whichever way you please.
 
 
 Dependencies
 ------------
 
-Currently there is no dependency resolution. Dependencies are put into `bower.json` and left for the user to process
-either manually or via a build system.
-
-
+Currently there is no dependency resolution. This will be the major focus of 
+v2.0, along with a more elegant way of handling module assets and scripts.
 

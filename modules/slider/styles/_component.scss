@@ -1,24 +1,18 @@
 /*===========================================================================*\
-  SLIDER
+  COMPONENT
 \*===========================================================================*/
 
 @import "defaults";
 
 
 
-
-
-/*===========================================================================*\
-  COMPONENT
-\*===========================================================================*/
-
 /**
  * Base wrapper.
  */
 
 .Slider {
-    position: relative;
     overflow: hidden;
+    position: relative;
 }
 
 /**
@@ -34,14 +28,14 @@
  */
 
 .Slider-nav {
-    position: absolute;
-    top: 50%;
-    z-index: 4;
     left: $slider-nav-gutter;
-    right: $slider-nav-gutter;
     margin-left: auto;
     margin-right: auto;
+    position: absolute;
+    right: $slider-nav-gutter;
+    top: 50%;
     transform: translateY(-50%);
+    z-index: 4;
 }
 
 .Slider-nav-prev {
@@ -57,18 +51,18 @@
  */
 
 .Slider-pager {
-    position: absolute;
     bottom: $slider-pager-bottom-margin;
     left: 0;
+    position: absolute;
     right: 0;
     z-index: 4;
 }
 
 .Slider-pager-item {
     display: inline-block;
-    width: $slider-pager-item-width;
     height: $slider-pager-item-height;
     margin: $slider-pager-item-margin;
     padding: $slider-pager-item-padding;
+    width: $slider-pager-item-width;
 }
 

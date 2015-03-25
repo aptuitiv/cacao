@@ -1,0 +1,36 @@
+/*===========================================================================*\
+  STATE LG
+\*===========================================================================*/
+
+@import "../../../cacao";
+
+
+
+@media (max-width: $g-bp-lg) {
+
+    .u-lg-margTop0 {
+        margin-bottom: 0 !important;
+    }
+
+    .u-lg-margTop1 {
+        margin-bottom: $g-rhythm*1 !important;
+    }
+
+    .u-lg-margTop2 {
+        margin-bottom: $g-rhythm*2 !important;
+    }
+
+    .u-lg-margTop3 {
+        margin-bottom: $g-rhythm*3 !important;
+    }
+
+    .u-lg-margTop4 {
+        margin-bottom: $g-rhythm*4 !important;
+    }
+
+    .u-lg-margTop5 {
+        margin-bottom: $g-rhythm*5 !important;
+    }
+
+}
+
