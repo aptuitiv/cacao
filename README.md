@@ -12,7 +12,7 @@ Getting Started
 
 The easiest way to get started using Cacao is to install it with bower:
 
-`bower install 'https://github.com/aptuitiv/cacao.git' --save`
+`bower install cacao --save`
 
 At the bare minimum the main Cacao file, `_cacao.scss`, must be imported at 
 the top of any file making use of the globals.
@@ -70,7 +70,7 @@ Here is a mock-up of what you might see in a module's directory:
     |__styles
     | |___defaults.scss       // module defaults
     | |___base.scss           // base element styles
-    | |___generic.scss        // generic and helper styles
+    | |___utils.scss          // utility and helper styles
     | |___component.scss      // layout and component styles
     | |___state.scss          // state styles
     | |__index.scss           // main module stylesheet
@@ -88,27 +88,26 @@ Stylesheets
 -----------
 
 The module styles are separated into several layers. Each of these layers can 
-use the module's default style settings. Between overriding these settings and 
-leveraging the style layers the user can create predictable and flexible 
-stylesheets.
+be used in your project by importing them individually or as a whole component 
+by importing `index.scss`.
 
-Each of these layers can be used in your project separately or as a whole 
-component by importing `index.scss`.
+The layers can use the module's default style settings. Between 
+overriding these settings and leveraging the style layers the user can 
+create predictable and flexible stylesheets.
 
 - base
 - utils
 - component
 - state
 
-
-An example of a projects's `main.scss` that makes use of these layers:
+An example of a project's `main.scss` that makes use of these layers:
 
     /**
      * src/site/styles/main.scss
      */
 
     /* Globals */
-    @import "../../../bower_components/cacao/cacao"; // cacao globals, defaults, and mixins
+    @import "../../../bower_components/cacao/cacao"; // cacao globals
     @import "settings"; // site settings, default global overrides
 
     /* Bower Modules */
@@ -135,11 +134,12 @@ An example of a projects's `main.scss` that makes use of these layers:
 Javascript, Images & Other Assets
 ---------------------------------
 
-These resources should be tied into your build system whichever way you please.
+These resources can be tied into your build system whichever way you please.
 
 
 Dependencies
 ------------
 
-Currently there is no dependency resolution.
+Currently there is no dependency resolution. This will be the major focus of 
+v2.0, along with a more elegant way of handling module assets and scripts.
 
