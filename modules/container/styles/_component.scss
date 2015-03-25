@@ -2,19 +2,17 @@
   COMPONENT
 \*===========================================================================*/
 
-@import "defaults";
+@import "../../../cacao";
 
 
 
 /**
- * Base
+ * Base.
  */
 
 .Container {
     margin: 0 auto;
-    max-width: $container-width;
-    padding-left: $container-gutter;
-    padding-right: $container-gutter;
+    max-width: $g-page-width;
 }
 
 /**
@@ -22,16 +20,7 @@
  */
 
 .Container--widthFixed {
-    width: $container-width;
-}
-
-/**
- * Remove gutters from container.
- */
-
-.Container--gutterNone {
-    padding-left: 0;
-    padding-right: 0;
+    width: $g-page-width;
 }
 
 /**
