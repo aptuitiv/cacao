@@ -1,5 +1,5 @@
 /*===========================================================================*\
-  HERO
+  COMPONENT
 \*===========================================================================*/
 
 @import "../../../cacao";
@@ -7,35 +7,29 @@
 
 
 
-
-
-/*===========================================================================*\
-  COMPONENT
-\*===========================================================================*/
-
 .Hero {
-    position: relative;
     overflow: hidden;
+    position: relative;
 }
 
 
 
 .Hero-img {
     display: block;
-    width: 100%;
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
+    width: 100%;
 }
 
 
 
 .Hero-content {
-    position: absolute;
-    top: 50%;
     left: 0;
-    right: 0;
     padding-left: $hero-content-gutter;
     padding-right: $hero-content-gutter;
+    position: absolute;
+    right: 0;
+    top: 50%;
     transform: translateY(-50%);
 }
 

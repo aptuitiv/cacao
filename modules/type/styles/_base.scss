@@ -1,23 +1,14 @@
 /*===========================================================================*\
-  TYPOGRAPHY
+  BASE
 \*===========================================================================*/
 
 /**
  * Set the base typography styles and vertical rhythm.
- * Link are reset to use opt-in styles. These styles can be scoped or
- * set by other modules. This cuts down on the amount of overrides and
- * repeated resets needed in modules.
  */
 
 @import "../../../cacao";
 
 
-
-
-
-/*===========================================================================*\
-  BASE
-\*===========================================================================*/
 
 body {
     font-family: $g-font-stack;
@@ -31,6 +22,12 @@ p {
     @include cacao-font-size($g-textSize-base, $line-height: true);
     margin: 0 0 $g-line-height;
 }
+
+/**
+ * Links are reset to use opt-in styles. These styles can be scoped or
+ * set by other modules. This cuts down on the amount of overrides and
+ * repeated resets needed in modules.
+ */
 
 a {
     color: inherit;

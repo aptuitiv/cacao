@@ -2,6 +2,13 @@
   CACAO DEFAULT GLOBALS
 \*===========================================================================*/
 
+/**
+ * CONTENTS
+ * - Breakpoints
+ * - Typography
+ * - Page
+ */
+
 
 
 /* Breakpoints
@@ -55,4 +62,12 @@ $g-textSize4: 18px !default; // h5
 $g-textSize3: 15px !default; // h6
 $g-textSize2: 13px !default;
 $g-textSize1: 11px !default;
+
+
+
+/* Page
+  -------------------------------------------------------------------------- */
+
+$g-page-width: 960px !default;
+$g-page-gutter: $g-rhythm*2 !default;
 

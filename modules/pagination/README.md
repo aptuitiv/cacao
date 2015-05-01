@@ -1,7 +1,7 @@
 Pagination
 ===========
 
-A pagination module. Styles pagination.
+A pagination module.
 
 ### Settings
 
@@ -27,6 +27,4 @@ Usage
         <a class="Pagination-item Pagination-item--page" href="#">4</a>
         <a class="Pagination-item Pagination-item--nav" href="#">Next &gt;&gt;</a>
     </div>
-
-
 

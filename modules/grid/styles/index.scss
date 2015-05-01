@@ -2,5 +2,16 @@
   GRID SYSTEM
 \*===========================================================================*/
 
+/**
+ * Based on: https://github.com/suitcss/components-grid/
+ *
+ * Modifications:
+ * - SASS.
+ * - Apply relative positioning to columns in order to push/pull them.
+ * - Only apply gutters to the left side to fix an issue where the negative
+ *   margins can trigger a horizontal scrollbar if the component is as wide as
+ *   the viewport.
+ */
+
 @import "component";
 
