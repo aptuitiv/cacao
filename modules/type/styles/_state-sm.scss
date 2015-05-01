@@ -1,0 +1,142 @@
+/*===========================================================================*\
+  STATE MD
+\*===========================================================================*/
+
+@import "../../../cacao";
+
+@media (max-width: $g-bp-sm) {
+    /* Horizontal Alignment
+      -------------------------------------------------------------------------- */
+
+    .u-sm-textLeft {
+        text-align: left !important;
+    }
+
+    .u-sm-textRight {
+        text-align: right !important;
+    }
+
+    .u-sm-textCenter {
+        text-align: center !important;
+    }
+
+    .u-sm-textUpper {
+        text-transform: uppercase !important;
+    }
+
+
+
+    /* Weight & Style
+      -------------------------------------------------------------------------- */
+
+    .u-sm-textNormal {
+        font-weight: normal !important;
+    }
+
+    .u-sm-textStrong {
+        font-weight: bold !important;
+    }
+
+    .u-sm-textUnstyled {
+        font-style: none !important;
+    }
+
+    .u-sm-textEm {
+        font-style: italics !important;
+    }
+
+
+
+    /* Font Stacks
+      -------------------------------------------------------------------------- */
+
+    .u-sm-textBody {
+        font-family: $g-font-stack !important;
+    }
+
+    .u-sm-textHeading {
+        font-family: $g-heading-font-stack !important;
+    }
+
+
+
+    /* Heading Styles
+      -------------------------------------------------------------------------- */
+
+    .u-sm-textH1,
+    .u-sm-textH2,
+    .u-sm-textH3,
+    .u-sm-textH4,
+    .u-sm-textH5,
+    .u-sm-textH6 {
+        font-family: $g-heading-font-stack;
+        font-weight: $g-heading-font-weight;
+        letter-spacing: $g-heading-letter-spacing;
+        margin: 0 0 $g-line-height;
+    }
+
+    .u-sm-textH1 {
+        @include cacao-font-size($g-textSize8, $line-height: true, $important: true);
+    }
+
+    .u-sm-textH2 {
+        @include cacao-font-size($g-textSize7, $line-height: true, $important: true);
+    }
+
+    .u-sm-textH3 {
+        @include cacao-font-size($g-textSize6, $line-height: true, $important: true);
+    }
+
+    .u-sm-textH4 {
+        @include cacao-font-size($g-textSize5, $line-height: true, $important: true);
+    }
+
+    .u-sm-textH5 {
+        @include cacao-font-size($g-textSize4, $line-height: true, $important: true);
+    }
+
+    .u-sm-textH6 {
+        @include cacao-font-size($g-textSize3, $line-height: true, $important: true);
+    }
+
+
+
+    /* Font Scale
+      -------------------------------------------------------------------------- */
+
+    .u-sm-textSize9 {
+        @include cacao-font-size($g-textSize9, $line-height: true, $important: true);
+    }
+
+    .u-sm-textSize8 {
+        @include cacao-font-size($g-textSize8, $line-height: true, $important: true);
+    }
+
+    .u-sm-textSize7 {
+        @include cacao-font-size($g-textSize7, $line-height: true, $important: true);
+    }
+
+    .u-sm-textSize6 {
+        @include cacao-font-size($g-textSize6, $line-height: true, $important: true);
+    }
+
+    .u-sm-textSize5 {
+        @include cacao-font-size($g-textSize5, $line-height: true, $important: true);
+    }
+
+    .u-sm-textSize4 {
+        @include cacao-font-size($g-textSize4, $line-height: true, $important: true);
+    }
+
+    .u-sm-textSize3 {
+        @include cacao-font-size($g-textSize3, $line-height: true, $important: true);
+    }
+
+    .u-sm-textSize2 {
+        @include cacao-font-size($g-textSize2, $line-height: true, $important: true);
+    }
+
+    .u-sm-textSize1 {
+        @include cacao-font-size($g-textSize1, $line-height: true, $important: true);
+    }
+}
