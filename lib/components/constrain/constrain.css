@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Constrain
+   ========================================================================== */
+
+/** @define Constrain */
+
+/**
+ * Constrains an image of unknown size to the specified aspect ratio.
+ * The image is potentially cropped using the specified gravity.
+ * Similar to FlexEmbed but meant to be used specifically with images.
+ *
+ * This method will be used until the `object-fit` and `object-position`
+ * properties are well supported. http://caniuse.com/#feat=object-fit
+ */
+
+/**
+ * Constrained image container
+
+ * Apply `background-image` inline or with another class.
+ * Constrain ratio is set to 1:1 by default. Use a modifier to change it.
+ * Gravity is set to center by default. Use a modifier to change it.
+ */
+
+.Constrain {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: block;
+    padding-top: 100%;
+    width: 100%;
+}
+
+/**
+ * Contain images instead of cropping them to fit
+ */
+
+.Constrain--contain {
+    background-size: contain;
+}
+
+/* Constrain ratios
+   ========================================================================== */
+
+.Constrain--5by4 {
+    padding-top: 80%;
+}
+
+.Constrain--4by3 {
+    padding-top: 75%;
+}
+
+.Constrain--3by2 {
+    padding-top: 66.66667%;
+}
+
+.Constrain--8by5,
+.Constrain--16by10 {
+    padding-top: 62.5%;
+}
+
+.Constrain--16by9 {
+    padding-top: 56.25%;
+}
+
+/* Crop gravities
+   ========================================================================== */
+
+/**
+ * Gravitate towards edge
+ */
+
+.Constrain--top {
+    background-position: top center;
+}
+
+.Constrain--bottom {
+    background-position: bottom center;
+}
+
+.Constrain--left {
+    background-position: left center;
+}
+
+.Constrain--right {
+    background-position: right center;
+}
+
+/**
+ * Gravitate towards corner
+ */
+
+.Constrain--topLeft {
+    background-position: top left;
+}
+
+.Constrain--topRight {
+    background-position: top right;
+}
+
+.Constrain--bottomLeft {
+    background-position: bottom left;
+}
+
+.Constrain--bottomRight {
+    background-position: bottom right;
+}
+

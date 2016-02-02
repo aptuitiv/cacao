@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Bottom margin utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+:root {
+    --utils-margin-bottom: 10px;
+}
+
+.u-margBottom0 {
+    margin-bottom: 0 !important;
+}
+
+.u-margBottom1 {
+    margin-bottom: var(--utils-margin-bottom) !important;
+}
+
+.u-margBottom2 {
+    margin-bottom: calc(var(--utils-margin-bottom) * 2) !important;
+}
+
+.u-margBottom3 {
+    margin-bottom: calc(var(--utils-margin-bottom) * 3) !important;
+}
+
+.u-margBottom4 {
+    margin-bottom: calc(var(--utils-margin-bottom) * 4) !important;
+}
+
+.u-margBottom5 {
+    margin-bottom: calc(var(--utils-margin-bottom) * 5) !important;
+}
+

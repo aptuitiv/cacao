@@ -1,0 +1,214 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Note: This sets the <html> element's font-size to 62.5%, which
+ * equals 10px. This allows rem units to be calculated more intuitively.
+ */
+
+@custom-media --base-typography-bp (max-width: 600px);
+
+:root {
+    --base-typography-color: #333;
+    --base-typography-fontFamily: sans-serif;
+    --base-typography-fontSize: 15px;
+    --base-typography-fontWeight: 400;
+    --base-typography-hrule-width: 1px;
+    --base-typography-letterSpacing: 0;
+    --base-typography-lineHeight: 20px;
+    --base-typography-spacing: var(--base-typography-lineHeight);
+}
+
+:root {
+    --base-typography-link-color: #000;
+    --base-typography-link-colorHover: var(--base-typography-link-color);
+    --base-typography-link-decoration: underline;
+    --base-typography-link-decorationHover: underline;
+}
+
+/* headings */
+
+:root {
+    --base-typography-h1-fontSize: 32px;
+    --base-typography-h2-fontSize: 28px;
+    --base-typography-h3-fontSize: 24px;
+    --base-typography-h4-fontSize: 20px;
+    --base-typography-h5-fontSize: 18px;
+    --base-typography-h6-fontSize: 15px;
+    --base-typography-h1-lineHeight: 40px;
+    --base-typography-h2-lineHeight: 30px;
+    --base-typography-h3-lineHeight: 33px;
+    --base-typography-h4-lineHeight: 30px;
+    --base-typography-h5-lineHeight: 20px;
+    --base-typography-h6-lineHeight: 20px;
+    --base-typography-heading-color: inherit;
+    --base-typography-heading-fontFamily: sans-serif;
+    --base-typography-heading-fontWeight: 700;
+    --base-typography-heading-letterSpacing: 0;
+}
+
+/* General
+   ========================================================================== */
+
+/**
+ * Make sure pxrem is configured to this size.
+ * 62.5% = 10px = 1rem
+ */
+
+html {
+    font-size: 62.5%;
+}
+
+/**
+ * Scale down text on small screens
+ */
+
+@media (--base-typography-bp) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+/**
+ * Set body defaults for other elements to inherit
+ */
+
+body {
+    color: var(--base-typography-color);
+    font-family: var(--base-typography-fontFamily);
+    font-size: var(--base-typography-fontSize);
+    font-weight: var(--base-typography-fontWeight);
+    letter-spacing: var(--base-typography-letterSpacing);
+    line-height: var(--base-typography-lineHeight);
+}
+
+/**
+ * Consistent spacing on block elements
+ */
+
+address,
+blockquote,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+ol,
+p,
+ul {
+    margin: 0 0 var(--base-typography-spacing);
+}
+
+/**
+ * Links
+ */
+
+a {
+    color: var(--base-typography-link-color);
+    text-decoration: var(--base-typography-link-decoration);
+}
+
+a:hover {
+    color: var(--base-typography-link-colorHover);
+    text-decoration: var(--base-typography-link-decorationHover);
+}
+
+/**
+ * Lists
+ */
+
+ol,
+ul {
+    padding-left: 2.4em;
+}
+
+li > ol,
+li > ul {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin: 0;
+}
+
+/**
+ * Inline abbreviations
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+/**
+ * Reset browser default
+ */
+
+address {
+    font-style: normal;
+}
+
+/**
+ * 1. Remove default hr shading.
+ * 2. Inherit text or parent border color.
+ */
+
+hr {
+    border-style: solid; /* 1 */
+    border-width: var(--base-typography-hrule-width) 0 0 0;
+    color: inherit; /* 2 */
+}
+
+/* Headings
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--base-typography-heading-color);
+    font-family: var(--base-typography-heading-fontFamily);
+    font-weight: var(--base-typography-heading-fontWeight);
+    letter-spacing: var(--base-typography-heading-letterSpacing);
+}
+
+h1 {
+    font-size: var(--base-typography-h1-fontSize);
+    line-height: var(--base-typography-h1-lineHeight);
+}
+
+h2 {
+    font-size: var(--base-typography-h2-fontSize);
+    line-height: var(--base-typography-h2-lineHeight);
+}
+
+h3 {
+    font-size: var(--base-typography-h3-fontSize);
+    line-height: var(--base-typography-h3-lineHeight);
+}
+
+h4 {
+    font-size: var(--base-typography-h4-fontSize);
+    line-height: var(--base-typography-h4-lineHeight);
+}
+
+h5 {
+    font-size: var(--base-typography-h5-fontSize);
+    line-height: var(--base-typography-h5-lineHeight);
+}
+
+h6 {
+    font-size: var(--base-typography-h6-fontSize);
+    line-height: var(--base-typography-h6-lineHeight);
+}

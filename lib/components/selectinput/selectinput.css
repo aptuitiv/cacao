@@ -1,0 +1,67 @@
+/* ==========================================================================
+   SelectInput
+   ========================================================================== */
+
+/** @define SelectInput; weak */
+
+/**
+ * Provides custom styles for select menu input fields.
+ * Any <select> that is a child of a `.SelectInput` element will be styled.
+ */
+
+:root {
+    --SelectInput-background: #fff;
+    --SelectInput-border: 1px solid #333;
+    --SelectInput-color: #333;
+}
+
+/**
+ * Field wrapper that theme is applied to
+ */
+
+.SelectInput {
+    background: var(--SelectInput-background);
+    border: var(--SelectInput-border);
+    box-sizing: border-box;
+    color: var(--SelectInput-color);
+    display: inline-block;
+    outline: none;
+    position: relative;
+    vertical-align: middle;
+}
+
+/**
+ * Dropdown arrow element
+ */
+
+.SelectInput::before {
+    background: none;
+    border: 6px solid;
+    border-color: var(--SelectInput-color) transparent transparent transparent;
+    content: '';
+    height: 0;
+    padding: 0;
+    position: absolute;
+    right: .6rem;
+    top: 50%;
+    transform: translateY(-25%);
+    width: 0;
+}
+
+/**
+ * 1. Select input reset
+ * 2. Appear above the `.SelectInput::before` element to allow for clicking.
+ */
+
+.SelectInput > select {
+    appearance: none; /* 1 */
+    background: transparent; /* 1 */
+    border: 0; /* 1 */
+    box-sizing: border-box;
+    display: block;
+    margin: 0; /* 1 */
+    outline: 0; /* 1 */
+    padding: 0 2.3rem 0 .35rem;
+    position: relative; /* 2 */
+    width: 100%;
+}

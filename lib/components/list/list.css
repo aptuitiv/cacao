@@ -1,0 +1,135 @@
+/* ==========================================================================
+   List
+   ========================================================================== */
+
+/** @define List; weak */
+
+/**
+ * Provides custom layouts for bare lists.
+ * Must be applied to a <ul> or an <ol>. Use only one modifier per list.
+ */
+
+:root {
+    --List-barred-spacing: .25em;
+    --List-dotted-spacing: .25em;
+    --List-gutter-spacing: 2rem;
+    --List-spaced-spacing: 1em;
+}
+
+/**
+ * List reset
+ * Barebones list, no margins or styles.
+ */
+
+.List {
+    list-style: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/**
+ * Inline list
+ * Creates an inline list with inline items.
+ */
+
+.List--inline,
+.List--spaced,
+.List--gutter,
+.List--gutterLg,
+.List--barred,
+.List--dotted,
+.List--inline > li,
+.List--spaced > li,
+.List--gutter > li,
+.List--gutterLg > li,
+.List--barred > li,
+.List--dotted > li {
+    display: inline-block;
+}
+
+/**
+ * Spaced list
+ * Adds spacing between the inline items.
+ *
+ * Extends `.List--inline`.
+ */
+
+.List--spaced {
+    margin-left: calc(var(--List-spaced-spacing) * -1);
+}
+
+.List--spaced > li {
+    margin-left: var(--List-spaced-spacing);
+}
+
+/**
+ * List with gutters
+ * Adds gutters between the inline items.
+ *
+ * Extends `.List--inline`.
+ */
+
+.List--gutter {
+    margin-left: calc(var(--List-gutter-spacing) * -1);
+}
+
+.List--gutter > li {
+    margin-left: var(--List-gutter-spacing);
+}
+
+/**
+ * List with large gutters
+ * Adds gutters between the inline items.
+ *
+ * Extends `.List--inline`.
+ */
+
+.List--gutterLg {
+    margin-left: calc(var(--List-gutter-spacing) * -2);
+}
+
+.List--gutterLg > li {
+    margin-left: calc(var(--List-gutter-spacing) * 2);
+}
+
+/**
+ * Barred list
+ * Adds vertical bars between the inline items.
+ * White space will add extra spacing.
+ *
+ * Extends `.List--inline`.
+ */
+
+.List--barred > li::before {
+    content: '|';
+    margin-left: var(--List-barred-spacing);
+    margin-right: var(--List-barred-spacing);
+}
+
+.List--barred > li.is-first::before,
+.List--barred > li:first-child::before {
+    content: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/**
+ * Dotted list
+ * Adds bullets between the inline items.
+ * White space will add extra spacing.
+ *
+ * Extends `.List--inline`.
+ */
+
+.List--dotted > li::before {
+    content: '•';
+    margin-left: var(--List-dotted-spacing);
+    margin-right: var(--List-dotted-spacing);
+}
+
+.List--dotted > li.is-first::before,
+.List--dotted > li:first-child::before {
+    content: none;
+    margin-left: 0;
+    margin-right: 0;
+}

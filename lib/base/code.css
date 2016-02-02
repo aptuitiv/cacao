@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Code
+   ========================================================================== */
+
+:root {
+    --base-code-fontFamily: monospace;
+    --base-code-fontSize: 90%;
+    --base-code-fontWeight: inherit;
+    --base-code-letterSpacing: normal;
+    --base-code-lineHeight: 1.5;
+    --base-code-spacing: 20px;
+}
+
+/**
+ * Inline and block code styles
+ */
+
+code,
+kbd,
+pre,
+samp {
+    color: inherit;
+    font-family: var(--base-code-fontFamily);
+    font-size: var(--base-code-fontSize);
+    font-weight: var(--base-code-fontWeight);
+    letter-spacing: var(--base-code-letterSpacing);
+    line-height: var(--base-code-lineHeight);
+}
+
+/**
+ * Blocks of code or pre-formatted text
+ */
+
+pre {
+    margin: 0 0 var(--base-code-spacing);
+}

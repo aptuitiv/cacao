@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Image
+   ========================================================================== */
+
+/** @define Image; weak */
+
+/**
+ * Commonly used image treatments to use on bare <img> tags.
+ */
+
+@custom-media --Image-bp (max-width: 600px);
+
+:root {
+    --Image-spacing: 10px;
+}
+
+/**
+ * Base
+ */
+
+.Image {
+    box-sizing: border-box;
+    height: auto;
+    margin-bottom: var(--Image-spacing);
+    max-width: 100%;
+}
+
+/**
+ * Floated images inside content
+ *
+ * 1. Make sure image does not take up too much space.
+ */
+
+.Image--left,
+.Image--right {
+    max-width: 40%; /* 1 */
+}
+
+.Image--left {
+    float: left;
+    margin-right: 1em;
+}
+
+.Image--right {
+    float: right;
+    margin-left: 1em;
+}
+
+@media (--Image-bp) {
+    .Image--left,
+    .Image--right {
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+}
+

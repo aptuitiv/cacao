@@ -1,0 +1,42 @@
+/* ==========================================================================
+   TextInput
+   ========================================================================== */
+
+/** @define TextInput */
+
+/**
+ * Provides custom styling for text input fields
+ */
+
+:root {
+    --TextInput-background: #fff;
+    --TextInput-border: 1px solid #333;
+    --TextInput-padding: .25em .5em;
+    --TextInput-color: #333;
+    --TextInput-errorColor: #f00;
+    --TextInput-successColor: #0f0;
+}
+
+.TextInput {
+    background: var(--TextInput-background);
+    border: var(--TextInput-border);
+    border-radius: 0;
+    box-sizing: border-box;
+    color: var(--TextInput-color);
+    outline: none;
+    padding: var(--TextInput-padding);
+}
+
+/**
+ * UI states
+ */
+
+.TextInput.is-invalid {
+    color: var(--TextInput-errorColor);
+    outline: 1px solid var(--TextInput-errorColor);
+}
+
+.TextInput.is-valid {
+    color: var(--TextInput-successColor);
+    outline: 1px solid var(--TextInput-successColor);
+}
