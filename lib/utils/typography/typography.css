@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Typography utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+:root {
+    --utils-typography-fontSize-1: 12px;
+    --utils-typography-fontSize-2: 14px;
+    --utils-typography-fontSize-3: 16px;
+    --utils-typography-fontSize-4: 18px;
+    --utils-typography-fontSize-5: 20px;
+    --utils-typography-fontSize-6: 24px;
+    --utils-typography-fontSize-7: 32px;
+    --utils-typography-fontSize-8: 42px;
+    --utils-typography-fontSize-9: 48px;
+    --utils-typography-fontSize-10: 56px;
+    --utils-typography-lineHeight-1: 12px;
+    --utils-typography-lineHeight-2: 24px;
+    --utils-typography-lineHeight-3: 24px;
+    --utils-typography-lineHeight-4: 24px;
+    --utils-typography-lineHeight-5: 24px;
+    --utils-typography-lineHeight-6: 24px;
+    --utils-typography-lineHeight-7: 36px;
+    --utils-typography-lineHeight-8: 48px;
+    --utils-typography-lineHeight-9: 60px;
+    --utils-typography-lineHeight-10: 60px;
+}
+
+/* Transforms
+   ========================================================================== */
+
+.u-textUpper {
+    text-transform: uppercase !important;
+}
+
+.u-textNoTransform {
+    text-transform: none !important;
+}
+
+/* Style
+   ========================================================================== */
+
+.u-styleNone {
+    font-style: unset !important;
+}
+
+.u-styleEm {
+    font-style: italic !important;
+}
+
+/* Horizontal Alignment
+   ========================================================================== */
+
+.u-textLeft {
+    text-align: left !important;
+}
+
+.u-textRight {
+    text-align: right !important;
+}
+
+.u-textCenter {
+    text-align: center !important;
+}
+
+/* Weight
+   ========================================================================== */
+
+.u-weightNormal {
+    font-weight: 400 !important;
+}
+
+.u-weightLight {
+    font-weight: 300 !important;
+}
+
+.u-weightBold {
+    font-weight: 700 !important;
+}
+
+.u-weightLighter {
+    font-weight: lighter !important;
+}
+
+.u-weightBolder {
+    font-weight: bolder !important;
+}
+
+.u-weightLightest {
+    font-weight: 100 !important;
+}
+
+.u-weightBoldest {
+    font-weight: 900 !important;
+}
+
+/* Font Scale
+   ========================================================================== */
+
+.u-fontSize1 {
+    font-size: var(--utils-typography-fontSize-1) !important;
+    line-height: var(--utils-typography-lineHeight-1) !important;
+}
+
+.u-fontSize2 {
+    font-size: var(--utils-typography-fontSize-2) !important;
+    line-height: var(--utils-typography-lineHeight-2) !important;
+}
+
+.u-fontSize3 {
+    font-size: var(--utils-typography-fontSize-3) !important;
+    line-height: var(--utils-typography-lineHeight-3) !important;
+}
+
+.u-fontSize4 {
+    font-size: var(--utils-typography-fontSize-4) !important;
+    line-height: var(--utils-typography-lineHeight-4) !important;
+}
+
+.u-fontSize5 {
+    font-size: var(--utils-typography-fontSize-5) !important;
+    line-height: var(--utils-typography-lineHeight-5) !important;
+}
+
+.u-fontSize6 {
+    font-size: var(--utils-typography-fontSize-6) !important;
+    line-height: var(--utils-typography-lineHeight-6) !important;
+}
+
+.u-fontSize7 {
+    font-size: var(--utils-typography-fontSize-7) !important;
+    line-height: var(--utils-typography-lineHeight-7) !important;
+}
+
+.u-fontSize8 {
+    font-size: var(--utils-typography-fontSize-8) !important;
+    line-height: var(--utils-typography-lineHeight-8) !important;
+}
+
+.u-fontSize9 {
+    font-size: var(--utils-typography-fontSize-9) !important;
+    line-height: var(--utils-typography-lineHeight-9) !important;
+}
+
+.u-fontSize10 {
+    font-size: var(--utils-typography-fontSize-10) !important;
+    line-height: var(--utils-typography-lineHeight-10) !important;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Inherit the ancestor's text color.
+ */
+
+.u-textInheritColor {
+    color: inherit !important;
+}
+
+/**
+ * Break strings when their length exceeds the width of their container.
+ */
+
+.u-textBreak {
+    word-wrap: break-word !important;
+}
+
+/**
+ * Prevent whitespace wrapping
+ */
+
+.u-textNoWrap {
+    white-space: nowrap !important;
+}
+
+/**
+ * Enables font kerning in all browsers.
+ * http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+ *
+ * 1. Chrome (not Windows), Firefox, Safari 6+, iOS, Android
+ * 2. Chrome (not Windows), Firefox, IE 10+
+ * 3. Safari 7 and future browsers
+ */
+
+.u-textKern {
+    font-feature-settings: 'kern' 1; /* 2 */
+    font-kerning: normal; /* 3 */
+    text-rendering: optimizeLegibility; /* 1 */
+}
+
+/**
+ * Text truncation
+ *
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ */
+
+.u-textTruncate {
+    max-width: 100%; /* 1 */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    word-wrap: normal !important; /* 2 */
+}

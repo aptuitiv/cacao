@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Push large
+   ========================================================================== */
+
+/** @define utilities */
+
+@custom-media --utils-push-lg (max-width: 1000px);
+
+@media (--utils-push-lg) {
+
+    /* postcss-bem-linter: ignore */
+    [class*='u-lg-push'] {
+        position: relative !important;
+    }
+
+    .u-lg-pushNone {
+        left: 0 !important;
+    }
+
+    .u-lg-push1of12 {
+        left: calc(100% * 1 / 12) !important;
+    }
+
+    .u-lg-push1of10 {
+        left: 10% !important;
+    }
+
+    .u-lg-push1of8 {
+        left: 12.5% !important;
+    }
+
+    .u-lg-push1of6,
+    .u-lg-push2of12 {
+        left: calc(100% * 1 / 6) !important;
+    }
+
+    .u-lg-push1of5,
+    .u-lg-push2of10 {
+        left: 20% !important;
+    }
+
+    .u-lg-push1of4,
+    .u-lg-push2of8,
+    .u-lg-push3of12 {
+        left: 25% !important;
+    }
+
+    .u-lg-push3of10 {
+        left: 30% !important;
+    }
+
+    .u-lg-push1of3,
+    .u-lg-push2of6,
+    .u-lg-push4of12 {
+        left: calc(100% * 1 / 3) !important;
+    }
+
+    .u-lg-push3of8 {
+        left: 37.5% !important;
+    }
+
+    .u-lg-push2of5,
+    .u-lg-push4of10 {
+        left: 40% !important;
+    }
+
+    .u-lg-push5of12 {
+        left: calc(100% * 5 / 12) !important;
+    }
+
+    .u-lg-push1of2,
+    .u-lg-push2of4,
+    .u-lg-push3of6,
+    .u-lg-push4of8,
+    .u-lg-push5of10,
+    .u-lg-push6of12 {
+        left: 50% !important;
+    }
+
+    .u-lg-push7of12 {
+        left: calc(100% * 7 / 12) !important;
+    }
+
+    .u-lg-push3of5,
+    .u-lg-push6of10 {
+        left: 60% !important;
+    }
+
+    .u-lg-push5of8 {
+        left: 62.5% !important;
+    }
+
+    .u-lg-push2of3,
+    .u-lg-push4of6,
+    .u-lg-push8of12 {
+        left: calc(100% * 2 / 3) !important;
+    }
+
+    .u-lg-push7of10 {
+        left: 70% !important;
+    }
+
+    .u-lg-push3of4,
+    .u-lg-push6of8,
+    .u-lg-push9of12 {
+        left: 75% !important;
+    }
+
+    .u-lg-push4of5,
+    .u-lg-push8of10 {
+        left: 80% !important;
+    }
+
+    .u-lg-push5of6,
+    .u-lg-push10of12 {
+        left: calc(100% * 5 / 6) !important;
+    }
+
+    .u-lg-push7of8 {
+        left: 87.5% !important;
+    }
+
+    .u-lg-push9of10 {
+        left: 90% !important;
+    }
+
+    .u-lg-push11of12 {
+        left: calc(100% * 11 / 12) !important;
+    }
+
+}
+

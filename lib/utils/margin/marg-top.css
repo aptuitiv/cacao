@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Top margin utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+:root {
+    --utils-margin-top: 10px;
+}
+
+.u-margTop0 {
+    margin-top: 0 !important;
+}
+
+.u-margTop1 {
+    margin-top: var(--utils-margin-top) !important;
+}
+
+.u-margTop2 {
+    margin-top: calc(var(--utils-margin-top) * 2) !important;
+}
+
+.u-margTop3 {
+    margin-top: calc(var(--utils-margin-top) * 3) !important;
+}
+
+.u-margTop4 {
+    margin-top: calc(var(--utils-margin-top) * 4) !important;
+}
+
+.u-margTop5 {
+    margin-top: calc(var(--utils-margin-top) * 5) !important;
+}
+

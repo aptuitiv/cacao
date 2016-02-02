@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Allow labels can use `margin` for spacing.
+ */
+
+label {
+    display: inline-block; /* 1 */
+}
+
+/**
+ * 1. iOS adds rounded borders by default
+ * 2. Normalize includes `font: inherit;`, so `font-family`. `font-size`, etc
+ *    are properly inherited. However, `line-height` isn't addressed there.
+ *    Using this ensures we don't need to unnecessarily redeclare the global
+ *    font stack.
+ * 3. Remove all `margin`s so our classes don't have to do it themselves.
+ */
+
+input,
+button,
+select,
+textarea {
+    border-radius: 0; /* 1 */
+    line-height: inherit; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/**
+ * 1. Only allow for vertical resizing to prevent layouts from breaking.
+ * 2. Easier to read default alignment.
+ */
+
+textarea {
+    resize: vertical; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/**
+ * 1. Overrides the extra rounded corners on search inputs in iOS so that our
+ * custom classes can properly style them without using an attribute selector.
+ */
+
+input[type='search'] {
+    -webkit-appearance: none; /* 1 */
+}

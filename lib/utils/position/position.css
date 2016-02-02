@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Position utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+.u-posRelative {
+    position: relative !important;
+}
+
+.u-posStatic {
+    position: static !important;
+}
+
+.u-posAbsolute {
+    position: absolute !important;
+}
+
+/**
+ * 1. Make sure fixed elements are promoted into a new layer, for performance
+ *    reasons.
+ */
+
+.u-posFixed {
+    backface-visibility: hidden; /* 1 */
+    position: fixed !important;
+}
+

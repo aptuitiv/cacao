@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Triangle
+   ========================================================================== */
+
+/** @define Triangle */
+
+/**
+ * Inline triangle element
+ *
+ * Scales with font size and inherits parent element's foreground color.
+ * Must be used with a modifier to specify direction.
+ *
+ * 1. Attempt to align to true vertical middle instead of middle of text.
+ */
+
+.Triangle {
+    background: transparent;
+    border: .5em solid transparent;
+    display: inline-block;
+    height: 0;
+    vertical-align: -10%; /* 1 */
+    width: 0;
+}
+
+/**
+ * Direction modifiers
+ *
+ * 1. Translating the element by 25% in the direction it is pointing will
+ *    center it.
+ */
+
+.Triangle--up {
+    border-bottom-color: inherit;
+    transform: translateY(-25%); /* 1 */
+}
+
+.Triangle--down {
+    border-top-color: inherit;
+    transform: translateY(25%); /* 1 */
+}
+
+.Triangle--left {
+    border-right-color: inherit;
+    transform: translateX(-25%); /* 1 */
+}
+
+.Triangle--right {
+    border-left-color: inherit;
+    transform: translateX(25%); /* 1 */
+}

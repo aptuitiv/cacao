@@ -1,145 +1,64 @@
-Cacao
-=====
+# Cacao
 
-Cacao is a light Sass framework that includes flexible, reusable 
-front-end modules and also a small set of global settings and mixins.
+A set of composable CSS modules that provide a solid foundation for starting
+a new project.
 
-[How to pronounce Cacao.](https://www.youtube.com/watch?v=kVSIkXL_Nmo)
+[How to pronounce Cacao](https://www.youtube.com/watch?v=kVSIkXL_Nmo).
 
+This kit is based on the [SUIT CSS](https://suitcss.github.io) methodology
+including [naming convention](http://github.com/suitcss/suit/blob/master/doc/naming-conventions.md), 
+[style format](http://github.com/suitcss/suit/blob/master/doc/STYLE.md#css),
+and [architectural principles](http://github.com/suitcss/suit/blob/master/doc/design-principles.md).
 
-Getting Started
----------------
-
-The easiest way to get started using Cacao is to install it with bower:
-
-`bower install cacao --save`
-
-At the bare minimum the main Cacao file, `_cacao.scss`, must be imported at 
-the top of any file making use of the globals.
-
-    /* index.scss */
-
-    // cacao globals, defaults, and mixins.
-    @import "bower_components/cacao/cacao";
-
-    // the project
-    .MyComponent {
-        font-size: $g-textSize6; // using a cacao global
-    }
-
-This main file only imports the framework part of Cacao. To include a module 
-you must import it individually.
-
-    /* index.scss */
-
-    // cacao globals, defaults, and mixins.
-    @import "bower_components/cacao/cacao";
-
-    // cacao modules
-    @import "bower_components/cacao/modules/breadcrumbs/index";
-    @import "bower_components/cacao/modules/container/index";
-
-    // the project
-    .MyComponent {
-        font-size: $g-textSize6; // using a cacao global
-    }
+**Note:** Modules are currently lacking usage documentation and visual tests. 
+This is coming soon.
 
 
+## Usage
 
-Globals
-=======
+There are several ways to use these modules in your project. 
 
-Cacao consists of a small set of mixins and globals that are used throughout 
-the modules and the project to keep things consistent.
+The recommended method is to simply copy each file into your project as
+necessary and import them in the same fashion as in the example below. This 
+allows changes to be made easily and provides a better reference for 
+developers diving into the stylesheet.
 
-Variable and mixin usage docs are kept up to date in `_defaults.scss` and 
-`_mixins.scss`.
+The quick and easy way is to install the entire repository through npm, 
+then import and configure the modules in your stylesheet.
 
+```
+/* import the the entire package */
+@import 'cacao';
 
+/* or pick and choose modules */
+@import 'cacao/lib/grid';
+@import 'cacao/lib/utils/size';
 
-Modules
-=======
+/* configure modules */
+@custom-media --utils-size-sm (600px);
+@custom-media --utils-size-md (800px);
+@custom-media --utils-size-lg (1000px);
 
-Modules follow a strict directory structure. They may contain javascript, 
-images, stylesheets, whatever assets the module needs to get it's job done.
-
-Here is a mock-up of what you might see in a module's directory:
-
-    _my-module
-    |
-    |__styles
-    | |___defaults.scss       // module defaults
-    | |___base.scss           // base element styles
-    | |___utils.scss          // utility and helper styles
-    | |___component.scss      // layout and component styles
-    | |___state.scss          // state styles
-    | |__index.scss           // main module stylesheet
-    |
-    |__scripts
-    | |__myModule.js          // javascript
-    |
-    |__assets
-    | |__module-image.png     // required assets
-    |
-    |__README.md              // documentation
+:root {
+    --Grid-cell-gutter: 24px;
+}
+```
 
 
-Stylesheets
------------
+## Building
 
-The module styles are separated into several layers. Each of these layers can 
-be used in your project by importing them individually or as a whole component 
-by importing `index.scss`.
+Modules will need to be processed with PostCSS and an
+assortment of PostCSS plugins. The
+[suitcss-preprocessor](https://github.com/suitcss/preprocessor) can be used, 
+or you can setup PostCSS yourself with the build system of your choice.
 
-The layers can use the module's default style settings. Between 
-overriding these settings and leveraging the style layers the user can 
-create predictable and flexible stylesheets.
+For an example of a simple build script see
+[`test/build.js`](https://github.com/aptuitiv/cacao/blob/master/test/build.js)
 
-- base
-- utils
-- component
-- state
+The following PostCSS plugins are required:
 
-An example of a project's `main.scss` that makes use of these layers:
-
-    /**
-     * src/site/styles/main.scss
-     */
-
-    /* Globals */
-    @import "../../../bower_components/cacao/cacao"; // cacao globals
-    @import "settings"; // site settings, default global overrides
-
-    /* Bower Modules */
-    @import "../../../bower_components/normalize.css/normalize";
-
-    /* Cacao Modules */
-    @import "../../../bower_components/cacao/modules/grid/styles/index";
-    @import "../../../bower_components/cacao/modules/size/styles/index";
-    @import "../../../bower_components/cacao/modules/type/styles/index";
-    // example of using a module's utilites separate of its other layers.
-    // (this project does not need the responsive padding/margins)
-    @import "../../../bower_components/cacao/modules/padding-top/styles/utils";
-    @import "../../../bower_components/cacao/modules/margin-bottom/styles/utils";
-
-    /* Local Project Modules */
-    @import "../../header/styles/index";
-    @import "../../sidebar/styles/index";
-
-    /* Site module */
-    @import "base";
-    @import "utils";
-
-
-Javascript, Images & Other Assets
----------------------------------
-
-These resources can be tied into your build system whichever way you please.
-
-
-Dependencies
-------------
-
-Currently there is no dependency resolution. This will be the major focus of 
-v2.0, along with a more elegant way of handling module assets and scripts.
-
+- [postcss-import](https://github.com/postcss/postcss-import)
+- [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
+- [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)
+- [postcss-calc](https://github.com/postcss/postcss-calc)
+- [autoprefixer](https://github.com/postcss/autoprefixer)

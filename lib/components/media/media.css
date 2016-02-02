@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Media
+   ========================================================================== */
+
+/** @define Media */
+
+/**
+ * The media object is an abstract element used as the basis for building
+ * more complex and repetitive components (like blog comments, Tweets, etc).
+ *
+ * Uses a fallback for browsers that do not support flexbox. Fallbacks are
+ * applied when `<html>` has a class of `no-flexbox`.
+ *
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ */
+
+:root {
+    --Media-cell-gutter: 20px;
+}
+
+/* Base
+   ========================================================================== */
+
+/**
+ * 1. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ */
+
+.Media {
+    box-sizing: border-box; /* 1 */
+    display: flex;
+    width: 100%; /* 1 */
+}
+
+/**
+ * Modifiers: Gutters
+ */
+
+.Media--withGutter {
+    margin-left: calc(var(--Media-cell-gutter) * -1);
+}
+.Media--withGutter > .Media-content,
+.Media--withGutter > .Media-subject {
+    padding-left: var(--Media-cell-gutter);
+}
+
+.Media--withGutterSm {
+    margin-left: calc(var(--Media-cell-gutter) / -2);
+}
+.Media--withGutterSm > .Media-content,
+.Media--withGutterSm > .Media-subject {
+    padding-left: calc(var(--Media-cell-gutter) / 2);
+}
+
+/* Content
+   ========================================================================== */
+
+/**
+ * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
+ *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+ */
+
+.Media-content {
+    flex: 1 1 0%; /* 1 */
+}
+
+/* Subjects
+   ========================================================================== */
+
+/**
+ * The media content, or subject that the body is related to.
+ */
+
+.Media-subject {
+}
+
+/**
+ * Modifier: Align content vertically center.
+ */
+
+.Media-subject--middle {
+    align-self: center;
+}
+
+/**
+ * Modifier: Align content to the bottom.
+ */
+
+.Media-subject--bottom {
+    align-self: flex-end;
+}
+
+/* Object element
+   ========================================================================== */
+
+/**
+ * Media image
+ * Must be applied to objects that are children of `.Media-content`. This
+ * is typically an image, video, etc...
+ */
+
+.Media-object {
+    display: block;
+}
+
+/* ==========================================================================
+   Fallback
+   ========================================================================== */
+
+/**
+ * 1. 100% width doesn't act as expected when used with gutters
+ */
+
+/* postcss-bem-linter: ignore */
+.no-flexbox .Media {
+    display: block;
+    width: auto; /* 1 */
+}
+
+/* postcss-bem-linter: ignore */
+.no-flexbox .Media-content {
+    width: 100%;
+}
+
+/* postcss-bem-linter: ignore */
+.no-flexbox .Media,
+.no-flexbox .Media-content {
+    overflow: hidden;
+    zoom: 1;
+}
+
+/* postcss-bem-linter: ignore */
+.no-flexbox .Media-content,
+.no-flexbox .Media-subject {
+    display: table-cell;
+    vertical-align: top;
+}
+
+/* postcss-bem-linter: ignore */
+.no-flexbox .Media-subject--middle {
+    vertical-align: middle;
+}
+
+/* postcss-bem-linter: ignore */
+.no-flexbox .Media-subject--bottom {
+    vertical-align: bottom;
+}
+
+/**
+ * 1. Fix collapse in webkit from max-width: 100% and display: table-cell.
+ */
+
+/* postcss-bem-linter: ignore */
+.no-flexbox .Media-object {
+    max-width: none; /* 1 */
+}
+

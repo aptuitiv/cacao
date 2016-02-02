@@ -1,0 +1,220 @@
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+/** @define Grid */
+
+/**
+ * Flex-box grid component with inline-block fallback.
+ *
+ * Relies on size utilities in order to set a column width.
+ *
+ * DO NOT apply dimension or offset utilities to the `Grid` element. All cell
+ * widths and offsets should be applied to child grid cells.
+ */
+
+:root {
+    --Grid-cell-gutter: 20px;
+    --Grid-fontSize: 15px;
+}
+
+/* Grid container
+   ========================================================================== */
+
+/**
+ * All content must be contained within child `Grid-cell` elements.
+ *
+ * 1. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ */
+
+.Grid {
+    box-sizing: border-box;
+    display: flex; /* 1 */
+    flex-flow: row wrap;
+    list-style: none; /* 1 */
+    margin: 0; /* 1 */
+    padding: 0; /* 1 */
+}
+
+/**
+ * Modifier: center align all grid cells
+ */
+
+.Grid--alignCenter {
+    justify-content: center;
+}
+
+/**
+ * Modifier: right align all grid cells
+ */
+
+.Grid--alignRight {
+    justify-content: flex-end;
+}
+
+/**
+ * Modifier: middle-align grid cells
+ */
+
+.Grid--alignMiddle {
+    align-items: center;
+}
+
+/**
+ * Modifier: bottom-align grid cells
+ */
+
+.Grid--alignBottom {
+    align-items: flex-end;
+}
+
+/**
+ * Modifier: allow cells to equal distribute width
+ *
+ * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
+ *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+ */
+
+.Grid--fit > .Grid-cell {
+    flex: 1 1 0%; /* 1 */
+}
+
+/**
+ * Modifier: all cells match height of tallest cell in a row
+ */
+
+.Grid--equalHeight > .Grid-cell {
+    display: flex;
+}
+
+/**
+ * Modifier: gutters
+*/
+
+.Grid--withGutter {
+    margin-left: calc(var(--Grid-cell-gutter) * -1);
+}
+.Grid--withGutter > .Grid-cell {
+    padding-left: var(--Grid-cell-gutter);
+}
+
+.Grid--withGutterSm {
+    margin-left: calc(var(--Grid-cell-gutter) / -2);
+}
+.Grid--withGutterSm > .Grid-cell {
+    padding-left: calc(var(--Grid-cell-gutter) / 2);
+}
+
+.Grid--withGutterLg {
+    margin-left: calc(var(--Grid-cell-gutter) * -2);
+}
+.Grid--withGutterLg > .Grid-cell {
+    padding-left: calc(var(--Grid-cell-gutter) * 2);
+}
+
+/* Grid cell
+   ========================================================================== */
+
+/**
+ * Rely on combining `Grid-cell` with a dimension utility or a component
+ * class that extends 'grid'.
+ *
+ * 1. Set flex items to full width by default
+ */
+
+.Grid-cell {
+    box-sizing: inherit;
+    flex: 0 0 100%; /* 1 */
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Modifier: horizontally center one unit
+ * Set a specific unit to be horizontally centered. Doesn't affect
+ * any other units. Can still contain a child `Grid` object.
+ */
+
+.Grid-cell--center {
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   Inline-block grid fallback
+   ========================================================================== */
+
+/**
+ * Fallbacks for browsers that don't support flexbox or don't support flex
+ * item wrapping.
+ */
+
+/* Grid container
+   ========================================================================== */
+
+/**
+ * 1. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ * 2. Remove inter-cell whitespace that appears between `inline-block` child
+ *    elements.
+ * 3. Ensure consistent default alignment.
+ */
+
+/* postcss-bem-linter: ignore */
+.no-flexwrap .Grid,
+.no-flexbox .Grid {
+    display: block; /* 1 */
+    font-size: 0; /* 2 */
+    text-align: left; /* 3 */
+}
+
+/* postcss-bem-linter: ignore */
+.no-flexwrap .Grid--alignCenter,
+.no-flexbox .Grid--alignCenter {
+    text-align: center;
+}
+
+/* postcss-bem-linter: ignore */
+.no-flexwrap .Grid--alignRight,
+.no-flexbox .Grid--alignRight {
+    text-align: right;
+}
+
+/* postcss-bem-linter: ignore */
+.no-flexwrap .Grid--alignMiddle > .Grid-cell,
+.no-flexbox .Grid--alignMiddle > .Grid-cell {
+    vertical-align: middle;
+}
+
+/* postcss-bem-linter: ignore */
+.no-flexwrap .Grid--alignBottom > .Grid-cell,
+.no-flexbox .Grid--alignBottom > .Grid-cell {
+    vertical-align: bottom;
+}
+
+/* Grid cell
+   ========================================================================== */
+
+/**
+ * 1. Fundamentals of the non-float grid layout.
+ * 2. Reset font changes made in `Grid`.
+ * 3. Keeps content correctly aligned with the grid direction.
+ * 4. Controls vertical positioning of units.
+ * 5. Make cells full-width by default.
+ */
+
+/* postcss-bem-linter: ignore */
+.no-flexwrap .Grid-cell,
+.no-flexbox .Grid-cell {
+    display: inline-block; /* 1 */
+    font-size: var(--Grid-fontSize); /* 2 */
+    text-align: left; /* 3 */
+    vertical-align: top; /* 4 */
+    width: 100%; /* 5 */
+}
+
+/* postcss-bem-linter: ignore */
+.no-flexwrap .Grid-cell--center,
+.no-flexbox .Grid-cell--center {
+    display: block;
+}

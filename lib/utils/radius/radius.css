@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Border radius utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+.u-radius1 {
+    border-radius: .6rem !important;
+}
+
+.u-radius2 {
+    border-radius: 1.8rem !important;
+}
+
+.u-radius3 {
+    border-radius: 2.4rem !important;
+}
+
+.u-radius4 {
+    border-radius: 3rem !important;
+}
+
+.u-radius5 {
+    border-radius: 3.6rem !important;
+}
+
+/**
+ * Smooth border radius so that element will resember a circle or oval
+ * depending on dimensions.
+ */
+
+.u-radiusCircular {
+    border-radius: 50% !important;
+}
+

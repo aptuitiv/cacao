@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Image utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+/**
+ * Make an image shrink to the width of it's containing element if the element
+ * is smaller than the image's original width.
+ */
+
+.u-img {
+    height: auto !important;
+    max-width: 100% !important;
+}
+
+/**
+ * Make an image scale to the width of it's containing element regardless of
+ * the image's original width.
+ */
+
+.u-imgFull {
+    display: block !important;
+    height: auto !important;
+    width: 100% !important;
+}
+

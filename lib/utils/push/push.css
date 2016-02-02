@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Push utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+/* postcss-bem-linter: ignore */
+[class*='u-push'] {
+    position: relative !important;
+}
+
+.u-push1of12 {
+    left: calc(100% * 1 / 12) !important;
+}
+
+.u-push1of10 {
+    left: 10% !important;
+}
+
+.u-push1of8 {
+    left: 12.5% !important;
+}
+
+.u-push1of6,
+.u-push2of12 {
+    left: calc(100% * 1 / 6) !important;
+}
+
+.u-push1of5,
+.u-push2of10 {
+    left: 20% !important;
+}
+
+.u-push1of4,
+.u-push2of8,
+.u-push3of12 {
+    left: 25% !important;
+}
+
+.u-push3of10 {
+    left: 30% !important;
+}
+
+.u-push1of3,
+.u-push2of6,
+.u-push4of12 {
+    left: calc(100% * 1 / 3) !important;
+}
+
+.u-push3of8 {
+    left: 37.5% !important;
+}
+
+.u-push2of5,
+.u-push4of10 {
+    left: 40% !important;
+}
+
+.u-push5of12 {
+    left: calc(100% * 5 / 12) !important;
+}
+
+.u-push1of2,
+.u-push2of4,
+.u-push3of6,
+.u-push4of8,
+.u-push5of10,
+.u-push6of12 {
+    left: 50% !important;
+}
+
+.u-push7of12 {
+    left: calc(100% * 7 / 12) !important;
+}
+
+.u-push3of5,
+.u-push6of10 {
+    left: 60% !important;
+}
+
+.u-push5of8 {
+    left: 62.5% !important;
+}
+
+.u-push2of3,
+.u-push4of6,
+.u-push8of12 {
+    left: calc(100% * 2 / 3) !important;
+}
+
+.u-push7of10 {
+    left: 70% !important;
+}
+
+.u-push3of4,
+.u-push6of8,
+.u-push9of12 {
+    left: 75% !important;
+}
+
+.u-push4of5,
+.u-push8of10 {
+    left: 80% !important;
+}
+
+.u-push5of6,
+.u-push10of12 {
+    left: calc(100% * 5 / 6) !important;
+}
+
+.u-push7of8 {
+    left: 87.5% !important;
+}
+
+.u-push9of10 {
+    left: 90% !important;
+}
+
+.u-push11of12 {
+    left: calc(100% * 11 / 12) !important;
+}
+

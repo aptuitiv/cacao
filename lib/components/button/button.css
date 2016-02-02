@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Button
+   ========================================================================== */
+
+/** @define Button */
+
+/**
+ * The button classes are best applied to links and buttons.
+ * These components can be used in forms, as calls to action, or as part of the
+ * general UI of the site/app.
+ */
+
+:root {
+    --Button-background: #555;
+    --Button-backgroundHover: #9f9f9f;
+    --Button-border-color: inherit;
+    --Button-border-radius: 0;
+    --Button-border-width: 0;
+    --Button-color: #fff;
+    --Button-colorHover: #fff;
+    --Button-disabled-opacity: .6;
+    --Button-fontFamily: inherit;
+    --Button-fontSize: inherit;
+    --Button-letterSpacing: inherit;
+    --Button-lineHeight: inherit;
+    --Button-padding: calc(var(--Button-lineHeight) / 4) 1.5em;
+    --Button-paddingLg: calc(var(--Button-lineHeight) / 2) 2em;
+    --Button-paddingSm: 0 .75em;
+}
+
+/**
+ * 1. Normalize `box-sizing` across all elements that this component could be
+ *    applied to.
+ * 2. Prevent button text from being selectable.
+ */
+
+.Button {
+    background: var(--Button-background);
+    border-color: var(--Button-border-color);
+    border-radius: var(--Button-border-radius);
+    border-style: solid;
+    border-width: var(--Button-border-width);
+    box-sizing: border-box; /* 1 */
+    color: var(--Button-color);
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--Button-fontFamily);
+    font-size: var(--Button-fontSize);
+    letter-spacing: var(--Button-letterSpacing);
+    line-height: var(--Button-lineHeight);
+    margin: 0;
+    padding: var(--Button-padding);
+    text-align: center;
+    text-decoration: none;
+    user-select: none; /* 2 */
+}
+
+/**
+ * Remove excess padding and border in Firefox 4+
+ */
+
+.Button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+.Button:focus {
+    outline: 1px dotted;
+    /* stylelint-disable */
+    outline: 5px auto -webkit-focus-ring-color;
+    /* stylelint-enable */
+}
+
+/**
+ * UI States
+ */
+
+.Button:hover,
+.Button:focus,
+.Button:active {
+    background: var(--Button-backgroundHover);
+    color: var(--Button-colorHover);
+    text-decoration: none;
+}
+
+.Button:disabled,
+.Button.is-disabled {
+    cursor: default;
+    opacity: var(--Button-disabled-opacity);
+}
+
+/**
+ * Size modifiers
+ */
+
+.Button--lg {
+    padding: var(--Button-paddingLg);
+}
+
+.Button--sm {
+    padding: var(--Button-paddingSm);
+}
+
+/**
+ * Always use hover state theme in order to stand out
+ */
+
+.Button--strong {
+    background: var(--Button-backgroundHover);
+    color: var(--Button-colorHover);
+}
