@@ -21,15 +21,9 @@
 /* Base
    ========================================================================== */
 
-/**
- * 1. Account for browser defaults of elements that might be the root node of
- *    the component.
- */
-
 .Media {
-    box-sizing: border-box; /* 1 */
+    box-sizing: border-box;
     display: flex;
-    width: 100%; /* 1 */
 }
 
 /**
@@ -112,17 +106,21 @@
  */
 
 /* postcss-bem-linter: ignore */
+.no-flexwrap .Media,
 .no-flexbox .Media {
     display: block;
     width: auto; /* 1 */
 }
 
 /* postcss-bem-linter: ignore */
+.no-flexwrap .Media-content,
 .no-flexbox .Media-content {
     width: 100%;
 }
 
 /* postcss-bem-linter: ignore */
+.no-flexwrap .Media,
+.no-flexwrap .Media-content,
 .no-flexbox .Media,
 .no-flexbox .Media-content {
     overflow: hidden;
@@ -130,6 +128,8 @@
 }
 
 /* postcss-bem-linter: ignore */
+.no-flexwrap .Media-content,
+.no-flexwrap .Media-subject,
 .no-flexbox .Media-content,
 .no-flexbox .Media-subject {
     display: table-cell;
@@ -137,11 +137,13 @@
 }
 
 /* postcss-bem-linter: ignore */
+.no-flexwrap .Media-subject--middle,
 .no-flexbox .Media-subject--middle {
     vertical-align: middle;
 }
 
 /* postcss-bem-linter: ignore */
+.no-flexwrap .Media-subject--bottom,
 .no-flexbox .Media-subject--bottom {
     vertical-align: bottom;
 }
@@ -151,6 +153,7 @@
  */
 
 /* postcss-bem-linter: ignore */
+.no-flexwrap .Media-object,
 .no-flexbox .Media-object {
     max-width: none; /* 1 */
 }

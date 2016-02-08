@@ -13,6 +13,8 @@
     --SelectInput-background: #fff;
     --SelectInput-border: 1px solid #333;
     --SelectInput-color: #333;
+    --SelectInput-errorColor: #f00;
+    --SelectInput-successColor: #0f0;
 }
 
 /**
@@ -27,7 +29,6 @@
     display: inline-block;
     outline: none;
     position: relative;
-    vertical-align: middle;
 }
 
 /**
@@ -64,4 +65,18 @@
     padding: 0 2.3rem 0 .35rem;
     position: relative; /* 2 */
     width: 100%;
+}
+
+/**
+ * UI states
+ */
+
+.SelectInput.is-invalid {
+    color: var(--SelectInput-errorColor);
+    outline: 1px solid var(--SelectInput-errorColor);
+}
+
+.SelectInput.is-valid {
+    color: var(--SelectInput-successColor);
+    outline: 1px solid var(--SelectInput-successColor);
 }

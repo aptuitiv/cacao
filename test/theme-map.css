@@ -7,17 +7,6 @@
  * https://github.com/suitcss/theme/
  */
 
-/* ap-ddmenu
-   ========================================================================== */
-
-@custom-media --ap-ddmenu-bp (--c-bp-mobile);
-
-:root {
-    --ddmenu-fontSize: var(--c-fontSize-body);
-    --ddmenu-lineHeight: var(--c-lineHeight-body);
-    --ddmenu-gutter: var(--c-layout-gutter);
-}
-
 /* Base
    ========================================================================== */
 
@@ -87,14 +76,6 @@
     --Container-width: var(--c-layout-pageWidth);
 }
 
-/* Dropdown
-   ========================================================================== */
-
-:root {
-    --Dropdown-fontSize: var(--c-lineHeight-2);
-    --Dropdown-lineHeight: var(--c-lineHeight-2);
-}
-
 /* Grid
    ========================================================================== */
 
@@ -117,14 +98,6 @@
 
 :root {
     --List-gutter-spacing: var(--c-layout-gutter);
-}
-
-/* MainNav
-   ========================================================================== */
-
-:root {
-    --MainNav-fontSize: var(--c-fontSize-4);
-    --MainNav-lineHeight: var(--c-lineHeight-4);
 }
 
 /* Media

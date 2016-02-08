@@ -27,7 +27,7 @@
     background-size: cover;
     box-sizing: border-box;
     display: block;
-    padding-top: 100%;
+    padding-bottom: 100%;
     width: 100%;
 }
 
@@ -43,24 +43,24 @@
    ========================================================================== */
 
 .Constrain--5by4 {
-    padding-top: 80%;
+    padding-bottom: 80%;
 }
 
 .Constrain--4by3 {
-    padding-top: 75%;
+    padding-bottom: 75%;
 }
 
 .Constrain--3by2 {
-    padding-top: 66.66667%;
+    padding-bottom: 66.66667%;
 }
 
 .Constrain--8by5,
 .Constrain--16by10 {
-    padding-top: 62.5%;
+    padding-bottom: 62.5%;
 }
 
 .Constrain--16by9 {
-    padding-top: 56.25%;
+    padding-bottom: 56.25%;
 }
 
 /* Crop gravities

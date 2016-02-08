@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Triangle - Visual Tests</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<link rel="stylesheet" href="../../build/index.css">
+
+<div class="t-Test">
+
+  <h1 class="t-Test-title"><a href="https://github.com/aptuitiv/cacao/blob/master/lib/components/triangle">Triangle</a> tests</h1>
+
+
+  <h2 class="t-Test-describe">.Triangle</h2>
+
+  <h3 class="t-Test-assert">will not take up space if used without a direction modifier</h3>
+  <div class="t-Test-run">
+    <span class="Triangle"></span> Lorem ipsum...
+  </div>
+
+  <h3 class="t-Test-assert">aligns with text</h3>
+  <div class="t-Test-run">
+    Lorem ipsum dolor sit amet, <span class="Triangle Triangle--right"></span> consectetur adipiscing elit. Quisque venenatis interdum urna, quis sodales mauris rutrum quis. Lorem ipsum dolor sit amet, <span class="Triangle Triangle--right"></span> consectetur adipiscing elit. Quisque venenatis interdum urna, quis sodales mauris rutrum quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis interdum urna, quis sodales mauris rutrum quis.
+  </div>
+
+  <h3 class="t-Test-assert">scales with font size</h3>
+  <div class="t-Test-run" style="font-size: 24px;">
+    <span class="Triangle Triangle--right"></span> Lorem ipsum...
+  </div>
+
+
+  <h2 class="t-Test-describe">.Triangle--up</h2>
+
+  <h3 class="t-Test-assert">points in the up direction</h3>
+  <div class="t-Test-run">
+    <span class="Triangle Triangle--up"></span> Lorem ipsum...
+  </div>
+
+
+  <h2 class="t-Test-describe">.Triangle--down</h2>
+
+  <h3 class="t-Test-assert">points in the down direction</h3>
+  <div class="t-Test-run">
+    <span class="Triangle Triangle--down"></span> Lorem ipsum...
+  </div>
+
+
+  <h2 class="t-Test-describe">.Triangle--left</h2>
+
+  <h3 class="t-Test-assert">points in the left direction</h3>
+  <div class="t-Test-run">
+    <span class="Triangle Triangle--left"></span> Lorem ipsum...
+  </div>
+
+
+  <h2 class="t-Test-describe">.Triangle--right</h2>
+
+  <h3 class="t-Test-assert">points in the right direction</h3>
+  <div class="t-Test-run">
+    <span class="Triangle Triangle--right"></span> Lorem ipsum...
+  </div>
+
+
+</div>

@@ -14,8 +14,6 @@
 @custom-media --c-bp-sm (max-width: 500px);
 @custom-media --c-bp-xs (max-width: 400px);
 
-@custom-media --c-bp-mobile (--c-bp-md);
-
 /* Layout
    ========================================================================== */
 

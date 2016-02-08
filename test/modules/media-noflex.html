@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Media - No Flexbox Fallback - Visual Tests</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<link rel="stylesheet" href="../../build/index.css">
+<style>
+
+</style>
+
+<div class="t-Test no-flexbox">
+
+  <h1 class="t-Test-title"><a href="https://github.com/aptuitiv/cacao/blob/master/lib/components/media">Media</a> (fallback) tests</h1>
+
+
+  <h2 class="t-Test-describe">.Media</h2>
+
+  <h3 class="t-Test-assert">has no gutters by default</h3>
+  <div class="t-Test-run">
+    <div class="Media">
+      <div class="Media-subject">
+        <img src="http://placehold.it/80x80" alt="">
+      </div>
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">can contain multiple subjects</h3>
+  <div class="t-Test-run">
+    <div class="Media">
+      <div class="Media-subject">
+        <img src="http://placehold.it/80x80" alt="">
+      </div>
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+      <div class="Media-subject">
+        <img src="http://placehold.it/80x80" alt="">
+      </div>
+      <div class="Media-subject">
+        <img src="http://placehold.it/80x80" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Media--withGutter[Sm]</h2>
+
+  <h3 class="t-Test-assert">applies gutters to all subject and content elements</h3>
+  <div class="t-Test-run">
+    <div class="Media Media--withGutter">
+      <div class="Media-subject">
+        <img src="http://placehold.it/80x80" alt="">
+      </div>
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+      <div class="Media-subject">
+        <img src="http://placehold.it/80x80" alt="">
+      </div>
+      <div class="Media-subject">
+        <img src="http://placehold.it/80x80" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="t-Test-run">
+    <div class="Media Media--withGutterSm">
+      <div class="Media-subject">
+        <img src="http://placehold.it/80x80" alt="">
+      </div>
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+      <div class="Media-subject">
+        <img src="http://placehold.it/80x80" alt="">
+      </div>
+      <div class="Media-subject">
+        <img src="http://placehold.it/80x80" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Media-content</h2>
+
+  <h3 class="t-Test-assert">does not wrap below subject</h3>
+  <div class="t-Test-run">
+    <div class="Media Media--withGutterSm">
+      <div class="Media-subject">
+        <img src="http://placehold.it/60x60" alt="">
+      </div>
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Media-subject</h2>
+
+  <h3 class="t-Test-assert">position is determined by source order</h3>
+  <div class="t-Test-run">
+    <div class="Media Media--withGutterSm">
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+      <div class="Media-subject">
+        <img src="http://placehold.it/80x80" alt="">
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">resizes to fit it's content</h3>
+  <div class="t-Test-run">
+    <div class="Media Media--withGutterSm">
+      <div class="Media-subject">
+        <img src="http://placehold.it/160x160" alt="">
+      </div>
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+    </div>
+  </div>
+  <div class="t-Test-run">
+    <div class="Media Media--withGutterSm">
+      <div class="Media-subject">
+        <img src="http://placehold.it/80x80" alt="">
+      </div>
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">can contain video</h3>
+  <div class="t-Test-run">
+    <div class="Media Media--withGutterSm">
+      <div class="Media-subject">
+        <iframe src="http://www.youtube.com/embed/BOOljk_LOcs" allowfullscreen="" frameborder="0" height="240" width="320"></iframe>
+      </div>
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Media-subject--middle</h2>
+
+  <h3 class="t-Test-assert">vertically aligned to the middle of the tallest content or subject element</h3>
+  <div class="t-Test-run">
+    <div class="Media Media--withGutterSm">
+      <div class="Media-subject Media-subject--middle">
+        <img src="http://placehold.it/60x60" alt="">
+      </div>
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">does not align other subjects</h3>
+  <div class="t-Test-run">
+    <div class="Media Media--withGutterSm">
+      <div class="Media-subject Media-subject--middle">
+        <img src="http://placehold.it/60x60" alt="">
+      </div>
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+      <div class="Media-subject">
+        <img src="http://placehold.it/60x60" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Media-subject--bottom</h2>
+
+  <h3 class="t-Test-assert">vertically aligned to the bottom of the tallest content or subject element</h3>
+  <div class="t-Test-run">
+    <div class="Media Media--withGutterSm">
+      <div class="Media-subject Media-subject--bottom">
+        <img src="http://placehold.it/60x60" alt="">
+      </div>
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">does not align other subjects</h3>
+  <div class="t-Test-run">
+    <div class="Media Media--withGutterSm">
+      <div class="Media-subject Media-subject--bottom">
+        <img src="http://placehold.it/60x60" alt="">
+      </div>
+      <div class="Media-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+      <div class="Media-subject">
+        <img src="http://placehold.it/60x60" alt="">
+      </div>
+    </div>
+  </div>
+
+
+</div>

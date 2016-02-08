@@ -10,8 +10,8 @@
  */
 
 :root {
-    --List-barred-spacing: .25em;
-    --List-dotted-spacing: .25em;
+    --List-barred-spacing: .5em;
+    --List-dotted-spacing: .5em;
     --List-gutter-spacing: 2rem;
     --List-spaced-spacing: 1em;
 }
@@ -102,13 +102,14 @@
 
 .List--barred > li::before {
     content: '|';
-    margin-left: var(--List-barred-spacing);
+    margin-left: calc(var(--List-barred-spacing) / 2);
     margin-right: var(--List-barred-spacing);
 }
 
 .List--barred > li.is-first::before,
 .List--barred > li:first-child::before {
     content: none;
+    display: none;
     margin-left: 0;
     margin-right: 0;
 }
@@ -123,13 +124,14 @@
 
 .List--dotted > li::before {
     content: '•';
-    margin-left: var(--List-dotted-spacing);
+    margin-left: calc(var(--List-dotted-spacing) / 2);
     margin-right: var(--List-dotted-spacing);
 }
 
 .List--dotted > li.is-first::before,
 .List--dotted > li:first-child::before {
     content: none;
+    display: none;
     margin-left: 0;
     margin-right: 0;
 }

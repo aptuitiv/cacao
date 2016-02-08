@@ -5,6 +5,8 @@
 /** @define Button */
 
 /**
+ * Provides a structural UI button template ready to be extended
+ *
  * The button classes are best applied to links and buttons.
  * These components can be used in forms, as calls to action, or as part of the
  * general UI of the site/app.
@@ -13,9 +15,8 @@
 :root {
     --Button-background: #555;
     --Button-backgroundHover: #9f9f9f;
-    --Button-border-color: inherit;
+    --Button-border: 0;
     --Button-border-radius: 0;
-    --Button-border-width: 0;
     --Button-color: #fff;
     --Button-colorHover: #fff;
     --Button-disabled-opacity: .6;
@@ -36,10 +37,8 @@
 
 .Button {
     background: var(--Button-background);
-    border-color: var(--Button-border-color);
+    border: var(--Button-border);
     border-radius: var(--Button-border-radius);
-    border-style: solid;
-    border-width: var(--Button-border-width);
     box-sizing: border-box; /* 1 */
     color: var(--Button-color);
     cursor: pointer;
@@ -106,11 +105,3 @@
     padding: var(--Button-paddingSm);
 }
 
-/**
- * Always use hover state theme in order to stand out
- */
-
-.Button--strong {
-    background: var(--Button-backgroundHover);
-    color: var(--Button-colorHover);
-}
