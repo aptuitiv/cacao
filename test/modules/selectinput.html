@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>SelectInput - Visual Tests</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<link rel="stylesheet" href="../../build/index.css">
+
+<div class="t-Test">
+
+  <h1 class="t-Test-title"><a href="https://github.com/aptuitiv/cacao/blob/master/lib/components/selectinput">SelectInput</a> tests</h1>
+
+
+  <h2 class="t-Test-describe">.SelectInput</h2>
+
+  <h3 class="t-Test-assert">resets native appearance of select inputs</h3>
+  <div class="t-Test-run">
+    <div class="SelectInput">
+      <select name="select">
+        <option value="value1">Value 1</option>
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+      </select>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">renders inline-block</h3>
+  <div class="t-Test-run">
+    <label for="select1">Select menu</label>
+    <div class="SelectInput">
+      <select name="select" id="select1">
+        <option value="value1">Value 1</option>
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+      </select>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.SelectInput.is-invalid</h2>
+
+  <h3 class="t-Test-assert">sets text and outline color to configured error color</h3>
+  <div class="t-Test-run">
+    <div class="SelectInput is-invalid">
+      <select name="select">
+        <option value="value1">Value 1</option>
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+      </select>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.SelectInput.is-valid</h2>
+
+  <h3 class="t-Test-assert">sets text and outline color to configured success color</h3>
+  <div class="t-Test-run">
+    <div class="SelectInput is-valid">
+      <select name="select">
+        <option value="value1">Value 1</option>
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+      </select>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>FlexEmbed - Visual Tests</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<link rel="stylesheet" href="../../build/index.css">
+<style>
+  .t-Test-run {
+    max-width: 500px;
+  }
+  .t-Test-run iframe {
+    height: 100%;
+    width: 100%;
+  }
+</style>
+
+<div class="t-Test">
+
+  <h1 class="t-Test-title"><a href="https://github.com/aptuitiv/cacao/blob/master/lib/components/flexembed">FlexEmbed</a> tests</h1>
+
+
+  <h2 class="t-Test-describe">.FlexEmbed</h2>
+
+  <h3 class="t-Test-assert">renders 1:1</h3>
+  <div class="t-Test-run">
+    <div class="FlexEmbed">
+      <div class="FlexEmbed-ratio"></div>
+      <iframe class="FlexEmbed-content" src="https://player.vimeo.com/video/54943110" width="500" height="281" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">supports dynamic, inline ratios</h3>
+  <div class="t-Test-run">
+    <div class="FlexEmbed">
+      <div class="FlexEmbed-ratio" style="padding-bottom: 50%;"></div>
+      <iframe class="FlexEmbed-content" src="https://maps.google.com/maps?hl=en&amp;q=Farmington,Maine&amp;ie=UTF8&amp;t=roadmap&amp;z=15&amp;iwloc=B&amp;output=embed"
+              frameborder="0" height="300" width="500"></iframe>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">supports max-height</h3>
+  <div class="t-Test-run">
+    <div class="FlexEmbed" style="max-height: 200px;">
+      <div class="FlexEmbed-ratio"></div>
+      <div class="FlexEmbed-content">
+        <iframe width="1280" height="1280" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">supports min-height</h3>
+  <div class="t-Test-run">
+    <div class="FlexEmbed" style="min-height: 300px;">
+      <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
+      <div class="FlexEmbed-content">
+        <iframe width="1280" height="1280" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">supports max-width</h3>
+  <div class="t-Test-run" style="max-width: 200px;">
+    <div class="FlexEmbed">
+      <div class="FlexEmbed-ratio"></div>
+      <div class="FlexEmbed-content">
+        <iframe width="1280" height="1280" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">supports min-width</h3>
+  <div class="t-Test-run" style="min-width: 600px;">
+    <div class="FlexEmbed">
+      <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
+      <div class="FlexEmbed-content">
+        <iframe width="1280" height="1280" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.FlexEmbed-ratio--3by1</h2>
+
+  <h3 class="t-Test-assert">renders 3:1</h3>
+  <div class="t-Test-run">
+    <div class="FlexEmbed">
+      <div class="FlexEmbed-ratio FlexEmbed-ratio--3by1"></div>
+      <div class="FlexEmbed-content">
+        <iframe width="1200" height="400" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.FlexEmbed-ratio--2by1</h2>
+
+  <h3 class="t-Test-assert">renders 2:1</h3>
+  <div class="t-Test-run">
+    <div class="FlexEmbed">
+      <div class="FlexEmbed-ratio FlexEmbed-ratio--2by1"></div>
+      <div class="FlexEmbed-content">
+        <iframe width="1200" height="600" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.FlexEmbed-ratio--16by9</h2>
+
+  <h3 class="t-Test-assert">renders 16:9</h3>
+  <div class="t-Test-run">
+    <div class="FlexEmbed">
+      <div class="FlexEmbed-ratio FlexEmbed-ratio--16by9"></div>
+      <div class="FlexEmbed-content">
+        <iframe width="1280" height="720" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.FlexEmbed-ratio--4by3</h2>
+
+  <h3 class="t-Test-assert">renders 4:3</h3>
+  <div class="t-Test-run">
+    <div class="FlexEmbed">
+      <div class="FlexEmbed-ratio FlexEmbed-ratio--4by3"></div>
+      <div class="FlexEmbed-content">
+        <iframe width="1280" height="720" src="http://www.youtube.com/embed/BOOljk_LOcs" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
+</div>

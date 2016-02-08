@@ -7,7 +7,8 @@
 /**
  * Flex-box grid component with inline-block fallback.
  *
- * Relies on size utilities in order to set a column width.
+ * Note: Relies on particular dimensions being applied to cells via
+ * other classes. For example, `size` utilities.
  *
  * DO NOT apply dimension or offset utilities to the `Grid` element. All cell
  * widths and offsets should be applied to child grid cells.

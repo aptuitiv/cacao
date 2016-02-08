@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Constrain - Visual Tests</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<link rel="stylesheet" href="../../build/index.css">
+<style>
+  .t-Test-run {
+    max-width: 500px;
+  }
+</style>
+
+<div class="t-Test">
+
+  <h1 class="t-Test-title"><a href="https://github.com/tbck/style-kit/blob/master/lib/components/constrain">Constrain</a> tests</h1>
+
+
+  <h2 class="t-Test-describe">.Constrain</h2>
+
+  <h3 class="t-Test-assert">renders 1:1</h3>
+  <div class="t-Test-run">
+    <div class="Constrain" style="background-image: url('http://placehold.it/500x250');"></div>
+  </div>
+
+  <h3 class="t-Test-assert">supports dynamic, inline ratios</h3>
+  <div class="t-Test-run">
+    <div class="Constrain" style="background-image: url('http://placehold.it/500x250'); padding-bottom: 36%"></div>
+  </div>
+
+  <h2 class="t-Test-describe">.Constrain--contain</h2>
+
+  <h3 class="t-Test-assert">contains image within block</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--contain" style="background-image: url('http://placehold.it/500x250');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--5by4</h2>
+
+  <h3 class="t-Test-assert">renders 5:4</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--5by4" style="background-image: url('http://placehold.it/500x250');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--4by3</h2>
+
+  <h3 class="t-Test-assert">renders 4:3</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--4by3" style="background-image: url('http://placehold.it/500x250');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--3by2</h2>
+
+  <h3 class="t-Test-assert">renders 3:2</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--3by2" style="background-image: url('http://placehold.it/500x250');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--8by5 / Constrain--16by10</h2>
+
+  <h3 class="t-Test-assert">renders 16:10</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--16by10" style="background-image: url('http://placehold.it/500x250');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--16by9</h2>
+
+  <h3 class="t-Test-assert">renders 16:9</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--16by9" style="background-image: url('http://placehold.it/500x250');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--top</h2>
+
+  <h3 class="t-Test-assert">image gravitates towards top edge</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--top" style="background-image: url('http://placehold.it/250x400');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--bottom</h2>
+
+  <h3 class="t-Test-assert">image gravitates towards bottom edge</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--bottom" style="background-image: url('http://placehold.it/250x400');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--left</h2>
+
+  <h3 class="t-Test-assert">image gravitates towards left edge</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--left" style="background-image: url('http://placehold.it/500x250');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--right</h2>
+
+  <h3 class="t-Test-assert">image gravitates towards right edge</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--right" style="background-image: url('http://placehold.it/500x250');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--topLeft</h2>
+
+  <h3 class="t-Test-assert">image gravitates towards top left corner</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--topLeft" style="background-image: url('http://placehold.it/300x200');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--topRight</h2>
+
+  <h3 class="t-Test-assert">image gravitates towards top right corner</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--topRight" style="background-image: url('http://placehold.it/300x200');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--bottomLeft</h2>
+
+  <h3 class="t-Test-assert">image gravitates towards bottom left corner</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--bottomLeft" style="background-image: url('http://placehold.it/300x200');"></div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Constrain--bottomRight</h2>
+
+  <h3 class="t-Test-assert">image gravitates towards bottom right corner</h3>
+  <div class="t-Test-run">
+    <div class="Constrain Constrain--bottomRight" style="background-image: url('http://placehold.it/300x200');"></div>
+  </div>
+
+
+</div>

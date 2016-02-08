@@ -5,9 +5,11 @@
 /** @define FlexEmbed */
 
 /**
- * For use with media embeds – such as videos, slideshows, or even images –
- * that need to retain a specific aspect ratio but adapt to the width of their
- * containing element.
+ * Responsive, intrinsic ratio embeds
+ *
+ * For use with media embeds – such as videos or slideshows that need to
+ * retain a specific aspect ratio but adapt to the width of their containing
+ * element.
  *
  * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
  */

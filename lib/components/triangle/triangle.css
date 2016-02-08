@@ -15,7 +15,7 @@
 
 .Triangle {
     background: transparent;
-    border: .5em solid transparent;
+    border: 0 solid transparent;
     display: inline-block;
     height: 0;
     vertical-align: -10%; /* 1 */
@@ -25,26 +25,35 @@
 /**
  * Direction modifiers
  *
- * 1. Translating the element by 25% in the direction it is pointing will
+ * 1. Only apply border width if the triangle is used correctly (has at least
+ *    one direction modifier).
+ * 2. Translating the element by 25% in the direction it is pointing will
  *    center it.
  */
 
+.Triangle--up,
+.Triangle--down,
+.Triangle--left,
+.Triangle--right {
+    border-width: .5em; /* 1 */
+}
+
 .Triangle--up {
     border-bottom-color: inherit;
-    transform: translateY(-25%); /* 1 */
+    transform: translateY(-25%); /* 2 */
 }
 
 .Triangle--down {
     border-top-color: inherit;
-    transform: translateY(25%); /* 1 */
+    transform: translateY(25%); /* 2 */
 }
 
 .Triangle--left {
     border-right-color: inherit;
-    transform: translateX(-25%); /* 1 */
+    transform: translateX(-25%); /* 2 */
 }
 
 .Triangle--right {
     border-left-color: inherit;
-    transform: translateX(25%); /* 1 */
+    transform: translateX(25%); /* 2 */
 }

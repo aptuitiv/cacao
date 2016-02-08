@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Button - Visual Tests</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<link rel="stylesheet" href="../../build/index.css">
+
+<div class="t-Test">
+
+  <h1 class="t-Test-title"><a href="https://github.com/aptuitiv/cacao/blob/master/lib/components/button">Button</a> tests</h1>
+
+
+  <h2 class="t-Test-describe">.Button</h2>
+
+  <h3 class="t-Test-assert">renders inline-block</h3>
+  <div class="t-Test-run">
+    <a class="Button" role="button" href="#">Button text</a>
+    <button class="Button" type="button">Button text</button>
+    <input class="Button" value="Button text" type="submit">
+  </div>
+
+  <h3 class="t-Test-assert">allows text wrapping</h3>
+  <div class="t-Test-run" style="width: 80px;">
+    <p><a class="Button" href="#">Button text</a></p>
+    <p><button class="Button" type="button">Button text</button></p>
+    <p><input class="Button" value="Button text" type="submit"></p>
+  </div>
+
+
+  <h3 class="t-Test-assert">is baseline-aligned</h3>
+  <div class="t-Test-run">
+    <a class="Button" href="#">Button<br>text</a>
+    <button class="Button" type="button">Button text</button>
+    <input class="Button" value="Button text" type="submit">
+  </div>
+
+
+  <h2 class="t-Test-describe">.Button.is-disabled</h2>
+
+  <h3 class="t-Test-assert">renders disabled</h3>
+  <div class="t-Test-run">
+    <a class="Button is-disabled">Button text</a>
+    <button class="Button is-disabled" type="button" disabled="">Button text</button>
+    <input class="Button is-disabled" value="Button text" disabled="" type="submit">
+  </div>
+
+
+</div>

@@ -5,7 +5,7 @@
 /** @define MainNav */
 
 :root {
-    --MainNav-font: inherit;
+    --MainNav-fontFamily: inherit;
     --MainNav-fontSize: 15px;
     --MainNav-lineHeight: 1.5;
     --MainNav-link-background: transparent;
@@ -20,7 +20,7 @@
 
 .MainNav {
     display: inline-block;
-    font-family: var(--MainNav-font);
+    font-family: var(--MainNav-fontFamily);
     font-size: var(--MainNav-fontSize);
     line-height: var(--MainNav-lineHeight);
     list-style: none;

@@ -49,6 +49,7 @@
 @media (--Image-bp) {
     .Image--left,
     .Image--right {
+        display: block;
         float: none;
         margin-left: 0;
         margin-right: 0;
