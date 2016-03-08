@@ -1,0 +1,162 @@
+/**
+ * Configure modules
+ *
+ * This configuration layer keeps modules decoupled from the set of
+ * variables used to configure them.
+ *
+ * https://github.com/suitcss/theme/
+ */
+
+/* Base
+   ========================================================================== */
+
+@custom-media --base-typography-bp (--c-bp-md);
+
+:root {
+    --base-typography-color: var(--c-color-body);
+    --base-typography-fontFamily: var(--c-fontFamily-body);
+    --base-typography-fontSize: var(--c-fontSize-body);
+    --base-typography-fontWeight: var(--c-fontWeight-body);
+    --base-typography-letterSpacing: var(--c-letterSpacing-body);
+    --base-typography-lineHeight: var(--c-lineHeight-body);
+    --base-typography-link-color: var(--c-color-link);
+    --base-typography-link-colorHover: var(--c-color-linkHover);
+    --base-typography-spacing: calc(var(--c-layout-spacing) * 2);
+}
+
+:root {
+    --base-typography-heading-color: var(--c-color-heading);
+    --base-typography-heading-fontFamily: var(--c-fontFamily-heading);
+    --base-typography-heading-fontWeight: var(--c-fontWeight-heading);
+    --base-typography-heading-letterSpacing: var(--c-letterSpacing-heading);
+    --base-typography-h1-fontSize: var(--c-fontSize-h1);
+    --base-typography-h2-fontSize: var(--c-fontSize-h2);
+    --base-typography-h3-fontSize: var(--c-fontSize-h3);
+    --base-typography-h4-fontSize: var(--c-fontSize-h4);
+    --base-typography-h5-fontSize: var(--c-fontSize-h5);
+    --base-typography-h6-fontSize: var(--c-fontSize-h6);
+    --base-typography-h1-lineHeight: var(--c-lineHeight-h1);
+    --base-typography-h2-lineHeight: var(--c-lineHeight-h2);
+    --base-typography-h3-lineHeight: var(--c-lineHeight-h3);
+    --base-typography-h4-lineHeight: var(--c-lineHeight-h4);
+    --base-typography-h5-lineHeight: var(--c-lineHeight-h5);
+    --base-typography-h6-lineHeight: var(--c-lineHeight-h6);
+}
+
+:root {
+    --base-code-fontFamily: var(--c-fontFamily-code);
+    --base-code-fontSize: var(--c-fontSize-code);
+    --base-code-fontWeight: var(--c-fontWeight-code);
+    --base-code-letterSpacing: var(--c-letterSpacing-code);
+    --base-code-lineHeight: var(--c-lineHeight-code);
+    --base-code-spacing: calc(var(--c-layout-spacing) * 2);
+}
+
+:root {
+    --base-tables-spacing: calc(var(--c-layout-spacing) * 2);
+}
+
+/* Button
+   ========================================================================== */
+
+:root {
+    --Button-background: var(--c-gray);
+    --Button-backgroundHover: var(--c-offblack);
+    --Button-color: var(--c-grayAlt);
+    --Button-colorHover: var(--c-grayAlt);
+    --Button-fontFamily: var(--c-fontFamily-sans);
+    --Button-fontSize: var(--c-fontSize-2);
+    --Button-lineHeight: var(--c-lineHeight-2);
+}
+
+/* Container
+   ========================================================================== */
+
+:root {
+    --Container-width: var(--c-layout-pageWidth);
+}
+
+/* Grid
+   ========================================================================== */
+
+:root {
+    --Grid-cell-gutter: var(--c-layout-gutter);
+    --Grid-fontSize: var(--c-fontSize-body);
+}
+
+/* Image
+   ========================================================================== */
+
+@custom-media --Image-bp (--c-bp-sm);
+
+:root {
+    --Image-spacing: var(--c-layout-spacing);
+}
+
+/* List
+   ========================================================================== */
+
+:root {
+    --List-gutter-spacing: var(--c-layout-gutter);
+}
+
+/* Media
+   ========================================================================== */
+
+:root {
+    --Media-cell-gutter: var(--c-layout-gutter);
+}
+
+/* Utilities
+   ========================================================================== */
+
+@custom-media --utils-display-lg (--c-bp-lg);
+@custom-media --utils-display-md (--c-bp-md);
+@custom-media --utils-display-sm (--c-bp-sm);
+
+@custom-media --utils-pull-lg (--c-bp-lg);
+@custom-media --utils-pull-md (--c-bp-md);
+@custom-media --utils-pull-sm (--c-bp-sm);
+
+@custom-media --utils-push-lg (--c-bp-lg);
+@custom-media --utils-push-md (--c-bp-md);
+@custom-media --utils-push-sm (--c-bp-sm);
+
+@custom-media --utils-size-lg (--c-bp-lg);
+@custom-media --utils-size-md (--c-bp-md);
+@custom-media --utils-size-sm (--c-bp-sm);
+
+:root {
+    --utils-margin-bottom: var(--c-layout-spacing);
+    --utils-margin-top: var(--c-layout-spacing);
+}
+
+:root {
+    --utils-padding-bottom: var(--c-layout-spacing);
+    --utils-padding-top: var(--c-layout-spacing);
+    --utils-padding-gutter: var(--c-layout-gutter);
+    --utils-padding-space: calc(var(--c-layout-spacing) / 2);
+}
+
+:root {
+    --utils-typography-fontSize-1: var(--c-fontSize-1);
+    --utils-typography-fontSize-2: var(--c-fontSize-2);
+    --utils-typography-fontSize-3: var(--c-fontSize-3);
+    --utils-typography-fontSize-4: var(--c-fontSize-4);
+    --utils-typography-fontSize-5: var(--c-fontSize-5);
+    --utils-typography-fontSize-6: var(--c-fontSize-6);
+    --utils-typography-fontSize-7: var(--c-fontSize-7);
+    --utils-typography-fontSize-8: var(--c-fontSize-8);
+    --utils-typography-fontSize-9: var(--c-fontSize-9);
+    --utils-typography-fontSize-10: var(--c-fontSize-10);
+    --utils-typography-lineHeight-1: var(--c-lineHeight-1);
+    --utils-typography-lineHeight-2: var(--c-lineHeight-2);
+    --utils-typography-lineHeight-3: var(--c-lineHeight-3);
+    --utils-typography-lineHeight-4: var(--c-lineHeight-4);
+    --utils-typography-lineHeight-5: var(--c-lineHeight-5);
+    --utils-typography-lineHeight-6: var(--c-lineHeight-6);
+    --utils-typography-lineHeight-7: var(--c-lineHeight-7);
+    --utils-typography-lineHeight-8: var(--c-lineHeight-8);
+    --utils-typography-lineHeight-9: var(--c-lineHeight-9);
+    --utils-typography-lineHeight-10: var(--c-lineHeight-10);
+}

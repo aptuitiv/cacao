@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Grid - No Flexbox Fallback - Visual Tests</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<link rel="stylesheet" href="../../build/index.css">
+
+<div class="t-Test no-flexbox">
+
+  <h1 class="t-Test-title"><a href="https://github.com/aptuitiv/cacao/blob/master/lib/components/grid">Grid</a> (fallback) tests</h1>
+
+
+  <h2 class="t-Test-describe">.Grid</h2>
+
+  <h3 class="t-Test-assert">renders cells at full-width by default</h3>
+  <div class="t-Test-run">
+    <div class="Grid">
+      <div class="Grid-cell">
+        <div class="t-Fixture">1</div>
+      </div>
+      <div class="Grid-cell">
+        <div class="t-Fixture">2</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">removes inter-cell whitespace by default</h3>
+  <div class="t-Test-run">
+    <div class="Grid">
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">1</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">2</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">3</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">4</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">automatically wraps cells across multiple lines when they don't fit a single row</h3>
+  <div class="t-Test-run">
+    <div class="Grid">
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">1</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">2</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">3</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">4</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">5</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">6</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">7</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">8</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">arranges cells of different heights into clear rows</h3>
+  <div class="t-Test-run">
+    <div class="Grid">
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">1<br><br></div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">2</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">3<br><br><br></div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">4</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">5</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">6<br><br><br></div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">7</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">8<br><br></div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">supports nested grids</h3>
+  <div class="t-Test-run">
+    <div class="Grid">
+      <div class="Grid-cell u-size3of4">
+        <div class="t-Fixture">1</div>
+        <div class="Grid">
+          <div class="Grid-cell u-size1of3">
+            <div class="t-Fixture">Nested 1</div>
+          </div>
+          <div class="Grid-cell u-size1of3">
+            <div class="t-Fixture">Nested 2</div>
+          </div>
+          <div class="Grid-cell u-size1of3">
+            <div class="t-Fixture">Nested 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Grid--alignCenter</h2>
+
+  <h3 class="t-Test-assert">center-aligns all grid cells but not their content</h3>
+  <div class="t-Test-run">
+    <div class="Grid Grid--alignCenter">
+      <div class="Grid-cell u-size1of3">
+        <div class="t-Fixture">1</div>
+      </div>
+      <div class="Grid-cell u-size1of3">
+        <div class="t-Fixture">2</div>
+      </div>
+      <div class="Grid-cell u-size1of2">
+        <div class="t-Fixture">3</div>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Grid--alignRight</h2>
+
+  <h3 class="t-Test-assert">right-aligns all grid cells but not their content</h3>
+  <div class="t-Test-run">
+    <div class="Grid Grid--alignRight">
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">1</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">2</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">3</div>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Grid--alignMiddle</h2>
+
+  <h3 class="t-Test-assert">middle-aligns all grid cells</h3>
+  <div class="t-Test-run">
+    <div class="Grid Grid--alignMiddle">
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">1</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">2<br><br><br></div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">3</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">4</div>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Grid--alignBottom</h2>
+
+  <h3 class="t-Test-assert">bottom-aligns all grid cells</h3>
+  <div class="t-Test-run">
+    <div class="Grid Grid--alignBottom">
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">1</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">2<br><br><br></div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">3</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">4</div>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Grid-cell--center</h2>
+
+  <h3 class="t-Test-assert">centers an individual grid cell but not its content</h3>
+  <div class="t-Test-run">
+    <div class="Grid">
+      <div class="Grid-cell u-size1of2">
+        <div class="t-Fixture">1</div>
+      </div>
+      <div class="Grid-cell u-size1of2">
+        <div class="t-Fixture">2</div>
+      </div>
+      <div class="Grid-cell Grid-cell--center u-size3of4">
+        <div class="t-Fixture">3: centered cell</div>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="t-Test-describe">.Grid--withGutter[Sm|Lg]</h2>
+
+  <h3 class="t-Test-assert">supports gutters of multiple sizes</h3>
+  <div class="t-Test-run">
+    <div class="Grid Grid--withGutter">
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">1</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">2</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">3</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">4</div>
+      </div>
+    </div>
+    <div class="Grid Grid--withGutterSm">
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">1</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">2</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">3</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">4</div>
+      </div>
+    </div>
+    <div class="Grid Grid--withGutterLg">
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">1</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">2</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">3</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="t-Fixture">4</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">doesn't apply gutters to nested grids</h3>
+  <div class="t-Test-run">
+    <div class="Grid Grid--withGutter">
+      <div class="Grid-cell u-size1of2">
+        <div class="t-Fixture">1</div>
+        <div class="Grid">
+          <div class="Grid-cell u-size1of2">
+            <div class="t-Fixture">Nested 1</div>
+          </div>
+          <div class="Grid-cell u-size1of2">
+            <div class="t-Fixture">Nested 2</div>
+          </div>
+        </div>
+      </div>
+      <div class="Grid-cell u-size1of2">
+        <div class="t-Fixture">2</div>
+        <div class="Grid">
+          <div class="Grid-cell u-size1of2">
+            <div class="t-Fixture">Nested 1</div>
+          </div>
+          <div class="Grid-cell u-size1of2">
+            <div class="t-Fixture">Nested 2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">correctly aligns gutters within nested grids</h3>
+  <div class="t-Test-run">
+    <div class="Grid Grid--withGutter">
+      <div class="Grid-cell u-size1of2">
+        <div class="t-Fixture">1</div>
+        <div class="Grid Grid--withGutter">
+          <div class="Grid-cell u-size1of2">
+            <div class="t-Fixture">Nested 1</div>
+          </div>
+          <div class="Grid-cell u-size1of2">
+            <div class="t-Fixture">Nested 2</div>
+          </div>
+        </div>
+      </div>
+      <div class="Grid-cell u-size1of2">
+        <div class="t-Fixture">2</div>
+        <div class="Grid Grid--withGutter">
+          <div class="Grid-cell u-size1of2">
+            <div class="t-Fixture">Nested 1</div>
+          </div>
+          <div class="Grid-cell u-size1of2">
+            <div class="t-Fixture">Nested 2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="t-Test-assert">correctly aligns gutters on cells that have been reordered</h3>
+  <div class="t-Test-run">
+    <div class="Grid Grid--withGutter">
+      <div class="Grid-cell u-size1of3">
+        <div class="t-Fixture">1</div>
+      </div>
+      <div class="Grid-cell u-size1of3 u-push1of3">
+        <div class="t-Fixture">2</div>
+      </div>
+      <div class="Grid-cell u-size1of3 u-pull1of3">
+        <div class="t-Fixture">3</div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+

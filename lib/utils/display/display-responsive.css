@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Responsive display utilities
+   ========================================================================== */
+
+@custom-media --utils-display-lg (max-width: 1000px);
+@custom-media --utils-display-md (max-width: 800px);
+@custom-media --utils-display-sm (max-width: 600px);
+
+/* large */
+
+@media (--utils-display-lg) {
+
+    .u-lg-show {
+        display: block !important;
+    }
+
+    .u-lg-hide {
+        display: none !important;
+    }
+
+}
+
+/* medium */
+
+@media (--utils-display-md) {
+
+    .u-md-show {
+        display: block !important;
+    }
+
+    .u-md-hide {
+        display: none !important;
+    }
+
+}
+
+/* small */
+
+@media (--utils-display-sm) {
+
+    .u-sm-show {
+        display: block !important;
+    }
+
+    .u-sm-hide {
+        display: none !important;
+    }
+
+}
+

@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+:root {
+    --base-tables-heading-color: inherit;
+    --base-tables-spacing: 20px;
+}
+
+table {
+    margin-bottom: var(--base-tables-spacing);
+}
+
+td,
+th {
+    padding: 0;
+}
+
+th {
+    color: var(--base-tables-heading-color);
+}
+
+/**
+ * Keep text alignment consistent, reset default centered text
+ */
+
+caption,
+th {
+    text-align: left;
+}
+
+caption {
+    caption-side: bottom;
+    margin-top: var(--base-tables-spacing);
+}

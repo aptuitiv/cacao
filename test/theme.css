@@ -1,0 +1,154 @@
+/**
+ * Common config variables
+ *
+ * These will be mapped to component configurations, components should
+ * not use these directly.
+ */
+
+/* Breakpoints
+   ========================================================================== */
+
+@custom-media --c-bp-xl (max-width: 960px);
+@custom-media --c-bp-lg (max-width: 800px);
+@custom-media --c-bp-md (max-width: 650px);
+@custom-media --c-bp-sm (max-width: 500px);
+@custom-media --c-bp-xs (max-width: 400px);
+
+/* Layout
+   ========================================================================== */
+
+:root {
+    --c-layout-gutter: 2rem;
+    --c-layout-spacing: 1.2rem;
+    --c-layout-pageWidth: 40em;
+}
+
+/* Colors
+   ========================================================================== */
+
+/**
+ * Each generic color has an alt fg/bg color for text legibility.
+ */
+
+:root {
+    --c-offblack: #333;
+    --c-offwhite: #fdf7f5;
+    --c-lightgray: #bfbfbf;
+    --c-gray: #999;
+    --c-darkgray: #585858;
+    --c-red: #f00;
+    --c-green: #0f0;
+    --c-yellow: #ff0;
+}
+
+:root {
+    --c-offblackAlt: #fff;
+    --c-offwhiteAlt: #333;
+    --c-lightgrayAlt: #333;
+    --c-grayAlt: #fff;
+    --c-darkgrayAlt: #fff;
+    --c-redAlt: #fff;
+    --c-greenAlt: #fff;
+    --c-yellowAlt: #333;
+}
+
+/* base properties */
+
+:root {
+    --c-color-body: var(--c-offblack);
+    --c-color-heading: inherit;
+    --c-color-link: inherit;
+    --c-color-linkHover: inherit;
+}
+
+/* Typography
+   ========================================================================== */
+
+/**
+ * Font scale
+ */
+
+:root {
+    --c-fontSize-1: 1.2rem;
+    --c-fontSize-2: 1.4rem;
+    --c-fontSize-3: 1.6rem; /* body, h6 */
+    --c-fontSize-4: 2rem; /* h5 */
+    --c-fontSize-5: 2.4rem; /* h4 */
+    --c-fontSize-6: 2.8rem; /* h3 */
+    --c-fontSize-7: 3.2rem; /* h2 */
+    --c-fontSize-8: 4.8rem; /* h1 */
+    --c-fontSize-9: 5.2rem;
+    --c-fontSize-10: 5.8rem;
+}
+
+/* corresponding line-heights */
+
+:root {
+    --c-lineHeight-1: 1.2rem;
+    --c-lineHeight-2: 2.4rem;
+    --c-lineHeight-3: 2.4rem; /* body, h6 */
+    --c-lineHeight-4: 2.4rem; /* h5 */
+    --c-lineHeight-5: 3.6rem; /* h4 */
+    --c-lineHeight-6: 3.6rem; /* h3 */
+    --c-lineHeight-7: 3.6rem; /* h2 */
+    --c-lineHeight-8: 6rem; /* h1 */
+    --c-lineHeight-9: 6rem;
+    --c-lineHeight-10: 6rem;
+}
+
+/**
+ * Font families
+ */
+
+:root {
+    --c-fontFamily-mono: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    --c-fontFamily-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --c-fontFamily-serif: serif;
+}
+
+/**
+ * Body font properties
+ */
+
+:root {
+    --c-fontFamily-body: var(--c-fontFamily-sans);
+    --c-fontWeight-body: 400;
+    --c-letterSpacing-body: normal;
+    --c-fontSize-body: var(--c-fontSize-3);
+    --c-lineHeight-body: var(--c-lineHeight-3);
+}
+
+/**
+ * Heading font properties
+ */
+
+:root {
+    --c-fontFamily-heading: inherit;
+    --c-fontWeight-heading: inherit;
+    --c-letterSpacing-heading: inherit;
+    --c-fontSize-h1: var(--c-fontSize-8);
+    --c-fontSize-h2: var(--c-fontSize-7);
+    --c-fontSize-h3: var(--c-fontSize-6);
+    --c-fontSize-h4: var(--c-fontSize-5);
+    --c-fontSize-h5: var(--c-fontSize-4);
+    --c-fontSize-h6: var(--c-fontSize-3);
+    --c-lineHeight-h1: var(--c-lineHeight-8);
+    --c-lineHeight-h2: var(--c-lineHeight-7);
+    --c-lineHeight-h3: var(--c-lineHeight-6);
+    --c-lineHeight-h4: var(--c-lineHeight-5);
+    --c-lineHeight-h5: var(--c-lineHeight-4);
+    --c-lineHeight-h6: var(--c-lineHeight-3);
+}
+
+/**
+ * Code font properties
+ */
+
+:root {
+    --c-fontFamily-code: var(--c-fontFamily-mono);
+    --c-fontWeight-code: inherit;
+    --c-letterSpacing-code: normal;
+    --c-fontSize-code: 90%;
+    --c-lineHeight-code: 1.5;
+}
+

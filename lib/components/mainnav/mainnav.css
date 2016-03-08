@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Main Navigation
+   ========================================================================== */
+
+/** @define MainNav */
+
+:root {
+    --MainNav-fontFamily: inherit;
+    --MainNav-fontSize: 15px;
+    --MainNav-lineHeight: 1.5;
+    --MainNav-link-background: transparent;
+    --MainNav-link-backgroundHover: transparent;
+    --MainNav-link-color: #333;
+    --MainNav-link-colorHover: #000;
+}
+
+/**
+ * Base menu
+ */
+
+.MainNav {
+    display: inline-block;
+    font-family: var(--MainNav-fontFamily);
+    font-size: var(--MainNav-fontSize);
+    line-height: var(--MainNav-lineHeight);
+    list-style: none;
+    margin: 0 0 0 -1em;
+    padding: 0;
+}
+
+/**
+ * Items
+ */
+
+.MainNav-item {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+/**
+ * Links
+ */
+
+.MainNav-link {
+    background: var(--MainNav-link-background);
+    color: var(--MainNav-link-color);
+    display: block;
+    padding: .5em 1.5rem;
+    text-decoration: none;
+}
+
+.MainNav-item.is-current > .MainNav-link,
+.MainNav-item.is-currentParent > .MainNav-link,
+.MainNav-item:hover > .MainNav-link {
+    background: var(--MainNav-link-backgroundHover);
+    color: var(--MainNav-link-colorHover);
+    text-decoration: none;
+}

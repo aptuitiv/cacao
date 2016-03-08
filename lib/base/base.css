@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+:root {
+    --base-body-background: #fff;
+}
+
+/**
+ * 1. By default, `<body>` has no `background-color` so we set one
+ *    as a best practice.
+ */
+
+body {
+    background: var(--base-body-background); /* 1 */
+}
+
+/**
+ * 1. Style alt text.
+ * 2. Scale image fluidly within its container. Making this default has some
+ *    known issues but can be very convenient when users are inserting images
+ *    onto a page with a rich text editor.
+ *    See https://github.com/twbs/bootstrap/issues/18178
+ * 3. Align middle to prevent white space created by aligning to text baseline.
+ */
+
+img {
+    font-style: italic; /* 1 */
+    height: auto; /* 2 */
+    max-width: 100%; /* 2 */
+    vertical-align: middle; /* 3 */
+}
+
+/**
+ * 1. Remove default border from iframes
+ */
+
+iframe {
+    border: 0; /* 1 */
+}
+
+/**
+ * iOS "clickable elements" fix for role="button"
+ *
+ * Fixes "clickability" issue (and more generally, the firing of events such as
+ * focus as well) for traditionally non-focusable elements with role="button"
+ * see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+ */
+
+[role='button'] {
+    cursor: pointer;
+}
+
+/**
+ * Suppress the focus outline on elements that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+
+[tabindex='-1']:focus {
+    outline: none !important;
+}
+
+/**
+ * Avoid 300ms click delay on touch devices that support the `touch-action` CSS
+ * property.
+ *
+ * In particular, unlike most other browsers, IE11+Edge on Windows 10 on touch
+ * devices and IE Mobile 10-11 DON'T remove the click delay when
+ * `<meta name="viewport" content="width=device-width">` is present. However,
+ * they DO support removing the click delay via `touch-action: manipulation`.
+ * See:
+ * - http://v4-alpha.getbootstrap.com/content/reboot/#click-delay-optimization-for-touch
+ * - http://caniuse.com/#feat=css-touch-action
+ * - http://patrickhlauke.github.io/touch/tests/results/#suppressing-300ms-delay
+ */
+
+a,
+area,
+button,
+[role='button'],
+input,
+label,
+select,
+summary,
+textarea {
+    touch-action: manipulation;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+button:focus {
+    outline: 1px dotted;
+    /* stylelint-disable */
+    outline: 5px auto -webkit-focus-ring-color;
+    /* stylelint-enable */
+}
+
+/**
+ * Always hide an element with the `hidden` HTML attribute (from PureCSS).
+ */
+
+[hidden] {
+    display: none !important;
+}

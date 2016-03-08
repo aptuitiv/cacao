@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Dropdown
+   ========================================================================== */
+
+/** @define Dropdown */
+
+/**
+ * Drop-down navigation menu.
+ */
+
+:root {
+    --Dropdown-background: #a0a0a0;
+    --Dropdown-fontSize: inherit;
+    --Dropdown-lineHeight: inherit;
+    --Dropdown-item-padding: .5em 1em;
+    --Dropdown-link-color: #333;
+    --Dropdown-link-colorHover: #000;
+}
+
+.Dropdown {
+    position: relative;
+}
+
+/* Base menu
+   ========================================================================== */
+
+.Dropdown-menu {
+    background: var(--Dropdown-background);
+    box-shadow: 0 22px 35px 0 rgba(0, 0, 0, .1);
+    display: none;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    min-width: 100%;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 999;
+}
+
+.Dropdown-menu::before,
+.Dropdown-menu::after {
+    content: ' ';
+    display: table;
+}
+.Dropdown-menu::after {
+    clear: both;
+}
+
+/* Menu items
+   ========================================================================== */
+
+.Dropdown-item {
+    position: relative;
+}
+
+/* Menu links
+   ========================================================================== */
+
+.Dropdown-link {
+    color: var(--Dropdown-link-color);
+    display: block;
+    font-size: var(--Dropdown-fontSize);
+    font-weight: 400;
+    line-height: var(--Dropdown-lineHeight);
+    padding: var(--Dropdown-item-padding);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.Dropdown-link:hover,
+.Dropdown-link.is-current,
+.Dropdown-link.is-currentParent {
+    color: var(--Dropdown-link-colorHover);
+}
+
+.Dropdown-link.is-current,
+.Dropdown-link.is-currentParent {
+    font-weight: 700;
+}
+
+.Dropdown-link:hover {
+    text-decoration: none;
+}
+
+/* State
+   ========================================================================== */
+
+/* show sub-menus under hovered items */
+
+.Dropdown:hover > .Dropdown-menu,
+.Dropdown-item:hover > .Dropdown-menu {
+    display: block;
+}
+
+/* display sub-menus under the last item to the right */
+
+.Dropdown.is-last:hover > .Dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+/* fly-out to the right */
+
+.Dropdown-item:hover > .Dropdown-menu {
+    left: 100%;
+    top: 0;
+    transform: none;
+}
+
+/* fly-out to the left if root parent is last item */
+
+.Dropdown.is-last .Dropdown-item:hover > .Dropdown-menu {
+    left: auto;
+    right: 100%;
+}
+
