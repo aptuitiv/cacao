@@ -148,6 +148,36 @@
     line-height: var(--utils-typography-lineHeight-10) !important;
 }
 
+.u-fontSizeH1 {
+    font-size: var(--base-typography-h1-fontSize) !important;
+    line-height: var(--base-typography-h1-lineHeight) !important;
+}
+
+.u-fontSizeH2 {
+    font-size: var(--base-typography-h2-fontSize) !important;
+    line-height: var(--base-typography-h2-lineHeight) !important;
+}
+
+.u-fontSizeH3 {
+    font-size: var(--base-typography-h3-fontSize) !important;
+    line-height: var(--base-typography-h3-lineHeight) !important;
+}
+
+.u-fontSizeH4 {
+    font-size: var(--base-typography-h4-fontSize) !important;
+    line-height: var(--base-typography-h4-lineHeight) !important;
+}
+
+.u-fontSizeH5 {
+    font-size: var(--base-typography-h5-fontSize) !important;
+    line-height: var(--base-typography-h5-lineHeight) !important;
+}
+
+.u-fontSizeH6 {
+    font-size: var(--base-typography-h6-fontSize) !important;
+    line-height: var(--base-typography-h6-lineHeight) !important;
+}
+
 /* Misc
    ========================================================================== */
 
