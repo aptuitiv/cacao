@@ -239,11 +239,3 @@
     white-space: nowrap !important;
     word-wrap: normal !important; /* 2 */
 }
-
-/* ------------------------------------ *\
-    #COLOR
-\* ------------------------------------ */
-
-.u-textColorBlue {
-    color: #15bdde;
-}
