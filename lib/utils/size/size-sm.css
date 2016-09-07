@@ -4,9 +4,7 @@
 
 /** @define utilities */
 
-@custom-media --utils-size-sm (max-width: 600px);
-
-@media (--utils-size-sm) {
+@media (--c-bp-sm) {
 
     /* Proportional widths
      ======================================================================== */

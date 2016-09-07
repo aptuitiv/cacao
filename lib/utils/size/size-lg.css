@@ -4,9 +4,7 @@
 
 /** @define utilities */
 
-@custom-media --utils-size-lg (max-width: 1000px);
-
-@media (--utils-size-lg) {
+@media (--c-bp-lg) {
 
     /* Proportional widths
      ======================================================================== */

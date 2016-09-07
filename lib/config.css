@@ -1,0 +1,14 @@
+/* =========================================================================== *\
+    GLOBAL VARIABLE CONFIGURATIONS
+\* =========================================================================== */
+
+
+/* ------------------------------------ *\
+    #BREAKPOINTS
+\* ------------------------------------ */
+
+@custom-media --c-bp-xl (max-width: 1200px);
+@custom-media --c-bp-lg (max-width: 1050px);
+@custom-media --c-bp-md (max-width: 800px);
+@custom-media --c-bp-sm (max-width: 600px);
+@custom-media --c-bp-xs (max-width: 425px);

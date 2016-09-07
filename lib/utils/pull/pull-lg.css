@@ -4,9 +4,7 @@
 
 /** @define utilities */
 
-@custom-media --utils-pull-lg (max-width: 1000px);
-
-@media (--utils-pull-lg) {
+@media (--c-bp-lg) {
 
     /* postcss-bem-linter: ignore */
     [class*='u-lg-pull'] {

@@ -7,8 +7,6 @@
  * equals 10px. This allows rem units to be calculated more intuitively.
  */
 
-@custom-media --base-typography-bp (max-width: 600px);
-
 :root {
     --base-typography-color: #333;
     --base-typography-fontFamily: sans-serif;
@@ -64,7 +62,7 @@ html {
  * Scale down text on small screens
  */
 
-@media (--base-typography-bp) {
+@media (--c-bp-sm) {
     html {
         font-size: 56.25%;
     }
