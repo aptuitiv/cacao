@@ -119,6 +119,17 @@ a:hover {
 }
 
 /**
+ * Default styling for telephone links to not look like links
+ */
+a[href^=tel],
+a[href^=tel]:active,
+a[href^=tel]:focus,
+a[href^=tel]:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+/**
  * Lists
  */
 
