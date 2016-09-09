@@ -4,9 +4,7 @@
 
 /** @define utilities */
 
-@custom-media --utils-push-lg (max-width: 1000px);
-
-@media (--utils-push-lg) {
+@media (--c-bp-lg) {
 
     /* postcss-bem-linter: ignore */
     [class*='u-lg-push'] {

@@ -4,9 +4,7 @@
 
 /** @define utilities */
 
-@custom-media --utils-size-sm (max-width: 600px);
-
-@media (--utils-size-sm) {
+@media (--c-bp-sm) {
 
     /* Proportional widths
      ======================================================================== */
@@ -175,5 +173,15 @@
         width: 100% !important;
     }
 
+    /**
+     * Make an element use it's natural size.
+     * Useful for images.
+     */
+
+    .u-sm-sizeAuto {
+        box-sizing: border-box !important;
+        height: auto !important;
+        width: auto !important;
+    }
 }
 

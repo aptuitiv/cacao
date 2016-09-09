@@ -4,9 +4,7 @@
 
 /** @define utilities */
 
-@custom-media --utils-pull-sm (max-width: 600px);
-
-@media (--utils-pull-sm) {
+@media (--c-bp-sm) {
 
     /* postcss-bem-linter: ignore */
     [class*='u-sm-pull'] {

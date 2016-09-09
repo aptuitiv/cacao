@@ -4,9 +4,7 @@
 
 /** @define utilities */
 
-@custom-media --utils-push-md (max-width: 800px);
-
-@media (--utils-push-md) {
+@media (--c-bp-md) {
 
     /* postcss-bem-linter: ignore */
     [class*='u-md-push'] {

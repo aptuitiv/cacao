@@ -88,17 +88,6 @@ textarea {
 }
 
 /**
- * Default styling for telephone links to not look like links
- */
-a[href^=tel],
-a[href^=tel]:active,
-a[href^=tel]:focus,
-a[href^=tel]:hover {
-    color: inherit;
-    text-decoration: none;
-}
-
-/**
  * Work around a Firefox/IE bug where the transparent `button` background
  * results in a loss of the default `button` focus styles.
  */

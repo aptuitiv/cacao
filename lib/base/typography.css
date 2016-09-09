@@ -7,8 +7,6 @@
  * equals 10px. This allows rem units to be calculated more intuitively.
  */
 
-@custom-media --base-typography-bp (max-width: 600px);
-
 :root {
     --base-typography-color: #333;
     --base-typography-fontFamily: sans-serif;
@@ -64,7 +62,7 @@ html {
  * Scale down text on small screens
  */
 
-@media (--base-typography-bp) {
+@media (--c-bp-sm) {
     html {
         font-size: 56.25%;
     }
@@ -116,6 +114,17 @@ a {
 a:hover {
     color: var(--base-typography-link-colorHover);
     text-decoration: var(--base-typography-link-decorationHover);
+}
+
+/**
+ * Default styling for telephone links to not look like links
+ */
+a[href^=tel],
+a[href^=tel]:active,
+a[href^=tel]:focus,
+a[href^=tel]:hover {
+    color: inherit;
+    text-decoration: none;
 }
 
 /**
