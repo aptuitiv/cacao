@@ -173,5 +173,15 @@
         width: 100% !important;
     }
 
+    /**
+     * Make an element use it's natural size.
+     * Useful for images.
+     */
+
+    .u-md-sizeAuto {
+        box-sizing: border-box !important;
+        height: auto !important;
+        width: auto !important;
+    }
 }
 
