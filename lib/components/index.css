@@ -10,6 +10,7 @@
 @import './list';
 @import './mainnav';
 @import './media';
+@import './message';
 @import './selectinput';
 @import './textinput';
 @import './triangle';
