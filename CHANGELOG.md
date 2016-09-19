@@ -1,3 +1,8 @@
+## 1.4.0 (September 18, 2016)
+
+* Added Form component for errors, labels and required elements
+* Added Message component for success and error messages
+
 ## 1.3.0 (September 9, 2016)
 
 * Added telephone link styles
