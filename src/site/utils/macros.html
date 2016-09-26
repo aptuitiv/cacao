@@ -1,0 +1,12 @@
+{% macro buildMenu(menu, sub) %}
+  {% if menu.children %}
+  <ul>
+    {% for item in menu.children %}
+      <li>
+        <a href="{{ site.server }}{{ item.href }}">{{ item.text }}</a>
+        {{ buildMenu(item, 1) }}
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endmacro %}
