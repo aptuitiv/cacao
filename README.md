@@ -139,7 +139,7 @@ You could then use that variable in your CSS like so:
 }
 ````
 
-### base
+### Base
 
 The base directory contains the following stylesheets:
 
@@ -231,3 +231,208 @@ Or, if necessary you could edit or add styles directly further down in the style
 
 Keep in mind that this is supposed to be general styles for HTML elements. You would not use class selectors in any of the `base` stylesheets. That would take place either in the utility classes or within components.
 
+### Components
+
+The `components` directory is where you will do most of your work with a site. 
+
+This directory has a number of included components for things like buttons, dropdown and main navigation bars, text fields, images, and grid. 
+
+Many of the components have README files within their directory that explains what they are and how to use them.
+
+#### Adding a new component
+
+In this example we're going to add a "header" component to hold the styles for the header section of the site.
+
+##### 1) To add a new component first create a directory within the `components` directory that matches the name of the component. 
+
+Keep in mind that components follow the [naming convention](http://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) of [SUIT CSS](https://suitcss.github.io).
+
+The component folder should always be lowercase.
+
+In our example the folder would be `header`.
+
+##### 2) Add a stylesheet within your component folder that is the same name as your component.
+
+In our example the stylesheet would be called `header.css`. 
+
+##### 3) Add a stylesheet within your component folder called index.css and import the other stylesheet.
+
+In our example the index.css file would include the following:
+
+````
+@import './header';
+````
+
+You can include ".css" after "header" if you want but it's not necessary.
+
+##### 4) Add an import into `components\index.css` to import the new component.
+
+In our example you would add the following within `components\index.css`:
+
+````
+@import './header';
+````
+
+Since the 'header' directory contains an `index.css` file then that import statement will import the `index.css` file. It's the same as writing
+ 
+````
+@import './header/index.css';
+````
+
+##### 5) Add an initial comment to your component stylesheet
+
+It's always good to add a comment at the top of your component stylesheet to describe what it is.
+
+The very first comment in the file should follow this structure:
+
+````
+/* =========================================================================== *\
+    Description of component here
+\* =========================================================================== */
+````
+
+##### 6) Add the `Define` statement to your component stylesheet 
+
+To enforce the SuitCSS [naming convention](http://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) we add a special comment near the top of the file to set what the
+base class name should be within this file.
+
+In our `header` example we would have the following code.
+
+````
+/** @define Header */
+````
+
+This will cause the CSS parser to show you a warning in the terminal when the CSS is processed if you are using an invalid selector.
+
+Cacao uses the [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) plugin to enforce naming rules. 
+
+The combination of steps 5 and 6 would result in the following code at the top of the header.css file:
+
+````
+/* =========================================================================== *\
+    Page header styles. The section of the page above the main navigation.
+\* =========================================================================== */
+
+
+/** @define Header */
+
+````
+
+You would then add your CSS below all that.
+
+#### Using an invalid selector
+
+If for some reason you need to use a selector in your stylesheet that would not be valid you can add the following comment on the line immediately before your selector:
+
+````
+/* postcss-bem-linter: ignore */
+````
+
+That only applies to one selector so you would need to add that before each selector that is not valid.
+
+````
+/* postcss-bem-linter: ignore */
+.invalid-selector {
+    color: red;
+}
+
+/* postcss-bem-linter: ignore */
+.another-invalid-selector {
+    color: blue;
+}
+````
+
+### Utils
+
+The `utils` directory includes all of the utility classes. 
+
+You would use these to adjust font styles, set grid column sizes, adjust margins apply flex styles and change element layouts.
+
+These classes are useful because you can use a combination of them to set a HTML element's style instead of creating a bunch of small components. 
+
+**If you find yourself adding a lot of utlity classes to an element (other than size classes on Grid columns) then you may want to create a new component instead.**
+
+Typically the styles within this directory are not changed much, if at all.
+
+#### align
+
+Adjust the vertical alignment of elements.
+
+#### display
+
+Set the `display` style for elements. Includes styles that can be used at different breakpoints.
+
+#### flex
+
+Apply common flexbox styles to an element.
+
+#### image
+
+Set an image to be full width.
+
+#### layout
+
+Floats and clearfix.
+
+#### link
+
+Adjust how links are styled. Useful for adjusting the `text-decoration` style for links.
+
+#### margin
+
+Adjust the top and/or bottom margins. Includes styles that can be used at different breakpoints.
+
+#### padding
+
+Adjust the top and/or bottom padding. 
+
+Adjust the horizontal padding with gutter utility classes.
+
+#### position
+
+Adjust the `position` style for elements.
+
+#### pull
+
+Pull an element to the left. Includes styles that can be used at different breakpoints.
+
+This is commonly used with the Grid component.
+
+#### push
+
+Push an element to the right. Includes styles that can be used at different breakpoints.
+
+This is commonly used with the Grid component.
+
+#### radius
+
+Adjust the `border-radius` style for elements.
+
+#### size
+
+Adjust the size of an element. Includes styles that can be used at different breakpoints.
+
+This is commonly used with the Grid component, although, you can use it with any `block` or `inline-block` element.
+
+To set an element to be full width use:
+
+````
+.u-sizeFull
+````
+
+or it's breakpoint versions:
+
+````
+.u-lg-sizeFull
+.u-md-sizeFull
+.u-sm-sizeFull
+.u-xs-sizeFull
+````
+
+#### typography
+
+* Set the `text-transform` style for elements
+* Set the `text-align` style for elements (includes styles that can be used at different breakpoints)
+* Set the `font-weight` style for elements
+* Set the font size and line height styles with different pre-defined utility classes
+* Other miscellaneous text styles like kerning, word wrapping and truncating
