@@ -1,7 +1,8 @@
 # Cacao
 
-A set of composable CSS modules that provide a solid foundation for starting
-a new project.
+A set of CSS modules that provide a solid foundation for starting a new project.
+Includes project scaffolding and build system for CSS, Javascript and image minification  using 
+[Gulp](http://gulpjs.com/), [PostCSS](https://github.com/postcss/postcss) and [Nunjucks](https://mozilla.github.io/nunjucks/).
 
 [How to pronounce Cacao](https://www.youtube.com/watch?v=kVSIkXL_Nmo).
 
@@ -10,10 +11,27 @@ including [naming convention](http://github.com/suitcss/suit/blob/master/doc/nam
 [style format](http://github.com/suitcss/suit/blob/master/doc/STYLE.md#css),
 and [architectural principles](http://github.com/suitcss/suit/blob/master/doc/design-principles.md).
 
-Basic visual tests are in [`test/`](http://aptuitiv.github.io/cacao/test/).
 
+## Getting started
+
+Before you can build the project there are some dependencies that need to be
+installed. First install the system-wide dependencies listed below:
+
+- [Node.js & npm](https://nodejs.org/) (`^0.12.0`)
+- [Gulp](http://gulpjs.com/) (`^3.9.0`)
+
+Once these are installed, clone this repository or download an archive.
+Navigate to the project directory and install local project dependencies
+with `npm install`. 
+
+(Depending on how node was installed you may need to use `sudo npm install`)
+
+Next simply run `gulp` to run through the initial build process and start the local server.
+
+If you only want to build the files and you're not going to be using nunjucks and don't need the local server then you can simply run `gulp build`.
 
 ## Usage
+
 
 There are several ways to use these modules in your project. 
 
