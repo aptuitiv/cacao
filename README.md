@@ -239,6 +239,8 @@ This directory has a number of included components for things like buttons, drop
 
 Many of the components have README files within their directory that explains what they are and how to use them.
 
+[View tests for components](http://aptuitiv.github.io/cacao/test/).
+
 #### Adding a new component
 
 In this example we're going to add a "header" component to hold the styles for the header section of the site.
