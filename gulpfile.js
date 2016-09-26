@@ -4,13 +4,17 @@ var gulpBatch = require('gulp-batch');
 var gulpCached = require('gulp-cached');
 var gulpConcat = require('gulp-concat');
 var gulpConnect = require('gulp-connect');
+var gulpData = require('gulp-data');
+var gulpHtmlmin = require('gulp-htmlmin');
 var gulpImagemin = require('gulp-imagemin');
+var gulpNunjucks = require('gulp-nunjucks-render');
 var gulpPlumber = require('gulp-plumber');
 var gulpPostcss = require('gulp-postcss');
 var gulpRemember = require('gulp-remember');
 var gulpSequence = require('gulp-sequence');
 var gulpUglify = require('gulp-uglify');
 var mergeStream = require('merge-stream');
+var requireGlob = require('require-glob');
 
 /**
  * Utilities
@@ -45,6 +49,24 @@ gulp.task('images', function() {
     .pipe(gulpPlumber(onError))
     .pipe(gulpImagemin({ optimizationLevel: 5 }))
     .pipe(gulp.dest(config.images.dest));
+});
+
+/**
+ * Compile templates to minified HTML
+ */
+
+gulp.task('nunjucks', function() {
+  gulpNunjucks.nunjucks.configure(config.nunjucks.src, { watch: false });
+  return gulp.src(config.nunjucks.pages)
+    .pipe(gulpPlumber(onError))
+    .pipe(gulpData(function() {
+      return {
+        data: requireGlob.sync(config.nunjucks.data, { bustCache: true })
+      };
+    }))
+    .pipe(gulpNunjucks({ site: config.root }))
+    .pipe(gulpHtmlmin({ collapseWhitespace: true, conservativeCollapse: true }))
+    .pipe(gulp.dest(config.nunjucks.dest));
 });
 
 /**
@@ -152,6 +174,10 @@ gulp.task('watch', function() {
   gulp.watch(config.images.src, watchOpts, gulpBatch(function(e, cb) {
     gulp.start('images', cb);
   }));
+  // nunjucks
+  gulp.watch(config.nunjucks.watch, watchOpts, gulpBatch(function(e, cb) {
+    gulp.start('nunjucks', cb);
+  }));
   // scripts
   var scriptFiles = config.scripts.reduce(flatten, []);
   gulp.watch(scriptFiles, watchOpts, gulpBatch(function(e, cb) {
@@ -176,7 +202,7 @@ gulp.task('connect', function() {
  */
 
 var buildTasks = [
-  'copy', 'images', 'scripts', 'styles', 'stylelint'
+  'copy', 'images', 'nunjucks', 'scripts', 'styles', 'stylelint'
 ];
 
 gulp.task('build', function(cb) {
@@ -186,3 +212,4 @@ gulp.task('build', function(cb) {
 gulp.task('default', function(cb) {
   gulpSequence(buildTasks, 'watch', 'connect', cb);
 });
+
