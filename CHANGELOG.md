@@ -1,3 +1,8 @@
+## 2.0.0 (September 26, 2016)
+
+* Combined Cacao and Cacao Cracker together to make it easier to get a project started
+* Added some additional documentation
+
 ## 1.4.0 (September 18, 2016)
 
 * Added Form component for errors, labels and required elements
