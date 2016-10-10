@@ -9,7 +9,10 @@
  * Reset all link styles
  */
 
-.u-linkClean {
+.u-linkClean,
+.u-linkClean:hover,
+.u-linkClean:focus,
+.u-linkClean:active {
     color: inherit !important;
     text-decoration: none !important;
 }
