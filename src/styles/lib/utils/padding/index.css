@@ -6,4 +6,6 @@
 @import './gutters';
 @import './spaced';
 @import './pad-bottom';
+@import './pad-left';
+@import './pad-right';
 @import './pad-top';
