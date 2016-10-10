@@ -1,3 +1,8 @@
+## 2.1.0 (October 10, 2016)
+
+* Added left/right padding utilities.
+* Change the u-linkClean class to keep the link "clean" on hover.
+
 ## 2.0.0 (September 26, 2016)
 
 * Combined Cacao and Cacao Cracker together to make it easier to get a project started
