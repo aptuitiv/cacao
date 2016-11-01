@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Bottom padding utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+:root {
+    --utils-padding-bottom-lg: 10px;
+}
+
+@media (--c-bp-lg) {
+    .u-lg-padBottom0 {
+        padding-bottom: 0 !important;
+    }
+
+    .u-lg-padBottom1 {
+        padding-bottom: var(--utils-padding-bottom-lg) !important;
+    }
+
+    .u-lg-padBottom2 {
+        padding-bottom: calc(var(--utils-padding-bottom-lg) * 2) !important;
+    }
+
+    .u-lg-padBottom3 {
+        padding-bottom: calc(var(--utils-padding-bottom-lg) * 3) !important;
+    }
+
+    .u-lg-padBottom4 {
+        padding-bottom: calc(var(--utils-padding-bottom-lg) * 4) !important;
+    }
+
+    .u-lg-padBottom5 {
+        padding-bottom: calc(var(--utils-padding-bottom-lg) * 5) !important;
+    }
+}
