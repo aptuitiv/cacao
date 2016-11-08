@@ -7,6 +7,10 @@
 
 @media (--c-bp-lg) {
 
+    .u-lg-block {
+        display: block !important;
+    }
+
     .u-lg-show {
         display: block !important;
     }
@@ -21,6 +25,10 @@
 
 @media (--c-bp-md) {
 
+    .u-md-block {
+        display: block !important;
+    }
+
     .u-md-show {
         display: block !important;
     }
@@ -34,6 +42,10 @@
 /* small */
 
 @media (--c-bp-sm) {
+
+    .u-sm-block {
+        display: block !important;
+    }
 
     .u-sm-show {
         display: block !important;
