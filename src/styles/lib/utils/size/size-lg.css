@@ -167,6 +167,7 @@
      * Make an element the width of its parent.
      */
 
+    .u-lg-size12of12,
     .u-lg-sizeFull {
         box-sizing: border-box !important;
         display: block !important;

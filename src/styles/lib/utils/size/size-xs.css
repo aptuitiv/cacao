@@ -167,6 +167,7 @@
      * Make an element the width of its parent.
      */
 
+    .u-xs-size12of12,
     .u-xs-sizeFull {
         box-sizing: border-box !important;
         display: block !important;
