@@ -2,7 +2,6 @@
    Typography utilities for small breakpoint
    ========================================================================== */
 
-
 @media (--c-bp-sm) {
     .u-sm-textLeft {
         text-align: left !important;

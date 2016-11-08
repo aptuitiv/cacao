@@ -2,7 +2,6 @@
    Typography utilities for medium breakpoint
    ========================================================================== */
 
-
 @media (--c-bp-md) {
     .u-md-textLeft {
         text-align: left !important;

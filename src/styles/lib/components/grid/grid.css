@@ -96,6 +96,7 @@
 .Grid--withGutter {
     margin-left: calc(var(--Grid-cell-gutter) * -1);
 }
+
 .Grid--withGutter > .Grid-cell {
     padding-left: var(--Grid-cell-gutter);
 }
@@ -103,6 +104,7 @@
 .Grid--withGutterSm {
     margin-left: calc(var(--Grid-cell-gutter) / -2);
 }
+
 .Grid--withGutterSm > .Grid-cell {
     padding-left: calc(var(--Grid-cell-gutter) / 2);
 }
@@ -110,6 +112,7 @@
 .Grid--withGutterLg {
     margin-left: calc(var(--Grid-cell-gutter) * -2);
 }
+
 .Grid--withGutterLg > .Grid-cell {
     padding-left: calc(var(--Grid-cell-gutter) * 2);
 }
@@ -117,6 +120,7 @@
 .Grid--withGutterXlg {
     margin-left: calc(var(--Grid-cell-gutter) * -3);
 }
+
 .Grid--withGutterXlg > .Grid-cell {
     padding-left: calc(var(--Grid-cell-gutter) * 3);
 }

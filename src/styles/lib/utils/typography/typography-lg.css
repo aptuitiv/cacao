@@ -2,7 +2,6 @@
    Typography utilities for large breakpoint
    ========================================================================== */
 
-
 @media (--c-bp-lg) {
     .u-lg-textLeft {
         text-align: left !important;
