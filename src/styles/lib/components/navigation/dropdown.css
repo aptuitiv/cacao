@@ -43,6 +43,7 @@
     content: ' ';
     display: table;
 }
+
 .Dropdown-menu::after {
     clear: both;
 }

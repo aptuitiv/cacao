@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Top padding utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+:root {
+    --utils-padding-top-md: 10px;
+}
+
+@media (--c-bp-md) {
+    .u-md-padTop0 {
+        padding-top: 0 !important;
+    }
+
+    .u-md-padTop1 {
+        padding-top: var(--utils-padding-top-md) !important;
+    }
+
+    .u-md-padTop2 {
+        padding-top: calc(var(--utils-padding-top-md) * 2) !important;
+    }
+
+    .u-md-padTop3 {
+        padding-top: calc(var(--utils-padding-top-md) * 3) !important;
+    }
+
+    .u-md-padTop4 {
+        padding-top: calc(var(--utils-padding-top-md) * 4) !important;
+    }
+
+    .u-md-padTop5 {
+        padding-top: calc(var(--utils-padding-top-md) * 5) !important;
+    }
+}

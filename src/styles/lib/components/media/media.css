@@ -33,6 +33,7 @@
 .Media--withGutter {
     margin-left: calc(var(--Media-cell-gutter) * -1);
 }
+
 .Media--withGutter > .Media-content,
 .Media--withGutter > .Media-subject {
     padding-left: var(--Media-cell-gutter);
@@ -41,6 +42,7 @@
 .Media--withGutterSm {
     margin-left: calc(var(--Media-cell-gutter) / -2);
 }
+
 .Media--withGutterSm > .Media-content,
 .Media--withGutterSm > .Media-subject {
     padding-left: calc(var(--Media-cell-gutter) / 2);

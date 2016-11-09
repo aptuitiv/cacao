@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Gutter utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+/**
+ * Add side gutters of various sizes. Difference with the padding gutters is that this
+ * uses margins instead of padding
+ */
+
+:root {
+    --utils-margin-gutter: 10px;
+}
+
+.u-guttersMarg0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.u-guttersMarg1 {
+    margin-left: var(--utils-margin-gutter) !important;
+    margin-right: var(--utils-margin-gutter) !important;
+}
+
+.u-guttersMarg2 {
+    margin-left: calc(var(--utils-margin-gutter) * 2) !important;
+    margin-right: calc(var(--utils-margin-gutter) * 2) !important;
+}
+
+.u-guttersMarg3 {
+    margin-left: calc(var(--utils-margin-gutter) * 3) !important;
+    margin-right: calc(var(--utils-margin-gutter) * 3) !important;
+}
+
+.u-guttersMarg4 {
+    margin-left: calc(var(--utils-margin-gutter) * 4) !important;
+    margin-right: calc(var(--utils-margin-gutter) * 4) !important;
+}
+
+@media (--c-bp-lg) {
+    .u-lg-guttersMarg0 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .u-lg-guttersMarg1 {
+        margin-left: var(--utils-margin-gutter) !important;
+        margin-right: var(--utils-margin-gutter) !important;
+    }
+
+    .u-lg-guttersMarg2 {
+        margin-left: calc(var(--utils-margin-gutter) * 2) !important;
+        margin-right: calc(var(--utils-margin-gutter) * 2) !important;
+    }
+
+    .u-lg-guttersMarg3 {
+        margin-left: calc(var(--utils-margin-gutter) * 3) !important;
+        margin-right: calc(var(--utils-margin-gutter) * 3) !important;
+    }
+
+    .u-lg-guttersMarg4 {
+        margin-left: calc(var(--utils-margin-gutter) * 4) !important;
+        margin-right: calc(var(--utils-margin-gutter) * 4) !important;
+    }
+}
+
+@media (--c-bp-md) {
+    .u-md-guttersMarg0 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .u-md-guttersMarg1 {
+        margin-left: var(--utils-margin-gutter) !important;
+        margin-right: var(--utils-margin-gutter) !important;
+    }
+
+    .u-md-guttersMarg2 {
+        margin-left: calc(var(--utils-margin-gutter) * 2) !important;
+        margin-right: calc(var(--utils-margin-gutter) * 2) !important;
+    }
+
+    .u-md-guttersMarg3 {
+        margin-left: calc(var(--utils-margin-gutter) * 3) !important;
+        margin-right: calc(var(--utils-margin-gutter) * 3) !important;
+    }
+
+    .u-md-guttersMarg4 {
+        margin-left: calc(var(--utils-margin-gutter) * 4) !important;
+        margin-right: calc(var(--utils-margin-gutter) * 4) !important;
+    }
+}
+
+@media (--c-bp-sm) {
+    .u-sm-guttersMarg0 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .u-sm-guttersMarg1 {
+        margin-left: var(--utils-margin-gutter) !important;
+        margin-right: var(--utils-margin-gutter) !important;
+    }
+
+    .u-sm-guttersMarg2 {
+        margin-left: calc(var(--utils-margin-gutter) * 2) !important;
+        margin-right: calc(var(--utils-margin-gutter) * 2) !important;
+    }
+
+    .u-sm-guttersMarg3 {
+        margin-left: calc(var(--utils-margin-gutter) * 3) !important;
+        margin-right: calc(var(--utils-margin-gutter) * 3) !important;
+    }
+
+    .u-sm-guttersMarg4 {
+        margin-left: calc(var(--utils-margin-gutter) * 4) !important;
+        margin-right: calc(var(--utils-margin-gutter) * 4) !important;
+    }
+}

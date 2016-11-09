@@ -2,10 +2,27 @@
  * General (multiple edge) padding utilities appear before more specific ones so
  * that the edge specific utilities will take precedence.
  */
-
 @import './gutters';
-@import './spaced';
+@import './gutters-lg';
+@import './gutters-md';
+@import './gutters-sm';
 @import './pad-bottom';
+@import './pad-bottom-lg';
+@import './pad-bottom-md';
+@import './pad-bottom-sm';
 @import './pad-left';
+@import './pad-left-lg';
+@import './pad-left-md';
+@import './pad-left-sm';
 @import './pad-right';
+@import './pad-right-lg';
+@import './pad-right-md';
+@import './pad-right-sm';
 @import './pad-top';
+@import './pad-top-lg';
+@import './pad-top-md';
+@import './pad-top-sm';
+@import './spaced';
+@import './spaced-lg';
+@import './spaced-md';
+@import './spaced-sm';

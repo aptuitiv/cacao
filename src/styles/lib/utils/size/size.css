@@ -103,6 +103,7 @@
 .u-size7of10 {
     width: 70% !important;
 }
+
 .u-size3of4,
 .u-size6of8,
 .u-size9of12 {
@@ -162,6 +163,7 @@
  * Make an element the width of its parent.
  */
 
+.u-size12of12,
 .u-sizeFull {
     box-sizing: border-box !important;
     display: block !important;

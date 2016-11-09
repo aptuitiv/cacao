@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Typography utilities for large breakpoint
+   ========================================================================== */
+
+@media (--c-bp-lg) {
+    .u-lg-textLeft {
+        text-align: left !important;
+    }
+
+    .u-lg-textRight {
+        text-align: right !important;
+    }
+
+    .u-lg-textCenter {
+        text-align: center !important;
+    }
+}

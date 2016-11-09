@@ -1,3 +1,13 @@
+## 2.2.0 (November 9, 2016)
+
+* Added responsive styles for the typography utility classes.
+* Consolidated the dropdown and mainnav navigation components into one "navigation" component. 
+* Added margin gutter utility classes.
+* Added responsive styles for all the padding utility classes.
+* Formatted code to have consistent line indents.
+* Added "u-block" responsive styles.
+* Added size12of12 as an alternate full width size class.
+
 ## 2.1.0 (October 10, 2016)
 
 * Added left/right padding utilities.

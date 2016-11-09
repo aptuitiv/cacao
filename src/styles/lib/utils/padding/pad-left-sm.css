@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Left padding utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+:root {
+    --utils-padding-left-sm: 10px;
+}
+
+@media (--c-bp-sm) {
+    .u-sm-padLeft0 {
+        padding-left: 0 !important;
+    }
+
+    .u-sm-padLeft1 {
+        padding-left: var(--utils-padding-left-sm) !important;
+    }
+
+    .u-sm-padLeft2 {
+        padding-left: calc(var(--utils-padding-left-sm) * 2) !important;
+    }
+
+    .u-sm-padLeft3 {
+        padding-left: calc(var(--utils-padding-left-sm) * 3) !important;
+    }
+
+    .u-sm-padLeft4 {
+        padding-left: calc(var(--utils-padding-left-sm) * 4) !important;
+    }
+
+    .u-sm-padLeft5 {
+        padding-left: calc(var(--utils-padding-left-sm) * 5) !important;
+    }
+}

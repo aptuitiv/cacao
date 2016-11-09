@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Typography utilities for small breakpoint
+   ========================================================================== */
+
+@media (--c-bp-sm) {
+    .u-sm-textLeft {
+        text-align: left !important;
+    }
+
+    .u-sm-textRight {
+        text-align: right !important;
+    }
+
+    .u-sm-textCenter {
+        text-align: center !important;
+    }
+}

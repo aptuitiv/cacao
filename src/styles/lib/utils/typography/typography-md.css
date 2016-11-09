@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Typography utilities for medium breakpoint
+   ========================================================================== */
+
+@media (--c-bp-md) {
+    .u-md-textLeft {
+        text-align: left !important;
+    }
+
+    .u-md-textRight {
+        text-align: right !important;
+    }
+
+    .u-md-textCenter {
+        text-align: center !important;
+    }
+}

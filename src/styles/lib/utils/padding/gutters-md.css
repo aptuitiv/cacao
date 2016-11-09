@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Gutter utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+/**
+ * Add side gutters of various sizes
+ */
+
+:root {
+    --utils-padding-gutter-md: 10px;
+}
+
+@media (--c-bp-md) {
+    .u-md-gutters0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .u-md-gutters1 {
+        padding-left: var(--utils-padding-gutter-md) !important;
+        padding-right: var(--utils-padding-gutter-md) !important;
+    }
+
+    .u-md-gutters2 {
+        padding-left: calc(var(--utils-padding-gutter-md) * 2) !important;
+        padding-right: calc(var(--utils-padding-gutter-md) * 2) !important;
+    }
+
+    .u-md-gutters3 {
+        padding-left: calc(var(--utils-padding-gutter-md) * 3) !important;
+        padding-right: calc(var(--utils-padding-gutter-md) * 3) !important;
+    }
+
+    .u-md-gutters4 {
+        padding-left: calc(var(--utils-padding-gutter-md) * 4) !important;
+        padding-right: calc(var(--utils-padding-gutter-md) * 4) !important;
+    }
+}

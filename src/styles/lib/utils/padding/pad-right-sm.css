@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Right padding utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+:root {
+    --utils-padding-right-sm: 10px;
+}
+
+@media (--c-bp-sm) {
+    .u-sm-padRight0 {
+        padding-right: 0 !important;
+    }
+
+    .u-sm-padRight1 {
+        padding-right: var(--utils-padding-right-sm) !important;
+    }
+
+    .u-sm-padRight2 {
+        padding-right: calc(var(--utils-padding-right-sm) * 2) !important;
+    }
+
+    .u-sm-padRight3 {
+        padding-right: calc(var(--utils-padding-right-sm) * 3) !important;
+    }
+
+    .u-sm-padRight4 {
+        padding-right: calc(var(--utils-padding-right-sm) * 4) !important;
+    }
+
+    .u-sm-padRight5 {
+        padding-right: calc(var(--utils-padding-right-sm) * 5) !important;
+    }
+}
