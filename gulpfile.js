@@ -14,6 +14,7 @@ var gulpPostcss = require('gulp-postcss');
 var gulpRemember = require('gulp-remember');
 var gulpSequence = require('gulp-sequence');
 var gulpUglify = require('gulp-uglify');
+var gulpUsing = require('gulp-using');
 var mergeStream = require('merge-stream');
 var requireGlob = require('require-glob');
 
@@ -47,6 +48,7 @@ gulp.task('copy', function () {
 gulp.task('images', function () {
     return gulp.src(config.images.src)
         .pipe(gulpCached('images'))
+        .pipe(gulpUsing({prefix: 'Image min: '}))
         .pipe(gulpPlumber(onError))
         .pipe(gulpImagemin({optimizationLevel: 5}))
         .pipe(gulp.dest(config.images.dest));
@@ -56,24 +58,10 @@ gulp.task('images', function () {
  * Compile templates to minified HTML
  */
 
-/*
-gulp.task('nunjucks', function () {
-    gulpNunjucks.nunjucks.configure(config.nunjucks.src, {watch: false});
-    return gulp.src(config.nunjucks.pages)
-        .pipe(gulpPlumber(onError))
-        .pipe(gulpData(function () {
-            return {
-                data: requireGlob.sync(config.nunjucks.data, {bustCache: true})
-            };
-        }))
-        .pipe(gulpNunjucks({path: config.nunjucks.templates}))
-        .pipe(gulpHtmlmin({collapseWhitespace: true, conservativeCollapse: true}))
-        .pipe(gulp.dest(config.nunjucks.dest));
-});
-*/
 gulp.task('nunjucks', function() {
     return gulp.src(config.nunjucks.pages)
         .pipe(gulpPlumber(onError))
+        .pipe(gulpUsing({prefix: 'Nunjucks: '}))
         .pipe(gulpData(function () {
             return {
                 data: requireGlob.sync(config.nunjucks.data, {bustCache: true})
@@ -89,6 +77,7 @@ gulp.task('nunjucks', function() {
         .pipe(gulpHtmlBeautify())
         .pipe(gulp.dest(config.nunjucks.dest))
 });
+
 /**
  * Concat and uglify scripts
  */
@@ -99,6 +88,7 @@ gulp.task('scripts', function () {
     var tasks = config.scripts.map(function (entry, index) {
         return gulp.src(entry.src)
             .pipe(gulpCached('scripts' + index))
+            .pipe(gulpUsing({prefix: 'Scripts: '}))
             .pipe(gulpPlumber(onError))
             .pipe(gulpUglify(uglifyOpts))
             .pipe(gulpRemember('scripts' + index))
@@ -154,6 +144,7 @@ var processors = [
 
 gulp.task('styles', function () {
     return gulp.src(config.styles.src)
+        .pipe(gulpUsing({prefix: 'CSS: '}))
         .pipe(gulpPlumber(onError))
         .pipe(gulpPostcss(processors))
         .pipe(gulp.dest(config.styles.dest));
@@ -169,6 +160,7 @@ var bemlinterOpts = {preset: 'suit'};
 
 gulp.task('stylelint', function () {
     return gulp.src(config.stylelint.src)
+        .pipe(gulpUsing({prefix: 'Stylelint: '}))
         .pipe(gulpPlumber(onError))
         .pipe(gulpPostcss([
             require('postcss-bem-linter')(bemlinterOpts),
