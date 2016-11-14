@@ -1,9 +1,9 @@
 {% macro buildMenu(menu, sub) %}
   {% if menu.children %}
-  <ul>
+  <ul class="{% if sub === 1 %}Dropdown-menu{% else %}MainNav{% endif %}">
     {% for item in menu.children %}
-      <li>
-        <a href="{{ site.server }}{{ item.href }}">{{ item.text }}</a>
+      <li class="{% if sub === 1 %}Dropdown-item{% else %}MainNav-item{% endif %}{% if item.children %} Dropdown{% endif %}">
+        <a href="{{ site.server }}{{ item.href }}" class="{% if sub === 1 %}Dropdown-link{% else %}MainNav-link{% endif %}">{{ item.text }}</a>
         {{ buildMenu(item, 1) }}
       </li>
     {% endfor %}
