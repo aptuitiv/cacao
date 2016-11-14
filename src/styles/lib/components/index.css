@@ -9,6 +9,7 @@
 @import './list';
 @import './media';
 @import './message';
+@import './navigation';
 @import './selectinput';
 @import './textinput';
 @import './triangle';
