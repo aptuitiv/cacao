@@ -11,3 +11,8 @@
 @custom-media --c-bp-md (max-width: 800px);
 @custom-media --c-bp-sm (max-width: 600px);
 @custom-media --c-bp-xs (max-width: 425px);
+
+/* Primary navigation breakpoints */
+
+@custom-media --c-bp-smallScreenNav (max-width: 1050px);
+@custom-media --c-bp-largeScreenNav (min-width: 1051px);
