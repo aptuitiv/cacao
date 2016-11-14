@@ -31,6 +31,7 @@ module.exports = {
         dest: destDir,
         src: [srcDir + '/site'],
         pages: [srcDir + '/site/pages/**/*.html'],
+        templates: [srcDir + '/site/templates'],
         data: [srcDir + '/site/data/**/*.json'],
         watch: [srcDir + '/site/**/*.{html,json}']
     },

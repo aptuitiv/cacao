@@ -1,0 +1,36 @@
+{% import "macros/macros.html" as macro %}
+<!DOCTYPE html>
+<!--[if lt IE 10]>
+<html class="lt-ie10 no-flexbox no-flexwrap"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cacao Cracker</title>
+    {% block head %}
+    {% block stylesheets %}
+    <link rel="stylesheet" href="{{ site.server }}css/layout/index.css">
+    {% endblock %}
+    {% block inlinestyles %}
+    {% endblock %}
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+        <h1><a href="https://github.com/aptuitiv/cacao">Cacao</a></h1>
+        <h2>Menu</h2>
+        {{ macro.buildMenu(data.menu) }}
+    {% endblock %}
+
+    {% block page %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+    {% block scripts %}
+        <script src="{{ site.serverRoot }}js/index.js"></script>
+    {% endblock %}
+</body>
+</html>

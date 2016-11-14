@@ -5,6 +5,7 @@ var gulpCached = require('gulp-cached');
 var gulpConcat = require('gulp-concat');
 var gulpConnect = require('gulp-connect');
 var gulpData = require('gulp-data');
+var gulpHtmlBeautify = require('gulp-html-beautify');
 var gulpHtmlmin = require('gulp-htmlmin');
 var gulpImagemin = require('gulp-imagemin');
 var gulpNunjucks = require('gulp-nunjucks-render');
@@ -55,6 +56,7 @@ gulp.task('images', function () {
  * Compile templates to minified HTML
  */
 
+/*
 gulp.task('nunjucks', function () {
     gulpNunjucks.nunjucks.configure(config.nunjucks.src, {watch: false});
     return gulp.src(config.nunjucks.pages)
@@ -64,11 +66,29 @@ gulp.task('nunjucks', function () {
                 data: requireGlob.sync(config.nunjucks.data, {bustCache: true})
             };
         }))
-        .pipe(gulpNunjucks({site: config.root}))
+        .pipe(gulpNunjucks({path: config.nunjucks.templates}))
         .pipe(gulpHtmlmin({collapseWhitespace: true, conservativeCollapse: true}))
         .pipe(gulp.dest(config.nunjucks.dest));
 });
-
+*/
+gulp.task('nunjucks', function() {
+    return gulp.src(config.nunjucks.pages)
+        .pipe(gulpPlumber(onError))
+        .pipe(gulpData(function () {
+            return {
+                data: requireGlob.sync(config.nunjucks.data, {bustCache: true})
+            };
+        }))
+        .pipe(gulpNunjucks({
+            path: config.nunjucks.templates
+        }))
+        .pipe(gulpHtmlmin({
+            collapseWhitespace: true,
+            conservativeCollapse: true
+        }))
+        .pipe(gulpHtmlBeautify())
+        .pipe(gulp.dest(config.nunjucks.dest))
+});
 /**
  * Concat and uglify scripts
  */
