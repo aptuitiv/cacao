@@ -58,6 +58,18 @@
     position: relative;
 }
 
+/** Item that should only be shown in the small screen navigation **/
+
+.Dropdown-item--smallScreen {
+    display: none;
+}
+
+@media (--c-bp-smallScreenNav) {
+    .Dropdown-item--smallScreen {
+        display: block;
+    }
+}
+
 /* Menu links
    ========================================================================== */
 
