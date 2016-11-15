@@ -1,5 +1,5 @@
 @import './bar';
 @import './dropdown';
 @import './mainnav';
-@import './responsive-overlay';
+@import './responsive-pushdown';
 @import './small-screen-button';
