@@ -142,7 +142,7 @@ var processors = [
     })
 ];
 
-gulp.task('styles', function () {
+gulp.task('styles', ['stylelint'], function () {
     return gulp.src(config.styles.src)
         .pipe(gulpUsing({prefix: 'CSS: '}))
         .pipe(gulpPlumber(onError))
@@ -200,7 +200,7 @@ gulp.task('watch', function () {
     }));
     // styles
     gulp.watch(config.styles.watch, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start(['stylelint', 'styles'], cb);
+        gulp.start(['styles'], cb);
     }));
 });
 
