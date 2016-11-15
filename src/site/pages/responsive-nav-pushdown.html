@@ -1,0 +1,40 @@
+{% extends 'default.html' %}
+
+{% block page %}
+
+
+<h1>Responsive Navigation Pushdown</h1>
+
+<p>This style of responsive navigation will push down the page when the "Menu" button is pushed.</p>
+
+
+<h2>Random Text</h2>
+<p>Lorem ipsum dolor sit amet, ius case elit mediocritatem ut, sit bonorum noluisse ex. Libris audiam aperiri vis no. Quot mutat ad sea. Eligendi convenire abhorreant eu quo. Eam quas apeirian erroribus ne. Sed elaboraret voluptatibus et, qualisque interpretaris vim ne. Aeque labitur voluptaria ius no, quod aliquid ut sea.</p>
+<p>Lorem ipsum dolor sit amet, ius case elit mediocritatem ut, sit bonorum noluisse ex. Libris audiam aperiri vis no. Quot mutat ad sea. Eligendi convenire abhorreant eu quo. Eam quas apeirian erroribus ne. Sed elaboraret voluptatibus et, qualisque interpretaris vim ne. Aeque labitur voluptaria ius no, quod aliquid ut sea.</p>
+
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+    (function ($) {
+        /**
+         * Small screen navigation
+         */
+        $('.js-ssNavBtn').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('is-active');
+            $('.js-mainNav').toggle();
+        });
+
+        $('.js-dropdown').on('click', function(e) {
+            if ($(window).width() <= 1050) {
+                e.preventDefault();
+                $(this).toggleClass('is-active').parent().toggleClass('is-active');
+            }
+        });
+    }(jQuery));
+</script>
+
+{% endblock %}

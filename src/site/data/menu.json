@@ -1,5 +1,6 @@
 {
   "children": [
+    { "text": "Home", "href": "index.html" },
     {
       "text": "Item 1",
       "href": "#",
@@ -31,6 +32,13 @@
       "children": [
         { "text": "Sub item 1", "href": "#" },
         { "text": "Sub item 2", "href": "#" }
+      ]
+    },
+    {
+      "text": "Responsive Navigation",
+      "href": "#",
+      "children": [
+        {"text": "Pushdown", "href": "responsive-nav-pushdown.html"}
       ]
     }
   ]

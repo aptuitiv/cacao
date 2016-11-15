@@ -37,6 +37,18 @@
     margin-left: 1em;
 }
 
+/** Item that should only be shown in the small screen navigation **/
+
+.MainNav-item--smallScreen {
+    display: none;
+}
+
+@media (--c-bp-smallScreenNav) {
+    .MainNav-item--smallScreen {
+        display: block;
+    }
+}
+
 /**
  * Links
  */
@@ -46,13 +58,16 @@
     color: var(--MainNav-link-color);
     display: block;
     padding: .5em 1.5rem;
+    position: relative;
     text-decoration: none;
 }
 
-.MainNav-item.is-current > .MainNav-link,
-.MainNav-item.is-currentParent > .MainNav-link,
-.MainNav-item:hover > .MainNav-link {
-    background: var(--MainNav-link-backgroundHover);
-    color: var(--MainNav-link-colorHover);
-    text-decoration: none;
+@media (--c-bp-largeScreenNav) {
+    .MainNav-item.is-current > .MainNav-link,
+    .MainNav-item.is-currentParent > .MainNav-link,
+    .MainNav-item:hover > .MainNav-link {
+        background: var(--MainNav-link-backgroundHover);
+        color: var(--MainNav-link-colorHover);
+        text-decoration: none;
+    }
 }

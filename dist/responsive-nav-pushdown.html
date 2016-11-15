@@ -51,20 +51,34 @@
             </ul>
         </div>
         <div class="u-padTop3">
-            <h1>Index</h1>
-            <p>Project scaffolding and build system for static sites using <a href="http://gulpjs.com/">Gulp</a>, <a href="https://github.com/postcss/postcss">PostCSS</a> and <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>.</p>
-            <h2>Resources & further reading</h2>
-            <ul>
-                <li><a href="http://suitcss.github.io/">SUIT CSS</a></li>
-                <li><a href="https://en.bem.info/">BEM</a></li>
-                <li><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/#javascript-namespaces-js-">UI Namespaces</a></li>
-                <li><a href="https://speakerdeck.com/csswizardry/css-for-software-engineers-for-css-developers">CSS For Software Engineers</a></li>
-                <li><a href="http://cssguidelin.es/#architectural-principles">CSS Architectural Principles</a></li>
-                <li><a href="http://primercss.io/guidelines/">PrimerCSS Guidelines</a></li>
-                <li><a href="http://v4-alpha.getbootstrap.com/getting-started/best-practices/">Bootstrap Best Practices</a></li>
-            </ul>
+            <h1>Responsive Navigation Pushdown</h1>
+            <p>This style of responsive navigation will push down the page when the "Menu" button is pushed.</p>
+            <h2>Random Text</h2>
+            <p>Lorem ipsum dolor sit amet, ius case elit mediocritatem ut, sit bonorum noluisse ex. Libris audiam aperiri vis no. Quot mutat ad sea. Eligendi convenire abhorreant eu quo. Eam quas apeirian erroribus ne. Sed elaboraret voluptatibus et, qualisque
+                interpretaris vim ne. Aeque labitur voluptaria ius no, quod aliquid ut sea.</p>
+            <p>Lorem ipsum dolor sit amet, ius case elit mediocritatem ut, sit bonorum noluisse ex. Libris audiam aperiri vis no. Quot mutat ad sea. Eligendi convenire abhorreant eu quo. Eam quas apeirian erroribus ne. Sed elaboraret voluptatibus et, qualisque
+                interpretaris vim ne. Aeque labitur voluptaria ius no, quod aliquid ut sea.</p>
         </div>
         <script src="layout/js/index.js"></script>
+        <script>
+            (function($) {
+                /**
+                 * Small screen navigation
+                 */
+                $('.js-ssNavBtn').on('click', function(e) {
+                    e.preventDefault();
+                    $(this).toggleClass('is-active');
+                    $('.js-mainNav').toggle();
+                });
+
+                $('.js-dropdown').on('click', function(e) {
+                    if ($(window).width() <= 1050) {
+                        e.preventDefault();
+                        $(this).toggleClass('is-active').parent().toggleClass('is-active');
+                    }
+                });
+            }(jQuery));
+        </script>
     </div>
 </body>
 
