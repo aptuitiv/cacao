@@ -160,6 +160,7 @@ var bemlinterOpts = {preset: 'suit'};
 
 gulp.task('stylelint', function () {
     return gulp.src(config.stylelint.src)
+        .pipe(gulpCached('Stylelint'))
         .pipe(gulpUsing({prefix: 'Stylelint: '}))
         .pipe(gulpPlumber(onError))
         .pipe(gulpPostcss([
