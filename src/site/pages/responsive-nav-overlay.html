@@ -1,0 +1,130 @@
+{% extends 'default.html' %}
+
+{% block navigation %}
+<div class="NavBar">
+    <a href="#" class="SmScBtn js-ssNavBtn"><span class="SmScBtn-icon"></span>Menu</a>
+    <div class="u-posRelative">{{ macro.buildMenu(data.menu) }}</div>
+</div>
+{% endblock %}
+
+{% block page %}
+
+<h1>Responsive Navigation Overlay</h1>
+
+<p>This style of responsive navigation will sit on top of the page when the "Menu" button is pressed.</p>
+<h2>Setup</h2>
+<p>Include 'responsive-overlay.css' in src/styles/lib/components/navigation/index.css</p>
+<p>Include the following Javascript. It would often be added to src/scripts/index.js</p>
+<pre>
+{% filter escape %}
+<script>
+    (function ($) {
+        /**
+         * Small screen navigation
+         */
+        $('.js-ssNavBtn').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('is-active');
+            $('.js-mainNav').toggle();
+        });
+
+        $('.js-dropdown').on('click', function(e) {
+            if ($(window).width() <= 1050) {
+                e.preventDefault();
+                $(this).toggleClass('is-active').parent().toggleClass('is-active');
+            }
+        });
+    }(jQuery));
+</script>
+{% endfilter %}
+</pre>
+
+
+<h2>Random Text</h2>
+<p>Lorem ipsum dolor sit amet, ius case elit mediocritatem ut, sit bonorum noluisse ex. Libris audiam aperiri vis no. Quot mutat ad sea. Eligendi convenire abhorreant eu quo. Eam quas apeirian erroribus ne. Sed elaboraret voluptatibus et, qualisque interpretaris vim ne. Aeque labitur voluptaria ius no, quod aliquid ut sea.</p>
+<p>Lorem ipsum dolor sit amet, ius case elit mediocritatem ut, sit bonorum noluisse ex. Libris audiam aperiri vis no. Quot mutat ad sea. Eligendi convenire abhorreant eu quo. Eam quas apeirian erroribus ne. Sed elaboraret voluptatibus et, qualisque interpretaris vim ne. Aeque labitur voluptaria ius no, quod aliquid ut sea.</p>
+
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+    /**
+     * Handles the overlay navigation for small screens
+     */
+    var navOverlay = {
+        button: null,
+        /**
+         * Holds the navigation object
+         * @type jQuery
+         * @private
+         */
+        nav: null,
+
+        /**
+         * The max window width where the small screen navigation is shown
+         * @type number
+         * @private
+         */
+        width: 1050,
+
+        /**
+         * Initialization
+         */
+        init: function() {
+            var self = this;
+            this.button = $('.js-ssNavBtn');
+            this.nav = $('.js-mainNav');
+
+
+            this.button.on('click', function(e) {
+                e.preventDefault();
+                if (self.button.hasClass('is-active')) {
+                    $('html,body').css({height: 'auto', overflow: 'auto'});
+                } else {
+                    $('html,body').css({height: '100%', overflow: 'hidden'});
+                }
+                self.button.toggleClass('is-active');
+                self.nav.toggle();
+                self.setHeight();
+
+
+            });
+
+            $('.js-dropdown').on('click', function(e) {
+                if ($(window).width() <= self.width) {
+                    e.preventDefault();
+                    $(this).toggleClass('is-active').parent().toggleClass('is-active');
+                }
+            });
+
+            $(window).on('resize', function() {
+                if ($(window).width() <= self.width && self.button.hasClass('is-active')) {
+                    navOverlay.setHeight();
+                } else {
+                    self.nav.css('height', 'auto');
+                }
+            });
+        },
+
+        /**
+         * Sets the height of the navigation menu
+         */
+        setHeight: function() {
+            var height = $(window).height() - this.nav.offset().top;
+            if (height > 0) {
+                this.nav.height(height);
+            }
+        }
+    };
+
+    (function ($) {
+        /**
+         * Small screen navigation
+         */
+        navOverlay.init();
+    }(jQuery));
+</script>
+
+{% endblock %}

@@ -28,6 +28,7 @@
 .Dropdown-menu {
     background: var(--Dropdown-background);
     box-shadow: 0 22px 35px 0 rgba(0, 0, 0, .1);
+    box-sizing: border-box;
     display: none;
     left: 0;
     list-style: none;
@@ -53,6 +54,7 @@
    ========================================================================== */
 
 .Dropdown-item {
+    box-sizing: border-box;
     position: relative;
 }
 
@@ -60,6 +62,7 @@
    ========================================================================== */
 
 .Dropdown-link {
+    box-sizing: border-box;
     color: var(--Dropdown-link-color);
     display: block;
     font-size: var(--Dropdown-fontSize);

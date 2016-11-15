@@ -38,7 +38,8 @@
       "text": "Responsive Navigation",
       "href": "#",
       "children": [
-        {"text": "Pushdown", "href": "responsive-nav-pushdown.html"}
+        {"text": "Pushdown", "href": "responsive-nav-pushdown.html"},
+        {"text": "Overlay", "href": "responsive-nav-overlay.html"}
       ]
     }
   ]

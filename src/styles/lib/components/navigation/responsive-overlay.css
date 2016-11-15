@@ -1,5 +1,5 @@
 /* =========================================================================== *\
-    Responsive navigation style that when expanded pushes down the contents of
+    Responsive navigation style that when expanded overlays the contents of
     the page.
     This will override certain styles for mainnav.css and dropdown.css for
     smaller screens.
@@ -13,9 +13,16 @@
      */
 
     .MainNav {
+        background: #ddd;
         display: none;
         font-size: var(--MainNav-fontSize);
+        height: 300px;
+        left: 0;
         margin: 0;
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 
     .MainNav-item {

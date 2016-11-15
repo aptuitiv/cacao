@@ -18,13 +18,13 @@
 </head>
 <body>
     <div class="Container">
-        {% block header %}
-            <h1><a href="https://github.com/aptuitiv/cacao">Cacao</a></h1>
+        <h1><a href="https://github.com/aptuitiv/cacao">Cacao</a></h1>
+
+        {% block navigation %}
             <div class="NavBar">
                 <a href="#" class="SmScBtn js-ssNavBtn"><span class="SmScBtn-icon"></span>Menu</a>
                 {{ macro.buildMenu(data.menu) }}
             </div>
-
         {% endblock %}
 
         <div class="u-padTop3">

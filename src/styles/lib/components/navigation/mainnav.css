@@ -19,6 +19,7 @@
  */
 
 .MainNav {
+    box-sizing: border-box;
     display: inline-block;
     font-family: var(--MainNav-fontFamily);
     font-size: var(--MainNav-fontSize);
@@ -33,6 +34,7 @@
  */
 
 .MainNav-item {
+    box-sizing: border-box;
     display: inline-block;
     margin-left: 1em;
 }
@@ -55,6 +57,7 @@
 
 .MainNav-link {
     background: var(--MainNav-link-background);
+    box-sizing: border-box;
     color: var(--MainNav-link-color);
     display: block;
     padding: .5em 1.5rem;

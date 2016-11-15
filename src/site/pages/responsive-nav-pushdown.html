@@ -6,6 +6,32 @@
 <h1>Responsive Navigation Pushdown</h1>
 
 <p>This style of responsive navigation will push down the page when the "Menu" button is pushed.</p>
+<h2>Setup</h2>
+<p>Include 'responsive-pushdown.css' in src/styles/lib/components/navigation/index.css</p>
+<p>Include the following Javascript. It would often be added to src/scripts/index.js</p>
+<pre>
+{% filter escape %}
+<script>
+    (function ($) {
+        /**
+         * Small screen navigation
+         */
+        $('.js-ssNavBtn').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('is-active');
+            $('.js-mainNav').toggle();
+        });
+
+        $('.js-dropdown').on('click', function(e) {
+            if ($(window).width() <= 1050) {
+                e.preventDefault();
+                $(this).toggleClass('is-active').parent().toggleClass('is-active');
+            }
+        });
+    }(jQuery));
+</script>
+{% endfilter %}
+</pre>
 
 
 <h2>Random Text</h2>

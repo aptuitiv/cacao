@@ -45,6 +45,7 @@
                 <li class="MainNav-item Dropdown"> <a href="#" class="MainNav-link is-dropdown js-dropdown">Responsive Navigation</a>
                     <ul class="Dropdown-menu">
                         <li class="Dropdown-item"> <a href="responsive-nav-pushdown.html" class="Dropdown-link">Pushdown</a> </li>
+                        <li class="Dropdown-item"> <a href="responsive-nav-overlay.html" class="Dropdown-link">Overlay</a> </li>
                     </ul>
                 </li>
                 <li class="MainNav-item MainNav-item--smallScreen"><a href="#" class="MainNav-link">Small Screen Item</a></li>
@@ -53,6 +54,31 @@
         <div class="u-padTop3">
             <h1>Responsive Navigation Pushdown</h1>
             <p>This style of responsive navigation will push down the page when the "Menu" button is pushed.</p>
+            <h2>Setup</h2>
+            <p>Include 'responsive-pushdown.css' in src/styles/lib/components/navigation/index.css</p>
+            <p>Include the following Javascript. It would often be added to src/scripts/index.js</p> <pre>
+
+&lt;script&gt;
+    (function ($) {
+        /**
+         * Small screen navigation
+         */
+        $(&#39;.js-ssNavBtn&#39;).on(&#39;click&#39;, function(e) {
+            e.preventDefault();
+            $(this).toggleClass(&#39;is-active&#39;);
+            $(&#39;.js-mainNav&#39;).toggle();
+        });
+
+        $(&#39;.js-dropdown&#39;).on(&#39;click&#39;, function(e) {
+            if ($(window).width() &lt;= 1050) {
+                e.preventDefault();
+                $(this).toggleClass(&#39;is-active&#39;).parent().toggleClass(&#39;is-active&#39;);
+            }
+        });
+    }(jQuery));
+&lt;/script&gt;
+
+</pre>
             <h2>Random Text</h2>
             <p>Lorem ipsum dolor sit amet, ius case elit mediocritatem ut, sit bonorum noluisse ex. Libris audiam aperiri vis no. Quot mutat ad sea. Eligendi convenire abhorreant eu quo. Eam quas apeirian erroribus ne. Sed elaboraret voluptatibus et, qualisque
                 interpretaris vim ne. Aeque labitur voluptaria ius no, quod aliquid ut sea.</p>
