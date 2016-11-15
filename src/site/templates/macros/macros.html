@@ -7,6 +7,9 @@
             {{ buildMenu(item, 1) }}
         </li>
         {% endfor %}
+        {% if sub !== 1 %}
+            <li class="MainNav-item MainNav-item--smallScreen"><a href="#" class="MainNav-link">Small Screen Item</a></li>
+        {% endif %}
     </ul>
     {% endif %}
 {% endmacro %}
