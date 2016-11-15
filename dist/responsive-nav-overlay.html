@@ -14,7 +14,7 @@
 <body>
     <div class="Container">
         <h1><a href="https://github.com/aptuitiv/cacao">Cacao</a></h1>
-        <div class="NavBar"> <a href="#" class="SmScBtn js-ssNavBtn"><span class="SmScBtn-icon"></span>Menu</a>
+        <div class="NavBar"> <button class="SmScBtn js-ssNavBtn"><span class="SmScBtn-icon"></span>Menu</button>
             <div class="u-posRelative">
                 <ul class="MainNav js-mainNav">
                     <li class="MainNav-item"> <a href="index.html" class="MainNav-link">Home</a> </li>
@@ -66,6 +66,13 @@
             <p>Include the following Javascript. It would often be added to src/scripts/index.js</p> <pre>
 
 &lt;script&gt;
+    $(function() {
+        /**
+         * Small screen navigation
+         */
+        navOverlay.init();
+    });
+
     /**
      * Handles the overlay navigation for small screens
      */
@@ -89,10 +96,10 @@
          * Initialization
          */
         init: function() {
+            console.log(&#39;overlay&#39;);
             var self = this;
             this.button = $(&#39;.js-ssNavBtn&#39;);
             this.nav = $(&#39;.js-mainNav&#39;);
-
 
             this.button.on(&#39;click&#39;, function(e) {
                 e.preventDefault();
@@ -104,8 +111,6 @@
                 self.button.toggleClass(&#39;is-active&#39;);
                 self.nav.toggle();
                 self.setHeight();
-
-
             });
 
             $(&#39;.js-dropdown&#39;).on(&#39;click&#39;, function(e) {
@@ -134,101 +139,92 @@
             }
         }
     };
-
-    (function ($) {
-        /**
-         * Small screen navigation
-         */
-        navOverlay.init();
-    }(jQuery));
 &lt;/script&gt;
 
 </pre> </div>
-        <script src="layout/js/index.js"></script>
-        <script>
-            /**
-             * Handles the overlay navigation for small screens
-             */
-            var navOverlay = {
-                button: null,
-                /**
-                 * Holds the navigation object
-                 * @type jQuery
-                 * @private
-                 */
-                nav: null,
-
-                /**
-                 * The max window width where the small screen navigation is shown
-                 * @type number
-                 * @private
-                 */
-                width: 1050,
-
-                /**
-                 * Initialization
-                 */
-                init: function() {
-                    var self = this;
-                    this.button = $('.js-ssNavBtn');
-                    this.nav = $('.js-mainNav');
-
-
-                    this.button.on('click', function(e) {
-                        e.preventDefault();
-                        if (self.button.hasClass('is-active')) {
-                            $('html,body').css({
-                                height: 'auto',
-                                overflow: 'auto'
-                            });
-                        } else {
-                            $('html,body').css({
-                                height: '100%',
-                                overflow: 'hidden'
-                            });
-                        }
-                        self.button.toggleClass('is-active');
-                        self.nav.toggle();
-                        self.setHeight();
-
-
-                    });
-
-                    $('.js-dropdown').on('click', function(e) {
-                        if ($(window).width() <= self.width) {
-                            e.preventDefault();
-                            $(this).toggleClass('is-active').parent().toggleClass('is-active');
-                        }
-                    });
-
-                    $(window).on('resize', function() {
-                        if ($(window).width() <= self.width && self.button.hasClass('is-active')) {
-                            navOverlay.setHeight();
-                        } else {
-                            self.nav.css('height', 'auto');
-                        }
-                    });
-                },
-
-                /**
-                 * Sets the height of the navigation menu
-                 */
-                setHeight: function() {
-                    var height = $(window).height() - this.nav.offset().top;
-                    if (height > 0) {
-                        this.nav.height(height);
-                    }
-                }
-            };
-
-            (function($) {
-                /**
-                 * Small screen navigation
-                 */
-                navOverlay.init();
-            }(jQuery));
-        </script>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        $(function() {
+            /**
+             * Small screen navigation
+             */
+            navOverlay.init();
+        });
+
+        /**
+         * Handles the overlay navigation for small screens
+         */
+        var navOverlay = {
+            button: null,
+            /**
+             * Holds the navigation object
+             * @type jQuery
+             * @private
+             */
+            nav: null,
+
+            /**
+             * The max window width where the small screen navigation is shown
+             * @type number
+             * @private
+             */
+            width: 1050,
+
+            /**
+             * Initialization
+             */
+            init: function() {
+                console.log('overlay');
+                var self = this;
+                this.button = $('.js-ssNavBtn');
+                this.nav = $('.js-mainNav');
+
+                this.button.on('click', function(e) {
+                    e.preventDefault();
+                    if (self.button.hasClass('is-active')) {
+                        $('html,body').css({
+                            height: 'auto',
+                            overflow: 'auto'
+                        });
+                    } else {
+                        $('html,body').css({
+                            height: '100%',
+                            overflow: 'hidden'
+                        });
+                    }
+                    self.button.toggleClass('is-active');
+                    self.nav.toggle();
+                    self.setHeight();
+                });
+
+                $('.js-dropdown').on('click', function(e) {
+                    if ($(window).width() <= self.width) {
+                        e.preventDefault();
+                        $(this).toggleClass('is-active').parent().toggleClass('is-active');
+                    }
+                });
+
+                $(window).on('resize', function() {
+                    if ($(window).width() <= self.width && self.button.hasClass('is-active')) {
+                        navOverlay.setHeight();
+                    } else {
+                        self.nav.css('height', 'auto');
+                    }
+                });
+            },
+
+            /**
+             * Sets the height of the navigation menu
+             */
+            setHeight: function() {
+                var height = $(window).height() - this.nav.offset().top;
+                if (height > 0) {
+                    this.nav.height(height);
+                }
+            }
+        };
+    </script>
 </body>
 
 </html>

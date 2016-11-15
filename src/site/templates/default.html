@@ -22,7 +22,7 @@
 
         {% block navigation %}
             <div class="NavBar">
-                <a href="#" class="SmScBtn js-ssNavBtn"><span class="SmScBtn-icon"></span>Menu</a>
+                <button class="SmScBtn js-ssNavBtn"><span class="SmScBtn-icon"></span>Menu</button>
                 {{ macro.buildMenu(data.menu) }}
             </div>
         {% endblock %}
@@ -31,13 +31,13 @@
             {% block page %}
             {% endblock %}
         </div>
-
-        {% block footer %}
-        {% endblock %}
-
-        {% block scripts %}
-            <script src="{{ site.serverRoot }}layout/js/index.js"></script>
-        {% endblock %}
     </div>
+
+    {% block footer %}
+    {% endblock %}
+
+    {% block scripts %}
+    <script src="{{ site.serverRoot }}layout/js/index.js"></script>
+    {% endblock %}
 </body>
 </html>
