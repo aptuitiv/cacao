@@ -19,4 +19,13 @@
 
 <p>Include 'small-screen-button.css' in src/styles/lib/components/navigation/index.css</p>
 
+<p>Also make sure that src/styles/config.css contains the following custom breakpoints.</p>
+
+<pre>
+    @custom-media --c-bp-smallScreenNav (max-width: 1050px);
+    @custom-media --c-bp-largeScreenNav (min-width: 1051px);
+</pre>
+
+<p>Those breakpoints are for when the primary navigation is hidden (--c-bp-smallScreenNav) and when it's displayed (--c-bp-largeScreenNav).</p>
+
 {% endblock %}
