@@ -1,0 +1,22 @@
+{% extends 'default.html' %}
+
+
+{% block page %}
+
+<h1>Responsive Navigation</h1>
+
+<p>In the "Responsive Navigation" dropdown in the above navigation there are links to different examples of responsive navigation layouts.</p>
+<p>The key to all of them is having a "Menu" button that shows up on smaller screens when the main navigation is hidden. Below is an example of what you could use:</p>
+<pre>
+{% filter escape %}
+<div class="NavBar">
+    <a href="#" class="SmScBtn js-ssNavBtn"><span class="SmScBtn-icon"></span>Menu</a>
+    <ul class="MainNav">....</ul>
+</div>
+{% endfilter %}
+</pre>
+
+
+<p>Include 'small-screen-button.css' in src/styles/lib/components/navigation/index.css</p>
+
+{% endblock %}

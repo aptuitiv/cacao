@@ -36,7 +36,7 @@
     },
     {
       "text": "Responsive Navigation",
-      "href": "#",
+      "href": "responsive-nav.html",
       "children": [
         {"text": "Pushdown", "href": "responsive-nav-pushdown.html"},
         {"text": "Overlay", "href": "responsive-nav-overlay.html"}
