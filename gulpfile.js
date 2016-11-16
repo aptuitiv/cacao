@@ -5,6 +5,7 @@ var gulpCached = require('gulp-cached');
 var gulpConcat = require('gulp-concat');
 var gulpConnect = require('gulp-connect');
 var gulpData = require('gulp-data');
+var gulpHtmlBeautify = require('gulp-html-beautify');
 var gulpHtmlmin = require('gulp-htmlmin');
 var gulpImagemin = require('gulp-imagemin');
 var gulpNunjucks = require('gulp-nunjucks-render');
@@ -13,6 +14,7 @@ var gulpPostcss = require('gulp-postcss');
 var gulpRemember = require('gulp-remember');
 var gulpSequence = require('gulp-sequence');
 var gulpUglify = require('gulp-uglify');
+var gulpUsing = require('gulp-using');
 var mergeStream = require('merge-stream');
 var requireGlob = require('require-glob');
 
@@ -46,6 +48,7 @@ gulp.task('copy', function () {
 gulp.task('images', function () {
     return gulp.src(config.images.src)
         .pipe(gulpCached('images'))
+        .pipe(gulpUsing({prefix: 'Image min: '}))
         .pipe(gulpPlumber(onError))
         .pipe(gulpImagemin({optimizationLevel: 5}))
         .pipe(gulp.dest(config.images.dest));
@@ -55,18 +58,24 @@ gulp.task('images', function () {
  * Compile templates to minified HTML
  */
 
-gulp.task('nunjucks', function () {
-    gulpNunjucks.nunjucks.configure(config.nunjucks.src, {watch: false});
+gulp.task('nunjucks', function() {
     return gulp.src(config.nunjucks.pages)
         .pipe(gulpPlumber(onError))
+        .pipe(gulpUsing({prefix: 'Nunjucks: '}))
         .pipe(gulpData(function () {
             return {
                 data: requireGlob.sync(config.nunjucks.data, {bustCache: true})
             };
         }))
-        .pipe(gulpNunjucks({site: config.root}))
-        .pipe(gulpHtmlmin({collapseWhitespace: true, conservativeCollapse: true}))
-        .pipe(gulp.dest(config.nunjucks.dest));
+        .pipe(gulpNunjucks({
+            path: config.nunjucks.templates
+        }))
+        .pipe(gulpHtmlmin({
+            collapseWhitespace: true,
+            conservativeCollapse: true
+        }))
+        .pipe(gulpHtmlBeautify())
+        .pipe(gulp.dest(config.nunjucks.dest))
 });
 
 /**
@@ -79,6 +88,7 @@ gulp.task('scripts', function () {
     var tasks = config.scripts.map(function (entry, index) {
         return gulp.src(entry.src)
             .pipe(gulpCached('scripts' + index))
+            .pipe(gulpUsing({prefix: 'Scripts: '}))
             .pipe(gulpPlumber(onError))
             .pipe(gulpUglify(uglifyOpts))
             .pipe(gulpRemember('scripts' + index))
@@ -132,8 +142,9 @@ var processors = [
     })
 ];
 
-gulp.task('styles', function () {
+gulp.task('styles', ['stylelint'], function () {
     return gulp.src(config.styles.src)
+        .pipe(gulpUsing({prefix: 'CSS: '}))
         .pipe(gulpPlumber(onError))
         .pipe(gulpPostcss(processors))
         .pipe(gulp.dest(config.styles.dest));
@@ -149,6 +160,8 @@ var bemlinterOpts = {preset: 'suit'};
 
 gulp.task('stylelint', function () {
     return gulp.src(config.stylelint.src)
+        .pipe(gulpCached('Stylelint'))
+        .pipe(gulpUsing({prefix: 'Stylelint: '}))
         .pipe(gulpPlumber(onError))
         .pipe(gulpPostcss([
             require('postcss-bem-linter')(bemlinterOpts),
@@ -187,7 +200,7 @@ gulp.task('watch', function () {
     }));
     // styles
     gulp.watch(config.styles.watch, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start(['stylelint', 'styles'], cb);
+        gulp.start(['styles'], cb);
     }));
 });
 

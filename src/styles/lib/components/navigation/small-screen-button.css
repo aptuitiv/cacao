@@ -1,0 +1,92 @@
+/* =========================================================================== *\
+    SMALL SCREEN NAVIGATION BUTTON
+\* =========================================================================== */
+
+
+/** @define SmScBtn **/
+
+.SmScBtn {
+    background: rgba(0, 0, 0, .1);
+    border: none;
+    color: #fff;
+    display: none;
+    font-size: 16px;
+    line-height: 45px;
+    padding: 0 10px 0 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media (--c-bp-smallScreenNav) {
+    .SmScBtn {
+        display: inline-block;
+    }
+}
+
+@media (--c-bp-sm) {
+    .SmScBtn {
+        display: block;
+    }
+}
+
+.SmScBtn:active,
+.SmScBtn:focus,
+.SmScBtn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.SmScBtn-icon {
+    bottom: 5px;
+    display: inline-block;
+    left: -7px;
+    position: relative;
+}
+
+.SmScBtn-icon,
+.SmScBtn-icon::before,
+.SmScBtn-icon::after {
+    background-color: #fff;
+    border-radius: 4px;
+    height: 2px;
+    transition-duration: .1s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.55, .055, .675, .19);
+    width: 12px;
+}
+
+.SmScBtn-icon::before,
+.SmScBtn-icon::after {
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+.SmScBtn-icon::before {
+    top: -4px;
+    transform: none;
+}
+
+.SmScBtn-icon::after {
+    bottom: -4px;
+    transform: none;
+}
+
+.SmScBtn.is-active .SmScBtn-icon {
+    transform: rotate(45deg);
+    transition-delay: .14s;
+    transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+}
+
+
+.SmScBtn.is-active .SmScBtn-icon::before {
+    opacity: 0;
+    top: 0;
+    transition: top .1s ease, opacity .1s .14s ease;
+}
+
+.SmScBtn.is-active .SmScBtn-icon::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom .1s ease, transform .1s .14s cubic-bezier(.215, .61, .355, 1);
+}

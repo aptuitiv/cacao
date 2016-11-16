@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "ap_drilldown_plugin": "git://github.com/aptuitiv/ap-drilldown-menu",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-using": "^0.1.1",
     "jquery": "^3.1.0",
     "jquery-validation": "^1.14.0",
     "magnific-popup": "^1.0.1",

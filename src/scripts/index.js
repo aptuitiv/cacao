@@ -1,23 +1,45 @@
-(function ($) {
+$(function() {
+    smallScreenNav.init();
+});
 
-    // initialize mobile navigation
-    $('#ap-ddmenu-root > ul').apDrillDownMenu({
-        maxWindowWidth: 800, // Width that the navigation becomes "active"
-        width: '100%',
-        height: 'auto',
-        showSpeed: 200,
-        backLink: true,
-        backLinkText: 'Back',
-        backLinkSelector: '.ap-ddmenu-back',
-        currentText: true,
-        currentTextSelector: '.ap-ddmenu-current-text',
-        cloneClass: 'ap-ddmenu-clone',
-        prependCurrentOnChild: true,
-        prependCurrentOnChildCallback: function () {
-        },
-        parentIconText: '',
-        toggleSwitch: '.ap-ddmenu-toggle',
-        toggleSpeed: 200
-    });
+/**
+ * Small screen navigation
+ */
+var smallScreenNav = {
+    button: null,
+    /**
+     * Holds the navigation object
+     * @type jQuery
+     * @private
+     */
+    nav: null,
 
-}(jQuery));
+    /**
+     * The max window width where the small screen navigation is shown
+     * @type number
+     * @private
+     */
+    width: 1050,
+
+    /**
+     * Initialization
+     */
+    init: function() {
+        var self = this;
+        this.button = $('.js-ssNavBtn');
+        this.nav = $('.js-mainNav');
+
+        this.button.on('click', function(e) {
+            e.preventDefault();
+            self.button.toggleClass('is-active');
+            self.nav.toggle();
+        });
+
+        $('.js-dropdown').on('click', function(e) {
+            if ($(window).width() <= self.width) {
+                e.preventDefault();
+                $(this).toggleClass('is-active').parent().toggleClass('is-active');
+            }
+        });
+    }
+};

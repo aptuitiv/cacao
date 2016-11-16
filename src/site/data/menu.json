@@ -1,5 +1,6 @@
 {
   "children": [
+    { "text": "Home", "href": "index.html" },
     {
       "text": "Item 1",
       "href": "#",
@@ -10,13 +11,35 @@
       ]
     },
     { "text": "Item 2", "href": "#" },
-    { "text": "Item 3", "href": "#" },
+    {
+      "text": "Item 3",
+      "href": "#",
+      "children": [
+        {
+          "text" : "Sub Item 1",
+          "href": "#",
+          "children": [
+            {"text" : "Sub Sub Item 1", "href": "#"},
+            {"text" : "Sub Sub Item 2", "href": "#"}
+          ]
+        },
+        {"text" : "Sub Item 2", "href": "#"}
+      ]
+    },
     {
       "text": "Item 4",
       "href": "#",
       "children": [
         { "text": "Sub item 1", "href": "#" },
         { "text": "Sub item 2", "href": "#" }
+      ]
+    },
+    {
+      "text": "Responsive Navigation",
+      "href": "responsive-nav.html",
+      "children": [
+        {"text": "Pushdown", "href": "responsive-nav-pushdown.html"},
+        {"text": "Overlay", "href": "responsive-nav-overlay.html"}
       ]
     }
   ]

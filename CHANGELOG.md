@@ -1,3 +1,9 @@
+## 2.3.0 (November 16, 2016)
+
+* Fixed nunjucks support.
+* Added sample pages to the 'dist' directory to show different responsive navigation options.
+* Added two built-in responsive navigation options in the src/styles/lib/components/navigation folder.
+
 ## 2.2.0 (November 9, 2016)
 
 * Added responsive styles for the typography utility classes.

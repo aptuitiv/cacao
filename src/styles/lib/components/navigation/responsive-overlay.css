@@ -1,0 +1,112 @@
+/* =========================================================================== *\
+    Responsive navigation style that when expanded overlays the contents of
+    the page.
+    This will override certain styles for mainnav.css and dropdown.css for
+    smaller screens.
+\* =========================================================================== */
+
+
+@media (--c-bp-smallScreenNav) {
+
+    /**
+     * Main Navigation
+     */
+
+    .MainNav {
+        background: #ddd;
+        display: none;
+        font-size: var(--MainNav-fontSize);
+        height: 300px;
+        left: 0;
+        margin: 0;
+        overflow: auto;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .MainNav-item {
+        border-right: none;
+        display: block;
+        flex: 0 0 auto;
+        text-align: left;
+    }
+
+    .MainNav-link {
+        display: block;
+    }
+
+    .MainNav-link.is-dropdown::after {
+        border: 5px solid transparent;
+        border-left-color: #fff;
+        content: '';
+        display: block;
+        opacity: .7;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .MainNav-link.is-dropdown.is-active::after {
+        right: 13px;
+        top: 60%;
+        transform: translateY(-50%) rotate(90deg);
+    }
+
+    .MainNav-link.is-active,
+    .MainNav-link:active,
+    .MainNav-link:focus,
+    .MainNav-link:hover {
+        background: rgba(0, 0, 0, .1);
+        color: inherit;
+        text-decoration: none;
+    }
+
+    /**
+     * Dropdown
+     */
+
+    .Dropdown-menu {
+        box-shadow: none;
+        position: relative;
+        top: auto;
+    }
+
+    .Dropdown.is-active > .Dropdown-menu,
+    .Dropdown-item.is-active > .Dropdown-menu {
+        display: block;
+    }
+
+    .Dropdown-item {
+        padding-left: 15px;
+    }
+
+    .Dropdown-link {
+        border: none;
+        padding: var(--Dropdown-item-padding-small-screen);
+        white-space: normal;
+    }
+
+    .Dropdown-link:active,
+    .Dropdown-link:hover,
+    .Dropdown-link:focus {
+        color: var(--Dropdown-link-color);
+        text-decoration: none;
+    }
+
+    .Dropdown-link--parent.is-active,
+    .Dropdown-link--parent:active,
+    .Dropdown-link--parent:focus,
+    .Dropdown-link--parent:hover,
+    .Dropdown-link--parent.is-active + .Dropdown-menu {
+        background: rgba(0, 0, 0, .1);
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .Dropdown-link--parent.is-active::before {
+        right: 19px;
+        transform-origin: 0 50%;
+    }
+}
