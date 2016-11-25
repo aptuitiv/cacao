@@ -1,3 +1,8 @@
+## 2.4.0 (November 25, 2016)
+
+* Added right margin to radio buttons and checkboxes.
+* Added default styles for disabled inputs.
+
 ## 2.3.0 (November 16, 2016)
 
 * Fixed nunjucks support.
