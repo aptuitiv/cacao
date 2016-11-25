@@ -52,3 +52,16 @@ textarea {
 input[type='search'] {
     -webkit-appearance: none; /* 1 */
 }
+
+/**
+ * Add some right margin to radio buttons and checkboxes
+ */
+input[type='radio'],
+input[type='checkbox'] {
+    margin-right: 5px;
+}
+
+html input[disabled],
+html input[readonly] {
+    background: #eee;
+}
