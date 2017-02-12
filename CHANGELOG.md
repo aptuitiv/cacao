@@ -1,3 +1,7 @@
+## 2.5.0 (February 12, 2017)
+
+* Changed '0%' to 'auto' for the flex grow utility classes as '0%' was causing issues in some versions of Safari.
+
 ## 2.4.0 (November 25, 2016)
 
 * Added right margin to radio buttons and checkboxes.
