@@ -24,7 +24,7 @@ module.exports = {
 
     images: {
         dest: destDir + '/layout/images',
-        src: srcDir + '/images/**/*.{png,jpg,gif}'
+        src: srcDir + '/images/**/*.{png,jpg,gif,svg}'
     },
 
     nunjucks: {
