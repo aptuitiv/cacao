@@ -17,7 +17,8 @@
     "jquery-validation": "^1.14.0",
     "magnific-popup": "^1.0.1",
     "normalize.css": "^4.0.0",
-    "slick-carousel": "^1.5.9"
+    "slick-carousel": "^1.5.9",
+    "stylelint-order": "^0.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.1",
