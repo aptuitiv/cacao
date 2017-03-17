@@ -214,7 +214,7 @@ gulp.task('watch', function () {
         gulp.start(['styles'], cb);
     }));
     // Theme
-    gulp.watch(config.theme.watch, watchOpts, gulpBatch(function (e, cb) {
+    gulp.watch(config.theme.src, watchOpts, gulpBatch(function (e, cb) {
         gulp.start(['theme'], cb);
     }));
 });
