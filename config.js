@@ -66,7 +66,7 @@ module.exports = {
 
     theme: {
         dest: destDir + '/templates',
-        watch: srcDir + '/theme/**/*.twig'
+        src: srcDir + '/theme/**/*.twig'
     }
 
 };

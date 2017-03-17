@@ -174,7 +174,7 @@ gulp.task('stylelint', function () {
  */
 
 gulp.task('theme', function() {
-    return gulp.src(config.theme.watch)
+    return gulp.src(config.theme.src)
         .pipe(gulpCached('Theme'))
         .pipe(gulpUsing({prefix: 'Theme: '}))
         .pipe(gulp.dest(config.theme.dest))
