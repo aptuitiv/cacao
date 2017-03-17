@@ -62,6 +62,11 @@ module.exports = {
 
     stylelint: {
         src: [srcDir + '/styles/**/*.css']
+    },
+
+    theme: {
+        dest: destDir + '/templates',
+        watch: srcDir + '/theme/**/*.twig'
     }
 
 };

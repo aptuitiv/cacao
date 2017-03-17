@@ -1,0 +1,67 @@
+{# Macro that handles building sub navigation #}
+{% macro menu_sub_items(items) %}
+    <ul class="Dropdown-menu">
+        {% for item in items %}
+            {% if item.parent %}
+                {% if item.link.href != item.parent.link.href %}
+                    {# Duplicate the navigation item for the mobile menu #}
+                    {% set item.parent.link.class = "Dropdown-link" %}
+                    <li class="Dropdown-item Dropdown-item--smallScreen">{{ item.parent.link.tag }}</li>
+                {% endif %}
+            {% endif %}
+            {# ASSIGN SUB MENU ITEM CLASS #}
+            {% set class = "Dropdown-item" %}
+            {% if item.link.class %}
+                {% set class = class ~ ' ' ~ item.link.class %}
+            {% endif %}
+            <li class="{{ class }}">
+                {# ASSIGN SUB MENU LINK CLASS #}
+                {% set item.link.class = item.link.class ~ " Dropdown-link" %}
+                {% if item.subItems %}
+                    {% set item.link.class = item.link.class ~ " Dropdown-link--parent js-dropdown" %}
+                {% endif %}
+                {{ item.link.tag }}
+
+                {% if item.subItems %}
+                    {# Set the item as the first sub item's parent to be used to optionaly duplicate it as the first item in the dropdown #}
+                    {% set item.subItems.0.parent = item %}
+                    {{ macros.menu_sub_items(item.subItems) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+{# Import the macro so that it can be used #}
+{% import _self as macros %}
+
+
+{# ASSIGN MENU CLASS #}
+{% set menu.class = menu.class ~ ' MainNav js-mainNav' %}
+<ul{{menu.class.attr}}{{ menu.id.attr }}>
+    {% for item in items %}
+        {# ASSIGN MENU ITEM CLASS #}
+        {% set class = "MainNav-item" %}
+        {% if item.subItems %}
+            {% set class = class ~ " Dropdown" %}
+        {% endif %}
+        {% if item.link.class %}
+            {% set class = class ~ ' ' ~ item.link.class %}
+        {% endif %}
+        <li class="{{ class }}">
+            {# ASSIGN MENU LINK CLASS #}
+            {% set item.link.class = item.link.class ~ ' MainNav-link' %}
+            {% if item.subItems %}
+                {% set item.link.class = item.link.class ~ ' is-dropdown js-dropdown' %}
+            {% endif %}
+            {{ item.link.tag }}
+
+            {% if item.subItems %}
+                {# Set the item as the first sub item's parent to be used to optionaly duplicate it as the first item in the dropdown #}
+                {% set item.subItems.0.parent = item %}
+
+                {{ macros.menu_sub_items(item.subItems) }}
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
