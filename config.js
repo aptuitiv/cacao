@@ -13,17 +13,17 @@ module.exports = {
 
     copy: [
         {
-            dest: destDir + '/layout/magnific',
+            dest: destDir + '/magnific',
             src: ['node_modules/magnific-popup/dist/**/*']
         },
         {
-            dest: destDir + '/layout/slick',
+            dest: destDir + '/slick',
             src: ['node_modules/slick-carousel/slick/**/*']
         }
     ],
 
     images: {
-        dest: destDir + '/layout/images',
+        dest: destDir + '/images',
         src: srcDir + '/images/**/*.{png,jpg,gif,svg}'
     },
 
@@ -45,17 +45,17 @@ module.exports = {
                 'node_modules/ap_drilldown_plugin/ap-drilldown-menu.min.js',
                 srcDir + '/scripts/index.js'
             ],
-            dest: destDir + '/layout/js'
+            dest: destDir + '/js'
         },
         {
             name: 'forms.js',
             src: 'node_modules/jquery-validation/dist/jquery.validate.js',
-            dest: destDir + '/layout/js'
+            dest: destDir + '/js'
         }
     ],
 
     styles: {
-        dest: destDir + '/layout/css',
+        dest: destDir + '/css',
         src: [srcDir + '/styles/index.css'],
         watch: [srcDir + '/styles/**/*.css']
     },
