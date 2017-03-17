@@ -209,7 +209,7 @@ gulp.task('watch', function () {
  */
 
 gulp.task('connect', function () {
-    gulpConnect.server({root: config.root.dest});
+    gulpConnect.server({root: config.siteRoot});
 });
 
 /**

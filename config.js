@@ -1,15 +1,15 @@
-var buildDest = 'dist';
-var siteRoot = '';
+// The base directory to build into
+var buildRoot = 'build';
+// The directory within the build root where theme files (images, css, js) will be located
+var themeRoot = 'theme/custom';
+// The source directory to build from
 var srcDir = 'src';
-var destDir = buildDest + siteRoot;
+// The full destination folder where assets (images, css, js) will be built into
+var destDir = buildRoot + '/' + themeRoot;
 
 module.exports = {
 
-    root: {
-        dest: buildDest,
-        src: srcDir,
-        server: siteRoot
-    },
+    siteRoot: buildRoot,
 
     copy: [
         {
@@ -28,7 +28,7 @@ module.exports = {
     },
 
     nunjucks: {
-        dest: destDir,
+        dest: buildRoot,
         src: [srcDir + '/site'],
         pages: [srcDir + '/site/pages/**/*.html'],
         templates: [srcDir + '/site/templates'],
