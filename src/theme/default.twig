@@ -1,15 +1,3 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>{{ _page.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{ _page.meta() }}
-    {{ _page.css() }}
-    {{ _page.js() }}
-    {{ _page.head() }}
-</head>
-<body>
+{%  include 'snippets/header' %}
 {{ _page.content() }}
-</body>
-</html>
+{%  include 'snippets/footer' %}
