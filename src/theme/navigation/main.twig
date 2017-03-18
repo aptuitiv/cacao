@@ -10,11 +10,8 @@
                 {% endif %}
             {% endif %}
             {# ASSIGN SUB MENU ITEM CLASS #}
-            {% set class = "Dropdown-item" %}
-            {% if item.link.class %}
-                {% set class = class ~ ' ' ~ item.link.class %}
-            {% endif %}
-            <li class="{{ class }}">
+            {% set class = "Dropdown-item " ~ item.link.class %}
+            <li class="{{ class|trim }}">
                 {# ASSIGN SUB MENU LINK CLASS #}
                 {% set item.link.class = item.link.class ~ " Dropdown-link" %}
                 {% if item.subItems %}
@@ -41,14 +38,11 @@
 <ul{{menu.class.attr}}{{ menu.id.attr }}>
     {% for item in items %}
         {# ASSIGN MENU ITEM CLASS #}
-        {% set class = "MainNav-item" %}
+        {% set class = "MainNav-item " ~ item.link.class %}
         {% if item.subItems %}
             {% set class = class ~ " Dropdown" %}
         {% endif %}
-        {% if item.link.class %}
-            {% set class = class ~ ' ' ~ item.link.class %}
-        {% endif %}
-        <li class="{{ class }}">
+        <li class="{{ class|trim }}">
             {# ASSIGN MENU LINK CLASS #}
             {% set item.link.class = item.link.class ~ ' MainNav-link' %}
             {% if item.subItems %}
