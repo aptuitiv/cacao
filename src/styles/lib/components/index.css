@@ -12,6 +12,7 @@
 @import './media';
 @import './message';
 @import './navigation';
+@import './pagination';
 @import './selectinput';
 @import './textinput';
 @import './triangle';
