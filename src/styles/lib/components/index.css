@@ -2,6 +2,7 @@
 @import './button';
 @import './constrain';
 @import './container';
+@import './content';
 @import './flexembed';
 @import './footer';
 @import './form';
