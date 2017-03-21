@@ -1,0 +1,26 @@
+{# Macro that handles building each "tree" of the navigation menu. #}
+{% macro menu_items(items) %}
+    {% for item in items %}
+        {# ASSIGN MENU ITEM CLASS #}
+        {% set class = "FooterNav-item " ~ item.link.class %}
+        <li class="{{ class|trim }}">
+            {# ASSIGN MENU LINK CLASS #}
+            {% set item.link.class = item.link.class ~ ' FooterNav-link' %}
+            {{ item.link.tag }}
+            {% if item.subItems %}
+                <ul>
+                    {% import _self as macros %}
+                    {{ macros.menu_items( item.subItems ) }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}
+
+{# Import the macro so that it can be used #}
+{% import _self as macros %}
+
+{# Build the navigation menu #}
+<ul class="FooterNav">
+    {{ macros.menu_items( items ) }}
+</ul>
