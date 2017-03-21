@@ -25,8 +25,17 @@
         text-align: left;
     }
 
+    .MainNav-item:first-child {
+        padding-top: 10px;
+    }
+
+    .MainNav-item:last-child {
+        padding-bottom: 10px;
+    }
+
     .MainNav-link {
         display: block;
+        padding: .8em 1.5rem;
     }
 
     .MainNav-link.is-dropdown::after {
