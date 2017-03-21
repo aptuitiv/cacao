@@ -8,7 +8,7 @@
 
 :root {
     --FooterNav-fontSize: 15px;
-    --FooterNav-lineHeight: 1.5;
+    --FooterNav-lineHeight: 1;
     --FooterNav-link-color: #333;
     --FooterNav-link-colorHover: #000;
 }
@@ -32,12 +32,14 @@
  */
 
 .FooterNav-item {
+    border-left: 1px solid var(--FooterNav-link-color);
     box-sizing: border-box;
     display: inline-block;
-    margin-left: 1em;
+    padding: 0 20px;
 }
 
 .FooterNav-item:first-child {
+    border-left: none;
     margin-left: 0;
 }
 
@@ -54,5 +56,5 @@
 
 .FooterNav-link:hover {
     color: var(--FooterNav-link-colorHover);
-    text-decoration: none;
+    text-decoration: underline;
 }
