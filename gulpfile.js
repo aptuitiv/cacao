@@ -1,6 +1,6 @@
 var config = require('./config');
+var globWatcher = require('glob-watcher');
 var gulp = require('gulp');
-var gulpBatch = require('gulp-batch');
 var gulpCached = require('gulp-cached');
 var gulpConcat = require('gulp-concat');
 var gulpConnect = require('gulp-connect');
@@ -17,6 +17,7 @@ var gulpUglify = require('gulp-uglify');
 var gulpUsing = require('gulp-using');
 var mergeStream = require('merge-stream');
 var requireGlob = require('require-glob');
+var runSequence = require('run-sequence');
 
 /**
  * Utilities
@@ -185,38 +186,32 @@ gulp.task('theme', function() {
  */
 
 gulp.task('watch', function () {
-    var watchOpts = {};
-
     function flatten(prev, current) {
         return prev.concat(current.src);
     }
 
-    // copy static assets
+    // Copy static assets
     var staticFiles = config.copy.reduce(flatten, []);
-    gulp.watch(staticFiles, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start('copy', cb);
-    }));
-    // images
-    gulp.watch(config.images.src, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start('images', cb);
-    }));
-    // nunjucks
-    gulp.watch(config.nunjucks.watch, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start('nunjucks', cb);
-    }));
-    // scripts
+    globWatcher(staticFiles, function(cb) {
+        runSequence('copy', cb);
+    });
+    // Images
+    globWatcher(config.images.src, function(cb) {
+        runSequence('images', cb);
+    });
+    // Scripts
     var scriptFiles = config.scripts.reduce(flatten, []);
-    gulp.watch(scriptFiles, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start('scripts', cb);
-    }));
-    // styles
-    gulp.watch(config.styles.watch, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start(['styles'], cb);
-    }));
+    globWatcher(scriptFiles, function(cb) {
+        runSequence('scripts', cb);
+    });
+    // Styles
+    globWatcher(config.styles.watch, function(cb) {
+        runSequence('styles', cb);
+    });
     // Theme
-    gulp.watch(config.theme.src, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start(['theme'], cb);
-    }));
+    globWatcher(config.theme.src, function(cb) {
+        runSequence('theme', cb);
+    });
 });
 
 /**
