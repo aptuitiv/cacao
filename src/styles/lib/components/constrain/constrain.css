@@ -59,6 +59,10 @@
     padding-bottom: 62.5%;
 }
 
+.Constrain--5by3 {
+    padding-bottom: 60%;
+}
+
 .Constrain--16by9 {
     padding-bottom: 56.25%;
 }
