@@ -157,7 +157,11 @@ gulp.task('styles', ['stylelint'], function () {
 
 var stylelintOpts = {};
 
-var bemlinterOpts = {preset: 'suit'};
+/* utilitySelectors just like https://github.com/postcss/postcss-bem-linter/blob/master/lib/preset-patterns.js but with "xs-" added in. */
+var bemlinterOpts = {
+    preset: 'suit',
+    utilitySelectors: /^\.u-(xs-|sm-|md-|lg-)?(?:[a-z0-9][a-zA-Z0-9]*)+$/
+};
 
 gulp.task('stylelint', function () {
     return gulp.src(config.stylelint.src)
