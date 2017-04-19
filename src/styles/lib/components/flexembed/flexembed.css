@@ -35,20 +35,37 @@
  * Modifiers: aspect ratios
  */
 
-.FlexEmbed-ratio--3by1 {
-    padding-bottom: 33.333333%;
+.FlexEmbed-ratio--5by4 {
+    padding-bottom: 80%;
 }
 
-.FlexEmbed-ratio--2by1 {
-    padding-bottom: 50%;
+.FlexEmbed-ratio--4by3 {
+    padding-bottom: 75%;
+}
+
+.FlexEmbed-ratio--3by2 {
+    padding-bottom: 66.66667%;
+}
+
+.FlexEmbed-ratio--8by5,
+.FlexEmbed-ratio--16by10 {
+    padding-bottom: 62.5%;
+}
+
+.FlexEmbed-ratio--5by3 {
+    padding-bottom: 60%;
 }
 
 .FlexEmbed-ratio--16by9 {
     padding-bottom: 56.25%;
 }
 
-.FlexEmbed-ratio--4by3 {
-    padding-bottom: 75%;
+.FlexEmbed-ratio--2by1 {
+    padding-bottom: 50%;
+}
+
+.FlexEmbed-ratio--3by1 {
+    padding-bottom: 33.333333%;
 }
 
 /**

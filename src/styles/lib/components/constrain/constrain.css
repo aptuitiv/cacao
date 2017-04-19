@@ -67,6 +67,14 @@
     padding-bottom: 56.25%;
 }
 
+.Constrain--2by1 {
+    padding-bottom: 50%;
+}
+
+.Constrain--3by1 {
+    padding-bottom: 33.333333%;
+}
+
 /* Crop gravities
    ========================================================================== */
 
