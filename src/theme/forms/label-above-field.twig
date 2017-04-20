@@ -3,13 +3,14 @@
     {% if field.fieldType != "hidden" %}
         {% set field.class = field.class|replace({"error": "is-invalid"}) %}
         <div class="u-margBottom2">
-            {% set field.label.class = field.label.class ~ ' FormLabel' %}
+            {% set field.label.class = field.label.class ~ ' FormLabel FormLabel--block' %}
             {% if field.isRequired %}
+                {% set field.required = true %}
                 {% set field.label.text = field.label.text ~ ' <span class="FormRequired">*</span>' %}
             {% endif %}
             {{ field.label.tag }}
             {% if field.description %}<p class="u-margBottom0">{{ field.description }}</p>{% endif %}
-            {% if field.fieldType == 'text' %}
+            {% if field.fieldType in ['email', 'text', 'url'] %}
                 {% set field.class = field.class ~ ' TextInput u-sizeFull' %}
                 {{ field.tag }}
             {% elseif field.fieldType == 'textarea' %}

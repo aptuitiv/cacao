@@ -5,3 +5,7 @@
 .FormLabel {
     font-weight: bold;
 }
+
+.FormLabel--block {
+    display: block;
+}
