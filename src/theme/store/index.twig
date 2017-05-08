@@ -1,0 +1,13 @@
+<div class="Grid Grid--withGutter">
+{% for category in categories %}
+    <div class="Grid-cell u-size1of3 u-lg-size1of2 u-md-sizeFull u-margBottom2 u-textCenter">
+        {% set text = category.categoryName %}
+        {% if category.image %}
+            {% set category.image.alt = category.categoryName %}
+            {% set category.image.class = 'u-imgFull' %}
+            {% set text = category.image.tag %}
+        {% endif %}
+        <a href="{{ category.url }}">{{ text }}</a>
+    </div>
+{% endfor %}
+</div>

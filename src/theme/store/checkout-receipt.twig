@@ -1,0 +1,132 @@
+{% macro productOptions(options) %}
+    {% for option in options %}
+        <div><b>{{ option.label }}:</b>
+            {% if option.value is iterable %}
+                {{ option.value|join('<br>') }}
+            {% else %}
+                {% if option.image %}
+                    <a href="{{ option.image.src }}">{{ option.value }}</a>
+                    {{ option.image.tag }}
+                {% elseif option.file %}
+                    <a href="{{ option.file.src }}">{{ option.value }}</a>
+                {% else %}
+                    {{ option.value }}
+                {% endif %}
+            {% endif %}
+        </div>
+    {% endfor %}
+{% endmacro %}
+
+{% import _self as macros %}
+
+<h1>Checkout Complete - Thank You</h1>
+
+<ul class="List List--arrow">
+    <li>Shopping Cart</li>
+    <li>Shipping Address</li>
+    <li>Billing &amp; Payment</li>
+    <li>Confirmation</li>
+    <li class="u-weightBold">Receipt</li>
+</ul>
+<p>Thank you for your order.  You will receive an e-mail confirmation shortly  and will be contacted again when your order has shipped.  Please print this page for your records.</p>
+<h2>Products</h2>
+
+<table cellspacing="0" class="Table Table--themed">
+    <thead>
+    <tr>
+        <th class="u-size2of3">Item</td>
+        <th class="u-size1of10 u-textCenter">Price</td>
+        <th class="u-size1of10 u-textCenter">Quantity</td>
+        <th class="u-size1of5 u-textRight">Total</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for product in receipt.cart.products %}
+    <tr>
+        <td>
+            {% if product.images|length > 0 %}
+                <div class="Grid">
+                    <div class="u-size1of6">
+                        {% set img = attribute(product.images|first, 'image') %}
+                        {% set img.small.alt = product.productName %}
+                        {% set img.small.class = 'u-sizeFull' %}
+                        <a href="{{ product.url }}">{{ img.small.tag }}</a>
+                    </div>
+                    <div class="u-size5of6">
+                        <div class="u-gutters2">
+                            <a href="{{ product.url }}" class="u-weightBold">{{ product.productName }}</a>
+                            {{ macros.productOptions(product.options) }}
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <a href="{{ product.url }}" class="u-weightBold">{{ product.productName }}</a>
+                {{ macros.productOptions(product.options) }}
+            {% endif %}
+        </td>
+        <td class="u-textCenter">
+            {{ product.currentPrice.value }}{% if product.pricePerUnit is defined && product.pricePerUnit != "None" %} / {{ product.pricePerUnit }}{% endif %}
+        </td>
+        <td class="u-textCenter">
+            {{ product.quantityTotal.withFraction }}
+        </td>
+        <td class="u-textRight">{{ product.totalPrice.value }}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <td class="u-textRight" colspan="3">Subtotal: </td>
+        <td class="u-textRight">{{ receipt.cart.subtotal }}</td>
+    </tr>
+    {% if cart.coupons %}
+        <tr>
+            <td class="u-textRight" colspan="4">Subtotal</td>
+            <td>{{ cart.cartTotalBeforeDiscounts.value }}</td>
+        </tr>
+        {% for coupon in cart.coupons %}
+            <tr>
+                <td colspan="4">{{ coupon.name }} ({{ coupon.code }})</td>
+                <td>-{{ coupon.savingsValue }}</td>
+            </tr>
+        {% endfor %}
+    {% endif %}
+
+    <tr>
+        <td class="u-textRight" colspan="3">Shipping: </td>
+        <td class="u-textRight">{{ receipt.cart.shipping.total }}</td>
+    </tr>
+    <tr>
+        <td class="u-textRight" colspan="3">Tax: </td>
+        <td class="u-textRight">{{ receipt.cart.taxes.total }}</td>
+    </tr>
+    <tr>
+        <td class="u-textRight" colspan="3">Total: </td>
+        <td class="u-textRight">{{ receipt.cart.total }}</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Shipping Address</h2>
+<p>
+    {{ receipt.shipping.firstName }} {{ receipt.shipping.lastName }}<br />
+    {{ receipt.shipping.address }}<br />
+
+    {{ receipt.shipping.city }}, {{ receipt.shipping.state }} {{ receipt.shipping.zipCode }}<br />
+    {{ receipt.shipping.country }}<br />
+    {{ receipt.shipping.phone }}<br />
+    {{ receipt.shipping.email }}</p>
+
+<h2>Billing Address</h2>
+<p>
+    {{ receipt.billing.firstName }} {{ receipt.billing.lastName }}<br />
+    {{ receipt.billing.address }}<br />
+
+    {{ receipt.billing.city }}, {{ receipt.billing.state }} {{ receipt.billing.zipCode }}<br />
+    {{ receipt.billing.country }}<br />
+    {{ receipt.billing.phone }}<br />
+    {{ receipt.billing.email }}</p>
+
+<h2>Credit Card</h2>
+<p>
+    {{ receipt.creditCard.type }}<br />
+    {{ receipt.creditCard.number }}<br />
+    {{ receipt.creditCard.expirationMonth }}/{{ receipt.creditCard.expirationYear }}</p>
