@@ -1,0 +1,7 @@
+<h1>Blog</h1>
+{% if posts %}
+    {% for post in posts %}
+        {% include 'blog/post-list-item' %}
+    {% endfor %}
+    {% include 'snippets/pagination' %}
+{% endif %}
