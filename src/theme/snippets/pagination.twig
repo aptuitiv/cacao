@@ -13,5 +13,9 @@
         {% if pagination.nextUrl %}
             | <a class="Pagination-item Pagination-item--next" href="{{ pagination.nextUrl }}" title="Next Page">Next &gt;</a>
         {% endif %}
+        {% if pagination.current > 1 %}
+            {% set _page.title = _page.title ~ ' - Page ' %}
+            {% set _page.title = _page.title ~ pagination.current %}
+        {% endif %}
     </div>
 {% endif %}
