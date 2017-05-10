@@ -13,6 +13,9 @@
             {% if field.fieldType in ['email', 'text', 'url'] %}
                 {% set field.class = field.class ~ ' TextInput u-sizeFull' %}
                 {{ field.tag }}
+            {%  elseif field.fieldType in ['date'] %}
+                {% set field.class = field.class ~ ' TextInput' %}
+                {{ field.tag }}
             {% elseif field.fieldType == 'textarea' %}
                 {% if field.size == 'small' %}
                     {% set field.rows = 2 %}
