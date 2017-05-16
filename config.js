@@ -49,7 +49,10 @@ module.exports = {
         },
         {
             name: 'forms.js',
-            src: 'node_modules/jquery-validation/dist/jquery.validate.js',
+            src: [
+                'node_modules/jquery-validation/dist/jquery.validate.js',
+                'node_modules/jquery-form/src/jquery.form.js'
+            ],
             dest: destDir + '/js'
         }
     ],

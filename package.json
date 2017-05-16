@@ -38,6 +38,7 @@
     "gulp-remember": "^0.3.0",
     "gulp-sequence": "^0.4.4",
     "gulp-uglify": "^2.0.0",
+    "jquery-form": "^4.2.1",
     "merge-stream": "^1.0.0",
     "pixrem": "^3.0.0",
     "postcss-bem-linter": "^2.3.0",
