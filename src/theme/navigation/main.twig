@@ -22,6 +22,7 @@
                 {% if item.subItems %}
                     {# Set the item as the first sub item's parent to be used to optionaly duplicate it as the first item in the dropdown #}
                     {% set item.subItems.0.parent = item %}
+                    {% import _self as macros %}
                     {{ macros.menu_sub_items(item.subItems) }}
                 {% endif %}
             </li>
