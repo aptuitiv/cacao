@@ -2,6 +2,7 @@ var config = require('./config');
 var globWatcher = require('glob-watcher');
 var gulp = require('gulp');
 var gulpCached = require('gulp-cached');
+var gulpChangedInPlace = require('gulp-changed-in-place');
 var gulpConcat = require('gulp-concat');
 var gulpConnect = require('gulp-connect');
 var gulpData = require('gulp-data');
@@ -180,7 +181,7 @@ gulp.task('stylelint', function () {
 
 gulp.task('theme', function() {
     return gulp.src(config.theme.src)
-        .pipe(gulpCached('Theme'))
+        .pipe(gulpChangedInPlace())
         .pipe(gulpUsing({prefix: 'Theme: '}))
         .pipe(gulp.dest(config.theme.dest))
 });
