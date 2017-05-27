@@ -9,6 +9,12 @@
     "type": "git",
     "url": "git://github.com/aptuitiv/cacao.git"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "Explorer >= 8",
+    "Android >= 4.3"
+  ],
   "dependencies": {
     "autoprefixer": "^7.1.1",
     "cssnano": "^3.4.0",

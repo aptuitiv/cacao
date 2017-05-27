@@ -112,9 +112,6 @@ var processors = [
     require('postcss-color-function'),
     require('postcss-pseudoelements'),
     require('autoprefixer')({
-        browsers: [
-            'last 2 versions', 'Explorer >= 8', 'Android >= 4.3'
-        ],
         remove: false
     }),
     require('pixrem')({rootValue: '62.5%', replace: false}),
