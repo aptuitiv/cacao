@@ -1,0 +1,60 @@
+/* =========================================================================== *\
+    Footer Navigation
+\* =========================================================================== */
+
+
+
+/** @define FooterNav */
+
+:root {
+    --FooterNav-fontSize: 15px;
+    --FooterNav-lineHeight: 1;
+    --FooterNav-link-color: #333;
+    --FooterNav-link-colorHover: #000;
+}
+
+/**
+ * Base menu
+ */
+
+.FooterNav {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: var(--FooterNav-fontSize);
+    line-height: var(--FooterNav-lineHeight);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Items
+ */
+
+.FooterNav-item {
+    border-left: 1px solid var(--FooterNav-link-color);
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.FooterNav-item:first-child {
+    border-left: none;
+    margin-left: 0;
+}
+
+/**
+ * Links
+ */
+
+.FooterNav-link {
+    box-sizing: border-box;
+    color: var(--FooterNav-link-color);
+    display: block;
+    text-decoration: none;
+}
+
+.FooterNav-link:hover {
+    color: var(--FooterNav-link-colorHover);
+    text-decoration: underline;
+}

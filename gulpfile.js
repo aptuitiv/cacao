@@ -1,7 +1,8 @@
 var config = require('./config');
+var globWatcher = require('glob-watcher');
 var gulp = require('gulp');
-var gulpBatch = require('gulp-batch');
 var gulpCached = require('gulp-cached');
+var gulpChangedInPlace = require('gulp-changed-in-place');
 var gulpConcat = require('gulp-concat');
 var gulpConnect = require('gulp-connect');
 var gulpData = require('gulp-data');
@@ -17,6 +18,7 @@ var gulpUglify = require('gulp-uglify');
 var gulpUsing = require('gulp-using');
 var mergeStream = require('merge-stream');
 var requireGlob = require('require-glob');
+var runSequence = require('run-sequence');
 
 /**
  * Utilities
@@ -110,9 +112,6 @@ var processors = [
     require('postcss-color-function'),
     require('postcss-pseudoelements'),
     require('autoprefixer')({
-        browsers: [
-            'last 2 versions', 'Explorer >= 8', 'Android >= 4.3'
-        ],
         remove: false
     }),
     require('pixrem')({rootValue: '62.5%', replace: false}),
@@ -156,7 +155,11 @@ gulp.task('styles', ['stylelint'], function () {
 
 var stylelintOpts = {};
 
-var bemlinterOpts = {preset: 'suit'};
+/* utilitySelectors just like https://github.com/postcss/postcss-bem-linter/blob/master/lib/preset-patterns.js but with "xs-" added in. */
+var bemlinterOpts = {
+    preset: 'suit',
+    utilitySelectors: /^\.u-(xs-|sm-|md-|lg-)?(?:[a-z0-9][a-zA-Z0-9]*)+$/
+};
 
 gulp.task('stylelint', function () {
     return gulp.src(config.stylelint.src)
@@ -170,38 +173,47 @@ gulp.task('stylelint', function () {
 });
 
 /**
+ * Theme files
+ */
+
+gulp.task('theme', function() {
+    return gulp.src(config.theme.src)
+        .pipe(gulpChangedInPlace())
+        .pipe(gulpUsing({prefix: 'Theme: '}))
+        .pipe(gulp.dest(config.theme.dest))
+});
+
+/**
  * Watch files for changes
  */
 
 gulp.task('watch', function () {
-    var watchOpts = {};
-
     function flatten(prev, current) {
         return prev.concat(current.src);
     }
 
-    // copy static assets
+    // Copy static assets
     var staticFiles = config.copy.reduce(flatten, []);
-    gulp.watch(staticFiles, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start('copy', cb);
-    }));
-    // images
-    gulp.watch(config.images.src, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start('images', cb);
-    }));
-    // nunjucks
-    gulp.watch(config.nunjucks.watch, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start('nunjucks', cb);
-    }));
-    // scripts
+    globWatcher(staticFiles, function(cb) {
+        runSequence('copy', cb);
+    });
+    // Images
+    globWatcher(config.images.src, function(cb) {
+        runSequence('images', cb);
+    });
+    // Scripts
     var scriptFiles = config.scripts.reduce(flatten, []);
-    gulp.watch(scriptFiles, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start('scripts', cb);
-    }));
-    // styles
-    gulp.watch(config.styles.watch, watchOpts, gulpBatch(function (e, cb) {
-        gulp.start(['styles'], cb);
-    }));
+    globWatcher(scriptFiles, function(cb) {
+        runSequence('scripts', cb);
+    });
+    // Styles
+    globWatcher(config.styles.watch, function(cb) {
+        runSequence('styles', cb);
+    });
+    // Theme
+    globWatcher(config.theme.src, function(cb) {
+        runSequence('theme', cb);
+    });
 });
 
 /**
@@ -209,7 +221,7 @@ gulp.task('watch', function () {
  */
 
 gulp.task('connect', function () {
-    gulpConnect.server({root: config.root.dest});
+    gulpConnect.server({root: config.siteRoot});
 });
 
 /**
@@ -217,7 +229,7 @@ gulp.task('connect', function () {
  */
 
 var buildTasks = [
-    'copy', 'images', 'nunjucks', 'scripts', 'styles', 'stylelint'
+    'copy', 'images', 'scripts', 'styles', 'stylelint', 'theme'
 ];
 
 gulp.task('build', function (cb) {
@@ -227,4 +239,3 @@ gulp.task('build', function (cb) {
 gulp.task('default', function (cb) {
     gulpSequence(buildTasks, 'watch', 'connect', cb);
 });
-

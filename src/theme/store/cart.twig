@@ -1,0 +1,123 @@
+{% macro productOptions(options) %}
+    {% for option in options %}
+        <div><b>{{ option.label }}:</b>
+            {% if option.value is iterable %}
+                {{ option.value|join('<br>') }}
+            {% else %}
+                {% if option.image %}
+                    <a href="{{ option.image.src }}">{{ option.value }}</a>
+                    {{ option.image.tag }}
+                {% elseif option.file %}
+                    <a href="{{ option.file.src }}">{{ option.value }}</a>
+                {% else %}
+                    {{ option.value }}
+                {% endif %}
+            {% endif %}
+        </div>
+    {% endfor %}
+{% endmacro %}
+
+{% import _self as macros %}
+
+{% if cart.products %}
+
+    {% if cart.updateForm.errors %}
+        <div class="FormError">
+            <ul class="FormError-list">
+                {% for error in cart.updateForm.errors %}
+                    <li class="FormError-listItem">{{ error.message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    {{ cart.updateForm.openTag }}
+
+    <table cellspacing="0" class="Table Table--themed">
+        <thead>
+            <tr>
+                <th class="u-size1of10 u-textCenter">Remove</td>
+                <th class="u-size2of3">Item</td>
+                <th class="u-size1of10 u-textCenter">Price</td>
+                <th class="u-size1of10 u-textCenter">Quantity</td>
+                <th class="u-size1of10 u-textCenter">Total</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product in cart.products %}
+        <tr>
+            <td class="u-textCenter"><label>{{ product.fields.remove.tag }}</label></td>
+            <td>
+                {% if product.images|length > 0 %}
+                    <div class="Grid">
+                        <div class="u-size1of6">
+                            {% set img = attribute(product.images|first, 'image') %}
+                            {% set img.small.alt = product.productName %}
+                            {% set img.small.class = 'u-sizeFull' %}
+                            <a href="{{ product.url }}">{{ img.small.tag }}</a>
+                        </div>
+                        <div class="u-size5of6">
+                            <div class="u-gutters2">
+                                <a href="{{ product.url }}" class="u-weightBold">{{ product.productName }}</a>
+                                {{ macros.productOptions(product.options) }}
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <a href="{{ product.url }}" class="u-weightBold">{{ product.productName }}</a>
+                    {{ macros.productOptions(product.options) }}
+                {% endif %}
+            </td>
+            <td class="u-textCenter">{{ product.currentPrice.value }}{% if product.pricePerUnit is defined && product.pricePerUnit != "None" %} / {{ product.pricePerUnit }}{% endif %}</td>
+            <td>
+                {% set product.fields.quantity.class = product.fields.quantity.class ~ ' TextInput u-sizeFull' %}
+                {{ product.fields.quantity.tag }}
+            </td>
+            <td class="u-textCenter">{{ product.totalPrice.value }}</td>
+        </tr>
+        {% endfor %}
+        {% if cart.coupons %}
+            <tr>
+                <td class="u-textRight" colspan="4">Subtotal</td>
+                <td>{{ cart.cartTotalBeforeDiscounts.value }}</td>
+            </tr>
+            {% for coupon in cart.coupons %}
+                <tr>
+                    <td colspan="4">{{ coupon.name }} ({{ coupon.code }})</td>
+                    <td>-{{ coupon.savingsValue }}</td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+
+        <tr>
+            <td colspan="2"><button class="Button Button--sm" type="submit">Update Cart</button></td>
+            <td class="u-textRight" colspan="2">Total: </td>
+            <td>{{ cart.cartTotal.value }}</td>
+        </tr>
+        </tbody>
+    </table>
+    {{ cart.updateForm.closeTag }}
+
+{#
+    {{ cart.updateForm.tag.open }}
+    <div style="float: right; width: 390px; margin: 20px 0; text-align: right;">
+        Have a coupon? {{ cart.updateForm.fields.coupon.tag }} <input type="submit" value="Apply" class="light small"/>
+    </div>
+    {{ cart.updateForm.tag.close }}
+#}
+{#
+    <div class="u-textRight"><a href="{{ cart.urls.checkout }}" class="Button Button--lg"><strong>Checkout &raquo;</strong></a></div>
+#}
+
+    {{ cart.paypalStandardForm.openTag }}
+        {% for field in cart.paypalStandardForm.fields %}
+            {{ field.tag }}
+        {% endfor %}
+        <div class="u-textRight"><button type="submit" class="Button Button--lg"><strong>Checkout with PayPal &raquo;</strong></a></div>
+    {{ cart.paypalStandardForm.closeTag }}
+
+{% else %}
+    <p>Your shopping cart is empty.</p>
+    <p><a href="{{ cart.urls.continueShopping }}" class="Button">Continue shopping</a></p>
+{% endif %}
+

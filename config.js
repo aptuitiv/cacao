@@ -1,34 +1,34 @@
-var buildDest = 'dist';
-var siteRoot = '';
+// The base directory to build into
+var buildRoot = 'build';
+// The directory within the build root where theme files (images, css, js) will be located
+var themeRoot = 'theme/custom';
+// The source directory to build from
 var srcDir = 'src';
-var destDir = buildDest + siteRoot;
+// The full destination folder where assets (images, css, js) will be built into
+var destDir = buildRoot + '/' + themeRoot;
 
 module.exports = {
 
-    root: {
-        dest: buildDest,
-        src: srcDir,
-        server: siteRoot
-    },
+    siteRoot: buildRoot,
 
     copy: [
         {
-            dest: destDir + '/layout/magnific',
+            dest: destDir + '/magnific',
             src: ['node_modules/magnific-popup/dist/**/*']
         },
         {
-            dest: destDir + '/layout/slick',
+            dest: destDir + '/slick',
             src: ['node_modules/slick-carousel/slick/**/*']
         }
     ],
 
     images: {
-        dest: destDir + '/layout/images',
-        src: srcDir + '/images/**/*.{png,jpg,gif}'
+        dest: destDir + '/images',
+        src: srcDir + '/images/**/*.{png,jpg,gif,svg}'
     },
 
     nunjucks: {
-        dest: destDir,
+        dest: buildRoot,
         src: [srcDir + '/site'],
         pages: [srcDir + '/site/pages/**/*.html'],
         templates: [srcDir + '/site/templates'],
@@ -45,24 +45,31 @@ module.exports = {
                 'node_modules/ap_drilldown_plugin/ap-drilldown-menu.min.js',
                 srcDir + '/scripts/index.js'
             ],
-            dest: destDir + '/layout/js'
+            dest: destDir + '/js'
         },
         {
             name: 'forms.js',
-            src: 'node_modules/jquery-validation/dist/jquery.validate.js',
-            dest: destDir + '/layout/js'
+            src: [
+                'node_modules/jquery-validation/dist/jquery.validate.js',
+                'node_modules/jquery-form/src/jquery.form.js'
+            ],
+            dest: destDir + '/js'
         }
     ],
 
     styles: {
-        dest: destDir + '/layout/css',
+        dest: destDir + '/css',
         src: [srcDir + '/styles/index.css'],
         watch: [srcDir + '/styles/**/*.css']
     },
 
     stylelint: {
         src: [srcDir + '/styles/**/*.css']
+    },
+
+    theme: {
+        dest: destDir + '/templates',
+        src: srcDir + '/theme/**/*.twig'
     }
 
 };
-

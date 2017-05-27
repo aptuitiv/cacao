@@ -1,0 +1,146 @@
+{% macro productOptions(options) %}
+    {% for option in options %}
+        <div><b>{{ option.label }}:</b>
+            {% if option.value is iterable %}
+                {{ option.value|join('<br>') }}
+            {% else %}
+                {% if option.image %}
+                    <a href="{{ option.image.src }}">{{ option.value }}</a>
+                    {{ option.image.tag }}
+                {% elseif option.file %}
+                    <a href="{{ option.file.src }}">{{ option.value }}</a>
+                {% else %}
+                    {{ option.value }}
+                {% endif %}
+            {% endif %}
+        </div>
+    {% endfor %}
+{% endmacro %}
+
+{% import _self as macros %}
+
+<h1>Checkout</h1>
+{% if review.form.errors %}
+    <div class="FormError">
+        <p>There was a problem. Please correct the issues below</p>
+        <ul class="FormError-list">
+            {% for error in review.form.errors %}
+                <li class="FormError-listItem">{{ error.message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+<ul class="List List--arrow">
+    <li><a href="{{ review.urls.cart }}">Shopping Cart</a></li>
+    <li><a href="{{ review.urls.checkoutShipping }}">Shipping Address</a></li>
+    <li><a href="{{ review.urls.checkingBilling }}">Billing &amp; Payment</a></li>
+    <li class="u-weightBold">Confirmation</li>
+    <li>Receipt</li>
+</ul>
+<p>Please confirm that the information below is correct. Note that <span class="error">your order is not complete</span> until you click the "Submit My Order" button at the bottom of the page</p>
+<h2>Products</h2>
+
+<table cellspacing="0" class="Table Table--themed">
+    <thead>
+    <tr>
+        <th class="u-size2of3">Item</td>
+        <th class="u-size1of10 u-textCenter">Price</td>
+        <th class="u-size1of10 u-textCenter">Quantity</td>
+        <th class="u-size1of5 u-textRight">Total</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for product in review.cart.products %}
+        <tr>
+            <td>
+                {% if product.images|length > 0 %}
+                    <div class="Grid">
+                        <div class="u-size1of6">
+                            {% set img = attribute(product.images|first, 'image') %}
+                            {% set img.small.alt = product.productName %}
+                            {% set img.small.class = 'u-sizeFull' %}
+                            <a href="{{ product.url }}">{{ img.small.tag }}</a>
+                        </div>
+                        <div class="u-size5of6">
+                            <div class="u-gutters2">
+                                <a href="{{ product.url }}" class="u-weightBold">{{ product.productName }}</a>
+                                {{ macros.productOptions(product.options) }}
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <a href="{{ product.url }}" class="u-weightBold">{{ product.productName }}</a>
+                    {{ macros.productOptions(product.options) }}
+                {% endif %}
+            </td>
+            <td class="u-textCenter">
+                {{ product.currentPrice.value }}{% if product.pricePerUnit is defined && product.pricePerUnit != "None" %} / {{ product.pricePerUnit }}{% endif %}
+            </td>
+            <td class="u-textCenter">
+                {{ product.quantityTotal.withFraction }}
+            </td>
+            <td class="u-textRight">{{ product.totalPrice.value }}</td>
+        </tr>
+    {% endfor %}
+    <tr>
+        <td class="u-textRight" colspan="3">Subtotal: </td>
+        <td class="u-textRight">{{ review.cart.subtotal }}</td>
+    </tr>
+    {% if cart.coupons %}
+        <tr>
+            <td class="u-textRight" colspan="4">Subtotal</td>
+            <td>{{ cart.cartTotalBeforeDiscounts.value }}</td>
+        </tr>
+        {% for coupon in cart.coupons %}
+            <tr>
+                <td colspan="4">{{ coupon.name }} ({{ coupon.code }})</td>
+                <td>-{{ coupon.savingsValue }}</td>
+            </tr>
+        {% endfor %}
+    {% endif %}
+
+    <tr>
+        <td class="u-textRight" colspan="3">Shipping: </td>
+        <td class="u-textRight">{{ review.cart.shipping.total }}</td>
+    </tr>
+    <tr>
+        <td class="u-textRight" colspan="3">Tax: </td>
+        <td class="u-textRight">{{ review.cart.taxes.total }}</td>
+    </tr>
+    <tr>
+        <td class="u-textRight" colspan="3">Total: </td>
+        <td class="u-textRight">{{ review.cart.total }}</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<h2>Shipping Address</h2>
+<p><a href="{{ review.urls.checkoutShipping }}">Edit</a><br />
+    {{ review.shipping.firstName }} {{ review.shipping.lastName }}<br />
+    {{ review.shipping.address }}<br />
+
+    {{ review.shipping.city }}, {{ review.shipping.state }} {{ review.shipping.zipCode }}<br />
+    {{ review.shipping.country }}<br />
+    {{ review.shipping.phone }}<br />
+    {{ review.shipping.email }}</p>
+
+<h2>Billing Address</h2>
+<p><a href="{{ review.urls.checkoutBilling }}">Edit</a><br />
+    {{ review.billing.firstName }} {{ review.billing.lastName }}<br />
+    {{ review.billing.address }}<br />
+
+    {{ review.billing.city }}, {{ review.billing.state }} {{ review.billing.zipCode }}<br />
+    {{ review.billing.country }}<br />
+    {{ review.billing.phone }}<br />
+    {{ review.billing.email }}</p>
+
+<h2>Credit Card</h2>
+<p><a href="{{ review.urls.checkoutBilling }}">Edit</a><br />
+    {{ review.creditCard.type }}<br />
+    {{ review.creditCard.number }}<br />
+    {{ review.creditCard.expirationMonth }}/{{ review.creditCard.expirationYear }}</p>
+
+{{ review.form.openTag }}
+<p><button type="submit" class="Button Button--lg">Submit My Order</button></p>
+{{ review.form.closeTag }}

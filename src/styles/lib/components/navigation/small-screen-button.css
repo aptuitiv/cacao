@@ -26,6 +26,7 @@
 @media (--c-bp-sm) {
     .SmScBtn {
         display: block;
+        width: 100%;
     }
 }
 

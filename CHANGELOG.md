@@ -1,3 +1,33 @@
+## 2.6.0 (May 27, 2017)
+
+* Removed dist folder.
+* Updated packages to latest versions.
+* Included SVG files in the type of images to be processed.
+* Changed build path to 'build' instead of 'dist'.
+* Added theme files and moved all layout files to be built to build/theme/custom.
+* Added Header/Footer as default style components.
+* Updated navigation templates.
+* Added Breadcrumb default style.
+* Added list arrow styles.
+* Updated default button styles.
+* Added pagination styles.
+* Added default footer navigation.
+* Added default Content container styles.
+* Added default background utility style.
+* Added arrange component styles.
+* Added form templates.
+* Updated gulp watch task to use glob-watcher instead of gulp-batch as sometimes gulp-batch would stop recognizing changed files.
+* Added new 5/3 constrain size.
+* Added sidebar navigation.
+* Updated the BEM linter utilitySelector to include “xs-“ as a utility size.
+* Updated Constrain and FlexEmbed ratios to be consistent.
+* Updated form styles.
+* Added blog theme templates.
+* Added store theme templates.
+* Added ColumnList styles to convert an ul/ol list into columns.
+* Added jQuery form plugin as part of the core forms javascript.
+* Removed ap_drilldown_plugin.
+
 ## 2.5.0 (February 12, 2017)
 
 * Changed '0%' to 'auto' for the flex grow utility classes as '0%' was causing issues in some versions of Safari.

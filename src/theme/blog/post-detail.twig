@@ -1,0 +1,52 @@
+<h1>{{ post.postTitle }}</h1>
+
+{# COMMENT FORM SUCCESS OR ERROR #}
+{% if post.commentForm.success %}
+    <p class="FormSuccess">Your comment was successfully submitted. It will be published once we have reviewed it.</p>
+{% endif %}
+{% if post.commentForm.errors %}
+    <div id="errorContainer" class="FormError {% if form.errors is empty %} u-hidden{% endif %}">
+        <p>There was a problem with your submission. Please correct the issues below</p>
+        <ul class="FormError-list">
+            {% for error in post.commentForm.errors %}
+                <li class="FormError-listItem js-serverError">{{ error.message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+
+{# POST CONTENT #}
+<p>{{ post.publishedOnDate }}</p>
+{{ post.content }}
+<p><a href="{{ post.goBackUrl }}">&lt; Back to the blog</a></p>
+
+{# COMMENTS #}
+
+{% if post.comments %}
+    <h2>{{ post.commentCount }}
+        {% if post.commentCount > 1 %}Comments{% else %}Comment{% endif %}
+        on "{{ post.postTitle }}"</h2>
+    {% for comment in post.comments %}
+        <div class="u-margBottom2">
+            {{ comment.anchor.tag }}{{ comment.createdOnDate }} {{ comment.createdOnTime }}<br>
+            {% if comment.name %}
+                {% if comment.website %}
+                    <a href="{{ comment.website|url }}" target="_blank">{{ comment.name }}</a>
+                {% else %}
+                    {{ comment.name }}
+                {% endif %}
+            {% else %}
+                Anonymous
+            {% endif %}
+            says: <br>
+            {{ comment.comments|nl2br }}
+        </div>
+    {% endfor %}
+    <p><strong>Leave a comment</strong></p>
+{% else %}
+    <h2>Comments</h2>
+    <p><strong>Leave the first comment</strong></p>
+{% endif %}
+
+{# COMMENT FORM #}
+{{ post.commentForm.content }}

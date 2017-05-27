@@ -1,0 +1,10 @@
+<div class="u-margBottom2">
+    {% set link = ' <a href="' ~ post.url ~ '">Read more</a>' %}
+    <h2 class="u-margBottom1"><a href="{{ post.url }}">{{ post.postTitle }}</a></h2>
+    <b>{{ post.publishedOnDate }}</b>
+    {% if post.abstract %}
+        {{ post.abstract|inject_html(link) }}
+    {% else %}
+        {{ post.content|truncate_html(400)|inject_html(link) }}
+    {% endif %}
+</div>

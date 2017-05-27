@@ -1,0 +1,68 @@
+{#
+    This navigation template is intended for the scenario where you need to embed one navigation menu
+    into another one where the embeded one will show on smaller screens.
+    An example scenario could be if you have a main navigation menu and a secondary navigation menu in a top bar.
+    On smaller screens you want to show the secondary navigation items as part of the main navigation items after the
+    main items. You could do that by putting the following API tag right before the closing </ul> tag in the main
+    navigation template.
+    {{ _api.navigation.get.key('secondary').template('embeded-navigation').showSubNav('all') }}
+#}
+{# Macro that handles building sub navigation #}
+{% macro menu_sub_items(items) %}
+    <ul class="Dropdown-menu">
+        {% for item in items %}
+            {% if item.parent %}
+                {% if item.link.href != item.parent.link.href %}
+                    {# Duplicate the navigation item for the mobile menu #}
+                    {% set item.parent.link.class = "Dropdown-link" %}
+                    <li class="Dropdown-item Dropdown-item--smallScreen">{{ item.parent.link.tag }}</li>
+                {% endif %}
+            {% endif %}
+            {# ASSIGN SUB MENU ITEM CLASS #}
+            {% set class = "Dropdown-item " ~ item.link.class %}
+            <li class="{{ class|trim }}">
+                {# ASSIGN SUB MENU LINK CLASS #}
+                {% set item.link.class = item.link.class ~ " Dropdown-link" %}
+                {% if item.subItems %}
+                    {% set item.link.class = item.link.class ~ " Dropdown-link--parent js-dropdown" %}
+                {% endif %}
+                {{ item.link.tag }}
+
+                {% if item.subItems %}
+                    {# Set the item as the first sub item's parent to be used to optionaly duplicate it as the first item in the dropdown #}
+                    {% set item.subItems.0.parent = item %}
+                    {% import _self as macros %}
+                    {{ macros.menu_sub_items(item.subItems) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+{# Import the macro so that it can be used #}
+{% import _self as macros %}
+
+
+{% for item in items %}
+    {# ASSIGN MENU ITEM CLASS #}
+    {% set class = "MainNav-item MainNav-item--smallScreen " ~ item.link.class %}
+    {% if item.subItems %}
+        {% set class = class ~ " Dropdown" %}
+    {% endif %}
+    <li class="{{ class|trim }}">
+        {# ASSIGN MENU LINK CLASS #}
+        {% set item.link.class = item.link.class ~ ' MainNav-link' %}
+        {% if item.subItems %}
+            {% set item.link.class = item.link.class ~ ' is-dropdown js-dropdown' %}
+        {% endif %}
+        {{ item.link.tag }}
+
+        {% if item.subItems %}
+            {# Set the item as the first sub item's parent to be used to optionaly duplicate it as the first item in the dropdown #}
+            {% set item.subItems.0.parent = item %}
+
+            {{ macros.menu_sub_items(item.subItems) }}
+        {% endif %}
+    </li>
+{% endfor %}
+

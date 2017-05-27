@@ -1,0 +1,86 @@
+<h1>{{ product.productName }}</h1>
+<div class="Grid Grid--withGutter">
+
+    {% if product.images %}
+        {% set colSize = 'u-size2of3 u-push1of3 u-md-sizeFull u-md-pushNone' %}
+    {% else %}
+        {% set colSize = 'u-sizeFull' %}
+    {% endif %}
+    <div class="Grid-cell {{ colSize }} js-zoomContainer u-posRelative">
+        <div class="u-fontSize5 u-weightBold u-margBottom1">
+            Price:
+            {% if product.orderingOptionsChangePrice %}
+                Starting at
+            {% endif %}
+            {{ product.currentPrice.value }}
+            {% if product.pricePerUnit is defined && product.pricePerUnit != "None" %}
+            / {{ product.pricePerUnit }}
+            {% endif %}
+        </div>
+        {% if product.sku %}
+            <div class="u-margBottom1">SKU: {{ product.sku }}</div>
+        {% endif %}
+        <div class="u-margBottom2">
+            {{ product.orderForm.openTag }}
+            {% for option in product.orderForm.fields.options %}
+                <p>
+                    {{ option.label }}<br>
+                    {{ option.tag }}
+                </p>
+            {% endfor %}
+            {% set product.orderForm.fields.quantity.class = 'TextInput Product-quantity' %}
+            {{ product.orderForm.fields.quantity.tag }}
+            {{ product.orderForm.fields.partialQuantity.tag }}
+            <button type="submit" class="Button">Add to cart</button>
+            {{ product.orderForm.closeTag }}
+        </div>
+        {{ product.description }}
+    </div>
+    {% if product.images %}
+        <div class="Grid-cell u-size1of3 u-pull2of3 u-md-sizeFull u-md-pullNone">
+            <ul class="Product-imageList">
+                {% for image in product.images %}
+                    <li class="Product-imageListItem js-image js-image{{ loop.index }}">
+                        {% set image.image.small.alt = product.productName %}
+                        {% set image.image.small.class = 'Product-image js-imgZoom' %}
+                        {% do image.image.small.set('data-zoom', image.image.large.src) %}
+                        <a href="{{ image.image.large.src }}" class="Product-imageLink js-imgLightbox" title="{{ product.productName }}">{{ image.image.small.tag }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            {% if product.images|length > 1 %}
+                <div class="Grid Grid--withGutterSm">
+                {% for image in product.images %}
+                    <div class="Grid-cell u-size1of4 u-margBottom1">
+                        <div class="Constrain Product-thumb js-imageThumb" data-num="{{ loop.index }}" style="background-image: url('{{ image.image.small.src }}')"></div>
+                    </div>
+                {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+</div>
+
+{% do _page.addJs('drift-zoom/Drift.js'|theme_url, 'footer') %}
+
+{% do _page.addJs('magnific/jquery.magnific-popup.js'|theme_url, 'footer') %}
+{% do _page.addCss('magnific/magnific-popup.css'|theme_url) %}
+
+{% inlinejs group="footer" %}
+$(function() {
+    $('.js-imgLightbox').magnificPopup({type: 'image', gallery: {enabled: true}});
+
+    $('.js-imageThumb').on('mouseover', function() {
+        var num = $(this).data('num');
+        $('.js-image').hide();
+        $('.js-image' + num).show();
+    });
+    $('.js-imgZoom').each(function(i, el) {
+        new Drift(el, {
+            paneContainer: document.querySelector('.js-zoomContainer')
+        });
+    });
+
+});
+
+{% endinlinejs %}

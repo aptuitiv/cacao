@@ -10,6 +10,7 @@
  */
 
 :root {
+    --List-arrow-spacing: .5em;
     --List-barred-spacing: .5em;
     --List-dotted-spacing: .5em;
     --List-gutter-spacing: 2rem;
@@ -32,6 +33,7 @@
  * Creates an inline list with inline items.
  */
 
+.List--arrow,
 .List--inline,
 .List--spaced,
 .List--gutter,
@@ -42,9 +44,32 @@
 .List--spaced > li,
 .List--gutter > li,
 .List--gutterLg > li,
+.List--arrow > li,
 .List--barred > li,
 .List--dotted > li {
     display: inline-block;
+}
+
+/**
+ * Arrow list
+ * Adds arrow between the inline items.
+ * White space will add extra spacing.
+ *
+ * Extends `.List--inline`.
+ */
+
+.List--arrow > li::before {
+    content: '>';
+    margin-left: var(--List-arrow-spacing);
+    margin-right: var(--List-arrow-spacing);
+}
+
+.List--arrow > li.is-first::before,
+.List--arrow > li:first-child::before {
+    content: none;
+    display: none;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /**

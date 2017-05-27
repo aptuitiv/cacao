@@ -1,0 +1,158 @@
+{# Display regular form fields #}
+{% macro buildField(field) %}
+    {% if field.fieldType != "hidden" %}
+        {% set field.class = field.class|replace({"error": "is-invalid"}) %}
+        <div class="u-margBottom2">
+            {% set field.label.class = field.label.class ~ ' FormLabel FormLabel--block' %}
+            {% if field.isRequired %}
+                {% set field.required = true %}
+                {% set field.label.text = field.label.text ~ ' <span class="FormRequired">*</span>' %}
+            {% endif %}
+            {{ field.label.tag }}
+            {% if field.description %}<p class="u-margBottom0">{{ field.description }}</p>{% endif %}
+            {% if field.fieldType in ['email', 'text', 'url'] %}
+                {% set field.class = field.class ~ ' TextInput u-sizeFull' %}
+                {{ field.tag }}
+            {%  elseif field.fieldType in ['date'] %}
+                {% set field.class = field.class ~ ' TextInput' %}
+                {{ field.tag }}
+            {% elseif field.fieldType == 'textarea' %}
+                {% if field.size == 'small' %}
+                    {% set field.rows = 2 %}
+                {% elseif field.size == 'medium' %}
+                    {% set field.rows = 5 %}
+                {% elseif field.size == 'large' %}
+                    {% set field.rows = 10 %}
+                {% endif %}
+                {% set field.class = field.class ~ ' TextInput u-sizeFull' %}
+                {{ field.tag }}
+            {% elseif field.fieldType == 'select' %}
+                <div class="SelectField u-sizeFull">
+                    {{ field.tag }}
+                </div>
+            {% else %}
+                {{ field.tag|replace({"error": "is-invalid"}) }}
+            {% endif %}
+        </div>
+    {% else %}
+        {{ field.tag }}
+    {% endif %}
+{% endmacro %}
+
+{% import _self as macros %}
+
+{# form.success only used if you don't redirect to another page after a successful submission #}
+{% if form.success %}
+    <p class="Message Message--success js-successContainer">Success!</p>
+{% endif %}
+<div class="js-pageForm">
+    {{ form.openTag }}
+
+    {# Show form errors if there are any #}
+    <div id="errorContainer" class="FormError {% if form.errors is empty %} u-hidden{% endif %}">
+        <p>There was a problem with your submission. Please correct the issues below</p>
+        <ul class="FormError-list">
+            {% for error in form.errors %}
+                <li class="FormError-listItem js-serverError">{{ error.message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {# Loop through and show each form field #}
+    <div class="js-fieldsContainer">
+        {% for field in form.fields %}
+            {% if field.isFormField %}
+                {{ macros.buildField(field) }}
+            {% else %}
+                {# Handle field groups separately as they have child fields to loop through #}
+                {% if field.fieldType == "fieldGroup" %}
+                    {% for child in field.childFields %}
+                        {% if child.isFormField %}
+                            {{ macros.buildField(child) }}
+                        {% else %}
+                            {# The child field is not an actual form field or a field group. It could be an HTML, Content or Section Heading field. Just output the tag. #}
+                            {{ child.tag }}
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    {# The field is not an actual form field or a field group. It could be an HTML, Content or Section Heading field. Just output the tag. #}
+                    {{ field.tag }}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    {# Show the CAPTCHA field if necessary #}
+    {% if form.captcha.type == 'recaptcha' %}
+        <div class="u-margBottom2">
+            <strong>Please check the box below before submitting.</strong>
+            {{ form.captcha.tag }}
+        </div>
+    {% elseif form.captcha.type == 'image' %}
+        <p class="u-margBottom2">{{ form.captcha.image.tag }}</p>
+        <p>
+            <label class="u-sizeFull" for="ap-form-captcha-input">Captcha Text<span class="FormRequired">*</span> (<a class="js-captchaReload" href="{{ form.captcha.reloadUrl }}" rel="nofollow">reload</a>)</label>
+            {{ form.captcha.tag|replace({'id="ap-form-captcha-input"': 'class="TextInput u-size1of2 u-sm-size3of4 required" title="Captcha value is wrong" id="ap-form-captcha-input"'}) }}
+        </p>
+    {% endif %}
+
+    <p class="u-margBottom1"><em>* Required Fields</em></p>
+
+    <p><button type="submit" class="Button Button--lg">{{ form.submitButtonText }}</button></p>
+
+    {{ form.closeTag }}
+</div>
+
+{# JAVASCRIPT FILES #}
+
+{% do _page.addJs('/layout/js/forms.js', 'footer') %}
+
+{#  START INLINE JAVASCRIPT #}
+
+{% inlinejs group='footer' %}
+$(document).ready(function(){
+    $('.js-pageForm form').validate({
+        rules: {
+            'email': {
+                email: true
+            }
+        },
+        messages: {
+            {% set i = 0 %}
+            {% for field in form.fields %}
+                {% if field.isFormField %}{% for rule in field.rules %}{% if rule.type == 'required' %}{% set i = i + 1 %}{% if i > 1 %},{% endif %}'{{ field.name }}': '{{ rule.message|escape }}'
+                {% endif %}{% endfor %}{% else %}{% if field.fieldType == "fieldGroup" %}{% for child in field.childFields %}{% if child.isFormField %}{% for rule in child.rules %}{% if rule.type == 'required' %}{% set i = i + 1 %}{% if i > 1 %},{% endif %}'{{ child.name }}': '{{ rule.message|escape }}'
+                {% endif %}{% endfor %}{% endif %}{% endfor %}{% endif %}{% endif %}
+            {% endfor %}
+        },
+        errorClass: 'is-invalid',
+        errorElement: "li",
+        errorLabelContainer: "#errorContainer > ul",
+        showErrors: function(errorMap, errorList) {
+            $('.js-successContainer').hide();
+            if (this.numberOfInvalids() > 0) {
+                $('#errorContainer').removeClass('u-hidden');
+            } else {
+                $('#errorContainer').addClass('u-hidden');
+            }
+            $('.js-serverError').remove();
+            this.defaultShowErrors();
+            $('#errorContainer li').addClass('FormError-listItem');
+        }
+    });
+
+    {% if form.captcha.type == 'image' %}
+        $('.js-pageForm form .js-captchaReload').on('click', function(e) {
+            e.preventDefault();
+            $.getJSON(this.href, function(data) {
+                try {
+                    $('.js-pageForm form input[name="ap-form-captcha[id]"]').val(data.captchaId);
+                    $('.js-pageForm form .captcha-img').attr('src', data.src);
+                } catch(e) {
+                    alert('There was a problem refreshing the captcha image. ' + e);
+                }
+            });
+        });
+    {% endif %}
+});
+{% endinlinejs %}

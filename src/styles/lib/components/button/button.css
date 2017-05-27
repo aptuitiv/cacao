@@ -16,17 +16,17 @@
     --Button-background: #555;
     --Button-backgroundHover: #9f9f9f;
     --Button-border: 0;
-    --Button-border-radius: 0;
+    --Button-border-radius: 4px;
     --Button-color: #fff;
     --Button-colorHover: #fff;
     --Button-disabled-opacity: .6;
     --Button-fontFamily: inherit;
     --Button-fontSize: inherit;
     --Button-letterSpacing: inherit;
-    --Button-lineHeight: inherit;
-    --Button-padding: calc(var(--Button-lineHeight) / 4) 1.5em;
-    --Button-paddingLg: calc(var(--Button-lineHeight) / 2) 2em;
-    --Button-paddingSm: 0 .75em;
+    --Button-lineHeight: 1.4;
+    --Button-padding: .35em 1.5em;
+    --Button-paddingLg: .7em 2em;
+    --Button-paddingSm: .2em .75em;
 }
 
 /**
@@ -98,10 +98,32 @@
  */
 
 .Button--lg {
+    font-size: calc(var(--base-typography-fontSize) + 3);
     padding: var(--Button-paddingLg);
 }
 
 .Button--sm {
+    font-size: var(--base-typography-fontSize);
+    font-weight: 300;
     padding: var(--Button-paddingSm);
 }
 
+/**
+ * Color modifiers
+ */
+.Button--secondary {
+    background: #555;
+}
+
+.Button--secondary:active,
+.Button--secondary:focus,
+.Button--secondary:hover {
+    background: #333;
+}
+
+/**
+ * Border modifiers
+ */
+.Button--square {
+    border-radius: 0;
+}

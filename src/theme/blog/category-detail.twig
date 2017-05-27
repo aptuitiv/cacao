@@ -1,0 +1,16 @@
+<h1>{{ category.categoryName }}</h1>
+{{ category.description }}
+ 
+{% if category.subCategories %}
+    <h2>Sub categories</h2>
+    {% for subCategory in category.subCategories %}
+       <p><a href="{{ subCategory.url }}">{{ subCategory.categoryName }}</a></p>
+    {% endfor %}
+{% endif %}
+ 
+{% if category.posts %}
+    {% for post in category.posts %}
+        {% include 'blog/post-list-item' %}
+    {% endfor %}
+    {% include 'snippets/pagination' %}
+{% endif %}

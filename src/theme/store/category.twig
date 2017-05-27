@@ -1,0 +1,34 @@
+<h1>{{ category.categoryName }}</h1>
+{{ category.description }}
+<div class="Grid Grid--withGutterLg Grid--equalHeight">
+{% for product in category.products %}
+    <div class="Grid-cell u-size1of3 u-lg-size1of2 u-md-sizeFull u-margBottom4 u-textCenter u-flexCol">
+
+        {% if product.images.0.image.small %}
+            {% set product.images.0.image.small.alt = product.productName %}
+            {#<div><a href="{{ product.url }}">{{ product.images.0.image.small.tag }}</a></div>#}
+            <div><a href="{{ product.url }}"><div class="Constrain Constrain--5by4 Constrain--top" style="background-image: url('{{ product.images.0.image.small.src }}');"></div></a></div>
+        {% endif %}
+
+        {% if product.orderForm.fields.options|length > 0 %}
+            <div class="u-weightBold u-margBottom1"><a href="{{ product.url }}">{{ product.productName }}</a></div>
+            <div class="u-weightBold u-fontSize4">Starting at {{ product.currentPrice.value }}{% if product.pricePerUnit is defined && product.pricePerUnit != "None" %} / {{ product.pricePerUnit }}{% endif %}</div>
+            <div>{{ product.shortDescription }}</div>
+        {% else %}
+            <div class="u-spaced2 u-flexGrow1">
+                <div class="u-weightBold u-margBottom1"><a href="{{ product.url }}">{{ product.productName }}</a></div>
+                <div class="u-weightBold u-fontSize4">{{ product.currentPrice.value }}{% if product.pricePerUnit is defined && product.pricePerUnit != "None" %} / {{ product.pricePerUnit }}{% endif %}</div>
+                <div>{{ product.shortDescription }}</div>
+            </div>
+            {{ product.orderForm.openTag }}
+            <div class="Grid Grid--withGutterSm">
+                <div class="Grid-cell u-size1of3">
+                    <input type="text" name="{{ product.orderForm.fields.quantity.name }}" value="{{ product.orderForm.fields.quantity.value }}" class="TextInput u-sizeFull"> {{ product.orderForm.fields.partialQuantity.tag }}
+                </div>
+                <div class="Grid-cell u-size2of3"><button type="submit" class="Button u-sizeFull">Add to cart</button></div>
+            </div>
+            {{ product.orderForm.closeTag }}
+        {% endif %}
+    </div>
+{% endfor %}
+</div>
