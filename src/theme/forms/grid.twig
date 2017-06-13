@@ -13,7 +13,6 @@
                 {{ field.label.tag }}
             </div>
             <div class="Grid-cell u-size3of4">
-                {% if field.description %}<p class="u-margBottom0">{{ field.description }}</p>{% endif %}
                 {% if field.fieldType in ['email', 'text', 'url'] %}
                     {% set field.class = field.class ~ ' TextInput u-sizeFull' %}
                     {{ field.tag }}
@@ -37,6 +36,7 @@
                 {% else %}
                     {{ field.tag|replace({"error": "is-invalid"}) }}
                 {% endif %}
+                {% if field.description %}<p class="u-margBottom0 u-fontSize2">{{ field.description }}</p>{% endif %}
             </div>
         </div>
     {% else %}
