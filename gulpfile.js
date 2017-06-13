@@ -178,7 +178,7 @@ gulp.task('stylelint', function () {
 
 gulp.task('theme', function() {
     return gulp.src(config.theme.src)
-        .pipe(gulpChangedInPlace())
+        .pipe(gulpChangedInPlace({firstPass: true}))
         .pipe(gulpUsing({prefix: 'Theme: '}))
         .pipe(gulp.dest(config.theme.dest))
 });
