@@ -183,6 +183,11 @@ gulp.task('theme', function() {
         .pipe(gulp.dest(config.theme.dest))
 });
 
+gulp.task('copy-theme', function() {
+    return gulp.src(config.theme.src)
+        .pipe(gulp.dest(config.theme.dest))
+});
+
 /**
  * Watch files for changes
  */
@@ -229,7 +234,7 @@ gulp.task('connect', function () {
  */
 
 var buildTasks = [
-    'copy', 'images', 'scripts', 'styles', 'stylelint', 'theme'
+    'copy', 'images', 'scripts', 'styles', 'stylelint', 'theme', 'copy-theme'
 ];
 
 gulp.task('build', function (cb) {
