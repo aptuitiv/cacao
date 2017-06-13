@@ -53,6 +53,6 @@
     "run-sequence": "^1.2.2",
     "slick-carousel": "^1.5.9",
     "stylelint": "^7.2.0",
-    "stylelint-order": "^0.4.4"
+    "stylelint-order": "^0.5.0"
   }
 }
