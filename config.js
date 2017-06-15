@@ -19,6 +19,10 @@ module.exports = {
         {
             dest: destDir + '/slick',
             src: ['node_modules/slick-carousel/slick/**/*']
+        },
+        {
+            dest: destDir + '/drift-zoom',
+            src: ['node_modules/drift-zoom/dist/**/*']
         }
     ],
 

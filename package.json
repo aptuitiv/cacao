@@ -18,6 +18,7 @@
   "dependencies": {
     "autoprefixer": "^7.1.1",
     "cssnano": "^3.4.0",
+    "drift-zoom": "^1.2.0",
     "glob-watcher": "^3.1.0",
     "gulp": "^3.9.0",
     "gulp-cached": "^1.1.0",
