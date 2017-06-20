@@ -1,7 +1,10 @@
 var config = require('./config');
+var chalk = require('chalk');
+var del = require('del');
 var globWatcher = require('glob-watcher');
 var gulp = require('gulp');
 var gulpCached = require('gulp-cached');
+var gulpChanged = require('gulp-changed');
 var gulpChangedInPlace = require('gulp-changed-in-place');
 var gulpConcat = require('gulp-concat');
 var gulpConnect = require('gulp-connect');
@@ -17,6 +20,7 @@ var gulpSequence = require('gulp-sequence');
 var gulpUglify = require('gulp-uglify');
 var gulpUsing = require('gulp-using');
 var mergeStream = require('merge-stream');
+var path = require('path');
 var requireGlob = require('require-glob');
 var runSequence = require('run-sequence');
 
@@ -49,7 +53,7 @@ gulp.task('copy', function () {
 
 gulp.task('images', function () {
     return gulp.src(config.images.src)
-        .pipe(gulpCached('images'))
+        .pipe(gulpChanged(config.images.dest))
         .pipe(gulpUsing({prefix: 'Image min: '}))
         .pipe(gulpPlumber(onError))
         .pipe(gulpImagemin({optimizationLevel: 5}))
@@ -89,7 +93,7 @@ var uglifyOpts = {mangle: false};
 gulp.task('scripts', function () {
     var tasks = config.scripts.map(function (entry, index) {
         return gulp.src(entry.src)
-            .pipe(gulpCached('scripts' + index))
+            .pipe(gulpChangedInPlace())
             .pipe(gulpUsing({prefix: 'Scripts: '}))
             .pipe(gulpPlumber(onError))
             .pipe(gulpUglify(uglifyOpts))
@@ -178,7 +182,7 @@ gulp.task('stylelint', function () {
 
 gulp.task('theme', function() {
     return gulp.src(config.theme.src)
-        .pipe(gulpChangedInPlace({firstPass: true}))
+        .pipe(gulpChanged(config.theme.dest, {hasChanged: gulpChanged.compareContents}))
         .pipe(gulpUsing({prefix: 'Theme: '}))
         .pipe(gulp.dest(config.theme.dest))
 });
@@ -197,27 +201,60 @@ gulp.task('watch', function () {
         return prev.concat(current.src);
     }
 
+    /**
+     * Deletes a file
+     *
+     * @param {string} file The file to delete
+     * @param {string} src The file source path
+     * @param {string} dest The build destination path
+     * @param {string} type The type of file. Used in the console message
+     */
+    function deleteFile(file, src, dest, type) {
+        // Output message of what is being deleted
+        var time = '[' + chalk.gray(new Date().toTimeString().slice(0, 8)) + ']';
+        console.log(time, 'Deleting ' + type, chalk.red(file));
+        // Get the relative path to the file
+        var srcPath = path.relative(path.resolve(src), file);
+        // Remove "../" from the path as it causes the destination path to be incorrect
+        srcPath = srcPath.replace(/(\.\.\/)+/, '');
+        // Combine the destination path and the source path to get the full path to the destination file
+        var destPath = path.resolve(dest, srcPath);
+        // Delete the file
+        del.sync(destPath);
+    }
+
     // Copy static assets
     var staticFiles = config.copy.reduce(flatten, []);
     globWatcher(staticFiles, function(cb) {
         runSequence('copy', cb);
     });
+
     // Images
-    globWatcher(config.images.src, function(cb) {
+    var iw = globWatcher(config.images.src, function(cb) {
         runSequence('images', cb);
     });
+    iw.on('unlink', function(file) {
+        //deleteFile(file, config.images.src, config.images.dest, 'image');
+    });
+
     // Scripts
     var scriptFiles = config.scripts.reduce(flatten, []);
     globWatcher(scriptFiles, function(cb) {
         runSequence('scripts', cb);
     });
+
     // Styles
     globWatcher(config.styles.watch, function(cb) {
         runSequence('styles', cb);
     });
+
     // Theme
-    globWatcher(config.theme.src, function(cb) {
+    var tw = globWatcher(config.theme.src, function(cb) {
         runSequence('theme', cb);
+    });
+
+    tw.on('unlink', function(file) {
+        deleteFile(file, config.theme.src, config.theme.dest, 'theme file');
     });
 });
 
