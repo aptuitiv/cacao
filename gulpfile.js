@@ -5,13 +5,13 @@ var globWatcher = require('glob-watcher');
 var gulp = require('gulp');
 var gulpCached = require('gulp-cached');
 var gulpChanged = require('gulp-changed');
-var gulpChangedInPlace = require('gulp-changed-in-place');
 var gulpConcat = require('gulp-concat');
 var gulpConnect = require('gulp-connect');
 var gulpData = require('gulp-data');
 var gulpHtmlBeautify = require('gulp-html-beautify');
 var gulpHtmlmin = require('gulp-htmlmin');
 var gulpImagemin = require('gulp-imagemin');
+var gulpNewer = require('gulp-newer');
 var gulpNunjucks = require('gulp-nunjucks-render');
 var gulpPlumber = require('gulp-plumber');
 var gulpPostcss = require('gulp-postcss');
@@ -53,7 +53,7 @@ gulp.task('copy', function () {
 
 gulp.task('images', function () {
     return gulp.src(config.images.src)
-        .pipe(gulpChanged(config.images.dest))
+        .pipe(gulpNewer(config.images.dest))
         .pipe(gulpUsing({prefix: 'Image min: '}))
         .pipe(gulpPlumber(onError))
         .pipe(gulpImagemin({optimizationLevel: 5}))
@@ -93,7 +93,7 @@ var uglifyOpts = {mangle: false};
 gulp.task('scripts', function () {
     var tasks = config.scripts.map(function (entry, index) {
         return gulp.src(entry.src)
-            .pipe(gulpChangedInPlace())
+            .pipe(gulpNewer(entry.dest + '/' + entry.name))
             .pipe(gulpUsing({prefix: 'Scripts: '}))
             .pipe(gulpPlumber(onError))
             .pipe(gulpUglify(uglifyOpts))
@@ -234,7 +234,7 @@ gulp.task('watch', function () {
         runSequence('images', cb);
     });
     iw.on('unlink', function(file) {
-        //deleteFile(file, config.images.src, config.images.dest, 'image');
+        deleteFile(file, config.images.src, config.images.dest, 'image');
     });
 
     // Scripts
