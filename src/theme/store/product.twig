@@ -61,12 +61,12 @@
     {% endif %}
 </div>
 
-{% do _page.addJs('drift-zoom/Drift.js'|theme_url, 'footer') %}
+{% do _page.addJs('drift-zoom/Drift.js'|theme_url) %}
 
-{% do _page.addJs('magnific/jquery.magnific-popup.js'|theme_url, 'footer') %}
-{% do _page.addCss('magnific/magnific-popup.css'|theme_url) %}
+{% do _page.addJs('magnific/jquery.magnific-popup.js'|theme_url) %}
+{% do _page.addCss('magnific/magnific-popup.css') %}
 
-{% inlinejs group="footer" %}
+{% inlinejs %}
 $(function() {
     $('.js-imgLightbox').magnificPopup({type: 'image', gallery: {enabled: true}});
 

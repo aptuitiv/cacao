@@ -89,11 +89,11 @@
 
 {# JAVASCRIPT FILES #}
 
-{% do _page.addJs('/layout/js/forms.js', 'footer') %}
+{% do _page.addJs('js/forms.js'|theme_url) %}
 
 {#  START INLINE JAVASCRIPT #}
 
-{% inlinejs group='footer' %}
+{% inlinejs %}
 $(document).ready(function(){
     $('.js-pageForm form').validate({
         rules: {
