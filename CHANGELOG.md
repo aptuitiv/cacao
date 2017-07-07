@@ -1,3 +1,15 @@
+## 2.7.0 (July 7, 2017)
+
+* Fixed the order of the javascript in the footer.
+* Added support for copying theme files as a gulp task.
+* Updated stylelint.
+* Form templates - moved the field description to be below the field and to be a smaller font size.
+* Changed the default Javascript placement to be in the footer.
+* Updated slick carousel to the latest version.
+* Added drift-zoom library for zooming images when hovering over them.
+* Added "xl" utility selector size.
+* Changed the gulp-changed-in-place plugin for gulp-newer. That plugin works better with gulp-remember to combine all source files even if one changed. gulp-changed-in-place would only process the one changed file.
+
 ## 2.6.0 (May 27, 2017)
 
 * Removed dist folder.
