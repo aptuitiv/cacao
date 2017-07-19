@@ -5,7 +5,6 @@
 /* large */
 
 @media (--c-bp-lg) {
-
     .u-lg-block {
         display: block !important;
     }
@@ -17,13 +16,11 @@
     .u-lg-hide {
         display: none !important;
     }
-
 }
 
 /* medium */
 
 @media (--c-bp-md) {
-
     .u-md-block {
         display: block !important;
     }
@@ -35,13 +32,11 @@
     .u-md-hide {
         display: none !important;
     }
-
 }
 
 /* small */
 
 @media (--c-bp-sm) {
-
     .u-sm-block {
         display: block !important;
     }
@@ -53,6 +48,5 @@
     .u-sm-hide {
         display: none !important;
     }
-
 }
 
