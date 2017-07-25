@@ -1,3 +1,9 @@
+## 2.8.0 (July 25, 2017)
+
+* Added notes about setting up a new site
+* Removed the 'default' value for the Javascript tag since it's default one already.
+* Updated packages and stylelint
+
 ## 2.7.0 (July 7, 2017)
 
 * Fixed the order of the javascript in the footer.
