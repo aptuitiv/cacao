@@ -438,3 +438,45 @@ or it's breakpoint versions:
 * Set the `font-weight` style for elements
 * Set the font size and line height styles with different pre-defined utility classes
 * Other miscellaneous text styles like kerning, word wrapping and truncating
+
+## Setting up a new website
+
+First navigate via the command line to the folder where the new site will be located.
+Clone the Cacao directory to a folder with the website name. (Replace "WEBSITE_NAME" with the folder name for your website)
+
+`git clone https://github.com/aptuitiv/cacao.git WEBSITE_NAME`
+
+Move into the website directory
+
+`cd WEBSITE_NAME`
+
+Rename the Cacao remote from "origin" to "cacao"
+
+`git remote rename origin cacao`
+
+Add the the remote repository for the actual website. In this case we're using BitBucket. Replace "YOUR-USERNAME" with your BitBucket username
+
+`git remote add origin https://YOUR-USERNAME@bitbucket.org/YOUR-ACCOUNT/YOUR-WEBSITE-REPOSITORY.git`
+
+Confirm that the remotes are set up correctly.
+
+`git remote -v`
+
+That should show you something like this:
+
+```
+cacao   https://github.com/aptuitiv/cacao.git (fetch)
+cacao   https://github.com/aptuitiv/cacao.git (push)
+origin  https://YOUR-USERNAME@bitbucket.org/YOUR-ACCOUNT/YOUR-WEBSITE-REPOSITORY.git (fetch)
+origin  https://OUR-USERNAME@bitbucket.org/YOUR-ACCOUNT/YOUR-WEBSITE-REPOSITORY.git (push)
+```
+
+Push to the theme repository
+
+`git push -u origin master`
+
+Now you can set up Sourcetree. Create a new repository from a local repository.
+View local repository browser.
+Click "+ New"
+Click "Add Exiting Local Repository"
+Navigate to the theme folder. Click on the folder name and click "Open"
