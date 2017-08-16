@@ -471,7 +471,7 @@ origin  https://YOUR-USERNAME@bitbucket.org/YOUR-ACCOUNT/YOUR-WEBSITE-REPOSITORY
 origin  https://OUR-USERNAME@bitbucket.org/YOUR-ACCOUNT/YOUR-WEBSITE-REPOSITORY.git (push)
 ```
 
-Push to the theme repository
+Push to the theme repository if the repository is brand new. If the repository contains commits already don't push.
 
 `git push -u origin master`
 
@@ -480,3 +480,12 @@ View local repository browser.
 Click "+ New"
 Click "Add Exiting Local Repository"
 Navigate to the theme folder. Click on the folder name and click "Open"
+
+### Issues merging unrelated histories
+If having trying to merge cacao into an existing repository and GIT is saying that it won't merge unrelated histories then follow these steps.
+1) Check out cacao/master as cacao-master 
+2) Check out origin/master as master. At this point you should currently have origin/master checked out.
+3) On the command line run `git merge cacao-master --allow-unrelated-histories` You will be prompted to enter a commit message. Do so and then `Esc w q` to write and close the message.
+4) You can then push the merged changes to master.
+
+See https://stackoverflow.com/questions/38255655/trying-to-pull-files-from-my-github-repository-refusing-to-merge-unrelated-his for more info.
