@@ -1,3 +1,7 @@
+## 3.2.0 (Oct 13, 2017)
+
+* Added ImageWrapper and ImageCaption classes. 
+
 ## 3.1.0 (Oct 13, 2017)
 
 * Moved the text input and select menu styles to be under the "forms" component.

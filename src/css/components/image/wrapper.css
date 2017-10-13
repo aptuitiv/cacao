@@ -1,0 +1,41 @@
+/* =========================================================================== *\
+    Image wrapper for floating images left/right with other content like a caption
+\* =========================================================================== */
+
+
+/* @define ImageWrapper */
+
+.ImageWrapper {
+    box-sizing: border-box;
+    margin-bottom: var(--Image-spacing);
+}
+
+.ImageWrapper--left,
+.ImageWrapper--right {
+    max-width: 40%;
+}
+
+.ImageWrapper--left {
+    float: left;
+    margin-right: 1em;
+}
+
+.ImageWrapper--right {
+    float: right;
+    margin-left: 1em;
+}
+
+.ImageWrapper--center {
+    text-align: center;
+}
+
+@media (--c-bp-sm) {
+    .ImageWrapper--left,
+    .ImageWrapper--right {
+        display: block;
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+}
