@@ -7,12 +7,12 @@
 
 .Content {
     background: #fff;
-    padding: 20px;
+    padding: 2rem;
 }
 
 
 @media (--c-bp-sm) {
     .Content {
-        padding: 20px 10px;
+        padding: 2rem 1rem;
     }
 }

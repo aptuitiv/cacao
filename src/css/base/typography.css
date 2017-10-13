@@ -4,18 +4,34 @@
 
 /**
  * Note: This sets the <html> element's font-size to 62.5%, which
- * equals 10px. This allows rem units to be calculated more intuitively.
+ * equals 10px (for default browser font size of 16px).
+ * This allows rem units to be calculated more intuitively.
+ *
+ * Font size strategy
+ * - <html> element font size set as a percentage so that font sizes are accessible
+ *   if the user resizes the text size in their browser.
+ * - Font size set on the <body> tag is a rem. A direct relation to the HTML element.
+ * - Font sizes for components should be rem. For example, the font size of the navigation
+ *   should be set as a rem. The relation is to the <html> tag, which by default is 10px.
+ * - Font sizes of elements within a component should be em to be relative to the component.
+ *   For example, a navigation link within the navigation menu would be set to an em font size,
+ *   which would then be in relation to the navigation component (assuming that a font size in rem
+ *   was set on the navigation item).
+ *
+ * References that influenced this approach:
+ * https://css-tricks.com/rem-global-em-local/
+ * http://clagnut.com/blog/2384/
  */
 
 :root {
     --base-typography-color: #333;
     --base-typography-fontFamily: sans-serif;
-    --base-typography-fontSize: 15px;
+    --base-typography-fontSize: 1.8rem;
     --base-typography-fontWeight: 400;
     --base-typography-hrule-width: 1px;
     --base-typography-letterSpacing: 0;
-    --base-typography-lineHeight: 20px;
-    --base-typography-spacing: var(--base-typography-lineHeight);
+    --base-typography-lineHeight: 1.58;
+    --base-typography-spacing: 1.58em;
 }
 
 :root {
@@ -28,18 +44,18 @@
 /* headings */
 
 :root {
-    --base-typography-h1-fontSize: 32px;
-    --base-typography-h2-fontSize: 28px;
-    --base-typography-h3-fontSize: 24px;
-    --base-typography-h4-fontSize: 20px;
-    --base-typography-h5-fontSize: 18px;
-    --base-typography-h6-fontSize: 15px;
-    --base-typography-h1-lineHeight: 40px;
-    --base-typography-h2-lineHeight: 30px;
-    --base-typography-h3-lineHeight: 33px;
-    --base-typography-h4-lineHeight: 30px;
-    --base-typography-h5-lineHeight: 20px;
-    --base-typography-h6-lineHeight: 20px;
+    --base-typography-h1-fontSize: 1.5em;
+    --base-typography-h2-fontSize: 1.4em;
+    --base-typography-h3-fontSize: 1.3em;
+    --base-typography-h4-fontSize: 1.1em;
+    --base-typography-h5-fontSize: 1em;
+    --base-typography-h6-fontSize: 1em;
+    --base-typography-h1-lineHeight: 1.2;
+    --base-typography-h2-lineHeight: 1.2;
+    --base-typography-h3-lineHeight: 1.2;
+    --base-typography-h4-lineHeight: 1.2;
+    --base-typography-h5-lineHeight: 1.2;
+    --base-typography-h6-lineHeight: 1.2;
     --base-typography-heading-color: inherit;
     --base-typography-heading-fontFamily: sans-serif;
     --base-typography-heading-fontWeight: 700;
@@ -50,7 +66,7 @@
    ========================================================================== */
 
 /**
- * Make sure pxrem is configured to this size.
+ * Set the base font size to be a percentage so that it's more accessible to browser text zooming
  * 62.5% = 10px = 1rem
  */
 
@@ -89,17 +105,30 @@ address,
 blockquote,
 dl,
 figure,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 hr,
 ol,
 p,
 ul {
     margin: 0 0 var(--base-typography-spacing);
+}
+
+/**
+ * Blockquote
+ */
+
+blockquote {
+    border-left: 10px solid #ccc;
+    margin: var(--base-typography-spacing) calc(var(--base-typography-spacing) * .7);
+    padding: .5em 1em;
+    position: relative;
+}
+
+blockquote p:first-child {
+    margin-top: 0;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
 }
 
 /**
@@ -190,11 +219,21 @@ h6 {
     font-family: var(--base-typography-heading-fontFamily);
     font-weight: var(--base-typography-heading-fontWeight);
     letter-spacing: var(--base-typography-heading-letterSpacing);
+    margin: calc(var(--base-typography-spacing) * 1.2) 0 calc(var(--base-typography-spacing) / 3);
+}
+
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+    margin-top: 0;
 }
 
 h1 {
     font-size: var(--base-typography-h1-fontSize);
     line-height: var(--base-typography-h1-lineHeight);
+    margin-top: 0;
 }
 
 h2 {
