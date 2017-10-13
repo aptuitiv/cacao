@@ -3,7 +3,7 @@ var src = 'src';
 // The base directory to build into. A temporary location for things that need to be built first before moving to distribution
 var build = '_build';
 // The full destination folder where assets will be built into for distribution
-var dist = 'dist/theme/custom';
+var dist = 'dist';
 
 /**
  * Data that is set to the config variable in gulpfile.js
