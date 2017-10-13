@@ -1,3 +1,7 @@
+## 3.1.0 (Oct 13, 2017)
+
+* Moved the text input and select menu styles to be under the "forms" component.
+
 ## 3.0.0 (Oct 13, 2017)
 
 * Changed the focus of Cacao to be just on the CSS. A Yeoman generator called [cacao-branchcms](https://github.com/aptuitiv/generator-cacao-branchcms) has been setup to bootstrap a site with Cacao, theme files, images and Javascript.
