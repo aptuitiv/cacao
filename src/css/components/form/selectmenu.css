@@ -11,8 +11,8 @@
 
 :root {
     --SelectInput-background: #fff;
-    --SelectInput-border: 1px solid #333;
-    --SelectInput-color: #333;
+    --SelectInput-border: 1px solid #777;
+    --SelectInput-color: inherit;
     --SelectInput-errorColor: #f00;
     --SelectInput-successColor: #0f0;
 }

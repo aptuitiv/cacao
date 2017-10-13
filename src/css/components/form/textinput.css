@@ -10,9 +10,9 @@
 
 :root {
     --TextInput-background: #fff;
-    --TextInput-border: 1px solid #333;
+    --TextInput-border: 1px solid #777;
     --TextInput-padding: .25em .5em;
-    --TextInput-color: #333;
+    --TextInput-color: inherit;
     --TextInput-errorColor: #f00;
     --TextInput-successColor: #0f0;
 }
