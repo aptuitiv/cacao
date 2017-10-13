@@ -1,79 +1,33 @@
-// The base directory to build into
-var buildRoot = 'build';
-// The directory within the build root where theme files (images, css, js) will be located
-var themeRoot = 'theme/custom';
 // The source directory to build from
-var srcDir = 'src';
-// The full destination folder where assets (images, css, js) will be built into
-var destDir = buildRoot + '/' + themeRoot;
+var src = 'src';
+// The base directory to build into. A temporary location for things that need to be built first before moving to distribution
+var build = '_build';
+// The full destination folder where assets will be built into for distribution
+var dist = 'dist/theme/custom';
 
+/**
+ * Data that is set to the config variable in gulpfile.js
+ */
 module.exports = {
+    /**
+     * Holds the name of the CSS file to be generated
+     */
+    cssName: 'main.css',
 
-    siteRoot: buildRoot,
-
-    copy: [
-        {
-            dest: destDir + '/magnific',
-            src: ['node_modules/magnific-popup/dist/**/*']
+    /**
+     * Paths for different asset sources and their distribution path
+     */
+    paths: {
+        src: {
+            css: [src + '/css/index.css'],
+            stylelint: [src + '/css/**/*.css']
         },
-        {
-            dest: destDir + '/slick',
-            src: ['node_modules/slick-carousel/slick/**/*']
+        dist: {
+            base: dist,
+            css: dist + '/css'
         },
-        {
-            dest: destDir + '/drift-zoom',
-            src: ['node_modules/drift-zoom/dist/**/*']
+        watch: {
+            css: [src + '/css/**/*.css']
         }
-    ],
-
-    images: {
-        dest: destDir + '/images',
-        src: srcDir + '/images/**/*.{png,jpg,gif,svg}'
-    },
-
-    nunjucks: {
-        dest: buildRoot,
-        src: [srcDir + '/site'],
-        pages: [srcDir + '/site/pages/**/*.html'],
-        templates: [srcDir + '/site/templates'],
-        data: [srcDir + '/site/data/**/*.json'],
-        watch: [srcDir + '/site/**/*.{html,json}']
-    },
-
-    scripts: [
-        {
-            name: 'index.js',
-            src: [
-                srcDir + '/scripts/modernizr-flexbox-detection.js',
-                'node_modules/jquery/dist/jquery.js',
-                'node_modules/ap_drilldown_plugin/ap-drilldown-menu.min.js',
-                srcDir + '/scripts/index.js'
-            ],
-            dest: destDir + '/js'
-        },
-        {
-            name: 'forms.js',
-            src: [
-                'node_modules/jquery-validation/dist/jquery.validate.js',
-                'node_modules/jquery-form/src/jquery.form.js'
-            ],
-            dest: destDir + '/js'
-        }
-    ],
-
-    styles: {
-        dest: destDir + '/css',
-        src: [srcDir + '/styles/index.css'],
-        watch: [srcDir + '/styles/**/*.css']
-    },
-
-    stylelint: {
-        src: [srcDir + '/styles/**/*.css']
-    },
-
-    theme: {
-        dest: destDir + '/templates',
-        src: srcDir + '/theme/**/*.twig'
     }
-
 };
