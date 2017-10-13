@@ -1,0 +1,13 @@
+/* =========================================================================== *\
+    Image Caption
+\* =========================================================================== */
+
+
+/* @define ImageCaption */
+
+.ImageCaption {
+    font-size: .9em;
+    font-style: italic;
+    padding: 2px 8px 4px;
+    text-align: center;
+}
