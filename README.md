@@ -57,24 +57,21 @@ If you are using [Nunjucks](https://mozilla.github.io/nunjucks/) to build the HT
 gulp
 ````
 
-That will build the CSS, Javascript and HTML, minify the images, copy linked resources (like [Slick](http://kenwheeler.github.io/slick/) and [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)),
-and start the local web server.
+That will build the CSS and start the watch task.
 
 The built resources are located in the new 'dist' folder. 
-
-If you are building the site within a CMS like [BranchCMS](http://www.branchcms.com) or you don't need the local web server then you can run 
 
 ````
 gulp build
 ````
 
-That will build the CSS, Javascript and HTML, minify the images and copy linked resources (like [Slick](http://kenwheeler.github.io/slick/) and [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)).
-Essentially everything the default task does except start the local web server.
+That will build the CSS.
+Essentially everything the default task does except start the watch task.
 
 
 ## Working with CSS
 
-[PostCSS](http://postcss.org/) is used to process the CSS files and compile them together into one CSS file at `dist/layout/css/index.css`.
+[Clean-CSS](https://github.com/jakubpawlowicz/clean-css) and [PostCSS](http://postcss.org/) are used to process the CSS files and compile them together into one CSS file at `dist/css/main.css`.
 
 Cacao stylesheets are based on the [SUIT CSS](https://suitcss.github.io) methodology
 including [naming convention](http://github.com/suitcss/suit/blob/master/doc/naming-conventions.md), 
@@ -83,21 +80,20 @@ and [architectural principles](http://github.com/suitcss/suit/blob/master/doc/de
 
 The idea is that you have very focused stylesheets for individual components instead of having one large stylesheet.
 
-The following is the folder structure for stylesheets within the `src\styles` folder:
+The following is the folder structure for stylesheets within the `src\css` folder:
  ````
  index.css
- L lib
-   L config.css
+ config.css
    L base
    L components
    L utils
 ````
 
-The `index.css` file imports the `lib\config.css` file as well as the `index.css` files within the `lib\base`, `lib\components` and `lib\utils` folders.
+The `index.css` file imports the `config.css` file as well as the `index.css` files within the `base`, `components` and `utils` folders.
 
-### lib\config.css
+### config.css
 
-The `lib\config.css` file is where global media query breakpoints and global configuration variables are located. 
+The `config.css` file is where global media query breakpoints and global configuration variables are located. 
 
 By default just a few media query breakpoints are setup:
 

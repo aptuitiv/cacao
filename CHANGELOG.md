@@ -1,3 +1,7 @@
+## 3.0.0 (Oct 13, 2017)
+
+* Changed the focus of Cacao to be just on the CSS. A Yeoman generator called [cacao-branchcms](https://github.com/aptuitiv/generator-cacao-branchcms) has been setup to bootstrap a site with Cacao, theme files, images and Javascript.
+
 ## 2.8.0 (July 25, 2017)
 
 * Added notes about setting up a new site
