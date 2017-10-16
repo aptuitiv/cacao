@@ -1,3 +1,8 @@
+# 3.3.0 (Oct 16, 2017)
+
+* Adjusted some of the font sizes and margins to be based of of rem and ems instead of pixels. 
+The goal is to improve accessibility and relative font sizing.
+
 ## 3.2.0 (Oct 13, 2017)
 
 * Added ImageWrapper and ImageCaption classes. 
