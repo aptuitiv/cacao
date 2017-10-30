@@ -38,7 +38,7 @@
 .SelectInput::before {
     background: none;
     border: 6px solid;
-    border-color: var(--SelectInput-color) transparent transparent transparent;
+    border-color: #777 transparent transparent transparent;
     content: '';
     height: 0;
     padding: 0;
