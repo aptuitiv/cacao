@@ -1,3 +1,9 @@
+# 3.4.0 (Nov 6, 2017)
+
+* Set a specific color for select input border.
+* Added default table border collapse styles.
+* Added basic print styles.
+
 # 3.3.0 (Oct 16, 2017)
 
 * Adjusted some of the font sizes and margins to be based of of rem and ems instead of pixels. 
