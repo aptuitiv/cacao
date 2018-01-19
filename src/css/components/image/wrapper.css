@@ -10,6 +10,10 @@
     margin-bottom: var(--Image-spacing);
 }
 
+.ImageWrapper--default {
+    display: inline-block;
+}
+
 .ImageWrapper--left,
 .ImageWrapper--right {
     max-width: 40%;
