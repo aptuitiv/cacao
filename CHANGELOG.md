@@ -1,3 +1,8 @@
+# 3.5.0 (Jan 19, 2018)
+
+* Set the button active/focus state.
+* Set the default state for the image wrapper to be inline-block so that the caption is under the image.
+
 # 3.4.0 (Nov 6, 2017)
 
 * Set a specific color for select input border.
