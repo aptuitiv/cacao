@@ -1,3 +1,7 @@
+# 3.6.0 (Jan 19, 2018)
+
+* Added auto size utility
+
 # 3.5.0 (Jan 19, 2018)
 
 * Set the button active/focus state.
