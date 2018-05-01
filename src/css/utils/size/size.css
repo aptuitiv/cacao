@@ -170,3 +170,16 @@
     width: 100% !important;
 }
 
+/**
+ * Size the item based on the content
+ */
+
+.u-sizeAuto {
+    flex: 0 1 auto !important;
+    flex-basis: auto !important;
+}
+
+.u-sizeAutoAlt {
+    flex: 0 1 0% !important;
+    flex-basis: 0% !important;
+}
