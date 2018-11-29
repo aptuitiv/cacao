@@ -60,6 +60,7 @@
     border: 0; /* 1 */
     box-sizing: border-box;
     display: block;
+    font-family: inherit;
     margin: 0; /* 1 */
     outline: 0; /* 1 */
     padding: 0 2.3rem 0 .35rem;
