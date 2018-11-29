@@ -1,3 +1,7 @@
+# 3.6.1 (Nov 19, 2018)
+
+* Fixed font issue for select menus
+
 # 3.6.0 (Jan 19, 2018)
 
 * Added auto size utility
