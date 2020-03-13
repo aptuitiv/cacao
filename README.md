@@ -2,7 +2,7 @@
 
 A set of CSS modules that provide a solid foundation for starting a new project.
 Includes project scaffolding and build system for CSS, Javascript and image minification  using 
-[Gulp](http://gulpjs.com/), [PostCSS](https://github.com/postcss/postcss) and [Nunjucks](https://mozilla.github.io/nunjucks/).
+[Gulp](http://gulpjs.com/) and [PostCSS](https://github.com/postcss/postcss).
 
 [How to pronounce Cacao](https://www.youtube.com/watch?v=kVSIkXL_Nmo).
 
@@ -49,9 +49,7 @@ This will install Gulp, download linked projects (like jQuery) and setup the nec
 
 If you are using [WebStorm](https://www.jetbrains.com/webstorm/) then you can simply start a new project using your projects folder, open the Terminal tab in Webstorm and run the above command. 
 
-#### 4) Do an initial build
-
-If you are using [Nunjucks](https://mozilla.github.io/nunjucks/) to build the HTML and need the local server, or you are using another technique to build a local version of the site then run:
+Then run:
 
 ````
 gulp
