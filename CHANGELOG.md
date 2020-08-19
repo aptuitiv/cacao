@@ -1,3 +1,8 @@
+# 3.7.0 (Aug 19, 2020)
+
+* Updated the Gulp configuration to use modern techniques.
+* Added fallback styles for the select menu text when the select menu is focused.
+
 # 3.6.1 (Nov 19, 2018)
 
 * Fixed font issue for select menus

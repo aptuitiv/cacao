@@ -1,7 +1,7 @@
 # Cacao
 
 A set of CSS modules that provide a solid foundation for starting a new project.
-Includes project scaffolding and build system for CSS, Javascript and image minification  using 
+Includes project scaffolding and build system for CSS using 
 [Gulp](http://gulpjs.com/) and [PostCSS](https://github.com/postcss/postcss).
 
 [How to pronounce Cacao](https://www.youtube.com/watch?v=kVSIkXL_Nmo).
@@ -19,8 +19,8 @@ and [architectural principles](http://github.com/suitcss/suit/blob/master/doc/de
 Before you can build the project there are some dependencies that need to be
 installed. First install the system-wide dependencies listed below:
 
-- [Node.js & npm](https://nodejs.org/) (`^0.12.0`)
-- [Gulp](http://gulpjs.com/) (`^3.9.0`)
+- [Node.js & npm](https://nodejs.org/)
+- [Gulp](http://gulpjs.com/)
 
 ## Getting started
 
@@ -69,7 +69,7 @@ Essentially everything the default task does except start the watch task.
 
 ## Working with CSS
 
-[Clean-CSS](https://github.com/jakubpawlowicz/clean-css) and [PostCSS](http://postcss.org/) are used to process the CSS files and compile them together into one CSS file at `dist/css/main.css`.
+Gulp is used to process the CSS files and compile them together into one CSS file at `dist/css/main.css`.
 
 Cacao stylesheets are based on the [SUIT CSS](https://suitcss.github.io) methodology
 including [naming convention](http://github.com/suitcss/suit/blob/master/doc/naming-conventions.md), 
@@ -80,14 +80,14 @@ The idea is that you have very focused stylesheets for individual components ins
 
 The following is the folder structure for stylesheets within the `src\css` folder:
  ````
- index.css
+ main.css
  config.css
    L base
    L components
    L utils
 ````
 
-The `index.css` file imports the `config.css` file as well as the `index.css` files within the `base`, `components` and `utils` folders.
+The `main.css` file imports the `config.css` file as well as the `main.css` files within the `base`, `components` and `utils` folders.
 
 ### config.css
 
@@ -465,15 +465,10 @@ origin  https://YOUR-USERNAME@bitbucket.org/YOUR-ACCOUNT/YOUR-WEBSITE-REPOSITORY
 origin  https://OUR-USERNAME@bitbucket.org/YOUR-ACCOUNT/YOUR-WEBSITE-REPOSITORY.git (push)
 ```
 
-Push to the theme repository if the repository is brand new. If the repository contains commits already don't push.
+Push to the website repository if the repository is brand new. If the repository contains commits already don't push.
 
 `git push -u origin master`
 
-Now you can set up Sourcetree. Create a new repository from a local repository.
-View local repository browser.
-Click "+ New"
-Click "Add Exiting Local Repository"
-Navigate to the theme folder. Click on the folder name and click "Open"
 
 ### Issues merging unrelated histories
 If having trying to merge cacao into an existing repository and GIT is saying that it won't merge unrelated histories then follow these steps.

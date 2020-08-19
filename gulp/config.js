@@ -2,7 +2,7 @@
 var src = 'src';
 // The base directory to build into. A temporary location for things that need to be built first before moving to distribution
 var build = '_build';
-// The full destination folder where assets will be built into for distribution
+// The full destination folder where assets (images, css, js) will be built into for distribution
 var dist = 'dist';
 
 /**
@@ -19,8 +19,16 @@ module.exports = {
      */
     paths: {
         src: {
-            css: [src + '/css/index.css'],
-            stylelint: [src + '/css/**/*.css']
+            base: src,
+            css: [
+                src + '/css/main.css'
+            ],
+            cssBase: src + '/css',
+            stylelint: [src + '/css/**/*.css'],
+        },
+        build: {
+            base: build,
+            css: build + '/css'
         },
         dist: {
             base: dist,
