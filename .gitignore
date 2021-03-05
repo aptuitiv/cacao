@@ -1,1 +1,7 @@
-node_modules/
+.DS_Store
+.idea/
+/_build/
+/_export/
+/dist/
+/node_modules/
+yarn.lock
