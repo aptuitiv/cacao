@@ -1,6 +1,10 @@
-# 3.8.0 (April 1, 2021)
+# 3.9.0 (April 1, 2021)
 
 * Removed the inline block fallback styles for the Grid component since Flexbox is widely supported in browsers now.
+
+# 3.8.0 (April 1, 2021)
+
+Skipped because this tag already accidentally existed.
 
 # 3.7.0 (Aug 19, 2020)
 
