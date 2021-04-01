@@ -1,3 +1,7 @@
+# 3.8.0 (April 1, 2021)
+
+* Removed the inline block fallback styles for the Grid component since Flexbox is widely supported in browsers now.
+
 # 3.7.0 (Aug 19, 2020)
 
 * Updated the Gulp configuration to use modern techniques.
