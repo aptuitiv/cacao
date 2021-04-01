@@ -1,14 +1,11 @@
 # Grid
 
 A CSS grid component. The grid makes use of `flexbox` to provide features that 
-float-based layouts cannot. Utilizes an inline-block fallback for browsers that 
-lack `flexbox` or `flex-wrap` support. 
+float-based layouts cannot. 
 
-Fallbacks are applied by giving the `<html>` tag a class of `no-flexbox` 
-or `no-flexwrap`.
 
-Basic visual tests are in [`test/modules/grid.html`](http://aptuitiv.github.io/cacao/test/modules/grid.html)
-and fallback layout tests are found in [`test/modules/grid-noflex.html`](http://aptuitiv.github.io/cacao/test/modules/grid-noflex.html).
+
+Basic visual tests are in [`test/modules/grid.html`](http://aptuitiv.github.io/cacao/test/modules/grid.html).
 
 **Note**: This component relies on particular dimensions being applied to cells in
 the grid via other classes. For example,
@@ -25,7 +22,6 @@ the grid via other classes. For example,
 * Custom vertical alignment of cells (top, bottom, or middle).
 * Cell width is controlled independently of grid gutter.
 * Infinite nesting.
-* Inline-block fallbacks for browsers without flexbox support.
 
 
 ## Available classes
@@ -43,17 +39,12 @@ the grid via other classes. For example,
 * `Grid-cell`: a child cell of `Grid` that wraps grid content
 * `Grid-cell--center`: center an individual `Grid-cell`
 
-**Note**: `Grid--fit` and `Grid--equalHeight` will not work in browsers 
-without flexbox support.
 
 
 ## Configurable variables
 
 * `--Grid-cell-gutter`: the width of the gutter applied by the 
   `Grid--withGutter` modifier class.
-* `--Grid-fontSize`: Used by the inline-block fallback grid to reset font size 
-  changes made to the grid wrapper. Only required if you wish to use the
-  inline-block fallback layout.
 
 
 ## Use
