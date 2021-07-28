@@ -1,3 +1,6 @@
+# 3.10.0 (July 28, 2021)
+Updated ColumnList--noStyle to also remove the left padding on the list.
+
 # 3.9.0 (April 1, 2021)
 
 * Removed the inline block fallback styles for the Grid component since Flexbox is widely supported in browsers now.
