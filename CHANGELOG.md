@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.11.0 (Sept 21, 2021)
+
+- Updated .Button class to use `display: inline-flexbox` instead of `display: inline`
+- Updated .TextInput to use `small`, `medium` and `large` class sizes
+- Added responsive flexbox classes
+- Added `margin-right` utility classes
+- Added `margin-left` utility classes
+- Fixed `u-textBreak` so that it uses `overflow-wrap` instead of `word-wrap`
+
 ## 3.10.0 (July 28, 2021)
 
 Updated ColumnList--noStyle to also remove the left padding on the list.
