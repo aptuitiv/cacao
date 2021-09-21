@@ -194,7 +194,7 @@
  */
 
 .u-textBreak {
-    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
 }
 
 /**
