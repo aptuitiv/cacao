@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Left margin utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+:root {
+    --utils-margin-left: 10px;
+}
+
+.u-margLeft0 {
+    margin-left: 0 !important;
+}
+
+.u-margLeft1 {
+    margin-left: var(--utils-margin-left) !important;
+}
+
+.u-margLeft2 {
+    margin-left: calc(var(--utils-margin-left) * 2) !important;
+}
+
+.u-margLeft3 {
+    margin-left: calc(var(--utils-margin-left) * 3) !important;
+}
+
+.u-margLeft4 {
+    margin-left: calc(var(--utils-margin-left) * 4) !important;
+}
+
+.u-margLeft5 {
+    margin-left: calc(var(--utils-margin-left) * 5) !important;
+}
+

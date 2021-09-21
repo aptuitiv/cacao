@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Right margin utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+:root {
+    --utils-margin-right: 10px;
+}
+
+.u-margRight0 {
+    margin-right: 0 !important;
+}
+
+.u-margRight1 {
+    margin-right: var(--utils-margin-right) !important;
+}
+
+.u-margRight2 {
+    margin-right: calc(var(--utils-margin-right) * 2) !important;
+}
+
+.u-margRight3 {
+    margin-right: calc(var(--utils-margin-right) * 3) !important;
+}
+
+.u-margRight4 {
+    margin-right: calc(var(--utils-margin-right) * 4) !important;
+}
+
+.u-margRight5 {
+    margin-right: calc(var(--utils-margin-right) * 5) !important;
+}
+
