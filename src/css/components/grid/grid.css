@@ -5,7 +5,7 @@
 /** @define Grid */
 
 /**
- * Flex-box grid component with inline-block fallback.
+ * Flex-box grid component
  *
  * Note: Relies on particular dimensions being applied to cells via
  * other classes. For example, `size` utilities.
@@ -16,7 +16,6 @@
 
 :root {
     --Grid-cell-gutter: 20px;
-    --Grid-fontSize: 15px;
 }
 
 /* Grid container
@@ -150,83 +149,4 @@
 
 .Grid-cell--center {
     margin: 0 auto;
-}
-
-/* ==========================================================================
-   Inline-block grid fallback
-   ========================================================================== */
-
-/**
- * Fallbacks for browsers that don't support flexbox or don't support flex
- * item wrapping.
- */
-
-/* Grid container
-   ========================================================================== */
-
-/**
- * 1. Account for browser defaults of elements that might be the root node of
- *    the component.
- * 2. Remove inter-cell whitespace that appears between `inline-block` child
- *    elements.
- * 3. Ensure consistent default alignment.
- */
-
-/* postcss-bem-linter: ignore */
-.no-flexwrap .Grid,
-.no-flexbox .Grid {
-    display: block; /* 1 */
-    font-size: 0; /* 2 */
-    text-align: left; /* 3 */
-}
-
-/* postcss-bem-linter: ignore */
-.no-flexwrap .Grid--alignCenter,
-.no-flexbox .Grid--alignCenter {
-    text-align: center;
-}
-
-/* postcss-bem-linter: ignore */
-.no-flexwrap .Grid--alignRight,
-.no-flexbox .Grid--alignRight {
-    text-align: right;
-}
-
-/* postcss-bem-linter: ignore */
-.no-flexwrap .Grid--alignMiddle > .Grid-cell,
-.no-flexbox .Grid--alignMiddle > .Grid-cell {
-    vertical-align: middle;
-}
-
-/* postcss-bem-linter: ignore */
-.no-flexwrap .Grid--alignBottom > .Grid-cell,
-.no-flexbox .Grid--alignBottom > .Grid-cell {
-    vertical-align: bottom;
-}
-
-/* Grid cell
-   ========================================================================== */
-
-/**
- * 1. Fundamentals of the non-float grid layout.
- * 2. Reset font changes made in `Grid`.
- * 3. Keeps content correctly aligned with the grid direction.
- * 4. Controls vertical positioning of units.
- * 5. Make cells full-width by default.
- */
-
-/* postcss-bem-linter: ignore */
-.no-flexwrap .Grid-cell,
-.no-flexbox .Grid-cell {
-    display: inline-block; /* 1 */
-    font-size: var(--Grid-fontSize); /* 2 */
-    text-align: left; /* 3 */
-    vertical-align: top; /* 4 */
-    width: 100%; /* 5 */
-}
-
-/* postcss-bem-linter: ignore */
-.no-flexwrap .Grid-cell--center,
-.no-flexbox .Grid-cell--center {
-    display: block;
 }

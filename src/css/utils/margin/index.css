@@ -7,3 +7,11 @@
 @import './marg-top-lg';
 @import './marg-top-md';
 @import './marg-top-sm';
+@import './marg-right';
+@import './marg-right-lg';
+@import './marg-right-md';
+@import './marg-right-sm';
+@import './marg-left';
+@import './marg-left-lg';
+@import './marg-left-md';
+@import './marg-left-sm';
