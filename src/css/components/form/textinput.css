@@ -40,3 +40,22 @@
     color: var(--TextInput-successColor);
     outline: 1px solid var(--TextInput-successColor);
 }
+
+/**
+ * Sizes
+ */
+
+/* postcss-bem-linter: ignore */
+.TextInput.small {
+    width: 40%;
+}
+
+/* postcss-bem-linter: ignore */
+.TextInput.medium {
+    width: 60%;
+}
+
+/* postcss-bem-linter: ignore */
+.TextInput.large {
+    width: 100%;
+}
