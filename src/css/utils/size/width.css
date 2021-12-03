@@ -1,0 +1,25 @@
+/* =========================================================================== *\
+    Width utilities
+\* =========================================================================== */
+
+.u-widthFull {
+    width: 100% !important;
+}
+
+@media (--c-bp-lg) {
+    .u-lg-widthFull {
+        width: 100% !important;
+    }
+}
+
+@media (--c-bp-md) {
+    .u-md-widthFull {
+        width: 100% !important;
+    }
+}
+
+@media (--c-bp-sm) {
+    .u-sm-widthFull {
+        width: 100% !important;
+    }
+}
