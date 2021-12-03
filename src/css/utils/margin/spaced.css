@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Vertical spacing utilities
+   ========================================================================== */
+
+/** @define utilities */
+
+:root {
+    --utils-margin-space: 5px;
+}
+
+.u-spacedMarg0 {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.u-spacedMarg1 {
+    margin-bottom: var(--utils-margin-space) !important;
+    margin-top: var(--utils-margin-space) !important;
+}
+
+.u-spacedMarg2 {
+    margin-bottom: calc(var(--utils-margin-space) * 2) !important;
+    margin-top: calc(var(--utils-margin-space) * 2) !important;
+}
+
+.u-spacedMarg3 {
+    margin-bottom: calc(var(--utils-margin-space) * 3) !important;
+    margin-top: calc(var(--utils-margin-space) * 3) !important;
+}
+
+.u-spacedMarg4 {
+    margin-bottom: calc(var(--utils-margin-space) * 4) !important;
+    margin-top: calc(var(--utils-margin-space) * 4) !important;
+}
+
+.u-spacedMarg5 {
+    margin-bottom: calc(var(--utils-margin-space) * 5) !important;
+    margin-top: calc(var(--utils-margin-space) * 5) !important;
+}
+
