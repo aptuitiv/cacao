@@ -7,6 +7,19 @@
 }
 
 /**
+ * Add smooth scrolling by default.
+ * Disable it for those who prefer reduced motion
+ * @link https://ashleemboyer.com/accessible-smooth-scroll-to-top-buttons-with-little-code
+ */
+html {
+    scroll-behavior: smooth;
+
+    @media (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
+    }
+}
+
+/**
  * 1. By default, `<body>` has no `background-color` so we set one
  *    as a best practice.
  */
