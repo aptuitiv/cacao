@@ -75,16 +75,6 @@ html {
 }
 
 /**
- * Scale down text on small screens
- */
-
-@media (--c-bp-sm) {
-    html {
-        font-size: 56.25%;
-    }
-}
-
-/**
  * Set body defaults for other elements to inherit
  */
 
