@@ -1,5 +1,18 @@
 # Changelog
 
+## 3.14.0 (May 12, 2022)
+
+- Removed the small screen font styles that cause the font to be smaller on small screens. This is no longer necessary with high resolution mobile phones.
+  
+## 3.13.0 (December 17, 2021)
+
+- Added smooth scrolling on the `<html>` tag by default.
+  
+## 3.12.0 (December 3, 2021)
+
+- Added vertical margin spacing utilities.
+- Added full width/height utilities.
+
 ## 3.11.0 (Sept 21, 2021)
 
 - Updated .Button class to use `display: inline-flexbox` instead of `display: inline`
