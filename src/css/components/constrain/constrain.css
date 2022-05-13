@@ -43,36 +43,36 @@
    ========================================================================== */
 
 .Constrain--5by4 {
-    padding-bottom: 80%;
+    padding-bottom: 80% !important;
 }
 
 .Constrain--4by3 {
-    padding-bottom: 75%;
+    padding-bottom: 75% !important;
 }
 
 .Constrain--3by2 {
-    padding-bottom: 66.66667%;
+    padding-bottom: 66.66667% !important;
 }
 
 .Constrain--8by5,
 .Constrain--16by10 {
-    padding-bottom: 62.5%;
+    padding-bottom: 62.5% !important;
 }
 
 .Constrain--5by3 {
-    padding-bottom: 60%;
+    padding-bottom: 60% !important;
 }
 
 .Constrain--16by9 {
-    padding-bottom: 56.25%;
+    padding-bottom: 56.25% !important;
 }
 
 .Constrain--2by1 {
-    padding-bottom: 50%;
+    padding-bottom: 50% !important;
 }
 
 .Constrain--3by1 {
-    padding-bottom: 33.333333%;
+    padding-bottom: 33.333333% !important;
 }
 
 /* Crop gravities
