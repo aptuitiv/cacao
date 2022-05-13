@@ -30,9 +30,7 @@
 }
 
 /**
- * 1. Normalize `box-sizing` across all elements that this component could be
- *    applied to.
- * 2. Prevent button text from being selectable.
+ * 1. Prevent button text from being selectable.
  */
 
 .Button {
@@ -40,7 +38,6 @@
     background: var(--Button-background);
     border: var(--Button-border);
     border-radius: var(--Button-border-radius);
-    box-sizing: border-box; /* 1 */
     color: var(--Button-color);
     cursor: pointer;
     display: inline-flex;

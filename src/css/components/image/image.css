@@ -17,7 +17,6 @@
  */
 
 .Image {
-    box-sizing: border-box;
     height: auto;
     margin-bottom: var(--Image-spacing);
     max-width: 100%;
