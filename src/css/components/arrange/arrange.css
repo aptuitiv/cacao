@@ -28,7 +28,6 @@
  */
 
 .Arrange {
-    box-sizing: border-box; /* 1 */
     display: table; /* 2 */
     margin: 0; /* 3 */
     min-width: 100%; /* 4 */

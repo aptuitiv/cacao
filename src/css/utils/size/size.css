@@ -165,7 +165,6 @@
 
 .u-size12of12,
 .u-sizeFull {
-    box-sizing: border-box !important;
     display: block !important;
     width: 100% !important;
 }

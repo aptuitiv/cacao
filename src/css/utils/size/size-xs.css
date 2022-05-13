@@ -169,7 +169,6 @@
 
     .u-xs-size12of12,
     .u-xs-sizeFull {
-        box-sizing: border-box !important;
         display: block !important;
         width: 100% !important;
     }
@@ -180,7 +179,6 @@
      */
 
     .u-xs-sizeAuto {
-        box-sizing: border-box !important;
         height: auto !important;
         width: auto !important;
     }

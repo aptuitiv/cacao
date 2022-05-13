@@ -18,7 +18,6 @@
  */
 
 .FooterNav {
-    box-sizing: border-box;
     display: inline-block;
     font-size: var(--FooterNav-fontSize);
     line-height: var(--FooterNav-lineHeight);
@@ -33,7 +32,6 @@
 
 .FooterNav-item {
     border-left: 1px solid var(--FooterNav-link-color);
-    box-sizing: border-box;
     display: inline-block;
     padding: 0 20px;
 }
@@ -48,7 +46,6 @@
  */
 
 .FooterNav-link {
-    box-sizing: border-box;
     color: var(--FooterNav-link-color);
     display: block;
     text-decoration: none;

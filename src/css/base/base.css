@@ -119,3 +119,12 @@ button:focus {
 [hidden] {
     display: none !important;
 }
+
+/**
+ * Use a more intuitive box-sizing model
+ * See: https://www.joshwcomeau.com/css/custom-css-reset
+ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}

@@ -21,7 +21,6 @@
     background: var(--TextInput-background);
     border: var(--TextInput-border);
     border-radius: 0;
-    box-sizing: border-box;
     color: var(--TextInput-color);
     outline: none;
     padding: var(--TextInput-padding);
