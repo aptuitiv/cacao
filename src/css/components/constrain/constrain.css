@@ -39,7 +39,7 @@
     background-size: contain;
 }
 
-/* Constrain ratios
+/* Landscape constrain ratios
    ========================================================================== */
 
 .Constrain--5by4 {
@@ -73,6 +73,42 @@
 
 .Constrain--3by1 {
     padding-bottom: 33.333333% !important;
+}
+
+/* Portrait constrain ratios
+   ========================================================================== */
+
+.Constrain--4by5 {
+    padding-bottom: 125% !important;
+}
+
+.Constrain--3by4 {
+    padding-bottom: 133.333333% !important;
+}
+
+.Constrain--2by3 {
+    padding-bottom: 150% !important;
+}
+
+.Constrain--5by8,
+.Constrain--10by16 {
+    padding-bottom: 160% !important;
+}
+
+.Constrain--3by5 {
+    padding-bottom: 166.666666% !important;
+}
+
+.Constrain--9by16 {
+    padding-bottom: 177.777777% !important;
+}
+
+.Constrain--1by2 {
+    padding-bottom: 200% !important;
+}
+
+.Constrain--1by3 {
+    padding-bottom: 300% !important;
 }
 
 /* Crop gravities
