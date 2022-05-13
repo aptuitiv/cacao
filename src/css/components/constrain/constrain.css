@@ -39,76 +39,83 @@
     background-size: contain;
 }
 
+/* Square constrain ratio
+   ========================================================================== */
+
+.Constrain--1by1 {
+    padding-bottom: 100%;
+}
+
 /* Landscape constrain ratios
    ========================================================================== */
 
 .Constrain--5by4 {
-    padding-bottom: 80% !important;
+    padding-bottom: 80%;
 }
 
 .Constrain--4by3 {
-    padding-bottom: 75% !important;
+    padding-bottom: 75%;
 }
 
 .Constrain--3by2 {
-    padding-bottom: 66.66667% !important;
+    padding-bottom: 66.66667%;
 }
 
 .Constrain--8by5,
 .Constrain--16by10 {
-    padding-bottom: 62.5% !important;
+    padding-bottom: 62.5%;
 }
 
 .Constrain--5by3 {
-    padding-bottom: 60% !important;
+    padding-bottom: 60%;
 }
 
 .Constrain--16by9 {
-    padding-bottom: 56.25% !important;
+    padding-bottom: 56.25%;
 }
 
 .Constrain--2by1 {
-    padding-bottom: 50% !important;
+    padding-bottom: 50%;
 }
 
 .Constrain--3by1 {
-    padding-bottom: 33.333333% !important;
+    padding-bottom: 33.333333%;
 }
 
 /* Portrait constrain ratios
    ========================================================================== */
 
 .Constrain--4by5 {
-    padding-bottom: 125% !important;
+    padding-bottom: 125%;
 }
 
 .Constrain--3by4 {
-    padding-bottom: 133.333333% !important;
+    padding-bottom: 133.333333%;
 }
 
 .Constrain--2by3 {
-    padding-bottom: 150% !important;
+    padding-bottom: 150%;
 }
 
 .Constrain--5by8,
 .Constrain--10by16 {
-    padding-bottom: 160% !important;
+    padding-bottom: 160%;
 }
 
 .Constrain--3by5 {
-    padding-bottom: 166.666666% !important;
+    padding-bottom: 166.666666%;
 }
 
 .Constrain--9by16 {
-    padding-bottom: 177.777777% !important;
+    padding-bottom: 177.777777%;
 }
 
 .Constrain--1by2 {
-    padding-bottom: 200% !important;
+    padding-bottom: 200%;
 }
 
 .Constrain--1by3 {
-    padding-bottom: 300% !important;
+    padding-bottom: 300%;
 }
 
 /* Crop gravities
