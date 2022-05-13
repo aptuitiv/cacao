@@ -1,0 +1,30 @@
+/* =========================================================================== *\
+    Image constrain
+\* =========================================================================== */
+
+/**
+ * Constrains an image of unknown size to the specified aspect ratio.
+ * 
+ * Used in combination with .Constrain classes. An example would be:
+ * <div class="ImageConstrain Constrain--16by9"><img src="/my/image/here"></div>
+ */
+
+/** @define ImageConstrain */
+
+.ImageConstrain {
+    display: block;
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+}
+
+/* postcss-bem-linter: ignore */
+.ImageConstrain img {
+    height: 100%;
+    image-orientation: none;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
