@@ -6,7 +6,6 @@
 /* @define ImageWrapper */
 
 .ImageWrapper {
-    box-sizing: border-box;
     margin-bottom: var(--Image-spacing);
 }
 

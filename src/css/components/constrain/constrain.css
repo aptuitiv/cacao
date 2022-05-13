@@ -25,7 +25,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-sizing: border-box;
     display: block;
     padding-bottom: 100%;
     width: 100%;
@@ -39,7 +38,14 @@
     background-size: contain;
 }
 
-/* Constrain ratios
+/* Square constrain ratio
+   ========================================================================== */
+
+.Constrain--1by1 {
+    padding-bottom: 100%;
+}
+
+/* Landscape constrain ratios
    ========================================================================== */
 
 .Constrain--5by4 {
@@ -73,6 +79,42 @@
 
 .Constrain--3by1 {
     padding-bottom: 33.333333%;
+}
+
+/* Portrait constrain ratios
+   ========================================================================== */
+
+.Constrain--4by5 {
+    padding-bottom: 125%;
+}
+
+.Constrain--3by4 {
+    padding-bottom: 133.333333%;
+}
+
+.Constrain--2by3 {
+    padding-bottom: 150%;
+}
+
+.Constrain--5by8,
+.Constrain--10by16 {
+    padding-bottom: 160%;
+}
+
+.Constrain--3by5 {
+    padding-bottom: 166.666666%;
+}
+
+.Constrain--9by16 {
+    padding-bottom: 177.777777%;
+}
+
+.Constrain--1by2 {
+    padding-bottom: 200%;
+}
+
+.Constrain--1by3 {
+    padding-bottom: 300%;
 }
 
 /* Crop gravities

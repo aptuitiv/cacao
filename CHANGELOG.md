@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.15.0 (May 12, 2022)
+
+- Added global box sizing style. Removed `box-sizing` from individual components.
+- Added ImageConstrain class to add size constraints to images.
+- Added portrait size options to the `Constrain` classes.
+
 ## 3.14.0 (May 12, 2022)
 
 - Removed the small screen font styles that cause the font to be smaller on small screens. This is no longer necessary with high resolution mobile phones.

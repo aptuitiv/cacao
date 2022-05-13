@@ -29,7 +29,6 @@
  */
 
 .Grid {
-    box-sizing: border-box;
     display: flex; /* 1 */
     flex-flow: row wrap;
     list-style: none; /* 1 */
@@ -135,7 +134,6 @@
  */
 
 .Grid-cell {
-    box-sizing: inherit;
     flex: 0 0 100%; /* 1 */
     margin: 0;
     padding: 0;

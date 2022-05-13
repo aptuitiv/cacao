@@ -18,17 +18,13 @@
 }
 
 /**
- * 1. Protect against the component expanding beyond the confines of its
- *    container if properties affecting the box-model are applied to the
- *    component. Mainly necessary because of (5).
- * 2. Rely on table layout.
- * 3. Zero out the default spacing that might be on an element (e.g., `ul`).
- * 4. Make sure the component fills at least the full width of its parent.
- * 5. Reset the table-layout algorithm in case a component is nested.
+ * 1. Rely on table layout.
+ * 2. Zero out the default spacing that might be on an element (e.g., `ul`).
+ * 3. Make sure the component fills at least the full width of its parent.
+ * 4. Reset the table-layout algorithm in case a component is nested.
  */
 
 .Arrange {
-    box-sizing: border-box; /* 1 */
     display: table; /* 2 */
     margin: 0; /* 3 */
     min-width: 100%; /* 4 */
