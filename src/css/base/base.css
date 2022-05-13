@@ -125,6 +125,8 @@ button:focus {
  * See: https://www.joshwcomeau.com/css/custom-css-reset
  */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
