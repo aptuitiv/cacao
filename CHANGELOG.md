@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.16.0 (July 21, 2022)
+
+- Added `Image--fullWidth` class to make an image expand to full width.
+
 ## 3.15.0 (May 12, 2022)
 
 - Added global box sizing style. Removed `box-sizing` from individual components.
