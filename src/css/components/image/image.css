@@ -43,6 +43,10 @@
     margin-left: 1em;
 }
 
+.Image--fullWidth {
+    width: 100%;
+}
+
 @media (--c-bp-sm) {
     .Image--left,
     .Image--right {
