@@ -160,6 +160,7 @@
  * Make an element the width of its parent.
  */
 
+.u-size1of1,
 .u-size12of12,
 .u-sizeFull {
     display: block !important;

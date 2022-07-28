@@ -164,6 +164,7 @@
      * Make an element the width of its parent.
      */
 
+    .u-lg-size1of1,
     .u-lg-size12of12,
     .u-lg-sizeFull {
         display: block !important;

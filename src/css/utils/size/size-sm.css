@@ -164,6 +164,7 @@
      * Make an element the width of its parent.
      */
 
+    .u-sm-size1of1,
     .u-sm-size12of12,
     .u-sm-sizeFull {
         display: block !important;

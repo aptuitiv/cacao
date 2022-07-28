@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.17.0 (July 28, 2022)
+
+- Added u-size1of1 as an alternate class to u-sizeFull.
+
 ## 3.16.0 (July 21, 2022)
 
 - Added `Image--fullWidth` class to make an image expand to full width.
