@@ -77,9 +77,16 @@
  * UI States
  */
 
-.Button:hover,
-.Button:focus,
-.Button:active {
+/* Only show hover states if supported */
+@media (hover: hover) {
+    .Button:hover {
+        background: var(--Button-backgroundHover);
+        color: var(--Button-colorHover);
+        text-decoration: none;
+    }
+}
+
+.Button:focus-visible {
     background: var(--Button-backgroundHover);
     color: var(--Button-colorHover);
     text-decoration: none;
@@ -113,9 +120,14 @@
     background: #555;
 }
 
-.Button--secondary:active,
-.Button--secondary:focus,
-.Button--secondary:hover {
+/* Only show hover states if supported */
+@media (hover: hover) {
+    .Button--secondary:hover {
+        background: #333;
+    }
+}
+
+.Button--secondary:focus-visible {
     background: #333;
 }
 
