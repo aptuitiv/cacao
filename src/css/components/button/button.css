@@ -81,7 +81,7 @@
  */
 
 /* Only show hover states if supported */
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     .Button:hover:not(:disabled) {
         background: var(--Button-backgroundHover);
         color: var(--Button-colorHover);
@@ -124,7 +124,7 @@
 }
 
 /* Only show hover states if supported */
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     .Button--secondary:hover {
         background: #333;
     }
