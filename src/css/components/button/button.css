@@ -82,7 +82,7 @@
 
 /* Only show hover states if supported */
 @media (hover: hover) {
-    .Button:hover {
+    .Button:hover:not(:disabled) {
         background: var(--Button-backgroundHover);
         color: var(--Button-colorHover);
         text-decoration: none;
