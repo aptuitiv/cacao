@@ -130,3 +130,13 @@ button:focus {
 *::after {
     box-sizing: border-box;
 }
+
+/**
+ * Remove the focus outline for mouse uses but preserve for keyboard users with
+ * :focus-visible
+ * @link https://twitter.com/LeaVerou/status/1045768279753666562
+ * @link https://css-tricks.com/the-focus-visible-trick/
+ */
+:focus:not(:focus-visible) {
+    outline: none;
+}
