@@ -1,0 +1,11 @@
+/* =========================================================================== *\
+    Content Utilities
+\* =========================================================================== */
+
+/** @define utilities */
+
+/* Ensures the last child inside the container has no bottom margin or padding */
+.u-cleanContent > *:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}

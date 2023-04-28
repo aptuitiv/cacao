@@ -64,30 +64,35 @@
 /**
  * Work around a Firefox/IE bug where the transparent `button` background
  * results in a loss of the default `button` focus styles.
+ * Based on SUIT CSS: https://github.com/suitcss/base/blob/master/lib/base.css.
+ * Also see https://css-tricks.com/copy-the-browsers-native-focus-styles/ for "Highlight"
  */
-
-.Button:focus {
+.Button:focus-visible {
     outline: 1px dotted;
     /* stylelint-disable */
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: 2px auto Highlight;
+    outline: 2px auto -webkit-focus-ring-color;
     /* stylelint-enable */
+    outline-offset: 1px;
 }
 
 /**
  * UI States
  */
 
-.Button:hover,
-.Button:focus,
-.Button:active {
+/* Only show hover states if supported */
+@media (hover: hover) and (pointer: fine) {
+    .Button:hover:not(:disabled) {
+        background: var(--Button-backgroundHover);
+        color: var(--Button-colorHover);
+        text-decoration: none;
+    }
+}
+
+.Button:focus-visible {
     background: var(--Button-backgroundHover);
     color: var(--Button-colorHover);
     text-decoration: none;
-}
-
-.Button:focus,
-.Button:active {
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, .5);
 }
 
 .Button:disabled,
@@ -118,9 +123,14 @@
     background: #555;
 }
 
-.Button--secondary:active,
-.Button--secondary:focus,
-.Button--secondary:hover {
+/* Only show hover states if supported */
+@media (hover: hover) and (pointer: fine) {
+    .Button--secondary:hover {
+        background: #333;
+    }
+}
+
+.Button--secondary:focus-visible {
     background: #333;
 }
 
