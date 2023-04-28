@@ -51,7 +51,9 @@
     text-decoration: none;
 }
 
-.FooterNav-link:hover {
-    color: var(--FooterNav-link-colorHover);
-    text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+    .FooterNav-link:hover {
+        color: var(--FooterNav-link-colorHover);
+        text-decoration: underline;
+    }
 }

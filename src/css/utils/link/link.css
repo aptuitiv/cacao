@@ -52,8 +52,10 @@
     text-decoration: none !important;
 }
 
-.u-linkSubtle:hover {
-    text-decoration: underline !important;
+@media (hover: hover) and (pointer: fine) {
+    .u-linkSubtle:hover {
+        text-decoration: underline !important;
+    }
 }
 
 /**
