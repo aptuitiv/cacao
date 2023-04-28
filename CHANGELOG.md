@@ -1,8 +1,12 @@
 # Changelog
 
+## 3.20.0 (April 28, 2023)
+
+- Take 3.... Updated more hover states to only be applied if hover is supported by the device.
+
 ## 3.19.0 (April 28, 2023)
 
-- Updated more hover states to only be applied if hover is supported by the device.
+- Take 2.... Updated more hover states to only be applied if hover is supported by the device.
 
 ## 3.18.0 (April 28, 2023)
 
