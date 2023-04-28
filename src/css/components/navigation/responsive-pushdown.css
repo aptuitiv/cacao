@@ -56,10 +56,16 @@
         transform: translateY(-50%) rotate(90deg);
     }
 
+    @media (hover: hover) and (pointer: fine) {
+        .MainNav-link:hover {
+            background: rgba(0, 0, 0, .1);
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
     .MainNav-link.is-active,
-    .MainNav-link:active,
-    .MainNav-link:focus,
-    .MainNav-link:hover {
+    .MainNav-link:focus-visible {
         background: rgba(0, 0, 0, .1);
         color: inherit;
         text-decoration: none;
@@ -90,17 +96,28 @@
         white-space: normal;
     }
 
-    .Dropdown-link:active,
-    .Dropdown-link:hover,
-    .Dropdown-link:focus {
+    @media (hover: hover) and (pointer: fine) {
+        .Dropdown-link:hover {
+            color: var(--Dropdown-link-color);
+            text-decoration: none;
+        }
+    }
+
+    .Dropdown-link:focus-visible {
         color: var(--Dropdown-link-color);
         text-decoration: none;
     }
 
+    @media (hover: hover) and (pointer: fine) {
+        .Dropdown-link--parent:hover {
+            background: rgba(0, 0, 0, .1);
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
     .Dropdown-link--parent.is-active,
-    .Dropdown-link--parent:active,
-    .Dropdown-link--parent:focus,
-    .Dropdown-link--parent:hover,
+    .Dropdown-link--parent:focus-visible,
     .Dropdown-link--parent.is-active + .Dropdown-menu {
         background: rgba(0, 0, 0, .1);
         color: inherit;

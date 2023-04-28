@@ -17,9 +17,15 @@
     text-decoration: none;
 }
 
-.Pagination-item:active,
-.Pagination-item:focus,
-.Pagination-item:hover {
+@media (hover: hover) and (pointer: fine) {
+    .Pagination-item:hover {
+        background: #666;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.Pagination-item:focus-visible {
     background: #666;
     color: #fff;
     text-decoration: none;
