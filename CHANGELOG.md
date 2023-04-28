@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.19.0 (April 28, 2023)
+
+- Updated more hover states to only be applied if hover is supported by the device.
+
+## 3.18.0 (April 28, 2023)
+
+- Updated hover states to only be applied if hover is supported by the device.
+  
 ## 3.17.0 (July 28, 2022)
 
 - Added u-size1of1 as an alternate class to u-sizeFull.
