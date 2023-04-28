@@ -9,10 +9,15 @@
  * Reset all link styles
  */
 
+@media (hover: hover) and (pointer: fine) {
+    .u-linkClean:hover {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+}
+
 .u-linkClean,
-.u-linkClean:hover,
-.u-linkClean:focus,
-.u-linkClean:active {
+.u-linkClean:focus-visible {
     color: inherit !important;
     text-decoration: none !important;
 }
@@ -66,15 +71,23 @@
  * </a>
  */
 
+@media (hover: hover) and (pointer: fine) {
+    .u-linkComplex:hover {
+        text-decoration: none !important;
+    }
+}
+
 .u-linkComplex,
-.u-linkComplex:hover,
-.u-linkComplex:focus,
-.u-linkComplex:active {
+.u-linkComplex:focus-visible {
     text-decoration: none !important;
 }
 
-.u-linkComplex:hover .u-linkComplexTarget,
-.u-linkComplex:focus .u-linkComplexTarget,
-.u-linkComplex:active .u-linkComplexTarget {
+@media (hover: hover) and (pointer: fine) {
+    .u-linkComplex:hover .u-linkComplexTarget {
+        text-decoration: underline !important;
+    }
+}
+
+.u-linkComplex:focus-visible .u-linkComplexTarget {
     text-decoration: underline !important;
 }

@@ -25,9 +25,14 @@
     text-decoration: none;
 }
 
-.SidebarNav-link:active,
-.SidebarNav-link:focus,
-.SidebarNav-link:hover {
+@media (hover: hover) and (pointer: fine) {
+    .SidebarNav-link:hover {
+        color: #333;
+        text-decoration: none;
+    }
+}
+
+.SidebarNav-link:focus-visible {
     color: #333;
     text-decoration: none;
 }
