@@ -103,13 +103,16 @@ textarea {
 /**
  * Work around a Firefox/IE bug where the transparent `button` background
  * results in a loss of the default `button` focus styles.
+ * Based on SUIT CSS: https://github.com/suitcss/base/blob/master/lib/base.css.
+ * Also see https://css-tricks.com/copy-the-browsers-native-focus-styles/ for "Highlight"
  */
-
-button:focus {
+ button:focus-visible {
     outline: 1px dotted;
     /* stylelint-disable */
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: 2px auto Highlight;
+    outline: 2px auto -webkit-focus-ring-color;
     /* stylelint-enable */
+    outline-offset: 1px;
 }
 
 /**
@@ -129,4 +132,14 @@ button:focus {
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+/**
+ * Remove the focus outline for mouse uses but preserve for keyboard users with
+ * :focus-visible
+ * @link https://twitter.com/LeaVerou/status/1045768279753666562
+ * @link https://css-tricks.com/the-focus-visible-trick/
+ */
+:focus:not(:focus-visible) {
+    outline: none;
 }
