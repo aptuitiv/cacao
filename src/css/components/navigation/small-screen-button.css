@@ -30,9 +30,15 @@
     }
 }
 
-.SmScBtn:active,
-.SmScBtn:focus,
-.SmScBtn:hover {
+/* Only show hover states if supported */
+@media (hover: hover) {
+    .SmScBtn:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.SmScBtn:focus-visible {
     color: #fff;
     text-decoration: none;
 }
