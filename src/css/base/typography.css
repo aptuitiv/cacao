@@ -88,6 +88,16 @@ body {
 }
 
 /**
+ * The Normalize libray sets the font weight to "bolder". This works in most cases if the
+ * element's font weight is 400. But if it's 300 then "bolder" ends up being 400, which is
+ * usually not desired. This ensures that bold is always bold.
+ */
+b,
+strong {
+    font-weight: 700;
+}
+
+/**
  * Consistent spacing on block elements
  */
 
@@ -108,8 +118,9 @@ ul {
 
 blockquote {
     border-left: 10px solid #ccc;
-    margin: var(--base-typography-spacing) calc(var(--base-typography-spacing) * .7);
-    padding: .5em 1em;
+    margin: var(--base-typography-spacing)
+        calc(var(--base-typography-spacing) * 0.7);
+    padding: 0.5em 1em;
     position: relative;
 }
 
@@ -140,13 +151,13 @@ a {
 /**
  * Default styling for telephone links to not look like links
  */
-a[href^=tel] {
+a[href^="tel"] {
     color: inherit;
     text-decoration: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    a[href^=tel]:hover {
+    a[href^="tel"]:hover {
         color: inherit;
         text-decoration: none;
     }
@@ -215,7 +226,8 @@ h6 {
     font-family: var(--base-typography-heading-fontFamily);
     font-weight: var(--base-typography-heading-fontWeight);
     letter-spacing: var(--base-typography-heading-letterSpacing);
-    margin: calc(var(--base-typography-spacing) * 1.2) 0 calc(var(--base-typography-spacing) / 3);
+    margin: calc(var(--base-typography-spacing) * 1.2) 0
+        calc(var(--base-typography-spacing) / 3);
 }
 
 h2:first-child,
