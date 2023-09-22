@@ -1,0 +1,28 @@
+/* =========================================================================== *\
+    Vertical Margin Utilities
+\* =========================================================================== */
+
+.my-1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.my-2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.my-3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.my-4 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.my-5 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
