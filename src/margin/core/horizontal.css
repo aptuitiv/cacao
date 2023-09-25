@@ -2,6 +2,11 @@
     Horizontal Margin Utilities
 \* =========================================================================== */
 
+.mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .mx-1 {
     margin-left: 10px;
     margin-right: 10px;

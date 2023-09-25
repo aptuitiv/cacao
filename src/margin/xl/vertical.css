@@ -3,6 +3,11 @@
 \* =========================================================================== */
 
 @media (--c-bp-xl) {
+    .my-0 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
     .my-1 {
         margin-top: 10px;
         margin-bottom: 10px;
