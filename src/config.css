@@ -1,0 +1,8 @@
+/* =========================================================================== *\
+    Cacao Configuration
+\* =========================================================================== */
+
+@custom-media --c-bp-sm (min-width: 36em);
+@custom-media --c-bp-md (min-width: 48em);
+@custom-media --c-bp-lg (min-width: 64em);
+@custom-media --c-bp-xl (min-width: 80em);
