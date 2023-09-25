@@ -1,0 +1,17 @@
+/* =========================================================================== *\
+    Flexbox Utilities
+\* =========================================================================== */
+
+@media (--c-bp-xl) {
+    .flex-reverse {
+        flex-direction: row-reverse;
+    }
+    
+    .flex-col {
+        flex-direction: column;
+    }
+    
+    .flex-col-reverse {
+        flex-direction: column-reverse;
+    }
+}
