@@ -3,6 +3,11 @@
 \* =========================================================================== */
 
 @media (--c-bp-md) {
+    .py-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
     .py-1 {
         padding-top: 10px;
         padding-bottom: 10px;

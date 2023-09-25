@@ -3,6 +3,11 @@
 \* =========================================================================== */
 
 @media (--c-bp-sm) {
+    .px-0 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
     .px-1 {
         padding-left: 10px;
         padding-right: 10px;
