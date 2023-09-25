@@ -1,0 +1,9 @@
+/* =========================================================================== *\
+    Spacing Utilities
+\* =========================================================================== */
+
+/* Used to remove space from the last element within an element */
+.last-child-sb-0 > *:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
