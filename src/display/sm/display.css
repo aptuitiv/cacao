@@ -3,23 +3,23 @@
 \* =========================================================================== */
 
 @media (--c-bp-sm) {
-    .flex {
+    .flex-sm {
         display: flex;
     }
     
-    .flex-inline {
+    .flex-inline-sm {
         display: inline-flex;
     }
     
-    .block {
+    .block-sm {
         display: block;
     }
     
-    .inline {
+    .inline-sm {
         display: inline;
     }
     
-    .hidden {
+    .hidden-sm {
         display: none;
     }
 }

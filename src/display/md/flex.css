@@ -2,16 +2,16 @@
     Flexbox Utilities
 \* =========================================================================== */
 
-@media (--c-bp-lg) {
-    .flex-reverse {
+@media (--c-bp-md) {
+    .flex-reverse-md {
         flex-direction: row-reverse;
     }
     
-    .flex-col {
+    .flex-col-md {
         flex-direction: column;
     }
     
-    .flex-col-reverse {
+    .flex-col-reverse-md {
         flex-direction: column-reverse;
     }
 }

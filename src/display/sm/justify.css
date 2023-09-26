@@ -3,23 +3,23 @@
 \* =========================================================================== */
 
 @media (--c-bp-sm) {
-    .justify-start {
+    .justify-start-sm {
         justify-content: flex-start;
     }
     
-    .justify-center {
+    .justify-center-sm {
         justify-content: center;
     }
     
-    .justify-end {
+    .justify-end-sm {
         justify-content: flex-end;
     }
     
-    .justify-between {
+    .justify-between-sm {
         justify-content: space-between;
     }
     
-    .justify-around {
+    .justify-around-sm {
         justify-content: space-around;
     }
 }

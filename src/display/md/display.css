@@ -2,24 +2,24 @@
     Display Utilities
 \* =========================================================================== */
 
-@media (--c-bp-lg) {
-    .flex {
+@media (--c-bp-md) {
+    .flex-md {
         display: flex;
     }
     
-    .flex-inline {
+    .flex-inline-md {
         display: inline-flex;
     }
     
-    .block {
+    .block-md {
         display: block;
     }
     
-    .inline {
+    .inline-md {
         display: inline;
     }
     
-    .hidden {
+    .hidden-md {
         display: none;
     }
 }

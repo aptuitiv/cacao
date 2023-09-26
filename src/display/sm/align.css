@@ -3,15 +3,15 @@
 \* =========================================================================== */
 
 @media (--c-bp-sm) {
-    .align-start {
+    .align-start-sm {
         align-items: flex-start;
     }
     
-    .align-center {
+    .align-center-sm {
         align-items: center;
     }
     
-    .align-end {
+    .align-end-sm {
         align-items: flex-end;
     }
 }

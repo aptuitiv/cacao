@@ -3,15 +3,15 @@
 \* =========================================================================== */
 
 @media (--c-bp-sm) {
-    .flex-reverse {
+    .flex-reverse-sm {
         flex-direction: row-reverse;
     }
     
-    .flex-col {
+    .flex-col-sm {
         flex-direction: column;
     }
     
-    .flex-col-reverse {
+    .flex-col-reverse-sm {
         flex-direction: column-reverse;
     }
 }

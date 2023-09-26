@@ -2,16 +2,16 @@
     Alignment Utilities
 \* =========================================================================== */
 
-@media (--c-bp-lg) {
-    .align-start {
+@media (--c-bp-md) {
+    .align-start-md {
         align-items: flex-start;
     }
     
-    .align-center {
+    .align-center-md {
         align-items: center;
     }
     
-    .align-end {
+    .align-end-md {
         align-items: flex-end;
     }
 }
