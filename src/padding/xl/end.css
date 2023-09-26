@@ -3,27 +3,27 @@
 \* =========================================================================== */
 
 @media (--c-bp-xl) {
-    .pe-0 {
+    .pe-xl-0 {
         padding-right: 0;
     }
     
-    .pe-1 {
+    .pe-xl-1 {
         padding-right: 10px;
     }
     
-    .pe-2 {
+    .pe-xl-2 {
         padding-right: 20px;
     }
     
-    .pe-3 {
+    .pe-xl-3 {
         padding-right: 30px;
     }
     
-    .pe-4 {
+    .pe-xl-4 {
         padding-right: 40px;
     }
     
-    .pe-5 {
+    .pe-xl-5 {
         padding-right: 50px;
     }
 }

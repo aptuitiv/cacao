@@ -3,32 +3,32 @@
 \* =========================================================================== */
 
 @media (--c-bp-xl) {
-    .py-0 {
+    .py-xl-0 {
         padding-top: 0;
         padding-bottom: 0;
     }
     
-    .py-1 {
+    .py-xl-1 {
         padding-top: 10px;
         padding-bottom: 10px;
     }
     
-    .py-2 {
+    .py-xl-2 {
         padding-top: 20px;
         padding-bottom: 20px;
     }
     
-    .py-3 {
+    .py-xl-3 {
         padding-top: 30px;
         padding-bottom: 30px;
     }
     
-    .py-4 {
+    .py-xl-4 {
         padding-top: 40px;
         padding-bottom: 40px;
     }
     
-    .py-5 {
+    .py-xl-5 {
         padding-top: 50px;
         padding-bottom: 50px;
     }

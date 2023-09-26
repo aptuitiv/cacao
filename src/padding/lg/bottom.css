@@ -3,27 +3,27 @@
 \* =========================================================================== */
 
 @media (--c-bp-lg) {
-    .pb-0 {
+    .pb-lg-0 {
         padding-bottom: 0;
     }
     
-    .pb-1 {
+    .pb-lg-1 {
         padding-bottom: 10px;
     }
     
-    .pb-2 {
+    .pb-lg-2 {
         padding-bottom: 20px;
     }
     
-    .pb-3 {
+    .pb-lg-3 {
         padding-bottom: 30px;
     }
     
-    .pb-4 {
+    .pb-lg-4 {
         padding-bottom: 40px;
     }
     
-    .pb-5 {
+    .pb-lg-5 {
         padding-bottom: 50px;
     }
 }

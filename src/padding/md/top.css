@@ -3,27 +3,27 @@
 \* =========================================================================== */
 
 @media (--c-bp-md) {
-    .pt-0 {
+    .pt-md-0 {
         padding-top: 0;
     }
     
-    .pt-1 {
+    .pt-md-1 {
         padding-top: 10px;
     }
     
-    .pt-2 {
+    .pt-md-2 {
         padding-top: 20px;
     }
     
-    .pt-3 {
+    .pt-md-3 {
         padding-top: 30px;
     }
     
-    .pt-4 {
+    .pt-md-4 {
         padding-top: 40px;
     }
     
-    .pt-5 {
+    .pt-md-5 {
         padding-top: 50px;
     }
 }

@@ -3,27 +3,27 @@
 \* =========================================================================== */
 
 @media (--c-bp-sm) {
-    .ps-0 {
+    .ps-sm-0 {
         padding-left: 0;
     }
     
-    .ps-1 {
+    .ps-sm-1 {
         padding-left: 10px;
     }
     
-    .ps-2 {
+    .ps-sm-2 {
         padding-left: 20px;
     }
     
-    .ps-3 {
+    .ps-sm-3 {
         padding-left: 30px;
     }
     
-    .ps-4 {
+    .ps-sm-4 {
         padding-left: 40px;
     }
     
-    .ps-5 {
+    .ps-sm-5 {
         padding-left: 50px;
     }
 }
