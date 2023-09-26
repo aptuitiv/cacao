@@ -1,0 +1,44 @@
+/* =========================================================================== *\
+    Reasonable Base Defaults
+\* =========================================================================== */
+
+/**
+ * Add smooth scrolling by default.
+ * Disable it for those who prefer reduced motion
+ * See https://ashleemboyer.com/accessible-smooth-scroll-to-top-buttons-with-little-code
+ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/**
+ * Make all buttons look clickable
+ */
+
+button {
+    cursor: pointer;
+}
+
+/**
+ * Always hide an element with the `hidden` HTML attribute (from PureCSS).
+ */
+
+[hidden] {
+    display: none !important;
+}
+
+/**
+ * Remove the focus outline for mouse uses but preserve for keyboard users with :focus-visible
+ * See https://twitter.com/LeaVerou/status/1045768279753666562
+ * See https://css-tricks.com/the-focus-visible-trick/
+ */
+:focus:not(:focus-visible) {
+    outline: none;
+}
