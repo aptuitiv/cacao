@@ -3,27 +3,27 @@
 \* =========================================================================== */
 
 @media (--c-bp-sm) {
-    .gx-0 {
+    .gx-sm-0 {
         column-gap: 0;
     }
     
-    .gx-1 {
-        column-gap: 10px;
+    .gx-sm-1 {
+        column-gap: 10px-sm;
     }
     
-    .gx-2 {
-        column-gap: 20px;
+    .gx-sm-2 {
+        column-gap: 20px-sm;
     }
     
-    .gx-3 {
-        column-gap: 30px;
+    .gx-sm-3 {
+        column-gap: 30px-sm;
     }
     
-    .gx-4 {
-        column-gap: 40px;
+    .gx-sm-4 {
+        column-gap: 40px-sm;
     }
     
-    .gx-5 {
-        column-gap: 50px;
+    .gx-sm-5 {
+        column-gap: 50px-sm;
     }
 }
