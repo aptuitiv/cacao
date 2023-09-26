@@ -2,28 +2,28 @@
     All Sides Margin Utilities
 \* =========================================================================== */
 
-@media (--c-bp-lg) {
-    .m-0 {
+@media (--c-bp-md) {
+    .m-md-0 {
         margin: 0;
     }
     
-    .m-1 {
+    .m-md-1 {
         margin: 10px;
     }
     
-    .m-2 {
+    .m-md-2 {
         margin: 20px;
     }
     
-    .m-3 {
+    .m-md-3 {
         margin: 30px;
     }
     
-    .m-4 {
+    .m-md-4 {
         margin: 40px;
     }
     
-    .m-5 {
+    .m-md-5 {
         margin: 50px;
     }
 }

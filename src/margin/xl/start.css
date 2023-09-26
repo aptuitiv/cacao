@@ -3,27 +3,27 @@
 \* =========================================================================== */
 
 @media (--c-bp-xl) {
-    .ms-0 {
+    .ms-xl-0 {
         margin-left: 0;
     }
     
-    .ms-1 {
+    .ms-xl-1 {
         margin-left: 10px;
     }
     
-    .ms-2 {
+    .ms-xl-2 {
         margin-left: 20px;
     }
     
-    .ms-3 {
+    .ms-xl-3 {
         margin-left: 30px;
     }
     
-    .ms-4 {
+    .ms-xl-4 {
         margin-left: 40px;
     }
     
-    .ms-5 {
+    .ms-xl-5 {
         margin-left: 50px;
     }
 }

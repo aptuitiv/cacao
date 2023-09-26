@@ -3,27 +3,27 @@
 \* =========================================================================== */
 
 @media (--c-bp-lg) {
-    .me-0 {
+    .me-lg-0 {
         margin-right: 0;
     }
     
-    .me-1 {
+    .me-lg-1 {
         margin-right: 10px;
     }
     
-    .me-2 {
+    .me-lg-2 {
         margin-right: 20px;
     }
     
-    .me-3 {
+    .me-lg-3 {
         margin-right: 30px;
     }
     
-    .me-4 {
+    .me-lg-4 {
         margin-right: 40px;
     }
     
-    .me-5 {
+    .me-lg-5 {
         margin-right: 50px;
     }
 }

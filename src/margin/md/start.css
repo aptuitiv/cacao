@@ -2,28 +2,28 @@
     Start Margin Utilities
 \* =========================================================================== */
 
-@media (--c-bp-lg) {
-    .ms-0 {
+@media (--c-bp-md) {
+    .ms-md-0 {
         margin-left: 0;
     }
     
-    .ms-1 {
+    .ms-md-1 {
         margin-left: 10px;
     }
     
-    .ms-2 {
+    .ms-md-2 {
         margin-left: 20px;
     }
     
-    .ms-3 {
+    .ms-md-3 {
         margin-left: 30px;
     }
     
-    .ms-4 {
+    .ms-md-4 {
         margin-left: 40px;
     }
     
-    .ms-5 {
+    .ms-md-5 {
         margin-left: 50px;
     }
 }

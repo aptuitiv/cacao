@@ -3,27 +3,27 @@
 \* =========================================================================== */
 
 @media (--c-bp-xl) {
-    .mt-0 {
+    .mt-xl-0 {
         margin-top: 0;
     }
     
-    .mt-1 {
+    .mt-xl-1 {
         margin-top: 10px;
     }
     
-    .mt-2 {
+    .mt-xl-2 {
         margin-top: 20px;
     }
     
-    .mt-3 {
+    .mt-xl-3 {
         margin-top: 30px;
     }
     
-    .mt-4 {
+    .mt-xl-4 {
         margin-top: 40px;
     }
     
-    .mt-5 {
+    .mt-xl-5 {
         margin-top: 50px;
     }
 }
