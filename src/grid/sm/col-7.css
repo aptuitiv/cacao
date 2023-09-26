@@ -3,31 +3,31 @@
 \* =========================================================================== */
 
 @media (--c-bp-sm) {
-    .col-1-7 {
+    .col-sm-1-7 {
         width: calc(100% / 7);
     }
     
-    .col-2-7 {
+    .col-sm-2-7 {
         width: calc(100% / 7 * 2);
     }
     
-    .col-3-7 {
+    .col-sm-3-7 {
         width: calc(100% / 7 * 3);
     }
     
-    .col-4-7 {
+    .col-sm-4-7 {
         width: calc(100% / 7 * 4);
     }
     
-    .col-5-7 {
+    .col-sm-5-7 {
         width: calc(100% / 7 * 5);
     }
     
-    .col-6-7 {
+    .col-sm-6-7 {
         width: calc(100% / 7 * 6);
     }
     
-    .col-7-7 {
+    .col-sm-7-7 {
         width: 100%;
     }
 }

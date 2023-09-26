@@ -3,47 +3,47 @@
 \* =========================================================================== */
 
 @media (--c-bp-lg) {
-    .col-1-11 {
+    .col-lg-1-11 {
         width: calc(100% / 11);
     }
     
-    .col-2-11 {
+    .col-lg-2-11 {
         width: calc(100% / 11 * 2);
     }
     
-    .col-3-11 {
+    .col-lg-3-11 {
         width: calc(100% / 11 * 3);
     }
     
-    .col-4-11 {
+    .col-lg-4-11 {
         width: calc(100% / 11 * 4);
     }
     
-    .col-5-11 {
+    .col-lg-5-11 {
         width: calc(100% / 11 * 5);
     }
     
-    .col-6-11 {
+    .col-lg-6-11 {
         width: calc(100% / 11 * 6);
     }
     
-    .col-7-11 {
+    .col-lg-7-11 {
         width: calc(100% / 11 * 7);
     }
     
-    .col-8-11 {
+    .col-lg-8-11 {
         width: calc(100% / 11 * 8);
     }
     
-    .col-9-11 {
+    .col-lg-9-11 {
         width: calc(100% / 11 * 9);
     }
     
-    .col-10-11 {
+    .col-lg-10-11 {
         width: calc(100% / 11 * 10);
     }
     
-    .col-11-11 {
+    .col-lg-11-11 {
         width: 100%;
     }
 }

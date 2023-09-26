@@ -3,39 +3,39 @@
 \* =========================================================================== */
 
 @media (--c-bp-md) {
-    .col-1-9 {
+    .col-md-1-9 {
         width: calc(100% / 9);
     }
     
-    .col-2-9 {
+    .col-md-2-9 {
         width: calc(100% / 9 * 2);
     }
     
-    .col-3-9 {
+    .col-md-3-9 {
         width: calc(100% / 9 * 3);
     }
     
-    .col-4-9 {
+    .col-md-4-9 {
         width: calc(100% / 9 * 4);
     }
     
-    .col-5-9 {
+    .col-md-5-9 {
         width: calc(100% / 9 * 5);
     }
     
-    .col-6-9 {
+    .col-md-6-9 {
         width: calc(100% / 9 * 6);
     }
     
-    .col-7-9 {
+    .col-md-7-9 {
         width: calc(100% / 9 * 7);
     }
     
-    .col-8-9 {
+    .col-md-8-9 {
         width: calc(100% / 9 * 8);
     }
     
-    .col-9-9 {
+    .col-md-9-9 {
         width: 100%;
     }
 }

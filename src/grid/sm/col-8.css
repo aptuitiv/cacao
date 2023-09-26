@@ -3,35 +3,35 @@
 \* =========================================================================== */
 
 @media (--c-bp-sm) {
-    .col-1-8 {
+    .col-sm-1-8 {
         width: calc(100% / 8);
     }
     
-    .col-2-8 {
+    .col-sm-2-8 {
         width: 25%;
     }
     
-    .col-3-8 {
+    .col-sm-3-8 {
         width: calc(100% / 8 * 3);
     }
     
-    .col-4-8 {
+    .col-sm-4-8 {
         width: 50%;
     }
     
-    .col-5-8 {
+    .col-sm-5-8 {
         width: calc(100% / 8 * 5);
     }
     
-    .col-6-8 {
+    .col-sm-6-8 {
         width: 75%;
     }
     
-    .col-7-8 {
+    .col-sm-7-8 {
         width: calc(100% / 8 * 7);
     }
     
-    .col-8-8 {
+    .col-sm-8-8 {
         width: 100%;
     }
 }
