@@ -2,6 +2,10 @@
     Flexbox Utilities
 \* =========================================================================== */
 
+.flex-row {
+    flex-direction: row;
+}
+
 .flex-reverse {
     flex-direction: row-reverse;
 }

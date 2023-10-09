@@ -3,6 +3,10 @@
 \* =========================================================================== */
 
 @media (--c-bp-sm) {
+    .flex-row-sm {
+        flex-direction: row;
+    }
+    
     .flex-reverse-sm {
         flex-direction: row-reverse;
     }
