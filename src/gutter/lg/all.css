@@ -4,26 +4,30 @@
 
 @media (--c-bp-lg) {
     .g-lg-0 {
-        gap: 0;
+        --gap: 0px;
     }
     
     .g-lg-1 {
-        gap: 10px;
+        --gap: 10px;
     }
     
     .g-lg-2 {
-        gap: 20px;
+        --gap: 20px;
     }
     
     .g-lg-3 {
-        gap: 30px;
+        --gap: 30px;
     }
     
     .g-lg-4 {
-        gap: 40px;
+        --gap: 40px;
     }
     
     .g-lg-5 {
-        gap: 50px;
+        --gap: 50px;
+    }
+    
+    .g-lg-0, .g-lg-1, .g-lg-2, .g-lg-3, .g-lg-4, .g-lg-5 {
+        gap: var(--gap);
     }
 }

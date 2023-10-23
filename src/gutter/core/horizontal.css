@@ -3,25 +3,29 @@
 \* =========================================================================== */
 
 .gx-0 {
-    column-gap: 0;
+    --gap: 0px;
 }
 
 .gx-1 {
-    column-gap: 10px;
+    --gap: 10px;
 }
 
 .gx-2 {
-    column-gap: 20px;
+    --gap: 20px;
 }
 
 .gx-3 {
-    column-gap: 30px;
+    --gap: 30px;
 }
 
 .gx-4 {
-    column-gap: 40px;
+    --gap: 40px;
 }
 
 .gx-5 {
-    column-gap: 50px;
+    --gap: 50px;
+}
+
+.gx-0, .gx-1, .gx-2, .gx-3, .gx-4, .gx-5 {
+    column-gap: var(--gap);
 }

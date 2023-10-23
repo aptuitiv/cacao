@@ -4,6 +4,6 @@
 
 @media (--c-bp-sm) {
     .col-sm-1-1 {
-        width: 100%;
+        width: calc(100% - var(--gap));
     }
 }

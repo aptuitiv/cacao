@@ -4,42 +4,42 @@
 
 @media (--c-bp-lg) {
     .col-lg-1-10 {
-        width: 10%;
+        width: calc(10% - var(--gap));
     }
     
     .col-lg-2-10 {
-        width: 20%;
+        width: calc(20% - var(--gap));
     }
     
     .col-lg-3-10 {
-        width: 30%;
+        width: calc(30% - var(--gap));
     }
     
     .col-lg-4-10 {
-        width: 40%;
+        width: calc(40% - var(--gap));
     }
     
     .col-lg-5-10 {
-        width: 50%;
+        width: calc(50% - var(--gap));
     }
     
     .col-lg-6-10 {
-        width: 60%;
+        width: calc(60% - var(--gap));
     }
     
     .col-lg-7-10 {
-        width: 70%;
+        width: calc(70% - var(--gap));
     }
     
     .col-lg-8-10 {
-        width: 80%;
+        width: calc(80% - var(--gap));
     }
     
     .col-lg-9-10 {
-        width: 90%;
+        width: calc(90% - var(--gap));
     }
     
     .col-lg-10-10 {
-        width: 100%;
+        width: calc(100% - var(--gap));
     }
 }

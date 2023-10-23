@@ -4,26 +4,26 @@
 
 @media (--c-bp-xl) {
     .col-xl-1-6 {
-        width: calc(100% / 6);
+        width: calc(100% / 6 - var(--gap));
     }
     
     .col-xl-2-6 {
-        width: calc(100% / 6 * 2);
+        width: calc(100% / 6 * 2 - var(--gap));
     }
     
     .col-xl-3-6 {
-        width: 50%;
+        width: calc(50% - var(--gap));
     }
     
     .col-xl-4-6 {
-        width: calc(100% / 6 * 4);
+        width: calc(100% / 6 * 4 - var(--gap));
     }
     
     .col-xl-5-6 {
-        width: calc(100% / 6 * 5);
+        width: calc(100% / 6 * 5 - var(--gap));
     }
     
     .col-xl-6-6 {
-        width: 100%;
+        width: calc(100% - var(--gap));
     }
 }

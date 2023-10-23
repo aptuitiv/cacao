@@ -4,30 +4,30 @@
 
 @media (--c-bp-xl) {
     .col-xl-1-7 {
-        width: calc(100% / 7);
+        width: calc(100% / 7 - var(--gap));
     }
     
     .col-xl-2-7 {
-        width: calc(100% / 7 * 2);
+        width: calc(100% / 7 * 2 - var(--gap));
     }
     
     .col-xl-3-7 {
-        width: calc(100% / 7 * 3);
+        width: calc(100% / 7 * 3 - var(--gap));
     }
     
     .col-xl-4-7 {
-        width: calc(100% / 7 * 4);
+        width: calc(100% / 7 * 4 - var(--gap));
     }
     
     .col-xl-5-7 {
-        width: calc(100% / 7 * 5);
+        width: calc(100% / 7 * 5 - var(--gap));
     }
     
     .col-xl-6-7 {
-        width: calc(100% / 7 * 6);
+        width: calc(100% / 7 * 6 - var(--gap));
     }
     
     .col-xl-7-7 {
-        width: 100%;
+        width: calc(100% - var(--gap));
     }
 }

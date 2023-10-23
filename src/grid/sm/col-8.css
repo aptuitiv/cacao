@@ -4,34 +4,34 @@
 
 @media (--c-bp-sm) {
     .col-sm-1-8 {
-        width: calc(100% / 8);
+        width: calc(100% / 8 - var(--gap));
     }
     
     .col-sm-2-8 {
-        width: 25%;
+        width: calc(25% - var(--gap));
     }
     
     .col-sm-3-8 {
-        width: calc(100% / 8 * 3);
+        width: calc(100% / 8 * 3 - var(--gap));
     }
     
     .col-sm-4-8 {
-        width: 50%;
+        width: calc(50% - var(--gap));
     }
     
     .col-sm-5-8 {
-        width: calc(100% / 8 * 5);
+        width: calc(100% / 8 * 5 - var(--gap));
     }
     
     .col-sm-6-8 {
-        width: 75%;
+        width: calc(75% - var(--gap));
     }
     
     .col-sm-7-8 {
-        width: calc(100% / 8 * 7);
+        width: calc(100% / 8 * 7 - var(--gap));
     }
     
     .col-sm-8-8 {
-        width: 100%;
+        width: calc(100% - var(--gap));
     }
 }

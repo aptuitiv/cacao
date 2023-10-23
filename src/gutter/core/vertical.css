@@ -3,25 +3,29 @@
 \* =========================================================================== */
 
 .gy-0 {
-    row-gap: 0;
+    --gap: 0px;
 }
 
 .gy-1 {
-    row-gap: 10px;
+    --gap: 10px;
 }
 
 .gy-2 {
-    row-gap: 20px;
+    --gap: 20px;
 }
 
 .gy-3 {
-    row-gap: 30px;
+    --gap: 30px;
 }
 
 .gy-4 {
-    row-gap: 40px;
+    --gap: 40px;
 }
 
 .gy-5 {
-    row-gap: 50px;
+    --gap: 50px;
+}
+
+.gy-0, .gy-1, .gy-2, .gy-3, .gy-4, .gy-5 {
+    row-gap: var(--gap);
 }

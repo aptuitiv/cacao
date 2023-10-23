@@ -4,50 +4,50 @@
 
 @media (--c-bp-sm) {
     .col-sm-1-12 {
-        width: calc(100% / 12);
+        width: calc(100% / 12 - var(--gap));
     }
     
     .col-sm-2-12 {
-        width: calc(100% / 12 * 2);
+        width: calc(100% / 12 * 2 - var(--gap));
     }
     
     .col-sm-3-12 {
-        width: 25%;
+        width: calc(25% - var(--gap));
     }
     
     .col-sm-4-12 {
-        width: calc(100% / 12 * 4);
+        width: calc(100% / 12 * 4 - var(--gap));
     }
     
     .col-sm-5-12 {
-        width: calc(100% / 12 * 5);
+        width: calc(100% / 12 * 5 - var(--gap));
     }
     
     .col-sm-6-12 {
-        width: 50%;
+        width: calc(50% - var(--gap));
     }
     
     .col-sm-7-12 {
-        width: calc(100% / 12 * 7);
+        width: calc(100% / 12 * 7 - var(--gap));
     }
     
     .col-sm-8-12 {
-        width: calc(100% / 12 * 8);
+        width: calc(100% / 12 * 8 - var(--gap));
     }
     
     .col-sm-9-12 {
-        width: 75%;
+        width: calc(75% - var(--gap));
     }
     
     .col-sm-10-12 {
-        width: calc(100% / 12 * 10);
+        width: calc(100% / 12 * 10 - var(--gap));
     }
     
     .col-sm-11-12 {
-        width: calc(100% / 12 * 11);
+        width: calc(100% / 12 * 11 - var(--gap));
     }
     
     .col-sm-12-12 {
-        width: 100%;
+        width: calc(100% - var(--gap));
     }
 }

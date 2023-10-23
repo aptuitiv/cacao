@@ -4,10 +4,10 @@
 
 @media (--c-bp-sm) {
     .col-sm-1-2 {
-        width: 50%;
+        width: calc(50% - var(--gap));
     }
     
     .col-sm-2-2 {
-        width: 100%;
+        width: calc(100% - var(--gap));
     }
 }

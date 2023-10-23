@@ -4,50 +4,50 @@
 
 @media (--c-bp-lg) {
     .col-lg-1-12 {
-        width: calc(100% / 12);
+        width: calc(100% / 12 - var(--gap));
     }
     
     .col-lg-2-12 {
-        width: calc(100% / 12 * 2);
+        width: calc(100% / 12 * 2 - var(--gap));
     }
     
     .col-lg-3-12 {
-        width: 25%;
+        width: calc(25% - var(--gap));
     }
     
     .col-lg-4-12 {
-        width: calc(100% / 12 * 4);
+        width: calc(100% / 12 * 4 - var(--gap));
     }
     
     .col-lg-5-12 {
-        width: calc(100% / 12 * 5);
+        width: calc(100% / 12 * 5 - var(--gap));
     }
     
     .col-lg-6-12 {
-        width: 50%;
+        width: calc(50% - var(--gap));
     }
     
     .col-lg-7-12 {
-        width: calc(100% / 12 * 7);
+        width: calc(100% / 12 * 7 - var(--gap));
     }
     
     .col-lg-8-12 {
-        width: calc(100% / 12 * 8);
+        width: calc(100% / 12 * 8 - var(--gap));
     }
     
     .col-lg-9-12 {
-        width: 75%;
+        width: calc(75% - var(--gap));
     }
     
     .col-lg-10-12 {
-        width: calc(100% / 12 * 10);
+        width: calc(100% / 12 * 10 - var(--gap));
     }
     
     .col-lg-11-12 {
-        width: calc(100% / 12 * 11);
+        width: calc(100% / 12 * 11 - var(--gap));
     }
     
     .col-lg-12-12 {
-        width: 100%;
+        width: calc(100% - var(--gap));
     }
 }

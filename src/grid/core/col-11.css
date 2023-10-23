@@ -3,45 +3,45 @@
 \* =========================================================================== */
 
 .col-1-11 {
-    width: calc(100% / 11);
+    width: calc(100% / 11 - var(--gap));
 }
 
 .col-2-11 {
-    width: calc(100% / 11 * 2);
+    width: calc(100% / 11 * 2 - var(--gap));
 }
 
 .col-3-11 {
-    width: calc(100% / 11 * 3);
+    width: calc(100% / 11 * 3 - var(--gap));
 }
 
 .col-4-11 {
-    width: calc(100% / 11 * 4);
+    width: calc(100% / 11 * 4 - var(--gap));
 }
 
 .col-5-11 {
-    width: calc(100% / 11 * 5);
+    width: calc(100% / 11 * 5 - var(--gap));
 }
 
 .col-6-11 {
-    width: calc(100% / 11 * 6);
+    width: calc(100% / 11 * 6 - var(--gap));
 }
 
 .col-7-11 {
-    width: calc(100% / 11 * 7);
+    width: calc(100% / 11 * 7 - var(--gap));
 }
 
 .col-8-11 {
-    width: calc(100% / 11 * 8);
+    width: calc(100% / 11 * 8 - var(--gap));
 }
 
 .col-9-11 {
-    width: calc(100% / 11 * 9);
+    width: calc(100% / 11 * 9 - var(--gap));
 }
 
 .col-10-11 {
-    width: calc(100% / 11 * 10);
+    width: calc(100% / 11 * 10 - var(--gap));
 }
 
 .col-11-11 {
-    width: 100%;
+    width: calc(100% - var(--gap));
 }

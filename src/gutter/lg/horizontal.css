@@ -4,26 +4,30 @@
 
 @media (--c-bp-lg) {
     .gx-lg-0 {
-        column-gap: 0;
+        --gap: 0px;
     }
     
     .gx-lg-1 {
-        column-gap: 10px-lg;
+        --gap: 10px;
     }
     
     .gx-lg-2 {
-        column-gap: 20px-lg;
+        --gap: 20px;
     }
     
     .gx-lg-3 {
-        column-gap: 30px-lg;
+        --gap: 30px;
     }
     
     .gx-lg-4 {
-        column-gap: 40px-lg;
+        --gap: 40px;
     }
     
     .gx-lg-5 {
-        column-gap: 50px-lg;
+        --gap: 50px;
+    }
+    
+    .gx-lg-0, .gx-lg-1, .gx-lg-2, .gx-lg-3, .gx-lg-4, .gx-lg-5 {
+        column-gap: var(--gap);
     }
 }
