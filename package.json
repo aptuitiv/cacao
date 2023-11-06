@@ -1,6 +1,6 @@
 {
     "name": "cacao-css",
-    "description": "A set of composable CSS modules that provide a solid foundation for starting a new project.",
+    "description": "A set of composable CSS utilities that provide a solid foundation for starting a new project.",
     "version": "4.0.0",
     "author": "Aptuitiv, Inc <hello@aptuitiv.com>",
     "license": "MIT",
