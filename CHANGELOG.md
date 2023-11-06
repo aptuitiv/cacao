@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.0.0 (Nov 6, 2023)
+
+-   Changed default breakpoints to be mobile first.
+-   Changed breakpoints to use em instead of px.
+-   Updated utility classes names to be more succinct.
+-   Removed many rarely used classes.
+-   Removed all component classes. You should provide you own components now for more flexibility.
+
 ## 3.21.0 (May 11, 2023)
 
 -   Updated b and strong to actually be bold.
