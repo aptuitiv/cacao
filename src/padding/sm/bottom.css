@@ -1,0 +1,29 @@
+/* =========================================================================== *\
+    Bottom Padding Utilities
+\* =========================================================================== */
+
+@media (--c-bp-sm) {
+    .pb-sm-0 {
+        padding-bottom: 0;
+    }
+    
+    .pb-sm-1 {
+        padding-bottom: 10px;
+    }
+    
+    .pb-sm-2 {
+        padding-bottom: 20px;
+    }
+    
+    .pb-sm-3 {
+        padding-bottom: 30px;
+    }
+    
+    .pb-sm-4 {
+        padding-bottom: 40px;
+    }
+    
+    .pb-sm-5 {
+        padding-bottom: 50px;
+    }
+}

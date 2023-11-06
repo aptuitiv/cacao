@@ -1,0 +1,43 @@
+/* =========================================================================== *\
+    Grid 10's
+\* =========================================================================== */
+
+.col-1-10 {
+    width: calc(10% - var(--gap));
+}
+
+.col-2-10 {
+    width: calc(20% - var(--gap));
+}
+
+.col-3-10 {
+    width: calc(30% - var(--gap));
+}
+
+.col-4-10 {
+    width: calc(40% - var(--gap));
+}
+
+.col-5-10 {
+    width: calc(50% - var(--gap));
+}
+
+.col-6-10 {
+    width: calc(60% - var(--gap));
+}
+
+.col-7-10 {
+    width: calc(70% - var(--gap));
+}
+
+.col-8-10 {
+    width: calc(80% - var(--gap));
+}
+
+.col-9-10 {
+    width: calc(90% - var(--gap));
+}
+
+.col-10-10 {
+    width: calc(100% - var(--gap));
+}

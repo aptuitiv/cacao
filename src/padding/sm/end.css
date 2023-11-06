@@ -1,0 +1,29 @@
+/* =========================================================================== *\
+    End Padding Utilities
+\* =========================================================================== */
+
+@media (--c-bp-sm) {
+    .pe-sm-0 {
+        padding-right: 0;
+    }
+    
+    .pe-sm-1 {
+        padding-right: 10px;
+    }
+    
+    .pe-sm-2 {
+        padding-right: 20px;
+    }
+    
+    .pe-sm-3 {
+        padding-right: 30px;
+    }
+    
+    .pe-sm-4 {
+        padding-right: 40px;
+    }
+    
+    .pe-sm-5 {
+        padding-right: 50px;
+    }
+}

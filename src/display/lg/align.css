@@ -1,0 +1,17 @@
+/* =========================================================================== *\
+    Alignment Utilities
+\* =========================================================================== */
+
+@media (--c-bp-lg) {
+    .align-start-lg {
+        align-items: flex-start;
+    }
+    
+    .align-center-lg {
+        align-items: center;
+    }
+    
+    .align-end-lg {
+        align-items: flex-end;
+    }
+}

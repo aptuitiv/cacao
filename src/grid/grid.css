@@ -1,0 +1,19 @@
+/* =========================================================================== *\
+    Grid Utilities
+\* =========================================================================== */
+
+.grid {
+    --gap: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(var(--gap) * -1);
+}
+
+.grid [class*=col-] {
+    overflow: hidden;
+}
+
+/* Don't adjust margin if column justification is being used. */
+.grid[class*=justify-] {
+    margin-right: 0;
+}
