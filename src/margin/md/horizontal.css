@@ -1,0 +1,35 @@
+/* =========================================================================== *\
+    Horizontal Margin Utilities
+\* =========================================================================== */
+
+@media (--c-bp-md) {
+    .mx-md-0 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .mx-md-1 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .mx-md-2 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .mx-md-3 {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
+    .mx-md-4 {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+    .mx-md-5 {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}

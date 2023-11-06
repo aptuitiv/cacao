@@ -1,0 +1,41 @@
+/* =========================================================================== *\
+    Grid 9's
+\* =========================================================================== */
+
+@media (--c-bp-lg) {
+    .col-lg-1-9 {
+        width: calc(100% / 9 - var(--gap));
+    }
+    
+    .col-lg-2-9 {
+        width: calc(100% / 9 * 2 - var(--gap));
+    }
+    
+    .col-lg-3-9 {
+        width: calc(100% / 9 * 3 - var(--gap));
+    }
+    
+    .col-lg-4-9 {
+        width: calc(100% / 9 * 4 - var(--gap));
+    }
+    
+    .col-lg-5-9 {
+        width: calc(100% / 9 * 5 - var(--gap));
+    }
+    
+    .col-lg-6-9 {
+        width: calc(100% / 9 * 6 - var(--gap));
+    }
+    
+    .col-lg-7-9 {
+        width: calc(100% / 9 * 7 - var(--gap));
+    }
+    
+    .col-lg-8-9 {
+        width: calc(100% / 9 * 8 - var(--gap));
+    }
+    
+    .col-lg-9-9 {
+        width: calc(100% - var(--gap));
+    }
+}

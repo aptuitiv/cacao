@@ -1,0 +1,35 @@
+/* =========================================================================== *\
+    Vertical Padding Utilities
+\* =========================================================================== */
+
+@media (--c-bp-lg) {
+    .py-lg-0 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    .py-lg-1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .py-lg-2 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .py-lg-3 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .py-lg-4 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    .py-lg-5 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
