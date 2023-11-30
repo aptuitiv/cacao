@@ -1,11 +1,13 @@
 /* =========================================================================== *\
-    Object Fit Utilities
+    Layout Options
 \* =========================================================================== */
 
-.fit-cover {
-    object-fit: cover;
+.clearfix::before,
+.clearfix::after {
+    content: ' ' !important;
+    display: table !important;
 }
 
-.fit-contain {
-    object-fit: contain;
+.clearfix::after {
+    clear: both !important;
 }

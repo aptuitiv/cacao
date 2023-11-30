@@ -1,10 +1,10 @@
 /* =========================================================================== *\
     Cacao CSS
-    
+
     To be included by a project to selectively include modules.
-    
+
     Ideally located at "my-project/src/css/main.css".
-    
+
     Most imports are commented out by default. You should uncomment
     modules that your project needs. This keeps the CSS lean and mean.
 \* =========================================================================== */
@@ -28,6 +28,9 @@
 
 /* Images */
 @import '../../node_modules/cacao-css/src/image/image.css';
+
+/* Layout */
+@import '../../node_modules/cacao-css/src/layout/layout.css';
 
 /* Fit */
 /* @import '../../node_modules/cacao-css/src/fit/fit.css'; */
@@ -55,6 +58,7 @@
 
 /* Typography */
 /* @import '../../node_modules/cacao-css/src/typography/align.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/break.css'; */
 /* @import '../../node_modules/cacao-css/src/typography/transform.css'; */
 /* @import '../../node_modules/cacao-css/src/typography/weight.css'; */
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.1.0 (Nov 30, 2023)
+
+- Added typography word break and word wrap styles.
+- Added clearfix utility.
+
 ## 4.0.0 (Nov 6, 2023)
 
 - Changed default breakpoints to be mobile first.
