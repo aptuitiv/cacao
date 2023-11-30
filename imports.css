@@ -29,6 +29,9 @@
 /* Images */
 @import '../../node_modules/cacao-css/src/image/image.css';
 
+/* Layout */
+@import '../../node_modules/cacao-css/src/layout/layout.css';
+
 /* Fit */
 /* @import '../../node_modules/cacao-css/src/fit/fit.css'; */
 
