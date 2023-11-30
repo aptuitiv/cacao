@@ -6,6 +6,6 @@
     object-fit: cover;
 }
 
-.fir-contain {
+.fit-contain {
     object-fit: contain;
 }
