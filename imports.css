@@ -21,7 +21,8 @@
 @import '../../node_modules/cacao-css/src/base/base.css';
 
 /* Aspect Ratios */
-@import '../../node_modules/cacao-css/src/aspect/aspect.css';
+@import '../../node_modules/cacao-css/src/aspect/horizontal.css';
+/* @import '../../node_modules/cacao-css/src/aspect/vertical.css'; */
 
 /* Embed */
 @import '../../node_modules/cacao-css/src/embed/embed.css';
