@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.2.0 (Dec 19, 2023) - Breaking change
+
+- Fixed the order of import examples. The gutter styles have to come after grid styles.
+- Breaking Change - Changed the aspect ratio styles into two separate files. `aspect/horizontal.css` and `aspect/vertical.css`. Imports will need to be updated. Also added new aspect ratios.
+
 ## 4.1.0 (Nov 30, 2023)
 
 - Added typography word break and word wrap styles.
