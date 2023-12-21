@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.2.2 (Dec 21, 2023)
+
+- Fixed the `image-left` and `image-right` classes to have the correct max width.
+
 ## 4.2.1 (Dec 21, 2023)
 
 - Fixed the `image-left` and `image-right` classes to always have a bottom margin.

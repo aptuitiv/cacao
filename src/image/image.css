@@ -14,7 +14,7 @@
     .image-left,
     .image-right {
         width: unset;
-        max-width: 100%;
+        max-width: 50%;
         display: inline;
     }
 
@@ -26,5 +26,12 @@
     .image-right {
         float: right;
         margin-left: 20px;
+    }
+}
+
+@media (--c-bp-md) {
+    .image-left,
+    .image-right {
+        max-width: 40%;
     }
 }
