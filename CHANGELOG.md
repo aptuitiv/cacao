@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.2.1 (Dec 21, 2023)
+
+- Fixed the `image-left` and `image-right` classes to always have a bottom margin.
+
 ## 4.2.0 (Dec 19, 2023) - Breaking change
 
 - Fixed the order of import examples. The gutter styles have to come after grid styles.
