@@ -5,6 +5,7 @@
 .image-left,
 .image-right {
     display: block;
+    margin-bottom: 10px;
     width: 100%;
     height: auto;
 }
@@ -12,17 +13,16 @@
 @media (--c-bp-sm) {
     .image-left,
     .image-right {
-        margin-bottom: 10px;
         width: unset;
         max-width: 100%;
         display: inline;
     }
-    
+
     .image-left {
         float: left;
         margin-right: 20px;
     }
-    
+
     .image-right {
         float: right;
         margin-left: 20px;
