@@ -6,7 +6,7 @@
     display: flex;
 }
 
-.flex-inline {
+.inline-flex {
     display: inline-flex;
 }
 
@@ -16,6 +16,10 @@
 
 .inline {
     display: inline;
+}
+
+.inline-block {
+    display: inline-block;
 }
 
 .hidden {

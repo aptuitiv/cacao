@@ -1,5 +1,13 @@
 # Changelog
 
+## 4.3.0 (Jan 25, 2024)
+
+- Added `inline-block` class to set an element as `inline-block`
+
+### Breaking change
+
+- Renamed `flex-inline` to `inline-flex`. This was done to better match the actual style.
+
 ## 4.2.2 (Dec 21, 2023)
 
 - Fixed the `image-left` and `image-right` classes to have the correct max width.
