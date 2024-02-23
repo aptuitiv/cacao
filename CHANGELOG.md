@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.4.0 (Feb 23, 2024)
+
+- Added `text-start`, `text-end`, and `text-justify` classes.
+
 ## 4.3.0 (Jan 25, 2024)
 
 - Added `inline-block` class to set an element as `inline-block`
