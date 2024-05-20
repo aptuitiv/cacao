@@ -6,6 +6,7 @@
     position: relative;
     aspect-ratio: 16 / 9;
     height: 100%;
+    flex-shrink: 0;
     overflow: hidden;
     max-width: 100%;
 }
