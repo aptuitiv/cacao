@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.5.0 (Jul 10, 2024)
+
+- Set embeds not to shrink if they are in a flex container.
+- Removed the overflow hidden on grid columns.
+  
 ## 4.4.0 (Feb 23, 2024)
 
 - Added `text-start`, `text-end`, and `text-justify` classes.
