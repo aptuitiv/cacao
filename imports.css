@@ -3,6 +3,10 @@
 
     To be included by a project to selectively include modules.
 
+    The Cacao styles need to come after site styles so that they can override
+    where necessary. For example, the "hidden" style should be able to override
+    some styles when it's added to an element.
+
     Ideally located at "my-project/src/css/main.css".
 
     Most imports are commented out by default. You should uncomment
