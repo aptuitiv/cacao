@@ -82,7 +82,7 @@
 
 /* @import '../../node_modules/cacao-css/src/size/core/size.css'; */
 
-/* Size (md) */
+/* Size (sm) */
 
 /* @import '../../node_modules/cacao-css/src/size/sm/size.css'; */
 
@@ -106,6 +106,34 @@
 /* @import '../../node_modules/cacao-css/src/typography/core/break.css'; */
 /* @import '../../node_modules/cacao-css/src/typography/core/transform.css'; */
 /* @import '../../node_modules/cacao-css/src/typography/core/weight.css'; */
+
+/* Typography (sm) */
+
+/* @import '../../node_modules/cacao-css/src/typography/sm/align.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/sm/break.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/sm/transform.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/sm/weight.css'; */
+
+/* Typography (md) */
+
+/* @import '../../node_modules/cacao-css/src/typography/md/align.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/md/break.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/md/transform.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/md/weight.css'; */
+
+/* Typography (lg) */
+
+/* @import '../../node_modules/cacao-css/src/typography/lg/align.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/lg/break.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/lg/transform.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/lg/weight.css'; */
+
+/* Typography (xl) */
+
+/* @import '../../node_modules/cacao-css/src/typography/xl/align.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/xl/break.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/xl/transform.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/xl/weight.css'; */
 
 /* ------------------------------------ *\
     Display
