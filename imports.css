@@ -112,6 +112,7 @@
 /* @import '../../node_modules/cacao-css/src/grid/core/col-10.css'; */
 /* @import '../../node_modules/cacao-css/src/grid/core/col-11.css'; */
 /* @import '../../node_modules/cacao-css/src/grid/core/col-12.css'; */
+/* @import '../../node_modules/cacao-css/src/grid/core/col-fill.css'; */
 
 /* Grid (sm) */
 /* @import '../../node_modules/cacao-css/src/grid/sm/col-1.css'; */
@@ -126,6 +127,7 @@
 /* @import '../../node_modules/cacao-css/src/grid/sm/col-10.css'; */
 /* @import '../../node_modules/cacao-css/src/grid/sm/col-11.css'; */
 /* @import '../../node_modules/cacao-css/src/grid/sm/col-12.css'; */
+/* @import '../../node_modules/cacao-css/src/grid/sm/col-fill.css'; */
 
 /* Grid (md) */
 /* @import '../../node_modules/cacao-css/src/grid/md/col-1.css'; */
@@ -140,6 +142,7 @@
 /* @import '../../node_modules/cacao-css/src/grid/md/col-10.css'; */
 /* @import '../../node_modules/cacao-css/src/grid/md/col-11.css'; */
 /* @import '../../node_modules/cacao-css/src/grid/md/col-12.css'; */
+/* @import '../../node_modules/cacao-css/src/grid/md/col-fill.css'; */
 
 /* Grid (lg) */
 /* @import '../../node_modules/cacao-css/src/grid/lg/col-1.css'; */
@@ -154,6 +157,7 @@
 /* @import '../../node_modules/cacao-css/src/grid/lg/col-10.css'; */
 /* @import '../../node_modules/cacao-css/src/grid/lg/col-11.css'; */
 /* @import '../../node_modules/cacao-css/src/grid/lg/col-12.css'; */
+/* @import '../../node_modules/cacao-css/src/grid/lg/col-fill.css'; */
 
 /* Grid (xl) */
 /* @import '../../node_modules/cacao-css/src/grid/xl/col-1.css'; */
@@ -168,6 +172,7 @@
 /* @import '../../node_modules/cacao-css/src/grid/xl/col-10.css'; */
 /* @import '../../node_modules/cacao-css/src/grid/xl/col-11.css'; */
 /* @import '../../node_modules/cacao-css/src/grid/xl/col-12.css'; */
+/* @import '../../node_modules/cacao-css/src/grid/xl/col-fill.css'; */
 
 /* Gutter */
 @import '../../node_modules/cacao-css/src/gutter/core/all.css';
