@@ -9,7 +9,7 @@
     modules that your project needs. This keeps the CSS lean and mean.
 \* =========================================================================== */
 
-/* stylelint-disable */
+/* stylelint-disable comment-empty-line-before */
 
 /* Config */
 @import '../../node_modules/cacao-css/src/config.css';
