@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.6.0 (Jul 15, 2024)
+
+- Added `col-fill` styles for a grid column that will fill the remaining space.
+  
 ## 4.5.0 (Jul 10, 2024)
 
 - Set embeds not to shrink if they are in a flex container.
