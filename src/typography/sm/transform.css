@@ -1,0 +1,17 @@
+/* =========================================================================== *\
+    Text Transform Utilities - large screens
+\* =========================================================================== */
+
+@media (--c-bp-sm) {
+    .text-lower-sm {
+        text-transform: lowercase;
+    }
+
+    .text-upper-sm {
+        text-transform: uppercase;
+    }
+
+    .text-capital-sm {
+        text-transform: capitalize;
+    }
+}

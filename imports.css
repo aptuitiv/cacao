@@ -102,10 +102,10 @@
     Typography
 \* ------------------------------------ */
 
-/* @import '../../node_modules/cacao-css/src/typography/align.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/break.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/transform.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/weight.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/core/align.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/core/break.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/core/transform.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/core/weight.css'; */
 
 /* ------------------------------------ *\
     Display
