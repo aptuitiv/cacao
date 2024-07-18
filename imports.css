@@ -128,7 +128,7 @@
     Embed
 \* ------------------------------------ */
 
-@import '../../node_modules/cacao-css/src/embed/embed.css';
+@import '../../node_modules/cacao-css/src/embed/core/embed.css';
 
 /* ------------------------------------ *\
     Fit
