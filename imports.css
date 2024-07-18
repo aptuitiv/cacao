@@ -32,8 +32,8 @@
     Aspect Ratios
 \* ------------------------------------ */
 
-@import '../../node_modules/cacao-css/src/aspect/horizontal.css';
-/* @import '../../node_modules/cacao-css/src/aspect/vertical.css'; */
+@import '../../node_modules/cacao-css/src/aspect/core/horizontal.css';
+/* @import '../../node_modules/cacao-css/src/aspect/core/vertical.css'; */
 
 /* Aspect Ratios (xs) */
 
