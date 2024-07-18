@@ -1,11 +1,13 @@
 /* =========================================================================== *\
-    Object Fit Utilities
+   Object fit utilities
 \* =========================================================================== */
 
-.fit-cover {
-    object-fit: cover;
-}
+@media (--c-bp-lg) {
+    .fit-cover-lg {
+        object-fit: cover;
+    }
 
-.fit-contain {
-    object-fit: contain;
+    .fit-contain-lg {
+        object-fit: contain;
+    }
 }
