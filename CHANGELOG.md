@@ -1,5 +1,24 @@
 # Changelog
 
+## 5.0.0 (July 18, 2024)
+
+- Added print styles.
+- Added push and pull classes.
+- Added `xs` and `xxl` breakpoint sizes.
+- **Breaking change**: Added responsive styles for aspect ratios. The imports for the `src/aspect` files needs to be updated.
+- **Breaking change**: Moved `embed` file to a "core" folder in case in the future we add responsive styles. The imports for the `src/embed` files need to be updated.
+- **Breaking change**: Added responsive styles for object fit utilities. The imports for the `src/fit` files needs to be updated.
+- **Breaking change**: Moved `image` file to a "core" folder in case in the future we add responsive styles. The imports for the `src/image` files need to be updated.
+- **Breaking change**: Moved `layout` file to a "core" folder in case in the future we add responsive styles. The imports for the `src/layout` files need to be updated.
+- **Breaking change**: Moved `links` file to a "core" folder in case in the future we add responsive styles. The imports for the `src/links` files need to be updated.
+- **Breaking change**: Moved `spacing` file to a "core" folder in case in the future we add responsive styles. The imports for the `src/spacing` files need to be updated.
+- **Breaking change**: Added responsive styles for typography. The imports for the `src/typography` files needs to be updated.
+- **Breaking change**: Moved the `reset/reset.css` and `base/base.css` file to the root folder. The imports will need to be adjsuted in your code.
+
+### Migration
+
+Compare the `imports.css` file to your own `imports.css` file and update accordingly.
+
 ## 4.6.0 (Jul 15, 2024)
 
 - Added `col-fill` styles for a grid column that will fill the remaining space.
