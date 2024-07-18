@@ -35,6 +35,36 @@
 @import '../../node_modules/cacao-css/src/aspect/horizontal.css';
 /* @import '../../node_modules/cacao-css/src/aspect/vertical.css'; */
 
+/* Aspect Ratios (xs) */
+
+/* @import '../../node_modules/cacao-css/src/aspect/xs/horizontal.css'; */
+/* @import '../../node_modules/cacao-css/src/aspect/xs/vertical.css'; */
+
+/* Aspect Ratios (sm) */
+
+/* @import '../../node_modules/cacao-css/src/aspect/sm/horizontal.css'; */
+/* @import '../../node_modules/cacao-css/src/aspect/sm/vertical.css'; */
+
+/* Aspect Ratios (md) */
+
+/* @import '../../node_modules/cacao-css/src/aspect/md/horizontal.css'; */
+/* @import '../../node_modules/cacao-css/src/aspect/md/vertical.css'; */
+
+/* Aspect Ratios (lg) */
+
+/* @import '../../node_modules/cacao-css/src/aspect/lg/horizontal.css'; */
+/* @import '../../node_modules/cacao-css/src/aspect/lg/vertical.css'; */
+
+/* Aspect Ratios (xl) */
+
+/* @import '../../node_modules/cacao-css/src/aspect/xl/horizontal.css'; */
+/* @import '../../node_modules/cacao-css/src/aspect/xl/vertical.css'; */
+
+/* Aspect Ratios (xxl) */
+
+/* @import '../../node_modules/cacao-css/src/aspect/xxl/horizontal.css'; */
+/* @import '../../node_modules/cacao-css/src/aspect/xxl/vertical.css'; */
+
 /* ------------------------------------ *\
     Display
 \* ------------------------------------ */

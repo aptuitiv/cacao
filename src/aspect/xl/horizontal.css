@@ -1,0 +1,42 @@
+/* =========================================================================== *\
+    Horizontal aspect ratio utilities
+\* =========================================================================== */
+
+@media (--c-bp-xl) {
+    .aspect-xl-1-1 {
+        aspect-ratio: 1 / 1; /* 1.0:1 */
+    }
+
+    .aspect-xl-5-4 {
+        aspect-ratio: 5 / 4; /* 1.25:1 */
+    }
+
+    .aspect-xl-4-3 {
+        aspect-ratio: 4 / 3; /* 1.3:1 */
+    }
+
+    .aspect-xl-7-5 {
+        aspect-ratio: 7 / 5; /* 1.4:1 */
+    }
+
+    .aspect-xl-3-2 {
+        aspect-ratio: 3 / 2; /* 1.5:1 */
+    }
+
+    .aspect-xl-16-9 {
+        aspect-ratio: 16 / 9; /* 1.7:1 */
+    }
+
+    .aspect-xl-2-1 {
+        aspect-ratio: 2 / 1; /* 2:1 */
+    }
+
+    .aspect-xl-7-3,
+    .aspect-xl-21-9 {
+        aspect-ratio: 7 / 3; /* 2.3:1 */
+    }
+
+    .aspect-xl-3-1 {
+        aspect-ratio: 3 / 1; /* 3.0:1 */
+    }
+}
