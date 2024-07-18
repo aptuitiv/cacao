@@ -16,22 +16,17 @@
 /* stylelint-disable comment-empty-line-before */
 
 /* ------------------------------------ *\
-    Config
+    Core files that should always be included
 \* ------------------------------------ */
 
+/* Configuration - custom media queries */
 @import '../../node_modules/cacao-css/src/config.css';
 
-/* ------------------------------------ *\
-    Reset
-\* ------------------------------------ */
+/* CSS reset */
+@import '../../node_modules/cacao-css/src/reset.css';
 
-@import '../../node_modules/cacao-css/src/reset/reset.css';
-
-/* ------------------------------------ *\
-    Base
-\* ------------------------------------ */
-
-@import '../../node_modules/cacao-css/src/base/base.css';
+/* Base styles */
+@import '../../node_modules/cacao-css/src/base.css';
 
 /* ------------------------------------ *\
     Aspect Ratios
@@ -39,101 +34,6 @@
 
 @import '../../node_modules/cacao-css/src/aspect/horizontal.css';
 /* @import '../../node_modules/cacao-css/src/aspect/vertical.css'; */
-
-/* ------------------------------------ *\
-    Embed
-\* ------------------------------------ */
-
-@import '../../node_modules/cacao-css/src/embed/embed.css';
-
-/* ------------------------------------ *\
-    Images
-\* ------------------------------------ */
-
-@import '../../node_modules/cacao-css/src/image/image.css';
-
-/* ------------------------------------ *\
-    Layout
-\* ------------------------------------ */
-
-@import '../../node_modules/cacao-css/src/layout/layout.css';
-
-/* ------------------------------------ *\
-    Fit
-\* ------------------------------------ */
-
-/* @import '../../node_modules/cacao-css/src/fit/fit.css'; */
-
-/* ------------------------------------ *\
-    Links
-\* ------------------------------------ */
-
-/* @import '../../node_modules/cacao-css/src/links/links.css'; */
-
-/* ------------------------------------ *\
-    Spacing
-\* ------------------------------------ */
-
-/* @import '../../node_modules/cacao-css/src/spacing/spacing.css'; */
-
-/* ------------------------------------ *\
-    Size
-\* ------------------------------------ */
-
-/* @import '../../node_modules/cacao-css/src/size/core/size.css'; */
-
-/* Size (sm) */
-
-/* @import '../../node_modules/cacao-css/src/size/sm/size.css'; */
-
-/* Size (md) */
-
-/* @import '../../node_modules/cacao-css/src/size/md/size.css'; */
-
-/* Size (lg) */
-
-/* @import '../../node_modules/cacao-css/src/size/lg/size.css'; */
-
-/* Size (xl) */
-
-/* @import '../../node_modules/cacao-css/src/size/xl/size.css'; */
-
-/* ------------------------------------ *\
-    Typography
-\* ------------------------------------ */
-
-/* @import '../../node_modules/cacao-css/src/typography/core/align.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/core/break.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/core/transform.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/core/weight.css'; */
-
-/* Typography (sm) */
-
-/* @import '../../node_modules/cacao-css/src/typography/sm/align.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/sm/break.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/sm/transform.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/sm/weight.css'; */
-
-/* Typography (md) */
-
-/* @import '../../node_modules/cacao-css/src/typography/md/align.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/md/break.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/md/transform.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/md/weight.css'; */
-
-/* Typography (lg) */
-
-/* @import '../../node_modules/cacao-css/src/typography/lg/align.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/lg/break.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/lg/transform.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/lg/weight.css'; */
-
-/* Typography (xl) */
-
-/* @import '../../node_modules/cacao-css/src/typography/xl/align.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/xl/break.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/xl/transform.css'; */
-/* @import '../../node_modules/cacao-css/src/typography/xl/weight.css'; */
 
 /* ------------------------------------ *\
     Display
@@ -177,6 +77,18 @@
 /* @import '../../node_modules/cacao-css/src/display/xl/flex.css'; */
 /* @import '../../node_modules/cacao-css/src/display/xl/justify.css'; */
 /* @import '../../node_modules/cacao-css/src/display/xl/order.css'; */
+
+/* ------------------------------------ *\
+    Embed
+\* ------------------------------------ */
+
+@import '../../node_modules/cacao-css/src/embed/embed.css';
+
+/* ------------------------------------ *\
+    Fit
+\* ------------------------------------ */
+
+/* @import '../../node_modules/cacao-css/src/fit/fit.css'; */
 
 /* ------------------------------------ *\
     Grid
@@ -292,6 +204,24 @@
 /* @import '../../node_modules/cacao-css/src/gutter/xl/all.css'; */
 /* @import '../../node_modules/cacao-css/src/gutter/xl/horizontal.css'; */
 /* @import '../../node_modules/cacao-css/src/gutter/xl/vertical.css'; */
+
+/* ------------------------------------ *\
+    Images
+\* ------------------------------------ */
+
+@import '../../node_modules/cacao-css/src/image/image.css';
+
+/* ------------------------------------ *\
+    Layout
+\* ------------------------------------ */
+
+@import '../../node_modules/cacao-css/src/layout/layout.css';
+
+/* ------------------------------------ *\
+    Links
+\* ------------------------------------ */
+
+/* @import '../../node_modules/cacao-css/src/links/links.css'; */
 
 /* ------------------------------------ *\
     Margin
@@ -552,3 +482,68 @@
 /* @import '../../node_modules/cacao-css/src/push/xl/push-10.css'; */
 /* @import '../../node_modules/cacao-css/src/push/xl/push-11.css'; */
 /* @import '../../node_modules/cacao-css/src/push/xl/push-12.css'; */
+
+/* ------------------------------------ *\
+    Size
+\* ------------------------------------ */
+
+/* @import '../../node_modules/cacao-css/src/size/core/size.css'; */
+
+/* Size (sm) */
+
+/* @import '../../node_modules/cacao-css/src/size/sm/size.css'; */
+
+/* Size (md) */
+
+/* @import '../../node_modules/cacao-css/src/size/md/size.css'; */
+
+/* Size (lg) */
+
+/* @import '../../node_modules/cacao-css/src/size/lg/size.css'; */
+
+/* Size (xl) */
+
+/* @import '../../node_modules/cacao-css/src/size/xl/size.css'; */
+
+/* ------------------------------------ *\
+    Spacing
+\* ------------------------------------ */
+
+/* @import '../../node_modules/cacao-css/src/spacing/spacing.css'; */
+
+/* ------------------------------------ *\
+    Typography
+\* ------------------------------------ */
+
+/* @import '../../node_modules/cacao-css/src/typography/core/align.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/core/break.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/core/transform.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/core/weight.css'; */
+
+/* Typography (sm) */
+
+/* @import '../../node_modules/cacao-css/src/typography/sm/align.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/sm/break.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/sm/transform.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/sm/weight.css'; */
+
+/* Typography (md) */
+
+/* @import '../../node_modules/cacao-css/src/typography/md/align.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/md/break.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/md/transform.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/md/weight.css'; */
+
+/* Typography (lg) */
+
+/* @import '../../node_modules/cacao-css/src/typography/lg/align.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/lg/break.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/lg/transform.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/lg/weight.css'; */
+
+/* Typography (xl) */
+
+/* @import '../../node_modules/cacao-css/src/typography/xl/align.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/xl/break.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/xl/transform.css'; */
+/* @import '../../node_modules/cacao-css/src/typography/xl/weight.css'; */
