@@ -4,46 +4,46 @@
 
 @media (--c-bp-xl) {
     .pull-xl-1-11 {
-        left: calc(100% / 11);
+        right: calc(100% / 11);
     }
 
     .pull-xl-2-11 {
-        left: calc(100% / 11 * 2);
+        right: calc(100% / 11 * 2);
     }
 
     .pull-xl-3-11 {
-        left: calc(100% / 11 * 3);
+        right: calc(100% / 11 * 3);
     }
 
     .pull-xl-4-11 {
-        left: calc(100% / 11 * 4);
+        right: calc(100% / 11 * 4);
     }
 
     .pull-xl-5-11 {
-        left: calc(100% / 11 * 5);
+        right: calc(100% / 11 * 5);
     }
 
     .pull-xl-6-11 {
-        left: calc(100% / 11 * 6);
+        right: calc(100% / 11 * 6);
     }
 
     .pull-xl-7-11 {
-        left: calc(100% / 11 * 7);
+        right: calc(100% / 11 * 7);
     }
 
     .pull-xl-8-11 {
-        left: calc(100% / 11 * 8);
+        right: calc(100% / 11 * 8);
     }
 
     .pull-xl-9-11 {
-        left: calc(100% / 11 * 9);
+        right: calc(100% / 11 * 9);
     }
 
     .pull-xl-10-11 {
-        left: calc(100% / 11 * 10);
+        right: calc(100% / 11 * 10);
     }
 
     .pull-xl-11-11 {
-        left: 100%;
+        right: 100%;
     }
 }

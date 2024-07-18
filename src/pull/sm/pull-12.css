@@ -4,50 +4,50 @@
 
 @media (--c-bp-sm) {
     .pull-sm-1-12 {
-        left: calc(100% / 12);
+        right: calc(100% / 12);
     }
 
     .pull-sm-2-12 {
-        left: calc(100% / 12 * 2);
+        right: calc(100% / 12 * 2);
     }
 
     .pull-sm-3-12 {
-        left: 25%;
+        right: 25%;
     }
 
     .pull-sm-4-12 {
-        left: calc(100% / 12 * 4);
+        right: calc(100% / 12 * 4);
     }
 
     .pull-sm-5-12 {
-        left: calc(100% / 12 * 5);
+        right: calc(100% / 12 * 5);
     }
 
     .pull-sm-6-12 {
-        left: 50%;
+        right: 50%;
     }
 
     .pull-sm-7-12 {
-        left: calc(100% / 12 * 7);
+        right: calc(100% / 12 * 7);
     }
 
     .pull-sm-8-12 {
-        left: calc(100% / 12 * 8);
+        right: calc(100% / 12 * 8);
     }
 
     .pull-sm-9-12 {
-        left: 75%;
+        right: 75%;
     }
 
     .pull-sm-10-12 {
-        left: calc(100% / 12 * 10);
+        right: calc(100% / 12 * 10);
     }
 
     .pull-sm-11-12 {
-        left: calc(100% / 12 * 11);
+        right: calc(100% / 12 * 11);
     }
 
     .pull-sm-12-12 {
-        left: 100%;
+        right: 100%;
     }
 }

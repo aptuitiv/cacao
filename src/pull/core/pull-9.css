@@ -3,37 +3,37 @@
 \* =========================================================================== */
 
 .pull-1-9 {
-    left: calc(100% / 9);
+    right: calc(100% / 9);
 }
 
 .pull-2-9 {
-    left: calc(100% / 9 * 2);
+    right: calc(100% / 9 * 2);
 }
 
 .pull-3-9 {
-    left: calc(100% / 9 * 3);
+    right: calc(100% / 9 * 3);
 }
 
 .pull-4-9 {
-    left: calc(100% / 9 * 4);
+    right: calc(100% / 9 * 4);
 }
 
 .pull-5-9 {
-    left: calc(100% / 9 * 5);
+    right: calc(100% / 9 * 5);
 }
 
 .pull-6-9 {
-    left: calc(100% / 9 * 6);
+    right: calc(100% / 9 * 6);
 }
 
 .pull-7-9 {
-    left: calc(100% / 9 * 7);
+    right: calc(100% / 9 * 7);
 }
 
 .pull-8-9 {
-    left: calc(100% / 9 * 8);
+    right: calc(100% / 9 * 8);
 }
 
 .pull-9-9 {
-    left: 100%;
+    right: 100%;
 }

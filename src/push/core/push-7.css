@@ -3,29 +3,29 @@
 \* =========================================================================== */
 
 .push-1-7 {
-    right: calc(100% / 7);
+    left: calc(100% / 7);
 }
 
 .push-2-7 {
-    right: calc(100% / 7 * 2);
+    left: calc(100% / 7 * 2);
 }
 
 .push-3-7 {
-    right: calc(100% / 7 * 3);
+    left: calc(100% / 7 * 3);
 }
 
 .push-4-7 {
-    right: calc(100% / 7 * 4);
+    left: calc(100% / 7 * 4);
 }
 
 .push-5-7 {
-    right: calc(100% / 7 * 5);
+    left: calc(100% / 7 * 5);
 }
 
 .push-6-7 {
-    right: calc(100% / 7 * 6);
+    left: calc(100% / 7 * 6);
 }
 
 .push-7-7 {
-    right: 100%;
+    left: 100%;
 }

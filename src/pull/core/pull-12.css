@@ -3,49 +3,49 @@
 \* =========================================================================== */
 
 .pull-1-12 {
-    left: calc(100% / 12);
+    right: calc(100% / 12);
 }
 
 .pull-2-12 {
-    left: calc(100% / 12 * 2);
+    right: calc(100% / 12 * 2);
 }
 
 .pull-3-12 {
-    left: 25%;
+    right: 25%;
 }
 
 .pull-4-12 {
-    left: calc(100% / 12 * 4);
+    right: calc(100% / 12 * 4);
 }
 
 .pull-5-12 {
-    left: calc(100% / 12 * 5);
+    right: calc(100% / 12 * 5);
 }
 
 .pull-6-12 {
-    left: 50%;
+    right: 50%;
 }
 
 .pull-7-12 {
-    left: calc(100% / 12 * 7);
+    right: calc(100% / 12 * 7);
 }
 
 .pull-8-12 {
-    left: calc(100% / 12 * 8);
+    right: calc(100% / 12 * 8);
 }
 
 .pull-9-12 {
-    left: 75%;
+    right: 75%;
 }
 
 .pull-10-12 {
-    left: calc(100% / 12 * 10);
+    right: calc(100% / 12 * 10);
 }
 
 .pull-11-12 {
-    left: calc(100% / 12 * 11);
+    right: calc(100% / 12 * 11);
 }
 
 .pull-12-12 {
-    left: 100%;
+    right: 100%;
 }

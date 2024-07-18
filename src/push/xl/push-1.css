@@ -4,6 +4,6 @@
 
 @media (--c-bp-xl) {
     .push-xl-1-1 {
-        right: 100%;
+        left: 100%;
     }
 }

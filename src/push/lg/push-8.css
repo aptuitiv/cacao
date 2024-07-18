@@ -4,34 +4,34 @@
 
 @media (--c-bp-lg) {
     .push-lg-1-8 {
-        right: calc(100% / 8);
+        left: calc(100% / 8);
     }
 
     .push-lg-2-8 {
-        right: 25%;
+        left: 25%;
     }
 
     .push-lg-3-8 {
-        right: calc(100% / 8 * 3);
+        left: calc(100% / 8 * 3);
     }
 
     .push-lg-4-8 {
-        right: 50%;
+        left: 50%;
     }
 
     .push-lg-5-8 {
-        right: calc(100% / 8 * 5);
+        left: calc(100% / 8 * 5);
     }
 
     .push-lg-6-8 {
-        right: 75%;
+        left: 75%;
     }
 
     .push-lg-7-8 {
-        right: calc(100% / 8 * 7);
+        left: calc(100% / 8 * 7);
     }
 
     .push-lg-8-8 {
-        right: 100%;
+        left: 100%;
     }
 }

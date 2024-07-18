@@ -4,14 +4,14 @@
 
 @media (--c-bp-sm) {
     .push-sm-1-3 {
-        right: calc(100% / 3);
+        left: calc(100% / 3);
     }
 
     .push-sm-2-3 {
-        right: calc(100% / 3 * 2);
+        left: calc(100% / 3 * 2);
     }
 
     .push-sm-3-3 {
-        right: 100%;
+        left: 100%;
     }
 }

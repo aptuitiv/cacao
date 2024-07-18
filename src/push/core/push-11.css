@@ -3,45 +3,45 @@
 \* =========================================================================== */
 
 .push-1-11 {
-    right: calc(100% / 11);
+    left: calc(100% / 11);
 }
 
 .push-2-11 {
-    right: calc(100% / 11 * 2);
+    left: calc(100% / 11 * 2);
 }
 
 .push-3-11 {
-    right: calc(100% / 11 * 3);
+    left: calc(100% / 11 * 3);
 }
 
 .push-4-11 {
-    right: calc(100% / 11 * 4);
+    left: calc(100% / 11 * 4);
 }
 
 .push-5-11 {
-    right: calc(100% / 11 * 5);
+    left: calc(100% / 11 * 5);
 }
 
 .push-6-11 {
-    right: calc(100% / 11 * 6);
+    left: calc(100% / 11 * 6);
 }
 
 .push-7-11 {
-    right: calc(100% / 11 * 7);
+    left: calc(100% / 11 * 7);
 }
 
 .push-8-11 {
-    right: calc(100% / 11 * 8);
+    left: calc(100% / 11 * 8);
 }
 
 .push-9-11 {
-    right: calc(100% / 11 * 9);
+    left: calc(100% / 11 * 9);
 }
 
 .push-10-11 {
-    right: calc(100% / 11 * 10);
+    left: calc(100% / 11 * 10);
 }
 
 .push-11-11 {
-    right: 100%;
+    left: 100%;
 }

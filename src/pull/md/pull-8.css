@@ -4,34 +4,34 @@
 
 @media (--c-bp-md) {
     .pull-md-1-8 {
-        left: calc(100% / 8);
+        right: calc(100% / 8);
     }
 
     .pull-md-2-8 {
-        left: 25%;
+        right: 25%;
     }
 
     .pull-md-3-8 {
-        left: calc(100% / 8 * 3);
+        right: calc(100% / 8 * 3);
     }
 
     .pull-md-4-8 {
-        left: 50%;
+        right: 50%;
     }
 
     .pull-md-5-8 {
-        left: calc(100% / 8 * 5);
+        right: calc(100% / 8 * 5);
     }
 
     .pull-md-6-8 {
-        left: 75%;
+        right: 75%;
     }
 
     .pull-md-7-8 {
-        left: calc(100% / 8 * 7);
+        right: calc(100% / 8 * 7);
     }
 
     .pull-md-8-8 {
-        left: 100%;
+        right: 100%;
     }
 }

@@ -4,30 +4,30 @@
 
 @media (--c-bp-sm) {
     .push-sm-1-7 {
-        right: calc(100% / 7);
+        left: calc(100% / 7);
     }
 
     .push-sm-2-7 {
-        right: calc(100% / 7 * 2);
+        left: calc(100% / 7 * 2);
     }
 
     .push-sm-3-7 {
-        right: calc(100% / 7 * 3);
+        left: calc(100% / 7 * 3);
     }
 
     .push-sm-4-7 {
-        right: calc(100% / 7 * 4);
+        left: calc(100% / 7 * 4);
     }
 
     .push-sm-5-7 {
-        right: calc(100% / 7 * 5);
+        left: calc(100% / 7 * 5);
     }
 
     .push-sm-6-7 {
-        right: calc(100% / 7 * 6);
+        left: calc(100% / 7 * 6);
     }
 
     .push-sm-7-7 {
-        right: 100%;
+        left: 100%;
     }
 }

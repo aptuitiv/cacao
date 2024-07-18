@@ -4,10 +4,10 @@
 
 @media (--c-bp-sm) {
     .pull-sm-1-2 {
-        left: 50%;
+        right: 50%;
     }
 
     .pull-sm-2-2 {
-        left: 100%;
+        right: 100%;
     }
 }

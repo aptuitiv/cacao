@@ -4,30 +4,30 @@
 
 @media (--c-bp-xl) {
     .push-xl-1-7 {
-        right: calc(100% / 7);
+        left: calc(100% / 7);
     }
 
     .push-xl-2-7 {
-        right: calc(100% / 7 * 2);
+        left: calc(100% / 7 * 2);
     }
 
     .push-xl-3-7 {
-        right: calc(100% / 7 * 3);
+        left: calc(100% / 7 * 3);
     }
 
     .push-xl-4-7 {
-        right: calc(100% / 7 * 4);
+        left: calc(100% / 7 * 4);
     }
 
     .push-xl-5-7 {
-        right: calc(100% / 7 * 5);
+        left: calc(100% / 7 * 5);
     }
 
     .push-xl-6-7 {
-        right: calc(100% / 7 * 6);
+        left: calc(100% / 7 * 6);
     }
 
     .push-xl-7-7 {
-        right: 100%;
+        left: 100%;
     }
 }

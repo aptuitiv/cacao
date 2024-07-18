@@ -4,18 +4,18 @@
 
 @media (--c-bp-md) {
     .pull-md-1-4 {
-        left: 25%;
+        right: 25%;
     }
 
     .pull-md-2-4 {
-        left: 50%;
+        right: 50%;
     }
 
     .pull-md-3-4 {
-        left: 75%;
+        right: 75%;
     }
 
     .pull-md-4-4 {
-        left: 100%;
+        right: 100%;
     }
 }

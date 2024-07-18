@@ -4,26 +4,26 @@
 
 @media (--c-bp-md) {
     .push-md-1-6 {
-        right: calc(100% / 6);
+        left: calc(100% / 6);
     }
 
     .push-md-2-6 {
-        right: calc(100% / 6 * 2);
+        left: calc(100% / 6 * 2);
     }
 
     .push-md-3-6 {
-        right: 50%;
+        left: 50%;
     }
 
     .push-md-4-6 {
-        right: calc(100% / 6 * 4);
+        left: calc(100% / 6 * 4);
     }
 
     .push-md-5-6 {
-        right: calc(100% / 6 * 5);
+        left: calc(100% / 6 * 5);
     }
 
     .push-md-6-6 {
-        right: 100%;
+        left: 100%;
     }
 }

@@ -4,18 +4,18 @@
 
 @media (--c-bp-lg) {
     .push-lg-1-4 {
-        right: 25%;
+        left: 25%;
     }
 
     .push-lg-2-4 {
-        right: 50%;
+        left: 50%;
     }
 
     .push-lg-3-4 {
-        right: 75%;
+        left: 75%;
     }
 
     .push-lg-4-4 {
-        right: 100%;
+        left: 100%;
     }
 }

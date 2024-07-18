@@ -4,10 +4,10 @@
 
 @media (--c-bp-sm) {
     .push-sm-1-2 {
-        right: 50%;
+        left: 50%;
     }
 
     .push-sm-2-2 {
-        right: 100%;
+        left: 100%;
     }
 }

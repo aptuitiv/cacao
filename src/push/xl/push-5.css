@@ -4,22 +4,22 @@
 
 @media (--c-bp-xl) {
     .push-xl-1-5 {
-        right: 20%;
+        left: 20%;
     }
 
     .push-xl-2-5 {
-        right: 40%;
+        left: 40%;
     }
 
     .push-xl-3-5 {
-        right: 60%;
+        left: 60%;
     }
 
     .push-xl-4-5 {
-        right: 80%;
+        left: 80%;
     }
 
     .push-xl-5-5 {
-        right: 100%;
+        left: 100%;
     }
 }

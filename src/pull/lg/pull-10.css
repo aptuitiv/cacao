@@ -4,42 +4,42 @@
 
 @media (--c-bp-lg) {
     .pull-lg-1-10 {
-        left: 10%;
+        right: 10%;
     }
 
     .pull-lg-2-10 {
-        left: 20%;
+        right: 20%;
     }
 
     .pull-lg-3-10 {
-        left: 30%;
+        right: 30%;
     }
 
     .pull-lg-4-10 {
-        left: 40%;
+        right: 40%;
     }
 
     .pull-lg-5-10 {
-        left: 50%;
+        right: 50%;
     }
 
     .pull-lg-6-10 {
-        left: 60%;
+        right: 60%;
     }
 
     .pull-lg-7-10 {
-        left: 70%;
+        right: 70%;
     }
 
     .pull-lg-8-10 {
-        left: 80%;
+        right: 80%;
     }
 
     .pull-lg-9-10 {
-        left: 90%;
+        right: 90%;
     }
 
     .pull-lg-10-10 {
-        left: 100%;
+        right: 100%;
     }
 }

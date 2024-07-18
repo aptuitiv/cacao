@@ -4,38 +4,38 @@
 
 @media (--c-bp-xl) {
     .pull-xl-1-9 {
-        left: calc(100% / 9);
+        right: calc(100% / 9);
     }
 
     .pull-xl-2-9 {
-        left: calc(100% / 9 * 2);
+        right: calc(100% / 9 * 2);
     }
 
     .pull-xl-3-9 {
-        left: calc(100% / 9 * 3);
+        right: calc(100% / 9 * 3);
     }
 
     .pull-xl-4-9 {
-        left: calc(100% / 9 * 4);
+        right: calc(100% / 9 * 4);
     }
 
     .pull-xl-5-9 {
-        left: calc(100% / 9 * 5);
+        right: calc(100% / 9 * 5);
     }
 
     .pull-xl-6-9 {
-        left: calc(100% / 9 * 6);
+        right: calc(100% / 9 * 6);
     }
 
     .pull-xl-7-9 {
-        left: calc(100% / 9 * 7);
+        right: calc(100% / 9 * 7);
     }
 
     .pull-xl-8-9 {
-        left: calc(100% / 9 * 8);
+        right: calc(100% / 9 * 8);
     }
 
     .pull-xl-9-9 {
-        left: 100%;
+        right: 100%;
     }
 }
