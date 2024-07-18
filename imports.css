@@ -323,7 +323,7 @@
     Images
 \* ------------------------------------ */
 
-@import '../../node_modules/cacao-css/src/image/image.css';
+@import '../../node_modules/cacao-css/src/image/core/image.css';
 
 /* ------------------------------------ *\
     Layout
