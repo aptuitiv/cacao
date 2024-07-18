@@ -329,7 +329,7 @@
     Layout
 \* ------------------------------------ */
 
-@import '../../node_modules/cacao-css/src/layout/layout.css';
+@import '../../node_modules/cacao-css/src/layout/core/layout.css';
 
 /* ------------------------------------ *\
     Links
