@@ -1,0 +1,13 @@
+/* =========================================================================== *\
+    Layout options
+\* =========================================================================== */
+
+.clearfix::before,
+.clearfix::after {
+    content: ' ' !important;
+    display: table !important;
+}
+
+.clearfix::after {
+    clear: both !important;
+}

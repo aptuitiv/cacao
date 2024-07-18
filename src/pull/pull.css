@@ -1,0 +1,8 @@
+/* ===========================================================================
+    General styles for the pull component.
+    This must be included when any of the other pull files are included.
+=========================================================================== */
+
+[class*='pull-'] {
+    position: relative;
+}

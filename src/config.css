@@ -1,8 +1,17 @@
 /* =========================================================================== *\
-    Cacao Configuration
+    Cacao configuration
+    Custom variables and media queries
 \* =========================================================================== */
 
-@custom-media --c-bp-sm (min-width: 36em);
-@custom-media --c-bp-md (min-width: 48em);
-@custom-media --c-bp-lg (min-width: 64em);
-@custom-media --c-bp-xl (min-width: 80em);
+/**
+ * These breakpoints are inspired by Pure. https://purecss.io/grids/#:~:text=%3C/div%3E-,Default%20Media%20Queries,-When%20using%20Responsive
+ * Cacao is a mobile-first system.
+ * Because of the use of em , these will scale with browser zoom and settings.
+ * 1em = 16px
+ */
+@custom-media --c-bp-xs (min-width: 27em); /* 432px */
+@custom-media --c-bp-sm (min-width: 36em); /* 576px */
+@custom-media --c-bp-md (min-width: 48em); /* 768px */
+@custom-media --c-bp-lg (min-width: 64em); /* 1024px */
+@custom-media --c-bp-xl (min-width: 80em); /* 1280px */
+@custom-media --c-bp-xxl (min-width: 100em); /* 1600px */

@@ -1,5 +1,5 @@
 /* =========================================================================== *\
-    Horizontal Margin Utilities
+    Horizontal margin utilities
 \* =========================================================================== */
 
 @media (--c-bp-xl) {
@@ -7,27 +7,27 @@
         margin-left: 0;
         margin-right: 0;
     }
-    
+
     .mx-xl-1 {
         margin-left: 10px;
         margin-right: 10px;
     }
-    
+
     .mx-xl-2 {
         margin-left: 20px;
         margin-right: 20px;
     }
-    
+
     .mx-xl-3 {
         margin-left: 30px;
         margin-right: 30px;
     }
-    
+
     .mx-xl-4 {
         margin-left: 40px;
         margin-right: 40px;
     }
-    
+
     .mx-xl-5 {
         margin-left: 50px;
         margin-right: 50px;

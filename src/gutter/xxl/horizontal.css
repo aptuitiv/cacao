@@ -1,0 +1,38 @@
+/* =========================================================================== *\
+    Horizontal gutter utilities
+\* =========================================================================== */
+
+@media (--c-bp-xxl) {
+    .gx-xxl-0 {
+        --gap: 0px;
+    }
+
+    .gx-xxl-1 {
+        --gap: 10px;
+    }
+
+    .gx-xxl-2 {
+        --gap: 20px;
+    }
+
+    .gx-xxl-3 {
+        --gap: 30px;
+    }
+
+    .gx-xxl-4 {
+        --gap: 40px;
+    }
+
+    .gx-xxl-5 {
+        --gap: 50px;
+    }
+
+    .gx-xxl-0,
+    .gx-xxl-1,
+    .gx-xxl-2,
+    .gx-xxl-3,
+    .gx-xxl-4,
+    .gx-xxl-5 {
+        column-gap: var(--gap);
+    }
+}

@@ -1,16 +1,16 @@
 /* =========================================================================== *\
-    Alignment Utilities
+    Alignment utilities
 \* =========================================================================== */
 
 @media (--c-bp-xl) {
     .align-start-xl {
         align-items: flex-start;
     }
-    
+
     .align-center-xl {
         align-items: center;
     }
-    
+
     .align-end-xl {
         align-items: flex-end;
     }

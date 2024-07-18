@@ -1,0 +1,29 @@
+/* =========================================================================== *\
+    Start padding utilities
+\* =========================================================================== */
+
+@media (--c-bp-xs) {
+    .ps-xs-0 {
+        padding-left: 0;
+    }
+
+    .ps-xs-1 {
+        padding-left: 10px;
+    }
+
+    .ps-xs-2 {
+        padding-left: 20px;
+    }
+
+    .ps-xs-3 {
+        padding-left: 30px;
+    }
+
+    .ps-xs-4 {
+        padding-left: 40px;
+    }
+
+    .ps-xs-5 {
+        padding-left: 50px;
+    }
+}

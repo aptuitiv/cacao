@@ -1,0 +1,49 @@
+/* =========================================================================== *\
+    Grid 11's
+\* =========================================================================== */
+
+@media (--c-bp-xxl) {
+    .col-xxl-1-11 {
+        width: calc(100% / 11 - var(--gap));
+    }
+
+    .col-xxl-2-11 {
+        width: calc(100% / 11 * 2 - var(--gap));
+    }
+
+    .col-xxl-3-11 {
+        width: calc(100% / 11 * 3 - var(--gap));
+    }
+
+    .col-xxl-4-11 {
+        width: calc(100% / 11 * 4 - var(--gap));
+    }
+
+    .col-xxl-5-11 {
+        width: calc(100% / 11 * 5 - var(--gap));
+    }
+
+    .col-xxl-6-11 {
+        width: calc(100% / 11 * 6 - var(--gap));
+    }
+
+    .col-xxl-7-11 {
+        width: calc(100% / 11 * 7 - var(--gap));
+    }
+
+    .col-xxl-8-11 {
+        width: calc(100% / 11 * 8 - var(--gap));
+    }
+
+    .col-xxl-9-11 {
+        width: calc(100% / 11 * 9 - var(--gap));
+    }
+
+    .col-xxl-10-11 {
+        width: calc(100% / 11 * 10 - var(--gap));
+    }
+
+    .col-xxl-11-11 {
+        width: calc(100% - var(--gap));
+    }
+}

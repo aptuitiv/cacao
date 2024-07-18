@@ -1,0 +1,25 @@
+/* =========================================================================== *\
+    Display utilities
+\* =========================================================================== */
+
+@media (--c-bp-xs) {
+    .flex-xs {
+        display: flex;
+    }
+
+    .flex-inline-xs {
+        display: inline-flex;
+    }
+
+    .block-xs {
+        display: block;
+    }
+
+    .inline-xs {
+        display: inline;
+    }
+
+    .hidden-xs {
+        display: none;
+    }
+}

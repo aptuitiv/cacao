@@ -1,24 +1,24 @@
 /* =========================================================================== *\
-    Justification Utilities
+    Justification utilities
 \* =========================================================================== */
 
 @media (--c-bp-lg) {
     .justify-start-lg {
         justify-content: flex-start;
     }
-    
+
     .justify-center-lg {
         justify-content: center;
     }
-    
+
     .justify-end-lg {
         justify-content: flex-end;
     }
-    
+
     .justify-between-lg {
         justify-content: space-between;
     }
-    
+
     .justify-around-lg {
         justify-content: space-around;
     }

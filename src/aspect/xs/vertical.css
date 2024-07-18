@@ -1,0 +1,42 @@
+/* =========================================================================== *\
+    Vertical aspect ratio utilities
+\* =========================================================================== */
+
+@media (--c-bp-xs) {
+    .aspect-xs-1-1 {
+        aspect-ratio: 1 / 1; /* 1.0:1 */
+    }
+
+    .aspect-xs-4-5 {
+        aspect-ratio: 4 / 5; /* 1:1.25 */
+    }
+
+    .aspect-xs-3-4 {
+        aspect-ratio: 3 / 4; /* 1:1.3 */
+    }
+
+    .aspect-xs-5-7 {
+        aspect-ratio: 5 / 7; /* 1:1.4 */
+    }
+
+    .aspect-xs-2-3 {
+        aspect-ratio: 2 / 3; /* 1:1.5 */
+    }
+
+    .aspect-xs-9-16 {
+        aspect-ratio: 9 / 16; /* 1:1.7 */
+    }
+
+    .aspect-xs-1-2 {
+        aspect-ratio: 1 / 2; /* 1:2 */
+    }
+
+    .aspect-xs-3-7,
+    .aspect-xs-9-21 {
+        aspect-ratio: 3 / 7; /* 1:2.3 */
+    }
+
+    .aspect-xs-1-3 {
+        aspect-ratio: 1 / 3; /* 1:3.0 */
+    }
+}

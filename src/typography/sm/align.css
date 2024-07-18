@@ -1,0 +1,21 @@
+/* =========================================================================== *\
+    Text align utilities - large screens
+\* =========================================================================== */
+
+@media (--c-bp-sm) {
+    .text-center-sm {
+        text-align: center;
+    }
+
+    .text-start-sm {
+        text-align: start;
+    }
+
+    .text-end-sm {
+        text-align: end;
+    }
+
+    .text-justify-sm {
+        text-align: justify;
+    }
+}

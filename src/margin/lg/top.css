@@ -1,28 +1,28 @@
 /* =========================================================================== *\
-    Top Margin Utilities
+    Top margin utilities
 \* =========================================================================== */
 
 @media (--c-bp-lg) {
     .mt-lg-0 {
         margin-top: 0;
     }
-    
+
     .mt-lg-1 {
         margin-top: 10px;
     }
-    
+
     .mt-lg-2 {
         margin-top: 20px;
     }
-    
+
     .mt-lg-3 {
         margin-top: 30px;
     }
-    
+
     .mt-lg-4 {
         margin-top: 40px;
     }
-    
+
     .mt-lg-5 {
         margin-top: 50px;
     }
