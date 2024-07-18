@@ -1,0 +1,35 @@
+/* =========================================================================== *\
+    Vertical Margin Utilities
+\* =========================================================================== */
+
+@media (--c-bp-xs) {
+    .my-xs-0 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .my-xs-1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .my-xs-2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .my-xs-3 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .my-xs-4 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .my-xs-5 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
