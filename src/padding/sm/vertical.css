@@ -1,5 +1,5 @@
 /* =========================================================================== *\
-    Vertical Padding Utilities
+    Vertical padding utilities
 \* =========================================================================== */
 
 @media (--c-bp-sm) {
@@ -7,27 +7,27 @@
         padding-top: 0;
         padding-bottom: 0;
     }
-    
+
     .py-sm-1 {
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    
+
     .py-sm-2 {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    
+
     .py-sm-3 {
         padding-top: 30px;
         padding-bottom: 30px;
     }
-    
+
     .py-sm-4 {
         padding-top: 40px;
         padding-bottom: 40px;
     }
-    
+
     .py-sm-5 {
         padding-top: 50px;
         padding-bottom: 50px;

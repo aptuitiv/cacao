@@ -1,28 +1,28 @@
 /* =========================================================================== *\
-    End Margin Utilities
+    End margin utilities
 \* =========================================================================== */
 
 @media (--c-bp-lg) {
     .me-lg-0 {
         margin-right: 0;
     }
-    
+
     .me-lg-1 {
         margin-right: 10px;
     }
-    
+
     .me-lg-2 {
         margin-right: 20px;
     }
-    
+
     .me-lg-3 {
         margin-right: 30px;
     }
-    
+
     .me-lg-4 {
         margin-right: 40px;
     }
-    
+
     .me-lg-5 {
         margin-right: 50px;
     }

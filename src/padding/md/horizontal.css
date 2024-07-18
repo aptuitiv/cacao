@@ -1,5 +1,5 @@
 /* =========================================================================== *\
-    Horizontal Padding Utilities
+    Horizontal padding utilities
 \* =========================================================================== */
 
 @media (--c-bp-md) {
@@ -7,27 +7,27 @@
         padding-left: 0;
         padding-right: 0;
     }
-    
+
     .px-md-1 {
         padding-left: 10px;
         padding-right: 10px;
     }
-    
+
     .px-md-2 {
         padding-left: 20px;
         padding-right: 20px;
     }
-    
+
     .px-md-3 {
         padding-left: 30px;
         padding-right: 30px;
     }
-    
+
     .px-md-4 {
         padding-left: 40px;
         padding-right: 40px;
     }
-    
+
     .px-md-5 {
         padding-left: 50px;
         padding-right: 50px;

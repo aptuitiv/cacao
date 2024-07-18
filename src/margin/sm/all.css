@@ -1,28 +1,28 @@
 /* =========================================================================== *\
-    All Sides Margin Utilities
+    All sides margin utilities
 \* =========================================================================== */
 
 @media (--c-bp-sm) {
     .m-sm-0 {
         margin: 0;
     }
-    
+
     .m-sm-1 {
         margin: 10px;
     }
-    
+
     .m-sm-2 {
         margin: 20px;
     }
-    
+
     .m-sm-3 {
         margin: 30px;
     }
-    
+
     .m-sm-4 {
         margin: 40px;
     }
-    
+
     .m-sm-5 {
         margin: 50px;
     }

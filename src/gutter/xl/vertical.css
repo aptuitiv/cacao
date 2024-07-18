@@ -1,33 +1,38 @@
 /* =========================================================================== *\
-    Vertical Gutter Utilities
+    Vertical gutter utilities
 \* =========================================================================== */
 
 @media (--c-bp-xl) {
     .gy-xl-0 {
         --gap: 0px;
     }
-    
+
     .gy-xl-1 {
         --gap: 10px;
     }
-    
+
     .gy-xl-2 {
         --gap: 20px;
     }
-    
+
     .gy-xl-3 {
         --gap: 30px;
     }
-    
+
     .gy-xl-4 {
         --gap: 40px;
     }
-    
+
     .gy-xl-5 {
         --gap: 50px;
     }
-    
-    .gy-xl-0, .gy-xl-1, .gy-xl-2, .gy-xl-3, .gy-xl-4, .gy-xl-5 {
+
+    .gy-xl-0,
+    .gy-xl-1,
+    .gy-xl-2,
+    .gy-xl-3,
+    .gy-xl-4,
+    .gy-xl-5 {
         row-gap: var(--gap);
     }
 }
