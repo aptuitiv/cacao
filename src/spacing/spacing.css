@@ -1,14 +1,14 @@
 /* =========================================================================== *\
-    Spacing Utilities
+    Spacing utilities
 \* =========================================================================== */
 
-/* Used to remove space from the first element within an element */
+/* Used to remove space from the first element within an element. "st" stands for "space-top" */
 .first-child-st-0 > *:first-child {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
 
-/* Used to remove space from the last element within an element */
+/* Used to remove space from the last element within an element "sb" stands for "space-bottom" */
 .last-child-sb-0 > *:last-child {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
