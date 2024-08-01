@@ -46,6 +46,7 @@ These breakpoints are [inspired by Pure](https://purecss.io/grids/#:~:text=%3C/d
 | `.u-flexAlignItemsStart`  | `.align-start`      |
 | `.u-flexAlignItemsEnd`    | `.align-end`        |
 | `.u-flexAlignItemsCenter` | `.align-center`     |
+| `.u-gutters*`             | `.px-*`     |
 | `.u-linkSubtle`           | `.link-subtle`      |
 | `.u-margTop*`             | `.mt-*`             |
 | `.u-margRight*`           | `.me-*`             |
@@ -165,5 +166,7 @@ Change these classes on the grid div.
 
 ### Grid gutters
 
+- `Grid--withGutterSm` → `g-1`
 - `Grid--withGutter` → `g-2`
+- `Grid--withGutterLg` → `g-4`
 - `Grid--withGutterXlg` → `g-5` (although a `g-6` would be nice since the margin is about 60px)
