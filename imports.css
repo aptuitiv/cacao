@@ -13,7 +13,7 @@
     modules that your project needs. This keeps the CSS lean and mean.
 \* =========================================================================== */
 
-/* stylelint-disable comment-empty-line-before */
+/* stylelint-disable comment-empty-line-before -- Disabled so that an extra line isn't added between each commented out code line. */
 
 /* ------------------------------------ *\
     Core files that should always be included
@@ -32,8 +32,8 @@
     Aspect Ratios
 \* ------------------------------------ */
 
-@import '../../node_modules/cacao-css/src/aspect/horizontal.css';
-/* @import '../../node_modules/cacao-css/src/aspect/vertical.css'; */
+@import '../../node_modules/cacao-css/src/aspect/core/horizontal.css';
+/* @import '../../node_modules/cacao-css/src/aspect/core/vertical.css'; */
 
 /* Aspect Ratios (xs) */
 
@@ -134,30 +134,24 @@
     Fit
 \* ------------------------------------ */
 
-/* @import '../../node_modules/cacao-css/src/fit/fit.css'; */
+/* @import '../../node_modules/cacao-css/src/fit/core/fit.css'; */
 
 /* Fit (xs) */
-
 /* @import '../../node_modules/cacao-css/src/fit/xs/fit.css'; */
 
 /* Fit (sm) */
-
 /* @import '../../node_modules/cacao-css/src/fit/sm/fit.css'; */
 
 /* Fit (md) */
-
 /* @import '../../node_modules/cacao-css/src/fit/md/fit.css'; */
 
 /* Fit (lg) */
-
 /* @import '../../node_modules/cacao-css/src/fit/lg/fit.css'; */
 
 /* Fit (xl) */
-
 /* @import '../../node_modules/cacao-css/src/fit/xl/fit.css'; */
 
 /* Fit (xxl) */
-
 /* @import '../../node_modules/cacao-css/src/fit/xxl/fit.css'; */
 
 /* ------------------------------------ *\
@@ -712,33 +706,51 @@
 /* @import '../../node_modules/cacao-css/src/push/xxl/push-12.css'; */
 
 /* ------------------------------------ *\
+    Position
+\* ------------------------------------ */
+
+/* @import '../../node_modules/cacao-css/src/position/core/position.css'; */
+
+/* Position (xs) */
+/* @import '../../node_modules/cacao-css/src/position/xs/position.css'; */
+
+/* Position (sm) */
+/* @import '../../node_modules/cacao-css/src/position/sm/position.css'; */
+
+/* Position (md) */
+/* @import '../../node_modules/cacao-css/src/position/md/position.css'; */
+
+/* Position (lg) */
+/* @import '../../node_modules/cacao-css/src/position/lg/position.css'; */
+
+/* Position (xl) */
+/* @import '../../node_modules/cacao-css/src/position/xl/position.css'; */
+
+/* Position (xxl) */
+/* @import '../../node_modules/cacao-css/src/position/xxl/position.css'; */
+
+/* ------------------------------------ *\
     Size
 \* ------------------------------------ */
 
 /* @import '../../node_modules/cacao-css/src/size/core/size.css'; */
 
 /* Size (xs) */
-
 /* @import '../../node_modules/cacao-css/src/size/xs/size.css'; */
 
 /* Size (sm) */
-
 /* @import '../../node_modules/cacao-css/src/size/sm/size.css'; */
 
 /* Size (md) */
-
 /* @import '../../node_modules/cacao-css/src/size/md/size.css'; */
 
 /* Size (lg) */
-
 /* @import '../../node_modules/cacao-css/src/size/lg/size.css'; */
 
 /* Size (xl) */
-
 /* @import '../../node_modules/cacao-css/src/size/xl/size.css'; */
 
 /* Size (xxl) */
-
 /* @import '../../node_modules/cacao-css/src/size/xxl/size.css'; */
 
 /* ------------------------------------ *\

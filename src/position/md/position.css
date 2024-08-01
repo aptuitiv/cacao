@@ -1,0 +1,25 @@
+/* =========================================================================== *\
+   Positioning utilities
+\* =========================================================================== */
+
+@media (--c-bp-md) {
+    .absolute-md {
+        position: absolute;
+    }
+
+    .fixed-md {
+        position: fixed;
+    }
+
+    .relative-md {
+        position: relative;
+    }
+
+    .static-md {
+        position: static;
+    }
+
+    .sticky-md {
+        position: sticky;
+    }
+}

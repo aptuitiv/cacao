@@ -19,6 +19,10 @@
         display: inline;
     }
 
+    .inline-block-xl {
+        display: inline-block;
+    }
+
     .hidden-xl {
         display: none;
     }

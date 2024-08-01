@@ -19,6 +19,10 @@
         display: inline;
     }
 
+    .inline-block-md {
+        display: inline-block;
+    }
+
     .hidden-md {
         display: none;
     }

@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.1.0 (August 1, 2024)
+
+- Added inline-block breakpoint styles.
+- Added position styles.
+
 ## 5.0.0 (July 18, 2024)
 
 - Added print styles.
