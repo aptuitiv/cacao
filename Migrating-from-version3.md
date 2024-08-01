@@ -61,13 +61,15 @@ These breakpoints are [inspired by Pure](https://purecss.io/grids/#:~:text=%3C/d
 | `.u-printHide`            | `.print-hide`       |
 | `.u-printShow`            | `.print-show`       |
 | `.u-heightFull`           | `.h-100`            |
-| `.u-widthFull`            | `.w-100`            |
-| `.u-size*of*`             | `.col-*-*`          |
+| `.u-widthFull`            | `.w-1-1` or `.w-100` |
+| `.u-size*of*`             | `.col-*-*` or `.w-*-*` |
 | `.u-textBreak`            | `.break-word`       |
 | `.u-textBreakAll`         | `.break-all`        |
+| `.u-textLeft`             | `.text-start`       |
 | `.u-textNoWrap`           | `.no-wrap`          |
 | `.u-textUpper`            | `.text-upper`       |
 | `.u-textCenter`           | `.text-center`      |
+| `.u-textRight`            | `.text-end`         |
 | `.u-weightNormal`         | `.weight-normal`    |
 | `.u-weightBold`           | `.weight-bold`      |
 
