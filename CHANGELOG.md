@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.3.0 (August 1, 2024)
+
+- Added "auto" width classes.
+
 ## 5.2.0 (August 1, 2024)
 
 - Added width styles.
