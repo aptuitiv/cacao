@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.2.0 (August 1, 2024)
+
+- Added width styles.
+
 ## 5.1.0 (August 1, 2024)
 
 - Added inline-block breakpoint styles.
