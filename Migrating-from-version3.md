@@ -10,7 +10,18 @@ The number system used throughout most of v3 is copied over to v4. For example: 
 
 ## Breakpoints
 
-Breakpoints have been updated to be mobile-first. Additionally, the actual breakpoint values have been changed to be more in line with other frameworks. You can view the breakpoint info [here](https://slite.com/api/public/notes/Z6uPud9R3js652/redirect) .
+Breakpoints have been updated to be mobile-first. Additionally, the actual breakpoint values have been changed to be more in line with other frameworks.
+
+These breakpoints are [inspired by Pure](https://purecss.io/grids/#:~:text=%3C/div%3E-,Default%20Media%20Queries,-When%20using%20Responsive) . We are moving to a mobile-first system. Because of the use of `em` , these will scale with browser zoom and settings.
+
+1em = 16px
+
+| Key  | Breakpoint | Screen   |
+| ---- | ---------- | -------- |
+| `sm` | > `36em`   | `576px`  |
+| `md` | > `48em`   | `768px`  |
+| `lg` | > `64em`   | `1024px` |
+| `xl` | > `80em`   | `1280px` |
 
 ## Updated Classes
 
