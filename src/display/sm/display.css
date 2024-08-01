@@ -19,6 +19,10 @@
         display: inline;
     }
 
+    .inline-block-sm {
+        display: inline-block;
+    }
+
     .hidden-sm {
         display: none;
     }
