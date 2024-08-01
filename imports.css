@@ -809,3 +809,117 @@
 /* @import '../../node_modules/cacao-css/src/typography/xxl/break.css'; */
 /* @import '../../node_modules/cacao-css/src/typography/xxl/transform.css'; */
 /* @import '../../node_modules/cacao-css/src/typography/xxl/weight.css'; */
+
+/* ------------------------------------ *\
+    Width
+\* ------------------------------------ */
+
+/* @import '../../node_modules/cacao-css/src/width/core/width-0.css'; */
+/* @import '../../node_modules/cacao-css/src/width/core/width-1.css'; */
+/* @import '../../node_modules/cacao-css/src/width/core/width-2.css'; */
+/* @import '../../node_modules/cacao-css/src/width/core/width-3.css'; */
+/* @import '../../node_modules/cacao-css/src/width/core/width-4.css'; */
+/* @import '../../node_modules/cacao-css/src/width/core/width-5.css'; */
+/* @import '../../node_modules/cacao-css/src/width/core/width-6.css'; */
+/* @import '../../node_modules/cacao-css/src/width/core/width-7.css'; */
+/* @import '../../node_modules/cacao-css/src/width/core/width-8.css'; */
+/* @import '../../node_modules/cacao-css/src/width/core/width-9.css'; */
+/* @import '../../node_modules/cacao-css/src/width/core/width-10.css'; */
+/* @import '../../node_modules/cacao-css/src/width/core/width-11.css'; */
+/* @import '../../node_modules/cacao-css/src/width/core/width-12.css'; */
+
+/* Width (xs) */
+
+/* @import '../../node_modules/cacao-css/src/width/xs/width-0.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xs/width-1.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xs/width-2.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xs/width-3.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xs/width-4.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xs/width-5.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xs/width-6.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xs/width-7.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xs/width-8.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xs/width-9.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xs/width-10.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xs/width-11.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xs/width-12.css'; */
+
+/* Width (sm) */
+
+/* @import '../../node_modules/cacao-css/src/width/sm/width-0.css'; */
+/* @import '../../node_modules/cacao-css/src/width/sm/width-1.css'; */
+/* @import '../../node_modules/cacao-css/src/width/sm/width-2.css'; */
+/* @import '../../node_modules/cacao-css/src/width/sm/width-3.css'; */
+/* @import '../../node_modules/cacao-css/src/width/sm/width-4.css'; */
+/* @import '../../node_modules/cacao-css/src/width/sm/width-5.css'; */
+/* @import '../../node_modules/cacao-css/src/width/sm/width-6.css'; */
+/* @import '../../node_modules/cacao-css/src/width/sm/width-7.css'; */
+/* @import '../../node_modules/cacao-css/src/width/sm/width-8.css'; */
+/* @import '../../node_modules/cacao-css/src/width/sm/width-9.css'; */
+/* @import '../../node_modules/cacao-css/src/width/sm/width-10.css'; */
+/* @import '../../node_modules/cacao-css/src/width/sm/width-11.css'; */
+/* @import '../../node_modules/cacao-css/src/width/sm/width-12.css'; */
+
+/* Width (md) */
+
+/* @import '../../node_modules/cacao-css/src/width/md/width-0.css'; */
+/* @import '../../node_modules/cacao-css/src/width/md/width-1.css'; */
+/* @import '../../node_modules/cacao-css/src/width/md/width-2.css'; */
+/* @import '../../node_modules/cacao-css/src/width/md/width-3.css'; */
+/* @import '../../node_modules/cacao-css/src/width/md/width-4.css'; */
+/* @import '../../node_modules/cacao-css/src/width/md/width-5.css'; */
+/* @import '../../node_modules/cacao-css/src/width/md/width-6.css'; */
+/* @import '../../node_modules/cacao-css/src/width/md/width-7.css'; */
+/* @import '../../node_modules/cacao-css/src/width/md/width-8.css'; */
+/* @import '../../node_modules/cacao-css/src/width/md/width-9.css'; */
+/* @import '../../node_modules/cacao-css/src/width/md/width-10.css'; */
+/* @import '../../node_modules/cacao-css/src/width/md/width-11.css'; */
+/* @import '../../node_modules/cacao-css/src/width/md/width-12.css'; */
+
+/* Width (lg) */
+
+/* @import '../../node_modules/cacao-css/src/width/lg/width-0.css'; */
+/* @import '../../node_modules/cacao-css/src/width/lg/width-1.css'; */
+/* @import '../../node_modules/cacao-css/src/width/lg/width-2.css'; */
+/* @import '../../node_modules/cacao-css/src/width/lg/width-3.css'; */
+/* @import '../../node_modules/cacao-css/src/width/lg/width-4.css'; */
+/* @import '../../node_modules/cacao-css/src/width/lg/width-5.css'; */
+/* @import '../../node_modules/cacao-css/src/width/lg/width-6.css'; */
+/* @import '../../node_modules/cacao-css/src/width/lg/width-7.css'; */
+/* @import '../../node_modules/cacao-css/src/width/lg/width-8.css'; */
+/* @import '../../node_modules/cacao-css/src/width/lg/width-9.css'; */
+/* @import '../../node_modules/cacao-css/src/width/lg/width-10.css'; */
+/* @import '../../node_modules/cacao-css/src/width/lg/width-11.css'; */
+/* @import '../../node_modules/cacao-css/src/width/lg/width-12.css'; */
+
+/* Width (xl) */
+
+/* @import '../../node_modules/cacao-css/src/width/xl/width-0.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xl/width-1.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xl/width-2.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xl/width-3.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xl/width-4.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xl/width-5.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xl/width-6.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xl/width-7.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xl/width-8.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xl/width-9.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xl/width-10.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xl/width-11.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xl/width-12.css'; */
+
+/* Width (xxl) */
+
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-0.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-1.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-2.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-3.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-4.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-5.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-6.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-7.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-8.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-9.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-10.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-11.css'; */
+/* @import '../../node_modules/cacao-css/src/width/xxl/width-12.css'; */
