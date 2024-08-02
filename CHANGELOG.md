@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.4.0 (August 2, 2024)
+
+- Removed aspect-ratio style from `embed`. Because this is set and the embed styles are typically loaded after the aspect ratio styles, this aspect-ratio style overrode the aspect-ratio class.
+
 ## 5.3.0 (August 1, 2024)
 
 - Added "auto" width classes.
