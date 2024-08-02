@@ -1,10 +1,10 @@
 /* =========================================================================== *\
     Responsive embeds
+    You must use this in conjuction with an aspect-ratio class or style.
 \* =========================================================================== */
 
 .embed {
     position: relative;
-    aspect-ratio: 16 / 9;
     height: 100%;
     flex-shrink: 0;
     overflow: hidden;
