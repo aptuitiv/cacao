@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.5.0 (August 14, 2024)
+
+- Fixed the vertical gutter styling to only affect the row-gap. Previously it was setting the `—gap` variable. This would affect the margin on an element if it also used the “grid” class because that used `—gap` to set the margin. That was not supposed to happen.
+  
 ## 5.4.0 (August 2, 2024)
 
 - Removed aspect-ratio style from `embed`. Because this is set and the embed styles are typically loaded after the aspect ratio styles, this aspect-ratio style overrode the aspect-ratio class.

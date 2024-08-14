@@ -4,27 +4,27 @@
 
 @media (--c-bp-md) {
     .gy-md-0 {
-        --gap: 0px;
+        --row-gap: 0px;
     }
 
     .gy-md-1 {
-        --gap: 10px;
+        --row-gap: 10px;
     }
 
     .gy-md-2 {
-        --gap: 20px;
+        --row-gap: 20px;
     }
 
     .gy-md-3 {
-        --gap: 30px;
+        --row-gap: 30px;
     }
 
     .gy-md-4 {
-        --gap: 40px;
+        --row-gap: 40px;
     }
 
     .gy-md-5 {
-        --gap: 50px;
+        --row-gap: 50px;
     }
 
     .gy-md-0,
@@ -33,6 +33,6 @@
     .gy-md-3,
     .gy-md-4,
     .gy-md-5 {
-        row-gap: var(--gap);
+        row-gap: var(--row-gap);
     }
 }
