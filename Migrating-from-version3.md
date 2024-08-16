@@ -46,7 +46,8 @@ These breakpoints are [inspired by Pure](https://purecss.io/grids/#:~:text=%3C/d
 | `.u-flexAlignItemsStart`  | `.align-start`      |
 | `.u-flexAlignItemsEnd`    | `.align-end`        |
 | `.u-flexAlignItemsCenter` | `.align-center`     |
-| `.u-gutters*`             | `.px-*`     |
+| `.u-gutters*`             | `.px-*`             |
+| `.u-heightFull`           | `.h-1-1` or `h-100` |
 | `.u-linkSubtle`           | `.link-subtle`      |
 | `.u-margTop*`             | `.mt-*`             |
 | `.u-margRight*`           | `.me-*`             |
@@ -62,17 +63,20 @@ These breakpoints are [inspired by Pure](https://purecss.io/grids/#:~:text=%3C/d
 | `.u-printHide`            | `.print-hide`       |
 | `.u-printShow`            | `.print-show`       |
 | `.u-heightFull`           | `.h-100`            |
-| `.u-widthFull`            | `.w-1-1` or `.w-100` |
+| `.u-rowGap*`              | `.gy-*`             |
 | `.u-size*of*`             | `.col-*-*` or `.w-*-*` |
+| `.u-styleEm`              | `.style-italic`     |
 | `.u-textBreak`            | `.break-word`       |
 | `.u-textBreakAll`         | `.break-all`        |
 | `.u-textLeft`             | `.text-start`       |
+| `.u-textLower`            | `.text-lower`       |
 | `.u-textNoWrap`           | `.no-wrap`          |
 | `.u-textUpper`            | `.text-upper`       |
 | `.u-textCenter`           | `.text-center`      |
 | `.u-textRight`            | `.text-end`         |
 | `.u-weightNormal`         | `.weight-normal`    |
 | `.u-weightBold`           | `.weight-bold`      |
+| `.u-widthFull`            | `.w-1-1` or `.w-100` |
 
 ## Removed Classes
 
@@ -170,3 +174,25 @@ Change these classes on the grid div.
 - `Grid--withGutter` → `g-2`
 - `Grid--withGutterLg` → `g-4`
 - `Grid--withGutterXlg` → `g-5` (although a `g-6` would be nice since the margin is about 60px)
+
+### Grid column sizes
+
+When changing the classes for grid columns remember that the new Cacao is mobile-first. Start with the smallest column size and go up from there.
+
+You'll typically see `u-sm-`, `u-md-`, and `u-lg-` styles. The smallest one is the base column size. After that we use the breakpoint styles, but one size smaller than the old class names.
+
+For example, if the grid column had these styles: `Grid-cell u-size1of5 u-lg-size1of4 u-md-size1of3 u-sm-sizeFull` then you would do this:
+
+1. Remove the `Grid-cell` class.
+2. Change `u-sm-sizeFull` to `col-1-1`.
+3. Change `u-md-size1of3` to `col-sm-1-3`.
+4. Change `u-lg-size1of4` to `col-md-1-4`.
+5. Change `u-size1of5` to `col-lg-1-5`.
+
+The end result will be
+
+```css
+col-1-1 col-sm-1-3 col-md-1-4 col-lg-1-5
+```
+
+By convention, we start with the smallest screen size and progress from there.
