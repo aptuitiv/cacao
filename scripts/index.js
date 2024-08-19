@@ -105,6 +105,7 @@ const wrapDirectories = () => {
         'src/grid-column',
         'src/gutter'
     ];
+    fancyLog(chalk.cyan('Wrapping CSS in media queries...'));
 
     // Hold all the promises
     const promises = [];
@@ -113,7 +114,7 @@ const wrapDirectories = () => {
         promises.push(wrapDirectory(dir));
     });
     Promise.all(promises).then(() => {
-        fancyLog(chalk.green(`${logSymbols.success} Directories wrapped in media queries!`));
+        fancyLog(chalk.green(`${logSymbols.success} CSS wrapped in media queries!`));
     });
 }
 
