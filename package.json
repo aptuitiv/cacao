@@ -11,9 +11,13 @@
     "copyright": "Aptuitiv, Inc",
     "bugs": {
         "email": "support@aptuitiv.com"
+    },
+    "files": [
+        "dist"
+    ],
     "type": "module",
     "scripts": {
-        "build": "node scripts/index.js"
+        "build": "node src/build.js"
     },
     "devDependencies": {
         "chalk": "^5.3.0",
