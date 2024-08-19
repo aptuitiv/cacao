@@ -10,16 +10,11 @@ import { basename } from 'path';
 import recursiveReadDir from 'recursive-readdir';
 
 /**
- * Updae the file with the new class names
+ * Update the file with the new class names
  *
  * @param {string} file The path to the file to update
  */
 const updateFile = (file) => {
-    // fancyLog(chalk.magenta('Updating file', chalk.cyan(file)));
-
-    // Media query sizes
-    // const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'];
-
     // Read the file
     let fileContents = fs.readFileSync(file, 'utf8');
     const originalContents = fileContents;
