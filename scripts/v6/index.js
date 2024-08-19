@@ -5,6 +5,7 @@ import fs from 'fs-extra';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+import convertClasses from './convert-classes.js';
 import convertImports from './convert-imports.js';
 
 // Get the directory name of the current module
@@ -18,6 +19,19 @@ const thisPackageJson = fs.readJsonSync(`${__dirname}/package.json`);
 const program = new Command();
 program.description('Convert Cacao CSS versions 4 or 5 to version 6');
 program.version(thisPackageJson.version);
+
+/**
+ * Convert the CSS class names in templates to the Cacao V6 format
+ *
+ * cacao-convert-v6 classes -d src/templates
+ */
+program
+    .command('classes')
+    .description('Convert the CSS class names in templates to V6 format')
+    .requiredOption('-d, --dir <path>', 'The root path for the templates. The path should be relative to the root of the project.')
+    .action(async (args) => {
+        convertClasses(args);
+    });
 
 /**
  * Convert the older imports to the Cacao V6 format

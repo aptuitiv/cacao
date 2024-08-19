@@ -17,3 +17,15 @@ cacao-convert-v6 imports -f src/css/main.css
 ```
 
 You can then build your CSS with the new imports.
+
+You'll also need to update the CSS classes in your template files.
+
+## Update the CSS classes in template files
+
+This will recursively crawl the root directory for your template files and update any Cacao version 4 or 5 classes to the correct version 6 class.
+
+For example, if your templates are in `src/templates` you would run:
+
+```bash
+cacao-convert-v6 imports -d src/templates
+```
