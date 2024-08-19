@@ -12,6 +12,9 @@
     "bugs": {
         "email": "support@aptuitiv.com"
     },
+    "bin": {
+        "cacao-convert-v6": "./scripts/convert-v6.js"
+    },
     "files": [
         "dist",
         "scripts"
@@ -31,5 +34,8 @@
         "stylelint": "^16.8.2",
         "stylelint-config-standard": "^36.0.1",
         "stylelint-order": "^6.0.4"
+    },
+    "dependencies": {
+        "commander": "^12.1.0"
     }
 }
