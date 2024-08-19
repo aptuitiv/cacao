@@ -29,8 +29,8 @@
 @custom-media --m-light (prefers-color-scheme: light);
 @custom-media --m-high-contrast (prefers-contrast: more);
 @custom-media --m-low-contrast (prefers-contrast: less);
-@custom-media --m-invertedColors (inverted-colors: inverted);
-@custom-media --m-forcedColors (forced-colors: active);
+@custom-media --m-inverted-colors (inverted-colors: inverted);
+@custom-media --m-forced-colors (forced-colors: active);
 
 /* Orientation */
 @custom-media --m-portrait (orientation: portrait);
