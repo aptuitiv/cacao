@@ -2,9 +2,14 @@
     Convert the older imports to the Cacao V6 format
 =========================================================================== */
 
+import chalk from 'chalk';
+import fancyLog from 'fancy-log';
 import fs from 'fs-extra';
+import logSymbols from 'log-symbols';
 
 const convertImports = (args) => {
+    fancyLog(chalk.cyan('Converting Cacao imports', args.file));
+
     // Get the file to convert
     const file = args.file;
 
@@ -51,28 +56,7 @@ const convertImports = (args) => {
     fs.writeFileSync(file, fileContents);
 
 
-    // Hold the new file contents
-    // let newFileContents = '';
-
-    // // Loop through the lines
-    // lines.forEach(line => {
-    //     // Check for the import
-    //     if (line.includes('@import')) {
-    //         // Get the file name
-    //         const fileName = line.split('\'')[1];
-
-    //         // Get the new file name
-    //         const newFileName = fileName.replace('cacao', 'cacao-v6');
-
-    //         // Add the new line
-    //         newFileContents += `@import '${newFileName}';\n`;
-    //     } else {
-    //         newFileContents += `${line}\n`;
-    //     }
-    // });
-
-    // // Write the new file
-    // fs.writeFileSync(file, newFileContents);
+    fancyLog(logSymbols.success, chalk.green('Finished converting Cacao imports'));
 }
 
 
