@@ -16,6 +16,48 @@ import stylelint from 'stylelint';
 const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'];
 
 /**
+ * Wrap the CSS in the directory in media queries
+ *
+ * This is used so that we can use Promise.all to wait for all the files to be processed.
+ *
+ * @param {string} dir The directory to process
+ * @returns {Promise<void>}
+ */
+const wrapDirectory = (dir) => {
+    return new Promise((resolve) => {
+        fs.readdirSync(dir).forEach(file => {
+            const srcPath = `${dir}/${file}`;
+            const stats = fs.statSync(srcPath);
+            if (stats.isFile()) {
+                mediaSizes.forEach(size => {
+                    let destRoot = `${dir.replace(/^src/, 'dist')}/${size}`;
+                    fs.ensureDirSync(destRoot);
+                    const destPath = `${destRoot}/${file}`;
+                    fs.readFile(srcPath, (err, css) => {
+                        postcss([
+                            // Wrap the code in a media query
+                            postcssMediaWrap({ media: size }),
+                            // Clean up the code, fix any issues, and do some formatting.
+                            // Stylelint helps to get the spacing and line breaks right.
+                            stylelint({ fix: true })
+                        ])
+                            .process(css, { from: srcPath, to: destPath })
+                            .then(result => {
+                                // Format the code with prettier. This is used in combination with Stylelint to
+                                // properly format the code.
+                                prettier.format(result.css, { parser: 'css', tabWidth: 4 }).then(formatted => {
+                                    fs.writeFile(destPath, formatted, () => true);
+                                    resolve();
+                                });
+                            })
+                    });
+                });
+            }
+        });
+    });
+}
+
+/**
  * Copies directories as-is
  */
 const copyDirectories = () => {
@@ -25,7 +67,10 @@ const copyDirectories = () => {
         'src/aspect',
         'src/display',
         'src/embed',
-        'src/fit'
+        'src/fit',
+        'src/grid',
+        'src/grid-column',
+        'src/gutter'
     ];
     copyDir.forEach(dir => {
         fs.readdirSync(dir).forEach(file => {
@@ -50,40 +95,20 @@ const wrapDirectories = () => {
     const wrapDir = [
         'src/aspect',
         'src/display',
-        'src/fit'
+        'src/fit',
+        'src/grid-column',
+        'src/gutter'
     ];
 
+    // Hold all the promises
+    const promises = [];
+
     wrapDir.forEach(dir => {
-        fs.readdirSync(dir).forEach(file => {
-            const srcPath = `${dir}/${file}`;
-            const stats = fs.statSync(srcPath);
-            if (stats.isFile()) {
-                mediaSizes.forEach(size => {
-                    let destRoot = `${dir.replace(/^src/, 'dist')}/${size}`;
-                    fs.ensureDirSync(destRoot);
-                    const destPath = `${destRoot}/${file}`;
-                    fs.readFile(srcPath, (err, css) => {
-                        postcss([
-                            // Wrap the code in a media query
-                            postcssMediaWrap({ media: size }),
-                            // Clean up the code, fix any issues, and do some formatting.
-                            // Stylelint helps to get the spacing and line breaks right.
-                            stylelint({ fix: true })
-                        ])
-                            .process(css, { from: srcPath, to: destPath })
-                            .then(result => {
-                                // Format the code with prettier. This is used in combination with Stylelint to
-                                // properly format the code.
-                                prettier.format(result.css, { parser: 'css', tabWidth: 4 }).then(formatted => {
-                                    fs.writeFile(destPath, formatted, () => true)
-                                });
-                            })
-                    });
-                });
-            }
-        });
+        promises.push(wrapDirectory(dir));
     });
-    fancyLog(chalk.green(`${logSymbols.success} Directories wrapped in media queries!`));
+    Promise.all(promises).then(() => {
+        fancyLog(chalk.green(`${logSymbols.success} Directories wrapped in media queries!`));
+    });
 }
 
 // Run the functions
