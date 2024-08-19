@@ -2,10 +2,15 @@
     Main entry point for building the files
 =========================================================================== */
 
+import chalk from 'chalk';
+import fancyLog from 'fancy-log';
 import fs from 'fs-extra';
+import logSymbols from 'log-symbols';
 import path from 'path';
 import postcss from 'postcss';
 import postcssMediaWrap from '../postcss/media.js';
+import * as prettier from 'prettier';
+import stylelint from 'stylelint';
 
 // Media query sizes
 const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'];
@@ -14,10 +19,13 @@ const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4
  * Copies directories as-is
  */
 const copyDirectories = () => {
+    fancyLog(chalk.cyan('Copying directories...'));
     // Directories to copy as-is
     const copyDir = [
         'src/aspect',
-        'src/display'
+        'src/display',
+        'src/embed',
+        'src/fit'
     ];
     copyDir.forEach(dir => {
         fs.readdirSync(dir).forEach(file => {
@@ -30,16 +38,19 @@ const copyDirectories = () => {
             }
         });
     });
+    fancyLog(chalk.green(`${logSymbols.success} Directories copied!`));
 }
 
 /**
  * Wrap directories in media queries
  */
 const wrapDirectories = () => {
+    fancyLog(chalk.cyan('Wrapping directories in media queries...'));
     // Directories whose files need to be wrapped in media queries
     const wrapDir = [
         'src/aspect',
-        'src/display'
+        'src/display',
+        'src/fit'
     ];
 
     wrapDir.forEach(dir => {
@@ -52,16 +63,27 @@ const wrapDirectories = () => {
                     fs.ensureDirSync(destRoot);
                     const destPath = `${destRoot}/${file}`;
                     fs.readFile(srcPath, (err, css) => {
-                        postcss([postcssMediaWrap({ media: size })])
+                        postcss([
+                            // Wrap the code in a media query
+                            postcssMediaWrap({ media: size }),
+                            // Clean up the code, fix any issues, and do some formatting.
+                            // Stylelint helps to get the spacing and line breaks right.
+                            stylelint({ fix: true })
+                        ])
                             .process(css, { from: srcPath, to: destPath })
                             .then(result => {
-                                fs.writeFile(destPath, result.css, () => true)
+                                // Format the code with prettier. This is used in combination with Stylelint to
+                                // properly format the code.
+                                prettier.format(result.css, { parser: 'css', tabWidth: 4 }).then(formatted => {
+                                    fs.writeFile(destPath, formatted, () => true)
+                                });
                             })
                     });
                 });
             }
         });
     });
+    fancyLog(chalk.green(`${logSymbols.success} Directories wrapped in media queries!`));
 }
 
 // Run the functions

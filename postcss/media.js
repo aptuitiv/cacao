@@ -23,52 +23,87 @@ const plugin = (options) => {
     return {
         // Set the plugin name
         postcssPlugin: 'postcss-media-wrap',
-        /**
-         * Handle the Rule node in the PostCSS tree
-         *
-         * @param {Rule} rule The rule node
-         * @param {PostCSS} postcss The PostCSS object
-         */
-        Rule(rule, postcss) {
-            if (!rule[processed]) {
-                if (options.media) {
-                    // Copy the rule as a new rule
-                    const newRule = new postcss.Rule({
-                        nodes: rule.nodes,
+
+        // Run this on the root node once.
+        // https://postcss.org/api/#plugin
+        Once(root, postcss) {
+            // If the media option is not set, throw an error
+            if (!options.media) {
+                throw root.error('The media option is required');
+            }
+
+            // Create the media query
+            let media = postcss.atRule({
+                name: 'media',
+                params: `(--m-${options.media})`,
+            });
+
+            let firstComment = null;
+
+            // Walk through each node in the PostCSS tree and process it
+            root.walk(node => {
+                if (node.type === 'rule' && !node[processed]) {
+                    // Only copy the rule if it is a direct child of the root.
+                    // This is to prevent copying rules that are nested inside media queries, which are copied
+                    // when media queries are processed.
+                    if (node.parent === root) {
+                        // Copy the rule as a new rule. We clone it so that the "source" and other necessary attributes are copied.
+                        const newRule = node.clone();
                         // Append the media query size to the selector.
                         // Because a rule could have multiple selectors we need to loop through them.
-                        selectors: rule.selectors.map((selector, index) => {
+                        newRule.selectors = node.selectors.map((selector, index) => {
                             let returnValue = `${selector}-${options.media}`;
                             if (index > 0) {
                                 // Indent the selector so that it looks better inside the media query
                                 returnValue = `\n    ${returnValue}`;
                             }
                             return returnValue;
-                        }),
-                        // The Raws set the whitespace around the rule. https://postcss.org/api/#rule-raws
-                        raws: {
-                            before: rule.raws.before.replace('\n\n', '\n') + '    ',
-                            after: rule.raws.after + '    ',
-                            between: ' ',
-                            semicolon: true,
+                        })
+
+                        // Mark the rule as processed so that we don't try to do this again.
+                        newRule[processed] = true;
+
+                        // Add the rule to the media query
+                        media.append(newRule);
+                    } else {
+                        // This is a rule that is likely nested inside a media query.
+                        // Only update the selelector to include the media query size.
+                        node.selectors = node.selectors.map((selector, index) => {
+                            let returnValue = `${selector}-${options.media}`;
+                            if (index > 0) {
+                                // Indent the selector so that it looks better inside the media query
+                                returnValue = `\n    ${returnValue}`;
+                            }
+                            return returnValue;
+                        });
+                        node[processed] = true;
+                    }
+                } else if (node.type === 'comment') {
+                    if (node.parent === root) {
+                        if (node.prev()) {
+                            // This is not the first thing in the root
+                            // Indent the comment so that it looks better inside the media query
+                            node.raws.before += '    ';
+                            media.append(node);
+                        } else {
+                            // This is the first thing in the root.
+                            // Save it so that it can be added back to the root later.
+                            firstComment = node;
                         }
-                    });
-                    // Mark the rule as processed so that we don't try to do this again.
-                    newRule[processed] = true;
-
-                    // Create the media query
-                    let media = postcss.atRule({
-                        name: 'media',
-                        params: `(--m-${options.media})`,
-                    });
-                    media.append(newRule);
-
-                    // Replace the rule with the media query
-                    rule.replaceWith(media);
-                } else {
-                    rule[processed] = true;
+                    }
+                } else if (node.type === 'atrule') {
+                    // Indent the at-rule so that it looks better inside the media query
+                    node.raws.before += '    ';
+                    media.append(node);
                 }
+
+            });
+
+            root.removeAll();
+            if (firstComment) {
+                root.append(firstComment);
             }
+            root.append(media);
         },
 
         /**

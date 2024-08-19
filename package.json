@@ -16,8 +16,15 @@
         "build": "node scripts/index.js"
     },
     "devDependencies": {
+        "chalk": "^5.3.0",
+        "fancy-log": "^2.0.0",
         "fs-extra": "^11.2.0",
+        "log-symbols": "^6.0.0",
         "postcss": "^8.4.41",
-        "postcss-cli": "^11.0.0"
+        "postcss-cli": "^11.0.0",
+        "prettier": "3.3.3",
+        "stylelint": "^16.8.2",
+        "stylelint-config-standard": "^36.0.1",
+        "stylelint-order": "^6.0.4"
     }
 }
