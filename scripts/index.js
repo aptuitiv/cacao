@@ -20,17 +20,23 @@ const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4
  *
  * This is used so that we can use Promise.all to wait for all the files to be processed.
  *
- * @param {string} dir The directory to process
+ * @param {string|object} dir The directory to process. If an object then it should be {dir: 'path/to/dir', skip: ['file1', 'file2']}
  * @returns {Promise<void>}
  */
 const wrapDirectory = (dir) => {
     return new Promise((resolve) => {
-        fs.readdirSync(dir).forEach(file => {
-            const srcPath = `${dir}/${file}`;
+        let dirPath = dir;
+        let skip = [];
+        if (typeof dir !== 'string') {
+            dirPath = dir.dir;
+            skip = dir.skip;
+        }
+        fs.readdirSync(dirPath).forEach(file => {
+            const srcPath = `${dirPath}/${file}`;
             const stats = fs.statSync(srcPath);
-            if (stats.isFile()) {
+            if (stats.isFile() && !skip.includes(file)) {
                 mediaSizes.forEach(size => {
-                    let destRoot = `${dir.replace(/^src/, 'dist')}/${size}`;
+                    let destRoot = `${dirPath.replace(/^src/, 'dist')}/${size}`;
                     fs.ensureDirSync(destRoot);
                     const destPath = `${destRoot}/${file}`;
                     fs.readFile(srcPath, (err, css) => {
