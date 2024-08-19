@@ -8,7 +8,7 @@ import fs from 'fs-extra';
 import logSymbols from 'log-symbols';
 
 const convertImports = (args) => {
-    fancyLog(chalk.cyan('Converting Cacao imports', args.file));
+    fancyLog(chalk.magenta('Converting Cacao imports', chalk.cyan(args.file)));
 
     // Get the file to convert
     const file = args.file;
