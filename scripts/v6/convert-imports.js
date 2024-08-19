@@ -11,7 +11,7 @@ const convertImports = (args) => {
     fancyLog(chalk.magenta('Converting Cacao imports', chalk.cyan(args.file)));
 
     // Get the file to convert
-    const file = args.file;
+    const { file } = args;
 
     // Read the file
     let fileContents = fs.readFileSync(file, 'utf8');
@@ -41,7 +41,7 @@ const convertImports = (args) => {
     fileContents = fileContents.replaceAll('/xxl/', '/2xl/');
 
     // Fix grid import paths
-    fileContents = fileContents.replace(/\/grid\/(.*)\/col\-(.*).css/g, '/grid-column/$1/col-$2.css');
+    fileContents = fileContents.replace(/\/grid\/(.*)\/col-(.*).css/g, '/grid-column/$1/col-$2.css');
 
     // Remove the "/core/" path
     fileContents = fileContents.replaceAll('/core/', '/');
@@ -55,9 +55,7 @@ const convertImports = (args) => {
     // Write the new file
     fs.writeFileSync(file, fileContents);
 
-
     fancyLog(logSymbols.success, chalk.green('Finished converting Cacao imports'));
-}
-
+};
 
 export default convertImports;

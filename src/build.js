@@ -8,9 +8,9 @@ import fs from 'fs-extra';
 import logSymbols from 'log-symbols';
 import path from 'path';
 import postcss from 'postcss';
-import postcssMediaWrap from '../postcss/media.js';
 import * as prettier from 'prettier';
 import stylelint from 'stylelint';
+import postcssMediaWrap from '../postcss/media.js';
 
 // Media query sizes
 const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'];
@@ -19,7 +19,7 @@ const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4
 const filesToCopy = [
     'base.css',
     'media.css',
-    'reset.css'
+    'reset.css',
 ];
 
 // Directories to copy as-is
@@ -42,7 +42,7 @@ const copyDir = [
     'src/push',
     'src/spacing',
     'src/typography',
-    'src/width'
+    'src/width',
 ];
 
 // Directories whose files need to be wrapped in media queries
@@ -58,8 +58,8 @@ const wrapDir = [
     'src/position',
     { dir: 'src/pull', skip: ['pull.css'] },
     { dir: 'src/push', skip: ['push.css'] },
-    'src/typography', ,
-    'src/width'
+    'src/typography',
+    'src/width',
 ];
 
 /**
@@ -70,45 +70,43 @@ const wrapDir = [
  * @param {string|object} dir The directory to process. If an object then it should be {dir: 'path/to/dir', skip: ['file1', 'file2']}
  * @returns {Promise<void>}
  */
-const wrapDirectory = (dir) => {
-    return new Promise((resolve) => {
-        let dirPath = dir;
-        let skip = [];
-        if (typeof dir !== 'string') {
-            dirPath = dir.dir;
-            skip = dir.skip;
-        }
-        fs.readdirSync(dirPath).forEach(file => {
-            const srcPath = `${dirPath}/${file}`;
-            const stats = fs.statSync(srcPath);
-            if (stats.isFile() && !skip.includes(file)) {
-                mediaSizes.forEach(size => {
-                    let destRoot = `${dirPath.replace(/^src/, 'dist')}/${size}`;
-                    fs.ensureDirSync(destRoot);
-                    const destPath = `${destRoot}/${file}`;
-                    fs.readFile(srcPath, (err, css) => {
-                        postcss([
-                            // Wrap the code in a media query
-                            postcssMediaWrap({ media: size }),
-                            // Clean up the code, fix any issues, and do some formatting.
-                            // Stylelint helps to get the spacing and line breaks right.
-                            stylelint({ fix: true })
-                        ])
-                            .process(css, { from: srcPath, to: destPath })
-                            .then(result => {
-                                // Format the code with prettier. This is used in combination with Stylelint to
-                                // properly format the code.
-                                prettier.format(result.css, { parser: 'css', tabWidth: 4 }).then(formatted => {
-                                    fs.writeFile(destPath, formatted, () => true);
-                                    resolve();
-                                });
-                            })
-                    });
+const wrapDirectory = (dir) => new Promise((resolve) => {
+    let dirPath = dir;
+    let skip = [];
+    if (typeof dir !== 'string') {
+        dirPath = dir.dir;
+        skip = dir.skip;
+    }
+    fs.readdirSync(dirPath).forEach((file) => {
+        const srcPath = `${dirPath}/${file}`;
+        const stats = fs.statSync(srcPath);
+        if (stats.isFile() && !skip.includes(file)) {
+            mediaSizes.forEach((size) => {
+                const destRoot = `${dirPath.replace(/^src/, 'dist')}/${size}`;
+                fs.ensureDirSync(destRoot);
+                const destPath = `${destRoot}/${file}`;
+                fs.readFile(srcPath, (err, css) => {
+                    postcss([
+                        // Wrap the code in a media query
+                        postcssMediaWrap({ media: size }),
+                        // Clean up the code, fix any issues, and do some formatting.
+                        // Stylelint helps to get the spacing and line breaks right.
+                        stylelint({ fix: true }),
+                    ])
+                        .process(css, { from: srcPath, to: destPath })
+                        .then((result) => {
+                            // Format the code with prettier. This is used in combination with Stylelint to
+                            // properly format the code.
+                            prettier.format(result.css, { parser: 'css', tabWidth: 4 }).then((formatted) => {
+                                fs.writeFile(destPath, formatted, () => true);
+                                resolve();
+                            });
+                        });
                 });
-            }
-        });
+            });
+        }
     });
-}
+});
 
 /**
  * Copy specific files from the root src directory to the dist directory
@@ -116,13 +114,13 @@ const wrapDirectory = (dir) => {
 const copyFiles = () => {
     fancyLog(chalk.cyan('Copying files...'));
     fs.ensureDirSync(path.dirname('dist'));
-    filesToCopy.forEach(file => {
+    filesToCopy.forEach((file) => {
         const srcPath = `src/${file}`;
         const destPath = `dist/${file}`;
         fs.copySync(srcPath, destPath);
     });
     fancyLog(chalk.green(`${logSymbols.success} Files copied!`));
-}
+};
 
 /**
  * Copies directories as-is
@@ -130,8 +128,8 @@ const copyFiles = () => {
 const copyDirectories = () => {
     fancyLog(chalk.cyan('Copying directories...'));
 
-    copyDir.forEach(dir => {
-        fs.readdirSync(dir).forEach(file => {
+    copyDir.forEach((dir) => {
+        fs.readdirSync(dir).forEach((file) => {
             const srcPath = `${dir}/${file}`;
             const stats = fs.statSync(srcPath);
             if (stats.isFile()) {
@@ -142,7 +140,7 @@ const copyDirectories = () => {
         });
     });
     fancyLog(chalk.green(`${logSymbols.success} Directories copied!`));
-}
+};
 
 /**
  * Wrap directories in media queries
@@ -153,13 +151,13 @@ const wrapDirectories = () => {
     // Hold all the promises
     const promises = [];
 
-    wrapDir.forEach(dir => {
+    wrapDir.forEach((dir) => {
         promises.push(wrapDirectory(dir));
     });
     Promise.all(promises).then(() => {
         fancyLog(chalk.green(`${logSymbols.success} CSS wrapped in media queries!`));
     });
-}
+};
 
 // Run the functions
 copyFiles();

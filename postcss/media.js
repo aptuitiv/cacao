@@ -4,6 +4,10 @@
     https://postcss.org/docs/writing-a-postcss-plugin
 =========================================================================== */
 
+import { Declaration } from 'postcss';
+
+/* eslint-disable no-param-reassign -- This is a PostCSS plugin, so we need to modify the nodes */
+
 // Symbol to mark nodes that have been processed
 // https://postcss.org/docs/writing-a-postcss-plugin#step-change-nodes
 const processed = Symbol('processed');
@@ -18,7 +22,7 @@ const processed = Symbol('processed');
  * @returns {object} The PostCSS plugin
  */
 const plugin = (options) => {
-    options = options || {};
+    const opts = options || {};
 
     return {
         // Set the plugin name
@@ -28,20 +32,20 @@ const plugin = (options) => {
         // https://postcss.org/api/#plugin
         Once(root, postcss) {
             // If the media option is not set, throw an error
-            if (!options.media) {
+            if (!opts.media) {
                 throw root.error('The media option is required');
             }
 
             // Create the media query
-            let media = postcss.atRule({
+            const media = postcss.atRule({
                 name: 'media',
-                params: `(--m-${options.media})`,
+                params: `(--m-${opts.media})`,
             });
 
             let firstComment = null;
 
             // Walk through each node in the PostCSS tree and process it
-            root.walk(node => {
+            root.walk((node) => {
                 if (node.type === 'rule' && !node[processed]) {
                     // Only copy the rule if it is a direct child of the root.
                     // This is to prevent copying rules that are nested inside media queries, which are copied
@@ -52,13 +56,13 @@ const plugin = (options) => {
                         // Append the media query size to the selector.
                         // Because a rule could have multiple selectors we need to loop through them.
                         newRule.selectors = node.selectors.map((selector, index) => {
-                            let returnValue = `${selector}-${options.media}`;
+                            let returnValue = `${selector}-${opts.media}`;
                             if (index > 0) {
                                 // Indent the selector so that it looks better inside the media query
                                 returnValue = `\n    ${returnValue}`;
                             }
                             return returnValue;
-                        })
+                        });
 
                         // Mark the rule as processed so that we don't try to do this again.
                         newRule[processed] = true;
@@ -69,7 +73,7 @@ const plugin = (options) => {
                         // This is a rule that is likely nested inside a media query.
                         // Only update the selelector to include the media query size.
                         node.selectors = node.selectors.map((selector, index) => {
-                            let returnValue = `${selector}-${options.media}`;
+                            let returnValue = `${selector}-${opts.media}`;
                             if (index > 0) {
                                 // Indent the selector so that it looks better inside the media query
                                 returnValue = `\n    ${returnValue}`;
@@ -113,7 +117,6 @@ const plugin = (options) => {
                     node.raws.before += '    ';
                     media.append(node);
                 }
-
             });
 
             root.removeAll();
@@ -134,7 +137,7 @@ const plugin = (options) => {
                 decl.raws.before += '   ';
                 decl[processed] = true;
             }
-        }
+        },
     };
 };
 
