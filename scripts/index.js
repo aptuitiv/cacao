@@ -15,6 +15,13 @@ import stylelint from 'stylelint';
 // Media query sizes
 const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'];
 
+// Files to copy as-is. These are files that are in the root src directory.
+const filesToCopy = [
+    'base.css',
+    'media.css',
+    'reset.css'
+];
+
 // Directories to copy as-is
 const copyDir = [
     'src/aspect',
@@ -104,6 +111,20 @@ const wrapDirectory = (dir) => {
 }
 
 /**
+ * Copy specific files from the root src directory to the dist directory
+ */
+const copyFiles = () => {
+    fancyLog(chalk.cyan('Copying files...'));
+    fs.ensureDirSync(path.dirname('dist'));
+    filesToCopy.forEach(file => {
+        const srcPath = `src/${file}`;
+        const destPath = `dist/${file}`;
+        fs.copySync(srcPath, destPath);
+    });
+    fancyLog(chalk.green(`${logSymbols.success} Files copied!`));
+}
+
+/**
  * Copies directories as-is
  */
 const copyDirectories = () => {
@@ -141,5 +162,6 @@ const wrapDirectories = () => {
 }
 
 // Run the functions
+copyFiles();
 copyDirectories();
 wrapDirectories();
