@@ -1,0 +1,25 @@
+/* =========================================================================== *\
+   Positioning utilities
+\* =========================================================================== */
+
+@media (--m-lg) {
+    .absolute-lg {
+        position: absolute;
+    }
+
+    .fixed-lg {
+        position: fixed;
+    }
+
+    .relative-lg {
+        position: relative;
+    }
+
+    .static-lg {
+        position: static;
+    }
+
+    .sticky-lg {
+        position: sticky;
+    }
+}

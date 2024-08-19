@@ -1,0 +1,17 @@
+/* =========================================================================== *\
+    Alignment utilities
+\* =========================================================================== */
+
+@media (--m-5xl) {
+    .align-start-5xl {
+        align-items: flex-start;
+    }
+
+    .align-center-5xl {
+        align-items: center;
+    }
+
+    .align-end-5xl {
+        align-items: flex-end;
+    }
+}

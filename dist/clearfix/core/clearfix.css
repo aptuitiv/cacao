@@ -1,0 +1,13 @@
+/* =========================================================================== *\
+    "clear fix" for floating elements to force the element to self-clear its children
+\* =========================================================================== */
+
+.clearfix::before,
+.clearfix::after {
+    content: ' ' !important;
+    display: table !important;
+}
+
+.clearfix::after {
+    clear: both !important;
+}

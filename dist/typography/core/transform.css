@@ -1,0 +1,15 @@
+/* =========================================================================== *\
+    Text transform utilities
+\* =========================================================================== */
+
+.text-lower {
+    text-transform: lowercase;
+}
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.text-capital {
+    text-transform: capitalize;
+}

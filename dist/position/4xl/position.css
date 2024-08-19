@@ -1,0 +1,25 @@
+/* =========================================================================== *\
+   Positioning utilities
+\* =========================================================================== */
+
+@media (--m-4xl) {
+    .absolute-4xl {
+        position: absolute;
+    }
+
+    .fixed-4xl {
+        position: fixed;
+    }
+
+    .relative-4xl {
+        position: relative;
+    }
+
+    .static-4xl {
+        position: static;
+    }
+
+    .sticky-4xl {
+        position: sticky;
+    }
+}

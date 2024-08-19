@@ -1,0 +1,29 @@
+/* =========================================================================== *\
+    End margin utilities
+\* =========================================================================== */
+
+@media (--m-sm) {
+    .me-0-sm {
+        margin-right: 0;
+    }
+
+    .me-1-sm {
+        margin-right: 10px;
+    }
+
+    .me-2-sm {
+        margin-right: 20px;
+    }
+
+    .me-3-sm {
+        margin-right: 30px;
+    }
+
+    .me-4-sm {
+        margin-right: 40px;
+    }
+
+    .me-5-sm {
+        margin-right: 50px;
+    }
+}

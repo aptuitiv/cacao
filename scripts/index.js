@@ -15,6 +15,46 @@ import stylelint from 'stylelint';
 // Media query sizes
 const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'];
 
+// Directories to copy as-is
+const copyDir = [
+    'src/aspect',
+    'src/clearfix',
+    'src/display',
+    'src/embed',
+    'src/fit',
+    'src/grid',
+    'src/grid-column',
+    'src/gutter',
+    'src/height',
+    'src/image',
+    'src/links',
+    'src/margin',
+    'src/padding',
+    'src/position',
+    'src/pull',
+    'src/push',
+    'src/spacing',
+    'src/typography',
+    'src/width'
+];
+
+// Directories whose files need to be wrapped in media queries
+const wrapDir = [
+    'src/aspect',
+    'src/display',
+    'src/fit',
+    'src/grid-column',
+    'src/gutter',
+    'src/height',
+    'src/margin',
+    'src/padding',
+    'src/position',
+    { dir: 'src/pull', skip: ['pull.css'] },
+    { dir: 'src/push', skip: ['push.css'] },
+    'src/typography', ,
+    'src/width'
+];
+
 /**
  * Wrap the CSS in the directory in media queries
  *
@@ -68,16 +108,7 @@ const wrapDirectory = (dir) => {
  */
 const copyDirectories = () => {
     fancyLog(chalk.cyan('Copying directories...'));
-    // Directories to copy as-is
-    const copyDir = [
-        'src/aspect',
-        'src/display',
-        'src/embed',
-        'src/fit',
-        'src/grid',
-        'src/grid-column',
-        'src/gutter'
-    ];
+
     copyDir.forEach(dir => {
         fs.readdirSync(dir).forEach(file => {
             const srcPath = `${dir}/${file}`;
@@ -96,15 +127,6 @@ const copyDirectories = () => {
  * Wrap directories in media queries
  */
 const wrapDirectories = () => {
-    fancyLog(chalk.cyan('Wrapping directories in media queries...'));
-    // Directories whose files need to be wrapped in media queries
-    const wrapDir = [
-        'src/aspect',
-        'src/display',
-        'src/fit',
-        'src/grid-column',
-        'src/gutter'
-    ];
     fancyLog(chalk.cyan('Wrapping CSS in media queries...'));
 
     // Hold all the promises

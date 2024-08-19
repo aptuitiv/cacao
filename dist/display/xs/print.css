@@ -1,0 +1,21 @@
+/* ===========================================================================
+    Print styles - show or hide content when printing
+=========================================================================== */
+@media (--m-xs) {
+    /* Hide content when not printing     */
+    .print-show-xs {
+        display: none;
+    }
+
+    @media print {
+        /* Hide content when printing */
+        .print-hide-xs {
+            display: none m !important;
+        }
+
+        /* Show content only when printing */
+        .print-show-xs {
+            display: block !important;
+        }
+    }
+}

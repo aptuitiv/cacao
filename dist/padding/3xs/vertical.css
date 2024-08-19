@@ -1,0 +1,35 @@
+/* =========================================================================== *\
+    Vertical padding utilities
+\* =========================================================================== */
+
+@media (--m-3xs) {
+    .py-0-3xs {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .py-1-3xs {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .py-2-3xs {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .py-3-3xs {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    .py-4-3xs {
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+
+    .py-5-3xs {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+}

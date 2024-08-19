@@ -1,0 +1,21 @@
+/* =========================================================================== *\
+    Text align utilities
+\* =========================================================================== */
+
+@media (--m-md) {
+    .text-center-md {
+        text-align: center;
+    }
+
+    .text-start-md {
+        text-align: start;
+    }
+
+    .text-end-md {
+        text-align: end;
+    }
+
+    .text-justify-md {
+        text-align: justify;
+    }
+}

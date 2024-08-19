@@ -1,0 +1,29 @@
+/* =========================================================================== *\
+    Start margin utilities
+\* =========================================================================== */
+
+@media (--m-2xs) {
+    .ms-0-2xs {
+        margin-left: 0;
+    }
+
+    .ms-1-2xs {
+        margin-left: 10px;
+    }
+
+    .ms-2-2xs {
+        margin-left: 20px;
+    }
+
+    .ms-3-2xs {
+        margin-left: 30px;
+    }
+
+    .ms-4-2xs {
+        margin-left: 40px;
+    }
+
+    .ms-5-2xs {
+        margin-left: 50px;
+    }
+}

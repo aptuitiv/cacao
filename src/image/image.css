@@ -1,0 +1,37 @@
+/* =========================================================================== *\
+    Image utilities
+\* =========================================================================== */
+
+.image-left,
+.image-right {
+    display: block;
+    height: auto;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+@media (--m-sm) {
+    .image-left,
+    .image-right {
+        display: inline;
+        max-width: 50%;
+        width: unset;
+    }
+
+    .image-left {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .image-right {
+        float: right;
+        margin-left: 20px;
+    }
+}
+
+@media (--m-md) {
+    .image-left,
+    .image-right {
+        max-width: 40%;
+    }
+}

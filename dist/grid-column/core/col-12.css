@@ -1,0 +1,51 @@
+/* =========================================================================== *\
+    Grid 12's
+\* =========================================================================== */
+
+.col-1-12 {
+    width: calc(100% / 12 - var(--gap) - var(--gap));
+}
+
+.col-2-12 {
+    width: calc(100% / 12 * 2 - var(--gap));
+}
+
+.col-3-12 {
+    width: calc(25% - var(--gap));
+}
+
+.col-4-12 {
+    width: calc(100% / 12 * 4 - var(--gap));
+}
+
+.col-5-12 {
+    width: calc(100% / 12 * 5 - var(--gap));
+}
+
+.col-6-12 {
+    width: calc(50% - var(--gap));
+}
+
+.col-7-12 {
+    width: calc(100% / 12 * 7 - var(--gap));
+}
+
+.col-8-12 {
+    width: calc(100% / 12 * 8 - var(--gap));
+}
+
+.col-9-12 {
+    width: calc(75% - var(--gap));
+}
+
+.col-10-12 {
+    width: calc(100% / 12 * 10 - var(--gap));
+}
+
+.col-11-12 {
+    width: calc(100% / 12 * 11 - var(--gap));
+}
+
+.col-12-12 {
+    width: calc(100% - var(--gap));
+}

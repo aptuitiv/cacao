@@ -1,0 +1,8 @@
+/* ===========================================================================
+    General styles for the push component.
+    This must be included when any of the other push files are included.
+=========================================================================== */
+
+[class*='push-'] {
+    position: relative;
+}
