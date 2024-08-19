@@ -13,7 +13,8 @@
         "email": "support@aptuitiv.com"
     },
     "files": [
-        "dist"
+        "dist",
+        "scripts"
     ],
     "type": "module",
     "scripts": {
