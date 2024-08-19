@@ -84,6 +84,23 @@ const plugin = (options) => {
                             // This is not the first thing in the root
                             // Indent the comment so that it looks better inside the media query
                             node.raws.before += '    ';
+                            // This gets the last line of a multi-line comment to indent properly. This is the "*/" part.
+                            node.raws.right += '    ';
+                            // Indent any multi-line comments so that they look better inside the media query.
+                            // The "text" attributes holds the part of the comment that is between "/*" and "*/".
+                            let commentLines = node.text.split('\n');
+                            if (commentLines.length > 1) {
+                                commentLines = commentLines.map((line, index) => {
+                                    // The first "line" is the "*" right after "/*"
+                                    if (index > 0) {
+                                        // Indent the line of the comment
+                                        return `    ${line}`;
+                                    }
+                                    return line;
+                                });
+                                // Update the text attribute with the indented comment
+                                node.text = commentLines.join('\n');
+                            }
                             media.append(node);
                         } else {
                             // This is the first thing in the root.
