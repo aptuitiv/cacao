@@ -135,7 +135,7 @@ const copyDirectories = () => {
             const srcPath = `${dir}/${file}`;
             const stats = fs.statSync(srcPath);
             if (stats.isFile()) {
-                const destPath = `${dir.replace(/^src/, 'dist')}/core/${file}`;
+                const destPath = `${dir.replace(/^src/, 'dist')}/${file}`;
                 fs.ensureDirSync(path.dirname(destPath));
                 fs.copySync(srcPath, destPath);
             }
