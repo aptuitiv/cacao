@@ -63,46 +63,58 @@
  * We use pixels instead of ems because that is the convention and it helps prevent a Safari bug with how they calculate ems (i.e. they use font-size + zoom level)
  * https://cgamesplay.com/post/2023/05/19/stop-using-em-in-media-queries/
  */
+
+/* 3xs */
 @custom-media --m-3xs (width >= 240px);
 @custom-media --m-3xs-below (width < 240px);
-@custom-media --m-3xs-only (0px <= width < 240px);
+@custom-media --m-3xs-only (0 <= width < 240px);
 
+/* 2xs */
 @custom-media --m-2xs (width >= 360px);
 @custom-media --m-2xs-below (width < 300px);
-@custom-media --m-2xs-only (0px <= width < 300px);
+@custom-media --m-2xs-only (0 <= width < 300px);
 
+/* xs */
 @custom-media --m-xs (width >= 420px);
 @custom-media --m-xs-below (width < 420px);
 @custom-media --m-xs-only (300px <= width < 420px);
 
+/* sm */
 @custom-media --m-sm (width >= 576px);
 @custom-media --m-sm-below (width < 576px);
 @custom-media --m-sm-only (360px <= width < 576px);
 
+/* md */
 @custom-media --m-md (width >= 768px);
 @custom-media --m-md-below (width < 768px);
 @custom-media --m-md-only (576px <= width < 768px);
 
+/* lg */
 @custom-media --m-lg (width >= 1024px);
 @custom-media --m-lg-below (width < 1024px);
 @custom-media --m-lg-only (768px <= width < 1024px);
 
+/* xl */
 @custom-media --m-xl (width >= 1280px);
 @custom-media --m-xl-below (width < 1280px);
 @custom-media --m-xl-only (1024px <= width < 1280px);
 
+/* 2xl */
 @custom-media --m-2xl (width >= 1440px);
 @custom-media --m-2xl-only (1280px <= width < 1440px);
 @custom-media --m-2xl-below (width < 1440px);
 
+/* 3xl */
 @custom-media --m-3xl (width >= 1600px);
 @custom-media --m-3xl-only (1440px <= width < 1600px);
 @custom-media --m-3xl-below (width < 1600px);
 
+/* 4xl */
 @custom-media --m-4xl (width >= 1920px);
 @custom-media --m-4xl-only (1600px <= width < 1920px);
 @custom-media --m-4xl-below (width < 1920px);
 
+/* 5xl */
 @custom-media --m-5xl (width >= 2560px);
 @custom-media --m-5xl-only (1920px <= width < 2560px);
 @custom-media --m-5xl-below (width < 2560px);
