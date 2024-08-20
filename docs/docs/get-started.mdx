@@ -1,9 +1,10 @@
 ---
+title: Getting Started
 ---
 
 <!-- markdownlint-disable -->
 import CodeBlock from '@theme/CodeBlock';
-import MyComponentSource from '!!raw-loader!../../dist/imports.css';
+import ImportsSource from '!!raw-loader!../cacao/imports.css';
 
 
 # Getting Started
@@ -22,12 +23,39 @@ We recommend that you import the Cacao modules after your site styles. This allo
 
 For example, the `.hidden` may need to override the `display` style of a component. It can't do that unless it's included after your site styles.
 
-Below is the full list of imports that you can use in your project.
-
 It's strongly recommended that you always include these imports:
 
 - `@import 'cacao-css/dist/media.css';`
 - `@import 'cacao-css/dist/reset.css';`
 - `@import 'cacao-css/dist/base.css';`
 
-<CodeBlock language="css">{MyComponentSource}</CodeBlock>;
+[See Import Cacao CSS](import) for the full list of imports available.
+
+## Build your CSS
+
+You will need to use [PostCSS](https://www.npmjs.com/package/postcss) to compile your CSS. You will need the following PostCSS plugins:
+
+- [postcss-import](https://www.npmjs.com/package/postcss-import) - To handle importing the CSS files..
+- [postcss-custom-media](https://www.npmjs.com/package/postcss-custom-media) - This is to support the `@custom-media` tags for the media query variables.
+
+If you haven't done so already, you can install them with:
+
+```bash
+npm install postcss postcss-import postcss-custom-media
+```
+
+## Use the classes in your HTML
+
+As an example, here is a grid
+
+```html
+<div class="grid g-3">
+    <div class="col-1-1 col-1-2-md">
+        Column one content here. I'll be a 50/50 grid on medium or larger screens and one column on small screens.
+    </div>
+    <div class="col-1-1 col-1-2-md">
+        Column two content here. <a href="/some-url" class="link-subtle">A subtle link</a>
+        <p class="mt-5">I'm a paragraphy with a large top margin.</p>
+    </div>
+</div>
+```

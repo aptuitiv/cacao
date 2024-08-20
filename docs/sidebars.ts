@@ -21,6 +21,11 @@ const sidebars: SidebarsConfig = {
             id: 'get-started',
             label: 'Getting Started',
         },
+        {
+            type: 'doc',
+            id: 'import',
+            label: 'Import Cacao CSS',
+        },
     ],
 
     // But you can create a sidebar manually

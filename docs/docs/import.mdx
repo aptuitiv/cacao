@@ -1,0 +1,23 @@
+---
+---
+
+<!-- markdownlint-disable -->
+import CodeBlock from '@theme/CodeBlock';
+import ImportsSource from '!!raw-loader!../cacao/imports.css';
+
+
+# Import Cacao CSS into your project
+
+We recommend that you import the Cacao modules after your site styles. This allows the Cacao styles to override site styles if necessary.
+
+For example, the `.hidden` may need to override the `display` style of a component. It can't do that unless it's included after your site styles.
+
+It's strongly recommended that you always include these imports:
+
+- `@import 'cacao-css/dist/media.css';`
+- `@import 'cacao-css/dist/reset.css';`
+- `@import 'cacao-css/dist/base.css';`
+
+Below is the full list of imports that you can use in your project.
+
+<CodeBlock language="css" title="imports.css">{ImportsSource}</CodeBlock>;
