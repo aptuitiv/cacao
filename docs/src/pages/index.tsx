@@ -35,6 +35,23 @@ export default function Home(): JSX.Element {
         <Layout title={siteConfig.title} description={siteConfig.tagline}>
             <HomepageHeader />
             <main>
+                <div className="container">
+                    <div className="margin-horiz--xl margin-vert--xl">
+                        <p>
+                            Cacao is a utility class CSS library. It
+                            intentionally does not provide styles for specific
+                            components. Rather, it has utility classes for doing
+                            common things like grids, setting heights and
+                            widths, and gutters.
+                        </p>
+
+                        <p>
+                            (The `embed` style is the exception to that rule,
+                            but it only provides the minimal CSS to responsively
+                            embed an iframe.)
+                        </p>
+                    </div>
+                </div>
                 <HomepageFeatures />
                 <div className="container">
                     <div className="row">
