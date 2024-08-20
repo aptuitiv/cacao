@@ -8,7 +8,7 @@ import fs from 'fs-extra';
 import logSymbols from 'log-symbols';
 import { basename } from 'path';
 
-import { distDirectory, mediaSizes } from './config.js';
+import { distDirectory, mediaSizes, rootDirectory } from './config.js';
 
 // Map the module names to the directory names
 const moduleMap = {
@@ -132,6 +132,10 @@ const buildDirectoryImports = (directory, moduleName, isSubDirectory = false) =>
  */
 const buildImports = () => {
     fancyLog(chalk.cyan('Setting up the import.css file...'));
+
+    const docsDirectory = `${rootDirectory}/docs/cacao`;
+    fs.ensureDirSync(docsDirectory);
+
     let fileContents = fileHeader;
     fileContents += coreImports;
 
@@ -162,6 +166,7 @@ const buildImports = () => {
     });
 
     fs.writeFileSync(`${distDirectory}/imports.css`, fileContents);
+    fs.writeFileSync(`${docsDirectory}/imports.css`, fileContents);
     fancyLog(chalk.green(`${logSymbols.success} Done setting up the import.css file`));
 };
 

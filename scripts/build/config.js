@@ -6,7 +6,7 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 // The root directory for the project
-const rootDirectory = dirname(dirname(dirname(fileURLToPath(import.meta.url))));
+export const rootDirectory = dirname(dirname(dirname(fileURLToPath(import.meta.url))));
 
 // The directory path where the files are built
 export const distDirectory = `${rootDirectory}/dist`;
