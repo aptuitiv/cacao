@@ -38,6 +38,11 @@ const sidebars: SidebarsConfig = {
                     id: 'migration/from-v3',
                     label: 'From version 3',
                 },
+                {
+                    type: 'doc',
+                    id: 'migration/from-v4-or-v5-to-v6',
+                    label: 'From version 4 or 5 to version 6',
+                },
             ],
         },
         {
