@@ -13,8 +13,6 @@
 
 ### Version 6.0.0 upgrade scripts
 
-See the [scripts README](scripts/v6/README.md) for more information.
-
 Run the following commands in the base directory of your project. Replace the file and directory paths if necessary.
 
 ```bash
