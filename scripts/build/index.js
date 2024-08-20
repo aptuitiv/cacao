@@ -10,7 +10,7 @@ import path from 'path';
 import postcss from 'postcss';
 import * as prettier from 'prettier';
 import stylelint from 'stylelint';
-import postcssMediaWrap from '../postcss/media.js';
+import postcssMediaWrap from '../../postcss/media.js';
 
 // Media query sizes
 const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'];

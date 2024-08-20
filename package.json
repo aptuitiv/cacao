@@ -21,7 +21,7 @@
     ],
     "type": "module",
     "scripts": {
-        "build": "node src/build.js",
+        "build": "node scripts/build/index.js",
         "eslint": "eslint --fix .",
         "watch": "esw -w --color --fix ."
     },
