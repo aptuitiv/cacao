@@ -27,5 +27,13 @@ This will recursively crawl the root directory for your template files and updat
 For example, if your templates are in `src/templates` you would run:
 
 ```bash
-cacao-convert-v6 imports -d src/templates
+cacao-convert-v6 classes -d src/templates
+```
+
+## Update the breakpoint media queries
+
+The custom variables for the media query breakpoints changed. If your CSS is in `src/css` then you can run this:
+
+```bash
+cacao-convert-v6 breakpoints -d src/css
 ```
