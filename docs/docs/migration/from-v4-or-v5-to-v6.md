@@ -9,7 +9,7 @@ If your website is currently running Cacao version 4 or 5 and you're upgrading t
 Do not run these scripts if the website is currently running Cacao version 3. See [Migrating from version 3](from-v3) for more information.
 :::
 
-Some of the class names changed and the import paths changed.
+Some of the class names changed and the import paths changed. [See the changelog for more information](/changelog#600-august-19-2024).
 
 Run the following commands in the base directory of your project. Replace the file and directory paths if necessary.
 
