@@ -26,6 +26,40 @@ const sidebars: SidebarsConfig = {
             id: 'import',
             label: 'Import Cacao CSS',
         },
+        {
+            type: 'category',
+            label: 'Migrations',
+            link: {
+                type: 'generated-index',
+            },
+            items: [
+                {
+                    type: 'doc',
+                    id: 'migration/from-v3',
+                    label: 'From version 3',
+                },
+            ],
+        },
+        {
+            type: 'category',
+            label: 'Development',
+            link: {
+                type: 'generated-index',
+            },
+            items: [
+                {
+                    type: 'doc',
+                    id: 'development/index',
+                    label: 'Overview',
+                },
+                {
+                    type: 'doc',
+                    id: 'development/local',
+                    label: 'Local development',
+                },
+            ],
+        },
+        'changelog',
     ],
 
     // But you can create a sidebar manually

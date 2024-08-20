@@ -1,27 +1,37 @@
 # Migrating from version 3
 
-Migrating from version 3 to version 4 or 5 is a big change. We recommend that you stage the website somewhere becasue the update is disruptive until it's done.
-
-**Note:** \*\* **= option.** **Ex:** **\`**mt-\*\*\*`→`mt-2\`.
+Migrating from version 3 to a more recent version is a big change. We recommend that you stage the website somewhere becasue the update can be disruptive until it's done.
 
 ## Number System
 
-The number system used throughout most of v3 is copied over to v4. For example: `mt-1` is equivalent to `margin-top: 10px;`.
+The number system used throughout most of v3 is copied over to v4 and higher. For example: `mt-1` is equivalent to `margin-top: 10px;`.
 
 ## Breakpoints
 
 Breakpoints have been updated to be mobile-first. Additionally, the actual breakpoint values have been changed to be more in line with other frameworks.
 
-These breakpoints are [inspired by Pure](https://purecss.io/grids/#:~:text=%3C/div%3E-,Default%20Media%20Queries,-When%20using%20Responsive) . We are moving to a mobile-first system. Because of the use of `em` , these will scale with browser zoom and settings.
+These breakpoints are inspired by:
 
-1em = 16px
+- [Pure](https://purecss.io/grids/#:~:text=%3C/div%3E-,Default%20Media%20Queries,-When%20using%20Responsive)
+- [Bootstrap](https://getbootstrap.com/docs/5.3/layout/breakpoints/#available-breakpoints)
+- [Open Props](https://open-props.style/#media-queries)
+- [Worldwide mobile stats](https://gs.statcounter.com/screen-resolution-stats/mobile/worldwide)
+- [Common screen resolutions](https://www.browserstack.com/guide/common-screen-resolutions)
+- And our own usage in building websites
 
-| Key  | Breakpoint | Screen   |
-| ---- | ---------- | -------- |
-| `sm` | > `36em`   | `576px`  |
-| `md` | > `48em`   | `768px`  |
-| `lg` | > `64em`   | `1024px` |
-| `xl` | > `80em`   | `1280px` |
+| Key   | Screen width |
+| ----- | ---------- |
+| 3xs   | >= 240px   |
+| 2xs   | >= 360px   |
+| xs    | >= 420px   |
+| sm    | >= 576px   |
+| md    | >= 768px   |
+| lg    | >= 1024px  |
+| xl    | >= 1280px  |
+| 2xl   | >= 1440px  |
+| 3xl   | >= 1600px  |
+| 4xl   | >= 1920px  |
+| 5xl   | >= 2560px  |
 
 ## Updated Classes
 
