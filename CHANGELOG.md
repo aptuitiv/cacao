@@ -1,5 +1,28 @@
 # Changelog
 
+## 6.0.0 (August 19, 2024)
+
+- Added font-style classes.
+- Added height classes.
+- Removed the `size` classes as there is now `height` and `width` classes.
+- **Breaking change**: Renamed the media queries. Also renamed the `config.css` file to `media.css`. See `media.css` for the new media queries.
+- Added additional media query variables based on [Open Props](https://open-props.style/#media-queries) and additional size media query variables.
+- Added a build process for the CSS files.
+- **Breaking change**: The imports in projects now use the `dist` folder. Added support for importing with the project name. Instead of `../../node_modules/cacao/dist/media.css`, the import can now be `cacao-css/dist/media.css`.
+- Added scripts to help migrate to version 6.
+
+### Version 6.0.0 upgrade scripts
+
+See the [scripts README](scripts/v6/README.md) for more information.
+
+Run the following commands in the base directory of your project. Replace the file and directory paths if necessary.
+
+```bash
+cacao-convert-v6 breakpoints -d src/css
+cacao-convert-v6 classes -d src/templates
+cacao-convert-v6 imports -f src/css/main.css
+```
+
 ## 5.5.0 (August 14, 2024)
 
 - Fixed the vertical gutter styling to only affect the row-gap. Previously it was setting the `—gap` variable. This would affect the margin on an element if it also used the “grid” class because that used `—gap` to set the margin. That was not supposed to happen.
