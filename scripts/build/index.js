@@ -11,6 +11,9 @@ copyFiles()
     .then(() => {
         wrapInMediaQueries()
             .then(() => {
-                buildImports();
+                // Set a delay because there is sometimes a brief delay in the file system getting written to
+                setTimeout(() => {
+                    buildImports();
+                }, 500);
             });
     });
