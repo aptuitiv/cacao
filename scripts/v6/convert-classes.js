@@ -47,6 +47,9 @@ const updateFile = (file) => {
     fileContents = fileContents.replace(/mt-([a-z]+)-(\d+)/g, 'mt-$2-$1');
     fileContents = fileContents.replace(/my-([a-z]+)-(\d+)/g, 'my-$2-$1');
 
+    // Convert order classes
+    fileContents = fileContents.replace(/order-([a-z]+)-(\d+)/g, 'order-$2-$1');
+
     // Convert padding classes
     fileContents = fileContents.replace(/p-([a-z]+)-(\d+)/g, 'p-$2-$1');
     fileContents = fileContents.replace(/pb-([a-z]+)-(\d+)/g, 'pb-$2-$1');
