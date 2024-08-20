@@ -8,7 +8,6 @@ import fs from 'fs-extra';
 import logSymbols from 'log-symbols';
 import { basename } from 'path';
 
-import { dir } from 'console';
 import { distDirectory, mediaSizes } from './config.js';
 
 // Map the module names to the directory names
@@ -118,6 +117,7 @@ const buildDirectoryImports = (directory, moduleName, isSubDirectory = false) =>
         }
     });
 
+    // Add an extra line if there are files in the directory
     if (fileContents.length > 0) {
         fileContents += '\n';
         if (!isSubDirectory && Object.keys(directories).length === 0) {
@@ -127,6 +127,9 @@ const buildDirectoryImports = (directory, moduleName, isSubDirectory = false) =>
     return fileContents;
 };
 
+/**
+ * Build the imports for the Cacao CSS files
+ */
 const buildImports = () => {
     fancyLog(chalk.cyan('Setting up the import.css file...'));
     let fileContents = fileHeader;
