@@ -7,11 +7,10 @@ import buildImports from './imports.js';
 import wrapInMediaQueries from './media-query.js';
 
 // Run the functions
-buildImports();
-// copyFiles()
-//     .then(() => {
-//         wrapInMediaQueries()
-//             .then(() => {
-//                 buildImports();
-//             });
-//     });
+copyFiles()
+    .then(() => {
+        wrapInMediaQueries()
+            .then(() => {
+                buildImports();
+            });
+    });
