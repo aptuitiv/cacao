@@ -1,41 +1,33 @@
-# Website
+# @aptuitiv/gmaps Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus](https://docusaurus.io/).
 
-### Installation
+View the documentation at [aptuitiv.github.io/cacao/](https://aptuitiv.github.io/cacao/);
 
-```
-$ yarn
-```
+## Local Development
 
-### Local Development
+Run the local development server and watch for file changes:
 
-```
-$ yarn start
+```bash
+npm run start
 ```
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-### Build
+## Deploy
 
-```
-$ yarn build
+We use GitHub actions to build the documentation site. Simply push the `develop` branch to build the site.
+
+## Build
+
+> NOTE: We use GitHub actions to build the documentation site. You only need to run `build` if you want to test a build.
+
+When you're ready to push the changes to GitHub to update the documentation site run
+
+```bash
+npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Then use git to push the changes to GitHub and then the [GitHub action](https://github.com/aptuitiv/gmaps-docs/actions) will build the documentation pages.

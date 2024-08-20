@@ -8,3 +8,7 @@ package-lock.json
 
 # Ignore HTML files. Specifically template html files
 *.html
+
+# Ignore mdx files
+# https://docusaurus.io/docs/markdown-features/react
+*.mdx
