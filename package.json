@@ -17,7 +17,7 @@
     },
     "files": [
         "dist",
-        "scripts"
+        "scripts/v6"
     ],
     "type": "module",
     "scripts": {
