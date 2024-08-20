@@ -1,3 +1,5 @@
+# Based on the Github Actions on https://docusaurus.io/docs/deployment#triggering-deployment-with-github-actions
+
 name: Deploy to GitHub Pages with Docusaurus
 
 on:
