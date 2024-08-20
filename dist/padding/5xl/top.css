@@ -1,0 +1,29 @@
+/* =========================================================================== *\
+    Top padding utilities
+\* =========================================================================== */
+
+@media (--m-5xl) {
+    .pt-0-5xl {
+        padding-top: 0;
+    }
+
+    .pt-1-5xl {
+        padding-top: 10px;
+    }
+
+    .pt-2-5xl {
+        padding-top: 20px;
+    }
+
+    .pt-3-5xl {
+        padding-top: 30px;
+    }
+
+    .pt-4-5xl {
+        padding-top: 40px;
+    }
+
+    .pt-5-5xl {
+        padding-top: 50px;
+    }
+}

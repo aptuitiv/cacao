@@ -1,0 +1,25 @@
+/* =========================================================================== *\
+   Positioning utilities
+\* =========================================================================== */
+
+@media (--m-sm) {
+    .absolute-sm {
+        position: absolute;
+    }
+
+    .fixed-sm {
+        position: fixed;
+    }
+
+    .relative-sm {
+        position: relative;
+    }
+
+    .static-sm {
+        position: static;
+    }
+
+    .sticky-sm {
+        position: sticky;
+    }
+}

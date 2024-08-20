@@ -1,0 +1,25 @@
+/* =========================================================================== *\
+   Positioning utilities
+\* =========================================================================== */
+
+@media (--m-xs) {
+    .absolute-xs {
+        position: absolute;
+    }
+
+    .fixed-xs {
+        position: fixed;
+    }
+
+    .relative-xs {
+        position: relative;
+    }
+
+    .static-xs {
+        position: static;
+    }
+
+    .sticky-xs {
+        position: sticky;
+    }
+}

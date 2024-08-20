@@ -1,0 +1,35 @@
+/* =========================================================================== *\
+    Horizontal padding utilities
+\* =========================================================================== */
+
+@media (--m-xs) {
+    .px-0-xs {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .px-1-xs {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .px-2-xs {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .px-3-xs {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .px-4-xs {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .px-5-xs {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}

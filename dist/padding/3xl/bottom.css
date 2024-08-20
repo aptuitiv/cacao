@@ -1,0 +1,29 @@
+/* =========================================================================== *\
+    Bottom padding utilities
+\* =========================================================================== */
+
+@media (--m-3xl) {
+    .pb-0-3xl {
+        padding-bottom: 0;
+    }
+
+    .pb-1-3xl {
+        padding-bottom: 10px;
+    }
+
+    .pb-2-3xl {
+        padding-bottom: 20px;
+    }
+
+    .pb-3-3xl {
+        padding-bottom: 30px;
+    }
+
+    .pb-4-3xl {
+        padding-bottom: 40px;
+    }
+
+    .pb-5-3xl {
+        padding-bottom: 50px;
+    }
+}

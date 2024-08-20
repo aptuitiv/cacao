@@ -1,0 +1,35 @@
+/* =========================================================================== *\
+    Vertical margin utilities
+\* =========================================================================== */
+
+@media (--m-sm) {
+    .my-0-sm {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .my-1-sm {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .my-2-sm {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .my-3-sm {
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .my-4-sm {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    .my-5-sm {
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+}

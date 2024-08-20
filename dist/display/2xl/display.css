@@ -1,0 +1,39 @@
+/* =========================================================================== *\
+    Display utilities
+\* =========================================================================== */
+
+@media (--m-2xl) {
+    .flex-2xl {
+        display: flex;
+    }
+
+    .inline-flex-2xl {
+        display: inline-flex;
+    }
+
+    .block-2xl {
+        display: block;
+    }
+
+    .inline-2xl {
+        display: inline;
+    }
+
+    .inline-block-2xl {
+        display: inline-block;
+    }
+
+    .hidden-2xl {
+        display: none;
+    }
+
+    .visually-hidden-2xl {
+        border: 0 !important;
+        clip: rect(1px, 1px, 1px, 1px) !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: absolute !important;
+        width: 1px !important;
+    }
+}

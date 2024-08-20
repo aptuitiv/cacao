@@ -1,0 +1,17 @@
+/* =========================================================================== *\
+    Text transform utilities
+\* =========================================================================== */
+
+@media (--m-3xs) {
+    .text-lower-3xs {
+        text-transform: lowercase;
+    }
+
+    .text-upper-3xs {
+        text-transform: uppercase;
+    }
+
+    .text-capital-3xs {
+        text-transform: capitalize;
+    }
+}

@@ -1,0 +1,29 @@
+/* =========================================================================== *\
+    Bottom margin utilities
+\* =========================================================================== */
+
+@media (--m-md) {
+    .mb-0-md {
+        margin-bottom: 0;
+    }
+
+    .mb-1-md {
+        margin-bottom: 10px;
+    }
+
+    .mb-2-md {
+        margin-bottom: 20px;
+    }
+
+    .mb-3-md {
+        margin-bottom: 30px;
+    }
+
+    .mb-4-md {
+        margin-bottom: 40px;
+    }
+
+    .mb-5-md {
+        margin-bottom: 50px;
+    }
+}

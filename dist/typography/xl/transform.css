@@ -1,0 +1,17 @@
+/* =========================================================================== *\
+    Text transform utilities
+\* =========================================================================== */
+
+@media (--m-xl) {
+    .text-lower-xl {
+        text-transform: lowercase;
+    }
+
+    .text-upper-xl {
+        text-transform: uppercase;
+    }
+
+    .text-capital-xl {
+        text-transform: capitalize;
+    }
+}

@@ -1,0 +1,17 @@
+/* =========================================================================== *\
+    Text transform utilities
+\* =========================================================================== */
+
+@media (--m-5xl) {
+    .text-lower-5xl {
+        text-transform: lowercase;
+    }
+
+    .text-upper-5xl {
+        text-transform: uppercase;
+    }
+
+    .text-capital-5xl {
+        text-transform: capitalize;
+    }
+}

@@ -1,0 +1,21 @@
+/* =========================================================================== *\
+    Text align utilities
+\* =========================================================================== */
+
+@media (--m-3xl) {
+    .text-center-3xl {
+        text-align: center;
+    }
+
+    .text-start-3xl {
+        text-align: start;
+    }
+
+    .text-end-3xl {
+        text-align: end;
+    }
+
+    .text-justify-3xl {
+        text-align: justify;
+    }
+}

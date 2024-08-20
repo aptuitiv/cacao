@@ -1,0 +1,25 @@
+/* =========================================================================== *\
+   Positioning utilities
+\* =========================================================================== */
+
+@media (--m-3xl) {
+    .absolute-3xl {
+        position: absolute;
+    }
+
+    .fixed-3xl {
+        position: fixed;
+    }
+
+    .relative-3xl {
+        position: relative;
+    }
+
+    .static-3xl {
+        position: static;
+    }
+
+    .sticky-3xl {
+        position: sticky;
+    }
+}

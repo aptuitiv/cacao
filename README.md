@@ -15,3 +15,10 @@ Using the default imports, you get access to aspect ratios (used for embedded if
 ## Customization
 
 You can customize Cacao simply by overriding a class. You can also override the breakpoints by creating your own `@custom-media` directives as found in [config.css](src/config.css).
+
+## Resources
+
+- [Changelog](./CHANGELOG.md)
+- [Development](./DEVELOPMENT.md)
+- [Local Testing](./LOCAL_TESTING.md)
+- [Migrating from version 3](./Migrating-from-version3.md)

@@ -1,0 +1,26 @@
+/* ===========================================================================
+    Word wrapping and word break styles
+=========================================================================== */
+@media (--m-md) {
+    /**
+     * Break strings when their length exceeds the width of their container.
+     */
+    .break-word-md {
+        overflow-wrap: break-word !important;
+    }
+
+    /**
+     * word-break breaks more aggressively than overflow-wrap and it best for URLS or long strings
+     * that could be all "one word".
+     */
+    .break-all-md {
+        word-break: break-all;
+    }
+
+    /**
+     * Prevent whitespace wrapping
+     */
+    .no-wrap-md {
+        white-space: nowrap !important;
+    }
+}

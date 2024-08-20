@@ -1,0 +1,25 @@
+/* =========================================================================== *\
+    Justification utilities
+\* =========================================================================== */
+
+@media (--m-3xs) {
+    .justify-start-3xs {
+        justify-content: flex-start;
+    }
+
+    .justify-center-3xs {
+        justify-content: center;
+    }
+
+    .justify-end-3xs {
+        justify-content: flex-end;
+    }
+
+    .justify-between-3xs {
+        justify-content: space-between;
+    }
+
+    .justify-around-3xs {
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,120 @@
+/* =========================================================================== *\
+    Custom media queries.
+    Because @custom-media is not yet supported a PostCSS plugin is required.
+    https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media
+
+    Naming conventions:
+    - The prefix --m- is used to indicate that these are media queries.
+    - The variable must be all lowercase.
+\* =========================================================================== */
+
+/**
+ * These breakpoints are inspired by Pure. https://purecss.io/grids/#:~:text=%3C/div%3E-,Default%20Media%20Queries,-When%20using%20Responsive
+ * and Open Props https://open-props.style/#media-queries
+ *
+ */
+
+/* Accessibility preferences */
+@custom-media --m-motion-ok (prefers-reduced-motion: no-preference);
+@custom-media --m-motion-not-ok (prefers-reduced-motion: reduce);
+@custom-media --m-opacity-ok (prefers-reduced-transparency: no-preference);
+@custom-media --m-opacity-not-ok (prefers-reduced-transparency: reduce);
+
+/* Data preferences */
+@custom-media --m-use-data-ok (prefers-reduced-data: no-preference);
+@custom-media --m-use-data-not-ok (prefers-reduced-data: reduce);
+
+/* Color preferences */
+@custom-media --m-dark (prefers-color-scheme: dark);
+@custom-media --m-light (prefers-color-scheme: light);
+@custom-media --m-high-contrast (prefers-contrast: more);
+@custom-media --m-low-contrast (prefers-contrast: less);
+@custom-media --m-inverted-colors (inverted-colors: inverted);
+@custom-media --m-forced-colors (forced-colors: active);
+
+/* Orientation */
+@custom-media --m-portrait (orientation: portrait);
+@custom-media --m-landscape (orientation: landscape);
+
+/* Pointer types */
+@custom-media --m-touch (hover: none) and (pointer: coarse);
+@custom-media --m-stylus (hover: none) and (pointer: fine);
+@custom-media --m-pointer (hover) and (pointer: coarse);
+@custom-media --m-mouse (hover) and (pointer: fine);
+
+/* Color capabilities */
+@custom-media --m-hd-color (dynamic-range: high) or (color-gamut: p3);
+
+/**
+ * Screen sizes
+ *
+ * These breakpoints are inspired by:
+ * - Pure.(https://purecss.io/grids/#:~:text=%3C/div%3E-,Default%20Media%20Queries,-When%20using%20Responsive)
+ * - Bootstrap (https://getbootstrap.com/docs/5.3/layout/breakpoints/#available-breakpoints)
+ * - Open Props (https://open-props.style/#media-queries)
+ * - https://gs.statcounter.com/screen-resolution-stats/mobile/worldwide
+ * - https://www.browserstack.com/guide/common-screen-resolutions
+ * - And our own usage in building websites
+ *
+ * Cacao is a mobile-first system.
+ * We don't use min-width or max-width because we follow Stylelint's media-feature-rante-notation rule.
+ * https://stylelint.io/user-guide/rules/media-feature-range-notation/
+ *
+ * We use pixels instead of ems because that is the convention and it helps prevent a Safari bug with how they calculate ems (i.e. they use font-size + zoom level)
+ * https://cgamesplay.com/post/2023/05/19/stop-using-em-in-media-queries/
+ */
+
+/* 3xs */
+@custom-media --m-3xs (width >= 240px);
+@custom-media --m-3xs-below (width < 240px);
+@custom-media --m-3xs-only (0 <= width < 240px);
+
+/* 2xs */
+@custom-media --m-2xs (width >= 360px);
+@custom-media --m-2xs-below (width < 300px);
+@custom-media --m-2xs-only (0 <= width < 300px);
+
+/* xs */
+@custom-media --m-xs (width >= 420px);
+@custom-media --m-xs-below (width < 420px);
+@custom-media --m-xs-only (300px <= width < 420px);
+
+/* sm */
+@custom-media --m-sm (width >= 576px);
+@custom-media --m-sm-below (width < 576px);
+@custom-media --m-sm-only (360px <= width < 576px);
+
+/* md */
+@custom-media --m-md (width >= 768px);
+@custom-media --m-md-below (width < 768px);
+@custom-media --m-md-only (576px <= width < 768px);
+
+/* lg */
+@custom-media --m-lg (width >= 1024px);
+@custom-media --m-lg-below (width < 1024px);
+@custom-media --m-lg-only (768px <= width < 1024px);
+
+/* xl */
+@custom-media --m-xl (width >= 1280px);
+@custom-media --m-xl-below (width < 1280px);
+@custom-media --m-xl-only (1024px <= width < 1280px);
+
+/* 2xl */
+@custom-media --m-2xl (width >= 1440px);
+@custom-media --m-2xl-only (1280px <= width < 1440px);
+@custom-media --m-2xl-below (width < 1440px);
+
+/* 3xl */
+@custom-media --m-3xl (width >= 1600px);
+@custom-media --m-3xl-only (1440px <= width < 1600px);
+@custom-media --m-3xl-below (width < 1600px);
+
+/* 4xl */
+@custom-media --m-4xl (width >= 1920px);
+@custom-media --m-4xl-only (1600px <= width < 1920px);
+@custom-media --m-4xl-below (width < 1920px);
+
+/* 5xl */
+@custom-media --m-5xl (width >= 2560px);
+@custom-media --m-5xl-only (1920px <= width < 2560px);
+@custom-media --m-5xl-below (width < 2560px);
