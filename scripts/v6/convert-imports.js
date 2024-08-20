@@ -29,6 +29,7 @@ const convertImports = (args) => {
 
     // Fix the "Layout" import path
     fileContents = fileContents.replace('/* Layout */', '/* Clearfix */');
+    fileContents = fileContents.replace('/layout/core/layout.css', '/clearfix/clearfix.css');
     fileContents = fileContents.replace('/layout/layout.css', '/clearfix/clearfix.css');
 
     // Fix the "size" import path
