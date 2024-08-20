@@ -5,7 +5,7 @@ on:
     # Runs on pushes targeting the "develop" branch but only for files in the "docs" folder.
     push:
         branches: ['develop']
-        paths: ['docs/**']
+        paths: ['docs/build/**']
 
     # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
@@ -32,17 +32,17 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
-              # Only checkout the "docs" folder
+              # Only checkout the "docs/build" folder
               with:
                   sparse-checkout: |
-                      docs
+                      docs/build
             - name: Setup Pages
               uses: actions/configure-pages@v5
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
                   # Only upload the docs folder
-                  path: 'docs'
+                  path: 'docs/build'
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4
