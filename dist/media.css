@@ -8,12 +8,6 @@
     - The variable must be all lowercase.
 \* =========================================================================== */
 
-/**
- * These breakpoints are inspired by Pure. https://purecss.io/grids/#:~:text=%3C/div%3E-,Default%20Media%20Queries,-When%20using%20Responsive
- * and Open Props https://open-props.style/#media-queries
- *
- */
-
 /* Accessibility preferences */
 @custom-media --m-motion-ok (prefers-reduced-motion: no-preference);
 @custom-media --m-motion-not-ok (prefers-reduced-motion: reduce);
