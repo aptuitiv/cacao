@@ -1,11 +1,15 @@
 # Cacao
 
+Cacao is a utility class CSS library. It intentionally does not provide styles for specific components. Rather, it has utility classes for doing common things like grids, setting heights and widths, and gutters.
+
+> The `embed` style is the exception to that rule, but it only provides the minimal CSS to responsively embed an iframe.
+
 ## Installation
 
 Install Cacao via NPM:
 
 ```bash
-npm install cacao-css@4
+npm install cacao-css
 ```
 
 Add a copy of [imports.css](imports.css) to your project. This file allows you to configure what modules are included in your final project. This helps to keep the CSS lean and the performance high. The relative imports are expecting to be placed under "my-project/src/css/main.css". You may need to adjust the imports if using a different folder structure.
