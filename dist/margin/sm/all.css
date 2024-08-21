@@ -1,29 +1,69 @@
-/* =========================================================================== *\
-    All sides margin utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   All sides margin utilities
+ * =========================================================================== */
 
 @media (--m-sm) {
     .m-0-sm {
-        margin: 0;
+        margin: var(--margin-0);
     }
 
     .m-1-sm {
-        margin: 10px;
+        margin: var(--margin-1);
     }
 
     .m-2-sm {
-        margin: 20px;
+        margin: var(--margin-2);
     }
 
     .m-3-sm {
-        margin: 30px;
+        margin: var(--margin-3);
     }
 
     .m-4-sm {
-        margin: 40px;
+        margin: var(--margin-4);
     }
 
     .m-5-sm {
-        margin: 50px;
+        margin: var(--margin-5);
+    }
+
+    .m-6-sm {
+        margin: var(--margin-6);
+    }
+
+    .m-7-sm {
+        margin: var(--margin-7);
+    }
+
+    .m-8-sm {
+        margin: var(--margin-8);
+    }
+
+    .m-9-sm {
+        margin: var(--margin-9);
+    }
+
+    .m-10-sm {
+        margin: var(--margin-10);
+    }
+
+    .m-11-sm {
+        margin: var(--margin-11);
+    }
+
+    .m-12-sm {
+        margin: var(--margin-12);
+    }
+
+    .m-13-sm {
+        margin: var(--margin-13);
+    }
+
+    .m-14-sm {
+        margin: var(--margin-14);
+    }
+
+    .m-15-sm {
+        margin: var(--margin-15);
     }
 }

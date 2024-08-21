@@ -24,14 +24,19 @@ import { mediaQueryDirectories, mediaSizes } from './config.js';
 const wrapDirectory = (dir) => new Promise((resolve) => {
     let dirPath = dir;
     let skip = [];
+    let combine = false;
     if (typeof dir !== 'string') {
         dirPath = dir.dir;
-        skip = dir.skip;
+        skip = dir.skip ?? [];
+        combine = dir.combine ?? false;
     }
+
+    const files = [];
     fs.readdirSync(dirPath).forEach((file) => {
         const srcPath = `${dirPath}/${file}`;
         const stats = fs.statSync(srcPath);
         if (stats.isFile() && !skip.includes(file)) {
+            files.push(file);
             mediaSizes.forEach((size) => {
                 const destRoot = `${dirPath.replace(/^src/, 'dist')}/${size}`;
                 fs.ensureDirSync(destRoot);
@@ -57,6 +62,22 @@ const wrapDirectory = (dir) => new Promise((resolve) => {
             });
         }
     });
+
+    // Add the combined files
+    if (combine) {
+        files.sort();
+        mediaSizes.forEach((size) => {
+            const destPath = `${dirPath.replace(/^src/, 'dist')}/${size}/${combine}`;
+            // Create the combination file
+            let fileContents = '/* =========================================================================== *\n';
+            fileContents += `   Margin utilities - ${size} - imports all the ${size} margin utility files\n`;
+            fileContents += ' * =========================================================================== */\n\n';
+            files.forEach((file) => {
+                fileContents += `@import './${file}';\n`;
+            });
+            fs.writeFileSync(destPath, fileContents);
+        });
+    }
 });
 
 /**

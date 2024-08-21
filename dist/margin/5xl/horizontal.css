@@ -1,35 +1,85 @@
-/* =========================================================================== *\
-    Horizontal margin utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Horizontal margin utilities
+ * =========================================================================== */
 
 @media (--m-5xl) {
     .mx-0-5xl {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: var(--margin-0);
+        margin-right: var(--margin-0);
     }
 
     .mx-1-5xl {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: var(--margin-1);
+        margin-right: var(--margin-1);
     }
 
     .mx-2-5xl {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: var(--margin-2);
+        margin-right: var(--margin-2);
     }
 
     .mx-3-5xl {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: var(--margin-3);
+        margin-right: var(--margin-3);
     }
 
     .mx-4-5xl {
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: var(--margin-4);
+        margin-right: var(--margin-4);
     }
 
     .mx-5-5xl {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: var(--margin-5);
+        margin-right: var(--margin-5);
+    }
+
+    .mx-6-5xl {
+        margin-left: var(--margin-6);
+        margin-right: var(--margin-6);
+    }
+
+    .mx-7-5xl {
+        margin-left: var(--margin-7);
+        margin-right: var(--margin-7);
+    }
+
+    .mx-8-5xl {
+        margin-left: var(--margin-8);
+        margin-right: var(--margin-8);
+    }
+
+    .mx-9-5xl {
+        margin-left: var(--margin-9);
+        margin-right: var(--margin-9);
+    }
+
+    .mx-10-5xl {
+        margin-left: var(--margin-10);
+        margin-right: var(--margin-10);
+    }
+
+    .mx-11-5xl {
+        margin-left: var(--margin-11);
+        margin-right: var(--margin-11);
+    }
+
+    .mx-12-5xl {
+        margin-left: var(--margin-12);
+        margin-right: var(--margin-12);
+    }
+
+    .mx-13-5xl {
+        margin-left: var(--margin-13);
+        margin-right: var(--margin-13);
+    }
+
+    .mx-14-5xl {
+        margin-left: var(--margin-14);
+        margin-right: var(--margin-14);
+    }
+
+    .mx-15-5xl {
+        margin-left: var(--margin-15);
+        margin-right: var(--margin-15);
     }
 }

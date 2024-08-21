@@ -1,0 +1,11 @@
+/* =========================================================================== *
+   Margin utilities - 5xl - imports all the 5xl margin utility files
+ * =========================================================================== */
+
+@import './all.css';
+@import './bottom.css';
+@import './end.css';
+@import './horizontal.css';
+@import './start.css';
+@import './top.css';
+@import './vertical.css';

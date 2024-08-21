@@ -1,35 +1,85 @@
-/* =========================================================================== *\
-    Horizontal margin utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Horizontal margin utilities
+ * =========================================================================== */
 
 @media (--m-2xs) {
     .mx-0-2xs {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: var(--margin-0);
+        margin-right: var(--margin-0);
     }
 
     .mx-1-2xs {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: var(--margin-1);
+        margin-right: var(--margin-1);
     }
 
     .mx-2-2xs {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: var(--margin-2);
+        margin-right: var(--margin-2);
     }
 
     .mx-3-2xs {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: var(--margin-3);
+        margin-right: var(--margin-3);
     }
 
     .mx-4-2xs {
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: var(--margin-4);
+        margin-right: var(--margin-4);
     }
 
     .mx-5-2xs {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: var(--margin-5);
+        margin-right: var(--margin-5);
+    }
+
+    .mx-6-2xs {
+        margin-left: var(--margin-6);
+        margin-right: var(--margin-6);
+    }
+
+    .mx-7-2xs {
+        margin-left: var(--margin-7);
+        margin-right: var(--margin-7);
+    }
+
+    .mx-8-2xs {
+        margin-left: var(--margin-8);
+        margin-right: var(--margin-8);
+    }
+
+    .mx-9-2xs {
+        margin-left: var(--margin-9);
+        margin-right: var(--margin-9);
+    }
+
+    .mx-10-2xs {
+        margin-left: var(--margin-10);
+        margin-right: var(--margin-10);
+    }
+
+    .mx-11-2xs {
+        margin-left: var(--margin-11);
+        margin-right: var(--margin-11);
+    }
+
+    .mx-12-2xs {
+        margin-left: var(--margin-12);
+        margin-right: var(--margin-12);
+    }
+
+    .mx-13-2xs {
+        margin-left: var(--margin-13);
+        margin-right: var(--margin-13);
+    }
+
+    .mx-14-2xs {
+        margin-left: var(--margin-14);
+        margin-right: var(--margin-14);
+    }
+
+    .mx-15-2xs {
+        margin-left: var(--margin-15);
+        margin-right: var(--margin-15);
     }
 }

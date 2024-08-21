@@ -8,29 +8,31 @@ import fs from 'fs-extra';
 import logSymbols from 'log-symbols';
 import { basename } from 'path';
 
-import { distDirectory, mediaSizes, rootDirectory } from './config.js';
+import {
+    distDirectory, mediaSizes, rootDirectory,
+} from './config.js';
 
 // Map the module names to the directory names
 const moduleMap = {
-    aspect: 'Aspect Ratios',
-    clearfix: 'Clearfix',
-    display: 'Display',
-    embed: 'Embed',
-    fit: 'Fit',
-    grid: 'Grid',
-    'grid-column': 'Grid Columns',
-    gutter: 'Gutter',
-    height: 'Height',
-    image: 'Images',
-    link: 'Links',
-    margin: 'Margin',
-    padding: 'Padding',
-    position: 'Position',
-    pull: 'Pull',
-    push: 'Push',
-    spacing: 'Spacing',
-    typography: 'Typography',
-    width: 'Width',
+    aspect: { name: 'Aspect Ratios' },
+    clearfix: { name: 'Clearfix' },
+    display: { name: 'Display' },
+    embed: { name: 'Embed' },
+    fit: { name: 'Fit' },
+    grid: { name: 'Grid' },
+    'grid-column': { name: 'Grid Columns' },
+    gutter: { name: 'Gutter' },
+    height: { name: 'Height' },
+    image: { name: 'Images' },
+    link: { name: 'Links' },
+    margin: { name: 'Margin', variables: true, combine: 'margin.css' },
+    padding: { name: 'Padding' },
+    position: { name: 'Position' },
+    pull: { name: 'Pull' },
+    push: { name: 'Push' },
+    spacing: { name: 'Spacing' },
+    typography: { name: 'Typography' },
+    width: { name: 'Width' },
 };
 
 // The header for the imports file
@@ -69,11 +71,15 @@ const coreImports = `
  * Build the imports for the directory
  *
  * @param {string} directory The directory
- * @param {string} moduleName The module name
+ * @param {object} module The module object data
  * @param {boolean} isSubDirectory If the directory is a subdirectory
  * @returns {string}
  */
-const buildDirectoryImports = (directory, moduleName, isSubDirectory = false) => {
+const buildDirectoryImports = (directory, module, isSubDirectory = false) => {
+    const moduleName = module.name;
+    const useVariables = module.variables ?? false;
+    const combinationFile = module.combine ?? false;
+
     const directoryPath = directory.replace(`${distDirectory}/`, '');
 
     let fileContents = '';
@@ -86,14 +92,37 @@ const buildDirectoryImports = (directory, moduleName, isSubDirectory = false) =>
         const srcPath = `${directory}/${file}`;
         const stats = fs.statSync(srcPath);
         if (stats.isFile() && file.endsWith('.css')) {
-            files.push(file);
+            let useFile = true;
+            if (useVariables && file === 'variables.css') {
+                useFile = false;
+            }
+            if (combinationFile && file === combinationFile) {
+                useFile = false;
+            }
+            if (useFile) {
+                files.push(file);
+            }
         } else if (stats.isDirectory()) {
-            const folderName = basename(srcPath);
-            if (mediaSizes.includes(folderName)) {
-                directories[folderName] = srcPath;
+            const fname = basename(srcPath);
+            if (mediaSizes.includes(fname)) {
+                directories[fname] = srcPath;
             }
         }
     });
+
+    if (!isSubDirectory && useVariables) {
+        fileContents += `\n/* ${moduleName} variables. This must be imported or you must override the variables. */`;
+        fileContents += `\n@import 'cacao-css/dist/${directoryPath}/variables.css';\n`;
+    }
+    if (combinationFile) {
+        if (isSubDirectory) {
+            fileContents += `\n/* Include all ${moduleName} ${basename(directoryPath)} files */`;
+        } else {
+            fileContents += `\n/* Include all ${moduleName} files */`;
+        }
+        fileContents += `\n@import 'cacao-css/dist/${directoryPath}/${combinationFile}';\n`;
+        fileContents += '\n/* or include individual files */';
+    }
 
     // Make sure that the files are in alphabetical order
     files.sort();
@@ -110,10 +139,10 @@ const buildDirectoryImports = (directory, moduleName, isSubDirectory = false) =>
             if (index === 0) {
                 fileContents += '\n';
             }
-            const folderName = basename(dir);
+            const fname = basename(dir);
             // Write the comment for the media query size
-            fileContents += `\n/* ${moduleName} (${folderName}) */`;
-            fileContents += buildDirectoryImports(dir, moduleName, true);
+            fileContents += `\n/* ${moduleName} (${fname}) */`;
+            fileContents += buildDirectoryImports(dir, module, true);
         }
     });
 
@@ -156,13 +185,13 @@ const buildImports = () => {
     // Build the imports for the directories
     directories.forEach((directory) => {
         const folderName = basename(directory);
-        const moduleName = moduleMap[folderName] ?? folderName;
+        const module = moduleMap[folderName];
         // Write the comment for the module
         fileContents += '\n/* ------------------------------------*';
-        fileContents += `\n   ${moduleName}\n`;
+        fileContents += `\n   ${module.name}\n`;
         fileContents += ' * ------------------------------------ */\n';
 
-        fileContents += buildDirectoryImports(directory, moduleName);
+        fileContents += buildDirectoryImports(directory, module);
     });
 
     fs.writeFileSync(`${distDirectory}/imports.css`, fileContents);

@@ -700,6 +700,13 @@
    Margin
  * ------------------------------------ */
 
+/* Margin variables. This must be imported or you must override the variables. */
+@import 'cacao-css/dist/margin/variables.css';
+
+/* Include all Margin files */
+@import 'cacao-css/dist/margin/margin.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/margin/all.css';
 @import 'cacao-css/dist/margin/bottom.css';
 @import 'cacao-css/dist/margin/end.css';
@@ -709,6 +716,10 @@
 @import 'cacao-css/dist/margin/vertical.css';
 
 /* Margin (3xs) */
+/* Include all Margin 3xs files */
+@import 'cacao-css/dist/margin/3xs/margin.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/margin/3xs/all.css';
 @import 'cacao-css/dist/margin/3xs/bottom.css';
 @import 'cacao-css/dist/margin/3xs/end.css';
@@ -718,6 +729,10 @@
 @import 'cacao-css/dist/margin/3xs/vertical.css';
 
 /* Margin (2xs) */
+/* Include all Margin 2xs files */
+@import 'cacao-css/dist/margin/2xs/margin.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/margin/2xs/all.css';
 @import 'cacao-css/dist/margin/2xs/bottom.css';
 @import 'cacao-css/dist/margin/2xs/end.css';
@@ -727,6 +742,10 @@
 @import 'cacao-css/dist/margin/2xs/vertical.css';
 
 /* Margin (xs) */
+/* Include all Margin xs files */
+@import 'cacao-css/dist/margin/xs/margin.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/margin/xs/all.css';
 @import 'cacao-css/dist/margin/xs/bottom.css';
 @import 'cacao-css/dist/margin/xs/end.css';
@@ -736,6 +755,10 @@
 @import 'cacao-css/dist/margin/xs/vertical.css';
 
 /* Margin (sm) */
+/* Include all Margin sm files */
+@import 'cacao-css/dist/margin/sm/margin.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/margin/sm/all.css';
 @import 'cacao-css/dist/margin/sm/bottom.css';
 @import 'cacao-css/dist/margin/sm/end.css';
@@ -745,6 +768,10 @@
 @import 'cacao-css/dist/margin/sm/vertical.css';
 
 /* Margin (md) */
+/* Include all Margin md files */
+@import 'cacao-css/dist/margin/md/margin.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/margin/md/all.css';
 @import 'cacao-css/dist/margin/md/bottom.css';
 @import 'cacao-css/dist/margin/md/end.css';
@@ -754,6 +781,10 @@
 @import 'cacao-css/dist/margin/md/vertical.css';
 
 /* Margin (lg) */
+/* Include all Margin lg files */
+@import 'cacao-css/dist/margin/lg/margin.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/margin/lg/all.css';
 @import 'cacao-css/dist/margin/lg/bottom.css';
 @import 'cacao-css/dist/margin/lg/end.css';
@@ -763,6 +794,10 @@
 @import 'cacao-css/dist/margin/lg/vertical.css';
 
 /* Margin (xl) */
+/* Include all Margin xl files */
+@import 'cacao-css/dist/margin/xl/margin.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/margin/xl/all.css';
 @import 'cacao-css/dist/margin/xl/bottom.css';
 @import 'cacao-css/dist/margin/xl/end.css';
@@ -772,6 +807,10 @@
 @import 'cacao-css/dist/margin/xl/vertical.css';
 
 /* Margin (2xl) */
+/* Include all Margin 2xl files */
+@import 'cacao-css/dist/margin/2xl/margin.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/margin/2xl/all.css';
 @import 'cacao-css/dist/margin/2xl/bottom.css';
 @import 'cacao-css/dist/margin/2xl/end.css';
@@ -781,6 +820,10 @@
 @import 'cacao-css/dist/margin/2xl/vertical.css';
 
 /* Margin (3xl) */
+/* Include all Margin 3xl files */
+@import 'cacao-css/dist/margin/3xl/margin.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/margin/3xl/all.css';
 @import 'cacao-css/dist/margin/3xl/bottom.css';
 @import 'cacao-css/dist/margin/3xl/end.css';
@@ -790,6 +833,10 @@
 @import 'cacao-css/dist/margin/3xl/vertical.css';
 
 /* Margin (4xl) */
+/* Include all Margin 4xl files */
+@import 'cacao-css/dist/margin/4xl/margin.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/margin/4xl/all.css';
 @import 'cacao-css/dist/margin/4xl/bottom.css';
 @import 'cacao-css/dist/margin/4xl/end.css';
@@ -799,6 +846,10 @@
 @import 'cacao-css/dist/margin/4xl/vertical.css';
 
 /* Margin (5xl) */
+/* Include all Margin 5xl files */
+@import 'cacao-css/dist/margin/5xl/margin.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/margin/5xl/all.css';
 @import 'cacao-css/dist/margin/5xl/bottom.css';
 @import 'cacao-css/dist/margin/5xl/end.css';

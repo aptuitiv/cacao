@@ -1,29 +1,69 @@
-/* =========================================================================== *\
-    Start margin utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Start margin utilities
+ * =========================================================================== */
 
 @media (--m-lg) {
     .ms-0-lg {
-        margin-left: 0;
+        margin-left: var(--margin-0);
     }
 
     .ms-1-lg {
-        margin-left: 10px;
+        margin-left: var(--margin-1);
     }
 
     .ms-2-lg {
-        margin-left: 20px;
+        margin-left: var(--margin-2);
     }
 
     .ms-3-lg {
-        margin-left: 30px;
+        margin-left: var(--margin-3);
     }
 
     .ms-4-lg {
-        margin-left: 40px;
+        margin-left: var(--margin-4);
     }
 
     .ms-5-lg {
-        margin-left: 50px;
+        margin-left: var(--margin-5);
+    }
+
+    .ms-6-lg {
+        margin-left: var(--margin-6);
+    }
+
+    .ms-7-lg {
+        margin-left: var(--margin-7);
+    }
+
+    .ms-8-lg {
+        margin-left: var(--margin-8);
+    }
+
+    .ms-9-lg {
+        margin-left: var(--margin-9);
+    }
+
+    .ms-10-lg {
+        margin-left: var(--margin-10);
+    }
+
+    .ms-11-lg {
+        margin-left: var(--margin-11);
+    }
+
+    .ms-12-lg {
+        margin-left: var(--margin-12);
+    }
+
+    .ms-13-lg {
+        margin-left: var(--margin-13);
+    }
+
+    .ms-14-lg {
+        margin-left: var(--margin-14);
+    }
+
+    .ms-15-lg {
+        margin-left: var(--margin-15);
     }
 }
