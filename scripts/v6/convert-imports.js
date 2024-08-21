@@ -32,6 +32,10 @@ const convertImports = (args) => {
     fileContents = fileContents.replace('/layout/core/layout.css', '/clearfix/clearfix.css');
     fileContents = fileContents.replace('/layout/layout.css', '/clearfix/clearfix.css');
 
+    // Convert the "link" import path
+    fileContents = fileContents.replace('/links/core/links.css', '/link/link.css');
+    fileContents = fileContents.replace('/links/links.css', '/link/link.css');
+
     // Fix the "size" import path
     fileContents = fileContents.replace(/@import 'cacao-css\/dist\/size\/size.css';/g, '@import \'cacao-css/dist/height/height-1.css\';\n@import \'cacao-css/dist/width/width-1.css\';');
     fileContents = fileContents.replace(/@import 'cacao-css\/dist\/size\/(.*)\/size.css';/g, '@import \'cacao-css/dist/height/$1/height-1.css\';\n@import \'cacao-css/dist/width/$1/width-1.css\';');
