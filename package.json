@@ -21,7 +21,8 @@
     ],
     "type": "module",
     "scripts": {
-        "build": "node scripts/build/index.js",
+        "build": "node scripts/build/index.js all",
+        "build-margins": "node scripts/build/index.js margins",
         "eslint": "eslint --fix .",
         "watch": "esw -w --color --fix ."
     },

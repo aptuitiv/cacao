@@ -12,7 +12,7 @@ import logSymbols from 'log-symbols';
 /**
  * Create the margin variables file
  */
-const createMarginVariables = () => {
+const createMarginVariables = () => new Promise((resolve) => {
     const sizes = {
         0: 0,
         1: 10,
@@ -44,12 +44,13 @@ const createMarginVariables = () => {
     fileContents += '\n}';
     fs.writeFileSync('src/margin/variables.css', fileContents);
     fancyLog(chalk.green(`${logSymbols.success} Wrote margin variables file `, chalk.cyan('src/margin/variables.css')));
-};
+    resolve();
+});
 
 /**
  * Build the margin class files
  */
-const buildMargins = () => {
+const buildMarginsFiles = () => new Promise((resolve) => {
     const sides = {
         all: { class: 'm', comment: 'All sides margin utilities', dec: 'margin' },
         bottom: { class: 'mb', comment: 'Bottom margin utilities', dec: 'margin-bottom' },
@@ -91,7 +92,18 @@ const buildMargins = () => {
     fs.writeFileSync('src/margin/margin.css', fileContents);
     fancyLog(chalk.green(`${logSymbols.success} Wrote margin file `, chalk.cyan('src/margin/margin.css')));
     fancyLog(chalk.green(`${logSymbols.success} Done creating margin files `));
-};
+    resolve();
+});
 
-createMarginVariables();
-buildMargins();
+/**
+ * Exported function to build the margin files
+ *
+ * @returns {Promise<void>}
+ */
+const buildMargins = async () => new Promise((resolve) => {
+    createMarginVariables();
+    buildMarginsFiles();
+    resolve();
+});
+
+export default buildMargins;
