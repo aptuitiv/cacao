@@ -1,7 +1,0 @@
-/* =========================================================================== *
-   Margin utilities - lg - imports all the lg margin utility files
- * =========================================================================== */
-
-@import './all.css';
-@import './horizontal.css';
-@import './vertical.css';

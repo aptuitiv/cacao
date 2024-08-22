@@ -10,10 +10,12 @@ import fancyLog from 'fancy-log';
 import logSymbols from 'log-symbols';
 
 import { variableSizes } from './config.js';
-import { buildModuleCombinationFile, buildModuleSideFileContent, createModuleVariables } from './helpers.js';
+import { buildModuleSideFileContent, createModuleVariables } from './helpers.js';
 
 /**
  * Build the padding class files
+ *
+ * @returns {Promise<void>}
  */
 const buildPaddingsFiles = () => new Promise((resolve) => {
     const sides = {
@@ -31,7 +33,6 @@ const buildPaddingsFiles = () => new Promise((resolve) => {
         fancyLog(chalk.green(`${logSymbols.success} Wrote padding file `, chalk.cyan(`src/padding/${side}.css`)));
     });
 
-    buildModuleCombinationFile('padding', sides);
     fancyLog(chalk.green(`${logSymbols.success} Done creating padding files `));
     resolve();
 });

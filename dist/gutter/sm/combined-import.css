@@ -1,0 +1,7 @@
+/* =========================================================================== *
+   Gutter utilities - sm - imports all the sm gutter utility files
+ * =========================================================================== */
+
+@import './all.css';
+@import './horizontal.css';
+@import './vertical.css';

@@ -1,7 +1,0 @@
-/* =========================================================================== *
-   Margin utilities - 3xs - imports all the 3xs margin utility files
- * =========================================================================== */
-
-@import './all.css';
-@import './horizontal.css';
-@import './vertical.css';

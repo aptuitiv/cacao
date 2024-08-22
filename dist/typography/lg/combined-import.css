@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Typography utilities - lg - imports all the lg typography utility files
+ * =========================================================================== */
+
+@import './align.css';
+@import './break.css';
+@import './style.css';
+@import './transform.css';
+@import './weight.css';

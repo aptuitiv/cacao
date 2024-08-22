@@ -1,7 +1,0 @@
-/* =========================================================================== *
-   Margin utilities - 5xl - imports all the 5xl margin utility files
- * =========================================================================== */
-
-@import './all.css';
-@import './horizontal.css';
-@import './vertical.css';

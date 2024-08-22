@@ -10,10 +10,12 @@ import fancyLog from 'fancy-log';
 import logSymbols from 'log-symbols';
 
 import { variableSizes } from './config.js';
-import { buildModuleCombinationFile, buildModuleSideFileContent, createModuleVariables } from './helpers.js';
+import { buildModuleSideFileContent, createModuleVariables } from './helpers.js';
 
 /**
  * Build the gutter class files
+ *
+ * @returns {Promise<void>}
  */
 const buildGuttersFiles = () => new Promise((resolve) => {
     const sides = {
@@ -47,7 +49,6 @@ const buildGuttersFiles = () => new Promise((resolve) => {
         fancyLog(chalk.green(`${logSymbols.success} Wrote gutter file `, chalk.cyan(`src/gutter/${side}.css`)));
     });
 
-    buildModuleCombinationFile('gutter', sides);
     fancyLog(chalk.green(`${logSymbols.success} Done creating gutter files `));
     resolve();
 });

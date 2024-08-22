@@ -17,16 +17,31 @@ export const srcDirectory = `${rootDirectory}/src`;
 // Media query sizes
 export const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'];
 
+// Configuration for the modules to combine file imports into one file
+export const combinationFiles = {
+    aspect: { combine: true, name: 'Aspect Ratio' },
+    display: { combine: true },
+    'grid-column': { combine: true, name: 'Grid column' },
+    gutter: { combine: true },
+    height: { combine: true },
+    margin: { combine: true },
+    padding: { combine: true },
+    pull: { combine: true },
+    push: { combine: true },
+    typography: { combine: true },
+    width: { combine: true },
+};
+
 // Directories whose files need to be wrapped in media queries
 export const mediaQueryDirectories = [
     'src/aspect',
     'src/display',
     'src/fit',
     'src/grid-column',
-    { dir: 'src/gutter', skip: ['gutter.css', 'variables.css'], combine: 'gutter.css' },
+    'src/gutter',
     'src/height',
-    { dir: 'src/margin', skip: ['margin.css', 'variables.css'], combine: 'margin.css' },
-    { dir: 'src/padding', skip: ['padding.css', 'variables.css'], combine: 'padding.css' },
+    'src/margin',
+    'src/padding',
     'src/position',
     { dir: 'src/pull', skip: ['pull.css'] },
     { dir: 'src/push', skip: ['push.css'] },
@@ -36,7 +51,7 @@ export const mediaQueryDirectories = [
 
 // Map the module names to the directory names for the import.js file
 export const importsModuleMap = {
-    aspect: { name: 'Aspect Ratios' },
+    aspect: { name: 'Aspect Ratios', combine: 'aspect.css' },
     clearfix: { name: 'Clearfix' },
     display: { name: 'Display' },
     embed: { name: 'Embed' },

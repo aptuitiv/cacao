@@ -4,6 +4,7 @@
 
 import { Command } from 'commander';
 
+import combineFiles from './combine.js';
 import copyFiles from './copy-files.js';
 import buildGutters from './gutter.js';
 import buildImports from './imports.js';
@@ -28,6 +29,7 @@ program
         await buildMargins();
         await buildPaddings();
         await copyFiles();
+        await combineFiles();
         await wrapInMediaQueries();
         // Set a delay because there is sometimes a brief delay in the file system getting written to
         setTimeout(() => {
@@ -45,6 +47,18 @@ program
     .description('Build the source gutter files')
     .action(async () => {
         buildGutters();
+    });
+
+/**
+ * Build the import files
+ *
+ * node scripts/build imports
+ */
+program
+    .command('imports')
+    .description('Build the import files')
+    .action(async () => {
+        buildImports();
     });
 
 /**

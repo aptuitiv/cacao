@@ -6,12 +6,14 @@ import chalk from 'chalk';
 import fancyLog from 'fancy-log';
 import fs from 'fs-extra';
 import logSymbols from 'log-symbols';
+import { basename } from 'path';
 import postcss from 'postcss';
 import * as prettier from 'prettier';
 import stylelint from 'stylelint';
 import postcssMediaWrap from '../../postcss/media.js';
 
-import { mediaQueryDirectories, mediaSizes } from './config.js';
+import { combinationFiles, mediaQueryDirectories, mediaSizes } from './config.js';
+import { buildModuleCombinationFile } from './helpers.js';
 
 /**
  * Wrap the CSS in the directory in media queries
@@ -24,12 +26,16 @@ import { mediaQueryDirectories, mediaSizes } from './config.js';
 const wrapDirectory = (dir) => new Promise((resolve) => {
     let dirPath = dir;
     let skip = [];
-    let combine = false;
     if (typeof dir !== 'string') {
         dirPath = dir.dir;
         skip = dir.skip ?? [];
-        combine = dir.combine ?? false;
     }
+    // Make sure skip is an array
+    if (!Array.isArray(skip)) {
+        skip = [skip];
+    }
+    // Include the variables.css file in the skip list
+    skip.push('variables.css');
 
     const files = [];
     fs.readdirSync(dirPath).forEach((file) => {
@@ -64,18 +70,12 @@ const wrapDirectory = (dir) => new Promise((resolve) => {
     });
 
     // Add the combined files
-    if (combine) {
+    const folder = basename(dirPath);
+    if (typeof combinationFiles[folder] !== 'undefined') {
+        const combineConfig = combinationFiles[folder];
         files.sort();
         mediaSizes.forEach((size) => {
-            const destPath = `${dirPath.replace(/^src/, 'dist')}/${size}/${combine}`;
-            // Create the combination file
-            let fileContents = '/* =========================================================================== *\n';
-            fileContents += `   Margin utilities - ${size} - imports all the ${size} margin utility files\n`;
-            fileContents += ' * =========================================================================== */\n\n';
-            files.forEach((file) => {
-                fileContents += `@import './${file}';\n`;
-            });
-            fs.writeFileSync(destPath, fileContents);
+            buildModuleCombinationFile(folder, `${folder}/${size}`, { files, size, commentModule: combineConfig.name ?? folder });
         });
     }
 });

@@ -9,7 +9,7 @@ import logSymbols from 'log-symbols';
 import { basename } from 'path';
 
 import {
-    distDirectory, importsModuleMap, mediaSizes, rootDirectory,
+    combinationFiles, distDirectory, importsModuleMap, mediaSizes, rootDirectory,
 } from './config.js';
 
 // The header for the imports file
@@ -29,11 +29,16 @@ const fileHeader = `/* =========================================================
     Only import what you need to keep the CSS file size down.
  * =========================================================================== */
 
-/* stylelint-disable comment-empty-line-before -- Disabled so that an extra line isn't added between each commented out code line. */
 `;
+// This may not be necessary anymore. Keeping this stylelint disable just in case we need to bring it back.
+// /* stylelint-disable comment-empty-line-before -- Disabled so that an extra line isn't added between each commented out code line. */
 
 // Set the core files to import. This should be all the files immediately in the dist directory.
 const coreImports = `
+/* -------------------------------------------- *
+    Core files that should always be included
+ * -------------------------------------------- */
+
 /* Media queries */
 @import 'cacao-css/dist/media.css';
 
@@ -48,14 +53,15 @@ const coreImports = `
  * Build the imports for the directory
  *
  * @param {string} directory The directory
- * @param {object} module The module object data
+ * @param {string} module The module name
+ * @param {object} moduleObject The module object data
  * @param {boolean} isSubDirectory If the directory is a subdirectory
  * @returns {string}
  */
-const buildDirectoryImports = (directory, module, isSubDirectory = false) => {
-    const moduleName = module.name;
-    const useVariables = module.variables ?? false;
-    const combinationFile = module.combine ?? false;
+const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory = false) => {
+    const moduleName = moduleObject.name;
+    const useVariables = moduleObject.variables ?? false;
+    const combinationFile = moduleObject.combine ?? false;
 
     const directoryPath = directory.replace(`${distDirectory}/`, '');
 
@@ -64,19 +70,13 @@ const buildDirectoryImports = (directory, module, isSubDirectory = false) => {
     const files = [];
     const directories = {};
 
+    const skip = ['combined-import.css', 'variables.css'];
     // Read the files from the directory and build the imports
     fs.readdirSync(directory).forEach((file) => {
         const srcPath = `${directory}/${file}`;
         const stats = fs.statSync(srcPath);
         if (stats.isFile() && file.endsWith('.css')) {
-            let useFile = true;
-            if (useVariables && file === 'variables.css') {
-                useFile = false;
-            }
-            if (combinationFile && file === combinationFile) {
-                useFile = false;
-            }
-            if (useFile) {
+            if (!skip.includes(file)) {
                 files.push(file);
             }
         } else if (stats.isDirectory()) {
@@ -88,17 +88,17 @@ const buildDirectoryImports = (directory, module, isSubDirectory = false) => {
     });
 
     if (!isSubDirectory && useVariables) {
-        fileContents += `\n/* ${moduleName} variables. This must be imported, or you must override the variables in your own CSS. */`;
-        fileContents += `\n@import 'cacao-css/dist/${directoryPath}/variables.css';\n`;
+        fileContents += `\n\n/* ${moduleName} variables. This must be imported, or you must override the variables in your own CSS. */`;
+        fileContents += `\n@import 'cacao-css/dist/${directoryPath}/variables.css';`;
     }
-    if (combinationFile) {
+    if (combinationFiles[module]) {
         if (isSubDirectory) {
-            fileContents += `\n/* Include all ${moduleName} ${basename(directoryPath)} files */`;
+            fileContents += `\n\n/* Include all ${moduleName} ${basename(directoryPath)} files */`;
         } else {
             fileContents += `\n/* Include all ${moduleName} files */`;
         }
-        fileContents += `\n@import 'cacao-css/dist/${directoryPath}/${combinationFile}';\n`;
-        fileContents += '\n/* or include individual files */';
+        fileContents += `\n@import 'cacao-css/dist/${directoryPath}/combined-import';\n`;
+        fileContents += '/* or include individual files */';
     }
 
     // Make sure that the files are in alphabetical order
@@ -119,7 +119,7 @@ const buildDirectoryImports = (directory, module, isSubDirectory = false) => {
             const fname = basename(dir);
             // Write the comment for the media query size
             fileContents += `\n/* ${moduleName} (${fname}) */`;
-            fileContents += buildDirectoryImports(dir, module, true);
+            fileContents += buildDirectoryImports(dir, module, moduleObject, true);
         }
     });
 
@@ -164,11 +164,11 @@ const buildImports = () => {
         const folderName = basename(directory);
         const module = importsModuleMap[folderName];
         // Write the comment for the module
-        fileContents += '\n/* ------------------------------------*';
+        fileContents += '\n/* --------------------------------------------*';
         fileContents += `\n   ${module.name}\n`;
-        fileContents += ' * ------------------------------------ */\n';
+        fileContents += ' * ------------------------------------------- */\n';
 
-        fileContents += buildDirectoryImports(directory, module);
+        fileContents += buildDirectoryImports(directory, folderName, module);
     });
 
     fs.writeFileSync(`${distDirectory}/imports.css`, fileContents);

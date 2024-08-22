@@ -1,0 +1,18 @@
+/* =========================================================================== *
+   Width utilities - xs - imports all the xs width utility files
+ * =========================================================================== */
+
+@import './width-0.css';
+@import './width-1.css';
+@import './width-10.css';
+@import './width-11.css';
+@import './width-12.css';
+@import './width-2.css';
+@import './width-3.css';
+@import './width-4.css';
+@import './width-5.css';
+@import './width-6.css';
+@import './width-7.css';
+@import './width-8.css';
+@import './width-9.css';
+@import './width-auto.css';

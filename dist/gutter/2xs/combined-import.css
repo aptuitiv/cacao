@@ -1,0 +1,7 @@
+/* =========================================================================== *
+   Gutter utilities - 2xs - imports all the 2xs gutter utility files
+ * =========================================================================== */
+
+@import './all.css';
+@import './horizontal.css';
+@import './vertical.css';

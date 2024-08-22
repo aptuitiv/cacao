@@ -1,7 +1,0 @@
-/* =========================================================================== *
-   Margin utilities - md - imports all the md margin utility files
- * =========================================================================== */
-
-@import './all.css';
-@import './horizontal.css';
-@import './vertical.css';
