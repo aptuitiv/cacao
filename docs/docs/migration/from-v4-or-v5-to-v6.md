@@ -62,17 +62,25 @@ There are a few manual changes that you'll need to do.
 If you're importing gutter classes then you'll need to add an import for the `variables.css` file.
 
 ```css
-/* Gutter variables. This must be imported or you may override the variables. */
+/* Gutter variables. This must be imported, or you must override the variables in your own CSS. */
 @import 'cacao-css/dist/gutter/variables.css';
 ```
 
+### Image variables
+
+If you're importing image classes then you'll need to add an import for the `variables.css` file.
+
+```css
+/* Image variables. This must be imported, or you must override the variables in your own CSS. */
+@import 'cacao-css/dist/image/variables.css';
+```
 
 ### Margin variables
 
 If you're importing margin classes then you'll need to add an import for the `variables.css` file.
 
 ```css
-/* Margin variables. This must be imported or you may override the variables. */
+/* Margin variables. This must be imported, or you must override the variables in your own CSS. */
 @import 'cacao-css/dist/margin/variables.css';
 ```
 
@@ -81,6 +89,6 @@ If you're importing margin classes then you'll need to add an import for the `va
 If you're importing padding classes then you'll need to add an import for the `variables.css` file.
 
 ```css
-/* Padding variables. This must be imported or you may override the variables. */
+/* Padding variables. This must be imported, or you must override the variables in your own CSS. */
 @import 'cacao-css/dist/padding/variables.css';
 ```

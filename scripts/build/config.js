@@ -45,7 +45,7 @@ export const importsModuleMap = {
     'grid-column': { name: 'Grid Columns' },
     gutter: { name: 'Gutter', variables: true, combine: 'gutter.css' },
     height: { name: 'Height' },
-    image: { name: 'Images' },
+    image: { name: 'Images', variables: true },
     link: { name: 'Links' },
     margin: { name: 'Margin', variables: true, combine: 'margin.css' },
     padding: { name: 'Padding', variables: true, combine: 'padding.css' },

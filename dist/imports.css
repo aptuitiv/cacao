@@ -426,7 +426,7 @@
    Gutter
  * ------------------------------------ */
 
-/* Gutter variables. This must be imported or you must override the variables. */
+/* Gutter variables. This must be imported, or you must override the variables in your own CSS. */
 @import 'cacao-css/dist/gutter/variables.css';
 
 /* Include all Gutter files */
@@ -737,6 +737,9 @@
    Images
  * ------------------------------------ */
 
+/* Images variables. This must be imported, or you must override the variables in your own CSS. */
+@import 'cacao-css/dist/image/variables.css';
+
 @import 'cacao-css/dist/image/image.css';
 
 
@@ -751,7 +754,7 @@
    Margin
  * ------------------------------------ */
 
-/* Margin variables. This must be imported or you must override the variables. */
+/* Margin variables. This must be imported, or you must override the variables in your own CSS. */
 @import 'cacao-css/dist/margin/variables.css';
 
 /* Include all Margin files */
@@ -914,7 +917,7 @@
    Padding
  * ------------------------------------ */
 
-/* Padding variables. This must be imported or you must override the variables. */
+/* Padding variables. This must be imported, or you must override the variables in your own CSS. */
 @import 'cacao-css/dist/padding/variables.css';
 
 /* Include all Padding files */

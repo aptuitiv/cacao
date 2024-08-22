@@ -6,32 +6,31 @@
 .image-right {
     display: block;
     height: auto;
-    margin-bottom: 10px;
-    width: 100%;
+    margin-bottom: var(--image-bottom-margin);
+    max-width: var(--image-max-width);
 }
 
 @media (--m-sm) {
     .image-left,
     .image-right {
         display: inline;
-        max-width: 50%;
-        width: unset;
+        max-width: var(--image-max-width-sm);
     }
 
     .image-left {
         float: left;
-        margin-right: 20px;
+        margin-right: var(--image-right-margin);
     }
 
     .image-right {
         float: right;
-        margin-left: 20px;
+        margin-left: var(--image-left-margin);
     }
 }
 
 @media (--m-md) {
     .image-left,
     .image-right {
-        max-width: 40%;
+        max-width: var(--image-max-width-md);
     }
 }
