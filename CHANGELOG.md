@@ -1,5 +1,20 @@
 # Changelog
 
+## 6.2.0 (August 22, 2024)
+
+- Added combined imports for the following modules.
+  - aspect
+  - display
+  - grid-column
+  - gutter (renamed from `gutter.css` to `combined-import.css`)
+  - height
+  - margin (renamed from `margin.css` to `combined-import.css`)
+  - padding (renamed from `padding.css` to `combined-import.css`)
+  - pull
+  - push
+  - typography
+  - width
+
 ## 6.1.0 (August 22, 2024)
 
 - Updated the internal build scripts.
