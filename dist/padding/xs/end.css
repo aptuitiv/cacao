@@ -1,29 +1,69 @@
-/* =========================================================================== *\
-    End padding utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   End padding utilities
+ * =========================================================================== */
 
 @media (--m-xs) {
     .pe-0-xs {
-        padding-right: 0;
+        padding-right: var(--padding-0);
     }
 
     .pe-1-xs {
-        padding-right: 10px;
+        padding-right: var(--padding-1);
     }
 
     .pe-2-xs {
-        padding-right: 20px;
+        padding-right: var(--padding-2);
     }
 
     .pe-3-xs {
-        padding-right: 30px;
+        padding-right: var(--padding-3);
     }
 
     .pe-4-xs {
-        padding-right: 40px;
+        padding-right: var(--padding-4);
     }
 
     .pe-5-xs {
-        padding-right: 50px;
+        padding-right: var(--padding-5);
+    }
+
+    .pe-6-xs {
+        padding-right: var(--padding-6);
+    }
+
+    .pe-7-xs {
+        padding-right: var(--padding-7);
+    }
+
+    .pe-8-xs {
+        padding-right: var(--padding-8);
+    }
+
+    .pe-9-xs {
+        padding-right: var(--padding-9);
+    }
+
+    .pe-10-xs {
+        padding-right: var(--padding-10);
+    }
+
+    .pe-11-xs {
+        padding-right: var(--padding-11);
+    }
+
+    .pe-12-xs {
+        padding-right: var(--padding-12);
+    }
+
+    .pe-13-xs {
+        padding-right: var(--padding-13);
+    }
+
+    .pe-14-xs {
+        padding-right: var(--padding-14);
+    }
+
+    .pe-15-xs {
+        padding-right: var(--padding-15);
     }
 }

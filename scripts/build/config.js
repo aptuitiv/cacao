@@ -26,7 +26,7 @@ export const mediaQueryDirectories = [
     'src/gutter',
     'src/height',
     { dir: 'src/margin', skip: ['margin.css', 'variables.css'], combine: 'margin.css' },
-    { dir: 'src/padding', skip: ['variables.css'] },
+    { dir: 'src/padding', skip: ['padding.css', 'variables.css'], combine: 'padding.css' },
     'src/position',
     { dir: 'src/pull', skip: ['pull.css'] },
     { dir: 'src/push', skip: ['push.css'] },

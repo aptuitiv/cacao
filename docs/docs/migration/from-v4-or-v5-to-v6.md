@@ -52,3 +52,25 @@ cacao-convert-v6 imports -f src/css/main.css
 You can then build your CSS with the new imports.
 
 You'll also need to update the CSS classes in your template files.
+
+## Manual changes
+
+There are a few manual changes that you'll need to do.
+
+### Margin variables
+
+If you're importing margin classes then you'll need to add an import for the `variables.css` file.
+
+```css
+/* Margin variables. This must be imported or you must override the variables. */
+@import 'cacao-css/dist/margin/variables.css';
+```
+
+### Padding variables
+
+If you're importing padding classes then you'll need to add an import for the `variables.css` file.
+
+```css
+/* Padding variables. This must be imported or you must override the variables. */
+@import 'cacao-css/dist/padding/variables.css';
+```

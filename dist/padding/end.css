@@ -1,27 +1,68 @@
-/* =========================================================================== *\
-    End padding utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   End padding utilities
+ * =========================================================================== */
+
 
 .pe-0 {
-    padding-right: 0;
+    padding-right: var(--padding-0);
 }
 
 .pe-1 {
-    padding-right: 10px;
+    padding-right: var(--padding-1);
 }
 
 .pe-2 {
-    padding-right: 20px;
+    padding-right: var(--padding-2);
 }
 
 .pe-3 {
-    padding-right: 30px;
+    padding-right: var(--padding-3);
 }
 
 .pe-4 {
-    padding-right: 40px;
+    padding-right: var(--padding-4);
 }
 
 .pe-5 {
-    padding-right: 50px;
+    padding-right: var(--padding-5);
+}
+
+.pe-6 {
+    padding-right: var(--padding-6);
+}
+
+.pe-7 {
+    padding-right: var(--padding-7);
+}
+
+.pe-8 {
+    padding-right: var(--padding-8);
+}
+
+.pe-9 {
+    padding-right: var(--padding-9);
+}
+
+.pe-10 {
+    padding-right: var(--padding-10);
+}
+
+.pe-11 {
+    padding-right: var(--padding-11);
+}
+
+.pe-12 {
+    padding-right: var(--padding-12);
+}
+
+.pe-13 {
+    padding-right: var(--padding-13);
+}
+
+.pe-14 {
+    padding-right: var(--padding-14);
+}
+
+.pe-15 {
+    padding-right: var(--padding-15);
 }

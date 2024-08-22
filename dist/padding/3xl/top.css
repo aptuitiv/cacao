@@ -1,29 +1,69 @@
-/* =========================================================================== *\
-    Top padding utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Top padding utilities
+ * =========================================================================== */
 
 @media (--m-3xl) {
     .pt-0-3xl {
-        padding-top: 0;
+        padding-top: var(--padding-0);
     }
 
     .pt-1-3xl {
-        padding-top: 10px;
+        padding-top: var(--padding-1);
     }
 
     .pt-2-3xl {
-        padding-top: 20px;
+        padding-top: var(--padding-2);
     }
 
     .pt-3-3xl {
-        padding-top: 30px;
+        padding-top: var(--padding-3);
     }
 
     .pt-4-3xl {
-        padding-top: 40px;
+        padding-top: var(--padding-4);
     }
 
     .pt-5-3xl {
-        padding-top: 50px;
+        padding-top: var(--padding-5);
+    }
+
+    .pt-6-3xl {
+        padding-top: var(--padding-6);
+    }
+
+    .pt-7-3xl {
+        padding-top: var(--padding-7);
+    }
+
+    .pt-8-3xl {
+        padding-top: var(--padding-8);
+    }
+
+    .pt-9-3xl {
+        padding-top: var(--padding-9);
+    }
+
+    .pt-10-3xl {
+        padding-top: var(--padding-10);
+    }
+
+    .pt-11-3xl {
+        padding-top: var(--padding-11);
+    }
+
+    .pt-12-3xl {
+        padding-top: var(--padding-12);
+    }
+
+    .pt-13-3xl {
+        padding-top: var(--padding-13);
+    }
+
+    .pt-14-3xl {
+        padding-top: var(--padding-14);
+    }
+
+    .pt-15-3xl {
+        padding-top: var(--padding-15);
     }
 }

@@ -863,6 +863,13 @@
    Padding
  * ------------------------------------ */
 
+/* Padding variables. This must be imported or you must override the variables. */
+@import 'cacao-css/dist/padding/variables.css';
+
+/* Include all Padding files */
+@import 'cacao-css/dist/padding/padding.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/padding/all.css';
 @import 'cacao-css/dist/padding/bottom.css';
 @import 'cacao-css/dist/padding/end.css';
@@ -872,6 +879,10 @@
 @import 'cacao-css/dist/padding/vertical.css';
 
 /* Padding (3xs) */
+/* Include all Padding 3xs files */
+@import 'cacao-css/dist/padding/3xs/padding.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/padding/3xs/all.css';
 @import 'cacao-css/dist/padding/3xs/bottom.css';
 @import 'cacao-css/dist/padding/3xs/end.css';
@@ -881,6 +892,10 @@
 @import 'cacao-css/dist/padding/3xs/vertical.css';
 
 /* Padding (2xs) */
+/* Include all Padding 2xs files */
+@import 'cacao-css/dist/padding/2xs/padding.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/padding/2xs/all.css';
 @import 'cacao-css/dist/padding/2xs/bottom.css';
 @import 'cacao-css/dist/padding/2xs/end.css';
@@ -890,6 +905,10 @@
 @import 'cacao-css/dist/padding/2xs/vertical.css';
 
 /* Padding (xs) */
+/* Include all Padding xs files */
+@import 'cacao-css/dist/padding/xs/padding.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/padding/xs/all.css';
 @import 'cacao-css/dist/padding/xs/bottom.css';
 @import 'cacao-css/dist/padding/xs/end.css';
@@ -899,6 +918,10 @@
 @import 'cacao-css/dist/padding/xs/vertical.css';
 
 /* Padding (sm) */
+/* Include all Padding sm files */
+@import 'cacao-css/dist/padding/sm/padding.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/padding/sm/all.css';
 @import 'cacao-css/dist/padding/sm/bottom.css';
 @import 'cacao-css/dist/padding/sm/end.css';
@@ -908,6 +931,10 @@
 @import 'cacao-css/dist/padding/sm/vertical.css';
 
 /* Padding (md) */
+/* Include all Padding md files */
+@import 'cacao-css/dist/padding/md/padding.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/padding/md/all.css';
 @import 'cacao-css/dist/padding/md/bottom.css';
 @import 'cacao-css/dist/padding/md/end.css';
@@ -917,6 +944,10 @@
 @import 'cacao-css/dist/padding/md/vertical.css';
 
 /* Padding (lg) */
+/* Include all Padding lg files */
+@import 'cacao-css/dist/padding/lg/padding.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/padding/lg/all.css';
 @import 'cacao-css/dist/padding/lg/bottom.css';
 @import 'cacao-css/dist/padding/lg/end.css';
@@ -926,6 +957,10 @@
 @import 'cacao-css/dist/padding/lg/vertical.css';
 
 /* Padding (xl) */
+/* Include all Padding xl files */
+@import 'cacao-css/dist/padding/xl/padding.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/padding/xl/all.css';
 @import 'cacao-css/dist/padding/xl/bottom.css';
 @import 'cacao-css/dist/padding/xl/end.css';
@@ -935,6 +970,10 @@
 @import 'cacao-css/dist/padding/xl/vertical.css';
 
 /* Padding (2xl) */
+/* Include all Padding 2xl files */
+@import 'cacao-css/dist/padding/2xl/padding.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/padding/2xl/all.css';
 @import 'cacao-css/dist/padding/2xl/bottom.css';
 @import 'cacao-css/dist/padding/2xl/end.css';
@@ -944,6 +983,10 @@
 @import 'cacao-css/dist/padding/2xl/vertical.css';
 
 /* Padding (3xl) */
+/* Include all Padding 3xl files */
+@import 'cacao-css/dist/padding/3xl/padding.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/padding/3xl/all.css';
 @import 'cacao-css/dist/padding/3xl/bottom.css';
 @import 'cacao-css/dist/padding/3xl/end.css';
@@ -953,6 +996,10 @@
 @import 'cacao-css/dist/padding/3xl/vertical.css';
 
 /* Padding (4xl) */
+/* Include all Padding 4xl files */
+@import 'cacao-css/dist/padding/4xl/padding.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/padding/4xl/all.css';
 @import 'cacao-css/dist/padding/4xl/bottom.css';
 @import 'cacao-css/dist/padding/4xl/end.css';
@@ -962,6 +1009,10 @@
 @import 'cacao-css/dist/padding/4xl/vertical.css';
 
 /* Padding (5xl) */
+/* Include all Padding 5xl files */
+@import 'cacao-css/dist/padding/5xl/padding.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/padding/5xl/all.css';
 @import 'cacao-css/dist/padding/5xl/bottom.css';
 @import 'cacao-css/dist/padding/5xl/end.css';

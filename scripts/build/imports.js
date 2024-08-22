@@ -26,7 +26,7 @@ const moduleMap = {
     image: { name: 'Images' },
     link: { name: 'Links' },
     margin: { name: 'Margin', variables: true, combine: 'margin.css' },
-    padding: { name: 'Padding' },
+    padding: { name: 'Padding', variables: true, combine: 'padding.css' },
     position: { name: 'Position' },
     pull: { name: 'Pull' },
     push: { name: 'Push' },

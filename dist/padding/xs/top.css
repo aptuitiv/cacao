@@ -1,29 +1,69 @@
-/* =========================================================================== *\
-    Top padding utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Top padding utilities
+ * =========================================================================== */
 
 @media (--m-xs) {
     .pt-0-xs {
-        padding-top: 0;
+        padding-top: var(--padding-0);
     }
 
     .pt-1-xs {
-        padding-top: 10px;
+        padding-top: var(--padding-1);
     }
 
     .pt-2-xs {
-        padding-top: 20px;
+        padding-top: var(--padding-2);
     }
 
     .pt-3-xs {
-        padding-top: 30px;
+        padding-top: var(--padding-3);
     }
 
     .pt-4-xs {
-        padding-top: 40px;
+        padding-top: var(--padding-4);
     }
 
     .pt-5-xs {
-        padding-top: 50px;
+        padding-top: var(--padding-5);
+    }
+
+    .pt-6-xs {
+        padding-top: var(--padding-6);
+    }
+
+    .pt-7-xs {
+        padding-top: var(--padding-7);
+    }
+
+    .pt-8-xs {
+        padding-top: var(--padding-8);
+    }
+
+    .pt-9-xs {
+        padding-top: var(--padding-9);
+    }
+
+    .pt-10-xs {
+        padding-top: var(--padding-10);
+    }
+
+    .pt-11-xs {
+        padding-top: var(--padding-11);
+    }
+
+    .pt-12-xs {
+        padding-top: var(--padding-12);
+    }
+
+    .pt-13-xs {
+        padding-top: var(--padding-13);
+    }
+
+    .pt-14-xs {
+        padding-top: var(--padding-14);
+    }
+
+    .pt-15-xs {
+        padding-top: var(--padding-15);
     }
 }
