@@ -88,7 +88,7 @@ const buildDirectoryImports = (directory, module, isSubDirectory = false) => {
     });
 
     if (!isSubDirectory && useVariables) {
-        fileContents += `\n/* ${moduleName} variables. This must be imported or you must override the variables. */`;
+        fileContents += `\n/* ${moduleName} variables. This must be imported, or you must override the variables in your own CSS. */`;
         fileContents += `\n@import 'cacao-css/dist/${directoryPath}/variables.css';\n`;
     }
     if (combinationFile) {
