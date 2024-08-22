@@ -6,6 +6,7 @@ import chalk from 'chalk';
 import fancyLog from 'fancy-log';
 import fs from 'fs-extra';
 import logSymbols from 'log-symbols';
+import { basename } from 'path';
 import postcss from 'postcss';
 import * as prettier from 'prettier';
 import stylelint from 'stylelint';
@@ -25,10 +26,15 @@ const wrapDirectory = (dir) => new Promise((resolve) => {
     let dirPath = dir;
     let skip = [];
     let combine = false;
+    let commentModule = '';
     if (typeof dir !== 'string') {
         dirPath = dir.dir;
         skip = dir.skip ?? [];
         combine = dir.combine ?? false;
+        commentModule = dir.commentModule ?? '';
+    }
+    if (commentModule.length === 0) {
+        commentModule = basename(dirPath);
     }
 
     const files = [];
@@ -70,7 +76,7 @@ const wrapDirectory = (dir) => new Promise((resolve) => {
             const destPath = `${dirPath.replace(/^src/, 'dist')}/${size}/${combine}`;
             // Create the combination file
             let fileContents = '/* =========================================================================== *\n';
-            fileContents += `   Margin utilities - ${size} - imports all the ${size} margin utility files\n`;
+            fileContents += `   ${commentModule.charAt(0).toUpperCase() + commentModule.slice(1)} utilities - ${size} - imports all the ${size} ${commentModule.toLowerCase()} utility files\n`;
             fileContents += ' * =========================================================================== */\n\n';
             files.forEach((file) => {
                 fileContents += `@import './${file}';\n`;
