@@ -1,0 +1,36 @@
+{
+    "name": "cacao-test-site",
+    "version": "1.0.0",
+    "description": "Test site for Cacao CSS",
+    "author": "",
+    "license": "Apache-2.0",
+    "scripts": {
+        "build": "aptuitiv-build build",
+        "copy": "aptuitiv-build copy",
+        "css": "aptuitiv-build css",
+        "deploy": "aptuitiv-build upload -t",
+        "download-theme": "aptuitiv-build download -t",
+        "export": "aptuitiv-build export",
+        "fonts": "aptuitiv-build push-fonts",
+        "icons": "aptuitiv-build icons",
+        "images": "aptuitiv-build images",
+        "init": "aptuitiv-build init",
+        "js": "aptuitiv-build js",
+        "jslint": "aptuitiv-build jslint",
+        "start": "aptuitiv-build start",
+        "stylelint": "aptuitiv-build stylelint",
+        "templates": "aptuitiv-build push-templates",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "theme-config": "aptuitiv-build push-theme-config",
+        "upload-theme": "aptuitiv-build upload -t",
+        "watch": "aptuitiv-build watch"
+    },
+    "devDependencies": {
+        "@aptuitiv/website-build-tools": "^1.13.1"
+    },
+    "dependencies": {},
+    "engines": {
+        "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    },
+    "type": "module"
+}

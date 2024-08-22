@@ -1,0 +1,45 @@
+/* =========================================================================== *
+
+    Cacao CSS
+
+    This file includes all the possible imports for the Cacao CSS framework.
+
+    The Cacao styles need to come after site styles so that they can override
+    where necessary. For example, the "hidden" style should be able to override
+    some styles when it's added to an element.
+
+    Add the Cacao CSS to your project by copying the imports from this file to
+    your main CSS file. Put the imports after your site styles.
+
+    Only import what you need to keep the CSS file size down.
+ * =========================================================================== */
+
+/* Media queries */
+@import '../../../dist/media.css';
+
+/* Reset */
+@import '../../../dist/reset.css';
+
+/* Base */
+@import '../../../dist/base.css';
+
+/* ------------------------------------*
+   Images
+ * ------------------------------------ */
+
+/* Image variables. This must be imported, or you must override the variables in your own CSS. */
+@import '../../../dist/image/variables.css';
+@import '../../../dist/image/image.css';
+
+/* ------------------------------------ *\
+    Cacao variable overrides
+\* ------------------------------------ */
+
+/* :where(html) {
+    --image-bottom-margin: 100px;
+    --image-left-margin: 290px;
+    --image-max-width: 50%;
+    --image-max-width-md: 60%;
+    --image-max-width-sm: 70%;
+    --image-right-margin: 200px;
+} */
