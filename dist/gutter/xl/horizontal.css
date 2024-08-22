@@ -1,30 +1,70 @@
-/* =========================================================================== *\
-    Horizontal gutter utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Horizontal gutter utilities
+ * =========================================================================== */
 
 @media (--m-xl) {
     .gx-0-xl {
-        --gap: 0px;
+        --gap: var(--gutter-0);
     }
 
     .gx-1-xl {
-        --gap: 10px;
+        --gap: var(--gutter-1);
     }
 
     .gx-2-xl {
-        --gap: 20px;
+        --gap: var(--gutter-2);
     }
 
     .gx-3-xl {
-        --gap: 30px;
+        --gap: var(--gutter-3);
     }
 
     .gx-4-xl {
-        --gap: 40px;
+        --gap: var(--gutter-4);
     }
 
     .gx-5-xl {
-        --gap: 50px;
+        --gap: var(--gutter-5);
+    }
+
+    .gx-6-xl {
+        --gap: var(--gutter-6);
+    }
+
+    .gx-7-xl {
+        --gap: var(--gutter-7);
+    }
+
+    .gx-8-xl {
+        --gap: var(--gutter-8);
+    }
+
+    .gx-9-xl {
+        --gap: var(--gutter-9);
+    }
+
+    .gx-10-xl {
+        --gap: var(--gutter-10);
+    }
+
+    .gx-11-xl {
+        --gap: var(--gutter-11);
+    }
+
+    .gx-12-xl {
+        --gap: var(--gutter-12);
+    }
+
+    .gx-13-xl {
+        --gap: var(--gutter-13);
+    }
+
+    .gx-14-xl {
+        --gap: var(--gutter-14);
+    }
+
+    .gx-15-xl {
+        --gap: var(--gutter-15);
     }
 
     .gx-0-xl,
@@ -32,7 +72,17 @@
     .gx-2-xl,
     .gx-3-xl,
     .gx-4-xl,
-    .gx-5-xl {
+    .gx-5-xl,
+    .gx-6-xl,
+    .gx-7-xl,
+    .gx-8-xl,
+    .gx-9-xl,
+    .gx-10-xl,
+    .gx-11-xl,
+    .gx-12-xl,
+    .gx-13-xl,
+    .gx-14-xl,
+    .gx-15-xl {
         column-gap: var(--gap);
     }
 }

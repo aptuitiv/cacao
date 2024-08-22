@@ -1,0 +1,26 @@
+/* =========================================================================== *
+  Variables for the gutter sizes
+ * =========================================================================== */
+
+@media (--m-xs) {
+    /* :where() is used to give the variables no specificity so that they are easily overriden. https://developer.mozilla.org/en-US/docs/Web/CSS/:where     */
+
+    :where(html)-xs {
+        --gutter-0: 0px;
+        --gutter-1: 10px;
+        --gutter-2: 20px;
+        --gutter-3: 30px;
+        --gutter-4: 40px;
+        --gutter-5: 50px;
+        --gutter-6: 60px;
+        --gutter-7: 70px;
+        --gutter-8: 80px;
+        --gutter-9: 90px;
+        --gutter-10: 100px;
+        --gutter-11: 120px;
+        --gutter-12: 160px;
+        --gutter-13: 240px;
+        --gutter-14: 320px;
+        --gutter-15: 480px;
+    }
+}

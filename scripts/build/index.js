@@ -5,6 +5,7 @@
 import { Command } from 'commander';
 
 import copyFiles from './copy-files.js';
+import buildGutters from './gutter.js';
 import buildImports from './imports.js';
 import buildMargins from './margin.js';
 import buildPaddings from './padding.js';
@@ -23,6 +24,7 @@ program
     .command('all')
     .description('Build all the CSS files to the dist directory')
     .action(async () => {
+        await buildGutters();
         await buildMargins();
         await buildPaddings();
         await copyFiles();
@@ -31,6 +33,18 @@ program
         setTimeout(() => {
             buildImports();
         }, 500);
+    });
+
+/**
+ * Build the src gutter files
+ *
+ * node scripts/build gutters
+ */
+program
+    .command('gutters')
+    .description('Build the source gutter files')
+    .action(async () => {
+        buildGutters();
     });
 
 /**

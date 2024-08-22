@@ -9,31 +9,8 @@ import logSymbols from 'log-symbols';
 import { basename } from 'path';
 
 import {
-    distDirectory, mediaSizes, rootDirectory,
+    distDirectory, importsModuleMap, mediaSizes, rootDirectory,
 } from './config.js';
-
-// Map the module names to the directory names
-const moduleMap = {
-    aspect: { name: 'Aspect Ratios' },
-    clearfix: { name: 'Clearfix' },
-    display: { name: 'Display' },
-    embed: { name: 'Embed' },
-    fit: { name: 'Fit' },
-    grid: { name: 'Grid' },
-    'grid-column': { name: 'Grid Columns' },
-    gutter: { name: 'Gutter' },
-    height: { name: 'Height' },
-    image: { name: 'Images' },
-    link: { name: 'Links' },
-    margin: { name: 'Margin', variables: true, combine: 'margin.css' },
-    padding: { name: 'Padding', variables: true, combine: 'padding.css' },
-    position: { name: 'Position' },
-    pull: { name: 'Pull' },
-    push: { name: 'Push' },
-    spacing: { name: 'Spacing' },
-    typography: { name: 'Typography' },
-    width: { name: 'Width' },
-};
 
 // The header for the imports file
 const fileHeader = `/* =========================================================================== *
@@ -185,7 +162,7 @@ const buildImports = () => {
     // Build the imports for the directories
     directories.forEach((directory) => {
         const folderName = basename(directory);
-        const module = moduleMap[folderName];
+        const module = importsModuleMap[folderName];
         // Write the comment for the module
         fileContents += '\n/* ------------------------------------*';
         fileContents += `\n   ${module.name}\n`;

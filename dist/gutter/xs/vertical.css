@@ -1,30 +1,70 @@
-/* =========================================================================== *\
-    Vertical gutter utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Vertical gutter utilities
+ * =========================================================================== */
 
 @media (--m-xs) {
     .gy-0-xs {
-        --row-gap: 0px;
+        --row-gap: var(--gutter-0);
     }
 
     .gy-1-xs {
-        --row-gap: 10px;
+        --row-gap: var(--gutter-1);
     }
 
     .gy-2-xs {
-        --row-gap: 20px;
+        --row-gap: var(--gutter-2);
     }
 
     .gy-3-xs {
-        --row-gap: 30px;
+        --row-gap: var(--gutter-3);
     }
 
     .gy-4-xs {
-        --row-gap: 40px;
+        --row-gap: var(--gutter-4);
     }
 
     .gy-5-xs {
-        --row-gap: 50px;
+        --row-gap: var(--gutter-5);
+    }
+
+    .gy-6-xs {
+        --row-gap: var(--gutter-6);
+    }
+
+    .gy-7-xs {
+        --row-gap: var(--gutter-7);
+    }
+
+    .gy-8-xs {
+        --row-gap: var(--gutter-8);
+    }
+
+    .gy-9-xs {
+        --row-gap: var(--gutter-9);
+    }
+
+    .gy-10-xs {
+        --row-gap: var(--gutter-10);
+    }
+
+    .gy-11-xs {
+        --row-gap: var(--gutter-11);
+    }
+
+    .gy-12-xs {
+        --row-gap: var(--gutter-12);
+    }
+
+    .gy-13-xs {
+        --row-gap: var(--gutter-13);
+    }
+
+    .gy-14-xs {
+        --row-gap: var(--gutter-14);
+    }
+
+    .gy-15-xs {
+        --row-gap: var(--gutter-15);
     }
 
     .gy-0-xs,
@@ -32,7 +72,17 @@
     .gy-2-xs,
     .gy-3-xs,
     .gy-4-xs,
-    .gy-5-xs {
+    .gy-5-xs,
+    .gy-6-xs,
+    .gy-7-xs,
+    .gy-8-xs,
+    .gy-9-xs,
+    .gy-10-xs,
+    .gy-11-xs,
+    .gy-12-xs,
+    .gy-13-xs,
+    .gy-14-xs,
+    .gy-15-xs {
         row-gap: var(--row-gap);
     }
 }

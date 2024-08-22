@@ -1,30 +1,70 @@
-/* =========================================================================== *\
-    All directions gutter utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   All directions gutter utilities
+ * =========================================================================== */
 
 @media (--m-md) {
     .g-0-md {
-        --gap: 0px;
+        --gap: var(--gutter-0);
     }
 
     .g-1-md {
-        --gap: 10px;
+        --gap: var(--gutter-1);
     }
 
     .g-2-md {
-        --gap: 20px;
+        --gap: var(--gutter-2);
     }
 
     .g-3-md {
-        --gap: 30px;
+        --gap: var(--gutter-3);
     }
 
     .g-4-md {
-        --gap: 40px;
+        --gap: var(--gutter-4);
     }
 
     .g-5-md {
-        --gap: 50px;
+        --gap: var(--gutter-5);
+    }
+
+    .g-6-md {
+        --gap: var(--gutter-6);
+    }
+
+    .g-7-md {
+        --gap: var(--gutter-7);
+    }
+
+    .g-8-md {
+        --gap: var(--gutter-8);
+    }
+
+    .g-9-md {
+        --gap: var(--gutter-9);
+    }
+
+    .g-10-md {
+        --gap: var(--gutter-10);
+    }
+
+    .g-11-md {
+        --gap: var(--gutter-11);
+    }
+
+    .g-12-md {
+        --gap: var(--gutter-12);
+    }
+
+    .g-13-md {
+        --gap: var(--gutter-13);
+    }
+
+    .g-14-md {
+        --gap: var(--gutter-14);
+    }
+
+    .g-15-md {
+        --gap: var(--gutter-15);
     }
 
     .g-0-md,
@@ -32,7 +72,17 @@
     .g-2-md,
     .g-3-md,
     .g-4-md,
-    .g-5-md {
+    .g-5-md,
+    .g-6-md,
+    .g-7-md,
+    .g-8-md,
+    .g-9-md,
+    .g-10-md,
+    .g-11-md,
+    .g-12-md,
+    .g-13-md,
+    .g-14-md,
+    .g-15-md {
         gap: var(--gap);
     }
 }
