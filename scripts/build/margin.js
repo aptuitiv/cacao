@@ -14,6 +14,8 @@ import { buildModuleCombinationFile, buildModuleSideFileContent, createModuleVar
 
 /**
  * Build the margin class files
+ *
+ * @returns {Promise<void>}
  */
 const buildMarginsFiles = () => new Promise((resolve) => {
     const sides = {

@@ -10,8 +10,8 @@ import logSymbols from 'log-symbols';
 /**
  * Create the variables file for the module
  *
- * @param {object} sizes The sizes object
  * @param {string} module The module name. It should be lowercase and singular
+ * @param {object} sizes The sizes object
  * @returns {Promise<void>}
  */
 export const createModuleVariables = (module, sizes) => new Promise((resolve) => {
@@ -36,7 +36,7 @@ export const createModuleVariables = (module, sizes) => new Promise((resolve) =>
  *
  * @param {string} module The module to build the side styles for
  * @param {object} sideObject The side object containing the class, comment, and property
- * @returns
+ * @returns {string}
  */
 export const buildModuleSideFileContent = (module, sideObject) => {
     let fileContents = '/* =========================================================================== *\n';

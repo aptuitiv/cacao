@@ -14,6 +14,8 @@ import { buildModuleCombinationFile, buildModuleSideFileContent, createModuleVar
 
 /**
  * Build the padding class files
+ *
+ * @returns {Promise<void>}
  */
 const buildPaddingsFiles = () => new Promise((resolve) => {
     const sides = {

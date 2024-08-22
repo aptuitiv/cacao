@@ -14,6 +14,8 @@ import { buildModuleCombinationFile, buildModuleSideFileContent, createModuleVar
 
 /**
  * Build the gutter class files
+ *
+ * @returns {Promise<void>}
  */
 const buildGuttersFiles = () => new Promise((resolve) => {
     const sides = {
