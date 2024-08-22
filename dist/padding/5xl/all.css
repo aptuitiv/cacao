@@ -1,29 +1,69 @@
-/* =========================================================================== *\
-    All sides padding utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   All sides padding utilities
+ * =========================================================================== */
 
 @media (--m-5xl) {
     .p-0-5xl {
-        padding: 0;
+        padding: var(--padding-0);
     }
 
     .p-1-5xl {
-        padding: 10px;
+        padding: var(--padding-1);
     }
 
     .p-2-5xl {
-        padding: 20px;
+        padding: var(--padding-2);
     }
 
     .p-3-5xl {
-        padding: 30px;
+        padding: var(--padding-3);
     }
 
     .p-4-5xl {
-        padding: 40px;
+        padding: var(--padding-4);
     }
 
     .p-5-5xl {
-        padding: 50px;
+        padding: var(--padding-5);
+    }
+
+    .p-6-5xl {
+        padding: var(--padding-6);
+    }
+
+    .p-7-5xl {
+        padding: var(--padding-7);
+    }
+
+    .p-8-5xl {
+        padding: var(--padding-8);
+    }
+
+    .p-9-5xl {
+        padding: var(--padding-9);
+    }
+
+    .p-10-5xl {
+        padding: var(--padding-10);
+    }
+
+    .p-11-5xl {
+        padding: var(--padding-11);
+    }
+
+    .p-12-5xl {
+        padding: var(--padding-12);
+    }
+
+    .p-13-5xl {
+        padding: var(--padding-13);
+    }
+
+    .p-14-5xl {
+        padding: var(--padding-14);
+    }
+
+    .p-15-5xl {
+        padding: var(--padding-15);
     }
 }

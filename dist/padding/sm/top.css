@@ -1,29 +1,69 @@
-/* =========================================================================== *\
-    Top padding utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Top padding utilities
+ * =========================================================================== */
 
 @media (--m-sm) {
     .pt-0-sm {
-        padding-top: 0;
+        padding-top: var(--padding-0);
     }
 
     .pt-1-sm {
-        padding-top: 10px;
+        padding-top: var(--padding-1);
     }
 
     .pt-2-sm {
-        padding-top: 20px;
+        padding-top: var(--padding-2);
     }
 
     .pt-3-sm {
-        padding-top: 30px;
+        padding-top: var(--padding-3);
     }
 
     .pt-4-sm {
-        padding-top: 40px;
+        padding-top: var(--padding-4);
     }
 
     .pt-5-sm {
-        padding-top: 50px;
+        padding-top: var(--padding-5);
+    }
+
+    .pt-6-sm {
+        padding-top: var(--padding-6);
+    }
+
+    .pt-7-sm {
+        padding-top: var(--padding-7);
+    }
+
+    .pt-8-sm {
+        padding-top: var(--padding-8);
+    }
+
+    .pt-9-sm {
+        padding-top: var(--padding-9);
+    }
+
+    .pt-10-sm {
+        padding-top: var(--padding-10);
+    }
+
+    .pt-11-sm {
+        padding-top: var(--padding-11);
+    }
+
+    .pt-12-sm {
+        padding-top: var(--padding-12);
+    }
+
+    .pt-13-sm {
+        padding-top: var(--padding-13);
+    }
+
+    .pt-14-sm {
+        padding-top: var(--padding-14);
+    }
+
+    .pt-15-sm {
+        padding-top: var(--padding-15);
     }
 }

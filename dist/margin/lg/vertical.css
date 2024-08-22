@@ -1,35 +1,85 @@
-/* =========================================================================== *\
-    Vertical margin utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Vertical margin utilities
+ * =========================================================================== */
 
 @media (--m-lg) {
     .my-0-lg {
-        margin-bottom: 0;
-        margin-top: 0;
+        margin-bottom: var(--margin-0);
+        margin-top: var(--margin-0);
     }
 
     .my-1-lg {
-        margin-bottom: 10px;
-        margin-top: 10px;
+        margin-bottom: var(--margin-1);
+        margin-top: var(--margin-1);
     }
 
     .my-2-lg {
-        margin-bottom: 20px;
-        margin-top: 20px;
+        margin-bottom: var(--margin-2);
+        margin-top: var(--margin-2);
     }
 
     .my-3-lg {
-        margin-bottom: 30px;
-        margin-top: 30px;
+        margin-bottom: var(--margin-3);
+        margin-top: var(--margin-3);
     }
 
     .my-4-lg {
-        margin-bottom: 40px;
-        margin-top: 40px;
+        margin-bottom: var(--margin-4);
+        margin-top: var(--margin-4);
     }
 
     .my-5-lg {
-        margin-bottom: 50px;
-        margin-top: 50px;
+        margin-bottom: var(--margin-5);
+        margin-top: var(--margin-5);
+    }
+
+    .my-6-lg {
+        margin-bottom: var(--margin-6);
+        margin-top: var(--margin-6);
+    }
+
+    .my-7-lg {
+        margin-bottom: var(--margin-7);
+        margin-top: var(--margin-7);
+    }
+
+    .my-8-lg {
+        margin-bottom: var(--margin-8);
+        margin-top: var(--margin-8);
+    }
+
+    .my-9-lg {
+        margin-bottom: var(--margin-9);
+        margin-top: var(--margin-9);
+    }
+
+    .my-10-lg {
+        margin-bottom: var(--margin-10);
+        margin-top: var(--margin-10);
+    }
+
+    .my-11-lg {
+        margin-bottom: var(--margin-11);
+        margin-top: var(--margin-11);
+    }
+
+    .my-12-lg {
+        margin-bottom: var(--margin-12);
+        margin-top: var(--margin-12);
+    }
+
+    .my-13-lg {
+        margin-bottom: var(--margin-13);
+        margin-top: var(--margin-13);
+    }
+
+    .my-14-lg {
+        margin-bottom: var(--margin-14);
+        margin-top: var(--margin-14);
+    }
+
+    .my-15-lg {
+        margin-bottom: var(--margin-15);
+        margin-top: var(--margin-15);
     }
 }

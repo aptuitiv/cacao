@@ -1,7 +1,7 @@
 {
     "name": "cacao-css",
     "description": "A set of composable CSS utilities that provide a solid foundation for website projects.",
-    "version": "6.0.0",
+    "version": "6.1.0",
     "author": "Aptuitiv, Inc <hello@aptuitiv.com>",
     "license": "MIT",
     "repository": {
@@ -17,11 +17,14 @@
     },
     "files": [
         "dist",
-        "scripts"
+        "scripts/v6"
     ],
     "type": "module",
     "scripts": {
-        "build": "node src/build.js",
+        "build": "node scripts/build all",
+        "build-gutters": "node scripts/build gutters",
+        "build-margins": "node scripts/build margins",
+        "build-paddings": "node scripts/build paddings",
         "eslint": "eslint --fix .",
         "watch": "esw -w --color --fix ."
     },

@@ -1,0 +1,24 @@
+/* =========================================================================== *
+  Variables for the margin sizes
+ * =========================================================================== */
+
+/* :where() is used to give the variables no specificity so that they are easily overriden. https://developer.mozilla.org/en-US/docs/Web/CSS/:where */
+
+:where(html) {
+    --margin-0: 0px;
+    --margin-1: 10px;
+    --margin-2: 20px;
+    --margin-3: 30px;
+    --margin-4: 40px;
+    --margin-5: 50px;
+    --margin-6: 60px;
+    --margin-7: 70px;
+    --margin-8: 80px;
+    --margin-9: 90px;
+    --margin-10: 100px;
+    --margin-11: 120px;
+    --margin-12: 160px;
+    --margin-13: 240px;
+    --margin-14: 320px;
+    --margin-15: 480px;
+}

@@ -1,29 +1,69 @@
-/* =========================================================================== *\
-    Start padding utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Start padding utilities
+ * =========================================================================== */
 
 @media (--m-sm) {
     .ps-0-sm {
-        padding-left: 0;
+        padding-left: var(--padding-0);
     }
 
     .ps-1-sm {
-        padding-left: 10px;
+        padding-left: var(--padding-1);
     }
 
     .ps-2-sm {
-        padding-left: 20px;
+        padding-left: var(--padding-2);
     }
 
     .ps-3-sm {
-        padding-left: 30px;
+        padding-left: var(--padding-3);
     }
 
     .ps-4-sm {
-        padding-left: 40px;
+        padding-left: var(--padding-4);
     }
 
     .ps-5-sm {
-        padding-left: 50px;
+        padding-left: var(--padding-5);
+    }
+
+    .ps-6-sm {
+        padding-left: var(--padding-6);
+    }
+
+    .ps-7-sm {
+        padding-left: var(--padding-7);
+    }
+
+    .ps-8-sm {
+        padding-left: var(--padding-8);
+    }
+
+    .ps-9-sm {
+        padding-left: var(--padding-9);
+    }
+
+    .ps-10-sm {
+        padding-left: var(--padding-10);
+    }
+
+    .ps-11-sm {
+        padding-left: var(--padding-11);
+    }
+
+    .ps-12-sm {
+        padding-left: var(--padding-12);
+    }
+
+    .ps-13-sm {
+        padding-left: var(--padding-13);
+    }
+
+    .ps-14-sm {
+        padding-left: var(--padding-14);
+    }
+
+    .ps-15-sm {
+        padding-left: var(--padding-15);
     }
 }

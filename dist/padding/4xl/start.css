@@ -1,29 +1,69 @@
-/* =========================================================================== *\
-    Start padding utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Start padding utilities
+ * =========================================================================== */
 
 @media (--m-4xl) {
     .ps-0-4xl {
-        padding-left: 0;
+        padding-left: var(--padding-0);
     }
 
     .ps-1-4xl {
-        padding-left: 10px;
+        padding-left: var(--padding-1);
     }
 
     .ps-2-4xl {
-        padding-left: 20px;
+        padding-left: var(--padding-2);
     }
 
     .ps-3-4xl {
-        padding-left: 30px;
+        padding-left: var(--padding-3);
     }
 
     .ps-4-4xl {
-        padding-left: 40px;
+        padding-left: var(--padding-4);
     }
 
     .ps-5-4xl {
-        padding-left: 50px;
+        padding-left: var(--padding-5);
+    }
+
+    .ps-6-4xl {
+        padding-left: var(--padding-6);
+    }
+
+    .ps-7-4xl {
+        padding-left: var(--padding-7);
+    }
+
+    .ps-8-4xl {
+        padding-left: var(--padding-8);
+    }
+
+    .ps-9-4xl {
+        padding-left: var(--padding-9);
+    }
+
+    .ps-10-4xl {
+        padding-left: var(--padding-10);
+    }
+
+    .ps-11-4xl {
+        padding-left: var(--padding-11);
+    }
+
+    .ps-12-4xl {
+        padding-left: var(--padding-12);
+    }
+
+    .ps-13-4xl {
+        padding-left: var(--padding-13);
+    }
+
+    .ps-14-4xl {
+        padding-left: var(--padding-14);
+    }
+
+    .ps-15-4xl {
+        padding-left: var(--padding-15);
     }
 }

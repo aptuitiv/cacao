@@ -1,0 +1,24 @@
+/* =========================================================================== *
+  Variables for the padding sizes
+ * =========================================================================== */
+
+/* :where() is used to give the variables no specificity so that they are easily overriden. https://developer.mozilla.org/en-US/docs/Web/CSS/:where */
+
+:where(html) {
+    --padding-0: 0px;
+    --padding-1: 10px;
+    --padding-2: 20px;
+    --padding-3: 30px;
+    --padding-4: 40px;
+    --padding-5: 50px;
+    --padding-6: 60px;
+    --padding-7: 70px;
+    --padding-8: 80px;
+    --padding-9: 90px;
+    --padding-10: 100px;
+    --padding-11: 120px;
+    --padding-12: 160px;
+    --padding-13: 240px;
+    --padding-14: 320px;
+    --padding-15: 480px;
+}

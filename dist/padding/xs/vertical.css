@@ -1,35 +1,85 @@
-/* =========================================================================== *\
-    Vertical padding utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Vertical padding utilities
+ * =========================================================================== */
 
 @media (--m-xs) {
     .py-0-xs {
-        padding-bottom: 0;
-        padding-top: 0;
+        padding-bottom: var(--padding-0);
+        padding-top: var(--padding-0);
     }
 
     .py-1-xs {
-        padding-bottom: 10px;
-        padding-top: 10px;
+        padding-bottom: var(--padding-1);
+        padding-top: var(--padding-1);
     }
 
     .py-2-xs {
-        padding-bottom: 20px;
-        padding-top: 20px;
+        padding-bottom: var(--padding-2);
+        padding-top: var(--padding-2);
     }
 
     .py-3-xs {
-        padding-bottom: 30px;
-        padding-top: 30px;
+        padding-bottom: var(--padding-3);
+        padding-top: var(--padding-3);
     }
 
     .py-4-xs {
-        padding-bottom: 40px;
-        padding-top: 40px;
+        padding-bottom: var(--padding-4);
+        padding-top: var(--padding-4);
     }
 
     .py-5-xs {
-        padding-bottom: 50px;
-        padding-top: 50px;
+        padding-bottom: var(--padding-5);
+        padding-top: var(--padding-5);
+    }
+
+    .py-6-xs {
+        padding-bottom: var(--padding-6);
+        padding-top: var(--padding-6);
+    }
+
+    .py-7-xs {
+        padding-bottom: var(--padding-7);
+        padding-top: var(--padding-7);
+    }
+
+    .py-8-xs {
+        padding-bottom: var(--padding-8);
+        padding-top: var(--padding-8);
+    }
+
+    .py-9-xs {
+        padding-bottom: var(--padding-9);
+        padding-top: var(--padding-9);
+    }
+
+    .py-10-xs {
+        padding-bottom: var(--padding-10);
+        padding-top: var(--padding-10);
+    }
+
+    .py-11-xs {
+        padding-bottom: var(--padding-11);
+        padding-top: var(--padding-11);
+    }
+
+    .py-12-xs {
+        padding-bottom: var(--padding-12);
+        padding-top: var(--padding-12);
+    }
+
+    .py-13-xs {
+        padding-bottom: var(--padding-13);
+        padding-top: var(--padding-13);
+    }
+
+    .py-14-xs {
+        padding-bottom: var(--padding-14);
+        padding-top: var(--padding-14);
+    }
+
+    .py-15-xs {
+        padding-bottom: var(--padding-15);
+        padding-top: var(--padding-15);
     }
 }

@@ -1,29 +1,69 @@
-/* =========================================================================== *\
-    Bottom padding utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Bottom padding utilities
+ * =========================================================================== */
 
 @media (--m-xs) {
     .pb-0-xs {
-        padding-bottom: 0;
+        padding-bottom: var(--padding-0);
     }
 
     .pb-1-xs {
-        padding-bottom: 10px;
+        padding-bottom: var(--padding-1);
     }
 
     .pb-2-xs {
-        padding-bottom: 20px;
+        padding-bottom: var(--padding-2);
     }
 
     .pb-3-xs {
-        padding-bottom: 30px;
+        padding-bottom: var(--padding-3);
     }
 
     .pb-4-xs {
-        padding-bottom: 40px;
+        padding-bottom: var(--padding-4);
     }
 
     .pb-5-xs {
-        padding-bottom: 50px;
+        padding-bottom: var(--padding-5);
+    }
+
+    .pb-6-xs {
+        padding-bottom: var(--padding-6);
+    }
+
+    .pb-7-xs {
+        padding-bottom: var(--padding-7);
+    }
+
+    .pb-8-xs {
+        padding-bottom: var(--padding-8);
+    }
+
+    .pb-9-xs {
+        padding-bottom: var(--padding-9);
+    }
+
+    .pb-10-xs {
+        padding-bottom: var(--padding-10);
+    }
+
+    .pb-11-xs {
+        padding-bottom: var(--padding-11);
+    }
+
+    .pb-12-xs {
+        padding-bottom: var(--padding-12);
+    }
+
+    .pb-13-xs {
+        padding-bottom: var(--padding-13);
+    }
+
+    .pb-14-xs {
+        padding-bottom: var(--padding-14);
+    }
+
+    .pb-15-xs {
+        padding-bottom: var(--padding-15);
     }
 }

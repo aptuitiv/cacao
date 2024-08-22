@@ -1,0 +1,11 @@
+/* =========================================================================== *
+   Margin utilities - 2xs - imports all the 2xs margin utility files
+ * =========================================================================== */
+
+@import './all.css';
+@import './bottom.css';
+@import './end.css';
+@import './horizontal.css';
+@import './start.css';
+@import './top.css';
+@import './vertical.css';

@@ -1,27 +1,68 @@
-/* =========================================================================== *\
-    All sides margin utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   All sides margin utilities
+ * =========================================================================== */
+
 
 .m-0 {
-    margin: 0;
+    margin: var(--margin-0);
 }
 
 .m-1 {
-    margin: 10px;
+    margin: var(--margin-1);
 }
 
 .m-2 {
-    margin: 20px;
+    margin: var(--margin-2);
 }
 
 .m-3 {
-    margin: 30px;
+    margin: var(--margin-3);
 }
 
 .m-4 {
-    margin: 40px;
+    margin: var(--margin-4);
 }
 
 .m-5 {
-    margin: 50px;
+    margin: var(--margin-5);
+}
+
+.m-6 {
+    margin: var(--margin-6);
+}
+
+.m-7 {
+    margin: var(--margin-7);
+}
+
+.m-8 {
+    margin: var(--margin-8);
+}
+
+.m-9 {
+    margin: var(--margin-9);
+}
+
+.m-10 {
+    margin: var(--margin-10);
+}
+
+.m-11 {
+    margin: var(--margin-11);
+}
+
+.m-12 {
+    margin: var(--margin-12);
+}
+
+.m-13 {
+    margin: var(--margin-13);
+}
+
+.m-14 {
+    margin: var(--margin-14);
+}
+
+.m-15 {
+    margin: var(--margin-15);
 }

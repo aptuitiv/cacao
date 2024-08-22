@@ -1,0 +1,14 @@
+/* =========================================================================== *\
+    Image utility variables
+\* =========================================================================== */
+
+/* :where() is used to give the variables no specificity so that they are easily overriden. https://developer.mozilla.org/en-US/docs/Web/CSS/:where */
+
+:where(html) {
+    --image-bottom-margin: 10px;
+    --image-left-margin: 20px;
+    --image-max-width: 100%;
+    --image-max-width-md: 40%;
+    --image-max-width-sm: 50%;
+    --image-right-margin: 20px;
+}

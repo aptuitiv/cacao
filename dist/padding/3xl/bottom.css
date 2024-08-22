@@ -1,29 +1,69 @@
-/* =========================================================================== *\
-    Bottom padding utilities
-\* =========================================================================== */
+/* =========================================================================== *
+   Bottom padding utilities
+ * =========================================================================== */
 
 @media (--m-3xl) {
     .pb-0-3xl {
-        padding-bottom: 0;
+        padding-bottom: var(--padding-0);
     }
 
     .pb-1-3xl {
-        padding-bottom: 10px;
+        padding-bottom: var(--padding-1);
     }
 
     .pb-2-3xl {
-        padding-bottom: 20px;
+        padding-bottom: var(--padding-2);
     }
 
     .pb-3-3xl {
-        padding-bottom: 30px;
+        padding-bottom: var(--padding-3);
     }
 
     .pb-4-3xl {
-        padding-bottom: 40px;
+        padding-bottom: var(--padding-4);
     }
 
     .pb-5-3xl {
-        padding-bottom: 50px;
+        padding-bottom: var(--padding-5);
+    }
+
+    .pb-6-3xl {
+        padding-bottom: var(--padding-6);
+    }
+
+    .pb-7-3xl {
+        padding-bottom: var(--padding-7);
+    }
+
+    .pb-8-3xl {
+        padding-bottom: var(--padding-8);
+    }
+
+    .pb-9-3xl {
+        padding-bottom: var(--padding-9);
+    }
+
+    .pb-10-3xl {
+        padding-bottom: var(--padding-10);
+    }
+
+    .pb-11-3xl {
+        padding-bottom: var(--padding-11);
+    }
+
+    .pb-12-3xl {
+        padding-bottom: var(--padding-12);
+    }
+
+    .pb-13-3xl {
+        padding-bottom: var(--padding-13);
+    }
+
+    .pb-14-3xl {
+        padding-bottom: var(--padding-14);
+    }
+
+    .pb-15-3xl {
+        padding-bottom: var(--padding-15);
     }
 }
