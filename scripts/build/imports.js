@@ -29,11 +29,16 @@ const fileHeader = `/* =========================================================
     Only import what you need to keep the CSS file size down.
  * =========================================================================== */
 
-/* stylelint-disable comment-empty-line-before -- Disabled so that an extra line isn't added between each commented out code line. */
 `;
+// This may not be necessary anymore. Keeping this stylelint disable just in case we need to bring it back.
+// /* stylelint-disable comment-empty-line-before -- Disabled so that an extra line isn't added between each commented out code line. */
 
 // Set the core files to import. This should be all the files immediately in the dist directory.
 const coreImports = `
+/* -------------------------------------------- *
+    Core files that should always be included
+ * -------------------------------------------- */
+
 /* Media queries */
 @import 'cacao-css/dist/media.css';
 
@@ -164,9 +169,9 @@ const buildImports = () => {
         const folderName = basename(directory);
         const module = importsModuleMap[folderName];
         // Write the comment for the module
-        fileContents += '\n/* ------------------------------------*';
+        fileContents += '\n/* --------------------------------------------*';
         fileContents += `\n   ${module.name}\n`;
-        fileContents += ' * ------------------------------------ */\n';
+        fileContents += ' * ------------------------------------------- */\n';
 
         fileContents += buildDirectoryImports(directory, module);
     });
