@@ -1,7 +1,7 @@
 {
     "name": "cacao-css",
     "description": "A set of composable CSS utilities that provide a solid foundation for website projects.",
-    "version": "6.0.0",
+    "version": "6.1.0",
     "author": "Aptuitiv, Inc <hello@aptuitiv.com>",
     "license": "MIT",
     "repository": {

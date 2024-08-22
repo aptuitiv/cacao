@@ -1,5 +1,15 @@
 # Changelog
 
+## 6.1.0 (August 22, 2024)
+
+- Updated the internal build scripts.
+- Documentation updates.
+- **Breaking change**: Renamed the "links" folder to "link" to be more consistent with the other folders that are all singular.
+- **Breaking change**: Added variables for gutter, margin, and padding classes. You will now need to import the variable files.
+- Added additional sizes for gutter, margin, and padding classes. There are now 15 size options (16, if you include the 0 option).
+- **Breaking change**: Added variables for the image classes. You will now need to import the variable file.
+- Updated the `image-left` and `image-right` classes to use `max-width` instead of `width`. This helps smaller images to not get stretched.
+
 ## 6.0.0 (August 19, 2024)
 
 - Added font-style classes.
