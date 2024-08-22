@@ -1,0 +1,6 @@
+/* =========================================================================== *
+   Margin utilities - 2xl - imports all the 2xl margin utility files
+ * =========================================================================== */
+
+@import './horizontal.css';
+@import './vertical.css';

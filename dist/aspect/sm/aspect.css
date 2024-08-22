@@ -1,0 +1,6 @@
+/* =========================================================================== *
+   Aspect ratio utilities - sm - imports all the sm aspect ratio utility files
+ * =========================================================================== */
+
+@import './horizontal.css';
+@import './vertical.css';

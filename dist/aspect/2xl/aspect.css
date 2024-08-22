@@ -1,0 +1,6 @@
+/* =========================================================================== *
+   Aspect ratio utilities - 2xl - imports all the 2xl aspect ratio utility files
+ * =========================================================================== */
+
+@import './horizontal.css';
+@import './vertical.css';

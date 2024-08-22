@@ -19,7 +19,9 @@ export const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3
 
 // Directories whose files need to be wrapped in media queries
 export const mediaQueryDirectories = [
-    'src/aspect',
+    {
+        dir: 'src/aspect', skip: ['aspect.css'], combine: 'aspect.css', commentModule: 'Aspect ratio',
+    },
     'src/display',
     'src/fit',
     'src/grid-column',
@@ -36,7 +38,7 @@ export const mediaQueryDirectories = [
 
 // Map the module names to the directory names for the import.js file
 export const importsModuleMap = {
-    aspect: { name: 'Aspect Ratios' },
+    aspect: { name: 'Aspect Ratios', combine: 'aspect.css' },
     clearfix: { name: 'Clearfix' },
     display: { name: 'Display' },
     embed: { name: 'Embed' },

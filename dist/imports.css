@@ -32,50 +32,98 @@
    Aspect Ratios
  * ------------------------------------------- */
 
+/* Include all Aspect Ratios files */
+@import 'cacao-css/dist/aspect/aspect.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/aspect/horizontal.css';
 @import 'cacao-css/dist/aspect/vertical.css';
 
 /* Aspect Ratios (3xs) */
+/* Include all Aspect Ratios 3xs files */
+@import 'cacao-css/dist/aspect/3xs/aspect.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/aspect/3xs/horizontal.css';
 @import 'cacao-css/dist/aspect/3xs/vertical.css';
 
 /* Aspect Ratios (2xs) */
+/* Include all Aspect Ratios 2xs files */
+@import 'cacao-css/dist/aspect/2xs/aspect.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/aspect/2xs/horizontal.css';
 @import 'cacao-css/dist/aspect/2xs/vertical.css';
 
 /* Aspect Ratios (xs) */
+/* Include all Aspect Ratios xs files */
+@import 'cacao-css/dist/aspect/xs/aspect.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/aspect/xs/horizontal.css';
 @import 'cacao-css/dist/aspect/xs/vertical.css';
 
 /* Aspect Ratios (sm) */
+/* Include all Aspect Ratios sm files */
+@import 'cacao-css/dist/aspect/sm/aspect.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/aspect/sm/horizontal.css';
 @import 'cacao-css/dist/aspect/sm/vertical.css';
 
 /* Aspect Ratios (md) */
+/* Include all Aspect Ratios md files */
+@import 'cacao-css/dist/aspect/md/aspect.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/aspect/md/horizontal.css';
 @import 'cacao-css/dist/aspect/md/vertical.css';
 
 /* Aspect Ratios (lg) */
+/* Include all Aspect Ratios lg files */
+@import 'cacao-css/dist/aspect/lg/aspect.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/aspect/lg/horizontal.css';
 @import 'cacao-css/dist/aspect/lg/vertical.css';
 
 /* Aspect Ratios (xl) */
+/* Include all Aspect Ratios xl files */
+@import 'cacao-css/dist/aspect/xl/aspect.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/aspect/xl/horizontal.css';
 @import 'cacao-css/dist/aspect/xl/vertical.css';
 
 /* Aspect Ratios (2xl) */
+/* Include all Aspect Ratios 2xl files */
+@import 'cacao-css/dist/aspect/2xl/aspect.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/aspect/2xl/horizontal.css';
 @import 'cacao-css/dist/aspect/2xl/vertical.css';
 
 /* Aspect Ratios (3xl) */
+/* Include all Aspect Ratios 3xl files */
+@import 'cacao-css/dist/aspect/3xl/aspect.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/aspect/3xl/horizontal.css';
 @import 'cacao-css/dist/aspect/3xl/vertical.css';
 
 /* Aspect Ratios (4xl) */
+/* Include all Aspect Ratios 4xl files */
+@import 'cacao-css/dist/aspect/4xl/aspect.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/aspect/4xl/horizontal.css';
 @import 'cacao-css/dist/aspect/4xl/vertical.css';
 
 /* Aspect Ratios (5xl) */
+/* Include all Aspect Ratios 5xl files */
+@import 'cacao-css/dist/aspect/5xl/aspect.css';
+
+/* or include individual files */
 @import 'cacao-css/dist/aspect/5xl/horizontal.css';
 @import 'cacao-css/dist/aspect/5xl/vertical.css';
 
