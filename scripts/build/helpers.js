@@ -67,7 +67,7 @@ export const buildModuleSideFileContent = (module, sideObject) => {
  */
 export const buildModuleCombinationFile = (module, sides) => {
     let fileContents = '/* =========================================================================== *\n';
-    fileContents += `   ${module} utilities - imports all the ${module} utility files\n`;
+    fileContents += `   ${module.charAt(0).toUpperCase() + module.slice(1)} utilities - imports all the ${module} utility files\n`;
     fileContents += ' * =========================================================================== */\n\n';
     Object.keys(sides).forEach((side) => {
         fileContents += `@import './${side}.css';\n`;
