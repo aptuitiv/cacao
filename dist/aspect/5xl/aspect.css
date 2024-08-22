@@ -1,6 +1,0 @@
-/* =========================================================================== *
-   Aspect ratio utilities - 5xl - imports all the 5xl aspect ratio utility files
- * =========================================================================== */
-
-@import './horizontal.css';
-@import './vertical.css';

@@ -1,0 +1,6 @@
+/* =========================================================================== *
+   Aspect Ratio utilities - lg - imports all the lg aspect utility files
+ * =========================================================================== */
+
+@import './horizontal.css';
+@import './vertical.css';

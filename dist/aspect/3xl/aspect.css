@@ -1,6 +1,0 @@
-/* =========================================================================== *
-   Aspect ratio utilities - 3xl - imports all the 3xl aspect ratio utility files
- * =========================================================================== */
-
-@import './horizontal.css';
-@import './vertical.css';

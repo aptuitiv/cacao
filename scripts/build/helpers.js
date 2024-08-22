@@ -7,6 +7,8 @@ import fs from 'fs-extra';
 import fancyLog from 'fancy-log';
 import logSymbols from 'log-symbols';
 
+import { distDirectory, rootDirectory } from './config.js';
+
 /**
  * Create the variables file for the module
  *
@@ -63,15 +65,48 @@ export const buildModuleSideFileContent = (module, sideObject) => {
  * Build the file that imports the other module files
  *
  * @param {string} module The module to build the combination file for
- * @param {object} sides The sides object containing the side classes and properties
+ * @param {string} dest The destination directory to write the file to
+ * @param {object} config The configuration for the combination file. You must set either "directory" or "files".
+ *      - commentModule (string): The module name to use in the comment. Defaults to the module name.
+ *      - directory (string): The directory to read the files from if files is not provided
+ *      - files (array): The files to import. If not provided, it will read the files from the directory
+ *      - size (string): The media query size if building the media query files.
  */
-export const buildModuleCombinationFile = (module, sides) => {
+export const buildModuleCombinationFile = (module, dest, config = {}) => {
+    let files = [];
+    const skip = ['variables.css'];
+    if (!config.files) {
+        // Files were not set. Read from the source module folder to get the files
+        const directory = `${rootDirectory}/src/${module}`;
+        fs.readdirSync(directory).forEach((file) => {
+            const srcPath = `${directory}/${file}`;
+            const stats = fs.statSync(srcPath);
+            if (stats.isFile() && !skip.includes(file)) {
+                files.push(file);
+            }
+        });
+    } else {
+        files = config.files;
+    }
+
+    files.sort();
+
+    const commentModule = config.commentModule ?? module;
+
     let fileContents = '/* =========================================================================== *\n';
-    fileContents += `   ${module.charAt(0).toUpperCase() + module.slice(1)} utilities - imports all the ${module} utility files\n`;
+    fileContents += `   ${commentModule.charAt(0).toUpperCase() + commentModule.slice(1)} utilities`;
+    if (config.size) {
+        fileContents += ` - ${config.size}`;
+    }
+    fileContents += ' - imports all the ';
+    if (config.size) {
+        fileContents += `${config.size}`;
+    }
+    fileContents += ` ${module} utility files\n`;
     fileContents += ' * =========================================================================== */\n\n';
-    Object.keys(sides).forEach((side) => {
-        fileContents += `@import './${side}.css';\n`;
+    files.forEach((file) => {
+        fileContents += `@import './${file}';\n`;
     });
-    fs.writeFileSync(`src/${module}/${module}.css`, fileContents);
-    fancyLog(chalk.green(`${logSymbols.success} Wrote ${module} file `, chalk.cyan(`src/${module}/${module}.css`)));
+    fs.writeFileSync(`${distDirectory}/${dest}/combined-import.css`, fileContents);
+    fancyLog(chalk.green(`${logSymbols.success} Wrote ${module} combined import file `, chalk.cyan(`dest/${dest}/combined-import.css`)));
 };

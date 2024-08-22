@@ -1,6 +1,0 @@
-/* =========================================================================== *
-   Aspect ratio utilities - xl - imports all the xl aspect ratio utility files
- * =========================================================================== */
-
-@import './horizontal.css';
-@import './vertical.css';

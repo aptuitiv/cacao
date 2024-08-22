@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Typography utilities - sm - imports all the sm typography utility files
+ * =========================================================================== */
+
+@import './align.css';
+@import './break.css';
+@import './style.css';
+@import './transform.css';
+@import './weight.css';

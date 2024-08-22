@@ -23,6 +23,7 @@
     "scripts": {
         "build": "node scripts/build all",
         "build-gutters": "node scripts/build gutters",
+        "build-imports": "node scripts/build imports",
         "build-margins": "node scripts/build margins",
         "build-paddings": "node scripts/build paddings",
         "eslint": "eslint --fix .",

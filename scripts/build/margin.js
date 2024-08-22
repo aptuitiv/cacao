@@ -10,7 +10,7 @@ import fancyLog from 'fancy-log';
 import logSymbols from 'log-symbols';
 
 import { variableSizes } from './config.js';
-import { buildModuleCombinationFile, buildModuleSideFileContent, createModuleVariables } from './helpers.js';
+import { buildModuleSideFileContent, createModuleVariables } from './helpers.js';
 
 /**
  * Build the margin class files
@@ -33,7 +33,6 @@ const buildMarginsFiles = () => new Promise((resolve) => {
         fancyLog(chalk.green(`${logSymbols.success} Wrote margin file `, chalk.cyan(`src/margin/${side}.css`)));
     });
 
-    buildModuleCombinationFile('margin', sides);
     fancyLog(chalk.green(`${logSymbols.success} Done creating margin files `));
     resolve();
 });

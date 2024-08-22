@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Typography utilities - 5xl - imports all the 5xl typography utility files
+ * =========================================================================== */
+
+@import './align.css';
+@import './break.css';
+@import './style.css';
+@import './transform.css';
+@import './weight.css';

@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Typography utilities - 2xl - imports all the 2xl typography utility files
+ * =========================================================================== */
+
+@import './align.css';
+@import './break.css';
+@import './style.css';
+@import './transform.css';
+@import './weight.css';
