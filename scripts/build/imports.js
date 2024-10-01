@@ -61,7 +61,6 @@ const coreImports = `
 const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory = false) => {
     const moduleName = moduleObject.name;
     const useVariables = moduleObject.variables ?? false;
-    const combinationFile = moduleObject.combine ?? false;
 
     const directoryPath = directory.replace(`${distDirectory}/`, '');
 
