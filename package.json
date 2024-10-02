@@ -13,10 +13,12 @@
         "email": "support@aptuitiv.com"
     },
     "bin": {
+        "cacao-convert-v3": "./scripts/v3/index.js",
         "cacao-convert-v6": "./scripts/v6/index.js"
     },
     "files": [
         "dist",
+        "scripts/v3",
         "scripts/v6"
     ],
     "type": "module",
