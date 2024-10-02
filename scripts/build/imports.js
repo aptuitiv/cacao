@@ -96,7 +96,7 @@ const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory =
         } else {
             fileContents += `\n/* Include all ${moduleName} files */`;
         }
-        fileContents += `\n@import 'cacao-css/dist/${directoryPath}/combined-import';\n`;
+        fileContents += `\n@import 'cacao-css/dist/${directoryPath}/combined-import.css';\n`;
         fileContents += '/* or include individual files */';
     }
 

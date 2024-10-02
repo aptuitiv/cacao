@@ -33,7 +33,7 @@
  * ------------------------------------------- */
 
 /* Include all Aspect Ratios files */
-@import 'cacao-css/dist/aspect/combined-import';
+@import 'cacao-css/dist/aspect/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/aspect/horizontal.css';
 @import 'cacao-css/dist/aspect/vertical.css';
@@ -41,7 +41,7 @@
 /* Aspect Ratios (3xs) */
 
 /* Include all Aspect Ratios 3xs files */
-@import 'cacao-css/dist/aspect/3xs/combined-import';
+@import 'cacao-css/dist/aspect/3xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/aspect/3xs/horizontal.css';
 @import 'cacao-css/dist/aspect/3xs/vertical.css';
@@ -49,7 +49,7 @@
 /* Aspect Ratios (2xs) */
 
 /* Include all Aspect Ratios 2xs files */
-@import 'cacao-css/dist/aspect/2xs/combined-import';
+@import 'cacao-css/dist/aspect/2xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/aspect/2xs/horizontal.css';
 @import 'cacao-css/dist/aspect/2xs/vertical.css';
@@ -57,7 +57,7 @@
 /* Aspect Ratios (xs) */
 
 /* Include all Aspect Ratios xs files */
-@import 'cacao-css/dist/aspect/xs/combined-import';
+@import 'cacao-css/dist/aspect/xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/aspect/xs/horizontal.css';
 @import 'cacao-css/dist/aspect/xs/vertical.css';
@@ -65,7 +65,7 @@
 /* Aspect Ratios (sm) */
 
 /* Include all Aspect Ratios sm files */
-@import 'cacao-css/dist/aspect/sm/combined-import';
+@import 'cacao-css/dist/aspect/sm/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/aspect/sm/horizontal.css';
 @import 'cacao-css/dist/aspect/sm/vertical.css';
@@ -73,7 +73,7 @@
 /* Aspect Ratios (md) */
 
 /* Include all Aspect Ratios md files */
-@import 'cacao-css/dist/aspect/md/combined-import';
+@import 'cacao-css/dist/aspect/md/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/aspect/md/horizontal.css';
 @import 'cacao-css/dist/aspect/md/vertical.css';
@@ -81,7 +81,7 @@
 /* Aspect Ratios (lg) */
 
 /* Include all Aspect Ratios lg files */
-@import 'cacao-css/dist/aspect/lg/combined-import';
+@import 'cacao-css/dist/aspect/lg/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/aspect/lg/horizontal.css';
 @import 'cacao-css/dist/aspect/lg/vertical.css';
@@ -89,7 +89,7 @@
 /* Aspect Ratios (xl) */
 
 /* Include all Aspect Ratios xl files */
-@import 'cacao-css/dist/aspect/xl/combined-import';
+@import 'cacao-css/dist/aspect/xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/aspect/xl/horizontal.css';
 @import 'cacao-css/dist/aspect/xl/vertical.css';
@@ -97,7 +97,7 @@
 /* Aspect Ratios (2xl) */
 
 /* Include all Aspect Ratios 2xl files */
-@import 'cacao-css/dist/aspect/2xl/combined-import';
+@import 'cacao-css/dist/aspect/2xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/aspect/2xl/horizontal.css';
 @import 'cacao-css/dist/aspect/2xl/vertical.css';
@@ -105,7 +105,7 @@
 /* Aspect Ratios (3xl) */
 
 /* Include all Aspect Ratios 3xl files */
-@import 'cacao-css/dist/aspect/3xl/combined-import';
+@import 'cacao-css/dist/aspect/3xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/aspect/3xl/horizontal.css';
 @import 'cacao-css/dist/aspect/3xl/vertical.css';
@@ -113,7 +113,7 @@
 /* Aspect Ratios (4xl) */
 
 /* Include all Aspect Ratios 4xl files */
-@import 'cacao-css/dist/aspect/4xl/combined-import';
+@import 'cacao-css/dist/aspect/4xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/aspect/4xl/horizontal.css';
 @import 'cacao-css/dist/aspect/4xl/vertical.css';
@@ -121,7 +121,7 @@
 /* Aspect Ratios (5xl) */
 
 /* Include all Aspect Ratios 5xl files */
-@import 'cacao-css/dist/aspect/5xl/combined-import';
+@import 'cacao-css/dist/aspect/5xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/aspect/5xl/horizontal.css';
 @import 'cacao-css/dist/aspect/5xl/vertical.css';
@@ -139,7 +139,7 @@
  * ------------------------------------------- */
 
 /* Include all Display files */
-@import 'cacao-css/dist/display/combined-import';
+@import 'cacao-css/dist/display/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/display/align.css';
 @import 'cacao-css/dist/display/display.css';
@@ -151,7 +151,7 @@
 /* Display (3xs) */
 
 /* Include all Display 3xs files */
-@import 'cacao-css/dist/display/3xs/combined-import';
+@import 'cacao-css/dist/display/3xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/display/3xs/align.css';
 @import 'cacao-css/dist/display/3xs/display.css';
@@ -163,7 +163,7 @@
 /* Display (2xs) */
 
 /* Include all Display 2xs files */
-@import 'cacao-css/dist/display/2xs/combined-import';
+@import 'cacao-css/dist/display/2xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/display/2xs/align.css';
 @import 'cacao-css/dist/display/2xs/display.css';
@@ -175,7 +175,7 @@
 /* Display (xs) */
 
 /* Include all Display xs files */
-@import 'cacao-css/dist/display/xs/combined-import';
+@import 'cacao-css/dist/display/xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/display/xs/align.css';
 @import 'cacao-css/dist/display/xs/display.css';
@@ -187,7 +187,7 @@
 /* Display (sm) */
 
 /* Include all Display sm files */
-@import 'cacao-css/dist/display/sm/combined-import';
+@import 'cacao-css/dist/display/sm/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/display/sm/align.css';
 @import 'cacao-css/dist/display/sm/display.css';
@@ -199,7 +199,7 @@
 /* Display (md) */
 
 /* Include all Display md files */
-@import 'cacao-css/dist/display/md/combined-import';
+@import 'cacao-css/dist/display/md/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/display/md/align.css';
 @import 'cacao-css/dist/display/md/display.css';
@@ -211,7 +211,7 @@
 /* Display (lg) */
 
 /* Include all Display lg files */
-@import 'cacao-css/dist/display/lg/combined-import';
+@import 'cacao-css/dist/display/lg/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/display/lg/align.css';
 @import 'cacao-css/dist/display/lg/display.css';
@@ -223,7 +223,7 @@
 /* Display (xl) */
 
 /* Include all Display xl files */
-@import 'cacao-css/dist/display/xl/combined-import';
+@import 'cacao-css/dist/display/xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/display/xl/align.css';
 @import 'cacao-css/dist/display/xl/display.css';
@@ -235,7 +235,7 @@
 /* Display (2xl) */
 
 /* Include all Display 2xl files */
-@import 'cacao-css/dist/display/2xl/combined-import';
+@import 'cacao-css/dist/display/2xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/display/2xl/align.css';
 @import 'cacao-css/dist/display/2xl/display.css';
@@ -247,7 +247,7 @@
 /* Display (3xl) */
 
 /* Include all Display 3xl files */
-@import 'cacao-css/dist/display/3xl/combined-import';
+@import 'cacao-css/dist/display/3xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/display/3xl/align.css';
 @import 'cacao-css/dist/display/3xl/display.css';
@@ -259,7 +259,7 @@
 /* Display (4xl) */
 
 /* Include all Display 4xl files */
-@import 'cacao-css/dist/display/4xl/combined-import';
+@import 'cacao-css/dist/display/4xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/display/4xl/align.css';
 @import 'cacao-css/dist/display/4xl/display.css';
@@ -271,7 +271,7 @@
 /* Display (5xl) */
 
 /* Include all Display 5xl files */
-@import 'cacao-css/dist/display/5xl/combined-import';
+@import 'cacao-css/dist/display/5xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/display/5xl/align.css';
 @import 'cacao-css/dist/display/5xl/display.css';
@@ -373,7 +373,7 @@
  * ------------------------------------------- */
 
 /* Include all Grid Columns files */
-@import 'cacao-css/dist/grid-column/combined-import';
+@import 'cacao-css/dist/grid-column/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/grid-column/col-1.css';
 @import 'cacao-css/dist/grid-column/col-10.css';
@@ -392,7 +392,7 @@
 /* Grid Columns (3xs) */
 
 /* Include all Grid Columns 3xs files */
-@import 'cacao-css/dist/grid-column/3xs/combined-import';
+@import 'cacao-css/dist/grid-column/3xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/grid-column/3xs/col-1.css';
 @import 'cacao-css/dist/grid-column/3xs/col-10.css';
@@ -411,7 +411,7 @@
 /* Grid Columns (2xs) */
 
 /* Include all Grid Columns 2xs files */
-@import 'cacao-css/dist/grid-column/2xs/combined-import';
+@import 'cacao-css/dist/grid-column/2xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/grid-column/2xs/col-1.css';
 @import 'cacao-css/dist/grid-column/2xs/col-10.css';
@@ -430,7 +430,7 @@
 /* Grid Columns (xs) */
 
 /* Include all Grid Columns xs files */
-@import 'cacao-css/dist/grid-column/xs/combined-import';
+@import 'cacao-css/dist/grid-column/xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/grid-column/xs/col-1.css';
 @import 'cacao-css/dist/grid-column/xs/col-10.css';
@@ -449,7 +449,7 @@
 /* Grid Columns (sm) */
 
 /* Include all Grid Columns sm files */
-@import 'cacao-css/dist/grid-column/sm/combined-import';
+@import 'cacao-css/dist/grid-column/sm/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/grid-column/sm/col-1.css';
 @import 'cacao-css/dist/grid-column/sm/col-10.css';
@@ -468,7 +468,7 @@
 /* Grid Columns (md) */
 
 /* Include all Grid Columns md files */
-@import 'cacao-css/dist/grid-column/md/combined-import';
+@import 'cacao-css/dist/grid-column/md/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/grid-column/md/col-1.css';
 @import 'cacao-css/dist/grid-column/md/col-10.css';
@@ -487,7 +487,7 @@
 /* Grid Columns (lg) */
 
 /* Include all Grid Columns lg files */
-@import 'cacao-css/dist/grid-column/lg/combined-import';
+@import 'cacao-css/dist/grid-column/lg/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/grid-column/lg/col-1.css';
 @import 'cacao-css/dist/grid-column/lg/col-10.css';
@@ -506,7 +506,7 @@
 /* Grid Columns (xl) */
 
 /* Include all Grid Columns xl files */
-@import 'cacao-css/dist/grid-column/xl/combined-import';
+@import 'cacao-css/dist/grid-column/xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/grid-column/xl/col-1.css';
 @import 'cacao-css/dist/grid-column/xl/col-10.css';
@@ -525,7 +525,7 @@
 /* Grid Columns (2xl) */
 
 /* Include all Grid Columns 2xl files */
-@import 'cacao-css/dist/grid-column/2xl/combined-import';
+@import 'cacao-css/dist/grid-column/2xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/grid-column/2xl/col-1.css';
 @import 'cacao-css/dist/grid-column/2xl/col-10.css';
@@ -544,7 +544,7 @@
 /* Grid Columns (3xl) */
 
 /* Include all Grid Columns 3xl files */
-@import 'cacao-css/dist/grid-column/3xl/combined-import';
+@import 'cacao-css/dist/grid-column/3xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/grid-column/3xl/col-1.css';
 @import 'cacao-css/dist/grid-column/3xl/col-10.css';
@@ -563,7 +563,7 @@
 /* Grid Columns (4xl) */
 
 /* Include all Grid Columns 4xl files */
-@import 'cacao-css/dist/grid-column/4xl/combined-import';
+@import 'cacao-css/dist/grid-column/4xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/grid-column/4xl/col-1.css';
 @import 'cacao-css/dist/grid-column/4xl/col-10.css';
@@ -582,7 +582,7 @@
 /* Grid Columns (5xl) */
 
 /* Include all Grid Columns 5xl files */
-@import 'cacao-css/dist/grid-column/5xl/combined-import';
+@import 'cacao-css/dist/grid-column/5xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/grid-column/5xl/col-1.css';
 @import 'cacao-css/dist/grid-column/5xl/col-10.css';
@@ -607,7 +607,7 @@
 /* Gutter variables. This must be imported, or you must override the variables in your own CSS. */
 @import 'cacao-css/dist/gutter/variables.css';
 /* Include all Gutter files */
-@import 'cacao-css/dist/gutter/combined-import';
+@import 'cacao-css/dist/gutter/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/gutter/all.css';
 @import 'cacao-css/dist/gutter/horizontal.css';
@@ -616,7 +616,7 @@
 /* Gutter (3xs) */
 
 /* Include all Gutter 3xs files */
-@import 'cacao-css/dist/gutter/3xs/combined-import';
+@import 'cacao-css/dist/gutter/3xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/gutter/3xs/all.css';
 @import 'cacao-css/dist/gutter/3xs/horizontal.css';
@@ -625,7 +625,7 @@
 /* Gutter (2xs) */
 
 /* Include all Gutter 2xs files */
-@import 'cacao-css/dist/gutter/2xs/combined-import';
+@import 'cacao-css/dist/gutter/2xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/gutter/2xs/all.css';
 @import 'cacao-css/dist/gutter/2xs/horizontal.css';
@@ -634,7 +634,7 @@
 /* Gutter (xs) */
 
 /* Include all Gutter xs files */
-@import 'cacao-css/dist/gutter/xs/combined-import';
+@import 'cacao-css/dist/gutter/xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/gutter/xs/all.css';
 @import 'cacao-css/dist/gutter/xs/horizontal.css';
@@ -643,7 +643,7 @@
 /* Gutter (sm) */
 
 /* Include all Gutter sm files */
-@import 'cacao-css/dist/gutter/sm/combined-import';
+@import 'cacao-css/dist/gutter/sm/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/gutter/sm/all.css';
 @import 'cacao-css/dist/gutter/sm/horizontal.css';
@@ -652,7 +652,7 @@
 /* Gutter (md) */
 
 /* Include all Gutter md files */
-@import 'cacao-css/dist/gutter/md/combined-import';
+@import 'cacao-css/dist/gutter/md/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/gutter/md/all.css';
 @import 'cacao-css/dist/gutter/md/horizontal.css';
@@ -661,7 +661,7 @@
 /* Gutter (lg) */
 
 /* Include all Gutter lg files */
-@import 'cacao-css/dist/gutter/lg/combined-import';
+@import 'cacao-css/dist/gutter/lg/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/gutter/lg/all.css';
 @import 'cacao-css/dist/gutter/lg/horizontal.css';
@@ -670,7 +670,7 @@
 /* Gutter (xl) */
 
 /* Include all Gutter xl files */
-@import 'cacao-css/dist/gutter/xl/combined-import';
+@import 'cacao-css/dist/gutter/xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/gutter/xl/all.css';
 @import 'cacao-css/dist/gutter/xl/horizontal.css';
@@ -679,7 +679,7 @@
 /* Gutter (2xl) */
 
 /* Include all Gutter 2xl files */
-@import 'cacao-css/dist/gutter/2xl/combined-import';
+@import 'cacao-css/dist/gutter/2xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/gutter/2xl/all.css';
 @import 'cacao-css/dist/gutter/2xl/horizontal.css';
@@ -688,7 +688,7 @@
 /* Gutter (3xl) */
 
 /* Include all Gutter 3xl files */
-@import 'cacao-css/dist/gutter/3xl/combined-import';
+@import 'cacao-css/dist/gutter/3xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/gutter/3xl/all.css';
 @import 'cacao-css/dist/gutter/3xl/horizontal.css';
@@ -697,7 +697,7 @@
 /* Gutter (4xl) */
 
 /* Include all Gutter 4xl files */
-@import 'cacao-css/dist/gutter/4xl/combined-import';
+@import 'cacao-css/dist/gutter/4xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/gutter/4xl/all.css';
 @import 'cacao-css/dist/gutter/4xl/horizontal.css';
@@ -706,7 +706,7 @@
 /* Gutter (5xl) */
 
 /* Include all Gutter 5xl files */
-@import 'cacao-css/dist/gutter/5xl/combined-import';
+@import 'cacao-css/dist/gutter/5xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/gutter/5xl/all.css';
 @import 'cacao-css/dist/gutter/5xl/horizontal.css';
@@ -718,7 +718,7 @@
  * ------------------------------------------- */
 
 /* Include all Height files */
-@import 'cacao-css/dist/height/combined-import';
+@import 'cacao-css/dist/height/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/height/height-0.css';
 @import 'cacao-css/dist/height/height-1.css';
@@ -738,7 +738,7 @@
 /* Height (3xs) */
 
 /* Include all Height 3xs files */
-@import 'cacao-css/dist/height/3xs/combined-import';
+@import 'cacao-css/dist/height/3xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/height/3xs/height-0.css';
 @import 'cacao-css/dist/height/3xs/height-1.css';
@@ -758,7 +758,7 @@
 /* Height (2xs) */
 
 /* Include all Height 2xs files */
-@import 'cacao-css/dist/height/2xs/combined-import';
+@import 'cacao-css/dist/height/2xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/height/2xs/height-0.css';
 @import 'cacao-css/dist/height/2xs/height-1.css';
@@ -778,7 +778,7 @@
 /* Height (xs) */
 
 /* Include all Height xs files */
-@import 'cacao-css/dist/height/xs/combined-import';
+@import 'cacao-css/dist/height/xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/height/xs/height-0.css';
 @import 'cacao-css/dist/height/xs/height-1.css';
@@ -798,7 +798,7 @@
 /* Height (sm) */
 
 /* Include all Height sm files */
-@import 'cacao-css/dist/height/sm/combined-import';
+@import 'cacao-css/dist/height/sm/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/height/sm/height-0.css';
 @import 'cacao-css/dist/height/sm/height-1.css';
@@ -818,7 +818,7 @@
 /* Height (md) */
 
 /* Include all Height md files */
-@import 'cacao-css/dist/height/md/combined-import';
+@import 'cacao-css/dist/height/md/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/height/md/height-0.css';
 @import 'cacao-css/dist/height/md/height-1.css';
@@ -838,7 +838,7 @@
 /* Height (lg) */
 
 /* Include all Height lg files */
-@import 'cacao-css/dist/height/lg/combined-import';
+@import 'cacao-css/dist/height/lg/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/height/lg/height-0.css';
 @import 'cacao-css/dist/height/lg/height-1.css';
@@ -858,7 +858,7 @@
 /* Height (xl) */
 
 /* Include all Height xl files */
-@import 'cacao-css/dist/height/xl/combined-import';
+@import 'cacao-css/dist/height/xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/height/xl/height-0.css';
 @import 'cacao-css/dist/height/xl/height-1.css';
@@ -878,7 +878,7 @@
 /* Height (2xl) */
 
 /* Include all Height 2xl files */
-@import 'cacao-css/dist/height/2xl/combined-import';
+@import 'cacao-css/dist/height/2xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/height/2xl/height-0.css';
 @import 'cacao-css/dist/height/2xl/height-1.css';
@@ -898,7 +898,7 @@
 /* Height (3xl) */
 
 /* Include all Height 3xl files */
-@import 'cacao-css/dist/height/3xl/combined-import';
+@import 'cacao-css/dist/height/3xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/height/3xl/height-0.css';
 @import 'cacao-css/dist/height/3xl/height-1.css';
@@ -918,7 +918,7 @@
 /* Height (4xl) */
 
 /* Include all Height 4xl files */
-@import 'cacao-css/dist/height/4xl/combined-import';
+@import 'cacao-css/dist/height/4xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/height/4xl/height-0.css';
 @import 'cacao-css/dist/height/4xl/height-1.css';
@@ -938,7 +938,7 @@
 /* Height (5xl) */
 
 /* Include all Height 5xl files */
-@import 'cacao-css/dist/height/5xl/combined-import';
+@import 'cacao-css/dist/height/5xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/height/5xl/height-0.css';
 @import 'cacao-css/dist/height/5xl/height-1.css';
@@ -981,7 +981,7 @@
 /* Margin variables. This must be imported, or you must override the variables in your own CSS. */
 @import 'cacao-css/dist/margin/variables.css';
 /* Include all Margin files */
-@import 'cacao-css/dist/margin/combined-import';
+@import 'cacao-css/dist/margin/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/margin/all.css';
 @import 'cacao-css/dist/margin/bottom.css';
@@ -994,7 +994,7 @@
 /* Margin (3xs) */
 
 /* Include all Margin 3xs files */
-@import 'cacao-css/dist/margin/3xs/combined-import';
+@import 'cacao-css/dist/margin/3xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/margin/3xs/all.css';
 @import 'cacao-css/dist/margin/3xs/bottom.css';
@@ -1007,7 +1007,7 @@
 /* Margin (2xs) */
 
 /* Include all Margin 2xs files */
-@import 'cacao-css/dist/margin/2xs/combined-import';
+@import 'cacao-css/dist/margin/2xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/margin/2xs/all.css';
 @import 'cacao-css/dist/margin/2xs/bottom.css';
@@ -1020,7 +1020,7 @@
 /* Margin (xs) */
 
 /* Include all Margin xs files */
-@import 'cacao-css/dist/margin/xs/combined-import';
+@import 'cacao-css/dist/margin/xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/margin/xs/all.css';
 @import 'cacao-css/dist/margin/xs/bottom.css';
@@ -1033,7 +1033,7 @@
 /* Margin (sm) */
 
 /* Include all Margin sm files */
-@import 'cacao-css/dist/margin/sm/combined-import';
+@import 'cacao-css/dist/margin/sm/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/margin/sm/all.css';
 @import 'cacao-css/dist/margin/sm/bottom.css';
@@ -1046,7 +1046,7 @@
 /* Margin (md) */
 
 /* Include all Margin md files */
-@import 'cacao-css/dist/margin/md/combined-import';
+@import 'cacao-css/dist/margin/md/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/margin/md/all.css';
 @import 'cacao-css/dist/margin/md/bottom.css';
@@ -1059,7 +1059,7 @@
 /* Margin (lg) */
 
 /* Include all Margin lg files */
-@import 'cacao-css/dist/margin/lg/combined-import';
+@import 'cacao-css/dist/margin/lg/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/margin/lg/all.css';
 @import 'cacao-css/dist/margin/lg/bottom.css';
@@ -1072,7 +1072,7 @@
 /* Margin (xl) */
 
 /* Include all Margin xl files */
-@import 'cacao-css/dist/margin/xl/combined-import';
+@import 'cacao-css/dist/margin/xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/margin/xl/all.css';
 @import 'cacao-css/dist/margin/xl/bottom.css';
@@ -1085,7 +1085,7 @@
 /* Margin (2xl) */
 
 /* Include all Margin 2xl files */
-@import 'cacao-css/dist/margin/2xl/combined-import';
+@import 'cacao-css/dist/margin/2xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/margin/2xl/all.css';
 @import 'cacao-css/dist/margin/2xl/bottom.css';
@@ -1098,7 +1098,7 @@
 /* Margin (3xl) */
 
 /* Include all Margin 3xl files */
-@import 'cacao-css/dist/margin/3xl/combined-import';
+@import 'cacao-css/dist/margin/3xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/margin/3xl/all.css';
 @import 'cacao-css/dist/margin/3xl/bottom.css';
@@ -1111,7 +1111,7 @@
 /* Margin (4xl) */
 
 /* Include all Margin 4xl files */
-@import 'cacao-css/dist/margin/4xl/combined-import';
+@import 'cacao-css/dist/margin/4xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/margin/4xl/all.css';
 @import 'cacao-css/dist/margin/4xl/bottom.css';
@@ -1124,7 +1124,7 @@
 /* Margin (5xl) */
 
 /* Include all Margin 5xl files */
-@import 'cacao-css/dist/margin/5xl/combined-import';
+@import 'cacao-css/dist/margin/5xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/margin/5xl/all.css';
 @import 'cacao-css/dist/margin/5xl/bottom.css';
@@ -1143,7 +1143,7 @@
 /* Padding variables. This must be imported, or you must override the variables in your own CSS. */
 @import 'cacao-css/dist/padding/variables.css';
 /* Include all Padding files */
-@import 'cacao-css/dist/padding/combined-import';
+@import 'cacao-css/dist/padding/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/padding/all.css';
 @import 'cacao-css/dist/padding/bottom.css';
@@ -1156,7 +1156,7 @@
 /* Padding (3xs) */
 
 /* Include all Padding 3xs files */
-@import 'cacao-css/dist/padding/3xs/combined-import';
+@import 'cacao-css/dist/padding/3xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/padding/3xs/all.css';
 @import 'cacao-css/dist/padding/3xs/bottom.css';
@@ -1169,7 +1169,7 @@
 /* Padding (2xs) */
 
 /* Include all Padding 2xs files */
-@import 'cacao-css/dist/padding/2xs/combined-import';
+@import 'cacao-css/dist/padding/2xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/padding/2xs/all.css';
 @import 'cacao-css/dist/padding/2xs/bottom.css';
@@ -1182,7 +1182,7 @@
 /* Padding (xs) */
 
 /* Include all Padding xs files */
-@import 'cacao-css/dist/padding/xs/combined-import';
+@import 'cacao-css/dist/padding/xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/padding/xs/all.css';
 @import 'cacao-css/dist/padding/xs/bottom.css';
@@ -1195,7 +1195,7 @@
 /* Padding (sm) */
 
 /* Include all Padding sm files */
-@import 'cacao-css/dist/padding/sm/combined-import';
+@import 'cacao-css/dist/padding/sm/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/padding/sm/all.css';
 @import 'cacao-css/dist/padding/sm/bottom.css';
@@ -1208,7 +1208,7 @@
 /* Padding (md) */
 
 /* Include all Padding md files */
-@import 'cacao-css/dist/padding/md/combined-import';
+@import 'cacao-css/dist/padding/md/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/padding/md/all.css';
 @import 'cacao-css/dist/padding/md/bottom.css';
@@ -1221,7 +1221,7 @@
 /* Padding (lg) */
 
 /* Include all Padding lg files */
-@import 'cacao-css/dist/padding/lg/combined-import';
+@import 'cacao-css/dist/padding/lg/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/padding/lg/all.css';
 @import 'cacao-css/dist/padding/lg/bottom.css';
@@ -1234,7 +1234,7 @@
 /* Padding (xl) */
 
 /* Include all Padding xl files */
-@import 'cacao-css/dist/padding/xl/combined-import';
+@import 'cacao-css/dist/padding/xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/padding/xl/all.css';
 @import 'cacao-css/dist/padding/xl/bottom.css';
@@ -1247,7 +1247,7 @@
 /* Padding (2xl) */
 
 /* Include all Padding 2xl files */
-@import 'cacao-css/dist/padding/2xl/combined-import';
+@import 'cacao-css/dist/padding/2xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/padding/2xl/all.css';
 @import 'cacao-css/dist/padding/2xl/bottom.css';
@@ -1260,7 +1260,7 @@
 /* Padding (3xl) */
 
 /* Include all Padding 3xl files */
-@import 'cacao-css/dist/padding/3xl/combined-import';
+@import 'cacao-css/dist/padding/3xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/padding/3xl/all.css';
 @import 'cacao-css/dist/padding/3xl/bottom.css';
@@ -1273,7 +1273,7 @@
 /* Padding (4xl) */
 
 /* Include all Padding 4xl files */
-@import 'cacao-css/dist/padding/4xl/combined-import';
+@import 'cacao-css/dist/padding/4xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/padding/4xl/all.css';
 @import 'cacao-css/dist/padding/4xl/bottom.css';
@@ -1286,7 +1286,7 @@
 /* Padding (5xl) */
 
 /* Include all Padding 5xl files */
-@import 'cacao-css/dist/padding/5xl/combined-import';
+@import 'cacao-css/dist/padding/5xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/padding/5xl/all.css';
 @import 'cacao-css/dist/padding/5xl/bottom.css';
@@ -1342,7 +1342,7 @@
  * ------------------------------------------- */
 
 /* Include all Pull files */
-@import 'cacao-css/dist/pull/combined-import';
+@import 'cacao-css/dist/pull/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/pull/pull-0.css';
 @import 'cacao-css/dist/pull/pull-1.css';
@@ -1362,7 +1362,7 @@
 /* Pull (3xs) */
 
 /* Include all Pull 3xs files */
-@import 'cacao-css/dist/pull/3xs/combined-import';
+@import 'cacao-css/dist/pull/3xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/pull/3xs/pull-0.css';
 @import 'cacao-css/dist/pull/3xs/pull-1.css';
@@ -1381,7 +1381,7 @@
 /* Pull (2xs) */
 
 /* Include all Pull 2xs files */
-@import 'cacao-css/dist/pull/2xs/combined-import';
+@import 'cacao-css/dist/pull/2xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/pull/2xs/pull-0.css';
 @import 'cacao-css/dist/pull/2xs/pull-1.css';
@@ -1400,7 +1400,7 @@
 /* Pull (xs) */
 
 /* Include all Pull xs files */
-@import 'cacao-css/dist/pull/xs/combined-import';
+@import 'cacao-css/dist/pull/xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/pull/xs/pull-0.css';
 @import 'cacao-css/dist/pull/xs/pull-1.css';
@@ -1419,7 +1419,7 @@
 /* Pull (sm) */
 
 /* Include all Pull sm files */
-@import 'cacao-css/dist/pull/sm/combined-import';
+@import 'cacao-css/dist/pull/sm/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/pull/sm/pull-0.css';
 @import 'cacao-css/dist/pull/sm/pull-1.css';
@@ -1438,7 +1438,7 @@
 /* Pull (md) */
 
 /* Include all Pull md files */
-@import 'cacao-css/dist/pull/md/combined-import';
+@import 'cacao-css/dist/pull/md/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/pull/md/pull-0.css';
 @import 'cacao-css/dist/pull/md/pull-1.css';
@@ -1457,7 +1457,7 @@
 /* Pull (lg) */
 
 /* Include all Pull lg files */
-@import 'cacao-css/dist/pull/lg/combined-import';
+@import 'cacao-css/dist/pull/lg/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/pull/lg/pull-0.css';
 @import 'cacao-css/dist/pull/lg/pull-1.css';
@@ -1476,7 +1476,7 @@
 /* Pull (xl) */
 
 /* Include all Pull xl files */
-@import 'cacao-css/dist/pull/xl/combined-import';
+@import 'cacao-css/dist/pull/xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/pull/xl/pull-0.css';
 @import 'cacao-css/dist/pull/xl/pull-1.css';
@@ -1495,7 +1495,7 @@
 /* Pull (2xl) */
 
 /* Include all Pull 2xl files */
-@import 'cacao-css/dist/pull/2xl/combined-import';
+@import 'cacao-css/dist/pull/2xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/pull/2xl/pull-0.css';
 @import 'cacao-css/dist/pull/2xl/pull-1.css';
@@ -1514,7 +1514,7 @@
 /* Pull (3xl) */
 
 /* Include all Pull 3xl files */
-@import 'cacao-css/dist/pull/3xl/combined-import';
+@import 'cacao-css/dist/pull/3xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/pull/3xl/pull-0.css';
 @import 'cacao-css/dist/pull/3xl/pull-1.css';
@@ -1533,7 +1533,7 @@
 /* Pull (4xl) */
 
 /* Include all Pull 4xl files */
-@import 'cacao-css/dist/pull/4xl/combined-import';
+@import 'cacao-css/dist/pull/4xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/pull/4xl/pull-0.css';
 @import 'cacao-css/dist/pull/4xl/pull-1.css';
@@ -1552,7 +1552,7 @@
 /* Pull (5xl) */
 
 /* Include all Pull 5xl files */
-@import 'cacao-css/dist/pull/5xl/combined-import';
+@import 'cacao-css/dist/pull/5xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/pull/5xl/pull-0.css';
 @import 'cacao-css/dist/pull/5xl/pull-1.css';
@@ -1574,7 +1574,7 @@
  * ------------------------------------------- */
 
 /* Include all Push files */
-@import 'cacao-css/dist/push/combined-import';
+@import 'cacao-css/dist/push/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/push/push-0.css';
 @import 'cacao-css/dist/push/push-1.css';
@@ -1594,7 +1594,7 @@
 /* Push (3xs) */
 
 /* Include all Push 3xs files */
-@import 'cacao-css/dist/push/3xs/combined-import';
+@import 'cacao-css/dist/push/3xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/push/3xs/push-0.css';
 @import 'cacao-css/dist/push/3xs/push-1.css';
@@ -1613,7 +1613,7 @@
 /* Push (2xs) */
 
 /* Include all Push 2xs files */
-@import 'cacao-css/dist/push/2xs/combined-import';
+@import 'cacao-css/dist/push/2xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/push/2xs/push-0.css';
 @import 'cacao-css/dist/push/2xs/push-1.css';
@@ -1632,7 +1632,7 @@
 /* Push (xs) */
 
 /* Include all Push xs files */
-@import 'cacao-css/dist/push/xs/combined-import';
+@import 'cacao-css/dist/push/xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/push/xs/push-0.css';
 @import 'cacao-css/dist/push/xs/push-1.css';
@@ -1651,7 +1651,7 @@
 /* Push (sm) */
 
 /* Include all Push sm files */
-@import 'cacao-css/dist/push/sm/combined-import';
+@import 'cacao-css/dist/push/sm/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/push/sm/push-0.css';
 @import 'cacao-css/dist/push/sm/push-1.css';
@@ -1670,7 +1670,7 @@
 /* Push (md) */
 
 /* Include all Push md files */
-@import 'cacao-css/dist/push/md/combined-import';
+@import 'cacao-css/dist/push/md/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/push/md/push-0.css';
 @import 'cacao-css/dist/push/md/push-1.css';
@@ -1689,7 +1689,7 @@
 /* Push (lg) */
 
 /* Include all Push lg files */
-@import 'cacao-css/dist/push/lg/combined-import';
+@import 'cacao-css/dist/push/lg/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/push/lg/push-0.css';
 @import 'cacao-css/dist/push/lg/push-1.css';
@@ -1708,7 +1708,7 @@
 /* Push (xl) */
 
 /* Include all Push xl files */
-@import 'cacao-css/dist/push/xl/combined-import';
+@import 'cacao-css/dist/push/xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/push/xl/push-0.css';
 @import 'cacao-css/dist/push/xl/push-1.css';
@@ -1727,7 +1727,7 @@
 /* Push (2xl) */
 
 /* Include all Push 2xl files */
-@import 'cacao-css/dist/push/2xl/combined-import';
+@import 'cacao-css/dist/push/2xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/push/2xl/push-0.css';
 @import 'cacao-css/dist/push/2xl/push-1.css';
@@ -1746,7 +1746,7 @@
 /* Push (3xl) */
 
 /* Include all Push 3xl files */
-@import 'cacao-css/dist/push/3xl/combined-import';
+@import 'cacao-css/dist/push/3xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/push/3xl/push-0.css';
 @import 'cacao-css/dist/push/3xl/push-1.css';
@@ -1765,7 +1765,7 @@
 /* Push (4xl) */
 
 /* Include all Push 4xl files */
-@import 'cacao-css/dist/push/4xl/combined-import';
+@import 'cacao-css/dist/push/4xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/push/4xl/push-0.css';
 @import 'cacao-css/dist/push/4xl/push-1.css';
@@ -1784,7 +1784,7 @@
 /* Push (5xl) */
 
 /* Include all Push 5xl files */
-@import 'cacao-css/dist/push/5xl/combined-import';
+@import 'cacao-css/dist/push/5xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/push/5xl/push-0.css';
 @import 'cacao-css/dist/push/5xl/push-1.css';
@@ -1813,7 +1813,7 @@
  * ------------------------------------------- */
 
 /* Include all Typography files */
-@import 'cacao-css/dist/typography/combined-import';
+@import 'cacao-css/dist/typography/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/typography/align.css';
 @import 'cacao-css/dist/typography/break.css';
@@ -1824,7 +1824,7 @@
 /* Typography (3xs) */
 
 /* Include all Typography 3xs files */
-@import 'cacao-css/dist/typography/3xs/combined-import';
+@import 'cacao-css/dist/typography/3xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/typography/3xs/align.css';
 @import 'cacao-css/dist/typography/3xs/break.css';
@@ -1835,7 +1835,7 @@
 /* Typography (2xs) */
 
 /* Include all Typography 2xs files */
-@import 'cacao-css/dist/typography/2xs/combined-import';
+@import 'cacao-css/dist/typography/2xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/typography/2xs/align.css';
 @import 'cacao-css/dist/typography/2xs/break.css';
@@ -1846,7 +1846,7 @@
 /* Typography (xs) */
 
 /* Include all Typography xs files */
-@import 'cacao-css/dist/typography/xs/combined-import';
+@import 'cacao-css/dist/typography/xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/typography/xs/align.css';
 @import 'cacao-css/dist/typography/xs/break.css';
@@ -1857,7 +1857,7 @@
 /* Typography (sm) */
 
 /* Include all Typography sm files */
-@import 'cacao-css/dist/typography/sm/combined-import';
+@import 'cacao-css/dist/typography/sm/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/typography/sm/align.css';
 @import 'cacao-css/dist/typography/sm/break.css';
@@ -1868,7 +1868,7 @@
 /* Typography (md) */
 
 /* Include all Typography md files */
-@import 'cacao-css/dist/typography/md/combined-import';
+@import 'cacao-css/dist/typography/md/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/typography/md/align.css';
 @import 'cacao-css/dist/typography/md/break.css';
@@ -1879,7 +1879,7 @@
 /* Typography (lg) */
 
 /* Include all Typography lg files */
-@import 'cacao-css/dist/typography/lg/combined-import';
+@import 'cacao-css/dist/typography/lg/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/typography/lg/align.css';
 @import 'cacao-css/dist/typography/lg/break.css';
@@ -1890,7 +1890,7 @@
 /* Typography (xl) */
 
 /* Include all Typography xl files */
-@import 'cacao-css/dist/typography/xl/combined-import';
+@import 'cacao-css/dist/typography/xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/typography/xl/align.css';
 @import 'cacao-css/dist/typography/xl/break.css';
@@ -1901,7 +1901,7 @@
 /* Typography (2xl) */
 
 /* Include all Typography 2xl files */
-@import 'cacao-css/dist/typography/2xl/combined-import';
+@import 'cacao-css/dist/typography/2xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/typography/2xl/align.css';
 @import 'cacao-css/dist/typography/2xl/break.css';
@@ -1912,7 +1912,7 @@
 /* Typography (3xl) */
 
 /* Include all Typography 3xl files */
-@import 'cacao-css/dist/typography/3xl/combined-import';
+@import 'cacao-css/dist/typography/3xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/typography/3xl/align.css';
 @import 'cacao-css/dist/typography/3xl/break.css';
@@ -1923,7 +1923,7 @@
 /* Typography (4xl) */
 
 /* Include all Typography 4xl files */
-@import 'cacao-css/dist/typography/4xl/combined-import';
+@import 'cacao-css/dist/typography/4xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/typography/4xl/align.css';
 @import 'cacao-css/dist/typography/4xl/break.css';
@@ -1934,7 +1934,7 @@
 /* Typography (5xl) */
 
 /* Include all Typography 5xl files */
-@import 'cacao-css/dist/typography/5xl/combined-import';
+@import 'cacao-css/dist/typography/5xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/typography/5xl/align.css';
 @import 'cacao-css/dist/typography/5xl/break.css';
@@ -1948,7 +1948,7 @@
  * ------------------------------------------- */
 
 /* Include all Width files */
-@import 'cacao-css/dist/width/combined-import';
+@import 'cacao-css/dist/width/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/width/width-0.css';
 @import 'cacao-css/dist/width/width-1.css';
@@ -1968,7 +1968,7 @@
 /* Width (3xs) */
 
 /* Include all Width 3xs files */
-@import 'cacao-css/dist/width/3xs/combined-import';
+@import 'cacao-css/dist/width/3xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/width/3xs/width-0.css';
 @import 'cacao-css/dist/width/3xs/width-1.css';
@@ -1988,7 +1988,7 @@
 /* Width (2xs) */
 
 /* Include all Width 2xs files */
-@import 'cacao-css/dist/width/2xs/combined-import';
+@import 'cacao-css/dist/width/2xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/width/2xs/width-0.css';
 @import 'cacao-css/dist/width/2xs/width-1.css';
@@ -2008,7 +2008,7 @@
 /* Width (xs) */
 
 /* Include all Width xs files */
-@import 'cacao-css/dist/width/xs/combined-import';
+@import 'cacao-css/dist/width/xs/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/width/xs/width-0.css';
 @import 'cacao-css/dist/width/xs/width-1.css';
@@ -2028,7 +2028,7 @@
 /* Width (sm) */
 
 /* Include all Width sm files */
-@import 'cacao-css/dist/width/sm/combined-import';
+@import 'cacao-css/dist/width/sm/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/width/sm/width-0.css';
 @import 'cacao-css/dist/width/sm/width-1.css';
@@ -2048,7 +2048,7 @@
 /* Width (md) */
 
 /* Include all Width md files */
-@import 'cacao-css/dist/width/md/combined-import';
+@import 'cacao-css/dist/width/md/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/width/md/width-0.css';
 @import 'cacao-css/dist/width/md/width-1.css';
@@ -2068,7 +2068,7 @@
 /* Width (lg) */
 
 /* Include all Width lg files */
-@import 'cacao-css/dist/width/lg/combined-import';
+@import 'cacao-css/dist/width/lg/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/width/lg/width-0.css';
 @import 'cacao-css/dist/width/lg/width-1.css';
@@ -2088,7 +2088,7 @@
 /* Width (xl) */
 
 /* Include all Width xl files */
-@import 'cacao-css/dist/width/xl/combined-import';
+@import 'cacao-css/dist/width/xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/width/xl/width-0.css';
 @import 'cacao-css/dist/width/xl/width-1.css';
@@ -2108,7 +2108,7 @@
 /* Width (2xl) */
 
 /* Include all Width 2xl files */
-@import 'cacao-css/dist/width/2xl/combined-import';
+@import 'cacao-css/dist/width/2xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/width/2xl/width-0.css';
 @import 'cacao-css/dist/width/2xl/width-1.css';
@@ -2128,7 +2128,7 @@
 /* Width (3xl) */
 
 /* Include all Width 3xl files */
-@import 'cacao-css/dist/width/3xl/combined-import';
+@import 'cacao-css/dist/width/3xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/width/3xl/width-0.css';
 @import 'cacao-css/dist/width/3xl/width-1.css';
@@ -2148,7 +2148,7 @@
 /* Width (4xl) */
 
 /* Include all Width 4xl files */
-@import 'cacao-css/dist/width/4xl/combined-import';
+@import 'cacao-css/dist/width/4xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/width/4xl/width-0.css';
 @import 'cacao-css/dist/width/4xl/width-1.css';
@@ -2168,7 +2168,7 @@
 /* Width (5xl) */
 
 /* Include all Width 5xl files */
-@import 'cacao-css/dist/width/5xl/combined-import';
+@import 'cacao-css/dist/width/5xl/combined-import.css';
 /* or include individual files */
 @import 'cacao-css/dist/width/5xl/width-0.css';
 @import 'cacao-css/dist/width/5xl/width-1.css';
