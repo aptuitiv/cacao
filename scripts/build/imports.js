@@ -138,9 +138,6 @@ const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory =
 const buildImports = () => {
     fancyLog(chalk.cyan('Setting up the import.css file...'));
 
-    const docsDirectory = `${rootDirectory}/docs/cacao`;
-    fs.ensureDirSync(docsDirectory);
-
     let fileContents = fileHeader;
     fileContents += coreImports;
 
@@ -171,7 +168,6 @@ const buildImports = () => {
     });
 
     fs.writeFileSync(`${distDirectory}/imports.css`, fileContents);
-    fs.writeFileSync(`${docsDirectory}/imports.css`, fileContents);
     fancyLog(chalk.green(`${logSymbols.success} Done setting up the import.css file`));
 };
 
