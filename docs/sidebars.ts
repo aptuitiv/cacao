@@ -28,6 +28,35 @@ const sidebars: SidebarsConfig = {
         },
         {
             type: 'category',
+            label: 'Styles',
+            link: {
+                type: 'generated-index',
+            },
+            items: [
+                {
+                    type: 'doc',
+                    id: 'styles/index',
+                    label: 'List of styles',
+                },
+                {
+                    type: 'doc',
+                    id: 'styles/base',
+                    label: 'Base styles',
+                },
+                {
+                    type: 'doc',
+                    id: 'styles/reset',
+                    label: 'CSS reset',
+                },
+                {
+                    type: 'doc',
+                    id: 'styles/media',
+                    label: 'Media queries',
+                },
+            ],
+        },
+        {
+            type: 'category',
             label: 'Migrations',
             link: {
                 type: 'generated-index',
