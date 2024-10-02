@@ -74,6 +74,18 @@ program
     });
 
 /**
+ * Wrap classes in media queries
+ *
+ * node scripts/build media
+ */
+program
+    .command('media')
+    .description('Wrap classes in media queries')
+    .action(async () => {
+        await wrapInMediaQueries();
+    });
+
+/**
  * Build the src padding files
  *
  * node scripts/build paddings

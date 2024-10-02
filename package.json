@@ -25,6 +25,7 @@
         "build-gutters": "node scripts/build gutters",
         "build-imports": "node scripts/build imports",
         "build-margins": "node scripts/build margins",
+        "build-media-queries": "node scripts/build media",
         "build-paddings": "node scripts/build paddings",
         "eslint": "eslint --fix .",
         "watch": "esw -w --color --fix ."
