@@ -1,5 +1,12 @@
 # Changelog
 
+## 6.3.0 (October 3, 2024)
+
+- Updated v6 conversion scripts.
+- Added more documentation.
+- Added scripts to help convert from v3.
+- Included `grid` in the components that get media query class versions.
+
 ## 6.2.0 (August 22, 2024)
 
 - Added combined imports for the following modules.
