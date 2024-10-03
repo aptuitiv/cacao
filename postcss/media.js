@@ -13,6 +13,21 @@ import { Declaration } from 'postcss';
 const processed = Symbol('processed');
 
 /**
+ * Add the media query size to the selector
+ *
+ * @param {string} selector The selector to add the media query to
+ * @param {string} media The media query size
+ * @returns {string}
+ */
+const addMediaToSelector = (selector, media) => {
+    if (selector.includes('[')) {
+        // This is a selector with an attribute selector, so we need to add the media query before to the attribute
+        return selector.replace(/(\s*)\[/, `-${media}$1[`);
+    }
+    return `${selector}-${media}`;
+};
+
+/**
  * PostCSS plugin to wrap rules in media queries
  *
  * Options:
@@ -56,7 +71,7 @@ const plugin = (options) => {
                         // Append the media query size to the selector.
                         // Because a rule could have multiple selectors we need to loop through them.
                         newRule.selectors = node.selectors.map((selector, index) => {
-                            let returnValue = `${selector}-${opts.media}`;
+                            let returnValue = addMediaToSelector(selector, opts.media);
                             if (index > 0) {
                                 // Indent the selector so that it looks better inside the media query
                                 returnValue = `\n    ${returnValue}`;
@@ -73,7 +88,7 @@ const plugin = (options) => {
                         // This is a rule that is likely nested inside a media query.
                         // Only update the selelector to include the media query size.
                         node.selectors = node.selectors.map((selector, index) => {
-                            let returnValue = `${selector}-${opts.media}`;
+                            let returnValue = addMediaToSelector(selector, opts.media);
                             if (index > 0) {
                                 // Indent the selector so that it looks better inside the media query
                                 returnValue = `\n    ${returnValue}`;

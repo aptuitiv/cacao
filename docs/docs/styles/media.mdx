@@ -1,0 +1,141 @@
+---
+title: Media queries
+---
+
+Cacao provides a number of different media query variables that you can use in your code.
+
+The media query variables use `@custom-media`. Because `@custom-media` is not yet supported the [custom media PostCSS plugin](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-custom-media) is required as part of your build process.
+
+Media query variables have the following naming conventions:
+
+- The prefix `--m-` is used to indicate that these are media queries.
+- The variable must be all lowercase.
+
+## How to import into your CSS
+
+Import this into your CSS with:
+
+```css
+@import 'cacao-css/dist/media.css';
+```
+
+## How to use the media query variables
+
+To use the media query variables you could put them within the `@media` declaration. For example, say that you want to use the large viewport media query, you can do something like this:
+
+```css
+@media(--m-lg) {
+    .someSelector {
+        width: 50%;
+    }
+}
+```
+
+## Viewport media queries
+
+The viewport sizes are:
+| Size | Viewport pixel width | Variable | "Below" variable | "Only" variable |
+|-----|--------|----|----|----|
+| 3xs | 240px  | --m-3xs |--m-3xs-below |--m-3xs-only |
+| 2xs | 360px  | --m-2xs |--m-2xs-below |--m-2xs-only |
+| xs  | 420px  | --m-xs |--m-xs-below |--m-xs-only |
+| sm  | 576px  | --m-sm |--m-sm-below |--m-sm-only |
+| md  | 768px  | --m-md |--m-md-below |--m-md-only |
+| lg  | 1024px | --m-lg |--m-lg-below |--m-lg-only |
+| xl  | 1280px | --m-xl |--m-xl-below |--m-xl-only |
+| 2xl | 1440px | --m-2xl |--m-2xl-below |--m-2xl-only |
+| 3xl | 1600px | --m-3xl |--m-3xl-below |--m-3xl-only |
+| 4xl | 1920px | --m-4xl |--m-4xl-below |--m-4xl-only |
+| 5xl | 2560px | --m-5xl |--m-5xl-below |--m-5xl-only |
+
+The media queries are "mobile first" meaning they target screen widths larger than the specified viewport pixel width. For example, the `sm` size targets screens larget than 576px.
+
+```css
+@custom-media --m-sm (width >= 576px);
+```
+
+Each size also has a `below` and an `only` version.
+
+The `below` version is used to target this screen width and below. It's not a "mobile-first" media query.
+
+```css
+@custom-media --m-sm-below (width < 576px);
+```
+
+The `only` version is used to target the pixel range between this size and the size below it (or `0` if it's the 3xs size). For example, for the `sm` size
+
+```css
+@custom-media --m-sm-only (360px <= width < 576px);
+```
+
+## Accessibility preferences
+
+These are used to identify the user's browser preferences for motion and transparency.
+
+```css
+@custom-media --m-motion-ok (prefers-reduced-motion: no-preference);
+@custom-media --m-motion-not-ok (prefers-reduced-motion: reduce);
+@custom-media --m-opacity-ok (prefers-reduced-transparency: no-preference);
+@custom-media --m-opacity-not-ok (prefers-reduced-transparency: reduce);
+```
+
+## Data preferences
+
+These are used to identify the user's browser preferences around data (typically cellular data usage).
+
+```css
+/* Data preferences */
+@custom-media --m-use-data-ok (prefers-reduced-data: no-preference);
+@custom-media --m-use-data-not-ok (prefers-reduced-data: reduce);
+```
+
+## Color preferences
+
+These are used to identify the user's browser preferences around colors.
+
+```css
+@custom-media --m-dark (prefers-color-scheme: dark);
+@custom-media --m-light (prefers-color-scheme: light);
+@custom-media --m-high-contrast (prefers-contrast: more);
+@custom-media --m-low-contrast (prefers-contrast: less);
+@custom-media --m-inverted-colors (inverted-colors: inverted);
+@custom-media --m-forced-colors (forced-colors: active);
+```
+
+## Orientation
+
+These are used to identify the user's browser preferences around device orientation.
+
+```css
+@custom-media --m-portrait (orientation: portrait);
+@custom-media --m-landscape (orientation: landscape);
+```
+
+## Pointer types
+
+These are used to help identify the pointer type used with the device.
+
+```css
+@custom-media --m-touch (hover: none) and (pointer: coarse);
+@custom-media --m-stylus (hover: none) and (pointer: fine);
+@custom-media --m-pointer (hover) and (pointer: coarse);
+@custom-media --m-mouse (hover) and (pointer: fine);
+```
+
+## Color capabilities
+
+These are used to identify the color capabilities of the defice.
+
+```css
+@custom-media --m-hd-color (dynamic-range: high) or (color-gamut: p3);
+```
+
+## Source CSS
+
+Below is the full source for the media queries.
+
+<!-- markdownlint-disable -->
+import CodeBlock from '@theme/CodeBlock';
+import ImportsSource from '!!raw-loader!../../../dist/media.css';
+
+<CodeBlock language="css" title="media.css">{ImportsSource}</CodeBlock>

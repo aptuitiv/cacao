@@ -169,6 +169,12 @@ Remove `Grid--equalHeight` from the grid div.
 
 Add `flex` class to the grid column divs.
 
+### Grid--fit
+
+`Grid--fit` is used to have cells fill the remaining space in a grid.
+
+Remove `Grid--fit` from the grid div. Then use `col-fill` on the grid cell divs.
+
 ### Aligning cells
 
 Change these classes on the grid div.
@@ -176,14 +182,16 @@ Change these classes on the grid div.
 - `Grid--alignBottom` → `align-end`
 - `Grid--alignMiddle` → `align-center`
 - `Grid-alignCenter` → `justify-center`
-- `Grid--alignRight` → `justify-right`
+- `Grid--alignRight` → `justify-end`
 
 ### Grid gutters
+
+Change these classes on the grid div.
 
 - `Grid--withGutterSm` → `g-1`
 - `Grid--withGutter` → `g-2`
 - `Grid--withGutterLg` → `g-4`
-- `Grid--withGutterXlg` → `g-5` (although a `g-6` would be nice since the margin is about 60px)
+- `Grid--withGutterXlg` → `g-6`
 
 ### Grid column sizes
 

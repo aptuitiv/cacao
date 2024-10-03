@@ -1,0 +1,23 @@
+---
+title: CSS reset
+---
+
+These styles add some minimal element style resets. It's inspired by [Josh Comeau's CSS reset](https://www.joshwcomeau.com/css/custom-css-reset/).
+
+## How to import into your CSS
+
+Import this into your CSS with:
+
+```css
+@import 'cacao-css/dist/reset.css';
+```
+
+## Source CSS
+
+Below is the full source for the reset styles.
+
+<!-- markdownlint-disable -->
+import CodeBlock from '@theme/CodeBlock';
+import ImportsSource from '!!raw-loader!../../../dist/reset.css';
+
+<CodeBlock language="css" title="reset.css">{ImportsSource}</CodeBlock>

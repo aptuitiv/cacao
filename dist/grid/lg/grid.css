@@ -1,0 +1,26 @@
+/* =========================================================================== *\
+    Grid utilities
+\* =========================================================================== */
+
+@media (--m-lg) {
+    .grid-lg {
+        --gap: 0px;
+
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: calc(var(--gap) * -1);
+    }
+
+    /* Not sure that overflow is necessary here. Removing it does not seem to have any consequences.
+      Keeping it means that items in a grid can't overflow when overflow is wanted (like when adjusting
+      the y-offset of an element when hovering over it).     */
+
+    /* .grid [class*=col-] {
+        overflow: hidden;
+    }     */
+
+    /* Don't adjust margin if column justification is being used.     */
+    .grid-lg[class*="justify-"] {
+        margin-right: 0;
+    }
+}

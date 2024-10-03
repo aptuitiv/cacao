@@ -37,6 +37,7 @@ export const mediaQueryDirectories = [
     'src/aspect',
     'src/display',
     'src/fit',
+    'src/grid',
     'src/grid-column',
     'src/gutter',
     'src/height',

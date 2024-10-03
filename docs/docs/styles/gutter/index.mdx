@@ -1,0 +1,40 @@
+---
+title: Gutters
+---
+
+The gutter styles handle the gaps between flexbox columns and rows. They can also be used for grids.
+
+There are three types of gutter styles.
+
+1. Both [horizontal and vertical gutters](/styles/gutter/all)\
+This will set the `--gap` variable to the specified value and set the `gap` style on an element.
+2. [Horizontal gutters](/styles/gutter/horizontal)\
+This will set the `--gap` variable to the specified value and set the `column-gap` style on an element.
+3. [Vertical gutters](/styles/gutter/vertical)\
+This will set the `--row-gap` variable to the specified value and set the `row-gap` style on an element.
+
+The size of the gap is set with the [gutter variables](/styles/gutter/variables).
+
+## Combined imports
+
+If you will use all of the gutter sizes then you can use the combined import file.
+
+```css
+@import 'cacao-css/dist/gutter/combined-import.css';
+```
+
+Imports are available for all [media query viewport sizes](/styles/media#viewport-media-queries).
+
+```css
+@import 'cacao-css/dist/gutter/3xs/combined-import.css';
+@import 'cacao-css/dist/gutter/2xs/combined-import.css';
+@import 'cacao-css/dist/gutter/xs/combined-import.css';
+@import 'cacao-css/dist/gutter/sm/combined-import.css';
+@import 'cacao-css/dist/gutter/md/combined-import.css';
+@import 'cacao-css/dist/gutter/lg/combined-import.css';
+@import 'cacao-css/dist/gutter/xl/combined-import.css';
+@import 'cacao-css/dist/gutter/2xl/combined-import.css';
+@import 'cacao-css/dist/gutter/3xl/combined-import.css';
+@import 'cacao-css/dist/gutter/4xl/combined-import.css';
+@import 'cacao-css/dist/gutter/5xl/combined-import.css';
+```

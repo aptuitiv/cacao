@@ -21,11 +21,21 @@ const updateFile = (file) => {
 
     // Breakpoints to convert
     const breakpoints = {
+        '--c-bp-3xs': '--m-3xs',
+        '--c-bp-xxxs': '--m-3xs',
+        '--c-bp-2xs': '--m-2xs',
+        '--c-bp-xxs': '--m-2xs',
+        '--c-bp-xs': '--m-xs',
         '--c-bp-sm': '--m-sm',
         '--c-bp-md': '--m-md',
         '--c-bp-lg': '--m-lg',
         '--c-bp-xl': '--m-xl',
         '--c-bp-xxl': '--m-2xl',
+        '--c-bp-2xl': '--m-2xl',
+        '--c-bp-xxxl': '--m-3xl',
+        '--c-bp-3xl': '--m-3xl',
+        '--c-bp-4xl': '--m-4xl',
+        '--c-bp-5xl': '--m-5xl',
     };
 
     // Replace the breakpoint classes

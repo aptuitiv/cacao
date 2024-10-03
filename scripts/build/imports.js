@@ -9,7 +9,7 @@ import logSymbols from 'log-symbols';
 import { basename } from 'path';
 
 import {
-    combinationFiles, distDirectory, importsModuleMap, mediaSizes, rootDirectory,
+    combinationFiles, distDirectory, importsModuleMap, mediaSizes,
 } from './config.js';
 
 // The header for the imports file
@@ -61,7 +61,6 @@ const coreImports = `
 const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory = false) => {
     const moduleName = moduleObject.name;
     const useVariables = moduleObject.variables ?? false;
-    const combinationFile = moduleObject.combine ?? false;
 
     const directoryPath = directory.replace(`${distDirectory}/`, '');
 
@@ -97,7 +96,7 @@ const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory =
         } else {
             fileContents += `\n/* Include all ${moduleName} files */`;
         }
-        fileContents += `\n@import 'cacao-css/dist/${directoryPath}/combined-import';\n`;
+        fileContents += `\n@import 'cacao-css/dist/${directoryPath}/combined-import.css';\n`;
         fileContents += '/* or include individual files */';
     }
 
@@ -139,9 +138,6 @@ const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory =
 const buildImports = () => {
     fancyLog(chalk.cyan('Setting up the import.css file...'));
 
-    const docsDirectory = `${rootDirectory}/docs/cacao`;
-    fs.ensureDirSync(docsDirectory);
-
     let fileContents = fileHeader;
     fileContents += coreImports;
 
@@ -172,7 +168,6 @@ const buildImports = () => {
     });
 
     fs.writeFileSync(`${distDirectory}/imports.css`, fileContents);
-    fs.writeFileSync(`${docsDirectory}/imports.css`, fileContents);
     fancyLog(chalk.green(`${logSymbols.success} Done setting up the import.css file`));
 };
 

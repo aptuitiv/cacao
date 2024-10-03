@@ -1,0 +1,49 @@
+---
+title: Gutters - Variables
+---
+
+The size of the gutters are set using CSS variables. You will need to either import the `cacao-css/dist/gutter/variables.css` file into your CSS or set all of the variables with your own CSS.
+
+You could import the gutter variables file and still override one or more of the variables in your own code. You just want to make sure that the code that overrides the variables is set after this import.
+
+
+## The variables
+
+`:where()` is used to give the variables no specificity so that they are easily overriden. [See the MDN where() documentation for more information](https://developer.mozilla.org/en-US/docs/Web/CSS/:where).
+
+The following variables are set.
+
+| Variable | Value |
+|----------|-------|
+| --gutter-0 | 0px |
+| --gutter-1 | 10px |
+| --gutter-2 | 20px |
+| --gutter-3 | 30px |
+| --gutter-4 | 40px |
+| --gutter-5 | 50px |
+| --gutter-6 | 60px |
+| --gutter-7 | 70px |
+| --gutter-8 | 80px |
+| --gutter-9 | 90px |
+| --gutter-10 | 100px |
+| --gutter-11 | 120px |
+| --gutter-12 | 160px |
+| --gutter-13 | 240px |
+| --gutter-14 | 320px |
+| --gutter-15 | 480px |
+
+## How to import into your CSS
+
+Import this into your CSS with:
+
+```css
+@import 'cacao-css/dist/gutter/variables.css';
+```
+
+## Source CSS
+
+<!-- markdownlint-disable -->
+import CodeBlock from '@theme/CodeBlock';
+import ImportsSource from '!!raw-loader!../../../../dist/gutter/variables.css';
+
+<CodeBlock language="css" title="gutter/all.css">{ImportsSource}</CodeBlock>

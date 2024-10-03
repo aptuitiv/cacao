@@ -1,0 +1,56 @@
+---
+title: Spacing
+---
+
+This provides styles for removing the space around an element when it's inside another element that has one of the spacing classes.
+
+You can remove the top margin and padding from the first child within an element.
+
+Or you can remove the bottom margin and padding from the last child within an element.
+
+This is useful when you have an element that could contain user content, but you want to ensure the spacing within the element. For example, you want to ensure that a paragraph at the end will not have a bottom margin or padding.
+
+## How to import into your CSS
+
+Import this into your CSS with:
+
+```css
+@import 'cacao-css/dist/spacing/spacing.css';
+```
+
+## Example usage
+
+Here is an example of using this remove the padding and margin from the first and last child in an element.
+
+```html
+<div class="first-child-st-0 last-child-sb-0">
+    <h1>Content here</h1>
+    <p>Some paragraph content.</p>
+</div>
+```
+
+Here is an example where just the first child is affected.
+
+```html
+<div class="first-child-st-0 ">
+    <h1>Content here</h1>
+    <p>Some paragraph content.</p>
+</div>
+```
+
+Here is an example where just the last child is affected.
+
+```html
+<div class="last-child-sb-0">
+    <h1>Content here</h1>
+    <p>Some paragraph content.</p>
+</div>
+```
+
+## Source CSS
+
+<!-- markdownlint-disable -->
+import CodeBlock from '@theme/CodeBlock';
+import ImportsSource from '!!raw-loader!../../../dist/spacing/spacing.css';
+
+<CodeBlock language="css" title="spacing/spacing.css">{ImportsSource}</CodeBlock>
