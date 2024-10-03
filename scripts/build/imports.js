@@ -9,7 +9,7 @@ import logSymbols from 'log-symbols';
 import { basename } from 'path';
 
 import {
-    combinationFiles, distDirectory, importsModuleMap, mediaSizes, rootDirectory,
+    combinationFiles, distDirectory, importsModuleMap, mediaSizes,
 } from './config.js';
 
 // The header for the imports file
