@@ -1,0 +1,30 @@
+---
+title: Link styles
+---
+
+The link styles provide helper classes to set links to be subtle (i.e. no underline and they match the text around them).
+
+
+## How to import into your CSS
+
+Import this into your CSS with:
+
+```css
+@import 'cacao-css/dist/link/link.css';
+```
+
+## Example usage
+
+Here is an example of using this on a link:
+
+```html
+<a href="/some/url" class="link-subtle">Subtle link</a>
+```
+
+## Source CSS
+
+<!-- markdownlint-disable -->
+import CodeBlock from '@theme/CodeBlock';
+import ImportsSource from '!!raw-loader!../../../dist/link/link.css';
+
+<CodeBlock language="css" title="link/link.css">{ImportsSource}</CodeBlock>

@@ -1,0 +1,61 @@
+---
+title: Image styles
+---
+
+The image styles provide helper classes to align images to the left or right of content. The image will have proper margins around it and on small screens it will no longer float but will show as a block element.
+
+The following classes are available
+
+
+## How to import into your CSS
+
+Import this into your CSS with:
+
+```css
+@import 'cacao-css/dist/image/variables.css';
+@import 'cacao-css/dist/image/image.css';
+```
+
+You also need to import the image variables at `cacao-css/dist/image/variables.css`, or set them in your own CSS.
+
+## Example usage
+
+Below is an example of floating an image to the right.
+
+```html
+<img src="/path/to/image.jpg" width="300" height="250" alt="alt text" class="image-right">
+```
+
+Below is an example of floating an image to the left.
+
+```html
+<img src="/path/to/image.jpg" width="300" height="250" alt="alt text" class="image-left">
+```
+
+## The variables
+
+`:where()` is used to give the variables no specificity so that they are easily overriden. [See the MDN where() documentation for more information](https://developer.mozilla.org/en-US/docs/Web/CSS/:where).
+
+The following variables are set.
+
+| Variable | Value |
+|----------|-------|
+| --image-bottom-margin | 10px |
+| --image-left-margin | 20px |
+| --image-max-width | 100% |
+| --image-max-width-md | 40% |
+| --image-max-width-sm | 50% |
+| --image-right-margin | 20px |
+
+## Source CSS
+
+<!-- markdownlint-disable -->
+import CodeBlock from '@theme/CodeBlock';
+import ImportsSource from '!!raw-loader!../../../dist/image/image.css';
+import ImportsSourceVar from '!!raw-loader!../../../dist/image/variables.css';
+
+<CodeBlock language="css" title="image/image.css">{ImportsSource}</CodeBlock>
+
+## Image variables source CSS
+
+<CodeBlock language="css" title="image/variables.css">{ImportsSourceVar}</CodeBlock>

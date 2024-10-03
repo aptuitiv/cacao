@@ -1,0 +1,34 @@
+---
+title: Embedding content
+---
+
+This provides styles for embedding iframes and other media types.
+
+You would typically use this with the [aspect ratio](/styles/aspect) classes or your own aspect ratio styles.
+
+
+## How to import into your CSS
+
+Import this into your CSS with:
+
+```css
+@import 'cacao-css/dist/embed/embed.css';
+```
+
+## Example usage
+
+Here is an example of using this to embed an iframe.
+
+```html
+<div class="embed my-5 aspect-16-9">
+    <iframe title="Iframe title" frameborder="0" allowfullscreen src="https://domain.com/some-url" loading="lazy"></iframe>
+</div>
+```
+
+## Source CSS
+
+<!-- markdownlint-disable -->
+import CodeBlock from '@theme/CodeBlock';
+import ImportsSource from '!!raw-loader!../../../dist/embed/embed.css';
+
+<CodeBlock language="css" title="embed/embed.css">{ImportsSource}</CodeBlock>
