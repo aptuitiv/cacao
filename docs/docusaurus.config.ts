@@ -71,6 +71,11 @@ const config: Config = {
                 //     label: 'Tutorial',
                 // },
                 {
+                    href: 'https://www.aptuitiv.com',
+                    label: 'Aptuitiv',
+                    position: 'right',
+                },
+                {
                     href: 'https://github.com/aptuitiv/cacao',
                     label: 'GitHub',
                     position: 'right',
