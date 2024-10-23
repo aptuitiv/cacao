@@ -21,8 +21,15 @@ const processed = Symbol('processed');
  */
 const addMediaToSelector = (selector, media) => {
     if (selector.includes('[')) {
-        // This is a selector with an attribute selector, so we need to add the media query before to the attribute
+        // This is a selector with an attribute selector, so we need to add the media query size before to the attribute
         return selector.replace(/(\s*)\[/, `-${media}$1[`);
+    } if (selector.startsWith(':') && selector.includes('(')) {
+        // This is a selector with a pseudo-class function like ":is()" or ":where()". We need to add the media query size
+        // within the pseudo-class function.
+        return selector.replace(/(\s*)\)/, `-${media}$1)`);
+    } if (selector.includes(':') && !selector.startsWith(':') && !selector.includes('(')) {
+        // This is a selector with a pseudo-class like ":hover", so we need to add the media query before to the pseudo-class
+        return selector.replace(/(\s*):/, `-${media}$1:`);
     }
     return `${selector}-${media}`;
 };
