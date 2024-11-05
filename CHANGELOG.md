@@ -1,5 +1,10 @@
 # Changelog
 
+## 6.4.0 (November 5, 2024)
+
+- Added `!important` to display styles. This was doen so that the display styles are always set and can’t be overwridden by more specific site styles.
+- Added support for CSS selectors with psuedo-classes.
+
 ## 6.3.0 (October 3, 2024)
 
 - Updated v6 conversion scripts.

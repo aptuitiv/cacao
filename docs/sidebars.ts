@@ -33,11 +33,11 @@ const sidebars: SidebarsConfig = {
                 type: 'generated-index',
             },
             items: [
-                {
-                    type: 'doc',
-                    id: 'styles/index',
-                    label: 'List of styles',
-                },
+                // {
+                //     type: 'doc',
+                //     id: 'styles/index',
+                //     label: 'List of styles',
+                // },
                 {
                     type: 'doc',
                     id: 'styles/base',

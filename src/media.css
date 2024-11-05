@@ -51,11 +51,14 @@
  * - And our own usage in building websites
  *
  * Cacao is a mobile-first system.
- * We don't use min-width or max-width because we follow Stylelint's media-feature-rante-notation rule.
+ * We don't use min-width or max-width because we follow Stylelint's media-feature-range-notation rule.
  * https://stylelint.io/user-guide/rules/media-feature-range-notation/
  *
  * We use pixels instead of ems because that is the convention and it helps prevent a Safari bug with how they calculate ems (i.e. they use font-size + zoom level)
  * https://cgamesplay.com/post/2023/05/19/stop-using-em-in-media-queries/
+ *
+ * https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/ is another viewpoint on this and considers users increacing the default
+ * font size in their browser settings. Need to explore this more. 10/26/2024
  */
 
 /* 3xs */

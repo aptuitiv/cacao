@@ -38,7 +38,8 @@ export default function Home(): JSX.Element {
                 <div className="container">
                     <div className="margin-horiz--xl margin-vert--xl">
                         <p>
-                            Cacao is a utility class CSS library. It
+                            Cacao is a utility class CSS library developed by{' '}
+                            <a href="https://www.aptuitiv.com">Aptuitiv</a>. It
                             intentionally does not provide styles for specific
                             components. Rather, it has utility classes for doing
                             common things like grids, setting heights and
@@ -58,29 +59,120 @@ export default function Home(): JSX.Element {
                         <div className="col col--6">
                             <Heading as="h2">Included modules</Heading>
                             <ul>
-                                <li>Aspect ratios</li>
-                                <li>Clearfix</li>
-                                <li>Display styles</li>
-                                <li>Embed media</li>
-                                <li>Fit</li>
-                                <li>Grid</li>
-                                <li>Grid columns</li>
-                                <li>Gutter</li>
-                                <li>Height</li>
-                                <li>Images</li>
-                                <li>Links</li>
-                                <li>Margin</li>
-                                <li>Padding</li>
-                                <li>Position</li>
-                                <li>Pull</li>
-                                <li>Push</li>
-                                <li>Spacing</li>
-                                <li>Typography</li>
-                                <li>Width</li>
+                                <li>
+                                    <a href="/cacao/styles/base">
+                                        Reasonable base styles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/reset">
+                                        CSS reset styles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/media">
+                                        Media query variables
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/aspect">
+                                        Aspect Ratios
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/clearfix">
+                                        Clearfix
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/display">
+                                        Display styles
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/embed">
+                                        Embed media
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/grid">Grid</a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/grid-column">
+                                        Grid columns
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/gutter">Gutter</a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/height">Height</a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/image">Images</a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/link">Links</a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/margin">Margin</a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/fit">Object fit</a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/padding">Padding</a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/position">
+                                        Position
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/pull">Pull</a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/push">Push</a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/spacing">Spacing</a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/typography">
+                                        Typography
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/cacao/styles/width">Width</a>
+                                </li>
                             </ul>
                         </div>
                         <div className="col col--6">
-                            <Heading as="h2">Included breakpoints</Heading>
+                            <Heading as="h2">Media query variables</Heading>
+                            <p>
+                                The included{' '}
+                                <a href="/cacao/styles/media">
+                                    media query variables
+                                </a>{' '}
+                                make it easier to consistently use{' '}
+                                <a href="/cacao/styles/media#viewport-media-queries">
+                                    viewport breakpoints
+                                </a>
+                                ,{' '}
+                                <a href="/cacao/styles/media#accessibility-preferences">
+                                    accessibility
+                                </a>
+                                ,{' '}
+                                <a href="/cacao/styles/media#color-preferences">
+                                    color
+                                </a>
+                                ,{' '}
+                                <a href="/cacao/styles/media#pointer-types">
+                                    pointer
+                                </a>
+                                , and other media queries
+                            </p>
+                            <Heading as="h3">Included breakpoints</Heading>
                             <ul>
                                 <li>3xs: &gt;= 240px</li>
                                 <li>2xs: &gt;= 360px</li>

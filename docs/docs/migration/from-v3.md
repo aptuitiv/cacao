@@ -2,6 +2,26 @@
 
 Migrating from version 3 to a more recent version is a big change. We recommend that you stage the website somewhere becasue the update can be disruptive until it's done.
 
+## Helper script to automate some of the migration
+
+There is a helper script to automate some of the migration.
+
+This will recursively crawl the root directory for your template files and update any Cacao version 3 classes to the correct version 6 class.
+
+For example, if your templates are in `src/templates` you would run:
+
+```bash
+cacao-convert-v3 classes -d src/templates
+```
+
+It may also be good to run this on Javascript in case any utility classes were being set.
+
+```bash
+cacao-convert-v3 classes -d src/js
+```
+
+After you run that you'll probably also want to run the [version 6 migration scripts](/migration/from-v4-or-v5-to-v6).
+
 ## Number System
 
 The number system used throughout most of v3 is copied over to v4 and higher. For example: `mt-1` is equivalent to `margin-top: 10px;`.

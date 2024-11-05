@@ -1,30 +1,36 @@
 /* =========================================================================== *\
     Display utilities
+
+    !important is used to ensure that the utility classes take precedence over
+    any other styles that might be applied to the elements. This is one of the
+    rare cases where we use !important. Use the media query
+    versions if you only need things to be displayed a certain way at a certain
+    breakpoints.
 \* =========================================================================== */
 
 @media (--m-3xs) {
     .flex-3xs {
-        display: flex;
+        display: flex !important;
     }
 
     .inline-flex-3xs {
-        display: inline-flex;
+        display: inline-flex !important;
     }
 
     .block-3xs {
-        display: block;
+        display: block !important;
     }
 
     .inline-3xs {
-        display: inline;
+        display: inline !important;
     }
 
     .inline-block-3xs {
-        display: inline-block;
+        display: inline-block !important;
     }
 
     .hidden-3xs {
-        display: none;
+        display: none !important;
     }
 
     .visually-hidden-3xs {
