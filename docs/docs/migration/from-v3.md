@@ -230,7 +230,7 @@ For example, if the grid column had these styles: `Grid-cell u-size1of5 u-lg-siz
 The end result will be
 
 ```css
-col-1-1 col-sm-1-3 col-md-1-4 col-lg-1-5
+col-1-1 col-1-3-sm col-1-4-md col-1-5-lg
 ```
 
 By convention, we start with the smallest screen size and progress from there.
