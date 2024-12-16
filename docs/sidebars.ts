@@ -200,6 +200,16 @@ const sidebars: SidebarsConfig = {
                         },
                         {
                             type: 'doc',
+                            id: 'styles/grid-column/eleven-column',
+                            label: '11 column',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/grid-column/twelve-column',
+                            label: '12 column',
+                        },
+                        {
+                            type: 'doc',
                             id: 'styles/grid-column/fill-column',
                             label: 'Fill column width',
                         },
