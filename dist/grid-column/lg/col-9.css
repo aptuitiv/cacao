@@ -4,38 +4,38 @@
 
 @media (--m-lg) {
     .col-1-9-lg {
-        width: calc(100% / 9 - var(--gap));
+        width: calc(100% / 9 - var(--col-width-adjust));
     }
 
     .col-2-9-lg {
-        width: calc(100% / 9 * 2 - var(--gap));
+        width: calc(100% / 9 * 2 - var(--col-width-adjust));
     }
 
     .col-3-9-lg {
-        width: calc(100% / 9 * 3 - var(--gap));
+        width: calc(100% / 9 * 3 - var(--col-width-adjust));
     }
 
     .col-4-9-lg {
-        width: calc(100% / 9 * 4 - var(--gap));
+        width: calc(100% / 9 * 4 - var(--col-width-adjust));
     }
 
     .col-5-9-lg {
-        width: calc(100% / 9 * 5 - var(--gap));
+        width: calc(100% / 9 * 5 - var(--col-width-adjust));
     }
 
     .col-6-9-lg {
-        width: calc(100% / 9 * 6 - var(--gap));
+        width: calc(100% / 9 * 6 - var(--col-width-adjust));
     }
 
     .col-7-9-lg {
-        width: calc(100% / 9 * 7 - var(--gap));
+        width: calc(100% / 9 * 7 - var(--col-width-adjust));
     }
 
     .col-8-9-lg {
-        width: calc(100% / 9 * 8 - var(--gap));
+        width: calc(100% / 9 * 8 - var(--col-width-adjust));
     }
 
     .col-9-9-lg {
-        width: calc(100% - var(--gap));
+        width: calc(100% - var(--col-width-adjust));
     }
 }

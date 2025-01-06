@@ -4,26 +4,26 @@
 
 @media (--m-5xl) {
     .col-1-6-5xl {
-        width: calc(100% / 6 - var(--gap));
+        width: calc(100% / 6 - var(--col-width-adjust));
     }
 
     .col-2-6-5xl {
-        width: calc(100% / 6 * 2 - var(--gap));
+        width: calc(100% / 6 * 2 - var(--col-width-adjust));
     }
 
     .col-3-6-5xl {
-        width: calc(50% - var(--gap));
+        width: calc(50% - var(--col-width-adjust));
     }
 
     .col-4-6-5xl {
-        width: calc(100% / 6 * 4 - var(--gap));
+        width: calc(100% / 6 * 4 - var(--col-width-adjust));
     }
 
     .col-5-6-5xl {
-        width: calc(100% / 6 * 5 - var(--gap));
+        width: calc(100% / 6 * 5 - var(--col-width-adjust));
     }
 
     .col-6-6-5xl {
-        width: calc(100% - var(--gap));
+        width: calc(100% - var(--col-width-adjust));
     }
 }

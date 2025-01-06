@@ -4,18 +4,18 @@
 
 @media (--m-xl) {
     .col-1-4-xl {
-        width: calc(25% - var(--gap));
+        width: calc(25% - var(--col-width-adjust));
     }
 
     .col-2-4-xl {
-        width: calc(50% - var(--gap));
+        width: calc(50% - var(--col-width-adjust));
     }
 
     .col-3-4-xl {
-        width: calc(75% - var(--gap));
+        width: calc(75% - var(--col-width-adjust));
     }
 
     .col-4-4-xl {
-        width: calc(100% - var(--gap));
+        width: calc(100% - var(--col-width-adjust));
     }
 }

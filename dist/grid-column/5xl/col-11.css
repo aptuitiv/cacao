@@ -4,46 +4,46 @@
 
 @media (--m-5xl) {
     .col-1-11-5xl {
-        width: calc(100% / 11 - var(--gap));
+        width: calc(100% / 11 - var(--col-width-adjust));
     }
 
     .col-2-11-5xl {
-        width: calc(100% / 11 * 2 - var(--gap));
+        width: calc(100% / 11 * 2 - var(--col-width-adjust));
     }
 
     .col-3-11-5xl {
-        width: calc(100% / 11 * 3 - var(--gap));
+        width: calc(100% / 11 * 3 - var(--col-width-adjust));
     }
 
     .col-4-11-5xl {
-        width: calc(100% / 11 * 4 - var(--gap));
+        width: calc(100% / 11 * 4 - var(--col-width-adjust));
     }
 
     .col-5-11-5xl {
-        width: calc(100% / 11 * 5 - var(--gap));
+        width: calc(100% / 11 * 5 - var(--col-width-adjust));
     }
 
     .col-6-11-5xl {
-        width: calc(100% / 11 * 6 - var(--gap));
+        width: calc(100% / 11 * 6 - var(--col-width-adjust));
     }
 
     .col-7-11-5xl {
-        width: calc(100% / 11 * 7 - var(--gap));
+        width: calc(100% / 11 * 7 - var(--col-width-adjust));
     }
 
     .col-8-11-5xl {
-        width: calc(100% / 11 * 8 - var(--gap));
+        width: calc(100% / 11 * 8 - var(--col-width-adjust));
     }
 
     .col-9-11-5xl {
-        width: calc(100% / 11 * 9 - var(--gap));
+        width: calc(100% / 11 * 9 - var(--col-width-adjust));
     }
 
     .col-10-11-5xl {
-        width: calc(100% / 11 * 10 - var(--gap));
+        width: calc(100% / 11 * 10 - var(--col-width-adjust));
     }
 
     .col-11-11-5xl {
-        width: calc(100% - var(--gap));
+        width: calc(100% - var(--col-width-adjust));
     }
 }
