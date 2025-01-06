@@ -3,7 +3,9 @@
 
 # Upgrading to version 7
 
-Upgrading to version 7 involves updating any grids that use gutters to specify the number of columns in a grid.
+Major changes in version 7 include:
+
+- Requirement to specify the number of columns in a grid if using gutters. When building grids using the [column size](/styles/grid-column-size) and [gutter](/styles/gutter) classes, the CSS needs to know the [number of columns](/styles/grid-num-columns) in the grid in order to correctly adjust the column widths for the gutters.
 
 Depending on the version that you are currently on, your upgrade path will be different.
 
