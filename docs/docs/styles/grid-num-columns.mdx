@@ -1,0 +1,129 @@
+---
+title: Number of grid columns
+---
+
+When building grids using the [column size](/styles/grid-column-size) and [gutter](/styles/gutter) classes, the CSS needs to know the number of columns in the grid in order to correctly adjust the column widths for the gutters.
+
+Our solution is based on https://stackoverflow.com/a/76429435. The CSS needs to set the correct `--num-cols` variable. These classes help in doing that.
+
+Here is an example:
+
+```html
+<div class="grid g-3 nc-2">
+    <div class="col-1-2">Column 1</div>
+    <div class="col-1-2">Column 2</div>
+</div>
+```
+
+The `nc-2` class specifies that there are two columns in the grid. ("nc" = "number of columns")
+
+Without the `nc-2` class the column widths would not be accurate.
+
+
+The following classes are available:
+
+| Class | Number of columns |
+|--------|-------|
+| nc-1 | 1 column |
+| nc-2 | 2 columns |
+| nc-3 | 3 columns |
+| nc-4 | 4 columns |
+| nc-5 | 5 columns |
+| nc-6 | 6 columns |
+| nc-7 | 7 columns |
+| nc-8 | 8 columns |
+| nc-9 | 9 columns |
+| nc-10 | 10 columns |
+| nc-11 | 11 columns |
+| nc-12 | 12 columns |
+
+## How to import into your CSS
+
+Import this into your CSS with:
+
+```css
+@import 'cacao-css/dist/grid/num-columns.css';
+```
+
+Imports are available for all [media query viewport sizes](/styles/media#viewport-media-queries).
+
+```css
+@import 'cacao-css/dist/grid/3xs/num-columns.css';
+@import 'cacao-css/dist/grid/2xs/num-columns.css';
+@import 'cacao-css/dist/grid/xs/num-columns.css';
+@import 'cacao-css/dist/grid/sm/num-columns.css';
+@import 'cacao-css/dist/grid/md/num-columns.css';
+@import 'cacao-css/dist/grid/lg/num-columns.css';
+@import 'cacao-css/dist/grid/xl/num-columns.css';
+@import 'cacao-css/dist/grid/2xl/num-columns.css';
+@import 'cacao-css/dist/grid/3xl/num-columns.css';
+@import 'cacao-css/dist/grid/4xl/num-columns.css';
+@import 'cacao-css/dist/grid/5xl/num-columns.css';
+```
+
+See [Import Cacao CSS](/import) for more information.
+
+## Source CSS
+
+<!-- markdownlint-disable -->
+import CodeBlock from '@theme/CodeBlock';
+import ImportsSource from '!!raw-loader!../../../dist/grid/num-columns.css';
+import ImportsSource3xs from '!!raw-loader!../../../dist/grid/3xs/num-columns.css';
+import ImportsSource2xs from '!!raw-loader!../../../dist/grid/2xs/num-columns.css';
+import ImportsSourceXs from '!!raw-loader!../../../dist/grid/xs/num-columns.css';
+import ImportsSourceSm from '!!raw-loader!../../../dist/grid/sm/num-columns.css';
+import ImportsSourceMd from '!!raw-loader!../../../dist/grid/md/num-columns.css';
+import ImportsSourceLg from '!!raw-loader!../../../dist/grid/lg/num-columns.css';
+import ImportsSourceXl from '!!raw-loader!../../../dist/grid/xl/num-columns.css';
+import ImportsSource2xl from '!!raw-loader!../../../dist/grid/2xl/num-columns.css';
+import ImportsSource3xl from '!!raw-loader!../../../dist/grid/3xl/num-columns.css';
+import ImportsSource4xl from '!!raw-loader!../../../dist/grid/4xl/num-columns.css';
+import ImportsSource5xl from '!!raw-loader!../../../dist/grid/5xl/num-columns.css';
+
+### Default styles
+
+<CodeBlock language="css" title="grid/num-columns.css">{ImportsSource}</CodeBlock>
+
+### 3xs styles
+
+<CodeBlock language="css" title="grid/3xs/num-columns.css">{ImportsSource3xs}</CodeBlock>
+
+### 2xs styles
+
+<CodeBlock language="css" title="grid/2xs/num-columns.css">{ImportsSource2xs}</CodeBlock>
+
+### xs styles
+
+<CodeBlock language="css" title="grid/xs/num-columns.css">{ImportsSourceXs}</CodeBlock>
+
+### sm styles
+
+<CodeBlock language="css" title="grid/sm/num-columns.css">{ImportsSourceSm}</CodeBlock>
+
+### md styles
+
+<CodeBlock language="css" title="grid/md/num-columns.css">{ImportsSourceMd}</CodeBlock>
+
+### lg styles
+
+<CodeBlock language="css" title="grid/lg/num-columns.css">{ImportsSourceLg}</CodeBlock>
+
+### xl styles
+
+<CodeBlock language="css" title="grid/xl/num-columns.css">{ImportsSourceXl}</CodeBlock>
+
+### 2xl styles
+
+<CodeBlock language="css" title="grid/2xl/num-columns.css">{ImportsSource2xl}</CodeBlock>
+
+### 3xl styles
+
+<CodeBlock language="css" title="grid/3xl/num-columns.css">{ImportsSource3xl}</CodeBlock>
+
+### 4xl styles
+
+<CodeBlock language="css" title="grid/4xl/num-columns.css">{ImportsSource4xl}</CodeBlock>
+
+### 5xl styles
+
+<CodeBlock language="css" title="grid/5xl/num-columns.css">{ImportsSource5xl}</CodeBlock>

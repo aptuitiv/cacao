@@ -216,6 +216,11 @@ const sidebars: SidebarsConfig = {
                     ],
                 },
                 {
+                    type: 'doc',
+                    id: 'styles/grid-num-columns',
+                    label: 'Grid number of columns',
+                },
+                {
                     type: 'category',
                     label: 'Gutters',
                     link: {
