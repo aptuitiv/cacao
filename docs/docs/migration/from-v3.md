@@ -1,12 +1,18 @@
 # Migrating from version 3
 
-Migrating from version 3 to a more recent version is a big change. We recommend that you stage the website somewhere becasue the update can be disruptive until it's done.
+Migrating from version 3 to a more recent version is a big change. We recommend that you stage the website somewhere because the update can be disruptive until it's done. There were a lot of change in version 4.
+
+* The library change from desktop-first to mobile-first.
+* Nearly ever CSS class was changed.
+* Some styles were reorganized.
+* Some classes were removed. The library is intended to be a utility library and some of the older classes were more component-based.
+* All the media query variables were changed.
 
 ## Helper script to automate some of the migration
 
 There is a helper script to automate some of the migration.
 
-This will recursively crawl the root directory for your template files and update any Cacao version 3 classes to the correct version 6 class.
+This will recursively crawl the root directory for your template files and update any Cacao version 3 classes to the correct version 4 class.
 
 For example, if your templates are in `src/templates` you would run:
 
@@ -20,7 +26,19 @@ It may also be good to run this on Javascript in case any utility classes were b
 cacao-convert-v3 classes -d src/js
 ```
 
-After you run that you'll probably also want to run the [version 6 migration scripts](/migration/from-v4-or-v5-to-v6).
+After you run that you'll probably also want to run the [version 6 migration scripts](/migration/to-v6).
+
+## Upgrade steps
+
+1. Upgrade cacao to version 5. `npm i cacao-css@5`.
+2. Run the [helper scripts](#helper-script-to-automate-some-of-the-migration) listed above.
+3. Set up the import calls to pull in the Cacao styles. We recommend placing this within your `main.css` file (or whatever your entry point CSS file is). See [Import Cacao CSS](/import) for more information. Don't import everything. Be selective and only import the styles that you need. We recommend that you add imports to this file as you complete the steps below.
+4. Search for `u-size` in your templates and update the class names. See the [Grid column sizes](#grid-column-sizes) section for more information.
+5. Search for `Grid--equalHeight` and make the necessary adjustments to the HTML code. See [Equal height grids](#equal-height-grids) for more information.
+6. Search for any of the [removed classes](#removed-classes) and update your CSS manually. You may need to write some new CSS for these classes. You could [browse the source code at version 3](https://github.com/aptuitiv/cacao/tree/v3.21.0/src/css) to see what the old styles were.
+7. Search for any [component classes that were changed to utility classes](#changed-to-a-utility) and replace them with the appropriate utility class.
+8. Search for any of the [removed component classes](#removed) and update your CSS manually. You may need to write some new CSS for these classes. You could [browse the source code at version 3](https://github.com/aptuitiv/cacao/tree/v3.21.0/src/css) to see what the old styles were.
+9. Lastly, search for any classes starting with `u-` and make any necessary adjustments.
 
 ## Number System
 
@@ -54,6 +72,8 @@ These breakpoints are inspired by:
 | 5xl   | >= 2560px  |
 
 ## Updated Classes
+
+Most of these will be found and updated by the [helper scripts](#helper-script-to-automate-some-of-the-migration). The exception is any of the `u-size` classes because of the desktop-first to mobile-first change. It's impossible for an automated script to know what the best replacement value is. You'll need to update those classes manually.
 
 | v3                        | v4                  |
 | ------------------------- | ------------------- |

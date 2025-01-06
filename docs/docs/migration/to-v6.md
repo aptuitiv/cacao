@@ -1,12 +1,27 @@
 ---
 ---
 
-# Converting from version 4 or 5 to version 6
+# Upgrading to version 6
 
-If your website is currently running Cacao version 4 or 5 and you're upgrading to version 6 then there are some helper scripts that you can run on the command line to streamline the migration.
+Depending on the version that you are currently on, your upgrade path will be different.
+
+| Your current Cacao version | Upgrade steps |
+| ---------------------------|---------------|
+| Version 4 or 5 | Follow the [steps on this page](#upgrade-steps) |
+| Version 3 | Start with [upgrading from version 3](/migration/from-v3). Then follow the [steps on this page](#upgrade-steps) |
+
+## Upgrade steps
+
+1. Upgrade cacao to version 6. `npm i cacao-css@6`.
+2. Run the [migration scripts](#migration-scripts).
+3. Complete any of the [manual changes](#manual-changes).
+
+## Migration scripts
+
+If your website is currently running Cacao version 4 or 5 and you're upgrading to version 6 then there are some helper scripts that you can run on the command line to streamline the migration. If you're currently on Cacao version 4, then these scripts also include the upgrades to version 5.
 
 :::warning
-Do not run these scripts if the website is currently running Cacao version 3. See [Migrating from version 3](from-v3) for more information.
+Do not run these scripts if the website is currently running Cacao version 3. First follow the steps on [Migrating from version 3](from-v3).
 :::
 
 Some of the class names changed and the import paths changed. [See the changelog for more information](/changelog#600-august-19-2024).
@@ -21,7 +36,7 @@ cacao-convert-v6 imports -f src/css/main.css
 
 Below is an explanation of each one.
 
-## Update the breakpoint media queries
+### Update the breakpoint media queries
 
 The custom variables for the media query breakpoints changed. If your CSS is in `src/css` then you can run this:
 
@@ -29,7 +44,7 @@ The custom variables for the media query breakpoints changed. If your CSS is in 
 cacao-convert-v6 breakpoints -d src/css
 ```
 
-## Update the CSS classes in template files
+### Update the CSS classes in template files
 
 This will recursively crawl the root directory for your template files and update any Cacao version 4 or 5 classes to the correct version 6 class.
 
@@ -39,7 +54,7 @@ For example, if your templates are in `src/templates` you would run:
 cacao-convert-v6 classes -d src/templates
 ```
 
-## Convert the file imports
+### Convert the file imports
 
 This is intended to convert the imports for the Cacao files.
 

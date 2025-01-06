@@ -718,8 +718,8 @@ const sidebars: SidebarsConfig = {
                 },
                 {
                     type: 'doc',
-                    id: 'migration/from-v4-or-v5-to-v6',
-                    label: 'From version 4 or 5 to version 6',
+                    id: 'migration/to-v6',
+                    label: 'To version 6',
                 },
             ],
         },
