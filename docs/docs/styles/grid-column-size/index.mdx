@@ -2,8 +2,33 @@
 title: Grid columns
 ---
 
-This provides classes for different grid column sizes from one column up to 10 columns.
+This provides classes for different grid column sizes from one column up to 12 columns.
 
+Below is a basic example:
+
+```html
+<div class="grid g-3 nc-2">
+    <div class="col-1-2">Column 1</div>
+    <div class="col-1-2">Column 2</div>
+</div>
+```
+
+Often you'll set different sizes for a column based on the screen width. Below is a simple example:
+
+```html
+<div class="grid g-3 nc-2">
+    <div class="col-1-1 col-1-2-sm col-1-3-lg">
+        I will be full width by default,
+        then for small screen sizes to large screen sizes I'll be half width,
+        and then for large screens and up I'll be one-third width.
+    </div>
+    <div class="col-1-1 col-1-2-sm col-2-3-lg">
+        I will be full width by default,
+        then for small screen sizes to large screen sizes I'll be half width,
+        and then for large screens and up I'll be two-third width.
+    </div>
+</div>
+```
 
 ## Combined imports
 
