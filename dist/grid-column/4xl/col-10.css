@@ -4,42 +4,42 @@
 
 @media (--m-4xl) {
     .col-1-10-4xl {
-        width: calc(10% - var(--gap));
+        width: calc(10% - var(--col-width-adjust));
     }
 
     .col-2-10-4xl {
-        width: calc(20% - var(--gap));
+        width: calc(20% - var(--col-width-adjust));
     }
 
     .col-3-10-4xl {
-        width: calc(30% - var(--gap));
+        width: calc(30% - var(--col-width-adjust));
     }
 
     .col-4-10-4xl {
-        width: calc(40% - var(--gap));
+        width: calc(40% - var(--col-width-adjust));
     }
 
     .col-5-10-4xl {
-        width: calc(50% - var(--gap));
+        width: calc(50% - var(--col-width-adjust));
     }
 
     .col-6-10-4xl {
-        width: calc(60% - var(--gap));
+        width: calc(60% - var(--col-width-adjust));
     }
 
     .col-7-10-4xl {
-        width: calc(70% - var(--gap));
+        width: calc(70% - var(--col-width-adjust));
     }
 
     .col-8-10-4xl {
-        width: calc(80% - var(--gap));
+        width: calc(80% - var(--col-width-adjust));
     }
 
     .col-9-10-4xl {
-        width: calc(90% - var(--gap));
+        width: calc(90% - var(--col-width-adjust));
     }
 
     .col-10-10-4xl {
-        width: calc(100% - var(--gap));
+        width: calc(100% - var(--col-width-adjust));
     }
 }

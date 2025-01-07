@@ -3,13 +3,13 @@
 \* =========================================================================== */
 
 .col-1-3 {
-    width: calc(100% / 3 - var(--gap));
+    width: calc(100% / 3 - var(--col-width-adjust));
 }
 
 .col-2-3 {
-    width: calc(100% / 3 * 2 - var(--gap));
+    width: calc(100% / 3 * 2 - var(--col-width-adjust));
 }
 
 .col-3-3 {
-    width: calc(100% - var(--gap));
+    width: calc(100% - var(--col-width-adjust));
 }

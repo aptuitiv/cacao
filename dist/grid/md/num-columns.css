@@ -1,0 +1,56 @@
+/* =========================================================================== *\
+    Number of columns
+    This is intended to be used with the grid system to specify the number of
+    columns in a grid to help with calculating the correct column widths when
+    there is a gap value.
+\* =========================================================================== */
+
+@media (--m-md) {
+    .nc-1-md {
+        --num-cols: 1;
+    }
+
+    .nc-2-md {
+        --num-cols: 2;
+    }
+
+    .nc-3-md {
+        --num-cols: 3;
+    }
+
+    .nc-4-md {
+        --num-cols: 4;
+    }
+
+    .nc-5-md {
+        --num-cols: 5;
+    }
+
+    .nc-6-md {
+        --num-cols: 6;
+    }
+
+    .nc-7-md {
+        --num-cols: 7;
+    }
+
+    .nc-8-md {
+        --num-cols: 8;
+    }
+
+    .nc-9-md {
+        --num-cols: 9;
+    }
+
+    .nc-10-md {
+        --num-cols: 10;
+    }
+
+    .nc-11-md {
+        --num-cols: 11;
+    }
+
+    .nc-12-md {
+        --num-cols: 12;
+    }
+}

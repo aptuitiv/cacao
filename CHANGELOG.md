@@ -1,8 +1,12 @@
 # Changelog
 
+## 7.0.0 (January 6, 2025)
+
+- **Breaking change**: Added fix for the grid using gutters. When building grids using the column size and gutter classes, the CSS needs to know the number of columns in the grid in order to correctly adjust the column widths for the gutters. This update fixes that. It requires updating grids to have additional classes to set the number of columns.
+
 ## 6.4.0 (November 5, 2024)
 
-- Added `!important` to display styles. This was doen so that the display styles are always set and can’t be overwridden by more specific site styles.
+- Added `!important` to display styles. This was done so that the display styles are always set and can’t be overridden by more specific site styles.
 - Added support for CSS selectors with psuedo-classes.
 
 ## 6.3.0 (October 3, 2024)

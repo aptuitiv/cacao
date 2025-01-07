@@ -4,22 +4,22 @@
 
 @media (--m-lg) {
     .col-1-5-lg {
-        width: calc(20% - var(--gap));
+        width: calc(20% - var(--col-width-adjust));
     }
 
     .col-2-5-lg {
-        width: calc(40% - var(--gap));
+        width: calc(40% - var(--col-width-adjust));
     }
 
     .col-3-5-lg {
-        width: calc(60% - var(--gap));
+        width: calc(60% - var(--col-width-adjust));
     }
 
     .col-4-5-lg {
-        width: calc(80% - var(--gap));
+        width: calc(80% - var(--col-width-adjust));
     }
 
     .col-5-5-lg {
-        width: calc(100% - var(--gap));
+        width: calc(100% - var(--col-width-adjust));
     }
 }

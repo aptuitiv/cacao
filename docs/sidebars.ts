@@ -138,72 +138,87 @@ const sidebars: SidebarsConfig = {
                 },
                 {
                     type: 'category',
-                    label: 'Grid columns',
+                    label: 'Grid column sizes',
                     link: {
                         type: 'generated-index',
                     },
                     items: [
                         {
                             type: 'doc',
-                            id: 'styles/grid-column/index',
+                            id: 'styles/grid-column-size/index',
                             label: 'Overview',
                         },
                         {
                             type: 'doc',
-                            id: 'styles/grid-column/one-column',
+                            id: 'styles/grid-column-size/one-column',
                             label: '1 column',
                         },
                         {
                             type: 'doc',
-                            id: 'styles/grid-column/two-column',
+                            id: 'styles/grid-column-size/two-column',
                             label: '2 column',
                         },
                         {
                             type: 'doc',
-                            id: 'styles/grid-column/three-column',
+                            id: 'styles/grid-column-size/three-column',
                             label: '3 column',
                         },
                         {
                             type: 'doc',
-                            id: 'styles/grid-column/four-column',
+                            id: 'styles/grid-column-size/four-column',
                             label: '4 column',
                         },
                         {
                             type: 'doc',
-                            id: 'styles/grid-column/five-column',
+                            id: 'styles/grid-column-size/five-column',
                             label: '5 column',
                         },
                         {
                             type: 'doc',
-                            id: 'styles/grid-column/six-column',
+                            id: 'styles/grid-column-size/six-column',
                             label: '6 column',
                         },
                         {
                             type: 'doc',
-                            id: 'styles/grid-column/seven-column',
+                            id: 'styles/grid-column-size/seven-column',
                             label: '7 column',
                         },
                         {
                             type: 'doc',
-                            id: 'styles/grid-column/eight-column',
+                            id: 'styles/grid-column-size/eight-column',
                             label: '8 column',
                         },
                         {
                             type: 'doc',
-                            id: 'styles/grid-column/nine-column',
+                            id: 'styles/grid-column-size/nine-column',
                             label: '9 column',
                         },
                         {
                             type: 'doc',
-                            id: 'styles/grid-column/ten-column',
+                            id: 'styles/grid-column-size/ten-column',
                             label: '10 column',
                         },
                         {
                             type: 'doc',
-                            id: 'styles/grid-column/fill-column',
+                            id: 'styles/grid-column-size/eleven-column',
+                            label: '11 column',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/grid-column-size/twelve-column',
+                            label: '12 column',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/grid-column-size/fill-column',
                             label: 'Fill column width',
                         },
                     ],
+                },
+                {
+                    type: 'doc',
+                    id: 'styles/grid-num-columns',
+                    label: 'Grid number of columns',
                 },
                 {
                     type: 'category',
@@ -703,8 +718,13 @@ const sidebars: SidebarsConfig = {
                 },
                 {
                     type: 'doc',
-                    id: 'migration/from-v4-or-v5-to-v6',
-                    label: 'From version 4 or 5 to version 6',
+                    id: 'migration/to-v6',
+                    label: 'To version 6',
+                },
+                {
+                    type: 'doc',
+                    id: 'migration/to-v7',
+                    label: 'To version 7',
                 },
             ],
         },

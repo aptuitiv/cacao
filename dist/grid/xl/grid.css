@@ -5,22 +5,19 @@
 @media (--m-xl) {
     .grid-xl {
         --gap: 0px;
+        --num-cols: 1;
+
+        /*  Adjust the width of the columns to account for the gap between them.
+        This is only needed when using the "col-" classes because they set a percentage width.
+        In order to do this properly you need to know the number of columns in the grid.
+        This is set using the --num-cols variable. The "nc-" class is used to set this variable.
+        Based on https://stackoverflow.com/a/76429435.
+    */
+        --col-width-adjust: calc(
+            (((var(--num-cols) - 1) / var(--num-cols)) * var(--gap))
+        );
 
         display: flex;
         flex-wrap: wrap;
-        margin-right: calc(var(--gap) * -1);
-    }
-
-    /* Not sure that overflow is necessary here. Removing it does not seem to have any consequences.
-      Keeping it means that items in a grid can't overflow when overflow is wanted (like when adjusting
-      the y-offset of an element when hovering over it).     */
-
-    /* .grid [class*=col-] {
-        overflow: hidden;
-    }     */
-
-    /* Don't adjust margin if column justification is being used.     */
-    .grid-xl[class*="justify-"] {
-        margin-right: 0;
     }
 }

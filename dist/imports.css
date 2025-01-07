@@ -333,39 +333,51 @@
  * ------------------------------------------- */
 
 @import 'cacao-css/dist/grid/grid.css';
+@import 'cacao-css/dist/grid/num-columns.css';
 
 /* Grid (3xs) */
 @import 'cacao-css/dist/grid/3xs/grid.css';
+@import 'cacao-css/dist/grid/3xs/num-columns.css';
 
 /* Grid (2xs) */
 @import 'cacao-css/dist/grid/2xs/grid.css';
+@import 'cacao-css/dist/grid/2xs/num-columns.css';
 
 /* Grid (xs) */
 @import 'cacao-css/dist/grid/xs/grid.css';
+@import 'cacao-css/dist/grid/xs/num-columns.css';
 
 /* Grid (sm) */
 @import 'cacao-css/dist/grid/sm/grid.css';
+@import 'cacao-css/dist/grid/sm/num-columns.css';
 
 /* Grid (md) */
 @import 'cacao-css/dist/grid/md/grid.css';
+@import 'cacao-css/dist/grid/md/num-columns.css';
 
 /* Grid (lg) */
 @import 'cacao-css/dist/grid/lg/grid.css';
+@import 'cacao-css/dist/grid/lg/num-columns.css';
 
 /* Grid (xl) */
 @import 'cacao-css/dist/grid/xl/grid.css';
+@import 'cacao-css/dist/grid/xl/num-columns.css';
 
 /* Grid (2xl) */
 @import 'cacao-css/dist/grid/2xl/grid.css';
+@import 'cacao-css/dist/grid/2xl/num-columns.css';
 
 /* Grid (3xl) */
 @import 'cacao-css/dist/grid/3xl/grid.css';
+@import 'cacao-css/dist/grid/3xl/num-columns.css';
 
 /* Grid (4xl) */
 @import 'cacao-css/dist/grid/4xl/grid.css';
+@import 'cacao-css/dist/grid/4xl/num-columns.css';
 
 /* Grid (5xl) */
 @import 'cacao-css/dist/grid/5xl/grid.css';
+@import 'cacao-css/dist/grid/5xl/num-columns.css';
 
 
 /* --------------------------------------------*

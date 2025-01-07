@@ -4,6 +4,6 @@
 
 @media (--m-md) {
     .col-1-1-md {
-        width: calc(100% - var(--gap));
+        width: calc(100% - var(--col-width-adjust));
     }
 }

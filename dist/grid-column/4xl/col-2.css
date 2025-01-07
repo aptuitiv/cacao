@@ -4,10 +4,10 @@
 
 @media (--m-4xl) {
     .col-1-2-4xl {
-        width: calc(50% - var(--gap));
+        width: calc(50% - var(--col-width-adjust));
     }
 
     .col-2-2-4xl {
-        width: calc(100% - var(--gap));
+        width: calc(100% - var(--col-width-adjust));
     }
 }

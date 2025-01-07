@@ -4,6 +4,6 @@
 
 @media (--m-3xs) {
     .col-1-1-3xs {
-        width: calc(100% - var(--gap));
+        width: calc(100% - var(--col-width-adjust));
     }
 }

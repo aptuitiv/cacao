@@ -4,50 +4,52 @@
 
 @media (--m-md) {
     .col-1-12-md {
-        width: calc(100% / 12 - var(--gap) - var(--gap));
+        width: calc(
+            100% / 12 - var(--col-width-adjust) - var(--col-width-adjust)
+        );
     }
 
     .col-2-12-md {
-        width: calc(100% / 12 * 2 - var(--gap));
+        width: calc(100% / 12 * 2 - var(--col-width-adjust));
     }
 
     .col-3-12-md {
-        width: calc(25% - var(--gap));
+        width: calc(25% - var(--col-width-adjust));
     }
 
     .col-4-12-md {
-        width: calc(100% / 12 * 4 - var(--gap));
+        width: calc(100% / 12 * 4 - var(--col-width-adjust));
     }
 
     .col-5-12-md {
-        width: calc(100% / 12 * 5 - var(--gap));
+        width: calc(100% / 12 * 5 - var(--col-width-adjust));
     }
 
     .col-6-12-md {
-        width: calc(50% - var(--gap));
+        width: calc(50% - var(--col-width-adjust));
     }
 
     .col-7-12-md {
-        width: calc(100% / 12 * 7 - var(--gap));
+        width: calc(100% / 12 * 7 - var(--col-width-adjust));
     }
 
     .col-8-12-md {
-        width: calc(100% / 12 * 8 - var(--gap));
+        width: calc(100% / 12 * 8 - var(--col-width-adjust));
     }
 
     .col-9-12-md {
-        width: calc(75% - var(--gap));
+        width: calc(75% - var(--col-width-adjust));
     }
 
     .col-10-12-md {
-        width: calc(100% / 12 * 10 - var(--gap));
+        width: calc(100% / 12 * 10 - var(--col-width-adjust));
     }
 
     .col-11-12-md {
-        width: calc(100% / 12 * 11 - var(--gap));
+        width: calc(100% / 12 * 11 - var(--col-width-adjust));
     }
 
     .col-12-12-md {
-        width: calc(100% - var(--gap));
+        width: calc(100% - var(--col-width-adjust));
     }
 }
