@@ -67,7 +67,7 @@ A more complicated example is when you have a grid that changes the number of co
 You would convert that to:
 
 ```html
-<div class="grid g-3 nc-1 nc-2-md nc-4-md">
+<div class="grid g-3 nc-1 nc-2-md nc-4-lg">
     <div class="col-1-1 col-1-2-md col-1-4-lg">
         Column one content here. I'll be at 25% width on large screens, 50% width on medium screens, and full width on small screens.
     </div>
