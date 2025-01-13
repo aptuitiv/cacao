@@ -18,6 +18,7 @@ Depending on the version that you are currently on, your upgrade path will be di
 ## Upgrade steps
 
 1. Search for all `grid` uses and [add classes for the number of grid columns](#add-classes-for-the-number-of-grid-columns) if the grid uses any of the [gutter classes](/styles/gutter).
+2. [Include the necessary `@imports` for the number of grid columns classes](#add-the-nc-class-imports).
 
 ### Add classes for the number of grid columns
 
@@ -118,3 +119,56 @@ you'd change the HTML like this:
 ```
 
 We added `nc-1 nc-2-md` to the grid div.
+
+### Add the `nc` class imports
+
+You'll need to import the "number of column" classes into your CSS in order to use them. See the [How to import into your CSS](/styles/grid-num-columns#how-to-import-into-your-css) section of the "Number of grid columns" page for more information.
+
+At a minimum you need to import this:
+
+```css
+@import 'cacao-css/dist/grid/num-columns.css';
+```
+
+To keep things organized, add the `@import` statements next to the `@import` for the main grid classes.
+
+For example:
+
+```css
+/* --------------------------------------------*
+    Grid
+  * ------------------------------------------- */
+
+@import 'cacao-css/dist/grid/grid.css';
+@import 'cacao-css/dist/grid/num-columns.css';
+```
+
+You will likely need to import the media query versions of the classes. For example, if you used `nc-2-md` in your code then you'll need to import the `md` version of the classes.
+
+```css
+@import 'cacao-css/dist/grid/md/num-columns.css';
+```
+
+Search through your HTML code for the `nc-` classes. We recommend using a regular expression search like this:
+
+```shell
+nc-\d+-[a-z]+
+```
+
+Then add the necessary media query version imports for the `nc` classes.
+
+Or, if you prefer, you can search for each of the specific size breakpoints. This approach might be better to prevent missing any imports. You would use the following regex searches one at a time.
+
+```shell
+nc-\d+-3xs
+nc-\d+-2xs
+nc-\d+-xs
+nc-\d+-sm
+nc-\d+-md
+nc-\d+-lg
+nc-\d+-xl
+nc-\d+-2xl
+nc-\d+-3xl
+nc-\d+-4xl
+nc-\d+-5xl
+```
