@@ -1,0 +1,75 @@
+/* =========================================================================== *\
+    Font size utilities
+\* =========================================================================== */
+
+.font-size-000 {
+    font-size: var(--font-size-000);
+}
+
+.font-size-00 {
+    font-size: var(--font-size-00);
+}
+
+.font-size-0 {
+    font-size: var(--font-size-0);
+}
+
+.font-size-1 {
+    font-size: var(--font-size-1);
+}
+
+.font-size-2 {
+    font-size: var(--font-size-2);
+}
+
+.font-size-3 {
+    font-size: var(--font-size-3);
+}
+
+.font-size-4 {
+    font-size: var(--font-size-4);
+}
+
+.font-size-5 {
+    font-size: var(--font-size-5);
+}
+
+.font-size-6 {
+    font-size: var(--font-size-6);
+}
+
+.font-size-7 {
+    font-size: var(--font-size-7);
+}
+
+.font-size-8 {
+    font-size: var(--font-size-8);
+}
+
+.font-size-9 {
+    font-size: var(--font-size-9);
+}
+
+.font-size-10 {
+    font-size: var(--font-size-10);
+}
+
+.font-size-11 {
+    font-size: var(--font-size-11);
+}
+
+.font-size-12 {
+    font-size: var(--font-size-12);
+}
+
+.font-size-13 {
+    font-size: var(--font-size-13);
+}
+
+.font-size-14 {
+    font-size: var(--font-size-14);
+}
+
+.font-size-15 {
+    font-size: var(--font-size-15);
+}

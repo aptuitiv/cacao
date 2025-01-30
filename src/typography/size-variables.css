@@ -1,0 +1,26 @@
+/* =========================================================================== *
+  Variables for the font sizes
+ * =========================================================================== */
+
+/* :where() is used to give the variables no specificity so that they are easily overriden. https://developer.mozilla.org/en-US/docs/Web/CSS/:where */
+
+:where(html) {
+    --font-size-000: 0.5rem;
+    --font-size-00: 0.75rem;
+    --font-size-0: 0.875rem;
+    --font-size-1: 1rem;
+    --font-size-2: 1.1rem;
+    --font-size-3: 1.25rem;
+    --font-size-4: 1.5rem;
+    --font-size-5: 1.75rem;
+    --font-size-6: 2rem;
+    --font-size-7: 2.5rem;
+    --font-size-8: 3rem;
+    --font-size-9: 3.5rem;
+    --font-size-10: 4rem;
+    --font-size-11: 4.5rem;
+    --font-size-12: 5rem;
+    --font-size-13: 6rem;
+    --font-size-14: 7rem;
+    --font-size-15: 8rem;
+}

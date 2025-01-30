@@ -1,0 +1,77 @@
+/* =========================================================================== *\
+    Font size utilities
+\* =========================================================================== */
+
+@media (--m-xs) {
+    .font-size-000-xs {
+        font-size: var(--font-size-000);
+    }
+
+    .font-size-00-xs {
+        font-size: var(--font-size-00);
+    }
+
+    .font-size-0-xs {
+        font-size: var(--font-size-0);
+    }
+
+    .font-size-1-xs {
+        font-size: var(--font-size-1);
+    }
+
+    .font-size-2-xs {
+        font-size: var(--font-size-2);
+    }
+
+    .font-size-3-xs {
+        font-size: var(--font-size-3);
+    }
+
+    .font-size-4-xs {
+        font-size: var(--font-size-4);
+    }
+
+    .font-size-5-xs {
+        font-size: var(--font-size-5);
+    }
+
+    .font-size-6-xs {
+        font-size: var(--font-size-6);
+    }
+
+    .font-size-7-xs {
+        font-size: var(--font-size-7);
+    }
+
+    .font-size-8-xs {
+        font-size: var(--font-size-8);
+    }
+
+    .font-size-9-xs {
+        font-size: var(--font-size-9);
+    }
+
+    .font-size-10-xs {
+        font-size: var(--font-size-10);
+    }
+
+    .font-size-11-xs {
+        font-size: var(--font-size-11);
+    }
+
+    .font-size-12-xs {
+        font-size: var(--font-size-12);
+    }
+
+    .font-size-13-xs {
+        font-size: var(--font-size-13);
+    }
+
+    .font-size-14-xs {
+        font-size: var(--font-size-14);
+    }
+
+    .font-size-15-xs {
+        font-size: var(--font-size-15);
+    }
+}
