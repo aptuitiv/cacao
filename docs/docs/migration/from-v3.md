@@ -96,6 +96,7 @@ Most of these will be found and updated by the [helper scripts](#helper-script-t
 | `.u-flexAlignItemsStart`  | `.align-start`      |
 | `.u-flexAlignItemsEnd`    | `.align-end`        |
 | `.u-flexAlignItemsCenter` | `.align-center`     |
+| `.u-fontSize*`            | `.font-size-*`      |
 | `.u-gutters*`             | `.px-*`             |
 | `.u-heightFull`           | `.h-1-1` or `h-100` |
 | `.u-linkSubtle`           | `.link-subtle`      |
@@ -160,7 +161,6 @@ Most of these will be found and updated by the [helper scripts](#helper-script-t
 - [`.u-text*`](https://github.com/aptuitiv/cacao/blob/v3.21.0/src/css/utils/typography/typography.css#L30) , exceptions for `.u-textUpper` and `.u-textCenter`.
 - [`.u-style*`](https://github.com/aptuitiv/cacao/blob/v3.21.0/src/css/utils/typography/typography.css#L41)
 - [`.u-weight*`](https://github.com/aptuitiv/cacao/blob/v3.21.0/src/css/utils/typography/typography.css#L67) , exceptions for `.u-weightNormal` and `.u-weightBold`.
-- [`.u-fontSize*`](https://github.com/aptuitiv/cacao/blob/v3.21.0/src/css/utils/typography/typography.css#L98)
 
 ## Components
 
@@ -200,6 +200,40 @@ All components have been removed from Cacao. The purpose of Cacao has pivoted to
 - [`.SmScBtn`](https://github.com/aptuitiv/cacao/blob/v3.21.0/src/css/components/navigation/small-screen-button.css)
 - [`.Pagination`](https://github.com/aptuitiv/cacao/blob/v3.21.0/src/css/components/pagination/pagination.css)
 - [`.Triangle`](https://github.com/aptuitiv/cacao/blob/v3.21.0/src/css/components/triangle/triangle.css)
+
+## Font sizes
+
+If your code contains any `u-fontSize` classes you'll need to convert them to the correct [font-size](/styles/typography/size) classes.
+
+Version 3 font sizes were:
+
+```css
+u-fontSize1: 12px;
+u-fontSize2: 14px;
+u-fontSize3: 16px;
+u-fontSize4: 18px;
+u-fontSize5: 20px;
+u-fontSize6: 24px;
+u-fontSize7: 32px;
+u-fontSize8: 42px;
+u-fontSize9: 48px;
+u-fontSize10: 56px;
+```
+
+Here are the conversions based on the `html` tag having a font size of 62.5%, which is 12px. If your base font size is different then you'll have to use a different class for the new `font-size` classes.
+
+| Old class   | New class |
+| ----------- | ---------- |
+| u-fontSize1 | font-size-1 |
+| u-fontSize2 | font-size-5 |
+| u-fontSize3 | font-size-7 |
+| u-fontSize4 | font-size-9 |
+| u-fontSize5 | font-size-11 |
+| u-fontSize6 | font-size-12 |
+| u-fontSize7 | font-size-13 |
+| u-fontSize8 | font-size-15 |
+| u-fontSize9 | font-size-17 |
+| u-fontSize10 | font-size-18 |
 
 ## Grid styles
 
