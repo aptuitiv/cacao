@@ -2,8 +2,31 @@
 title: Clear fix
 ---
 
-This provides styles for floating elements to force the element to self-clear its children
+If you have content floated to the left or right, you often need to clear the float so that the parent element will expand to the height of the floated element.
 
+This component provides styles for the container around floated elements to clear the floats.
+
+To use this you add the `clearfix` class to the parent element of the floated elements.
+
+## Example usage
+
+Below is a basic example.
+
+```html
+<div class="clearfix">
+    <div style="float: left;">Some content floated left</div>
+    <p>Some other content beside the floated content</p>
+</div>
+```
+
+Often this is coupled with the [image](/styles/image) styles to float images.
+
+```html
+<div class="clearfix">
+    <img src="/path/to/image.jpg" width="300" height="250" alt="alt text" class="image-right">
+    <p>Some other content beside the floated image</p>
+</div>
+```
 
 ## How to import into your CSS
 

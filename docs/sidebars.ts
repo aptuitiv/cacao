@@ -608,6 +608,16 @@ const sidebars: SidebarsConfig = {
                         },
                         {
                             type: 'doc',
+                            id: 'styles/typography/size',
+                            label: 'Font size',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/typography/size-variables',
+                            label: 'Font size variables',
+                        },
+                        {
+                            type: 'doc',
                             id: 'styles/typography/style',
                             label: 'Font styles',
                         },

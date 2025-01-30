@@ -1,0 +1,97 @@
+/* =========================================================================== *\
+    Font size utilities
+\* =========================================================================== */
+
+@media (--m-lg) {
+    .font-size-000-lg {
+        font-size: var(--font-size-000);
+    }
+
+    .font-size-00-lg {
+        font-size: var(--font-size-00);
+    }
+
+    .font-size-0-lg {
+        font-size: var(--font-size-0);
+    }
+
+    .font-size-1-lg {
+        font-size: var(--font-size-1);
+    }
+
+    .font-size-2-lg {
+        font-size: var(--font-size-2);
+    }
+
+    .font-size-3-lg {
+        font-size: var(--font-size-3);
+    }
+
+    .font-size-4-lg {
+        font-size: var(--font-size-4);
+    }
+
+    .font-size-5-lg {
+        font-size: var(--font-size-5);
+    }
+
+    .font-size-6-lg {
+        font-size: var(--font-size-6);
+    }
+
+    .font-size-7-lg {
+        font-size: var(--font-size-7);
+    }
+
+    .font-size-8-lg {
+        font-size: var(--font-size-8);
+    }
+
+    .font-size-9-lg {
+        font-size: var(--font-size-9);
+    }
+
+    .font-size-10-lg {
+        font-size: var(--font-size-10);
+    }
+
+    .font-size-11-lg {
+        font-size: var(--font-size-11);
+    }
+
+    .font-size-12-lg {
+        font-size: var(--font-size-12);
+    }
+
+    .font-size-13-lg {
+        font-size: var(--font-size-13);
+    }
+
+    .font-size-14-lg {
+        font-size: var(--font-size-14);
+    }
+
+    .font-size-15-lg {
+        font-size: var(--font-size-15);
+    }
+
+    .font-size-16-lg {
+        font-size: var(--font-size-16);
+    }
+
+    .font-size-17-lg {
+        font-size: var(--font-size-17);
+    }
+
+    .font-size-18-lg {
+        font-size: var(--font-size-18);
+    }
+
+    .font-size-19-lg {
+        font-size: var(--font-size-19);
+    }
+
+    .font-size-20-lg {
+        font-size: var(--font-size-20);
+    }
+}

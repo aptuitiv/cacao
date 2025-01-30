@@ -1829,6 +1829,8 @@
 /* or include individual files */
 @import 'cacao-css/dist/typography/align.css';
 @import 'cacao-css/dist/typography/break.css';
+@import 'cacao-css/dist/typography/size-variables.css';
+@import 'cacao-css/dist/typography/size.css';
 @import 'cacao-css/dist/typography/style.css';
 @import 'cacao-css/dist/typography/transform.css';
 @import 'cacao-css/dist/typography/weight.css';
@@ -1840,6 +1842,7 @@
 /* or include individual files */
 @import 'cacao-css/dist/typography/3xs/align.css';
 @import 'cacao-css/dist/typography/3xs/break.css';
+@import 'cacao-css/dist/typography/3xs/size.css';
 @import 'cacao-css/dist/typography/3xs/style.css';
 @import 'cacao-css/dist/typography/3xs/transform.css';
 @import 'cacao-css/dist/typography/3xs/weight.css';
@@ -1851,6 +1854,7 @@
 /* or include individual files */
 @import 'cacao-css/dist/typography/2xs/align.css';
 @import 'cacao-css/dist/typography/2xs/break.css';
+@import 'cacao-css/dist/typography/2xs/size.css';
 @import 'cacao-css/dist/typography/2xs/style.css';
 @import 'cacao-css/dist/typography/2xs/transform.css';
 @import 'cacao-css/dist/typography/2xs/weight.css';
@@ -1862,6 +1866,7 @@
 /* or include individual files */
 @import 'cacao-css/dist/typography/xs/align.css';
 @import 'cacao-css/dist/typography/xs/break.css';
+@import 'cacao-css/dist/typography/xs/size.css';
 @import 'cacao-css/dist/typography/xs/style.css';
 @import 'cacao-css/dist/typography/xs/transform.css';
 @import 'cacao-css/dist/typography/xs/weight.css';
@@ -1873,6 +1878,7 @@
 /* or include individual files */
 @import 'cacao-css/dist/typography/sm/align.css';
 @import 'cacao-css/dist/typography/sm/break.css';
+@import 'cacao-css/dist/typography/sm/size.css';
 @import 'cacao-css/dist/typography/sm/style.css';
 @import 'cacao-css/dist/typography/sm/transform.css';
 @import 'cacao-css/dist/typography/sm/weight.css';
@@ -1884,6 +1890,7 @@
 /* or include individual files */
 @import 'cacao-css/dist/typography/md/align.css';
 @import 'cacao-css/dist/typography/md/break.css';
+@import 'cacao-css/dist/typography/md/size.css';
 @import 'cacao-css/dist/typography/md/style.css';
 @import 'cacao-css/dist/typography/md/transform.css';
 @import 'cacao-css/dist/typography/md/weight.css';
@@ -1895,6 +1902,7 @@
 /* or include individual files */
 @import 'cacao-css/dist/typography/lg/align.css';
 @import 'cacao-css/dist/typography/lg/break.css';
+@import 'cacao-css/dist/typography/lg/size.css';
 @import 'cacao-css/dist/typography/lg/style.css';
 @import 'cacao-css/dist/typography/lg/transform.css';
 @import 'cacao-css/dist/typography/lg/weight.css';
@@ -1906,6 +1914,7 @@
 /* or include individual files */
 @import 'cacao-css/dist/typography/xl/align.css';
 @import 'cacao-css/dist/typography/xl/break.css';
+@import 'cacao-css/dist/typography/xl/size.css';
 @import 'cacao-css/dist/typography/xl/style.css';
 @import 'cacao-css/dist/typography/xl/transform.css';
 @import 'cacao-css/dist/typography/xl/weight.css';
@@ -1917,6 +1926,7 @@
 /* or include individual files */
 @import 'cacao-css/dist/typography/2xl/align.css';
 @import 'cacao-css/dist/typography/2xl/break.css';
+@import 'cacao-css/dist/typography/2xl/size.css';
 @import 'cacao-css/dist/typography/2xl/style.css';
 @import 'cacao-css/dist/typography/2xl/transform.css';
 @import 'cacao-css/dist/typography/2xl/weight.css';
@@ -1928,6 +1938,7 @@
 /* or include individual files */
 @import 'cacao-css/dist/typography/3xl/align.css';
 @import 'cacao-css/dist/typography/3xl/break.css';
+@import 'cacao-css/dist/typography/3xl/size.css';
 @import 'cacao-css/dist/typography/3xl/style.css';
 @import 'cacao-css/dist/typography/3xl/transform.css';
 @import 'cacao-css/dist/typography/3xl/weight.css';
@@ -1939,6 +1950,7 @@
 /* or include individual files */
 @import 'cacao-css/dist/typography/4xl/align.css';
 @import 'cacao-css/dist/typography/4xl/break.css';
+@import 'cacao-css/dist/typography/4xl/size.css';
 @import 'cacao-css/dist/typography/4xl/style.css';
 @import 'cacao-css/dist/typography/4xl/transform.css';
 @import 'cacao-css/dist/typography/4xl/weight.css';
@@ -1950,6 +1962,7 @@
 /* or include individual files */
 @import 'cacao-css/dist/typography/5xl/align.css';
 @import 'cacao-css/dist/typography/5xl/break.css';
+@import 'cacao-css/dist/typography/5xl/size.css';
 @import 'cacao-css/dist/typography/5xl/style.css';
 @import 'cacao-css/dist/typography/5xl/transform.css';
 @import 'cacao-css/dist/typography/5xl/weight.css';

@@ -46,7 +46,7 @@ export const mediaQueryDirectories = [
     'src/position',
     { dir: 'src/pull', skip: ['pull.css'] },
     { dir: 'src/push', skip: ['push.css'] },
-    'src/typography',
+    { dir: 'src/typography', skip: ['size-variables.css'] },
     'src/width',
 ];
 
