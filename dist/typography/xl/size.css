@@ -74,4 +74,24 @@
     .font-size-15-xl {
         font-size: var(--font-size-15);
     }
+
+    .font-size-16-xl {
+        font-size: var(--font-size-16);
+    }
+
+    .font-size-17-xl {
+        font-size: var(--font-size-17);
+    }
+
+    .font-size-18-xl {
+        font-size: var(--font-size-18);
+    }
+
+    .font-size-19-xl {
+        font-size: var(--font-size-19);
+    }
+
+    .font-size-20-xl {
+        font-size: var(--font-size-20);
+    }
 }
