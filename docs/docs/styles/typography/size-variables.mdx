@@ -1,0 +1,58 @@
+---
+title: Font Size Variables
+---
+
+The [font sizes](/styles/typography/size) are set using CSS variables. You will need to either import the `cacao-css/dist/typography/size-variables.css` file into your CSS or set all of the variables with your own CSS.
+
+You could import the font size variables file and still override one or more of the variables in your own code. You just want to make sure that the code that overrides the variables is set after this import.
+
+
+## The variables
+
+`:where()` is used to give the variables no specificity so that they are easily overriden. [See the MDN where() documentation for more information](https://developer.mozilla.org/en-US/docs/Web/CSS/:where).
+
+The following variables are set.
+
+| Variable | Value |
+|----------|-------|
+| --font-size-000 | 0.5rem |
+| --font-size-00 | 0.75rem |
+| --font-size-0 | 0.875rem |
+| --font-size-1 | 1rem |
+| --font-size-2 | 1.1rem |
+| --font-size-3 | 1.2rem |
+| --font-size-4 | 1.3rem |
+| --font-size-5 | 1.4rem |
+| --font-size-6 | 1.5rem |
+| --font-size-7 | 1.6rem |
+| --font-size-8 | 1.7rem |
+| --font-size-9 | 1.8rem |
+| --font-size-10 | 1.9rem |
+| --font-size-11 | 2rem |
+| --font-size-12 | 2.5rem |
+| --font-size-13 | 3rem |
+| --font-size-14 | 3.5rem |
+| --font-size-15 | 4rem |
+| --font-size-16 | 4.5rem |
+| --font-size-17 | 5rem |
+| --font-size-18 | 6rem |
+| --font-size-19 | 7rem |
+| --font-size-20 | 8rem |
+
+## How to import into your CSS
+
+Import this into your CSS with:
+
+```css
+@import 'cacao-css/dist/typography/size-variables.css';
+```
+
+See [Import Cacao CSS](/import) for more information.
+
+## Source CSS
+
+<!-- markdownlint-disable -->
+import CodeBlock from '@theme/CodeBlock';
+import ImportsSource from '!!raw-loader!../../../../dist/typography/size-variables.css';
+
+<CodeBlock language="css" title="typography/size-variables.css">{ImportsSource}</CodeBlock>
