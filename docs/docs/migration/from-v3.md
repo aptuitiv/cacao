@@ -224,7 +224,7 @@ Here are the conversions based on the `html` tag having a font size of 62.5%, wh
 
 | Old class   | New class |
 | ----------- | ---------- |
-| u-fontSize1 | font-size-1 |
+| u-fontSize1 | font-size-3 |
 | u-fontSize2 | font-size-5 |
 | u-fontSize3 | font-size-7 |
 | u-fontSize4 | font-size-9 |
