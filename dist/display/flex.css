@@ -17,3 +17,23 @@
 .flex-col-reverse {
     flex-direction: column-reverse;
 }
+
+.flex-grow {
+    flex-grow: 1
+}
+
+.flex-shrink {
+    flex-shrink: 1
+}
+
+.flex-wrap {
+    flex-wrap: wrap
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse
+}
