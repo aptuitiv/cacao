@@ -18,4 +18,24 @@
     .flex-col-reverse-xs {
         flex-direction: column-reverse;
     }
+
+    .flex-grow-xs {
+        flex-grow: 1;
+    }
+
+    .flex-shrink-xs {
+        flex-shrink: 1;
+    }
+
+    .flex-wrap-xs {
+        flex-wrap: wrap;
+    }
+
+    .flex-nowrap-xs {
+        flex-wrap: nowrap;
+    }
+
+    .flex-wrap-reverse-xs {
+        flex-wrap: wrap-reverse;
+    }
 }

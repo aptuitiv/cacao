@@ -1,5 +1,9 @@
 # Based on the Github Actions on https://docusaurus.io/docs/deployment#triggering-deployment-with-github-actions
 
+# Make sure that under Settings -> Environments that the "develop" branch is allowed under "Deployment branches and tags".
+# If not then deploying to github-pages will fail with this message:
+# "Branch 'develop' is not allowed to deploy to github-pages due to environment protection rules."
+
 name: Deploy to GitHub Pages with Docusaurus
 
 on:
