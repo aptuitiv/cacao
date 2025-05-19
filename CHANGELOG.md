@@ -7,6 +7,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [7.2.0] - 2025-05-19
+
+- Added additional flex utility classes.
+  - `flex-grow`
+  - `flex-shrink`
+  - `flex-wrap`
+  - `flex-nowrap`
+  - `flex-wrap-reverse`
+
 ## [7.1.0] - 2025-01-30
 
 ### Added
