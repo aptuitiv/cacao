@@ -20,6 +20,7 @@ export const createModuleVariables = (module, sizes) => new Promise((resolve) =>
     let fileContents = '/* =========================================================================== *\n';
     fileContents += `  Variables for the ${module} sizes\n`;
     fileContents += ' * =========================================================================== */\n\n';
+    // eslint-disable-next-line @stylistic/max-len -- This is a long comment that explains the purpose of the :where() selector
     fileContents += '/* :where() is used to give the variables no specificity so that they are easily overriden. https://developer.mozilla.org/en-US/docs/Web/CSS/:where */';
     fileContents += '\n\n';
     fileContents += ':where(html) {';
