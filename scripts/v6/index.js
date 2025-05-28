@@ -10,7 +10,7 @@ import convertImports from './convert-imports.js';
 import convertBreakpoints from './convert-breakpoints.js';
 
 // Get the directory name of the current module
-// eslint-disable-next-line no-underscore-dangle -- The dangle is used to match the __dirname variable in Node.js
+ 
 const __dirname = dirname(dirname(dirname(fileURLToPath(import.meta.url))));
 
 // Get the current package.json information

@@ -1,7 +1,7 @@
 {
     "name": "cacao-css",
     "description": "A set of composable CSS utilities that provide a solid foundation for website projects.",
-    "version": "7.2.0",
+    "version": "7.3.0",
     "author": "Aptuitiv, Inc <hello@aptuitiv.com>",
     "license": "MIT",
     "repository": {
@@ -30,23 +30,25 @@
         "build-media-queries": "node scripts/build media",
         "build-paddings": "node scripts/build paddings",
         "eslint": "eslint --fix .",
-        "watch": "esw -w --color --fix ."
+        "watch": "watch-eslint  --fix --color ."
     },
     "dependencies": {
-        "@aptuitiv/eslint-config-aptuitiv": "^0.8.0",
         "chalk": "^5.4.1",
-        "commander": "^12.1.0",
-        "eslint": "^8.57.0",
-        "eslint-watch": "^8.0.0",
+        "commander": "^14.0.0",
         "fancy-log": "^2.0.0",
-        "fs-extra": "^11.2.0",
-        "log-symbols": "^7.0.0",
-        "postcss": "^8.4.49",
-        "postcss-cli": "^11.0.0",
-        "prettier": "^3.4.2",
+        "fs-extra": "^11.3.0",
+        "log-symbols": "^7.0.1",
+        "postcss": "^8.5.3",
+        "postcss-cli": "^11.0.1",
+        "prettier": "^3.5.3",
         "recursive-readdir": "^2.2.3",
-        "stylelint": "^16.12.0",
-        "stylelint-config-standard": "^36.0.1",
-        "stylelint-order": "^6.0.4"
+        "stylelint": "^16.19.1",
+        "stylelint-config-standard": "^38.0.0",
+        "stylelint-order": "^7.0.0"
+    },
+    "devDependencies": {
+        "@aptuitiv/eslint-config-aptuitiv": "^1.1.0",
+        "eslint": "^9.27.0",
+        "watch-eslint": "^1.1.0"
     }
 }

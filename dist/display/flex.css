@@ -23,17 +23,17 @@
 }
 
 .flex-shrink {
-    flex-shrink: 1
+    flex-shrink: 1;
 }
 
 .flex-wrap {
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .flex-nowrap {
-    flex-wrap: nowrap
+    flex-wrap: nowrap;
 }
 
 .flex-wrap-reverse {
-    flex-wrap: wrap-reverse
+    flex-wrap: wrap-reverse;
 }
