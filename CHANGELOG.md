@@ -7,6 +7,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [7.3.0] - 2025-05-28
+
+### Changed
+
+- Updated multiple packages in the root package.json file.
+- Moved the eslint packages as devDepencies in the package.json file.
+
 ## [7.2.0] - 2025-05-19
 
 - Added additional flex utility classes.
