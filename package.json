@@ -35,7 +35,7 @@
     "dependencies": {
         "@aptuitiv/eslint-config-aptuitiv": "^0.8.0",
         "chalk": "^5.4.1",
-        "commander": "^12.1.0",
+        "commander": "^14.0.0",
         "eslint": "^8.57.0",
         "eslint-watch": "^8.0.0",
         "fancy-log": "^2.0.0",
