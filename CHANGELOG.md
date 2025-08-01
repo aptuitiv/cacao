@@ -7,6 +7,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [7.4.0] - 2025-08-01
+
+### Changed
+
+- Removed `!important` from the `link-subtle` classes. These prevented the styles from being overwritten by the site and were too opinionated. These are styles that could be subjective on a site. For example, a site may want link-subtle to have underlines but keep the other link-subtle styles from Cacao.
+
 ## [7.3.0] - 2025-05-28
 
 ### Changed
