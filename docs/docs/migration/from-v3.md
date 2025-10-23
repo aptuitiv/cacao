@@ -32,7 +32,7 @@ After you run that you'll probably also want to run the [version 6 migration scr
 
 1. Upgrade cacao to version 5. `npm i cacao-css@5`.
 2. Run the [helper scripts](#helper-script-to-automate-some-of-the-migration) listed above.
-3. Set up the import calls to pull in the Cacao styles. We recommend placing this within your `main.css` file (or whatever your entry point CSS file is). See [Import Cacao CSS](/import) for more information. Don't import everything. Be selective and only import the styles that you need. We recommend that you add imports to this file as you complete the steps below.
+3. Set up the import calls to pull in the Cacao styles. We recommend placing this within your `main.css` file (or whatever your entry point CSS file is). See [the sample import file below](#sample-import-file) for more information. Don't import everything. Be selective and only import the styles that you need. We recommend that you add imports to this file as you complete the steps below.
 4. Search for `u-size` in your templates and update the class names. See the [Grid column sizes](#grid-column-sizes) section for more information.
 5. Search for `Grid--equalHeight` and make the necessary adjustments to the HTML code. See [Equal height grids](#equal-height-grids) for more information.
 6. Search for any of the [removed classes](#removed-classes) and update your CSS manually. You may need to write some new CSS for these classes. You could [browse the source code at version 3](https://github.com/aptuitiv/cacao/tree/v3.21.0/src/css) to see what the old styles were.
@@ -288,3 +288,103 @@ col-1-1 col-1-3-sm col-1-4-md col-1-5-lg
 ```
 
 By convention, we start with the smallest screen size and progress from there.
+
+## Sample import file
+
+Below is a sample CSS file showing imports for Cacao V4 or V5 files.
+
+```css
+/* Import your website styles here before Cacao */
+
+/* =========================================================================== *\
+    Cacao CSS
+
+    The Cacao styles need to come after site styles so that they can override
+    where necessary. For example, the "hidden" style should be able to override
+    some styles when it's added to an element.
+
+    https://aptuitiv.github.io/cacao/import
+\* =========================================================================== */
+
+/* Media queries */
+@import 'cacao-css/src/config.css';
+
+/* Reset */
+@import 'cacao-css/src/reset.css';
+
+/* Base */
+@import 'cacao-css/src/base.css';
+
+/* --------------------------------------------*
+   Aspect Ratios
+ * ------------------------------------------- */
+
+ @import 'cacao-css/src/aspect/core/horizontal.css';
+
+/* --------------------------------------------*
+   Layout/Clearfix
+ * ------------------------------------------- */
+
+ @import 'cacao-css/src/layout/core/layout.css';
+
+/* --------------------------------------------*
+   Display
+ * ------------------------------------------- */
+
+ @import 'cacao-css/src/display/core/align.css';
+ @import 'cacao-css/src/display/core/display.css';
+ @import 'cacao-css/src/display/core/flex.css';
+ @import 'cacao-css/src/display/core/justify.css';
+
+/* --------------------------------------------*
+   Embed
+ * ------------------------------------------- */
+
+ @import 'cacao-css/src/embed/core/embed.css';
+
+/* --------------------------------------------*
+   Grid
+ * ------------------------------------------- */
+
+ @import 'cacao-css/src/grid/grid.css';
+
+
+/* --------------------------------------------*
+   Grid Columns
+ * ------------------------------------------- */
+
+ @import 'cacao-css/src/grid/core/col-1.css';
+ @import 'cacao-css/src/grid/core/col-2.css';
+ @import 'cacao-css/src/grid/core/col-4.css';
+
+ /* Grid Columns (sm) */
+ @import 'cacao-css/src/grid/sm/col-2.css';
+
+ /* Grid Columns (md) */
+ @import 'cacao-css/src/grid/md/col-2.css';
+ @import 'cacao-css/src/grid/md/col-3.css';
+ @import 'cacao-css/src/grid/md/col-4.css';
+ @import 'cacao-css/src/grid/md/col-5.css';
+
+ /* Grid Columns (lg) */
+ @import 'cacao-css/src/grid/lg/col-2.css';
+ @import 'cacao-css/src/grid/lg/col-3.css';
+ @import 'cacao-css/src/grid/lg/col-4.css';
+ @import 'cacao-css/src/grid/lg/col-5.css';
+ @import 'cacao-css/src/grid/lg/col-6.css';
+
+ /* Grid Columns (xl) */
+ @import 'cacao-css/src/grid/xl/col-3.css';
+ @import 'cacao-css/src/grid/xl/col-4.css';
+
+/* --------------------------------------------*
+   Gutter
+ * ------------------------------------------- */
+
+ @import 'cacao-css/src/gutter/core/all.css';
+ @import 'cacao-css/src/gutter/core/horizontal.css';
+ @import 'cacao-css/src/gutter/core/vertical.css';
+
+ /* Gutter (lg) */
+ @import 'cacao-css/src/gutter/lg/all.css';
+```
