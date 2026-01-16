@@ -36,6 +36,6 @@
     }
 
     .col-9-9-3xl {
-        width: calc(100% - var(--col-width-adjust));
+        width: 100%;
     }
 }

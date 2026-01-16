@@ -20,6 +20,6 @@
     }
 
     .col-5-5-lg {
-        width: calc(100% - var(--col-width-adjust));
+        width: 100%;
     }
 }

@@ -19,5 +19,5 @@
 }
 
 .col-5-5 {
-    width: calc(100% - var(--col-width-adjust));
+    width: 100%;
 }

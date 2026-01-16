@@ -28,6 +28,6 @@
     }
 
     .col-7-7-xl {
-        width: calc(100% - var(--col-width-adjust));
+        width: 100%;
     }
 }
