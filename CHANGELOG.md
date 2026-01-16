@@ -7,6 +7,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [7.5.0] - 2026-01-16
+
+### Fixed
+
+- Fixed issue where full-width columns were not actually full width. They included the column width adjustment, which could make them less than 100% widthl
+
 ## [7.4.0] - 2025-08-01
 
 ### Changed
