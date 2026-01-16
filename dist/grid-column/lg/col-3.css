@@ -12,6 +12,6 @@
     }
 
     .col-3-3-lg {
-        width: calc(100% - var(--col-width-adjust));
+        width: 100%;
     }
 }

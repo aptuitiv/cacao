@@ -8,6 +8,6 @@
     }
 
     .col-2-2-2xs {
-        width: calc(100% - var(--col-width-adjust));
+        width: 100%;
     }
 }

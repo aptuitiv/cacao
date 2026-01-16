@@ -16,6 +16,6 @@
     }
 
     .col-4-4-md {
-        width: calc(100% - var(--col-width-adjust));
+        width: 100%;
     }
 }

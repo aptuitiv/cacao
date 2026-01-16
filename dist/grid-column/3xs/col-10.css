@@ -40,6 +40,6 @@
     }
 
     .col-10-10-3xs {
-        width: calc(100% - var(--col-width-adjust));
+        width: 100%;
     }
 }

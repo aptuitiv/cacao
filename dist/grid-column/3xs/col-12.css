@@ -50,6 +50,6 @@
     }
 
     .col-12-12-3xs {
-        width: calc(100% - var(--col-width-adjust));
+        width: 100%;
     }
 }

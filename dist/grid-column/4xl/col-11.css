@@ -44,6 +44,6 @@
     }
 
     .col-11-11-4xl {
-        width: calc(100% - var(--col-width-adjust));
+        width: 100%;
     }
 }
