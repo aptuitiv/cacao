@@ -8,6 +8,7 @@ import chalk from 'chalk';
 import fs from 'fs-extra';
 import fancyLog from 'fancy-log';
 import logSymbols from 'log-symbols';
+import path from 'path';
 
 import { variableSizes } from './config.js';
 import { buildModuleSideFileContent, createModuleVariables } from './helpers.js';
@@ -45,8 +46,9 @@ const buildGuttersFiles = () => new Promise((resolve) => {
         });
         fileContents += `\n    ${sides[side].allProperty}: var(${sideObject.property});\n}`;
 
-        fs.writeFileSync(`src/gutter/${side}.css`, fileContents);
-        fancyLog(chalk.green(`${logSymbols.success} Wrote gutter file `, chalk.cyan(`src/gutter/${side}.css`)));
+        const filePath = path.join('src', 'gutter', `${side}.css`);
+        fs.writeFileSync(filePath, fileContents);
+        fancyLog(chalk.green(`${logSymbols.success} Wrote gutter file `, chalk.cyan(filePath)));
     });
 
     fancyLog(chalk.green(`${logSymbols.success} Done creating gutter files `));

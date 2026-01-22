@@ -6,6 +6,7 @@ import chalk from 'chalk';
 import fs from 'fs-extra';
 import fancyLog from 'fancy-log';
 import logSymbols from 'log-symbols';
+import path from 'path';
 
 import { distDirectory, rootDirectory } from './config.js';
 
@@ -29,9 +30,11 @@ export const createModuleVariables = (module, sizes) => new Promise((resolve) =>
         fileContents += `    --${module}-${i}: ${sizes[i]}px;`;
     });
     fileContents += '\n}';
-    fs.ensureDirSync(`src/${module}`);
-    fs.writeFileSync(`src/${module}/variables.css`, fileContents);
-    fancyLog(chalk.green(`${logSymbols.success} Wrote ${module} variables file `, chalk.cyan(`src/${module}/variables.css`)));
+    const modulePath = path.join('src', module);
+    const filePath = path.join(modulePath, 'variables.css');
+    fs.ensureDirSync(modulePath);
+    fs.writeFileSync(filePath, fileContents);
+    fancyLog(chalk.green(`${logSymbols.success} Wrote ${module} variables file `, chalk.cyan(filePath)));
     resolve();
 });
 
@@ -81,9 +84,9 @@ export const buildModuleCombinationFile = (module, dest, config = {}) => {
     const skip = ['variables.css'];
     if (!config.files) {
         // Files were not set. Read from the source module folder to get the files
-        const directory = `${rootDirectory}/src/${module}`;
+        const directory = path.join(rootDirectory, 'src', module);
         fs.readdirSync(directory).forEach((file) => {
-            const srcPath = `${directory}/${file}`;
+            const srcPath = path.join(directory, file);
             const stats = fs.statSync(srcPath);
             if (stats.isFile() && !skip.includes(file)) {
                 files.push(file);
@@ -111,7 +114,9 @@ export const buildModuleCombinationFile = (module, dest, config = {}) => {
     files.forEach((file) => {
         fileContents += `@import './${file}';\n`;
     });
-    fs.ensureDirSync(`${distDirectory}/${dest}`);
-    fs.writeFileSync(`${distDirectory}/${dest}/combined-import.css`, fileContents);
-    fancyLog(chalk.green(`${logSymbols.success} Wrote ${module} combined import file `, chalk.cyan(`dest/${dest}/combined-import.css`)));
+    const destPath = path.join(distDirectory, dest);
+    const filePath = path.join(destPath, 'combined-import.css');
+    fs.ensureDirSync(destPath);
+    fs.writeFileSync(filePath, fileContents);
+    fancyLog(chalk.green(`${logSymbols.success} Wrote ${module} combined import file `, chalk.cyan(filePath)));
 };

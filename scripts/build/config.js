@@ -2,17 +2,17 @@
     Configuration for building the files
 =========================================================================== */
 
-import { dirname } from 'path';
+import path from 'path';
 import { fileURLToPath } from 'url';
 
 // The root directory for the project
-export const rootDirectory = dirname(dirname(dirname(fileURLToPath(import.meta.url))));
+export const rootDirectory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../');
 
 // The directory path where the files are built
-export const distDirectory = `${rootDirectory}/dist`;
+export const distDirectory = path.join(rootDirectory, 'dist');
 
 // The directory path where the source files are located
-export const srcDirectory = `${rootDirectory}/src`;
+export const srcDirectory = path.join(rootDirectory, 'src');
 
 // Media query sizes
 export const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'];

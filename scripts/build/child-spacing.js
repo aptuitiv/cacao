@@ -8,6 +8,7 @@ import chalk from 'chalk';
 import fs from 'fs-extra';
 import fancyLog from 'fancy-log';
 import logSymbols from 'log-symbols';
+import path from 'path';
 
 import { variableSizes } from './config.js';
 import { buildModuleSideFileContent, createModuleVariables } from './helpers.js';
@@ -71,31 +72,33 @@ const buildChildSpacingFiles = () => new Promise((resolve) => {
     };
     Object.keys(sides).forEach((side) => {
         const fileContents = buildModuleSideFileContent('child-spacing', sides[side]);
-        let path = 'src/child-spacing';
+        let sidePath = path.join('src', 'child-spacing');
         if (side.startsWith('first-child')) {
-            path += '/first-child';
+            sidePath = path.join(sidePath, 'first-child');
         } else if (side.startsWith('last-child')) {
-            path += '/last-child';
+            sidePath = path.join(sidePath, 'last-child');
         }
         if (side.includes('margin')) {
-            path += '/margin';
+            sidePath = path.join(sidePath, 'margin');
         } else if (side.includes('padding')) {
-            path += '/padding';
+            sidePath = path.join(sidePath, 'padding');
         } else if (side.includes('spacing')) {
-            path += '/spacing';
+            sidePath = path.join(sidePath, 'spacing');
         }
         const fileName = side.split('-').pop();
-        fs.ensureDirSync(path);
-        fs.writeFileSync(`${path}/${fileName}.css`, fileContents);
-        fancyLog(chalk.green(`${logSymbols.success} Wrote child spacing file `, chalk.cyan(`${path}/${fileName}.css`)));
+        fs.ensureDirSync(sidePath);
+        const filePath = path.join(sidePath, `${fileName}.css`);
+        fs.writeFileSync(filePath, fileContents);
+        fancyLog(chalk.green(`${logSymbols.success} Wrote child spacing file `, chalk.cyan(filePath)));
         // Create files for the individual sizes
         for (let i = 0; i <= 15; i += 1) {
             const fileContents = buildModuleSideFileContent('child-spacing', sides[side], i, i);
-            let sizePath = path + '/' + fileName;
-            let sizeFileName = fileName + '-' + i;
+            const sizePath = path.join(sidePath, fileName);
+            const sizeFileName = `${fileName}-${i}`;
             fs.ensureDirSync(sizePath);
-            fs.writeFileSync(`${sizePath}/${sizeFileName}.css`, fileContents);
-            fancyLog(chalk.green(`${logSymbols.success} Wrote child spacing file `, chalk.cyan(`${sizePath}/${sizeFileName}.css`)));
+            const sizeFilePath = path.join(sizePath, `${sizeFileName}.css`);
+            fs.writeFileSync(sizeFilePath, fileContents);
+            fancyLog(chalk.green(`${logSymbols.success} Wrote child spacing file `, chalk.cyan(sizeFilePath)));
         }
     });
 
