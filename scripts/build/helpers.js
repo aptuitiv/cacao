@@ -38,13 +38,13 @@ export const createModuleVariables = (module, sizes) => new Promise((resolve) =>
 /**
  * Build the module side file content
  *
- * @param {string} module The module to build the side styles for
+ * @param {string} variable The variable to use for the values
  * @param {object} sideObject The side object containing the class, comment, and property
  * @param {number} startSize The start size to build the file for. Defaults to 1
  * @param {number} endSize The end size to build the file for. Defaults to 15
  * @returns {string}
  */
-export const buildModuleSideFileContent = (module, sideObject, startSize = 1, endSize = 15) => {
+export const buildModuleSideFileContent = (variable, sideObject, startSize = 1, endSize = 15) => {
     let fileContents = '/* =========================================================================== *\n';
     fileContents += `   ${sideObject.comment}\n`;
     fileContents += ' * =========================================================================== */\n';
@@ -54,10 +54,10 @@ export const buildModuleSideFileContent = (module, sideObject, startSize = 1, en
         fileContents += `.${sideObject.class}-${i} {\n`;
         const { property } = sideObject;
         if (Array.isArray(property)) {
-            const declarations = property.map((prop) => `    ${prop}: var(--${module}-${i});\n`);
+            const declarations = property.map((prop) => `    ${prop}: var(--${variable}-${i});\n`);
             fileContents += declarations.join('');
         } else {
-            fileContents += `    ${property}: var(--${module}-${i});\n`;
+            fileContents += `    ${property}: var(--${variable}-${i});\n`;
         }
         fileContents += '}';
     }
