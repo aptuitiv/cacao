@@ -3,6 +3,10 @@
  * =========================================================================== */
 
 
+.last-child-pb-0 {
+    padding-bottom: var(--child-spacing-0);
+}
+
 .last-child-pb-1 {
     padding-bottom: var(--child-spacing-1);
 }

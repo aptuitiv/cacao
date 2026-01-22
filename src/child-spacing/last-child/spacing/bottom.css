@@ -3,6 +3,11 @@
  * =========================================================================== */
 
 
+.last-child-sb-0 {
+    margin-bottom: var(--child-spacing-0);
+    padding-bottom: var(--child-spacing-0);
+}
+
 .last-child-sb-1 {
     margin-bottom: var(--child-spacing-1);
     padding-bottom: var(--child-spacing-1);

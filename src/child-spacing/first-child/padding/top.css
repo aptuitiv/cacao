@@ -3,6 +3,10 @@
  * =========================================================================== */
 
 
+.first-child-pt-0 {
+    padding-top: var(--child-spacing-0);
+}
+
 .first-child-pt-1 {
     padding-top: var(--child-spacing-1);
 }

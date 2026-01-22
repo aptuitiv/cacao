@@ -3,6 +3,11 @@
  * =========================================================================== */
 
 
+.first-child-st-0 {
+    margin-top: var(--child-spacing-0);
+    padding-top: var(--child-spacing-0);
+}
+
 .first-child-st-1 {
     margin-top: var(--child-spacing-1);
     padding-top: var(--child-spacing-1);
