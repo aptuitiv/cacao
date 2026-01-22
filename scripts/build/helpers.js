@@ -44,7 +44,7 @@ export const createModuleVariables = (module, sizes) => new Promise((resolve) =>
  * @param {number} endSize The end size to build the file for. Defaults to 15
  * @returns {string}
  */
-export const buildModuleSideFileContent = (variable, sideObject, startSize = 1, endSize = 15) => {
+export const buildModuleSideFileContent = (variable, sideObject, startSize = 0, endSize = 15) => {
     let fileContents = '/* =========================================================================== *\n';
     fileContents += `   ${sideObject.comment}\n`;
     fileContents += ' * =========================================================================== */\n';
