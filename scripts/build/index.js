@@ -40,6 +40,18 @@ program
     });
 
 /**
+ * Combine the files for the modules
+ *
+ * node scripts/build combine-files
+ */
+program
+    .command('combine-files')
+    .description('Combine the files for the modules')
+    .action(async () => {
+        combineFiles();
+    });
+
+/**
  * Copy the files from the src directory to the dist directory
  *
  * node scripts/build copy-files
