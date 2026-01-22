@@ -20,9 +20,12 @@ Import this into your CSS with:
 
 See [Import Cacao CSS](/import) for more information.
 
-## Example usage
+## Remove both margin and padding
 
-Here is an example of using this remove the padding and margin from the first and last child in an element.
+- `first-child-st-0` - Remove both the top margin and top padding from the first child in an element.
+- `last-child-sb-0` - Remove both the bottom margin and bottom padding from the last child in an element.
+
+Remove the top margin and top padding from the first child in an element and the bottom margin and bottom padding from the last child in an element.
 
 ```html
 <div class="first-child-st-0 last-child-sb-0">
@@ -31,19 +34,82 @@ Here is an example of using this remove the padding and margin from the first an
 </div>
 ```
 
-Here is an example where just the first child is affected.
+Remove the top margin and top padding from the first child in an element.
 
 ```html
-<div class="first-child-st-0 ">
+<div class="first-child-st-0">
     <h1>Content here</h1>
     <p>Some paragraph content.</p>
 </div>
 ```
 
-Here is an example where just the last child is affected.
+Remove the bottom margin and bottom padding from the last child in an element.
 
 ```html
 <div class="last-child-sb-0">
+    <h1>Content here</h1>
+    <p>Some paragraph content.</p>
+</div>
+```
+
+## Remove margins
+
+- `first-child-mt-0` - Remove the top margin from the first child in an element.
+- `last-child-mb-0` - Remove the bottom margin from the last child in an element.
+
+Remove the top margin from the first child in an element and the bottom margin from the last child in an element.
+
+```html
+<div class="first-child-mt-0 last-child-mb-0">
+    <h1>Content here</h1>
+    <p>Some paragraph content.</p>
+</div>
+```
+
+Remove the top margin from the first child in an element.
+
+```html
+<div class="first-child-mt-0">
+    <h1>Content here</h1>
+    <p>Some paragraph content.</p>
+</div>
+```
+
+Remove the bottom margin from the last child in an element.
+
+```html
+<div class="last-child-mb-0">
+    <h1>Content here</h1>
+    <p>Some paragraph content.</p>
+</div>
+```
+## Remove padding
+
+- `first-child-pt-0` - Remove the top padding from the first child in an element.
+- `last-child-pb-0` - Remove the bottom padding from the last child in an element.
+
+Remove the top padding from the first child in an element and the bottom padding from the last child in an element.
+
+```html
+<div class="first-child-pt-0 last-child-pb-0">
+    <h1>Content here</h1>
+    <p>Some paragraph content.</p>
+</div>
+```
+
+Remove the top padding from the first child in an element.
+
+```html
+<div class="first-child-pt-0">
+    <h1>Content here</h1>
+    <p>Some paragraph content.</p>
+</div>
+```
+
+Remove the bottom padding from the last child in an element.
+
+```html
+<div class="last-child-pb-0">
     <h1>Content here</h1>
     <p>Some paragraph content.</p>
 </div>

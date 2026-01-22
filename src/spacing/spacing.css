@@ -2,14 +2,34 @@
     Spacing utilities
 \* =========================================================================== */
 
-/* Used to remove space from the first element within an element. "st" stands for "space-top" */
+/* Used to remove the top margin and top padding from the first element within an element. "st" stands for "space-top" */
 .first-child-st-0 > *:first-child {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
 
-/* Used to remove space from the last element within an element "sb" stands for "space-bottom" */
+/* Used to remove the bottom margin and bottom padding from the last element within an element "sb" stands for "space-bottom" */
 .last-child-sb-0 > *:last-child {
     margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Used to remove the top margin from the first element within an element. "mt" stands for "margin-top" */
+.first-child-mt-0 > *:first-child {
+    margin-top: 0 !important;
+}
+
+/* Used to remove the bottom margin from the last element within an element. "mb" stands for "margin-bottom" */
+.last-child-mb-0 > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Used to remove the top padding from the first element within an element. "pt" stands for "padding-top" */
+.first-child-pt-0 > *:first-child {
+    padding-top: 0 !important;
+}
+
+/* Used to remove the bottom padding from the last element within an element. "pb" stands for "padding-bottom" */
+.last-child-pb-0 > *:last-child {
     padding-bottom: 0 !important;
 }
