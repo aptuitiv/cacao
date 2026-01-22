@@ -259,12 +259,12 @@ const buildChildSpacingFiles = () => new Promise((resolve) => {
         fancyLog(chalk.green(`${logSymbols.success} Wrote child spacing file `, chalk.cyan(filePath)));
         // Create files for the individual sizes
         for (let i = 0; i <= 15; i += 1) {
-            const fileContents = buildModuleSideFileContent('child-spacing', sides[side], i, i);
+            const sizeFileContents = buildModuleSideFileContent('child-spacing', sides[side], i, i);
             const sizePath = path.join(sidePath, fileName);
             const sizeFileName = `${fileName}-${i}`;
             fs.ensureDirSync(sizePath);
             const sizeFilePath = path.join(sizePath, `${sizeFileName}.css`);
-            fs.writeFileSync(sizeFilePath, fileContents);
+            fs.writeFileSync(sizeFilePath, sizeFileContents);
             fancyLog(chalk.green(`${logSymbols.success} Wrote child spacing file `, chalk.cyan(sizeFilePath)));
         }
     });
