@@ -68,7 +68,6 @@ export const importsModuleMap = {
     position: { name: 'Position' },
     pull: { name: 'Pull' },
     push: { name: 'Push' },
-    spacing: { name: 'Spacing' },
     typography: { name: 'Typography' },
     width: { name: 'Width' },
 };
