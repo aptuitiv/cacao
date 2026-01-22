@@ -40,14 +40,16 @@ export const createModuleVariables = (module, sizes) => new Promise((resolve) =>
  *
  * @param {string} module The module to build the side styles for
  * @param {object} sideObject The side object containing the class, comment, and property
+ * @param {number} startSize The start size to build the file for. Defaults to 1
+ * @param {number} endSize The end size to build the file for. Defaults to 15
  * @returns {string}
  */
-export const buildModuleSideFileContent = (module, sideObject) => {
+export const buildModuleSideFileContent = (module, sideObject, startSize = 1, endSize = 15) => {
     let fileContents = '/* =========================================================================== *\n';
     fileContents += `   ${sideObject.comment}\n`;
     fileContents += ' * =========================================================================== */\n';
 
-    for (let i = 0; i <= 15; i += 1) {
+    for (let i = startSize; i <= endSize; i += 1) {
         fileContents += '\n\n';
         fileContents += `.${sideObject.class}-${i} {\n`;
         const { property } = sideObject;
