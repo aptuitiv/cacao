@@ -29,6 +29,7 @@ export const createModuleVariables = (module, sizes) => new Promise((resolve) =>
         fileContents += `    --${module}-${i}: ${sizes[i]}px;`;
     });
     fileContents += '\n}';
+    fs.ensureDirSync(`src/${module}`);
     fs.writeFileSync(`src/${module}/variables.css`, fileContents);
     fancyLog(chalk.green(`${logSymbols.success} Wrote ${module} variables file `, chalk.cyan(`src/${module}/variables.css`)));
     resolve();
@@ -108,6 +109,7 @@ export const buildModuleCombinationFile = (module, dest, config = {}) => {
     files.forEach((file) => {
         fileContents += `@import './${file}';\n`;
     });
+    fs.ensureDirSync(`${distDirectory}/${dest}`);
     fs.writeFileSync(`${distDirectory}/${dest}/combined-import.css`, fileContents);
     fancyLog(chalk.green(`${logSymbols.success} Wrote ${module} combined import file `, chalk.cyan(`dest/${dest}/combined-import.css`)));
 };
