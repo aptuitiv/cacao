@@ -40,6 +40,18 @@ program
     });
 
 /**
+ * Copy the files from the src directory to the dist directory
+ *
+ * node scripts/build copy-files
+ */
+program
+    .command('copy-files')
+    .description('Copy the files from the src directory to the dist directory')
+    .action(async () => {
+        copyFiles();
+    });
+
+/**
  * Build the src child spacing files
  *
  * node scripts/build child-spacing
