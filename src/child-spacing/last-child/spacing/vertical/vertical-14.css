@@ -1,0 +1,11 @@
+/* =========================================================================== *
+   Last child vertical margin and padding utilities
+ * =========================================================================== */
+
+
+.last-child-sy-14 {
+    margin-top: var(--child-spacing-14);
+    margin-bottom: var(--child-spacing-14);
+    padding-top: var(--child-spacing-14);
+    padding-bottom: var(--child-spacing-14);
+}

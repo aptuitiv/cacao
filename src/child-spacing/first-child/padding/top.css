@@ -1,0 +1,64 @@
+/* =========================================================================== *
+   First child top padding utilities
+ * =========================================================================== */
+
+
+.first-child-pt-1 {
+    padding-top: var(--child-spacing-1);
+}
+
+.first-child-pt-2 {
+    padding-top: var(--child-spacing-2);
+}
+
+.first-child-pt-3 {
+    padding-top: var(--child-spacing-3);
+}
+
+.first-child-pt-4 {
+    padding-top: var(--child-spacing-4);
+}
+
+.first-child-pt-5 {
+    padding-top: var(--child-spacing-5);
+}
+
+.first-child-pt-6 {
+    padding-top: var(--child-spacing-6);
+}
+
+.first-child-pt-7 {
+    padding-top: var(--child-spacing-7);
+}
+
+.first-child-pt-8 {
+    padding-top: var(--child-spacing-8);
+}
+
+.first-child-pt-9 {
+    padding-top: var(--child-spacing-9);
+}
+
+.first-child-pt-10 {
+    padding-top: var(--child-spacing-10);
+}
+
+.first-child-pt-11 {
+    padding-top: var(--child-spacing-11);
+}
+
+.first-child-pt-12 {
+    padding-top: var(--child-spacing-12);
+}
+
+.first-child-pt-13 {
+    padding-top: var(--child-spacing-13);
+}
+
+.first-child-pt-14 {
+    padding-top: var(--child-spacing-14);
+}
+
+.first-child-pt-15 {
+    padding-top: var(--child-spacing-15);
+}

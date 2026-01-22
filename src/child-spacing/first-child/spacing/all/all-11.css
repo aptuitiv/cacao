@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   First child all sides margin and padding utilities
+ * =========================================================================== */
+
+
+.first-child-s-11 {
+    margin: var(--child-spacing-11);
+    padding: var(--child-spacing-11);
+}

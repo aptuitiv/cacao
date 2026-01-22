@@ -6,6 +6,7 @@ import { Command } from 'commander';
 
 import combineFiles from './combine.js';
 import copyFiles from './copy-files.js';
+import buildChildSpacing from './child-spacing.js';
 import buildGutters from './gutter.js';
 import buildImports from './imports.js';
 import buildMargins from './margin.js';
@@ -25,6 +26,7 @@ program
     .command('all')
     .description('Build all the CSS files to the dist directory')
     .action(async () => {
+        await buildChildSpacing();
         await buildGutters();
         await buildMargins();
         await buildPaddings();
@@ -35,6 +37,18 @@ program
         setTimeout(() => {
             buildImports();
         }, 500);
+    });
+
+/**
+ * Build the src child spacing files
+ *
+ * node scripts/build child-spacing
+ */
+program
+    .command('child-spacing')
+    .description('Build the source child spacing files')
+    .action(async () => {
+        buildChildSpacing();
     });
 
 /**

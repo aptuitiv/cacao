@@ -1,0 +1,79 @@
+/* =========================================================================== *
+   Last child vertical margin utilities
+ * =========================================================================== */
+
+
+.last-child-my-1 {
+    margin-top: var(--child-spacing-1);
+    margin-bottom: var(--child-spacing-1);
+}
+
+.last-child-my-2 {
+    margin-top: var(--child-spacing-2);
+    margin-bottom: var(--child-spacing-2);
+}
+
+.last-child-my-3 {
+    margin-top: var(--child-spacing-3);
+    margin-bottom: var(--child-spacing-3);
+}
+
+.last-child-my-4 {
+    margin-top: var(--child-spacing-4);
+    margin-bottom: var(--child-spacing-4);
+}
+
+.last-child-my-5 {
+    margin-top: var(--child-spacing-5);
+    margin-bottom: var(--child-spacing-5);
+}
+
+.last-child-my-6 {
+    margin-top: var(--child-spacing-6);
+    margin-bottom: var(--child-spacing-6);
+}
+
+.last-child-my-7 {
+    margin-top: var(--child-spacing-7);
+    margin-bottom: var(--child-spacing-7);
+}
+
+.last-child-my-8 {
+    margin-top: var(--child-spacing-8);
+    margin-bottom: var(--child-spacing-8);
+}
+
+.last-child-my-9 {
+    margin-top: var(--child-spacing-9);
+    margin-bottom: var(--child-spacing-9);
+}
+
+.last-child-my-10 {
+    margin-top: var(--child-spacing-10);
+    margin-bottom: var(--child-spacing-10);
+}
+
+.last-child-my-11 {
+    margin-top: var(--child-spacing-11);
+    margin-bottom: var(--child-spacing-11);
+}
+
+.last-child-my-12 {
+    margin-top: var(--child-spacing-12);
+    margin-bottom: var(--child-spacing-12);
+}
+
+.last-child-my-13 {
+    margin-top: var(--child-spacing-13);
+    margin-bottom: var(--child-spacing-13);
+}
+
+.last-child-my-14 {
+    margin-top: var(--child-spacing-14);
+    margin-bottom: var(--child-spacing-14);
+}
+
+.last-child-my-15 {
+    margin-top: var(--child-spacing-15);
+    margin-bottom: var(--child-spacing-15);
+}

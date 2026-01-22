@@ -1,0 +1,11 @@
+/* =========================================================================== *
+   First child horizontal margin and padding utilities
+ * =========================================================================== */
+
+
+.first-child-sx-4 {
+    margin-left: var(--child-spacing-4);
+    margin-right: var(--child-spacing-4);
+    padding-left: var(--child-spacing-4);
+    padding-right: var(--child-spacing-4);
+}

@@ -1,0 +1,11 @@
+/* =========================================================================== *
+   First child vertical margin and padding utilities
+ * =========================================================================== */
+
+
+.first-child-sy-13 {
+    margin-top: var(--child-spacing-13);
+    margin-bottom: var(--child-spacing-13);
+    padding-top: var(--child-spacing-13);
+    padding-bottom: var(--child-spacing-13);
+}

@@ -24,6 +24,7 @@
     "type": "module",
     "scripts": {
         "build": "node scripts/build all",
+        "build-child-spacing": "node scripts/build child-spacing",
         "build-gutters": "node scripts/build gutters",
         "build-imports": "node scripts/build imports",
         "build-margins": "node scripts/build margins",

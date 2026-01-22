@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Last child vertical padding utilities
+ * =========================================================================== */
+
+
+.last-child-py-5 {
+    padding-top: var(--child-spacing-5);
+    padding-bottom: var(--child-spacing-5);
+}
