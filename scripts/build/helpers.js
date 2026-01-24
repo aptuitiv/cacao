@@ -71,20 +71,23 @@ export const buildModuleSideFileContent = (variable, sideObject, startSize = 0, 
 /**
  * Build the file that imports the other module files
  *
- * @param {string} module The module to build the combination file for
+ * @param {string} src The path within the src directory to read the files from
  * @param {string} dest The destination directory to write the file to
+ * @param {string} name The module name to use in the comment. Defaults to the module name.
  * @param {object} config The configuration for the combination file. You must set either "directory" or "files".
- *      - commentModule (string): The module name to use in the comment. Defaults to the module name.
- *      - directory (string): The directory to read the files from if files is not provided
+ *      - directory (string): The directory to read the files from. If not provided, it will read the files from a folder with the same name as the module.
  *      - files (array): The files to import. If not provided, it will read the files from the directory
  *      - size (string): The media query size if building the media query files.
  */
-export const buildModuleCombinationFile = (module, dest, config = {}) => {
+export const buildModuleCombinationFile = (src, dest, name, config = {}) => {
     let files = [];
     const skip = ['variables.css'];
     if (!config.files) {
         // Files were not set. Read from the source module folder to get the files
-        const directory = path.join(rootDirectory, 'src', module);
+        let directory = path.join(rootDirectory, 'src', src);
+        if (typeof config.directory !== 'undefined') {
+            directory = path.join(rootDirectory, 'src', config.directory);
+        }
         fs.readdirSync(directory).forEach((file) => {
             const srcPath = path.join(directory, file);
             const stats = fs.statSync(srcPath);
@@ -98,10 +101,10 @@ export const buildModuleCombinationFile = (module, dest, config = {}) => {
 
     files.sort();
 
-    const commentModule = config.commentModule ?? module;
+    const moduleName = `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
 
     let fileContents = '/* =========================================================================== *\n';
-    fileContents += `   ${commentModule.charAt(0).toUpperCase() + commentModule.slice(1)} utilities`;
+    fileContents += `   ${moduleName} utilities`;
     if (config.size) {
         fileContents += ` - ${config.size}`;
     }
@@ -109,7 +112,7 @@ export const buildModuleCombinationFile = (module, dest, config = {}) => {
     if (config.size) {
         fileContents += `${config.size}`;
     }
-    fileContents += ` ${module} utility files\n`;
+    fileContents += ` ${moduleName.toLowerCase()} utility files\n`;
     fileContents += ' * =========================================================================== */\n\n';
     files.forEach((file) => {
         fileContents += `@import './${file}';\n`;
@@ -118,5 +121,5 @@ export const buildModuleCombinationFile = (module, dest, config = {}) => {
     const filePath = path.join(destPath, 'combined-import.css');
     fs.ensureDirSync(destPath);
     fs.writeFileSync(filePath, fileContents);
-    fancyLog(chalk.green(`${logSymbols.success} Wrote ${module} combined import file `, chalk.cyan(filePath)));
+    fancyLog(chalk.green(`${logSymbols.success} Wrote ${moduleName} combined import file `, chalk.cyan(filePath)));
 };

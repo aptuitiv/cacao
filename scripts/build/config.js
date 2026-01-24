@@ -17,9 +17,60 @@ export const srcDirectory = path.join(rootDirectory, 'src');
 // Media query sizes
 export const mediaSizes = ['3xs', '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl'];
 
-// Configuration for the modules to combine file imports into one file
+/**
+ * Configuration for the modules to combine file imports into one file
+ * - combine (boolean): Whether to combine the files into a single file. Defaults to false.
+ * - directory (string): The directory to read the files from.
+ *      If not provided, it will read the files from a folder with the same name as the module (i.e. the object key name ).
+ * - files (array): The files to import. If not provided, it will read the files from the directory
+ * - name (string): The module name to use in the comment. Defaults to the module name.
+ *
+ * @type {Object.<string, object>}
+ */
 export const combinationFiles = {
     aspect: { combine: true, name: 'Aspect Ratio' },
+    'child-spacing': {
+        combine: true,
+        name: 'Child spacing',
+        files: ['first-child/combined-import.css', 'last-child/combined-import.css'],
+    },
+    'child-spacing-first-child': {
+        combine: true,
+        name: 'Child spacing first child',
+        directory: 'child-spacing/first-child',
+        files: ['margin/combined-import.css', 'padding/combined-import.css', 'spacing/combined-import.css'],
+    },
+    'child-spacing-first-child-margin': {
+        combine: true,
+        name: 'Child spacing first child margin',
+        directory: 'child-spacing/first-child/margin',
+    },
+    'child-spacing-first-child-padding': {
+        combine: true,
+        name: 'Child spacing first child padding',
+        directory: 'child-spacing/first-child/padding',
+    },
+    'child-spacing-first-child-spacing': {
+        combine: true,
+        name: 'Child spacing first child spacing',
+        directory: 'child-spacing/first-child/spacing',
+    },
+    'child-spacing-last-child': {
+        combine: true,
+        name: 'Child spacing last child',
+        directory: 'child-spacing/last-child',
+        files: ['margin/combined-import.css', 'padding/combined-import.css', 'spacing/combined-import.css'],
+    },
+    'child-spacing-last-child-margin': {
+        combine: true,
+        name: 'Child spacing last child margin',
+        directory: 'child-spacing/last-child/margin',
+    },
+    'child-spacing-last-child-padding': {
+        combine: true,
+        name: 'Child spacing last child padding',
+        directory: 'child-spacing/last-child/padding',
+    },
     display: { combine: true },
     'grid-column': { combine: true, name: 'Grid column' },
     gutter: { combine: true },
@@ -54,6 +105,7 @@ export const mediaQueryDirectories = [
 export const importsModuleMap = {
     aspect: { name: 'Aspect Ratios', combine: 'aspect.css' },
     clearfix: { name: 'Clearfix' },
+    'child-spacing': { name: 'Child spacing' },
     display: { name: 'Display' },
     embed: { name: 'Embed' },
     fit: { name: 'Fit' },

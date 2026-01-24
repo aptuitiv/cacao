@@ -75,7 +75,8 @@ const wrapDirectory = (dir) => new Promise((resolve) => {
         const combineConfig = combinationFiles[folder];
         files.sort();
         mediaSizes.forEach((size) => {
-            buildModuleCombinationFile(folder, `${folder}/${size}`, { files, size, commentModule: combineConfig.name ?? folder });
+            const moduleName = combineConfig.name ?? folder;
+            buildModuleCombinationFile(folder, `${folder}/${size}`, moduleName, { files, size });
         });
     }
 });
