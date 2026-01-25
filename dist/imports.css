@@ -132,6 +132,9 @@
    Child spacing
  * ------------------------------------------- */
 
+
+/* Child spacing variables. This must be imported, or you must override the variables in your own CSS. */
+@import 'cacao-css/dist/child-spacing/variables.css';
 /* Include all Child spacing files */
 @import 'cacao-css/dist/child-spacing/combined-import.css';
 

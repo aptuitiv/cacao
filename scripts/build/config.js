@@ -110,6 +110,7 @@ export const importsModuleMap = {
     clearfix: { name: 'Clearfix' },
     'child-spacing': {
         name: 'Child spacing',
+        variables: true,
         // Specify the module name to use for subdirectories.
         subDirectories: {
             'first-child': { name: 'First child' },
