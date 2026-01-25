@@ -36,22 +36,22 @@
         "watch": "watch-eslint  --fix --color ./scripts"
     },
     "dependencies": {
-        "chalk": "^5.4.1",
-        "commander": "^14.0.0",
+        "chalk": "^5.6.2",
+        "commander": "^14.0.2",
         "fancy-log": "^2.0.0",
-        "fs-extra": "^11.3.0",
+        "fs-extra": "^11.3.3",
         "log-symbols": "^7.0.1",
-        "postcss": "^8.5.3",
+        "postcss": "^8.5.6",
         "postcss-cli": "^11.0.1",
-        "prettier": "^3.5.3",
+        "prettier": "^3.8.1",
         "recursive-readdir": "^2.2.3",
-        "stylelint": "^16.19.1",
-        "stylelint-config-standard": "^38.0.0",
-        "stylelint-order": "^7.0.0"
+        "stylelint": "^17.0.0",
+        "stylelint-config-standard": "^40.0.0",
+        "stylelint-order": "^7.0.1"
     },
     "devDependencies": {
-        "@aptuitiv/eslint-config-aptuitiv": "^1.1.0",
-        "eslint": "^9.27.0",
+        "@aptuitiv/eslint-config-aptuitiv": "^1.2.0",
+        "eslint": "^9.39.2",
         "watch-eslint": "^1.1.0"
     }
 }
