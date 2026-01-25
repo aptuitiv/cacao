@@ -21,7 +21,7 @@ export const createModuleVariables = (module, sizes) => new Promise((resolve) =>
     let fileContents = '/* =========================================================================== *\n';
     fileContents += `  Variables for the ${module} sizes\n`;
     fileContents += ' * =========================================================================== */\n\n';
-    // eslint-disable-next-line @stylistic/max-len -- This is a long comment that explains the purpose of the :where() selector
+     
     fileContents += '/* :where() is used to give the variables no specificity so that they are easily overriden. https://developer.mozilla.org/en-US/docs/Web/CSS/:where */';
     fileContents += '\n\n';
     fileContents += ':where(html) {';
@@ -41,8 +41,14 @@ export const createModuleVariables = (module, sizes) => new Promise((resolve) =>
 /**
  * Build the module side file content
  *
+ * sideObject:
+ * - class: The class name to use for the file
+ * - comment: The comment to use for the file
+ * - property: The property to use for the file
+ * - additionalSelector: An optional additional selector to use for the file. If this is set, you will need to include a space if you want to use it.
+ *
  * @param {string} variable The variable to use for the values
- * @param {object} sideObject The side object containing the class, comment, and property
+ * @param {object} sideObject The side object containing the class, comment, and property, and optional additional selector
  * @param {number} startSize The start size to build the file for. Defaults to 1
  * @param {number} endSize The end size to build the file for. Defaults to 15
  * @returns {string}
@@ -54,7 +60,11 @@ export const buildModuleSideFileContent = (variable, sideObject, startSize = 0, 
 
     for (let i = startSize; i <= endSize; i += 1) {
         fileContents += '\n\n';
-        fileContents += `.${sideObject.class}-${i} {\n`;
+        fileContents += `.${sideObject.class}-${i}`;
+        if (sideObject.additionalSelector) {
+            fileContents += `${sideObject.additionalSelector}`;
+        }
+        fileContents += ` {\n`;
         const { property } = sideObject;
         if (Array.isArray(property)) {
             const declarations = property.map((prop) => `    ${prop}: var(--${variable}-${i});\n`);
