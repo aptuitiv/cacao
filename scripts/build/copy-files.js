@@ -6,7 +6,7 @@ import chalk from 'chalk';
 import fancyLog from 'fancy-log';
 import fs from 'fs-extra';
 import logSymbols from 'log-symbols';
-import { basename } from 'path';
+import path from 'path';
 
 import { distDirectory, srcDirectory } from './config.js';
 
@@ -16,13 +16,15 @@ import { distDirectory, srcDirectory } from './config.js';
  * @param {string} directory The directory path to copy files from
  */
 const copyFilesFromDirectory = (directory) => {
-    const folderName = basename(directory);
     fs.readdirSync(directory).forEach((file) => {
-        const srcPath = `${directory}/${file}`;
+        const srcPath = path.join(directory, file);
         const stats = fs.statSync(srcPath);
         if (stats.isFile()) {
-            const destPath = `${distDirectory}/${folderName}/${file}`;
+            const fileFolderPath = directory.replace(srcDirectory, '');
+            const destPath = path.join(distDirectory, fileFolderPath, file);
             fs.copySync(srcPath, destPath);
+        } else if (stats.isDirectory()) {
+            copyFilesFromDirectory(srcPath);
         }
     });
 };
@@ -39,10 +41,10 @@ const copyFiles = () => {
 
         // Read the files from the src directory
         fs.readdirSync(srcDirectory).forEach((file) => {
-            const srcPath = `${srcDirectory}/${file}`;
+            const srcPath = path.join(srcDirectory, file);
             const stats = fs.statSync(srcPath);
             if (stats.isFile()) {
-                const destPath = `${distDirectory}/${file}`;
+                const destPath = path.join(distDirectory, file);
                 fs.copySync(srcPath, destPath);
             } else if (stats.isDirectory()) {
                 copyFilesFromDirectory(srcPath);

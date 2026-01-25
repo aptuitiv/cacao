@@ -8,6 +8,7 @@ import chalk from 'chalk';
 import fs from 'fs-extra';
 import fancyLog from 'fancy-log';
 import logSymbols from 'log-symbols';
+import path from 'path';
 
 import { variableSizes } from './config.js';
 import { buildModuleSideFileContent, createModuleVariables } from './helpers.js';
@@ -29,8 +30,11 @@ const buildMarginsFiles = () => new Promise((resolve) => {
     };
     Object.keys(sides).forEach((side) => {
         const fileContents = buildModuleSideFileContent('margin', sides[side]);
-        fs.writeFileSync(`src/margin/${side}.css`, fileContents);
-        fancyLog(chalk.green(`${logSymbols.success} Wrote margin file `, chalk.cyan(`src/margin/${side}.css`)));
+        const marginPath = path.join('src', 'margin');
+        const filePath = path.join(marginPath, `${side}.css`);
+        fs.ensureDirSync(marginPath);
+        fs.writeFileSync(filePath, fileContents);
+        fancyLog(chalk.green(`${logSymbols.success} Wrote margin file `, chalk.cyan(filePath)));
     });
 
     fancyLog(chalk.green(`${logSymbols.success} Done creating margin files `));

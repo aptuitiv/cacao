@@ -78,6 +78,55 @@ const sidebars: SidebarsConfig = {
                     ],
                 },
                 {
+                    type: 'category',
+                    label: 'Child element spacing',
+                    link: {
+                        type: 'generated-index',
+                    },
+                    items: [
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/index',
+                            label: 'Overview',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/first-child-margin',
+                            label: 'First child margin',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/first-child-padding',
+                            label: 'First child padding',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/first-child-spacing',
+                            label: 'First child spacing',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/last-child-margin',
+                            label: 'Last child margin',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/last-child-padding',
+                            label: 'Last child padding',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/last-child-spacing',
+                            label: 'Last child spacing',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/variables',
+                            label: 'Variables',
+                        }
+                    ],
+                },
+                {
                     type: 'doc',
                     id: 'styles/clearfix',
                     label: 'Clearfix',
@@ -590,11 +639,6 @@ const sidebars: SidebarsConfig = {
                     ],
                 },
                 {
-                    type: 'doc',
-                    id: 'styles/spacing',
-                    label: 'Spacing',
-                },
-                {
                     type: 'category',
                     label: 'Typography',
                     link: {
@@ -735,6 +779,11 @@ const sidebars: SidebarsConfig = {
                     type: 'doc',
                     id: 'migration/to-v7',
                     label: 'To version 7',
+                },
+                {
+                    type: 'doc',
+                    id: 'migration/to-v8',
+                    label: 'To version 8',
                 },
             ],
         },

@@ -1,0 +1,68 @@
+/* =========================================================================== *
+   First child start margin utilities
+ * =========================================================================== */
+
+
+.first-child-ms-0 > *:first-child {
+    margin-left: var(--child-spacing-0);
+}
+
+.first-child-ms-1 > *:first-child {
+    margin-left: var(--child-spacing-1);
+}
+
+.first-child-ms-2 > *:first-child {
+    margin-left: var(--child-spacing-2);
+}
+
+.first-child-ms-3 > *:first-child {
+    margin-left: var(--child-spacing-3);
+}
+
+.first-child-ms-4 > *:first-child {
+    margin-left: var(--child-spacing-4);
+}
+
+.first-child-ms-5 > *:first-child {
+    margin-left: var(--child-spacing-5);
+}
+
+.first-child-ms-6 > *:first-child {
+    margin-left: var(--child-spacing-6);
+}
+
+.first-child-ms-7 > *:first-child {
+    margin-left: var(--child-spacing-7);
+}
+
+.first-child-ms-8 > *:first-child {
+    margin-left: var(--child-spacing-8);
+}
+
+.first-child-ms-9 > *:first-child {
+    margin-left: var(--child-spacing-9);
+}
+
+.first-child-ms-10 > *:first-child {
+    margin-left: var(--child-spacing-10);
+}
+
+.first-child-ms-11 > *:first-child {
+    margin-left: var(--child-spacing-11);
+}
+
+.first-child-ms-12 > *:first-child {
+    margin-left: var(--child-spacing-12);
+}
+
+.first-child-ms-13 > *:first-child {
+    margin-left: var(--child-spacing-13);
+}
+
+.first-child-ms-14 > *:first-child {
+    margin-left: var(--child-spacing-14);
+}
+
+.first-child-ms-15 > *:first-child {
+    margin-left: var(--child-spacing-15);
+}

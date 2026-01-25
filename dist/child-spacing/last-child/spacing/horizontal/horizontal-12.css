@@ -1,0 +1,11 @@
+/* =========================================================================== *
+   Last child horizontal margin and padding utilities
+ * =========================================================================== */
+
+
+.last-child-sx-12 > *:last-child {
+    margin-left: var(--child-spacing-12);
+    margin-right: var(--child-spacing-12);
+    padding-left: var(--child-spacing-12);
+    padding-right: var(--child-spacing-12);
+}

@@ -3,9 +3,24 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+
+## [Unreleased]
+
+## [8.0.0] - 2026-01-25
+
+### Changed
+
+- Moved the `spacing` classes to `child-spacing` folder. This makes it more clear that the styles are for styling the spacing (margin and/or padding) for child elements.
+- Updated the build process to handle sub directories.
+
+### Added
+
+- Added `child-spacing` classes for all sides of padding and margin. This is similar to the styles for the `margin` and `padding` classes.
+- Added individual files for the different sizes of the spacing classes. This is to allow the imports to be more granular.
+- Added script for migrating to version 8.
 
 ## [7.5.0] - 2026-01-16
 

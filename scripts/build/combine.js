@@ -17,8 +17,10 @@ import { buildModuleCombinationFile } from './helpers.js';
  */
 const combineFiles = () => new Promise((resolve) => {
     Object.keys(combinationFiles).forEach((module) => {
-        const combineConfig = combinationFiles[module];
-        buildModuleCombinationFile(module, module, { commentModule: combineConfig.name ?? module });
+        const config = combinationFiles[module];
+        const moduleName = typeof config.name !== 'undefined' ? config.name : module;
+        const directory = config.directory ?? module;
+        buildModuleCombinationFile(module, directory, moduleName, config);
         // const files = [];
         // const skip = ['variables.css'];
         // const dirPath = `${rootDirectory}src/${module}`;

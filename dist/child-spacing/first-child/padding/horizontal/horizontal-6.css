@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Horizontal padding utilities
+ * =========================================================================== */
+
+
+.first-child-px-6 > *:first-child {
+    padding-left: var(--child-spacing-6);
+    padding-right: var(--child-spacing-6);
+}

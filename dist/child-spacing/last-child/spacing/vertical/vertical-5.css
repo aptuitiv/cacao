@@ -1,0 +1,11 @@
+/* =========================================================================== *
+   Last child vertical margin and padding utilities
+ * =========================================================================== */
+
+
+.last-child-sy-5 > *:last-child {
+    margin-top: var(--child-spacing-5);
+    margin-bottom: var(--child-spacing-5);
+    padding-top: var(--child-spacing-5);
+    padding-bottom: var(--child-spacing-5);
+}

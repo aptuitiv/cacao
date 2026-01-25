@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   First child bottom margin and padding utilities
+ * =========================================================================== */
+
+
+.first-child-sb-1 > *:first-child {
+    margin-bottom: var(--child-spacing-1);
+    padding-bottom: var(--child-spacing-1);
+}

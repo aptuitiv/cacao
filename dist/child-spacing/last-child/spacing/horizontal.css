@@ -1,0 +1,116 @@
+/* =========================================================================== *
+   Last child horizontal margin and padding utilities
+ * =========================================================================== */
+
+
+.last-child-sx-0 > *:last-child {
+    margin-left: var(--child-spacing-0);
+    margin-right: var(--child-spacing-0);
+    padding-left: var(--child-spacing-0);
+    padding-right: var(--child-spacing-0);
+}
+
+.last-child-sx-1 > *:last-child {
+    margin-left: var(--child-spacing-1);
+    margin-right: var(--child-spacing-1);
+    padding-left: var(--child-spacing-1);
+    padding-right: var(--child-spacing-1);
+}
+
+.last-child-sx-2 > *:last-child {
+    margin-left: var(--child-spacing-2);
+    margin-right: var(--child-spacing-2);
+    padding-left: var(--child-spacing-2);
+    padding-right: var(--child-spacing-2);
+}
+
+.last-child-sx-3 > *:last-child {
+    margin-left: var(--child-spacing-3);
+    margin-right: var(--child-spacing-3);
+    padding-left: var(--child-spacing-3);
+    padding-right: var(--child-spacing-3);
+}
+
+.last-child-sx-4 > *:last-child {
+    margin-left: var(--child-spacing-4);
+    margin-right: var(--child-spacing-4);
+    padding-left: var(--child-spacing-4);
+    padding-right: var(--child-spacing-4);
+}
+
+.last-child-sx-5 > *:last-child {
+    margin-left: var(--child-spacing-5);
+    margin-right: var(--child-spacing-5);
+    padding-left: var(--child-spacing-5);
+    padding-right: var(--child-spacing-5);
+}
+
+.last-child-sx-6 > *:last-child {
+    margin-left: var(--child-spacing-6);
+    margin-right: var(--child-spacing-6);
+    padding-left: var(--child-spacing-6);
+    padding-right: var(--child-spacing-6);
+}
+
+.last-child-sx-7 > *:last-child {
+    margin-left: var(--child-spacing-7);
+    margin-right: var(--child-spacing-7);
+    padding-left: var(--child-spacing-7);
+    padding-right: var(--child-spacing-7);
+}
+
+.last-child-sx-8 > *:last-child {
+    margin-left: var(--child-spacing-8);
+    margin-right: var(--child-spacing-8);
+    padding-left: var(--child-spacing-8);
+    padding-right: var(--child-spacing-8);
+}
+
+.last-child-sx-9 > *:last-child {
+    margin-left: var(--child-spacing-9);
+    margin-right: var(--child-spacing-9);
+    padding-left: var(--child-spacing-9);
+    padding-right: var(--child-spacing-9);
+}
+
+.last-child-sx-10 > *:last-child {
+    margin-left: var(--child-spacing-10);
+    margin-right: var(--child-spacing-10);
+    padding-left: var(--child-spacing-10);
+    padding-right: var(--child-spacing-10);
+}
+
+.last-child-sx-11 > *:last-child {
+    margin-left: var(--child-spacing-11);
+    margin-right: var(--child-spacing-11);
+    padding-left: var(--child-spacing-11);
+    padding-right: var(--child-spacing-11);
+}
+
+.last-child-sx-12 > *:last-child {
+    margin-left: var(--child-spacing-12);
+    margin-right: var(--child-spacing-12);
+    padding-left: var(--child-spacing-12);
+    padding-right: var(--child-spacing-12);
+}
+
+.last-child-sx-13 > *:last-child {
+    margin-left: var(--child-spacing-13);
+    margin-right: var(--child-spacing-13);
+    padding-left: var(--child-spacing-13);
+    padding-right: var(--child-spacing-13);
+}
+
+.last-child-sx-14 > *:last-child {
+    margin-left: var(--child-spacing-14);
+    margin-right: var(--child-spacing-14);
+    padding-left: var(--child-spacing-14);
+    padding-right: var(--child-spacing-14);
+}
+
+.last-child-sx-15 > *:last-child {
+    margin-left: var(--child-spacing-15);
+    margin-right: var(--child-spacing-15);
+    padding-left: var(--child-spacing-15);
+    padding-right: var(--child-spacing-15);
+}

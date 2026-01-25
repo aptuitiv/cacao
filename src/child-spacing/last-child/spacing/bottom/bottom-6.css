@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Last child bottom margin and padding utilities
+ * =========================================================================== */
+
+
+.last-child-sb-6 > *:last-child {
+    margin-bottom: var(--child-spacing-6);
+    padding-bottom: var(--child-spacing-6);
+}

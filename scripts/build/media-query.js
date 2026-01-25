@@ -6,7 +6,7 @@ import chalk from 'chalk';
 import fancyLog from 'fancy-log';
 import fs from 'fs-extra';
 import logSymbols from 'log-symbols';
-import { basename } from 'path';
+import path from 'path';
 import postcss from 'postcss';
 import * as prettier from 'prettier';
 import stylelint from 'stylelint';
@@ -70,12 +70,13 @@ const wrapDirectory = (dir) => new Promise((resolve) => {
     });
 
     // Add the combined files
-    const folder = basename(dirPath);
+    const folder = path.basename(dirPath);
     if (typeof combinationFiles[folder] !== 'undefined') {
         const combineConfig = combinationFiles[folder];
         files.sort();
         mediaSizes.forEach((size) => {
-            buildModuleCombinationFile(folder, `${folder}/${size}`, { files, size, commentModule: combineConfig.name ?? folder });
+            const moduleName = combineConfig.name ?? folder;
+            buildModuleCombinationFile(folder, `${folder}/${size}`, moduleName, { files, size });
         });
     }
 });

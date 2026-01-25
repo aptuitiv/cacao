@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Horizontal margin utilities
+ * =========================================================================== */
+
+
+.first-child-mx-7 > *:first-child {
+    margin-left: var(--child-spacing-7);
+    margin-right: var(--child-spacing-7);
+}
