@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Changed
 
 - Moved the `spacing` classes to `child-spacing` folder. This makes it more clear that the styles are for styling the spacing (margin and/or padding) for child elements.
+- Updated the build process to handle sub directories.
 
 ### Added
 
