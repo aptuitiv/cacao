@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Added `child-spacing` classes for all sides of padding and margin. This is similar to the styles for the `margin` and `padding` classes.
 - Added individual files for the different sizes of the spacing classes. This is to allow the imports to be more granular.
+- Added script for migrating to version 8.
 
 ## [7.5.0] - 2026-01-16
 
