@@ -1,0 +1,24 @@
+/* =========================================================================== *
+  Variables for the child-spacing sizes
+ * =========================================================================== */
+
+/* :where() is used to give the variables no specificity so that they are easily overriden. https://developer.mozilla.org/en-US/docs/Web/CSS/:where */
+
+:where(html) {
+    --child-spacing-0: 0px;
+    --child-spacing-1: 10px;
+    --child-spacing-2: 20px;
+    --child-spacing-3: 30px;
+    --child-spacing-4: 40px;
+    --child-spacing-5: 50px;
+    --child-spacing-6: 60px;
+    --child-spacing-7: 70px;
+    --child-spacing-8: 80px;
+    --child-spacing-9: 90px;
+    --child-spacing-10: 100px;
+    --child-spacing-11: 120px;
+    --child-spacing-12: 160px;
+    --child-spacing-13: 240px;
+    --child-spacing-14: 320px;
+    --child-spacing-15: 480px;
+}

@@ -8,6 +8,7 @@ import chalk from 'chalk';
 import fs from 'fs-extra';
 import fancyLog from 'fancy-log';
 import logSymbols from 'log-symbols';
+import path from 'path';
 
 import { variableSizes } from './config.js';
 import { buildModuleSideFileContent, createModuleVariables } from './helpers.js';
@@ -29,8 +30,11 @@ const buildPaddingsFiles = () => new Promise((resolve) => {
     };
     Object.keys(sides).forEach((side) => {
         const fileContents = buildModuleSideFileContent('padding', sides[side]);
-        fs.writeFileSync(`src/padding/${side}.css`, fileContents);
-        fancyLog(chalk.green(`${logSymbols.success} Wrote padding file `, chalk.cyan(`src/padding/${side}.css`)));
+        const paddingPath = path.join('src', 'padding');
+        const filePath = path.join(paddingPath, `${side}.css`);
+        fs.ensureDirSync(paddingPath);
+        fs.writeFileSync(filePath, fileContents);
+        fancyLog(chalk.green(`${logSymbols.success} Wrote padding file `, chalk.cyan(filePath)));
     });
 
     fancyLog(chalk.green(`${logSymbols.success} Done creating padding files `));

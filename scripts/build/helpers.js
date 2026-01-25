@@ -6,6 +6,7 @@ import chalk from 'chalk';
 import fs from 'fs-extra';
 import fancyLog from 'fancy-log';
 import logSymbols from 'log-symbols';
+import path from 'path';
 
 import { distDirectory, rootDirectory } from './config.js';
 
@@ -20,7 +21,7 @@ export const createModuleVariables = (module, sizes) => new Promise((resolve) =>
     let fileContents = '/* =========================================================================== *\n';
     fileContents += `  Variables for the ${module} sizes\n`;
     fileContents += ' * =========================================================================== */\n\n';
-    // eslint-disable-next-line @stylistic/max-len -- This is a long comment that explains the purpose of the :where() selector
+     
     fileContents += '/* :where() is used to give the variables no specificity so that they are easily overriden. https://developer.mozilla.org/en-US/docs/Web/CSS/:where */';
     fileContents += '\n\n';
     fileContents += ':where(html) {';
@@ -29,32 +30,47 @@ export const createModuleVariables = (module, sizes) => new Promise((resolve) =>
         fileContents += `    --${module}-${i}: ${sizes[i]}px;`;
     });
     fileContents += '\n}';
-    fs.writeFileSync(`src/${module}/variables.css`, fileContents);
-    fancyLog(chalk.green(`${logSymbols.success} Wrote ${module} variables file `, chalk.cyan(`src/${module}/variables.css`)));
+    const modulePath = path.join('src', module);
+    const filePath = path.join(modulePath, 'variables.css');
+    fs.ensureDirSync(modulePath);
+    fs.writeFileSync(filePath, fileContents);
+    fancyLog(chalk.green(`${logSymbols.success} Wrote ${module} variables file `, chalk.cyan(filePath)));
     resolve();
 });
 
 /**
  * Build the module side file content
  *
- * @param {string} module The module to build the side styles for
- * @param {object} sideObject The side object containing the class, comment, and property
+ * sideObject:
+ * - class: The class name to use for the file
+ * - comment: The comment to use for the file
+ * - property: The property to use for the file
+ * - additionalSelector: An optional additional selector to use for the file. If this is set, you will need to include a space if you want to use it.
+ *
+ * @param {string} variable The variable to use for the values
+ * @param {object} sideObject The side object containing the class, comment, and property, and optional additional selector
+ * @param {number} startSize The start size to build the file for. Defaults to 1
+ * @param {number} endSize The end size to build the file for. Defaults to 15
  * @returns {string}
  */
-export const buildModuleSideFileContent = (module, sideObject) => {
+export const buildModuleSideFileContent = (variable, sideObject, startSize = 0, endSize = 15) => {
     let fileContents = '/* =========================================================================== *\n';
     fileContents += `   ${sideObject.comment}\n`;
     fileContents += ' * =========================================================================== */\n';
 
-    for (let i = 0; i <= 15; i += 1) {
+    for (let i = startSize; i <= endSize; i += 1) {
         fileContents += '\n\n';
-        fileContents += `.${sideObject.class}-${i} {\n`;
+        fileContents += `.${sideObject.class}-${i}`;
+        if (sideObject.additionalSelector) {
+            fileContents += `${sideObject.additionalSelector}`;
+        }
+        fileContents += ` {\n`;
         const { property } = sideObject;
         if (Array.isArray(property)) {
-            const declarations = property.map((prop) => `    ${prop}: var(--${module}-${i});\n`);
+            const declarations = property.map((prop) => `    ${prop}: var(--${variable}-${i});\n`);
             fileContents += declarations.join('');
         } else {
-            fileContents += `    ${property}: var(--${module}-${i});\n`;
+            fileContents += `    ${property}: var(--${variable}-${i});\n`;
         }
         fileContents += '}';
     }
@@ -65,22 +81,25 @@ export const buildModuleSideFileContent = (module, sideObject) => {
 /**
  * Build the file that imports the other module files
  *
- * @param {string} module The module to build the combination file for
+ * @param {string} src The path within the src directory to read the files from
  * @param {string} dest The destination directory to write the file to
+ * @param {string} name The module name to use in the comment. Defaults to the module name.
  * @param {object} config The configuration for the combination file. You must set either "directory" or "files".
- *      - commentModule (string): The module name to use in the comment. Defaults to the module name.
- *      - directory (string): The directory to read the files from if files is not provided
+ *      - directory (string): The directory to read the files from. If not provided, it will read the files from a folder with the same name as the module.
  *      - files (array): The files to import. If not provided, it will read the files from the directory
  *      - size (string): The media query size if building the media query files.
  */
-export const buildModuleCombinationFile = (module, dest, config = {}) => {
+export const buildModuleCombinationFile = (src, dest, name, config = {}) => {
     let files = [];
     const skip = ['variables.css'];
     if (!config.files) {
         // Files were not set. Read from the source module folder to get the files
-        const directory = `${rootDirectory}/src/${module}`;
+        let directory = path.join(rootDirectory, 'src', src);
+        if (typeof config.directory !== 'undefined') {
+            directory = path.join(rootDirectory, 'src', config.directory);
+        }
         fs.readdirSync(directory).forEach((file) => {
-            const srcPath = `${directory}/${file}`;
+            const srcPath = path.join(directory, file);
             const stats = fs.statSync(srcPath);
             if (stats.isFile() && !skip.includes(file)) {
                 files.push(file);
@@ -92,10 +111,10 @@ export const buildModuleCombinationFile = (module, dest, config = {}) => {
 
     files.sort();
 
-    const commentModule = config.commentModule ?? module;
+    const moduleName = `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
 
     let fileContents = '/* =========================================================================== *\n';
-    fileContents += `   ${commentModule.charAt(0).toUpperCase() + commentModule.slice(1)} utilities`;
+    fileContents += `   ${moduleName} utilities`;
     if (config.size) {
         fileContents += ` - ${config.size}`;
     }
@@ -103,11 +122,14 @@ export const buildModuleCombinationFile = (module, dest, config = {}) => {
     if (config.size) {
         fileContents += `${config.size}`;
     }
-    fileContents += ` ${module} utility files\n`;
+    fileContents += ` ${moduleName.toLowerCase()} utility files\n`;
     fileContents += ' * =========================================================================== */\n\n';
     files.forEach((file) => {
         fileContents += `@import './${file}';\n`;
     });
-    fs.writeFileSync(`${distDirectory}/${dest}/combined-import.css`, fileContents);
-    fancyLog(chalk.green(`${logSymbols.success} Wrote ${module} combined import file `, chalk.cyan(`dest/${dest}/combined-import.css`)));
+    const destPath = path.join(distDirectory, dest);
+    const filePath = path.join(destPath, 'combined-import.css');
+    fs.ensureDirSync(destPath);
+    fs.writeFileSync(filePath, fileContents);
+    fancyLog(chalk.green(`${logSymbols.success} Wrote ${moduleName} combined import file `, chalk.cyan(filePath)));
 };

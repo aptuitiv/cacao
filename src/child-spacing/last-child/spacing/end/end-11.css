@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Last child end margin and padding utilities
+ * =========================================================================== */
+
+
+.last-child-se-11 > *:last-child {
+    margin-right: var(--child-spacing-11);
+    padding-right: var(--child-spacing-11);
+}

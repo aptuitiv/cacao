@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Horizontal margin utilities
+ * =========================================================================== */
+
+
+.last-child-mx-8 > *:last-child {
+    margin-left: var(--child-spacing-8);
+    margin-right: var(--child-spacing-8);
+}

@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   First child vertical padding utilities
+ * =========================================================================== */
+
+
+.first-child-py-12 > *:first-child {
+    padding-top: var(--child-spacing-12);
+    padding-bottom: var(--child-spacing-12);
+}

@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Last child start margin and padding utilities
+ * =========================================================================== */
+
+
+.last-child-ss-5 > *:last-child {
+    margin-left: var(--child-spacing-5);
+    padding-left: var(--child-spacing-5);
+}

@@ -6,6 +6,7 @@ import { Command } from 'commander';
 
 import combineFiles from './combine.js';
 import copyFiles from './copy-files.js';
+import buildChildSpacing from './child-spacing.js';
 import buildGutters from './gutter.js';
 import buildImports from './imports.js';
 import buildMargins from './margin.js';
@@ -25,6 +26,7 @@ program
     .command('all')
     .description('Build all the CSS files to the dist directory')
     .action(async () => {
+        await buildChildSpacing();
         await buildGutters();
         await buildMargins();
         await buildPaddings();
@@ -32,9 +34,45 @@ program
         await combineFiles();
         await wrapInMediaQueries();
         // Set a delay because there is sometimes a brief delay in the file system getting written to
-        setTimeout(() => {
-            buildImports();
+        setTimeout(async () => {
+            await buildImports();
         }, 500);
+    });
+
+/**
+ * Combine the files for the modules
+ *
+ * node scripts/build combine-files
+ */
+program
+    .command('combine-files')
+    .description('Combine the files for the modules')
+    .action(async () => {
+        combineFiles();
+    });
+
+/**
+ * Copy the files from the src directory to the dist directory
+ *
+ * node scripts/build copy-files
+ */
+program
+    .command('copy-files')
+    .description('Copy the files from the src directory to the dist directory')
+    .action(async () => {
+        copyFiles();
+    });
+
+/**
+ * Build the src child spacing files
+ *
+ * node scripts/build child-spacing
+ */
+program
+    .command('child-spacing')
+    .description('Build the source child spacing files')
+    .action(async () => {
+        buildChildSpacing();
     });
 
 /**
@@ -58,7 +96,7 @@ program
     .command('imports')
     .description('Build the import files')
     .action(async () => {
-        buildImports();
+        await buildImports();
     });
 
 /**

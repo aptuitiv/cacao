@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   First child end margin and padding utilities
+ * =========================================================================== */
+
+
+.first-child-se-8 > *:first-child {
+    margin-right: var(--child-spacing-8);
+    padding-right: var(--child-spacing-8);
+}

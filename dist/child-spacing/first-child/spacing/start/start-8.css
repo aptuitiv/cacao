@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   First child start margin and padding utilities
+ * =========================================================================== */
+
+
+.first-child-ss-8 > *:first-child {
+    margin-left: var(--child-spacing-8);
+    padding-left: var(--child-spacing-8);
+}

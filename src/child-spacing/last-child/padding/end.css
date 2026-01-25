@@ -1,0 +1,68 @@
+/* =========================================================================== *
+   Last child end padding utilities
+ * =========================================================================== */
+
+
+.last-child-pe-0 > *:last-child {
+    padding-right: var(--child-spacing-0);
+}
+
+.last-child-pe-1 > *:last-child {
+    padding-right: var(--child-spacing-1);
+}
+
+.last-child-pe-2 > *:last-child {
+    padding-right: var(--child-spacing-2);
+}
+
+.last-child-pe-3 > *:last-child {
+    padding-right: var(--child-spacing-3);
+}
+
+.last-child-pe-4 > *:last-child {
+    padding-right: var(--child-spacing-4);
+}
+
+.last-child-pe-5 > *:last-child {
+    padding-right: var(--child-spacing-5);
+}
+
+.last-child-pe-6 > *:last-child {
+    padding-right: var(--child-spacing-6);
+}
+
+.last-child-pe-7 > *:last-child {
+    padding-right: var(--child-spacing-7);
+}
+
+.last-child-pe-8 > *:last-child {
+    padding-right: var(--child-spacing-8);
+}
+
+.last-child-pe-9 > *:last-child {
+    padding-right: var(--child-spacing-9);
+}
+
+.last-child-pe-10 > *:last-child {
+    padding-right: var(--child-spacing-10);
+}
+
+.last-child-pe-11 > *:last-child {
+    padding-right: var(--child-spacing-11);
+}
+
+.last-child-pe-12 > *:last-child {
+    padding-right: var(--child-spacing-12);
+}
+
+.last-child-pe-13 > *:last-child {
+    padding-right: var(--child-spacing-13);
+}
+
+.last-child-pe-14 > *:last-child {
+    padding-right: var(--child-spacing-14);
+}
+
+.last-child-pe-15 > *:last-child {
+    padding-right: var(--child-spacing-15);
+}

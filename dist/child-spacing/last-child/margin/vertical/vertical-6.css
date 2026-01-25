@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Last child vertical margin utilities
+ * =========================================================================== */
+
+
+.last-child-my-6 > *:last-child {
+    margin-top: var(--child-spacing-6);
+    margin-bottom: var(--child-spacing-6);
+}

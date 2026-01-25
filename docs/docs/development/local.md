@@ -12,7 +12,7 @@ npm link
 
 In the project's folder that you want to use this library, use `npm link cacao-css` to install the package locally.
 
-If you need to update the rets-client library do the following.
+If you need to update the library do the following.
 
 ## Unlink the project
 
@@ -35,3 +35,9 @@ Then, in this package:
 ```bash
 npm unlink
 ```
+
+## Resources
+
+- [NPM Linking and Unlinking](https://dev.to/erinbush/npm-linking-and-unlinking-2h1g).
+- [Understanding npm-link](https://medium.com/dailyjs/how-to-use-npm-link-7375b6219557).
+- [How to Test a Node (npm) Package Locally](https://javascript.plainenglish.io/how-to-test-a-node-package-locally-8dde33e642df).
