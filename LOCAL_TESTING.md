@@ -1,7 +1,6 @@
----
----
+# Testing while developing local
 
-# Testing locally with another project
+## Testing locally with another project
 
 In the `cacao` library path use `npm link` to add the project to the local npm registry.
 
