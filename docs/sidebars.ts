@@ -780,6 +780,11 @@ const sidebars: SidebarsConfig = {
                     id: 'migration/to-v7',
                     label: 'To version 7',
                 },
+                {
+                    type: 'doc',
+                    id: 'migration/to-v8',
+                    label: 'To version 8',
+                },
             ],
         },
         {

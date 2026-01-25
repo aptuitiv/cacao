@@ -14,12 +14,14 @@
     },
     "bin": {
         "cacao-convert-v3": "./scripts/v3/index.js",
-        "cacao-convert-v6": "./scripts/v6/index.js"
+        "cacao-convert-v6": "./scripts/v6/index.js",
+        "cacao-convert-v8": "./scripts/v8/index.js"
     },
     "files": [
         "dist",
         "scripts/v3",
-        "scripts/v6"
+        "scripts/v6",
+        "scripts/v8"
     ],
     "type": "module",
     "scripts": {
