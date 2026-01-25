@@ -7,9 +7,10 @@ import fancyLog from 'fancy-log';
 import fs from 'fs-extra';
 import logSymbols from 'log-symbols';
 import { basename } from 'path';
+import { glob } from 'node:fs/promises';
 
 import {
-    combinationFiles, distDirectory, importsModuleMap, mediaSizes,
+    combinationFiles, distDirectory, importsModuleMap, mediaSizes
 } from './config.js';
 
 // The header for the imports file
@@ -56,9 +57,9 @@ const coreImports = `
  * @param {string} module The module name
  * @param {object} moduleObject The module object data
  * @param {boolean} isSubDirectory If the directory is a subdirectory
- * @returns {string}
+ * @returns {Promise<string>}
  */
-const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory = false) => {
+const buildDirectoryImports = async (directory, module, moduleObject, isSubDirectory = false) => {
     const moduleName = moduleObject.name;
     const useVariables = moduleObject.variables ?? false;
 
@@ -80,9 +81,9 @@ const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory =
             }
         } else if (stats.isDirectory()) {
             const fname = basename(srcPath);
-            if (mediaSizes.includes(fname)) {
-                directories[fname] = srcPath;
-            }
+            // if (mediaSizes.includes(fname)) {
+            directories[fname] = srcPath;
+            // }
         }
     });
 
@@ -90,14 +91,38 @@ const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory =
         fileContents += `\n\n/* ${moduleName} variables. This must be imported, or you must override the variables in your own CSS. */`;
         fileContents += `\n@import 'cacao-css/dist/${directoryPath}/variables.css';`;
     }
+
+    let doCombinationFiles = false;
+    let combinationFileConfig = {};
     if (combinationFiles[module]) {
+        doCombinationFiles = true;
+        combinationFileConfig = combinationFiles[module];
+    }
+    const skipDirectories = [];
+    if (combinationFileConfig.skip) {
+        // Iterate through matches and filter for directories
+        for await (const entry of glob(combinationFileConfig.skip.map((path) => `${distDirectory}/${path}`), { withFileTypes: true })) {
+            if (entry.isDirectory()) {
+                skipDirectories.push(`${entry.parentPath}/${entry.name}`);
+            }
+        }
+        if (skipDirectories.includes(directory)) {
+            // This directory is in the skip list. Don't include the combined-import.css file.
+            doCombinationFiles = false;
+        }
+    }
+
+    if (doCombinationFiles) {
+        // Build the combined-import.css file for the directory
         if (isSubDirectory) {
             fileContents += `\n\n/* Include all ${moduleName} ${basename(directoryPath)} files */`;
         } else {
             fileContents += `\n/* Include all ${moduleName} files */`;
         }
-        fileContents += `\n@import 'cacao-css/dist/${directoryPath}/combined-import.css';\n`;
-        fileContents += '/* or include individual files */';
+        fileContents += `\n@import 'cacao-css/dist/${directoryPath}/combined-import.css';`;
+        if (files.length > 0) {
+            fileContents += `\n/* or include individual files */`;
+        }
     }
 
     // Make sure that the files are in alphabetical order
@@ -109,7 +134,8 @@ const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory =
     });
 
     // Add the directories to the file contents in the order that the media sizes are in
-    mediaSizes.forEach((size, index) => {
+    for (let index = 0; index < mediaSizes.length; index++) {
+        const size = mediaSizes[index];
         if (directories[size]) {
             const dir = directories[size];
             if (index === 0) {
@@ -118,9 +144,40 @@ const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory =
             const fname = basename(dir);
             // Write the comment for the media query size
             fileContents += `\n/* ${moduleName} (${fname}) */`;
-            fileContents += buildDirectoryImports(dir, module, moduleObject, true);
+            // Keep using the original module name for the subdirectory imports
+            fileContents += await buildDirectoryImports(dir, module, moduleObject, true);
+            delete directories[size];
         }
-    });
+    }
+
+    if (Object.keys(directories).length > 0) {
+        const dirKeys = Object.keys(directories);
+        for (let index = 0; index < dirKeys.length; index++) {
+            const dirKey = dirKeys[index];
+            const dir = directories[dirKey];
+            if (index === 0) {
+                fileContents += '\n';
+            }
+            const fname = basename(dir);
+            // Write the comment for the media query size
+            fileContents += `\n/* ${moduleName} (${fname}) */`;
+
+            // Build the folder path for the subdirectory imports
+            if (typeof moduleObject.folderPath === 'undefined') {
+                moduleObject.folderPath = fname;
+            } else {
+                moduleObject.folderPath += `/${fname}`;
+            }
+            // Use the subdirectory name for the module name if it exists
+            if (typeof moduleObject.subDirectories[fname] !== 'undefined' && typeof moduleObject.subDirectories[fname].name !== 'undefined') {
+                moduleObject.name = moduleObject.subDirectories[fname].name;
+            }
+            // Use the original module key for the subdirectory imports.
+            // this is so that the combinationFiles config can be used to skip the directories.
+            // The combinationFiles configuration is based on the module name, not the subdirectory name.
+            fileContents += await buildDirectoryImports(dir, module, moduleObject, true);
+        }
+    }
 
     // Add an extra line if there are files in the directory
     if (fileContents.length > 0) {
@@ -130,12 +187,12 @@ const buildDirectoryImports = (directory, module, moduleObject, isSubDirectory =
         }
     }
     return fileContents;
-};
+}
 
 /**
  * Build the imports for the Cacao CSS files
  */
-const buildImports = () => {
+const buildImports = async () => {
     fancyLog(chalk.cyan('Setting up the import.css file...'));
 
     let fileContents = fileHeader;
@@ -156,7 +213,7 @@ const buildImports = () => {
     directories.sort();
 
     // Build the imports for the directories
-    directories.forEach((directory) => {
+    for (const directory of directories) {
         const folderName = basename(directory);
         const module = importsModuleMap[folderName];
         // Write the comment for the module
@@ -164,11 +221,12 @@ const buildImports = () => {
         fileContents += `\n   ${module.name}\n`;
         fileContents += ' * ------------------------------------------- */\n';
 
-        fileContents += buildDirectoryImports(directory, folderName, module);
-    });
+        fileContents += await buildDirectoryImports(directory, folderName, module);
+    }
 
     fs.writeFileSync(`${distDirectory}/imports.css`, fileContents);
     fancyLog(chalk.green(`${logSymbols.success} Done setting up the import.css file`));
 };
+
 
 export default buildImports;

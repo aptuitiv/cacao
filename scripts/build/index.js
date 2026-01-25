@@ -34,8 +34,8 @@ program
         await combineFiles();
         await wrapInMediaQueries();
         // Set a delay because there is sometimes a brief delay in the file system getting written to
-        setTimeout(() => {
-            buildImports();
+        setTimeout(async () => {
+            await buildImports();
         }, 500);
     });
 
@@ -96,7 +96,7 @@ program
     .command('imports')
     .description('Build the import files')
     .action(async () => {
-        buildImports();
+        await buildImports();
     });
 
 /**
