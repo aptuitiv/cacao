@@ -32,8 +32,8 @@
         "build-margins": "node scripts/build margins",
         "build-media-queries": "node scripts/build media",
         "build-paddings": "node scripts/build paddings",
-        "eslint": "eslint --fix .",
-        "watch": "watch-eslint  --fix --color ."
+        "eslint": "eslint --fix ./scripts",
+        "watch": "watch-eslint  --fix --color ./scripts"
     },
     "dependencies": {
         "chalk": "^5.4.1",
