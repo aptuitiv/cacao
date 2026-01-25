@@ -78,6 +78,30 @@ const sidebars: SidebarsConfig = {
                     ],
                 },
                 {
+                    type: 'category',
+                    label: 'Child element spacing',
+                    link: {
+                        type: 'generated-index',
+                    },
+                    items: [
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/index',
+                            label: 'Overview',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/first-child-margin',
+                            label: 'First child margin',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/variables',
+                            label: 'Variables',
+                        }
+                    ],
+                },
+                {
                     type: 'doc',
                     id: 'styles/clearfix',
                     label: 'Clearfix',
@@ -588,11 +612,6 @@ const sidebars: SidebarsConfig = {
                             label: 'Tenths',
                         },
                     ],
-                },
-                {
-                    type: 'doc',
-                    id: 'styles/spacing',
-                    label: 'Spacing',
                 },
                 {
                     type: 'category',
