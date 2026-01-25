@@ -96,6 +96,31 @@ const sidebars: SidebarsConfig = {
                         },
                         {
                             type: 'doc',
+                            id: 'styles/child-spacing/first-child-padding',
+                            label: 'First child padding',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/first-child-spacing',
+                            label: 'First child spacing',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/last-child-margin',
+                            label: 'Last child margin',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/last-child-padding',
+                            label: 'Last child padding',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/child-spacing/last-child-spacing',
+                            label: 'Last child spacing',
+                        },
+                        {
+                            type: 'doc',
                             id: 'styles/child-spacing/variables',
                             label: 'Variables',
                         }
