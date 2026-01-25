@@ -134,49 +134,78 @@ const buildDirectoryImports = async (directory, module, moduleObject, isSubDirec
     });
 
     // Add the directories to the file contents in the order that the media sizes are in
+    const mediaSizePromises = [];
     for (let index = 0; index < mediaSizes.length; index++) {
         const size = mediaSizes[index];
         if (directories[size]) {
             const dir = directories[size];
-            if (index === 0) {
-                fileContents += '\n';
-            }
             const fname = basename(dir);
-            // Write the comment for the media query size
-            fileContents += `\n/* ${moduleName} (${fname}) */`;
-            // Keep using the original module name for the subdirectory imports
-            fileContents += await buildDirectoryImports(dir, module, moduleObject, true);
-            delete directories[size];
+            mediaSizePromises.push({
+                index,
+                size,
+                fname,
+                promise: buildDirectoryImports(dir, module, moduleObject, true),
+            });
         }
+    }
+    // Sort by index to maintain order, then await sequentially
+    mediaSizePromises.sort((a, b) => a.index - b.index);
+    for (let i = 0; i < mediaSizePromises.length; i++) {
+        const { index, size, fname } = mediaSizePromises[i];
+        if (index === 0) {
+            fileContents += '\n';
+        }
+        // Write the comment for the media query size
+        fileContents += `\n/* ${moduleName} (${fname}) */`;
+        // Keep using the original module name for the subdirectory imports
+        // eslint-disable-next-line no-await-in-loop -- Need sequential processing to build string in order
+        fileContents += await mediaSizePromises[i].promise;
+        delete directories[size];
     }
 
     if (Object.keys(directories).length > 0) {
         const dirKeys = Object.keys(directories);
+        const directoryPromises = [];
         for (let index = 0; index < dirKeys.length; index++) {
             const dirKey = dirKeys[index];
             const dir = directories[dirKey];
-            if (index === 0) {
-                fileContents += '\n';
-            }
             const fname = basename(dir);
-            // Write the comment for the media query size
-            fileContents += `\n/* ${moduleName} (${fname}) */`;
 
             // Build the folder path for the subdirectory imports
-            const subModuleObject = moduleObject;
+            const subModuleObject = { ...moduleObject };
             if (typeof subModuleObject.folderPath === 'undefined') {
                 subModuleObject.folderPath = fname;
             } else {
                 subModuleObject.folderPath += `/${fname}`;
             }
             // Use the subdirectory name for the module name if it exists
-            if (typeof subModuleObject.subDirectories[fname] !== 'undefined' && typeof subModuleObject.subDirectories[fname].name !== 'undefined') {
+            if (
+                typeof subModuleObject.subDirectories !== 'undefined'
+                && typeof subModuleObject.subDirectories[fname] !== 'undefined'
+                && typeof subModuleObject.subDirectories[fname].name !== 'undefined'
+            ) {
                 subModuleObject.name = subModuleObject.subDirectories[fname].name;
             }
             // Use the original module key for the subdirectory imports.
             // this is so that the combinationFiles config can be used to skip the directories.
             // The combinationFiles configuration is based on the module name, not the subdirectory name.
-            fileContents += await buildDirectoryImports(dir, module, subModuleObject, true);
+            directoryPromises.push({
+                index,
+                fname,
+                promise: buildDirectoryImports(dir, module, subModuleObject, true),
+            });
+        }
+        // Sort by index to maintain order, then await sequentially
+        directoryPromises.sort((a, b) => a.index - b.index);
+        for (let i = 0; i < directoryPromises.length; i++) {
+            const { index, fname } = directoryPromises[i];
+            if (index === 0) {
+                fileContents += '\n';
+            }
+            // Write the comment for the media query size
+            fileContents += `\n/* ${moduleName} (${fname}) */`;
+            // eslint-disable-next-line no-await-in-loop -- Need sequential processing to build string in order
+            fileContents += await directoryPromises[i].promise;
         }
     }
 
@@ -214,15 +243,26 @@ const buildImports = async () => {
     directories.sort();
 
     // Build the imports for the directories
-    for (const directory of directories) {
+    const directoryPromises = directories.map((directory) => {
         const folderName = basename(directory);
         const module = importsModuleMap[folderName];
+        return {
+            directory,
+            folderName,
+            module,
+            promise: buildDirectoryImports(directory, folderName, module),
+        };
+    });
+    // Await all promises sequentially to build string in order
+    for (let i = 0; i < directoryPromises.length; i++) {
+        const { module } = directoryPromises[i];
         // Write the comment for the module
         fileContents += '\n/* --------------------------------------------*';
         fileContents += `\n   ${module.name}\n`;
         fileContents += ' * ------------------------------------------- */\n';
 
-        fileContents += await buildDirectoryImports(directory, folderName, module);
+        // eslint-disable-next-line no-await-in-loop -- Need sequential processing to build string in order
+        fileContents += await directoryPromises[i].promise;
     }
 
     fs.writeFileSync(`${distDirectory}/imports.css`, fileContents);
