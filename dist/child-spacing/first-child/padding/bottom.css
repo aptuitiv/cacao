@@ -1,0 +1,68 @@
+/* =========================================================================== *
+   First child bottom padding utilities
+ * =========================================================================== */
+
+
+.first-child-pb-0 {
+    padding-bottom: var(--child-spacing-0);
+}
+
+.first-child-pb-1 {
+    padding-bottom: var(--child-spacing-1);
+}
+
+.first-child-pb-2 {
+    padding-bottom: var(--child-spacing-2);
+}
+
+.first-child-pb-3 {
+    padding-bottom: var(--child-spacing-3);
+}
+
+.first-child-pb-4 {
+    padding-bottom: var(--child-spacing-4);
+}
+
+.first-child-pb-5 {
+    padding-bottom: var(--child-spacing-5);
+}
+
+.first-child-pb-6 {
+    padding-bottom: var(--child-spacing-6);
+}
+
+.first-child-pb-7 {
+    padding-bottom: var(--child-spacing-7);
+}
+
+.first-child-pb-8 {
+    padding-bottom: var(--child-spacing-8);
+}
+
+.first-child-pb-9 {
+    padding-bottom: var(--child-spacing-9);
+}
+
+.first-child-pb-10 {
+    padding-bottom: var(--child-spacing-10);
+}
+
+.first-child-pb-11 {
+    padding-bottom: var(--child-spacing-11);
+}
+
+.first-child-pb-12 {
+    padding-bottom: var(--child-spacing-12);
+}
+
+.first-child-pb-13 {
+    padding-bottom: var(--child-spacing-13);
+}
+
+.first-child-pb-14 {
+    padding-bottom: var(--child-spacing-14);
+}
+
+.first-child-pb-15 {
+    padding-bottom: var(--child-spacing-15);
+}

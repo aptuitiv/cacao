@@ -1,0 +1,84 @@
+/* =========================================================================== *
+   First child end margin and padding utilities
+ * =========================================================================== */
+
+
+.first-child-se-0 {
+    margin-right: var(--child-spacing-0);
+    padding-right: var(--child-spacing-0);
+}
+
+.first-child-se-1 {
+    margin-right: var(--child-spacing-1);
+    padding-right: var(--child-spacing-1);
+}
+
+.first-child-se-2 {
+    margin-right: var(--child-spacing-2);
+    padding-right: var(--child-spacing-2);
+}
+
+.first-child-se-3 {
+    margin-right: var(--child-spacing-3);
+    padding-right: var(--child-spacing-3);
+}
+
+.first-child-se-4 {
+    margin-right: var(--child-spacing-4);
+    padding-right: var(--child-spacing-4);
+}
+
+.first-child-se-5 {
+    margin-right: var(--child-spacing-5);
+    padding-right: var(--child-spacing-5);
+}
+
+.first-child-se-6 {
+    margin-right: var(--child-spacing-6);
+    padding-right: var(--child-spacing-6);
+}
+
+.first-child-se-7 {
+    margin-right: var(--child-spacing-7);
+    padding-right: var(--child-spacing-7);
+}
+
+.first-child-se-8 {
+    margin-right: var(--child-spacing-8);
+    padding-right: var(--child-spacing-8);
+}
+
+.first-child-se-9 {
+    margin-right: var(--child-spacing-9);
+    padding-right: var(--child-spacing-9);
+}
+
+.first-child-se-10 {
+    margin-right: var(--child-spacing-10);
+    padding-right: var(--child-spacing-10);
+}
+
+.first-child-se-11 {
+    margin-right: var(--child-spacing-11);
+    padding-right: var(--child-spacing-11);
+}
+
+.first-child-se-12 {
+    margin-right: var(--child-spacing-12);
+    padding-right: var(--child-spacing-12);
+}
+
+.first-child-se-13 {
+    margin-right: var(--child-spacing-13);
+    padding-right: var(--child-spacing-13);
+}
+
+.first-child-se-14 {
+    margin-right: var(--child-spacing-14);
+    padding-right: var(--child-spacing-14);
+}
+
+.first-child-se-15 {
+    margin-right: var(--child-spacing-15);
+    padding-right: var(--child-spacing-15);
+}

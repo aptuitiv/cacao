@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Horizontal padding utilities
+ * =========================================================================== */
+
+
+.last-child-px-7 {
+    padding-left: var(--child-spacing-7);
+    padding-right: var(--child-spacing-7);
+}

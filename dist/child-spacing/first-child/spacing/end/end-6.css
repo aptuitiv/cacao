@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   First child end margin and padding utilities
+ * =========================================================================== */
+
+
+.first-child-se-6 {
+    margin-right: var(--child-spacing-6);
+    padding-right: var(--child-spacing-6);
+}

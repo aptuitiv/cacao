@@ -1,0 +1,68 @@
+/* =========================================================================== *
+   Last child bottom margin utilities
+ * =========================================================================== */
+
+
+.last-child-mb-0 {
+    margin-bottom: var(--child-spacing-0);
+}
+
+.last-child-mb-1 {
+    margin-bottom: var(--child-spacing-1);
+}
+
+.last-child-mb-2 {
+    margin-bottom: var(--child-spacing-2);
+}
+
+.last-child-mb-3 {
+    margin-bottom: var(--child-spacing-3);
+}
+
+.last-child-mb-4 {
+    margin-bottom: var(--child-spacing-4);
+}
+
+.last-child-mb-5 {
+    margin-bottom: var(--child-spacing-5);
+}
+
+.last-child-mb-6 {
+    margin-bottom: var(--child-spacing-6);
+}
+
+.last-child-mb-7 {
+    margin-bottom: var(--child-spacing-7);
+}
+
+.last-child-mb-8 {
+    margin-bottom: var(--child-spacing-8);
+}
+
+.last-child-mb-9 {
+    margin-bottom: var(--child-spacing-9);
+}
+
+.last-child-mb-10 {
+    margin-bottom: var(--child-spacing-10);
+}
+
+.last-child-mb-11 {
+    margin-bottom: var(--child-spacing-11);
+}
+
+.last-child-mb-12 {
+    margin-bottom: var(--child-spacing-12);
+}
+
+.last-child-mb-13 {
+    margin-bottom: var(--child-spacing-13);
+}
+
+.last-child-mb-14 {
+    margin-bottom: var(--child-spacing-14);
+}
+
+.last-child-mb-15 {
+    margin-bottom: var(--child-spacing-15);
+}

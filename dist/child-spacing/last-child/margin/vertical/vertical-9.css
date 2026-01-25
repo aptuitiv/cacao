@@ -1,0 +1,9 @@
+/* =========================================================================== *
+   Last child vertical margin utilities
+ * =========================================================================== */
+
+
+.last-child-my-9 {
+    margin-top: var(--child-spacing-9);
+    margin-bottom: var(--child-spacing-9);
+}

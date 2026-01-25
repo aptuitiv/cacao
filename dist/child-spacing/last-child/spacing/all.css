@@ -1,0 +1,84 @@
+/* =========================================================================== *
+   Last child all sides margin and padding utilities
+ * =========================================================================== */
+
+
+.last-child-s-0 {
+    margin: var(--child-spacing-0);
+    padding: var(--child-spacing-0);
+}
+
+.last-child-s-1 {
+    margin: var(--child-spacing-1);
+    padding: var(--child-spacing-1);
+}
+
+.last-child-s-2 {
+    margin: var(--child-spacing-2);
+    padding: var(--child-spacing-2);
+}
+
+.last-child-s-3 {
+    margin: var(--child-spacing-3);
+    padding: var(--child-spacing-3);
+}
+
+.last-child-s-4 {
+    margin: var(--child-spacing-4);
+    padding: var(--child-spacing-4);
+}
+
+.last-child-s-5 {
+    margin: var(--child-spacing-5);
+    padding: var(--child-spacing-5);
+}
+
+.last-child-s-6 {
+    margin: var(--child-spacing-6);
+    padding: var(--child-spacing-6);
+}
+
+.last-child-s-7 {
+    margin: var(--child-spacing-7);
+    padding: var(--child-spacing-7);
+}
+
+.last-child-s-8 {
+    margin: var(--child-spacing-8);
+    padding: var(--child-spacing-8);
+}
+
+.last-child-s-9 {
+    margin: var(--child-spacing-9);
+    padding: var(--child-spacing-9);
+}
+
+.last-child-s-10 {
+    margin: var(--child-spacing-10);
+    padding: var(--child-spacing-10);
+}
+
+.last-child-s-11 {
+    margin: var(--child-spacing-11);
+    padding: var(--child-spacing-11);
+}
+
+.last-child-s-12 {
+    margin: var(--child-spacing-12);
+    padding: var(--child-spacing-12);
+}
+
+.last-child-s-13 {
+    margin: var(--child-spacing-13);
+    padding: var(--child-spacing-13);
+}
+
+.last-child-s-14 {
+    margin: var(--child-spacing-14);
+    padding: var(--child-spacing-14);
+}
+
+.last-child-s-15 {
+    margin: var(--child-spacing-15);
+    padding: var(--child-spacing-15);
+}
