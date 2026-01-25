@@ -163,19 +163,20 @@ const buildDirectoryImports = async (directory, module, moduleObject, isSubDirec
             fileContents += `\n/* ${moduleName} (${fname}) */`;
 
             // Build the folder path for the subdirectory imports
-            if (typeof moduleObject.folderPath === 'undefined') {
-                moduleObject.folderPath = fname;
+            const subModuleObject = moduleObject;
+            if (typeof subModuleObject.folderPath === 'undefined') {
+                subModuleObject.folderPath = fname;
             } else {
-                moduleObject.folderPath += `/${fname}`;
+                subModuleObject.folderPath += `/${fname}`;
             }
             // Use the subdirectory name for the module name if it exists
-            if (typeof moduleObject.subDirectories[fname] !== 'undefined' && typeof moduleObject.subDirectories[fname].name !== 'undefined') {
-                moduleObject.name = moduleObject.subDirectories[fname].name;
+            if (typeof subModuleObject.subDirectories[fname] !== 'undefined' && typeof subModuleObject.subDirectories[fname].name !== 'undefined') {
+                subModuleObject.name = subModuleObject.subDirectories[fname].name;
             }
             // Use the original module key for the subdirectory imports.
             // this is so that the combinationFiles config can be used to skip the directories.
             // The combinationFiles configuration is based on the module name, not the subdirectory name.
-            fileContents += await buildDirectoryImports(dir, module, moduleObject, true);
+            fileContents += await buildDirectoryImports(dir, module, subModuleObject, true);
         }
     }
 
