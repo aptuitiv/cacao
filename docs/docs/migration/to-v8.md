@@ -22,6 +22,7 @@ Open the CSS file that you're importing the cacao library into. Search for `@imp
 Replace it with:
 
 ```css
+@import 'cacao-css/dist/child-spacing/variables.css';
 @import 'cacao-css/dist/child-spacing/first-child/spacing/top/top-0.css';
 @import 'cacao-css/dist/child-spacing/last-child/spacing/bottom/bottom-0.css';
 ```

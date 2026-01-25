@@ -19,7 +19,7 @@ const convertImports = (args) => {
     // Fix the "spacing" import path
     fileContents = fileContents.replace(
         /@import 'cacao-css\/dist\/spacing\/spacing.css';/g,
-        '@import \'cacao-css/dist/child-spacing/first-child/spacing/top/top-0.css\';\n@import \'cacao-css/dist/child-spacing/last-child/spacing/bottom/bottom-0.css\';'
+        '@import \'cacao-css/dist/child-spacing/variables.css\';\n@import \'cacao-css/dist/child-spacing/first-child/spacing/top/top-0.css\';\n@import \'cacao-css/dist/child-spacing/last-child/spacing/bottom/bottom-0.css\';'
     );
 
     // Write the new file
