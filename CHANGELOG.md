@@ -9,6 +9,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [8.0.1] - 2026-01-25
+
+### Fixed
+
+- Fixed import script to include the variable import.
+- Fixed documentation node version for documentation Github action.
+
 ## [8.0.0] - 2026-01-25
 
 ### Changed
