@@ -125,8 +125,12 @@ const buildDirectoryImports = async (directory, module, moduleObject, isSubDirec
         }
     }
 
-    // Make sure that the files are in alphabetical order
-    files.sort();
+    // Make sure that the files are in alphabetical order with natural sorting so that numbers are sorted correctly.
+    const naturalCollator = new Intl.Collator(undefined, {
+        numeric: true,
+        sensitivity: 'base'
+    });
+    files.sort(naturalCollator.compare);
 
     // Add the files to the file contents
     files.forEach((file) => {
