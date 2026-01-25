@@ -3,6 +3,6 @@
  * =========================================================================== */
 
 
-.last-child-ps-5 {
+.last-child-ps-5 > *:last-child {
     padding-left: var(--child-spacing-5);
 }

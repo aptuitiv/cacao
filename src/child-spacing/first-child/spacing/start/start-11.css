@@ -3,7 +3,7 @@
  * =========================================================================== */
 
 
-.first-child-ss-11 {
+.first-child-ss-11 > *:first-child {
     margin-left: var(--child-spacing-11);
     padding-left: var(--child-spacing-11);
 }

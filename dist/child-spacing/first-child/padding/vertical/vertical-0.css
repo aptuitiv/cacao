@@ -3,7 +3,7 @@
  * =========================================================================== */
 
 
-.first-child-py-0 {
+.first-child-py-0 > *:first-child {
     padding-top: var(--child-spacing-0);
     padding-bottom: var(--child-spacing-0);
 }

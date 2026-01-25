@@ -3,6 +3,6 @@
  * =========================================================================== */
 
 
-.first-child-pe-11 {
+.first-child-pe-11 > *:first-child {
     padding-right: var(--child-spacing-11);
 }

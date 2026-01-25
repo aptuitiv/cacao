@@ -3,7 +3,7 @@
  * =========================================================================== */
 
 
-.first-child-mx-9 {
+.first-child-mx-9 > *:first-child {
     margin-left: var(--child-spacing-9);
     margin-right: var(--child-spacing-9);
 }

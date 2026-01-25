@@ -3,6 +3,6 @@
  * =========================================================================== */
 
 
-.first-child-me-4 {
+.first-child-me-4 > *:first-child {
     margin-right: var(--child-spacing-4);
 }

@@ -3,7 +3,7 @@
  * =========================================================================== */
 
 
-.first-child-my-5 {
+.first-child-my-5 > *:first-child {
     margin-top: var(--child-spacing-5);
     margin-bottom: var(--child-spacing-5);
 }

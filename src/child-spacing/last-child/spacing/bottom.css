@@ -3,82 +3,82 @@
  * =========================================================================== */
 
 
-.last-child-sb-0 {
+.last-child-sb-0 > *:last-child {
     margin-bottom: var(--child-spacing-0);
     padding-bottom: var(--child-spacing-0);
 }
 
-.last-child-sb-1 {
+.last-child-sb-1 > *:last-child {
     margin-bottom: var(--child-spacing-1);
     padding-bottom: var(--child-spacing-1);
 }
 
-.last-child-sb-2 {
+.last-child-sb-2 > *:last-child {
     margin-bottom: var(--child-spacing-2);
     padding-bottom: var(--child-spacing-2);
 }
 
-.last-child-sb-3 {
+.last-child-sb-3 > *:last-child {
     margin-bottom: var(--child-spacing-3);
     padding-bottom: var(--child-spacing-3);
 }
 
-.last-child-sb-4 {
+.last-child-sb-4 > *:last-child {
     margin-bottom: var(--child-spacing-4);
     padding-bottom: var(--child-spacing-4);
 }
 
-.last-child-sb-5 {
+.last-child-sb-5 > *:last-child {
     margin-bottom: var(--child-spacing-5);
     padding-bottom: var(--child-spacing-5);
 }
 
-.last-child-sb-6 {
+.last-child-sb-6 > *:last-child {
     margin-bottom: var(--child-spacing-6);
     padding-bottom: var(--child-spacing-6);
 }
 
-.last-child-sb-7 {
+.last-child-sb-7 > *:last-child {
     margin-bottom: var(--child-spacing-7);
     padding-bottom: var(--child-spacing-7);
 }
 
-.last-child-sb-8 {
+.last-child-sb-8 > *:last-child {
     margin-bottom: var(--child-spacing-8);
     padding-bottom: var(--child-spacing-8);
 }
 
-.last-child-sb-9 {
+.last-child-sb-9 > *:last-child {
     margin-bottom: var(--child-spacing-9);
     padding-bottom: var(--child-spacing-9);
 }
 
-.last-child-sb-10 {
+.last-child-sb-10 > *:last-child {
     margin-bottom: var(--child-spacing-10);
     padding-bottom: var(--child-spacing-10);
 }
 
-.last-child-sb-11 {
+.last-child-sb-11 > *:last-child {
     margin-bottom: var(--child-spacing-11);
     padding-bottom: var(--child-spacing-11);
 }
 
-.last-child-sb-12 {
+.last-child-sb-12 > *:last-child {
     margin-bottom: var(--child-spacing-12);
     padding-bottom: var(--child-spacing-12);
 }
 
-.last-child-sb-13 {
+.last-child-sb-13 > *:last-child {
     margin-bottom: var(--child-spacing-13);
     padding-bottom: var(--child-spacing-13);
 }
 
-.last-child-sb-14 {
+.last-child-sb-14 > *:last-child {
     margin-bottom: var(--child-spacing-14);
     padding-bottom: var(--child-spacing-14);
 }
 
-.last-child-sb-15 {
+.last-child-sb-15 > *:last-child {
     margin-bottom: var(--child-spacing-15);
     padding-bottom: var(--child-spacing-15);
 }

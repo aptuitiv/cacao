@@ -3,82 +3,82 @@
  * =========================================================================== */
 
 
-.first-child-px-0 {
+.first-child-px-0 > *:first-child {
     padding-left: var(--child-spacing-0);
     padding-right: var(--child-spacing-0);
 }
 
-.first-child-px-1 {
+.first-child-px-1 > *:first-child {
     padding-left: var(--child-spacing-1);
     padding-right: var(--child-spacing-1);
 }
 
-.first-child-px-2 {
+.first-child-px-2 > *:first-child {
     padding-left: var(--child-spacing-2);
     padding-right: var(--child-spacing-2);
 }
 
-.first-child-px-3 {
+.first-child-px-3 > *:first-child {
     padding-left: var(--child-spacing-3);
     padding-right: var(--child-spacing-3);
 }
 
-.first-child-px-4 {
+.first-child-px-4 > *:first-child {
     padding-left: var(--child-spacing-4);
     padding-right: var(--child-spacing-4);
 }
 
-.first-child-px-5 {
+.first-child-px-5 > *:first-child {
     padding-left: var(--child-spacing-5);
     padding-right: var(--child-spacing-5);
 }
 
-.first-child-px-6 {
+.first-child-px-6 > *:first-child {
     padding-left: var(--child-spacing-6);
     padding-right: var(--child-spacing-6);
 }
 
-.first-child-px-7 {
+.first-child-px-7 > *:first-child {
     padding-left: var(--child-spacing-7);
     padding-right: var(--child-spacing-7);
 }
 
-.first-child-px-8 {
+.first-child-px-8 > *:first-child {
     padding-left: var(--child-spacing-8);
     padding-right: var(--child-spacing-8);
 }
 
-.first-child-px-9 {
+.first-child-px-9 > *:first-child {
     padding-left: var(--child-spacing-9);
     padding-right: var(--child-spacing-9);
 }
 
-.first-child-px-10 {
+.first-child-px-10 > *:first-child {
     padding-left: var(--child-spacing-10);
     padding-right: var(--child-spacing-10);
 }
 
-.first-child-px-11 {
+.first-child-px-11 > *:first-child {
     padding-left: var(--child-spacing-11);
     padding-right: var(--child-spacing-11);
 }
 
-.first-child-px-12 {
+.first-child-px-12 > *:first-child {
     padding-left: var(--child-spacing-12);
     padding-right: var(--child-spacing-12);
 }
 
-.first-child-px-13 {
+.first-child-px-13 > *:first-child {
     padding-left: var(--child-spacing-13);
     padding-right: var(--child-spacing-13);
 }
 
-.first-child-px-14 {
+.first-child-px-14 > *:first-child {
     padding-left: var(--child-spacing-14);
     padding-right: var(--child-spacing-14);
 }
 
-.first-child-px-15 {
+.first-child-px-15 > *:first-child {
     padding-left: var(--child-spacing-15);
     padding-right: var(--child-spacing-15);
 }

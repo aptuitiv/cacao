@@ -3,6 +3,6 @@
  * =========================================================================== */
 
 
-.last-child-pb-7 {
+.last-child-pb-7 > *:last-child {
     padding-bottom: var(--child-spacing-7);
 }

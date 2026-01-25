@@ -3,7 +3,7 @@
  * =========================================================================== */
 
 
-.first-child-sx-15 {
+.first-child-sx-15 > *:first-child {
     margin-left: var(--child-spacing-15);
     margin-right: var(--child-spacing-15);
     padding-left: var(--child-spacing-15);

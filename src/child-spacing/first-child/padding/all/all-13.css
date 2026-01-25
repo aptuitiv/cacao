@@ -3,6 +3,6 @@
  * =========================================================================== */
 
 
-.first-child-p-13 {
+.first-child-p-13 > *:first-child {
     padding: var(--child-spacing-13);
 }

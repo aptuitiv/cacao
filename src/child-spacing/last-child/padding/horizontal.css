@@ -3,82 +3,82 @@
  * =========================================================================== */
 
 
-.last-child-px-0 {
+.last-child-px-0 > *:last-child {
     padding-left: var(--child-spacing-0);
     padding-right: var(--child-spacing-0);
 }
 
-.last-child-px-1 {
+.last-child-px-1 > *:last-child {
     padding-left: var(--child-spacing-1);
     padding-right: var(--child-spacing-1);
 }
 
-.last-child-px-2 {
+.last-child-px-2 > *:last-child {
     padding-left: var(--child-spacing-2);
     padding-right: var(--child-spacing-2);
 }
 
-.last-child-px-3 {
+.last-child-px-3 > *:last-child {
     padding-left: var(--child-spacing-3);
     padding-right: var(--child-spacing-3);
 }
 
-.last-child-px-4 {
+.last-child-px-4 > *:last-child {
     padding-left: var(--child-spacing-4);
     padding-right: var(--child-spacing-4);
 }
 
-.last-child-px-5 {
+.last-child-px-5 > *:last-child {
     padding-left: var(--child-spacing-5);
     padding-right: var(--child-spacing-5);
 }
 
-.last-child-px-6 {
+.last-child-px-6 > *:last-child {
     padding-left: var(--child-spacing-6);
     padding-right: var(--child-spacing-6);
 }
 
-.last-child-px-7 {
+.last-child-px-7 > *:last-child {
     padding-left: var(--child-spacing-7);
     padding-right: var(--child-spacing-7);
 }
 
-.last-child-px-8 {
+.last-child-px-8 > *:last-child {
     padding-left: var(--child-spacing-8);
     padding-right: var(--child-spacing-8);
 }
 
-.last-child-px-9 {
+.last-child-px-9 > *:last-child {
     padding-left: var(--child-spacing-9);
     padding-right: var(--child-spacing-9);
 }
 
-.last-child-px-10 {
+.last-child-px-10 > *:last-child {
     padding-left: var(--child-spacing-10);
     padding-right: var(--child-spacing-10);
 }
 
-.last-child-px-11 {
+.last-child-px-11 > *:last-child {
     padding-left: var(--child-spacing-11);
     padding-right: var(--child-spacing-11);
 }
 
-.last-child-px-12 {
+.last-child-px-12 > *:last-child {
     padding-left: var(--child-spacing-12);
     padding-right: var(--child-spacing-12);
 }
 
-.last-child-px-13 {
+.last-child-px-13 > *:last-child {
     padding-left: var(--child-spacing-13);
     padding-right: var(--child-spacing-13);
 }
 
-.last-child-px-14 {
+.last-child-px-14 > *:last-child {
     padding-left: var(--child-spacing-14);
     padding-right: var(--child-spacing-14);
 }
 
-.last-child-px-15 {
+.last-child-px-15 > *:last-child {
     padding-left: var(--child-spacing-15);
     padding-right: var(--child-spacing-15);
 }

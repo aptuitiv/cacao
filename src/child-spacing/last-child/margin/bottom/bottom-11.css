@@ -3,6 +3,6 @@
  * =========================================================================== */
 
 
-.last-child-mb-11 {
+.last-child-mb-11 > *:last-child {
     margin-bottom: var(--child-spacing-11);
 }

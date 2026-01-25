@@ -3,7 +3,7 @@
  * =========================================================================== */
 
 
-.last-child-py-9 {
+.last-child-py-9 > *:last-child {
     padding-top: var(--child-spacing-9);
     padding-bottom: var(--child-spacing-9);
 }

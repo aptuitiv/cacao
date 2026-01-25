@@ -3,7 +3,7 @@
  * =========================================================================== */
 
 
-.first-child-px-0 {
+.first-child-px-0 > *:first-child {
     padding-left: var(--child-spacing-0);
     padding-right: var(--child-spacing-0);
 }

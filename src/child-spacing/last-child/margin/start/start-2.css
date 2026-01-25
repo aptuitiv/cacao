@@ -3,6 +3,6 @@
  * =========================================================================== */
 
 
-.last-child-ms-2 {
+.last-child-ms-2 > *:last-child {
     margin-left: var(--child-spacing-2);
 }

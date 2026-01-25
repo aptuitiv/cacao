@@ -3,6 +3,6 @@
  * =========================================================================== */
 
 
-.last-child-ps-12 {
+.last-child-ps-12 > *:last-child {
     padding-left: var(--child-spacing-12);
 }

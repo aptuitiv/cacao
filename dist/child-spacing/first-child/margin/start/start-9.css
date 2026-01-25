@@ -3,6 +3,6 @@
  * =========================================================================== */
 
 
-.first-child-ms-9 {
+.first-child-ms-9 > *:first-child {
     margin-left: var(--child-spacing-9);
 }

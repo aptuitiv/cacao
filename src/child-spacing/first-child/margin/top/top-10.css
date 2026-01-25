@@ -3,6 +3,6 @@
  * =========================================================================== */
 
 
-.first-child-mt-10 {
+.first-child-mt-10 > *:first-child {
     margin-top: var(--child-spacing-10);
 }

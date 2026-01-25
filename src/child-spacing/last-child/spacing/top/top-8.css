@@ -3,7 +3,7 @@
  * =========================================================================== */
 
 
-.last-child-st-8 {
+.last-child-st-8 > *:last-child {
     margin-top: var(--child-spacing-8);
     padding-top: var(--child-spacing-8);
 }

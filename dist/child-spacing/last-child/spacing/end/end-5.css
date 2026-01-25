@@ -3,7 +3,7 @@
  * =========================================================================== */
 
 
-.last-child-se-5 {
+.last-child-se-5 > *:last-child {
     margin-right: var(--child-spacing-5);
     padding-right: var(--child-spacing-5);
 }

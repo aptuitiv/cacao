@@ -3,7 +3,7 @@
  * =========================================================================== */
 
 
-.last-child-px-9 {
+.last-child-px-9 > *:last-child {
     padding-left: var(--child-spacing-9);
     padding-right: var(--child-spacing-9);
 }

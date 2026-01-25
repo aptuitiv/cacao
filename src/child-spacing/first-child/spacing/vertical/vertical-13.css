@@ -3,7 +3,7 @@
  * =========================================================================== */
 
 
-.first-child-sy-13 {
+.first-child-sy-13 > *:first-child {
     margin-top: var(--child-spacing-13);
     margin-bottom: var(--child-spacing-13);
     padding-top: var(--child-spacing-13);

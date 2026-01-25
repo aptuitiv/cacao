@@ -3,82 +3,82 @@
  * =========================================================================== */
 
 
-.first-child-mx-0 {
+.first-child-mx-0 > *:first-child {
     margin-left: var(--child-spacing-0);
     margin-right: var(--child-spacing-0);
 }
 
-.first-child-mx-1 {
+.first-child-mx-1 > *:first-child {
     margin-left: var(--child-spacing-1);
     margin-right: var(--child-spacing-1);
 }
 
-.first-child-mx-2 {
+.first-child-mx-2 > *:first-child {
     margin-left: var(--child-spacing-2);
     margin-right: var(--child-spacing-2);
 }
 
-.first-child-mx-3 {
+.first-child-mx-3 > *:first-child {
     margin-left: var(--child-spacing-3);
     margin-right: var(--child-spacing-3);
 }
 
-.first-child-mx-4 {
+.first-child-mx-4 > *:first-child {
     margin-left: var(--child-spacing-4);
     margin-right: var(--child-spacing-4);
 }
 
-.first-child-mx-5 {
+.first-child-mx-5 > *:first-child {
     margin-left: var(--child-spacing-5);
     margin-right: var(--child-spacing-5);
 }
 
-.first-child-mx-6 {
+.first-child-mx-6 > *:first-child {
     margin-left: var(--child-spacing-6);
     margin-right: var(--child-spacing-6);
 }
 
-.first-child-mx-7 {
+.first-child-mx-7 > *:first-child {
     margin-left: var(--child-spacing-7);
     margin-right: var(--child-spacing-7);
 }
 
-.first-child-mx-8 {
+.first-child-mx-8 > *:first-child {
     margin-left: var(--child-spacing-8);
     margin-right: var(--child-spacing-8);
 }
 
-.first-child-mx-9 {
+.first-child-mx-9 > *:first-child {
     margin-left: var(--child-spacing-9);
     margin-right: var(--child-spacing-9);
 }
 
-.first-child-mx-10 {
+.first-child-mx-10 > *:first-child {
     margin-left: var(--child-spacing-10);
     margin-right: var(--child-spacing-10);
 }
 
-.first-child-mx-11 {
+.first-child-mx-11 > *:first-child {
     margin-left: var(--child-spacing-11);
     margin-right: var(--child-spacing-11);
 }
 
-.first-child-mx-12 {
+.first-child-mx-12 > *:first-child {
     margin-left: var(--child-spacing-12);
     margin-right: var(--child-spacing-12);
 }
 
-.first-child-mx-13 {
+.first-child-mx-13 > *:first-child {
     margin-left: var(--child-spacing-13);
     margin-right: var(--child-spacing-13);
 }
 
-.first-child-mx-14 {
+.first-child-mx-14 > *:first-child {
     margin-left: var(--child-spacing-14);
     margin-right: var(--child-spacing-14);
 }
 
-.first-child-mx-15 {
+.first-child-mx-15 > *:first-child {
     margin-left: var(--child-spacing-15);
     margin-right: var(--child-spacing-15);
 }

@@ -3,6 +3,6 @@
  * =========================================================================== */
 
 
-.last-child-pe-8 {
+.last-child-pe-8 > *:last-child {
     padding-right: var(--child-spacing-8);
 }

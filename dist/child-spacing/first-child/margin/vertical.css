@@ -3,82 +3,82 @@
  * =========================================================================== */
 
 
-.first-child-my-0 {
+.first-child-my-0 > *:first-child {
     margin-top: var(--child-spacing-0);
     margin-bottom: var(--child-spacing-0);
 }
 
-.first-child-my-1 {
+.first-child-my-1 > *:first-child {
     margin-top: var(--child-spacing-1);
     margin-bottom: var(--child-spacing-1);
 }
 
-.first-child-my-2 {
+.first-child-my-2 > *:first-child {
     margin-top: var(--child-spacing-2);
     margin-bottom: var(--child-spacing-2);
 }
 
-.first-child-my-3 {
+.first-child-my-3 > *:first-child {
     margin-top: var(--child-spacing-3);
     margin-bottom: var(--child-spacing-3);
 }
 
-.first-child-my-4 {
+.first-child-my-4 > *:first-child {
     margin-top: var(--child-spacing-4);
     margin-bottom: var(--child-spacing-4);
 }
 
-.first-child-my-5 {
+.first-child-my-5 > *:first-child {
     margin-top: var(--child-spacing-5);
     margin-bottom: var(--child-spacing-5);
 }
 
-.first-child-my-6 {
+.first-child-my-6 > *:first-child {
     margin-top: var(--child-spacing-6);
     margin-bottom: var(--child-spacing-6);
 }
 
-.first-child-my-7 {
+.first-child-my-7 > *:first-child {
     margin-top: var(--child-spacing-7);
     margin-bottom: var(--child-spacing-7);
 }
 
-.first-child-my-8 {
+.first-child-my-8 > *:first-child {
     margin-top: var(--child-spacing-8);
     margin-bottom: var(--child-spacing-8);
 }
 
-.first-child-my-9 {
+.first-child-my-9 > *:first-child {
     margin-top: var(--child-spacing-9);
     margin-bottom: var(--child-spacing-9);
 }
 
-.first-child-my-10 {
+.first-child-my-10 > *:first-child {
     margin-top: var(--child-spacing-10);
     margin-bottom: var(--child-spacing-10);
 }
 
-.first-child-my-11 {
+.first-child-my-11 > *:first-child {
     margin-top: var(--child-spacing-11);
     margin-bottom: var(--child-spacing-11);
 }
 
-.first-child-my-12 {
+.first-child-my-12 > *:first-child {
     margin-top: var(--child-spacing-12);
     margin-bottom: var(--child-spacing-12);
 }
 
-.first-child-my-13 {
+.first-child-my-13 > *:first-child {
     margin-top: var(--child-spacing-13);
     margin-bottom: var(--child-spacing-13);
 }
 
-.first-child-my-14 {
+.first-child-my-14 > *:first-child {
     margin-top: var(--child-spacing-14);
     margin-bottom: var(--child-spacing-14);
 }
 
-.first-child-my-15 {
+.first-child-my-15 > *:first-child {
     margin-top: var(--child-spacing-15);
     margin-bottom: var(--child-spacing-15);
 }

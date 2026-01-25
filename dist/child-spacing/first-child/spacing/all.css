@@ -3,82 +3,82 @@
  * =========================================================================== */
 
 
-.first-child-s-0 {
+.first-child-s-0 > *:first-child {
     margin: var(--child-spacing-0);
     padding: var(--child-spacing-0);
 }
 
-.first-child-s-1 {
+.first-child-s-1 > *:first-child {
     margin: var(--child-spacing-1);
     padding: var(--child-spacing-1);
 }
 
-.first-child-s-2 {
+.first-child-s-2 > *:first-child {
     margin: var(--child-spacing-2);
     padding: var(--child-spacing-2);
 }
 
-.first-child-s-3 {
+.first-child-s-3 > *:first-child {
     margin: var(--child-spacing-3);
     padding: var(--child-spacing-3);
 }
 
-.first-child-s-4 {
+.first-child-s-4 > *:first-child {
     margin: var(--child-spacing-4);
     padding: var(--child-spacing-4);
 }
 
-.first-child-s-5 {
+.first-child-s-5 > *:first-child {
     margin: var(--child-spacing-5);
     padding: var(--child-spacing-5);
 }
 
-.first-child-s-6 {
+.first-child-s-6 > *:first-child {
     margin: var(--child-spacing-6);
     padding: var(--child-spacing-6);
 }
 
-.first-child-s-7 {
+.first-child-s-7 > *:first-child {
     margin: var(--child-spacing-7);
     padding: var(--child-spacing-7);
 }
 
-.first-child-s-8 {
+.first-child-s-8 > *:first-child {
     margin: var(--child-spacing-8);
     padding: var(--child-spacing-8);
 }
 
-.first-child-s-9 {
+.first-child-s-9 > *:first-child {
     margin: var(--child-spacing-9);
     padding: var(--child-spacing-9);
 }
 
-.first-child-s-10 {
+.first-child-s-10 > *:first-child {
     margin: var(--child-spacing-10);
     padding: var(--child-spacing-10);
 }
 
-.first-child-s-11 {
+.first-child-s-11 > *:first-child {
     margin: var(--child-spacing-11);
     padding: var(--child-spacing-11);
 }
 
-.first-child-s-12 {
+.first-child-s-12 > *:first-child {
     margin: var(--child-spacing-12);
     padding: var(--child-spacing-12);
 }
 
-.first-child-s-13 {
+.first-child-s-13 > *:first-child {
     margin: var(--child-spacing-13);
     padding: var(--child-spacing-13);
 }
 
-.first-child-s-14 {
+.first-child-s-14 > *:first-child {
     margin: var(--child-spacing-14);
     padding: var(--child-spacing-14);
 }
 
-.first-child-s-15 {
+.first-child-s-15 > *:first-child {
     margin: var(--child-spacing-15);
     padding: var(--child-spacing-15);
 }
