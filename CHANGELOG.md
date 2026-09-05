@@ -9,6 +9,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Changed `img` and `svg` in the reset styles from `display: block` to `display: inline-block` with `vertical-align: middle`. This allows multiple images within a paragraph (i.e. content from a rich text editor) to flow beside each other instead of stacking on top of each other. `video` and `canvas` are still `display: block`.
+`picture` no longer has specific styling as it's usually the container around image and `block` or `inline-block` on the `picture` tag can add extra space around the image.
+  - **Potentially breaking:** images can no longer be centered with `margin-inline: auto` (or `margin: 0 auto`) alone. Use `text-align: center` on the parent element, or set `display: block` on the image.
+
 ## [8.0.1] - 2026-01-25
 
 ### Fixed
