@@ -27,15 +27,31 @@ body {
 }
 
 /*
-4. Improve media defaults
+4. Improve media defaults by setting display to block and max-width to 100%
 */
-img,
-picture,
 video,
-canvas,
-svg {
+canvas {
     display: block;
     max-width: 100%;
+}
+
+/*
+    Images, pictures and SVGs are inline-block instead of block so that multiple images
+    within a paragraph (i.e. content from a rich text editor) flow beside each other
+    instead of stacking on top of each other. The container around the
+    inline-block also ensures that a broken image displays more obviously on a page.The dimensions
+    of the image are still applied with inline-block compared to inline.
+
+    max-width: 100% ensures that the image does not exceed the width of its container.
+
+    vertical-align removes the descender gap that inline-level elements would otherwise
+    sit above.
+*/
+img,
+svg {
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
 }
 
 /*
