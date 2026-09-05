@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [8.1] - 2026-09-05
+
 ### Changed
 
 - Changed `img` and `svg` in the reset styles from `display: block` to `display: inline-block` with `vertical-align: middle`. This allows multiple images within a paragraph (i.e. content from a rich text editor) to flow beside each other instead of stacking on top of each other. `video` and `canvas` are still `display: block`.
