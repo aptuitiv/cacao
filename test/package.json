@@ -26,7 +26,7 @@
         "watch": "aptuitiv-build watch"
     },
     "devDependencies": {
-        "@aptuitiv/website-build-tools": "^1.13.1"
+        "@aptuitiv/website-build-tools": "^1.35.0"
     },
     "dependencies": {},
     "engines": {
