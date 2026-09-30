@@ -9,6 +9,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [8.1.1] - 2026-09-30
+
+### Fixed
+
+- Fixed invalid `none m` typo on the `print-hide` display style.
+
 ## [8.1] - 2026-09-05
 
 ### Changed
