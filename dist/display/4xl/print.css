@@ -10,7 +10,7 @@
     @media print {
         /* Hide content when printing */
         .print-hide-4xl {
-            display: none m !important;
+            display: none !important;
         }
 
         /* Show content only when printing */

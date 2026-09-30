@@ -1,0 +1,17 @@
+// Plans are long-form prose, not documentation pages. These rules fight that
+// format, so they are off here (they stay on everywhere else in the repo):
+{
+    // Inline code spans are fully-qualified class names and file paths that cannot wrap.
+    "MD013": false,
+    // Plans repeat section headings ("Notes", "Open questions") across phases.
+    "MD024": false,
+    // Some plans are split into several top-level parts.
+    "MD025": false,
+    "MD041": false,
+    // Plans embed small HTML/JSX snippets inline.
+    "MD033": false,
+    // "**Status:**", "**The migration:**" - bold lead-ins are deliberate, not headings.
+    "MD036": false,
+    // Fenced blocks often show output or pseudo-structure with no language to name.
+    "MD040": false
+}
