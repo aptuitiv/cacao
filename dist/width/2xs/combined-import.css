@@ -2,6 +2,20 @@
    Width utilities - 2xs - imports all the 2xs width utility files
  * =========================================================================== */
 
+@import './print-width-0.css';
+@import './print-width-1.css';
+@import './print-width-10.css';
+@import './print-width-11.css';
+@import './print-width-12.css';
+@import './print-width-2.css';
+@import './print-width-3.css';
+@import './print-width-4.css';
+@import './print-width-5.css';
+@import './print-width-6.css';
+@import './print-width-7.css';
+@import './print-width-8.css';
+@import './print-width-9.css';
+@import './print-width-auto.css';
 @import './width-0.css';
 @import './width-1.css';
 @import './width-10.css';

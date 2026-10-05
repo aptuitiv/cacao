@@ -1,0 +1,8 @@
+@media (--m-5xl) {
+    @media print {
+        .print-w-1-5xl,
+        .print-w-1-1-5xl {
+            width: 100%;
+        }
+    }
+}

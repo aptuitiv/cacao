@@ -1,0 +1,54 @@
+/* =========================================================================== *\
+    Width 12's
+\* =========================================================================== */
+@media (--m-xl) {
+    @media print {
+        .print-w-1-12-xl {
+            width: calc(100% / 12);
+        }
+
+        .print-w-2-12-xl {
+            width: calc(100% / 12 * 2);
+        }
+
+        .print-w-3-12-xl {
+            width: 25%;
+        }
+
+        .print-w-4-12-xl {
+            width: calc(100% / 12 * 4);
+        }
+
+        .print-w-5-12-xl {
+            width: calc(100% / 12 * 5);
+        }
+
+        .print-w-6-12-xl {
+            width: 50%;
+        }
+
+        .print-w-7-12-xl {
+            width: calc(100% / 12 * 7);
+        }
+
+        .print-w-8-12-xl {
+            width: calc(100% / 12 * 8);
+        }
+
+        .print-w-9-12-xl {
+            width: 75%;
+        }
+
+        .print-w-10-12-xl {
+            width: calc(100% / 12 * 10);
+        }
+
+        .print-w-11-12-xl {
+            width: calc(100% / 12 * 11);
+        }
+
+        .print-w-12-12-xl {
+            width: 100%;
+        }
+    }
+}

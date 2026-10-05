@@ -9,6 +9,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [8.3.0] - 2026-10-05
+
+### Added
+
+- Added print width styles.
+
 ## [8.2.0] - 2026-10-05
 
 ### Added
