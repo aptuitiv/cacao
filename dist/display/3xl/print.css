@@ -17,5 +17,20 @@
         .print-show-3xl {
             display: block !important;
         }
+
+        /* Force a page break after the element */
+        .print-break-after-page-3xl {
+            break-after: page;
+        }
+
+        /* Force a page break before the element */
+        .print-break-before-page-3xl {
+            break-before: page;
+        }
+
+        /* Avoid page breaks inside the element */
+        .print-break-inside-avoid-3xl {
+            break-inside: avoid;
+        }
     }
 }

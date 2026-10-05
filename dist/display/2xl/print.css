@@ -17,5 +17,20 @@
         .print-show-2xl {
             display: block !important;
         }
+
+        /* Force a page break after the element */
+        .print-break-after-page-2xl {
+            break-after: page;
+        }
+
+        /* Force a page break before the element */
+        .print-break-before-page-2xl {
+            break-before: page;
+        }
+
+        /* Avoid page breaks inside the element */
+        .print-break-inside-avoid-2xl {
+            break-inside: avoid;
+        }
     }
 }
