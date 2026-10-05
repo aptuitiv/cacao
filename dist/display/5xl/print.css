@@ -17,5 +17,20 @@
         .print-show-5xl {
             display: block !important;
         }
+
+        /* Force a page break after the element */
+        .print-break-after-page-5xl {
+            break-after: page;
+        }
+
+        /* Force a page break before the element */
+        .print-break-before-page-5xl {
+            break-before: page;
+        }
+
+        /* Avoid page breaks inside the element */
+        .print-break-inside-avoid-5xl {
+            break-inside: avoid;
+        }
     }
 }

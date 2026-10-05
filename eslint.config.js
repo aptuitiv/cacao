@@ -4,7 +4,7 @@
  * these build tools. That configuration is on the src/javascript.js file.
  */
 
-/* eslint-disable-next-line import/no-extraneous-dependencies -- The @aptuitiv package is a dev dependency since it's an eslint config. */
+/* eslint-disable import-x/no-extraneous-dependencies -- These are dev dependencies since this is an eslint config. */
 import aptuitivEslint from '@aptuitiv/eslint-config-aptuitiv';
 import { defineConfig, globalIgnores } from "eslint/config";
 
@@ -17,7 +17,7 @@ export default defineConfig([
     {
         rules: {
             // Allow importing Javascript files
-            'import/extensions': 'off',
+            'import-x/extensions': 'off',
         },
     },
 ]);

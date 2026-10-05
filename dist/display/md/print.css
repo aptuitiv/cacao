@@ -17,5 +17,20 @@
         .print-show-md {
             display: block !important;
         }
+
+        /* Force a page break after the element */
+        .print-break-after-page-md {
+            break-after: page;
+        }
+
+        /* Force a page break before the element */
+        .print-break-before-page-md {
+            break-before: page;
+        }
+
+        /* Avoid page breaks inside the element */
+        .print-break-inside-avoid-md {
+            break-inside: avoid;
+        }
     }
 }
