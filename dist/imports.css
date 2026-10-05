@@ -2844,6 +2844,20 @@
 /* Include all Width files */
 @import 'cacao-css/dist/width/combined-import.css';
 /* or include individual files */
+@import 'cacao-css/dist/width/print-width-0.css';
+@import 'cacao-css/dist/width/print-width-1.css';
+@import 'cacao-css/dist/width/print-width-2.css';
+@import 'cacao-css/dist/width/print-width-3.css';
+@import 'cacao-css/dist/width/print-width-4.css';
+@import 'cacao-css/dist/width/print-width-5.css';
+@import 'cacao-css/dist/width/print-width-6.css';
+@import 'cacao-css/dist/width/print-width-7.css';
+@import 'cacao-css/dist/width/print-width-8.css';
+@import 'cacao-css/dist/width/print-width-9.css';
+@import 'cacao-css/dist/width/print-width-10.css';
+@import 'cacao-css/dist/width/print-width-11.css';
+@import 'cacao-css/dist/width/print-width-12.css';
+@import 'cacao-css/dist/width/print-width-auto.css';
 @import 'cacao-css/dist/width/width-0.css';
 @import 'cacao-css/dist/width/width-1.css';
 @import 'cacao-css/dist/width/width-2.css';
@@ -2864,6 +2878,20 @@
 /* Include all Width 3xs files */
 @import 'cacao-css/dist/width/3xs/combined-import.css';
 /* or include individual files */
+@import 'cacao-css/dist/width/3xs/print-width-0.css';
+@import 'cacao-css/dist/width/3xs/print-width-1.css';
+@import 'cacao-css/dist/width/3xs/print-width-2.css';
+@import 'cacao-css/dist/width/3xs/print-width-3.css';
+@import 'cacao-css/dist/width/3xs/print-width-4.css';
+@import 'cacao-css/dist/width/3xs/print-width-5.css';
+@import 'cacao-css/dist/width/3xs/print-width-6.css';
+@import 'cacao-css/dist/width/3xs/print-width-7.css';
+@import 'cacao-css/dist/width/3xs/print-width-8.css';
+@import 'cacao-css/dist/width/3xs/print-width-9.css';
+@import 'cacao-css/dist/width/3xs/print-width-10.css';
+@import 'cacao-css/dist/width/3xs/print-width-11.css';
+@import 'cacao-css/dist/width/3xs/print-width-12.css';
+@import 'cacao-css/dist/width/3xs/print-width-auto.css';
 @import 'cacao-css/dist/width/3xs/width-0.css';
 @import 'cacao-css/dist/width/3xs/width-1.css';
 @import 'cacao-css/dist/width/3xs/width-2.css';
@@ -2884,6 +2912,20 @@
 /* Include all Width 2xs files */
 @import 'cacao-css/dist/width/2xs/combined-import.css';
 /* or include individual files */
+@import 'cacao-css/dist/width/2xs/print-width-0.css';
+@import 'cacao-css/dist/width/2xs/print-width-1.css';
+@import 'cacao-css/dist/width/2xs/print-width-2.css';
+@import 'cacao-css/dist/width/2xs/print-width-3.css';
+@import 'cacao-css/dist/width/2xs/print-width-4.css';
+@import 'cacao-css/dist/width/2xs/print-width-5.css';
+@import 'cacao-css/dist/width/2xs/print-width-6.css';
+@import 'cacao-css/dist/width/2xs/print-width-7.css';
+@import 'cacao-css/dist/width/2xs/print-width-8.css';
+@import 'cacao-css/dist/width/2xs/print-width-9.css';
+@import 'cacao-css/dist/width/2xs/print-width-10.css';
+@import 'cacao-css/dist/width/2xs/print-width-11.css';
+@import 'cacao-css/dist/width/2xs/print-width-12.css';
+@import 'cacao-css/dist/width/2xs/print-width-auto.css';
 @import 'cacao-css/dist/width/2xs/width-0.css';
 @import 'cacao-css/dist/width/2xs/width-1.css';
 @import 'cacao-css/dist/width/2xs/width-2.css';
@@ -2904,6 +2946,20 @@
 /* Include all Width xs files */
 @import 'cacao-css/dist/width/xs/combined-import.css';
 /* or include individual files */
+@import 'cacao-css/dist/width/xs/print-width-0.css';
+@import 'cacao-css/dist/width/xs/print-width-1.css';
+@import 'cacao-css/dist/width/xs/print-width-2.css';
+@import 'cacao-css/dist/width/xs/print-width-3.css';
+@import 'cacao-css/dist/width/xs/print-width-4.css';
+@import 'cacao-css/dist/width/xs/print-width-5.css';
+@import 'cacao-css/dist/width/xs/print-width-6.css';
+@import 'cacao-css/dist/width/xs/print-width-7.css';
+@import 'cacao-css/dist/width/xs/print-width-8.css';
+@import 'cacao-css/dist/width/xs/print-width-9.css';
+@import 'cacao-css/dist/width/xs/print-width-10.css';
+@import 'cacao-css/dist/width/xs/print-width-11.css';
+@import 'cacao-css/dist/width/xs/print-width-12.css';
+@import 'cacao-css/dist/width/xs/print-width-auto.css';
 @import 'cacao-css/dist/width/xs/width-0.css';
 @import 'cacao-css/dist/width/xs/width-1.css';
 @import 'cacao-css/dist/width/xs/width-2.css';
@@ -2924,6 +2980,20 @@
 /* Include all Width sm files */
 @import 'cacao-css/dist/width/sm/combined-import.css';
 /* or include individual files */
+@import 'cacao-css/dist/width/sm/print-width-0.css';
+@import 'cacao-css/dist/width/sm/print-width-1.css';
+@import 'cacao-css/dist/width/sm/print-width-2.css';
+@import 'cacao-css/dist/width/sm/print-width-3.css';
+@import 'cacao-css/dist/width/sm/print-width-4.css';
+@import 'cacao-css/dist/width/sm/print-width-5.css';
+@import 'cacao-css/dist/width/sm/print-width-6.css';
+@import 'cacao-css/dist/width/sm/print-width-7.css';
+@import 'cacao-css/dist/width/sm/print-width-8.css';
+@import 'cacao-css/dist/width/sm/print-width-9.css';
+@import 'cacao-css/dist/width/sm/print-width-10.css';
+@import 'cacao-css/dist/width/sm/print-width-11.css';
+@import 'cacao-css/dist/width/sm/print-width-12.css';
+@import 'cacao-css/dist/width/sm/print-width-auto.css';
 @import 'cacao-css/dist/width/sm/width-0.css';
 @import 'cacao-css/dist/width/sm/width-1.css';
 @import 'cacao-css/dist/width/sm/width-2.css';
@@ -2944,6 +3014,20 @@
 /* Include all Width md files */
 @import 'cacao-css/dist/width/md/combined-import.css';
 /* or include individual files */
+@import 'cacao-css/dist/width/md/print-width-0.css';
+@import 'cacao-css/dist/width/md/print-width-1.css';
+@import 'cacao-css/dist/width/md/print-width-2.css';
+@import 'cacao-css/dist/width/md/print-width-3.css';
+@import 'cacao-css/dist/width/md/print-width-4.css';
+@import 'cacao-css/dist/width/md/print-width-5.css';
+@import 'cacao-css/dist/width/md/print-width-6.css';
+@import 'cacao-css/dist/width/md/print-width-7.css';
+@import 'cacao-css/dist/width/md/print-width-8.css';
+@import 'cacao-css/dist/width/md/print-width-9.css';
+@import 'cacao-css/dist/width/md/print-width-10.css';
+@import 'cacao-css/dist/width/md/print-width-11.css';
+@import 'cacao-css/dist/width/md/print-width-12.css';
+@import 'cacao-css/dist/width/md/print-width-auto.css';
 @import 'cacao-css/dist/width/md/width-0.css';
 @import 'cacao-css/dist/width/md/width-1.css';
 @import 'cacao-css/dist/width/md/width-2.css';
@@ -2964,6 +3048,20 @@
 /* Include all Width lg files */
 @import 'cacao-css/dist/width/lg/combined-import.css';
 /* or include individual files */
+@import 'cacao-css/dist/width/lg/print-width-0.css';
+@import 'cacao-css/dist/width/lg/print-width-1.css';
+@import 'cacao-css/dist/width/lg/print-width-2.css';
+@import 'cacao-css/dist/width/lg/print-width-3.css';
+@import 'cacao-css/dist/width/lg/print-width-4.css';
+@import 'cacao-css/dist/width/lg/print-width-5.css';
+@import 'cacao-css/dist/width/lg/print-width-6.css';
+@import 'cacao-css/dist/width/lg/print-width-7.css';
+@import 'cacao-css/dist/width/lg/print-width-8.css';
+@import 'cacao-css/dist/width/lg/print-width-9.css';
+@import 'cacao-css/dist/width/lg/print-width-10.css';
+@import 'cacao-css/dist/width/lg/print-width-11.css';
+@import 'cacao-css/dist/width/lg/print-width-12.css';
+@import 'cacao-css/dist/width/lg/print-width-auto.css';
 @import 'cacao-css/dist/width/lg/width-0.css';
 @import 'cacao-css/dist/width/lg/width-1.css';
 @import 'cacao-css/dist/width/lg/width-2.css';
@@ -2984,6 +3082,20 @@
 /* Include all Width xl files */
 @import 'cacao-css/dist/width/xl/combined-import.css';
 /* or include individual files */
+@import 'cacao-css/dist/width/xl/print-width-0.css';
+@import 'cacao-css/dist/width/xl/print-width-1.css';
+@import 'cacao-css/dist/width/xl/print-width-2.css';
+@import 'cacao-css/dist/width/xl/print-width-3.css';
+@import 'cacao-css/dist/width/xl/print-width-4.css';
+@import 'cacao-css/dist/width/xl/print-width-5.css';
+@import 'cacao-css/dist/width/xl/print-width-6.css';
+@import 'cacao-css/dist/width/xl/print-width-7.css';
+@import 'cacao-css/dist/width/xl/print-width-8.css';
+@import 'cacao-css/dist/width/xl/print-width-9.css';
+@import 'cacao-css/dist/width/xl/print-width-10.css';
+@import 'cacao-css/dist/width/xl/print-width-11.css';
+@import 'cacao-css/dist/width/xl/print-width-12.css';
+@import 'cacao-css/dist/width/xl/print-width-auto.css';
 @import 'cacao-css/dist/width/xl/width-0.css';
 @import 'cacao-css/dist/width/xl/width-1.css';
 @import 'cacao-css/dist/width/xl/width-2.css';
@@ -3004,6 +3116,20 @@
 /* Include all Width 2xl files */
 @import 'cacao-css/dist/width/2xl/combined-import.css';
 /* or include individual files */
+@import 'cacao-css/dist/width/2xl/print-width-0.css';
+@import 'cacao-css/dist/width/2xl/print-width-1.css';
+@import 'cacao-css/dist/width/2xl/print-width-2.css';
+@import 'cacao-css/dist/width/2xl/print-width-3.css';
+@import 'cacao-css/dist/width/2xl/print-width-4.css';
+@import 'cacao-css/dist/width/2xl/print-width-5.css';
+@import 'cacao-css/dist/width/2xl/print-width-6.css';
+@import 'cacao-css/dist/width/2xl/print-width-7.css';
+@import 'cacao-css/dist/width/2xl/print-width-8.css';
+@import 'cacao-css/dist/width/2xl/print-width-9.css';
+@import 'cacao-css/dist/width/2xl/print-width-10.css';
+@import 'cacao-css/dist/width/2xl/print-width-11.css';
+@import 'cacao-css/dist/width/2xl/print-width-12.css';
+@import 'cacao-css/dist/width/2xl/print-width-auto.css';
 @import 'cacao-css/dist/width/2xl/width-0.css';
 @import 'cacao-css/dist/width/2xl/width-1.css';
 @import 'cacao-css/dist/width/2xl/width-2.css';
@@ -3024,6 +3150,20 @@
 /* Include all Width 3xl files */
 @import 'cacao-css/dist/width/3xl/combined-import.css';
 /* or include individual files */
+@import 'cacao-css/dist/width/3xl/print-width-0.css';
+@import 'cacao-css/dist/width/3xl/print-width-1.css';
+@import 'cacao-css/dist/width/3xl/print-width-2.css';
+@import 'cacao-css/dist/width/3xl/print-width-3.css';
+@import 'cacao-css/dist/width/3xl/print-width-4.css';
+@import 'cacao-css/dist/width/3xl/print-width-5.css';
+@import 'cacao-css/dist/width/3xl/print-width-6.css';
+@import 'cacao-css/dist/width/3xl/print-width-7.css';
+@import 'cacao-css/dist/width/3xl/print-width-8.css';
+@import 'cacao-css/dist/width/3xl/print-width-9.css';
+@import 'cacao-css/dist/width/3xl/print-width-10.css';
+@import 'cacao-css/dist/width/3xl/print-width-11.css';
+@import 'cacao-css/dist/width/3xl/print-width-12.css';
+@import 'cacao-css/dist/width/3xl/print-width-auto.css';
 @import 'cacao-css/dist/width/3xl/width-0.css';
 @import 'cacao-css/dist/width/3xl/width-1.css';
 @import 'cacao-css/dist/width/3xl/width-2.css';
@@ -3044,6 +3184,20 @@
 /* Include all Width 4xl files */
 @import 'cacao-css/dist/width/4xl/combined-import.css';
 /* or include individual files */
+@import 'cacao-css/dist/width/4xl/print-width-0.css';
+@import 'cacao-css/dist/width/4xl/print-width-1.css';
+@import 'cacao-css/dist/width/4xl/print-width-2.css';
+@import 'cacao-css/dist/width/4xl/print-width-3.css';
+@import 'cacao-css/dist/width/4xl/print-width-4.css';
+@import 'cacao-css/dist/width/4xl/print-width-5.css';
+@import 'cacao-css/dist/width/4xl/print-width-6.css';
+@import 'cacao-css/dist/width/4xl/print-width-7.css';
+@import 'cacao-css/dist/width/4xl/print-width-8.css';
+@import 'cacao-css/dist/width/4xl/print-width-9.css';
+@import 'cacao-css/dist/width/4xl/print-width-10.css';
+@import 'cacao-css/dist/width/4xl/print-width-11.css';
+@import 'cacao-css/dist/width/4xl/print-width-12.css';
+@import 'cacao-css/dist/width/4xl/print-width-auto.css';
 @import 'cacao-css/dist/width/4xl/width-0.css';
 @import 'cacao-css/dist/width/4xl/width-1.css';
 @import 'cacao-css/dist/width/4xl/width-2.css';
@@ -3064,6 +3218,20 @@
 /* Include all Width 5xl files */
 @import 'cacao-css/dist/width/5xl/combined-import.css';
 /* or include individual files */
+@import 'cacao-css/dist/width/5xl/print-width-0.css';
+@import 'cacao-css/dist/width/5xl/print-width-1.css';
+@import 'cacao-css/dist/width/5xl/print-width-2.css';
+@import 'cacao-css/dist/width/5xl/print-width-3.css';
+@import 'cacao-css/dist/width/5xl/print-width-4.css';
+@import 'cacao-css/dist/width/5xl/print-width-5.css';
+@import 'cacao-css/dist/width/5xl/print-width-6.css';
+@import 'cacao-css/dist/width/5xl/print-width-7.css';
+@import 'cacao-css/dist/width/5xl/print-width-8.css';
+@import 'cacao-css/dist/width/5xl/print-width-9.css';
+@import 'cacao-css/dist/width/5xl/print-width-10.css';
+@import 'cacao-css/dist/width/5xl/print-width-11.css';
+@import 'cacao-css/dist/width/5xl/print-width-12.css';
+@import 'cacao-css/dist/width/5xl/print-width-auto.css';
 @import 'cacao-css/dist/width/5xl/width-0.css';
 @import 'cacao-css/dist/width/5xl/width-1.css';
 @import 'cacao-css/dist/width/5xl/width-2.css';

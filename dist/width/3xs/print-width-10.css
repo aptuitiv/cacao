@@ -1,0 +1,46 @@
+/* =========================================================================== *\
+    Width 10's
+\* =========================================================================== */
+@media (--m-3xs) {
+    @media print {
+        .print-w-1-10-3xs {
+            width: calc(10%);
+        }
+
+        .print-w-2-10-3xs {
+            width: calc(20%);
+        }
+
+        .print-w-3-10-3xs {
+            width: calc(30%);
+        }
+
+        .print-w-4-10-3xs {
+            width: calc(40%);
+        }
+
+        .print-w-5-10-3xs {
+            width: 50%;
+        }
+
+        .print-w-6-10-3xs {
+            width: calc(60%);
+        }
+
+        .print-w-7-10-3xs {
+            width: calc(70%);
+        }
+
+        .print-w-8-10-3xs {
+            width: calc(80%);
+        }
+
+        .print-w-9-10-3xs {
+            width: calc(90%);
+        }
+
+        .print-w-10-10-3xs {
+            width: 100%;
+        }
+    }
+}
