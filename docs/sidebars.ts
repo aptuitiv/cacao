@@ -756,6 +756,76 @@ const sidebars: SidebarsConfig = {
                         },
                     ],
                 },
+                {
+                    type: 'category',
+                    label: 'Width - Print',
+                    link: {
+                        type: 'generated-index',
+                        slug: '/category/width-print',
+                    },
+                    items: [
+                        {
+                            type: 'doc',
+                            id: 'styles/width-print/index',
+                            label: 'Overview',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/width-print/auto',
+                            label: 'Auto width',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/width-print/one',
+                            label: 'Full width',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/width-print/two',
+                            label: 'Halfs',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/width-print/three',
+                            label: 'Thirds',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/width-print/four',
+                            label: 'Fourths',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/width-print/five',
+                            label: 'Fifths',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/width-print/six',
+                            label: 'Sixths',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/width-print/seven',
+                            label: 'Sevenths',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/width-print/eight',
+                            label: 'Eighths',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/width-print/nine',
+                            label: 'Ninths',
+                        },
+                        {
+                            type: 'doc',
+                            id: 'styles/width-print/ten',
+                            label: 'Tenths',
+                        },
+                    ],
+                },
             ],
         },
         {

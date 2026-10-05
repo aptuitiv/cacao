@@ -1,0 +1,43 @@
+---
+title: Width - Print
+---
+
+This provides classes for setting the width of elements that only apply when the page is printed. They are wrapped in a `@media print` query so they can override the screen widths in printed output.
+
+The following widths are available:
+
+- [Auto width](/styles/width-print/auto)
+- [Full width](/styles/width-print/one)
+- [Halfs](/styles/width-print/two)
+- [Thirds](/styles/width-print/three)
+- [Fourths](/styles/width-print/four)
+- [Fifths](/styles/width-print/five)
+- [Sixths](/styles/width-print/six)
+- [Sevenths](/styles/width-print/seven)
+- [Eighths](/styles/width-print/eight)
+- [Nineths](/styles/width-print/nine)
+- [Tenths](/styles/width-print/ten)
+
+## Combined imports
+
+If you will use all of the width sizes then you can use the combined import file. The combined import file includes both the [screen widths](/styles/width) and the print widths.
+
+```css
+@import 'cacao-css/dist/width/combined-import.css';
+```
+
+Imports are available for all [media query viewport sizes](/styles/media#viewport-media-queries).
+
+```css
+@import 'cacao-css/dist/width/3xs/combined-import.css';
+@import 'cacao-css/dist/width/2xs/combined-import.css';
+@import 'cacao-css/dist/width/xs/combined-import.css';
+@import 'cacao-css/dist/width/sm/combined-import.css';
+@import 'cacao-css/dist/width/md/combined-import.css';
+@import 'cacao-css/dist/width/lg/combined-import.css';
+@import 'cacao-css/dist/width/xl/combined-import.css';
+@import 'cacao-css/dist/width/2xl/combined-import.css';
+@import 'cacao-css/dist/width/3xl/combined-import.css';
+@import 'cacao-css/dist/width/4xl/combined-import.css';
+@import 'cacao-css/dist/width/5xl/combined-import.css';
+```
